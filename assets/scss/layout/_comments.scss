@@ -1,0 +1,53 @@
+.comments {
+  color: #24383b;
+
+  &__title {
+    text-align: center;
+    color: #272727;
+  }
+
+  &__descr {
+    max-width: 365px;
+    margin: 20px auto 0;
+    font-size: 16px;
+    line-height: 1.25;
+    text-align: center;
+  }
+
+  .splide__track {
+    margin-top: 35px;
+  }
+
+  &__btns {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+
+    .btn-lg {
+      color: $color-light;
+      background-color: $color-main;
+    }
+
+    .social-links {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+
+      .social-link {
+        width: 58px;
+        height: 58px;
+        border-radius: 50%;
+        border: 1px solid $color-main;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+          width: 31px;
+          height: auto;
+        }
+      }
+    }
+  }
+}

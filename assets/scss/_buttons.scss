@@ -4,6 +4,66 @@ button {
   font-weight: 700;
   font-size: 14px;
   line-height: 1;
+  text-align: center;
   letter-spacing: 0.05em;
   color: $color-text;
+}
+
+.btn-lg {
+  padding: 15px 45px;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.6;
+  color: #000;
+  border: 1px solid $color-main;
+  border-radius: 72px;
+  text-transform: uppercase;
+}
+
+.slider-btn {
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  border: none;
+  background-color: $color-secondary;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 12 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11.7071 10.2929L1.70709 0.292862C1.56723 0.153017 1.38905 0.0577853 1.19507 0.0192078C1.00109 -0.0193696 0.800023 0.000440337 0.6173 0.0761322C0.434577 0.151824 0.278403 0.279998 0.168525 0.444448C0.0586466 0.608897 -4.96765e-07 0.802236 0 1.00002V21C4.27744e-06 21.1978 0.0586534 21.3911 0.168532 21.5556C0.278411 21.72 0.434585 21.8482 0.617306 21.9239C0.800026 21.9996 1.00109 22.0194 1.19507 21.9808C1.38905 21.9422 1.56723 21.847 1.70709 21.7072L11.7071 11.7072C11.8 11.6143 11.8736 11.5041 11.9239 11.3827C11.9741 11.2614 12 11.1313 12 11C12 10.8687 11.9741 10.7386 11.9239 10.6173C11.8736 10.496 11.8 10.3857 11.7071 10.2929Z' fill='%2303A753'/%3E%3C/svg%3E");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 12px 22px;
+  cursor: pointer;
+  transition: background-color .3s ease-in-out;
+
+  &:hover {
+    background-color: $color-main;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 12 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11.7071 10.2929L1.70709 0.292862C1.56723 0.153017 1.38905 0.0577853 1.19507 0.0192078C1.00109 -0.0193696 0.800023 0.000440337 0.6173 0.0761322C0.434577 0.151824 0.278403 0.279998 0.168525 0.444448C0.0586466 0.608897 -4.96765e-07 0.802236 0 1.00002V21C4.27744e-06 21.1978 0.0586534 21.3911 0.168532 21.5556C0.278411 21.72 0.434585 21.8482 0.617306 21.9239C0.800026 21.9996 1.00109 22.0194 1.19507 21.9808C1.38905 21.9422 1.56723 21.847 1.70709 21.7072L11.7071 11.7072C11.8 11.6143 11.8736 11.5041 11.9239 11.3827C11.9741 11.2614 12 11.1313 12 11C12 10.8687 11.9741 10.7386 11.9239 10.6173C11.8736 10.496 11.8 10.3857 11.7071 10.2929Z' fill='%23ffffff'/%3E%3C/svg%3E");
+  }
+
+  &.prev-btn {
+    transform: scaleX(-1)
+  }
+}
+
+.card__btn {
+  display: block;
+  margin: 15px auto 0;
+  padding: 14px 35px;
+  font-weight: 600;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: $color-light;
+  background-color: $color-main;
+  border-radius: $br-xxl;
+}
+
+.form-btn {
+  width: 100%;
+  padding: 19px 30px;
+  border-radius: $br-xxl;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.6;
+  letter-spacing: 0.12em;
+  color: $color-light;
+  background-color: #24383b;
 }

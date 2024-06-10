@@ -1,0 +1,62 @@
+.proposition {
+  padding-top: 0;
+  color: $color-light;
+
+  &__content {
+    padding: 30px 45px;
+    display: flex;
+    justify-content: space-between;
+    border-radius: $br-lg;
+    align-items: center;
+    background: center / contain no-repeat url("../img/proposition-img.png"),
+                $color-main center / cover url("../img/proposition-bg.png");
+  }
+
+  &__title {
+    max-width: 320px;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 1.2;
+    color: $color-light;
+  }
+
+  &__descr {
+    max-width: 320px;
+    margin-top: 20px;
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  &__form {
+    width: 100%;
+    max-width: 340px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    .form-input {
+      width: 100%;
+      padding: 17px 20px;
+      border: none;
+      border-radius: $br-xxl;
+      font-size: 14px;
+      color: #24383b;
+    }
+
+    .form-text {
+      font-size: 12px;
+      font-weight: 600;
+      line-height: 1.2;
+      text-align: center;
+      color: rgba(255, 255, 255, 0.75);
+
+      a {
+        font-size: 12px;
+        font-weight: 600;
+        line-height: 1.2;
+        color: rgba(255, 255, 255, 0.75);
+        text-decoration: underline;
+      }
+    }
+  }
+}

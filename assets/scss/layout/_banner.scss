@@ -1,0 +1,125 @@
+.banner {
+  padding-top: 25px;
+  padding-bottom: 0;
+
+  .splide__slide {
+    height: 370px;
+    padding: 65px 106px 40px;
+    display: inline-block;
+    text-align: left;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: $br-lg;
+    box-sizing: border-box;
+  }
+
+  .splide__pagination {
+    left: 105px;
+    right: inherit;
+    bottom: 45px;
+    padding: 0;
+    justify-content: start;
+    gap: 12px;
+
+    li {
+      line-height: 0;
+    }
+
+    &__page {
+      width: 12px;
+      height: 12px;
+      margin: 0;
+      background: #ffffff25;
+      opacity: 1;
+
+      &.is-active {
+        background: #fff;
+        transform: scale(1);
+      }
+    }
+  }
+
+  .splide__arrow {
+    width: 30px;
+    height: 30px;
+    opacity: 1;
+    background: $color-light;
+
+    &:hover {
+      opacity: 1;
+    }
+
+    svg {
+      width: auto;
+      height: 16px;
+      fill: $color-main;
+    }
+  }
+
+  &__btn {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    color: $color-main;
+    background-color: $color-light;
+
+    &_next {
+      right: 20px;
+    }
+
+    &_prev {
+      left: 20px;
+    }
+
+    &::after {
+      font-size: 16px;
+    }
+  }
+
+  &__title {
+    max-width: 475px;
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 1.23;
+    letter-spacing: 0.02em;
+    text-align: left;
+    color: $color-light;
+  }
+
+  &__text {
+    display: inline-block;
+    max-width: 280px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.23;
+    letter-spacing: 0.02em;
+
+    &_sm {
+      max-width: 160px;
+    }
+  }
+
+  &__link {
+    display: inline-block;
+    margin-top: 40px;
+    padding: 20px 40px;
+    border-radius: 600px;
+    font-size: 18px;
+    background-color: $color-light;
+    text-align: center;
+  }
+}
+
+.attention {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  font-size: 20px;
+  line-height: 1.5;
+  text-align: center;
+  color: rgba(36, 56, 59, 1);
+  background-color: #fff;
+  border-radius: 50%;
+  vertical-align: middle;
+}

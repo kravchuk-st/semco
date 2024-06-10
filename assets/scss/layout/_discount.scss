@@ -1,0 +1,47 @@
+.discount {
+  &__header {
+    display: flex;
+    align-items: center;
+    column-gap: 60px;
+  }
+
+  &__btns {
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+  }
+
+  .splide__track {
+    margin-top: 20px;
+  }
+}
+
+.all-discounts {
+  margin-left: auto;
+  font-weight: 600;
+  font-size: 18px;
+  text-decoration: underline;
+  color: $color-main;
+}
+
+.discount__item {
+  height: 240px;
+  padding: 35px 40px;
+  border-radius: $br-xl;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 1.4;
+  text-align: left;
+  background-color: $color-secondary;
+  background-position: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: multiply;
+
+  span {
+    max-width: 200px;
+
+  }
+}
+
+
