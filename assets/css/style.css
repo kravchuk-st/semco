@@ -678,13 +678,13 @@ h2 {
   background-image: url("../img/advantages/0.jpg");
 }
 .advantage-card:nth-child(2) {
-  background-image: url("../assets/img/advantages/1.jpg");
+  background-image: url("../img/advantages/1.jpg");
 }
 .advantage-card:nth-child(3) {
-  background-image: url("../assets/img/advantages/2.jpg");
+  background-image: url("../img/advantages/2.jpg");
 }
 .advantage-card:nth-child(4) {
-  background-image: url("../assets/img/advantages/3.jpg");
+  background-image: url("../img/advantages/3.jpg");
 }
 .advantage-card:not(.show) .advantage__descr {
   display: none;
