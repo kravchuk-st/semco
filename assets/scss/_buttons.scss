@@ -16,7 +16,7 @@ button {
   line-height: 1.6;
   color: #000;
   border: 1px solid $color-main;
-  border-radius: 72px;
+  border-radius: $br-xxl;
   text-transform: uppercase;
 }
 

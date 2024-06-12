@@ -1,4 +1,174 @@
 .footer {
-  padding-top: 45px;
+  padding: 45px 0 50px;
+  color: #575757;
   background-color: $color-secondary;
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .logo{
+    display: flex;
+    align-items: center;
+    gap: 25px;
+
+    &__img {
+      width: 165px;
+      height: auto;
+    }
+
+    &__text {
+      max-width: 95px;
+      font-size: 12px;
+    }
+  }
+
+  .menu-social {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    column-gap: 40px;
+  }
+
+  .social__list {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .social__link {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    &_yt {
+      background-image: url("../img/svg/social/youtube.svg");
+    }
+
+    &_vk {
+      background-image: url("../img/svg/social/vk.svg");
+    }
+
+    &_tg {
+      background-image: url("../img/svg/social/tg.svg");
+    }
+
+    &_wa {
+      background-image: url("../img/svg/social/wa.svg");
+    }
+  }
+
+  .contacts__list {
+    margin-top: 30px;
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    row-gap: 20px;
+  }
+
+  .contact__link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #575757;
+  }
+
+  .contact__icon {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+    fill: $color-main;
+  }
+  
+  .copyright {
+    margin-top: 30px;
+    font-size: 12px;
+    font-weight: 400;
+    color: #767676;
+  }
+
+  &-links {
+    display: flex;
+    column-gap: 70px;
+
+    &__label {
+      font-size: 12px;
+      font-weight: 600;
+      line-height: 1;
+      color: #24383b;
+    }
+
+    &__list {
+      margin-top: 15px;
+      max-height: 95px;
+      column-count: 2;
+      column-gap: 35px;
+      column-fill: auto;
+    }
+
+    &__item {
+      line-height: 0;
+
+      &:not(:first-child) {
+        margin-top: 15px;
+      }
+
+      a {
+        font-size: 12px;
+        font-weight: 400;
+        color: #575757;
+      }
+    }
+  }
+
+  .form {
+    margin-top: 60px;
+    display: flex;
+    gap: 10px;
+
+    &__input {
+      max-width: 220px;
+      padding: 14px 20px;
+      font-size: 14px;
+      color: #000;
+      border: none;
+      border-radius: $br-xxl;
+    }
+
+    &-btn {
+      max-width: 330px;
+      padding: 14px 30px;
+      color: $color-light;
+      background-color: $color-main;
+    }
+  }
+
+  .politics-link {
+    margin-top: 45px;
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.275;
+    color: #767676;
+    text-decoration: underline;
+  }
+
+  &__text {
+    margin-top: 55px;
+    padding: 35px 60px 50px;
+    font-size: 16px;
+    line-height: 1.5;
+    background-color: $color-light;
+
+    p:not(:first-child) {
+      margin-top: 20px;
+    }
+  }
 }
