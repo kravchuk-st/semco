@@ -255,6 +255,32 @@ button {
   color: #24383b;
 }
 
+.breadcrumb {
+  margin-top: 25px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+}
+.breadcrumb__item {
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+  font-size: 12px;
+  font-weight: 400;
+  color: #8b8b8b;
+}
+.breadcrumb__item.active {
+  color: #03a753;
+}
+.breadcrumb__link {
+  font-size: 12px;
+  font-weight: 400;
+  color: #8b8b8b;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -533,6 +559,13 @@ h2 {
   padding-top: 25px;
   padding-bottom: 0;
 }
+.banner .title {
+  margin-bottom: 30px;
+  font-weight: 400px;
+  font-size: 35px;
+  line-height: 1.2;
+  color: #000;
+}
 .banner .splide__slide {
   height: 370px;
   padding: 65px 106px 40px;
@@ -802,6 +835,12 @@ h2 {
 .discount .splide__track {
   margin-top: 20px;
 }
+.discount__list {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 40px;
+}
 
 .all-discounts {
   margin-left: auto;
@@ -827,6 +866,35 @@ h2 {
 }
 .discount__item span {
   max-width: 200px;
+}
+
+.discount-card {
+  width: 100%;
+  max-width: 560px;
+  display: flex;
+  flex-direction: column;
+}
+.discount-card .discount__title {
+  max-width: 215px;
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 1.3;
+  color: #1f2029;
+}
+.discount-card .discount__descr {
+  margin-top: 15px;
+  font-size: 16px;
+  flex: 1 0 auto;
+}
+.discount-card .discount__link {
+  max-width: 100px;
+  padding: 5px 15px;
+  font-size: 10px;
+  font-weight: 600;
+  color: #fff;
+  background-color: #03a753;
+  border-radius: 72px;
+  text-transform: uppercase;
 }
 
 .catalog-download {
@@ -1045,6 +1113,16 @@ h2 {
   text-decoration: underline;
 }
 
+.goods {
+  margin-top: 15px;
+}
+.goods .wrapper {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
 .footer {
   padding: 45px 0 50px;
   color: #575757;
@@ -1138,6 +1216,7 @@ h2 {
   font-weight: 600;
   line-height: 1;
   color: #24383b;
+  text-transform: uppercase;
 }
 .footer-links__list {
   margin-top: 15px;
@@ -1194,6 +1273,7 @@ h2 {
   font-size: 16px;
   line-height: 1.5;
   background-color: #fff;
+  border-radius: 10px;
 }
 .footer__text p:not(:first-child) {
   margin-top: 20px;

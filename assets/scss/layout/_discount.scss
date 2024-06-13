@@ -14,6 +14,13 @@
   .splide__track {
     margin-top: 20px;
   }
+
+  &__list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 40px;
+  }
 }
 
 .all-discounts {
@@ -44,4 +51,34 @@
   }
 }
 
+.discount-card {
+  width: 100%;
+  max-width: 560px;
+  display: flex;
+  flex-direction: column;
 
+  .discount__title {
+    max-width: 215px;
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 1.3;
+    color: $color-text;
+  }
+
+  .discount__descr {
+    margin-top: 15px;
+    font-size: 16px;
+    flex: 1 0 auto;
+  }
+
+  .discount__link {
+    max-width: 100px;
+    padding: 5px 15px;
+    font-size: 10px;
+    font-weight: 600;
+    color: $color-light;
+    background-color: $color-main;
+    border-radius: $br-xxl;
+    text-transform: uppercase
+  }
+}

@@ -1,0 +1,26 @@
+.breadcrumb {
+  margin-top: 25px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  column-gap: 10px;
+
+  &__item {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    font-size: 12px;
+    font-weight: 400;
+    color: #8b8b8b;
+
+    &.active {
+      color: $color-main;
+    }
+  }
+
+  &__link {
+    font-size: 12px;
+    font-weight: 400;
+    color: #8b8b8b;
+  }
+}
