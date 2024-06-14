@@ -1,0 +1,78 @@
+.accordion {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px 20px;
+
+  &__item.open {
+    .accordion__btn {
+      border: none;
+      border-radius: 25px;
+      background-color: $color-secondary;
+    }
+
+    .accordion__icon {
+      stroke: $color-main;
+      transform: scaleY(-1);
+    }
+
+    .accordion__content {
+      margin-top: 15px;
+      opacity: 1;
+    }
+  }
+  
+
+  &__btn {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent;
+    color: $color-text;
+    font-size: 21px;
+    font-weight: 400;
+    line-height: 1.2;
+    border-bottom: 1px solid $color-main;
+    text-align: left;
+    letter-spacing: 0;
+    transition: all .3s ease-in-out;
+    will-change: background-color, border;
+  }
+
+  &__icon {
+    width: 25px;
+    height: 15px;
+    stroke: $color-text;
+    transition: all .3s linear;
+  }
+
+  &__content {
+    margin-top: 0;
+    padding: 0 20px;
+    font-size: 13px;
+    line-height: 1.4;
+    color: #24383b;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    will-change: max-height, margin-top;
+    transition: all .3s ease-out;
+    box-sizing: content-box;
+
+    & > *:not(:first-child) {
+      margin-top: 7px;
+    }
+
+    a {
+      font-size: 13px;
+      font-weight: 600;
+      color: $color-main;
+    }
+
+    ul {
+      list-style-position: inside;
+    }
+  }
+}

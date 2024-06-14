@@ -8,8 +8,8 @@
     justify-content: space-between;
     border-radius: $br-lg;
     align-items: center;
-    background: center / contain no-repeat url("../img/proposition-img.png"),
-                $color-main center / cover url("../img/proposition-bg.png");
+    background: center / contain no-repeat url("/assets/img/proposition-img.png"),
+                $color-main center / cover url("/assets/img/proposition-bg.png");
   }
 
   &__title {

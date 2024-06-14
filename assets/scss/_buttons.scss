@@ -20,6 +20,12 @@ button {
   text-transform: uppercase;
 }
 
+.btn-fill {
+  color: $color-light;
+  background-color: $color-main;
+  border: none;
+}
+
 .slider-btn {
   width: 58px;
   height: 58px;
