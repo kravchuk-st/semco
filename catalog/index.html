@@ -12,6 +12,11 @@
   <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
 </head>
 <body>
+  <svg class="sprite" style="display: none;">
+    <symbol viewBox="0 0 25 15" fill="none" xmlns="http://www.w3.org/2000/svg" id="arrow">
+      <path d="M1.5 1L11.7366 13.0978C12.1361 13.5699 12.8639 13.5699 13.2634 13.0978L23.5 1" stroke-width="2" stroke-linecap="round"/>
+    </symbol>
+  </svg>
   <header class="header">
     <div class="wrapper">
       <div class="header__top">
@@ -88,11 +93,602 @@
     <section class="catalog">
       <div class="wrapper catalog-wrapper">
         <aside class="sidebar">
+          <div class="sidebar-block">
+            <button class="sidebar-block__btn btn-reset">
+              <span class="sidebar-block__btn-title">Семена овощей</span>
+              <svg class="sidebar-block__btn-icon">
+                <use xlink:href="#arrow"></use>
+              </svg>
+            </button>
+            <div class="sidebar-block__inner">
+              <ul class="filter-list list-reset">
+                <li class="filter-list__item">
+                  <a href="#" class="filter-list__link btn-reset">Семена томатов (200)</a>
+                </li>
+                <li class="filter-list__item">
+                  <a href="#" class="filter-list__link btn-reset">Семена огурцов (55)</a>
+                </li>
+                <li class="filter-list__item">
+                  <a href="#" class="filter-list__link btn-reset">Семена перцев (305)</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="sidebar-block">
+            <button class="sidebar-block__btn btn-reset">
+              <span class="sidebar-block__btn-title">Семена зелени</span>
+              <svg class="sidebar-block__btn-icon">
+                <use xlink:href="#arrow"></use>
+              </svg>
+            </button>
+            <div class="sidebar-block__inner">
+            </div>
+          </div>
+          <div class="sidebar-block">
+            <button class="sidebar-block__btn btn-reset">
+              <span class="sidebar-block__btn-title">Семена микрозелени</span>
+              <svg class="sidebar-block__btn-icon">
+                <use xlink:href="#arrow"></use>
+              </svg>
+            </button>
+            <div class="sidebar-block__inner">
+            </div>
+          </div>
+          <div class="sidebar-block">
+            <button class="sidebar-block__btn btn-reset">
+              <span class="sidebar-block__btn-title">Семена цветов</span>
+              <svg class="sidebar-block__btn-icon">
+                <use xlink:href="#arrow"></use>
+              </svg>
+            </button>
+            <div class="sidebar-block__inner">
+            </div>
+          </div>
+          <div class="sidebar-block">
+            <button class="sidebar-block__btn btn-reset">
+              <span class="sidebar-block__btn-title">Наборы семян</span>
+              <svg class="sidebar-block__btn-icon">
+                <use xlink:href="#arrow"></use>
+              </svg>
+            </button>
+            <div class="sidebar-block__inner">
+            </div>
+          </div>
+          <form class="sidebar-form" action="#" method="post">
+            <p class="sidebar-form__title">Цена, руб</p>
+            <div class="rz-slider-wrapper">
+              <div class="rz-slider">
+                <div class="progress"></div>
+              </div>
+              <div class="range-input">
+                <input type="range" class="range-min" min="0" max="10000" value="0" step="100">
+                <input type="range" class="range-max" min="0" max="10000" value="10000" step="100">
+              </div>
+            </div>
+            <div class="sidebar-form__inner">
+              <div class="sidebar-form__col">
+                <label class="sidebar-form__label" for="min-price">от</label>
+                <input class="sidebar-form__value sidebar-form__value_min" type="number" name="min-price" id="min-price" value="0">
+              </div>
+              <div class="sidebar-form__col">
+                <label class="sidebar-form__label" for="max-price">до</label>
+                <input class="sidebar-form__value sidebar-form__value_max" type="number" name="max-price" id="max-price" value="10000">
+              </div>
+            </div>
+          </form>
+          <div class="sidebar-block">
+            <button class="sidebar-block__btn btn-reset">
+              <span class="sidebar-block__btn-title">Категория</span>
+              <svg class="sidebar-block__btn-icon">
+                <use xlink:href="#arrow"></use>
+              </svg>
+            </button>
+            <div class="sidebar-block__inner">
+              <ul class="checkbox-filter list-reset">
+                <li class="checkbox-filter__item">
+                  <a href="#" class="checkbox-filter__link btn-reset">Сорт</a>
+                </li>
+                <li class="checkbox-filter__item">
+                  <a href="#" class="checkbox-filter__link btn-reset">Гибрид</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="sidebar-block">
+            <button class="sidebar-block__btn btn-reset">
+              <span class="sidebar-block__btn-title">Условия выращивания</span>
+              <svg class="sidebar-block__btn-icon">
+                <use xlink:href="#arrow"></use>
+              </svg>
+            </button>
+            <div class="sidebar-block__inner">
+              <ul class="checkbox-filter list-reset">
+                <li class="checkbox-filter__item">
+                  <a href="#" class="checkbox-filter__link btn-reset">Защищенный грунт</a>
+                </li>
+                <li class="checkbox-filter__item">
+                  <a href="#" class="checkbox-filter__link btn-reset">Открытый грунт</a>
+                </li>
+                <li class="checkbox-filter__item">
+                  <a href="#" class="checkbox-filter__link btn-reset">Открытый и защищенный</a>
+                </li>
+                <li class="checkbox-filter__item">
+                  <a href="#" class="checkbox-filter__link btn-reset">Огород на окне, горшки</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="sidebar-block">
+            <button class="sidebar-block__btn btn-reset">
+              <span class="sidebar-block__btn-title">Срок созревания</span>
+              <svg class="sidebar-block__btn-icon">
+                <use xlink:href="#arrow"></use>
+              </svg>
+            </button>
+            <div class="sidebar-block__inner">
+              <ul class="checkbox-filter list-reset">
+                <li class="checkbox-filter__item">
+                  <a href="#" class="checkbox-filter__link btn-reset">Ультраранний</a>
+                </li>
+                <li class="checkbox-filter__item">
+                  <a href="#" class="checkbox-filter__link btn-reset">Раннеспелый</a>
+                </li>
+                <li class="checkbox-filter__item">
+                  <a href="#" class="checkbox-filter__link btn-reset">Среднеспелый</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="sidebar-block">
+            <button class="sidebar-block__btn btn-reset">
+              <span class="sidebar-block__btn-title">Высота растения</span>
+              <svg class="sidebar-block__btn-icon">
+                <use xlink:href="#arrow"></use>
+              </svg>
+            </button>
+            <div class="sidebar-block__inner">
+              <ul class="checkbox-filter list-reset">
+                <li class="checkbox-filter__item">
+                  <a href="#" class="checkbox-filter__link btn-reset">Штамбовое</a>
+                </li>
+                <li class="checkbox-filter__item">
+                  <a href="#" class="checkbox-filter__link btn-reset">Детерминантное</a>
+                </li>
+                <li class="checkbox-filter__item">
+                  <a href="#" class="checkbox-filter__link btn-reset">Полудерминантное</a>
+                </li>
+                <li class="checkbox-filter__item">
+                  <a href="#" class="checkbox-filter__link btn-reset">Индетерминантное</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="sidebar-block">
+            <button class="sidebar-block__btn btn-reset">
+              <span class="sidebar-block__btn-title">Форма плода</span>
+              <svg class="sidebar-block__btn-icon">
+                <use xlink:href="#arrow"></use>
+              </svg>
+            </button>
+            <div class="sidebar-block__inner">
+              <ul class="checkbox-filter list-reset">
+                <li class="checkbox-filter__item">
+                  <a href="#" class="checkbox-filter__link btn-reset">Округлая</a>
+                </li>
+                <li class="checkbox-filter__item">
+                  <a href="#" class="checkbox-filter__link btn-reset">Плоскоокруглая</a>
+                </li>
+                <li class="checkbox-filter__item">
+                  <a href="#" class="checkbox-filter__link btn-reset">Сердцевидный</a>
+                </li>
+                <li class="checkbox-filter__item">
+                  <a href="#" class="checkbox-filter__link btn-reset">Сливовидные</a>
+                </li>
+                <li class="checkbox-filter__item">
+                  <a href="#" class="checkbox-filter__link btn-reset">Кубовидные</a>
+                </li>
+                <li class="checkbox-filter__item">
+                  <a href="#" class="checkbox-filter__link btn-reset">С носиком</a>
+                </li>
+                <li class="checkbox-filter__item">
+                  <a href="#" class="checkbox-filter__link btn-reset">Другое</a>
+                </li>
+              </ul>
+            </div>
+          </div>
 
+          <button class="sidebar-btn btn-lg btn-reset">Сбросить фильтр</button>
+          
 
         </aside>
         <div class="catalog__content">
-          
+          <div class="catalog-settings">
+            <div class="catalog-settings__sorting">
+              <select name="select" class="select select-sorting">
+                <option value="value1" selected>по популярности</option>
+                <option value="value2">Значение 2</option>
+                <option value="value3">Значение 3</option>
+              </select>
+              <div class="catalog-select">
+                <p class="catalog-select__label">Товаров на странице</p>
+                <select name="select" class="select select-value">
+                  <option value="value1" selected>12</option>
+                  <option value="value2">24</option>
+                  <option value="value3">36</option>
+                </select>
+              </div>
+            </div>
+            <div class="catalog-settings__view">
+              <button class="catalog-view__btn catalog-view__btn_active btn-reset">
+                <svg width="36px" height="36px" aria-hidden="true">
+                  <use xlink:href="/assets/img/svg/catalog-col.svg#catalog"></use>
+                </svg>
+              </button>
+              <button class="catalog-view__btn btn-reset">
+                <svg width="36px" height="36px" aria-hidden="true">
+                  <use xlink:href="/assets/img/svg/catalog-row.svg#catalog"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="catalog-selection">
+            <button class="catalog-selection__btn btn-reset">Баклажаны <span class="catalog-selection__qantity">(12)</span></button>
+            <button class="catalog-selection__btn btn-reset">Томаты <span class="catalog-selection__qantity">(12)</span></button>
+            <button class="catalog-selection__btn btn-reset">огурцы <span class="catalog-selection__qantity">(12)</span></button>
+            <button class="catalog-selection__btn btn-reset">Перец <span class="catalog-selection__qantity">(12)</span></button>
+            <button class="catalog-selection__btn btn-reset">капуста <span class="catalog-selection__qantity">(12)</span></button>
+            <button class="catalog-selection__btn btn-reset">бобовые и зерновые <span class="catalog-selection__qantity">(12)</span></button>
+            <button class="catalog-selection__btn btn-reset">цуккини <span class="catalog-selection__qantity">(12)</span></button>
+            <button class="catalog-selection__btn btn-reset">паттисон <span class="catalog-selection__qantity">(35)</span></button>
+            <button class="catalog-selection__btn btn-reset">Тыква <span class="catalog-selection__qantity">(35)</span></button>
+            <button class="catalog-selection__btn btn-reset">морковь <span class="catalog-selection__qantity">(35)</span></button>
+            <button class="catalog-selection__btn btn-reset">свекла <span class="catalog-selection__qantity">(35)</span></button>
+            <button class="catalog-selection__btn btn-reset">лук <span class="catalog-selection__qantity">(35)</span></button>
+            <button class="catalog-selection__btn btn-reset">кабачки <span class="catalog-selection__qantity">(35)</span></button>
+            <button class="catalog-selection__btn btn-reset">дыня <span class="catalog-selection__qantity">(50)</span></button>
+            <button class="catalog-selection__btn btn-reset">арбуз <span class="catalog-selection__qantity">(50)</span></button>
+            <button class="catalog-selection__btn btn-reset">редька <span class="catalog-selection__qantity">(50)</span></button>
+            <button class="catalog-selection__btn btn-reset">дайкон <span class="catalog-selection__qantity">(50)</span></button>
+            <button class="catalog-selection__btn btn-reset">репа <span class="catalog-selection__qantity">(50)</span></button>
+            <button class="catalog-selection__btn btn-reset">турнепс <span class="catalog-selection__qantity">(50)</span></button>
+            <button class="catalog-selection__btn btn-reset">редис <span class="catalog-selection__qantity">(50)</span></button>
+            <button class="catalog-selection__btn_plus btn-reset">+</button>
+          </div>
+          <div class="catalog-grid">
+            <div class="card disabled">
+              <a href="#" class="card__link_img btn-reset"><img src="/assets/img/slider/goods/0.jpg" alt="slide"></a>
+              <div class="card__body">
+                <div class="card__price">
+                  <p class="new-price">120 ₽<span class="text-gray">/уп</span></p>
+                  <p class="old-price">135 ₽</p>
+                  <p class="discount">-10%</p>
+                </div>
+                <a href="#" class="card__link_title btn-reset">Семена томатов Цитрон F1</a>
+                <div class="card__info">
+                  <div class="rating">
+                    <svg class="rating__icon" aria-hidden="true">
+                      <use xlink:href="/assets/img/svg/star.svg#star"></use>
+                    </svg>
+                    <p class="rating__value">5.0</p>
+                  </div>
+                  <div class="review">
+                    <img src="/assets/img/svg/review.svg" alt="">
+                    <p class="review__value">18 отзывов</p>
+                  </div>
+                </div>
+                <button class="card__btn btn-reset">нет в наличии</button>
+                <a href="#" class="card__link btn-reset">Уведомить о наличии</a>
+              </div>
+            </div>
+            <div class="card">
+              <a href="#" class="card__link_img btn-reset">
+                <img src="/assets/img/slider/goods/1.jpg" alt="slide">
+              </a>
+              <div class="card__body">
+                <div class="card__price">
+                  <p class="new-price">120 ₽<span class="text-gray">/уп</span></p>
+                  <p class="old-price">135 ₽</p>
+                  <p class="discount">-10%</p>
+                </div>
+                <a href="#" class="card__link_title btn-reset">Семена томатов Семко-Союз F1</a>
+                <div class="card__info">
+                  <div class="rating">
+                    <svg class="rating__icon" aria-hidden="true">
+                      <use xlink:href="/assets/img/svg/star.svg#star"></use>
+                    </svg>
+                    <p class="rating__value">5.0</p>
+                  </div>
+                  <div class="review">
+                    <img src="/assets/img/svg/review.svg" alt="">
+                    <p class="review__value">18 отзывов</p>
+                  </div>
+                </div>
+                <button class="card__btn btn-reset">добавить в корзину</button>
+                <a href="#" class="card__link btn-reset">Оптовым покупателям</a>
+              </div>
+            </div>
+            <div class="card">
+              <a href="#" class="card__link_img btn-reset">
+                <img src="/assets/img/slider/goods/2.jpg" alt="slide">
+              </a>
+              <div class="card__body">
+                <div class="card__price">
+                  <p class="new-price">120 ₽<span class="text-gray">/уп</span></p>
+                  <p class="old-price">135 ₽</p>
+                  <p class="discount">-10%</p>
+                </div>
+                <a href="#" class="card__link_title btn-reset">Семена баклажанов Максик F1</a>
+                <div class="card__info">
+                  <div class="rating">
+                    <svg class="rating__icon" aria-hidden="true">
+                      <use xlink:href="/assets/img/svg/star.svg#star"></use>
+                    </svg>
+                    <p class="rating__value">5.0</p>
+                  </div>
+                  <div class="review">
+                    <img src="/assets/img/svg/review.svg" alt="review">
+                    <p class="review__value">18 отзывов</p>
+                  </div>
+                </div>
+                <button class="card__btn btn-reset">добавить в корзину</button>
+                <a href="#" class="card__link btn-reset">Оптовым покупателям</a>
+              </div>
+            </div>
+            <div class="card">
+              <a href="#" class="card__link_img btn-reset">
+                <img src="/assets/img/slider/goods/3.jpg" alt="slide">
+              </a>
+              <div class="card__body">
+                <div class="card__price">
+                  <p class="new-price">120 ₽<span class="text-gray">/уп</span></p>
+                  <p class="old-price">135 ₽</p>
+                  <p class="discount">-10%</p>
+                </div>
+                <a href="#" class="card__link_title btn-reset">Семена огурцов Семко-Союз F1</a>
+                <div class="card__info">
+                  <div class="rating">
+                    <svg class="rating__icon" aria-hidden="true">
+                      <use xlink:href="/assets/img/svg/star.svg#star"></use>
+                    </svg>
+                    <p class="rating__value">5.0</p>
+                  </div>
+                  <div class="review">
+                    <img src="/assets/img/svg/review.svg" alt="review">
+                    <p class="review__value">18 отзывов</p>
+                  </div>
+                </div>
+                <button class="card__btn btn-reset">добавить в корзину</button>
+                <a href="#" class="card__link btn-reset">Оптовым покупателям</a>
+              </div>
+            </div>
+            <div class="card">
+              <a href="#" class="card__link_img btn-reset"><img src="/assets/img/slider/goods/0.jpg" alt="slide"></a>
+              <div class="card__body">
+                <div class="card__price">
+                  <p class="new-price">120 ₽<span class="text-gray">/уп</span></p>
+                  <p class="old-price">135 ₽</p>
+                  <p class="discount">-10%</p>
+                </div>
+                <a href="#" class="card__link_title btn-reset">Семена томатов Цитрон F1</a>
+                <div class="card__info">
+                  <div class="rating">
+                    <svg class="rating__icon" aria-hidden="true">
+                      <use xlink:href="/assets/img/svg/star.svg#star"></use>
+                    </svg>
+                    <p class="rating__value">5.0</p>
+                  </div>
+                  <div class="review">
+                    <img src="/assets/img/svg/review.svg" alt="">
+                    <p class="review__value">18 отзывов</p>
+                  </div>
+                </div>
+                <button class="card__btn btn-reset">добавить в корзину</button>
+                <a href="#" class="card__link btn-reset">Оптовым покупателям</a>
+              </div>
+            </div>
+            <div class="card">
+              <a href="#" class="card__link_img btn-reset">
+                <img src="/assets/img/slider/goods/1.jpg" alt="slide">
+              </a>
+              <div class="card__body">
+                <div class="card__price">
+                  <p class="new-price">120 ₽<span class="text-gray">/уп</span></p>
+                  <p class="old-price">135 ₽</p>
+                  <p class="discount">-10%</p>
+                </div>
+                <a href="#" class="card__link_title btn-reset">Семена томатов Семко-Союз F1</a>
+                <div class="card__info">
+                  <div class="rating">
+                    <svg class="rating__icon" aria-hidden="true">
+                      <use xlink:href="/assets/img/svg/star.svg#star"></use>
+                    </svg>
+                    <p class="rating__value">5.0</p>
+                  </div>
+                  <div class="review">
+                    <img src="/assets/img/svg/review.svg" alt="">
+                    <p class="review__value">18 отзывов</p>
+                  </div>
+                </div>
+                <button class="card__btn btn-reset">добавить в корзину</button>
+                <a href="#" class="card__link btn-reset">Оптовым покупателям</a>
+              </div>
+            </div>
+            <div class="card">
+              <a href="#" class="card__link_img btn-reset">
+                <img src="/assets/img/slider/goods/2.jpg" alt="slide">
+              </a>
+              <div class="card__body">
+                <div class="card__price">
+                  <p class="new-price">120 ₽<span class="text-gray">/уп</span></p>
+                  <p class="old-price">135 ₽</p>
+                  <p class="discount">-10%</p>
+                </div>
+                <a href="#" class="card__link_title btn-reset">Семена баклажанов Максик F1</a>
+                <div class="card__info">
+                  <div class="rating">
+                    <svg class="rating__icon" aria-hidden="true">
+                      <use xlink:href="/assets/img/svg/star.svg#star"></use>
+                    </svg>
+                    <p class="rating__value">5.0</p>
+                  </div>
+                  <div class="review">
+                    <img src="/assets/img/svg/review.svg" alt="review">
+                    <p class="review__value">18 отзывов</p>
+                  </div>
+                </div>
+                <button class="card__btn btn-reset">добавить в корзину</button>
+                <a href="#" class="card__link btn-reset">Оптовым покупателям</a>
+              </div>
+            </div>
+            <div class="card">
+              <a href="#" class="card__link_img btn-reset">
+                <img src="/assets/img/slider/goods/3.jpg" alt="slide">
+              </a>
+              <div class="card__body">
+                <div class="card__price">
+                  <p class="new-price">120 ₽<span class="text-gray">/уп</span></p>
+                  <p class="old-price">135 ₽</p>
+                  <p class="discount">-10%</p>
+                </div>
+                <a href="#" class="card__link_title btn-reset">Семена огурцов Семко-Союз F1</a>
+                <div class="card__info">
+                  <div class="rating">
+                    <svg class="rating__icon" aria-hidden="true">
+                      <use xlink:href="/assets/img/svg/star.svg#star"></use>
+                    </svg>
+                    <p class="rating__value">5.0</p>
+                  </div>
+                  <div class="review">
+                    <img src="/assets/img/svg/review.svg" alt="review">
+                    <p class="review__value">18 отзывов</p>
+                  </div>
+                </div>
+                <button class="card__btn btn-reset">добавить в корзину</button>
+                <a href="#" class="card__link btn-reset">Оптовым покупателям</a>
+              </div>
+            </div>
+            <div class="card">
+              <a href="#" class="card__link_img btn-reset"><img src="/assets/img/slider/goods/0.jpg" alt="slide"></a>
+              <div class="card__body">
+                <div class="card__price">
+                  <p class="new-price">120 ₽<span class="text-gray">/уп</span></p>
+                  <p class="old-price">135 ₽</p>
+                  <p class="discount">-10%</p>
+                </div>
+                <a href="#" class="card__link_title btn-reset">Семена томатов Цитрон F1</a>
+                <div class="card__info">
+                  <div class="rating">
+                    <svg class="rating__icon" aria-hidden="true">
+                      <use xlink:href="/assets/img/svg/star.svg#star"></use>
+                    </svg>
+                    <p class="rating__value">5.0</p>
+                  </div>
+                  <div class="review">
+                    <img src="/assets/img/svg/review.svg" alt="">
+                    <p class="review__value">18 отзывов</p>
+                  </div>
+                </div>
+                <button class="card__btn btn-reset">добавить в корзину</button>
+                <a href="#" class="card__link btn-reset">Оптовым покупателям</a>
+              </div>
+            </div>
+            <div class="card">
+              <a href="#" class="card__link_img btn-reset">
+                <img src="/assets/img/slider/goods/1.jpg" alt="slide">
+              </a>
+              <div class="card__body">
+                <div class="card__price">
+                  <p class="new-price">120 ₽<span class="text-gray">/уп</span></p>
+                  <p class="old-price">135 ₽</p>
+                  <p class="discount">-10%</p>
+                </div>
+                <a href="#" class="card__link_title btn-reset">Семена томатов Семко-Союз F1</a>
+                <div class="card__info">
+                  <div class="rating">
+                    <svg class="rating__icon" aria-hidden="true">
+                      <use xlink:href="/assets/img/svg/star.svg#star"></use>
+                    </svg>
+                    <p class="rating__value">5.0</p>
+                  </div>
+                  <div class="review">
+                    <img src="/assets/img/svg/review.svg" alt="">
+                    <p class="review__value">18 отзывов</p>
+                  </div>
+                </div>
+                <button class="card__btn btn-reset">добавить в корзину</button>
+                <a href="#" class="card__link btn-reset">Оптовым покупателям</a>
+              </div>
+            </div>
+            <div class="card">
+              <a href="#" class="card__link_img btn-reset">
+                <img src="/assets/img/slider/goods/2.jpg" alt="slide">
+              </a>
+              <div class="card__body">
+                <div class="card__price">
+                  <p class="new-price">120 ₽<span class="text-gray">/уп</span></p>
+                  <p class="old-price">135 ₽</p>
+                  <p class="discount">-10%</p>
+                </div>
+                <a href="#" class="card__link_title btn-reset">Семена баклажанов Максик F1</a>
+                <div class="card__info">
+                  <div class="rating">
+                    <svg class="rating__icon" aria-hidden="true">
+                      <use xlink:href="/assets/img/svg/star.svg#star"></use>
+                    </svg>
+                    <p class="rating__value">5.0</p>
+                  </div>
+                  <div class="review">
+                    <img src="/assets/img/svg/review.svg" alt="review">
+                    <p class="review__value">18 отзывов</p>
+                  </div>
+                </div>
+                <button class="card__btn btn-reset">добавить в корзину</button>
+                <a href="#" class="card__link btn-reset">Оптовым покупателям</a>
+              </div>
+            </div>
+            <div class="card">
+              <a href="#" class="card__link_img btn-reset">
+                <img src="/assets/img/slider/goods/3.jpg" alt="slide">
+              </a>
+              <div class="card__body">
+                <div class="card__price">
+                  <p class="new-price">120 ₽<span class="text-gray">/уп</span></p>
+                  <p class="old-price">135 ₽</p>
+                  <p class="discount">-10%</p>
+                </div>
+                <a href="#" class="card__link_title btn-reset">Семена огурцов Семко-Союз F1</a>
+                <div class="card__info">
+                  <div class="rating">
+                    <svg class="rating__icon" aria-hidden="true">
+                      <use xlink:href="/assets/img/svg/star.svg#star"></use>
+                    </svg>
+                    <p class="rating__value">5.0</p>
+                  </div>
+                  <div class="review">
+                    <img src="/assets/img/svg/review.svg" alt="review">
+                    <p class="review__value">18 отзывов</p>
+                  </div>
+                </div>
+                <button class="card__btn btn-reset">добавить в корзину</button>
+                <a href="#" class="card__link btn-reset">Оптовым покупателям</a>
+              </div>
+            </div>
+          </div>
+          <div class="catalog__inserted">
+            <button class="show-more btn-reset">загрузить ещё</button>
+          </div>
+          <div class="pagination">
+            <ul class="pagination__list list-reset">
+              <li class="pagination__item"><button class="pagination__btn pagination__btn_active btn-reset">1</button></li>
+              <li class="pagination__item"><button class="pagination__btn btn-reset">2</button></li>
+              <li class="pagination__item"><button class="pagination__btn btn-reset">3</button></li>
+              <li class="pagination__item"><button class="pagination__btn btn-reset">4</button></li>
+              <li class="pagination__item"><button class="pagination__btn btn-reset">5</button></li>
+              <li class="pagination__item"><button class="pagination__btn_more btn-reset"></button></li>
+            </ul>
+            <button class="pagination__btn forward-page btn-reset">Далее</button>
+            <button class="pagination__btn last-page btn-reset">Все</button>
+          </div>
         </div>
       </div>
     </section>
@@ -110,17 +706,21 @@
       <div class="splide__track">
         <div class="splide__list">
           <div class="splide__slide card">
-            <img src="/assets/img/slider/goods/0.jpg" alt="slide">
+            <a href="#" class="card__link_img btn-reset">
+              <img src="/assets/img/slider/goods/0.jpg" alt="slide">
+            </a>
             <div class="card__body">
               <div class="card__price">
                 <p class="new-price">120 ₽<span class="text-gray">/уп</span></p>
                 <p class="old-price">135 ₽</p>
                 <p class="discount">-10%</p>
               </div>
-              <h3 class="card__title">Семена томатов Цитрон F1</h3>
+              <a href="#" class="card__link_title btn-reset">Семена томатов Цитрон F1</a>
               <div class="card__info">
                 <div class="rating">
-                  <img src="/assets/img/svg/star.svg" alt="star">
+                  <svg class="rating__icon" aria-hidden="true">
+                      <use xlink:href="/assets/img/svg/star.svg#star"></use>
+                    </svg>
                   <p class="rating__value">5.0</p>
                 </div>
                 <div class="review">
@@ -133,17 +733,21 @@
             </div>
           </div>
           <div class="splide__slide card">
-            <img src="/assets/img/slider/goods/1.jpg" alt="slide">
+            <a href="#" class="card__link_img btn-reset">
+              <img src="/assets/img/slider/goods/1.jpg" alt="slide">
+            </a>
             <div class="card__body">
               <div class="card__price">
                 <p class="new-price">120 ₽<span class="text-gray">/уп</span></p>
                 <p class="old-price">135 ₽</p>
                 <p class="discount">-10%</p>
               </div>
-              <h3 class="card__title">Семена томатов Семко-Союз F1</h3>
+              <a href="#" class="card__link_title btn-reset">Семена томатов Семко-Союз F1</a>
               <div class="card__info">
                 <div class="rating">
-                  <img src="/assets/img/svg/star.svg" alt="star">
+                  <svg class="rating__icon" aria-hidden="true">
+                      <use xlink:href="/assets/img/svg/star.svg#star"></use>
+                    </svg>
                   <p class="rating__value">5.0</p>
                 </div>
                 <div class="review">
@@ -156,17 +760,21 @@
             </div>
           </div>
           <div class="splide__slide card">
-            <img src="/assets/img/slider/goods/2.jpg" alt="slide">
+            <a href="#" class="card__link_img btn-reset">
+              <img src="/assets/img/slider/goods/2.jpg" alt="slide">
+            </a>
             <div class="card__body">
               <div class="card__price">
                 <p class="new-price">120 ₽<span class="text-gray">/уп</span></p>
                 <p class="old-price">135 ₽</p>
                 <p class="discount">-10%</p>
               </div>
-              <h3 class="card__title">Семена баклажанов Максик F1</h3>
+              <a href="#" class="card__link_title btn-reset">Семена баклажанов Максик F1</a>
               <div class="card__info">
                 <div class="rating">
-                  <img src="/assets/img/svg/star.svg" alt="star">
+                  <svg class="rating__icon" aria-hidden="true">
+                      <use xlink:href="/assets/img/svg/star.svg#star"></use>
+                    </svg>
                   <p class="rating__value">5.0</p>
                 </div>
                 <div class="review">
@@ -179,17 +787,21 @@
             </div>
           </div>
           <div class="splide__slide card">
-            <img src="/assets/img/slider/goods/3.jpg" alt="slide">
+            <a href="#" class="card__link_img btn-reset">
+              <img src="/assets/img/slider/goods/3.jpg" alt="slide">
+            </a>
             <div class="card__body">
               <div class="card__price">
                 <p class="new-price">120 ₽<span class="text-gray">/уп</span></p>
                 <p class="old-price">135 ₽</p>
                 <p class="discount">-10%</p>
               </div>
-              <h3 class="card__title">Семена огурцов Семко-Союз F1</h3>
+              <a href="#" class="card__link_title btn-reset">Семена огурцов Семко-Союз F1</a>
               <div class="card__info">
                 <div class="rating">
-                  <img src="/assets/img/svg/star.svg" alt="star">
+                  <svg class="rating__icon" aria-hidden="true">
+                      <use xlink:href="/assets/img/svg/star.svg#star"></use>
+                    </svg>
                   <p class="rating__value">5.0</p>
                 </div>
                 <div class="review">
@@ -231,17 +843,21 @@
       <div class="splide__track">
         <div class="splide__list">
           <div class="splide__slide card">
-            <img src="/assets/img/slider/goods/0.jpg" alt="slide">
+            <a href="#" class="card__link_img btn-reset">
+              <img src="/assets/img/slider/goods/0.jpg" alt="slide">
+            </a>
             <div class="card__body">
               <div class="card__price">
                 <p class="new-price">120 ₽<span class="text-gray">/уп</span></p>
                 <p class="old-price">135 ₽</p>
                 <p class="discount">-10%</p>
               </div>
-              <h3 class="card__title">Семена томатов Цитрон F1</h3>
+              <a href="#" class="card__link_title btn-reset">Семена томатов Цитрон F1</a>
               <div class="card__info">
                 <div class="rating">
-                  <img src="/assets/img/svg/star.svg" alt="star">
+                  <svg class="rating__icon" aria-hidden="true">
+                      <use xlink:href="/assets/img/svg/star.svg#star"></use>
+                    </svg>
                   <p class="rating__value">5.0</p>
                 </div>
                 <div class="review">
@@ -254,17 +870,21 @@
             </div>
           </div>
           <div class="splide__slide card">
-            <img src="/assets/img/slider/goods/1.jpg" alt="slide">
+            <a href="#" class="card__link_img btn-reset">
+              <img src="/assets/img/slider/goods/1.jpg" alt="slide">
+            </a>
             <div class="card__body">
               <div class="card__price">
                 <p class="new-price">120 ₽<span class="text-gray">/уп</span></p>
                 <p class="old-price">135 ₽</p>
                 <p class="discount">-10%</p>
               </div>
-              <h3 class="card__title">Семена томатов Семко-Союз F1</h3>
+              <a href="#" class="card__link_title btn-reset">Семена томатов Семко-Союз F1</a>
               <div class="card__info">
                 <div class="rating">
-                  <img src="/assets/img/svg/star.svg" alt="star">
+                  <svg class="rating__icon" aria-hidden="true">
+                      <use xlink:href="/assets/img/svg/star.svg#star"></use>
+                    </svg>
                   <p class="rating__value">5.0</p>
                 </div>
                 <div class="review">
@@ -277,17 +897,21 @@
             </div>
           </div>
           <div class="splide__slide card">
-            <img src="/assets/img/slider/goods/2.jpg" alt="slide">
+            <a href="#" class="card__link_img btn-reset">
+              <img src="/assets/img/slider/goods/2.jpg" alt="slide">
+            </a>
             <div class="card__body">
               <div class="card__price">
                 <p class="new-price">120 ₽<span class="text-gray">/уп</span></p>
                 <p class="old-price">135 ₽</p>
                 <p class="discount">-10%</p>
               </div>
-              <h3 class="card__title">Семена баклажанов Максик F1</h3>
+              <a href="#" class="card__link_title btn-reset">Семена баклажанов Максик F1</a>
               <div class="card__info">
                 <div class="rating">
-                  <img src="/assets/img/svg/star.svg" alt="star">
+                  <svg class="rating__icon" aria-hidden="true">
+                      <use xlink:href="/assets/img/svg/star.svg#star"></use>
+                    </svg>
                   <p class="rating__value">5.0</p>
                 </div>
                 <div class="review">
@@ -300,17 +924,21 @@
             </div>
           </div>
           <div class="splide__slide card">
-            <img src="/assets/img/slider/goods/3.jpg" alt="slide">
+            <a href="#" class="card__link_img btn-reset">
+              <img src="/assets/img/slider/goods/3.jpg" alt="slide">
+            </a>
             <div class="card__body">
               <div class="card__price">
                 <p class="new-price">120 ₽<span class="text-gray">/уп</span></p>
                 <p class="old-price">135 ₽</p>
                 <p class="discount">-10%</p>
               </div>
-              <h3 class="card__title">Семена огурцов Семко-Союз F1</h3>
+              <a href="#" class="card__link_title btn-reset">Семена огурцов Семко-Союз F1</a>
               <div class="card__info">
                 <div class="rating">
-                  <img src="/assets/img/svg/star.svg" alt="star">
+                  <svg class="rating__icon" aria-hidden="true">
+                      <use xlink:href="/assets/img/svg/star.svg#star"></use>
+                    </svg>
                   <p class="rating__value">5.0</p>
                 </div>
                 <div class="review">
@@ -614,7 +1242,10 @@
   <script src="/assets/js/sliders/discount.js"></script>
   <script src="/assets/js/sliders/cards.js"></script>
   <script src="/assets/js/scrollTop.js"></script>
+  <script src="/assets/js/catalog.js"></script>
   <script src="/assets/js/accordion.js"></script>
+  <script src="/assets/js/rangeSlider.js"></script>
+
   <script>
     drawSlider('.products_slider');
     drawSlider('.cards_slider');

@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+.sprite {
+  display: none;
+}
+
 body {
   font-family: 'Onest', serif;
   font-style: normal;
@@ -52,4 +56,9 @@ h2 {
   cursor: pointer;
   opacity: 0;
   transition: opacity .3s linear;
+}
+
+.disabled {
+  pointer-events: none;
+  cursor: default;
 }
