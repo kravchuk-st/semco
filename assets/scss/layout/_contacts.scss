@@ -1,68 +1,207 @@
 .contacts {
-  &__descr {
-    max-width: 450px;
-    margin-top: 15px;
+  &__list {
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    row-gap: 20px;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 610px 1fr;
+    gap: 20px;
+  }
+}
+
+.contact__link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #575757;
+}
+
+.contact__icon {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  fill: $color-main;
+
+  &_fill {
+    stroke: $color-main;
+  }
+}
+
+.social__list {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.social__link {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  &_yt {
+    background-image: url("/assets/img/svg/social/youtube.svg");
+  }
+
+  &_vk {
+    background-image: url("/assets/img/svg/social/vk.svg");
+  }
+
+  &_tg {
+    background-image: url("/assets/img/svg/social/tg.svg");
+  }
+
+  &_wa {
+    background-image: url("/assets/img/svg/social/wa.svg");
+  }
+}
+
+.contact-card {
+  padding: 20px 25px 22px;
+  background: $color-secondary;
+  border-radius: 15px;
+
+  &_lg {
+    padding: 20px 32px 20px 25px;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 4;
+    background: #f4f4f4;
+
+    .title {
+      font-weight: 400;
+      font-size: 30px;
+      line-height: 1.2;
+      color: #000;
+    }
+
+    .sub-title {
+      margin-top: 15px;
+    }
+
+    .fin-info {
+      margin-top: 7px;
+      display: flex;
+      column-gap: 25px;
+    }
+
+    .yr-address {
+      margin-top: 9px;
+    }
+
+    .mt-12 {
+      margin-top: 12px;
+    }
+
+    a {
+      display: block;
+      text-align: left;
+      text-decoration: underline;
+
+      &.tel {
+        text-decoration: none;
+      }
+    }
+
+    .call-center {
+      display: flex;
+      column-gap: 23px;
+    }
+
+    .sub-text {
+      margin-top: 7px;
+      font-size: 9px;
+      color: #7d7d7d;
+    }
+  }
+
+  &__header {
+    display: flex;
+    align-items: end;
+    gap: 20px;
+
+    .title {
+      font-weight: 400;
+      font-size: 22px;
+      line-height: 1.2;
+      letter-spacing: 0;
+      color: #272727;
+    }
+
+    .info {
+      font-size: 16px;
+      line-height: 1.2;
+      letter-spacing: 0;
+      color: #7d7d7d7d;
+    }
+  }
+
+  &__body {
+    margin-top: 20px;
+    display: flex;
+    gap: 30px;
+
+    .col {
+      display: flex;
+      align-items: start;
+      gap: 10px;
+    }
+  }
+
+  &__icon {
+    width: 18px;
+    height: 18px;
+    fill: $color-main;
+  }
+
+  &__links {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+
+    .sub-text {
+      margin-top: 6px;
+      font-size: 10px;
+      color: #8b8b8b;
+    }
+  }
+
+  &__link {
+    font-weight: 400;
+    font-size: 14px;
+    color: $color-text;
+
+    &:not(:first-child) {
+      margin-top: 10px;
+    }
+  }
+
+  .text-sm {
+    font-weight: 500;
     font-size: 14px;
     line-height: 1.4;
   }
 
-  &__body {
-    margin-top: 35px;
-    display: flex;
-    gap: 20px;
-
-    img {
-      width: 100%;
-      border-radius: $br-xl;
-    }
+  .text-xs {
+    margin-top: 3px;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 1.4;
   }
 
-  .form {
-    width: 430px;
-    padding: 30px 45px 35px;
-    background: #e6f5ee center / cover no-repeat url("/assets/img/contact-form-bg.png");
-    border-radius: 24px;
-    flex-shrink: 0;
-
-    &__title {
-      font-size: 20px;
-      line-height: 1.4;
-    }
-
-    &__input {
-      width: 100%;
-      margin-top: 30px;
-      padding: 15px 20px;
-      border: none;
-      outline: none;
-      border-radius: $br-xxl;
-    }
-
-    &__btn {
-      margin-top: 15px;
-      padding: 19px 45px;
-      width: 100%;
-      font-size: 14px;
-      color: $color-light;
-      background-color: #24383b;
-      border: none;
-    }
-
-    &__text {
-      max-width: 265px;
-      margin: 13px auto 0;
-      font-size: 11px;
-      line-height: 1.6;
-      text-align: center;
-      color: #6c6c6c;
-
-      a {
-        font-size: 11px;
-        font-weight: 600;
-        line-height: 1.6;
-        color: #6c6c6c;
-        text-decoration: underline;
-      }
-    }
+  &__hr {
+    margin: 15px 0;
+    color: #000;
+    opacity: .2;
   }
 }

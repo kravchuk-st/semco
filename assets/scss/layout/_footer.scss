@@ -31,60 +31,8 @@
     column-gap: 40px;
   }
 
-  .social__list {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-  }
-
-  .social__link {
-    display: inline-block;
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-
-    &_yt {
-      background-image: url("/assets/img/svg/social/youtube.svg");
-    }
-
-    &_vk {
-      background-image: url("/assets/img/svg/social/vk.svg");
-    }
-
-    &_tg {
-      background-image: url("/assets/img/svg/social/tg.svg");
-    }
-
-    &_wa {
-      background-image: url("/assets/img/svg/social/wa.svg");
-    }
-  }
-
   .contacts__list {
     margin-top: 30px;
-    display: flex;
-    align-items: start;
-    flex-direction: column;
-    row-gap: 20px;
-  }
-
-  .contact__link {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 16px;
-    font-weight: 600;
-    color: #575757;
-  }
-
-  .contact__icon {
-    width: 20px;
-    height: 20px;
-    object-fit: contain;
-    fill: $color-main;
   }
   
   .copyright {
@@ -123,6 +71,7 @@
 
       a {
         font-size: 12px;
+        line-height: 1;
         font-weight: 400;
         color: #575757;
       }
