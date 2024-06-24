@@ -9,6 +9,21 @@ button {
   color: $color-text;
 }
 
+button {
+  line-height: 1.6;
+}
+
+.btn {
+  padding: 10px 20px;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.6;
+  color: $color-main;
+  border: 1px solid $color-main;
+  border-radius: $br-xxl;
+  text-transform: uppercase;
+}
+
 .btn-lg {
   padding: 15px 45px;
   font-weight: 600;

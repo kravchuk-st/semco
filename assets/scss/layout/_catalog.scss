@@ -360,10 +360,18 @@
       width: 100%;
       max-width: 110px;
       padding: 7px 20px 8px 32px;
+      line-height: 1;
       border: none;
       outline: none;
       border-radius: 10px;
       appearance: textfield;
+
+      &::-webkit-outer-spin-button,
+      &::-webkit-inner-spin-button {
+          /* display: none; <- Crashes Chrome on hover */
+          -webkit-appearance: none;
+          margin: 0;
+      }
     }
   }
 

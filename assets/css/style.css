@@ -44,6 +44,21 @@ button {
   color: #1f2029;
 }
 
+button {
+  line-height: 1.6;
+}
+
+.btn {
+  padding: 10px 20px;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.6;
+  color: #03a753;
+  border: 1px solid #03a753;
+  border-radius: 72px;
+  text-transform: uppercase;
+}
+
 .btn-lg {
   padding: 15px 45px;
   font-weight: 600;
@@ -125,6 +140,7 @@ button {
 .card__link_img {
   width: 100%;
   height: 320px;
+  flex-shrink: 0;
   border-radius: 20px 20px 0 0;
 }
 .card__link_img img {
@@ -135,6 +151,7 @@ button {
   border-radius: 20px 20px 0 0;
 }
 .card__link_title {
+  flex: 1 0 auto;
   display: block;
   margin-top: 10px;
   font-weight: 500;
@@ -144,8 +161,11 @@ button {
   text-align: left;
 }
 .card__body {
+  flex-grow: 1;
   padding: 20px;
   border-radius: 0 0 20px 20px;
+  display: flex;
+  flex-direction: column;
 }
 .card__price {
   display: flex;
@@ -292,9 +312,12 @@ button {
 
 .accordion {
   margin-top: 30px;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  display: flex;
+  flex-wrap: wrap;
   gap: 15px 20px;
+}
+.accordion__item {
+  flex: 1 1 calc(50% - 10px);
 }
 .accordion__item.open .accordion__btn {
   border-width: 0;
@@ -315,7 +338,7 @@ button {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: transparent;
+  background: transparent;
   color: #1f2029;
   font-size: 21px;
   font-weight: 400;
@@ -323,10 +346,11 @@ button {
   border-bottom: 1px solid #03a753;
   text-align: left;
   letter-spacing: 0;
-  transition: all 0.3s ease-in-out;
-  will-change: background-color, border;
+  transition: background 0.3s ease-in-out;
+  will-change: background, border;
 }
 .accordion__icon {
+  flex-shrink: 0;
   width: 25px;
   height: 15px;
   stroke: #1f2029;
@@ -398,7 +422,7 @@ body {
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
-  line-height: 1;
+  line-height: 1.2;
   text-align: left;
   color: #1f2029;
 }
@@ -414,8 +438,15 @@ section {
   max-width: 1190px;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.2;
+}
+
 h1 {
   margin: 0;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.25;
 }
 
 h2 {
@@ -1259,7 +1290,7 @@ h2 {
 .connect__title {
   font-weight: 400;
   font-size: 35px;
-  color: #000;
+  color: #03a753;
   line-height: 1.2;
 }
 .connect__btn {
@@ -1884,12 +1915,18 @@ h2 {
   width: 100%;
   max-width: 110px;
   padding: 7px 20px 8px 32px;
+  line-height: 1;
   border: none;
   outline: none;
   border-radius: 10px;
   -webkit-appearance: textfield;
      -moz-appearance: textfield;
           appearance: textfield;
+}
+.sidebar-form__value::-webkit-outer-spin-button, .sidebar-form__value::-webkit-inner-spin-button {
+  /* display: none; <- Crashes Chrome on hover */
+  -webkit-appearance: none;
+  margin: 0;
 }
 .sidebar .filter-list {
   margin-top: 10px;
@@ -2043,6 +2080,125 @@ input[type=range]::-moz-range-thumb {
   pointer-events: auto;
   -moz-appearance: none;
   box-shadow: 0 0 6px rgba(0, 0, 0, 0.05);
+}
+
+.pay-info__wrapper {
+  padding: 20px 25px;
+  display: flex;
+  border-radius: 15px;
+  background: right 5% bottom no-repeat url("/assets/img/pay-man.png"), #f1f9f5 center/cover no-repeat url("/assets/img/pay-bg.png");
+}
+.pay-info__text {
+  max-width: 550px;
+}
+.pay-info__descr {
+  margin-top: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 35px;
+}
+.pay-info__descr p {
+  font-size: 13px;
+  line-height: 1.4;
+}
+.pay-info__descr p:nth-child(1) {
+  max-width: 285px;
+}
+.pay-info__descr p:nth-child(2) {
+  max-width: 225px;
+}
+.pay-info__descr p:nth-child(3) {
+  max-width: 415px;
+}
+
+.payment__title {
+  text-align: center;
+}
+.payment__list {
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.payment__item {
+  padding: 35px 25px 30px 35px;
+  border-radius: 15px;
+  background: #f1f9f5;
+  flex: 1 1 calc(50% - 10px);
+}
+
+.content-payment__header {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.content-payment__title {
+  font-weight: 400;
+  font-size: 22px;
+  color: #272727;
+}
+.content-payment__btn {
+  margin-left: auto;
+  padding: 5px 15px;
+  font-size: 10px;
+  color: #03a753;
+}
+.content-payment__descr {
+  font-size: 14px;
+  line-height: 1.4;
+  color: #24383b;
+}
+
+.documents__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.documents__title {
+  font-weight: 400;
+  font-size: 35px;
+  line-height: 1.2;
+}
+.documents__list {
+  margin-top: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+
+.document {
+  width: 370px;
+  padding: 25px 15px 20px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  background-color: #f1f9f5;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 15 17' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M10.2411 0.0225835C11.5848 -0.167249 12.7871 0.863862 12.7871 2.20618V3.31027C13.7519 3.81458 14.4093 4.81697 14.4093 5.9712V13.9921C14.4093 15.6534 13.0475 17 11.3676 17H3.25651C1.57664 17 0.214844 15.6534 0.214844 13.9921V2.76282C0.214844 2.75536 0.214982 2.74793 0.215249 2.74054C0.214982 2.729 0.214844 2.71742 0.214844 2.70581C0.214844 1.97891 0.755352 1.36262 1.48304 1.25983L10.2411 0.0225835ZM1.43151 4.16649V13.9921C1.43151 14.9889 2.24859 15.7969 3.25651 15.7969H11.3676C12.3755 15.7969 13.1926 14.9889 13.1926 13.9921V5.9712C13.1926 4.97449 12.3755 4.16649 11.3676 4.16649H1.43151ZM1.69193 2.96334H11.5704V2.20618C11.5704 1.59603 11.024 1.12734 10.4131 1.21363L1.6551 2.45087C1.52681 2.469 1.43151 2.57765 1.43151 2.70581C1.43151 2.84804 1.54811 2.96334 1.69193 2.96334ZM3.45929 8.37746C3.45929 8.04523 3.73165 7.77589 4.06762 7.77589H10.5565C10.8925 7.77589 11.1648 8.04523 11.1648 8.37746C11.1648 8.70977 10.8925 8.97903 10.5565 8.97903H4.06762C3.73165 8.97903 3.45929 8.70977 3.45929 8.37746ZM3.45929 11.1848C3.45929 10.8526 3.73165 10.5832 4.06762 10.5832H8.52873C8.8647 10.5832 9.13707 10.8526 9.13707 11.1848C9.13707 11.5171 8.8647 11.7864 8.52873 11.7864H4.06762C3.73165 11.7864 3.45929 11.5171 3.45929 11.1848Z' fill='%2303A753'/%3E%3C/svg%3E");
+  background-size: 15px 17px;
+  background-repeat: no-repeat;
+  background-position: 15px 30px;
+  border-radius: 15px;
+}
+.document__title {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.25;
+  color: #272727;
+}
+.document__text {
+  margin-top: 10px;
+  font-size: 12px;
+  line-height: 1.4;
+  color: #24383b;
+  flex: 1 0 auto;
+}
+.document__btn {
+  margin-top: 15px;
+  padding: 5px 15px;
+  font-size: 10px;
+  border-radius: 72px;
+  text-transform: uppercase;
 }
 
 .footer {

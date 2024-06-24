@@ -1,0 +1,85 @@
+.pay-info {
+  &__wrapper {
+    padding: 20px 25px;
+    display: flex;
+    border-radius: 15px;
+    background: right 5% bottom no-repeat url("/assets/img/pay-man.png"),
+                $color-secondary center / cover no-repeat url("/assets/img/pay-bg.png");
+  }
+
+  &__text {
+    max-width: 550px;
+  }
+
+  &__descr {
+    margin-top: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 35px;
+
+    p {
+      font-size: 13px;
+      line-height: 1.4;
+
+      &:nth-child(1) {
+        max-width: 285px;
+      }
+
+      &:nth-child(2) {
+        max-width: 225px;
+      }
+
+      &:nth-child(3) {
+        max-width: 415px;
+      }
+    }
+  }
+}
+
+.payment {
+  &__title {
+    text-align: center;
+  }
+
+  &__list {
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  &__item {
+    padding: 35px 25px 30px 35px;
+    border-radius: 15px;
+    background: $color-secondary;
+    flex: 1 1 calc(50% - 10px);
+  }
+}
+
+.content-payment {
+  &__header {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+
+  &__title {
+    font-weight: 400;
+    font-size: 22px;
+    color: #272727;
+  }
+
+  &__btn {
+    margin-left: auto;
+    padding: 5px 15px;
+    font-size: 10px;
+    color: $color-main;
+  }
+
+  &__descr {
+    font-size: 14px;
+    line-height: 1.4;
+    color: #24383b;
+  }
+}
