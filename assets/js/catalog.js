@@ -6,7 +6,7 @@ sidebarBtns.forEach(el => {
   el.addEventListener('click', (e) => {
     const btn = e.currentTarget;
     const sidebarBlock = btn.parentElement;
-    sidebarBlock.classList.toggle('active');
+    sidebarBlock.classList.toggle('open');
   })
 });
 

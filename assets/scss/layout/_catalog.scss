@@ -306,13 +306,13 @@
       }
     }
 
-    &:not(.active) {
+    &:not(.open) {
       .sidebar-block__inner {
         display: none;
       }
     }
 
-    &.active {
+    &.open {
       .sidebar-block__btn-icon {
         stroke: $color-main;
         transform: scaleY(-1);
@@ -437,27 +437,6 @@
 }
 
 .select {
-  display: block;
-  width: 100%;
-  padding: 12px 20px;
-  font-family: 'Onest', serif;
-  font-weight: 500;
-  letter-spacing: 0.05em;
-  color: $color-main;
-  border: 1px solid $color-main;
-  border-radius: $br-xxl;
-  background-color: #fff;
-  text-transform: uppercase;
-  box-sizing: border-box;
-  -moz-appearance: none;
-  -webkit-appearance: none;
-  appearance: none;
-   background-image: url("data:image/svg+xml,%3Csvg width='15' height='9' viewBox='0 0 15 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L7.5 8L14 1' stroke='%2303A753'/%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-position: center right 15px;
-  background-size: 15px 9px;
-  cursor: pointer;
-
   &-sorting {
     max-width: 200px;
     font-size: 12px;
@@ -471,12 +450,6 @@
     border-radius: 15px;
     font-size: 17px;
   }
-}
-.select::-ms-expand { display: none; } 
-.select option { font-weight:normal; } 
-*[dir="rtl"] .select, :root:lang(ar) .select, :root:lang(iw) .select { 
-  background-position: left .7em top 50%, 0 0; 
-  padding: .6em .8em .5em 1.4em; 
 }
 
 .rz-slider {
@@ -520,6 +493,7 @@ input[type="range"]::-webkit-slider-thumb{
   pointer-events: auto;
   -webkit-appearance: none;
   box-shadow: 0 0 6px rgba(0,0,0,0.05);
+  cursor: pointer;
 }
 input[type="range"]::-moz-range-thumb{
   height: 22px;
@@ -530,6 +504,7 @@ input[type="range"]::-moz-range-thumb{
   pointer-events: auto;
   -moz-appearance: none;
   box-shadow: 0 0 6px rgba(0,0,0,0.05);
+  cursor: pointer;
 }
 
 

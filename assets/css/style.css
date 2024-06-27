@@ -162,6 +162,42 @@ button {
   color: #b7b7b7;
 }
 
+.select {
+  display: block;
+  width: 100%;
+  padding: 12px 20px;
+  font-family: "Onest", serif;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  color: #03a753;
+  border: 1px solid #03a753;
+  border-radius: 72px;
+  background-color: #fff;
+  text-transform: uppercase;
+  box-sizing: border-box;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg width='15' height='9' viewBox='0 0 15 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L7.5 8L14 1' stroke='%2303A753'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center right 15px;
+  background-size: 15px 9px;
+  cursor: pointer;
+}
+
+.select::-ms-expand {
+  display: none;
+}
+
+.select option {
+  font-weight: normal;
+}
+
+*[dir=rtl] .select, :root:lang(ar) .select, :root:lang(iw) .select {
+  background-position: left 0.7em top 50%, 0 0;
+  padding: 0.6em 0.8em 0.5em 1.4em;
+}
+
 .card {
   width: 260px;
   display: flex;
@@ -218,6 +254,7 @@ button {
 .card .old-price {
   font-size: 17px;
   color: #99a3ae;
+  text-decoration: line-through;
 }
 .card .discount {
   font-size: 18px;
@@ -558,6 +595,18 @@ h2 {
   color: #03a753;
   text-decoration: underline;
 }
+.header .select {
+  max-width: 140px;
+  margin-right: 15px;
+  padding: 12px 15px 12px 45px;
+  border: none;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1;
+  background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9.99954 1.25C8.17684 1.25216 6.42942 1.97719 5.14057 3.26603C3.85173 4.55487 3.1267 6.3023 3.12454 8.125C3.12454 14.0076 9.37454 18.4509 9.64066 18.6371C9.7459 18.7106 9.87117 18.75 9.99954 18.75C10.1279 18.75 10.2532 18.7106 10.3584 18.6371C10.6245 18.4509 16.8745 14.0076 16.8745 8.125C16.8724 6.3023 16.1474 4.55487 14.8585 3.26603C13.5697 1.97719 11.8222 1.25216 9.99954 1.25ZM10 5.62523C10.4945 5.62523 10.9778 5.77185 11.3889 6.04655C11.8 6.32126 12.1205 6.7117 12.3097 7.16852C12.4989 7.62533 12.5484 8.128 12.452 8.61295C12.3555 9.0979 12.1174 9.54336 11.7678 9.89299C11.4181 10.2426 10.9727 10.4807 10.4877 10.5772C10.0028 10.6737 9.50011 10.6241 9.04329 10.4349C8.58648 10.2457 8.19603 9.92527 7.92133 9.51415C7.64662 9.10303 7.5 8.61968 7.5 8.12523C7.49999 7.79692 7.56465 7.47183 7.69028 7.16851C7.81592 6.86519 8.00006 6.58959 8.23221 6.35744C8.46436 6.12529 8.73996 5.94114 9.04328 5.81551C9.3466 5.68988 9.67169 5.62522 10 5.62523Z' fill='%2303A753'/%3E%3C/svg%3E");
+  background-position: 15px center;
+  background-size: 20px;
+}
 
 .nav {
   display: flex;
@@ -875,7 +924,7 @@ h2 {
 }
 
 .advantage-card {
-  max-width: 260px;
+  width: 260px;
   padding: 23px 18px 20px;
   text-align: left;
   background-color: #f1f9f5;
@@ -1910,10 +1959,10 @@ h2 {
   stroke: #1f2029;
   transition: transform 0.2s linear, stroke 0.2s linear;
 }
-.sidebar-block:not(.active) .sidebar-block__inner {
+.sidebar-block:not(.open) .sidebar-block__inner {
   display: none;
 }
-.sidebar-block.active .sidebar-block__btn-icon {
+.sidebar-block.open .sidebar-block__btn-icon {
   stroke: #03a753;
   transform: scaleY(-1);
 }
@@ -2013,28 +2062,6 @@ h2 {
   background-repeat: no-repeat;
 }
 
-.select {
-  display: block;
-  width: 100%;
-  padding: 12px 20px;
-  font-family: "Onest", serif;
-  font-weight: 500;
-  letter-spacing: 0.05em;
-  color: #03a753;
-  border: 1px solid #03a753;
-  border-radius: 72px;
-  background-color: #fff;
-  text-transform: uppercase;
-  box-sizing: border-box;
-  -moz-appearance: none;
-  -webkit-appearance: none;
-  appearance: none;
-  background-image: url("data:image/svg+xml,%3Csvg width='15' height='9' viewBox='0 0 15 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L7.5 8L14 1' stroke='%2303A753'/%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-position: center right 15px;
-  background-size: 15px 9px;
-  cursor: pointer;
-}
 .select-sorting {
   max-width: 200px;
   font-size: 12px;
@@ -2047,19 +2074,6 @@ h2 {
   padding: 9px 35px 9px 15px;
   border-radius: 15px;
   font-size: 17px;
-}
-
-.select::-ms-expand {
-  display: none;
-}
-
-.select option {
-  font-weight: normal;
-}
-
-*[dir=rtl] .select, :root:lang(ar) .select, :root:lang(iw) .select {
-  background-position: left 0.7em top 50%, 0 0;
-  padding: 0.6em 0.8em 0.5em 1.4em;
 }
 
 .rz-slider {
@@ -2105,6 +2119,7 @@ input[type=range]::-webkit-slider-thumb {
   pointer-events: auto;
   -webkit-appearance: none;
   box-shadow: 0 0 6px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
 }
 
 input[type=range]::-moz-range-thumb {
@@ -2116,6 +2131,7 @@ input[type=range]::-moz-range-thumb {
   pointer-events: auto;
   -moz-appearance: none;
   box-shadow: 0 0 6px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
 }
 
 .pay-info__wrapper {
@@ -2497,6 +2513,7 @@ input[type=range]::-moz-range-thumb {
 }
 .partners .info {
   display: flex;
+  align-items: center;
   background-color: #f1f9f5;
   border-radius: 15px;
   flex-shrink: 0;
