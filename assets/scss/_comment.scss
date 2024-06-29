@@ -6,7 +6,6 @@
   .rating {
     display: flex;
     align-items: center;
-    gap: 15px;
   
     &__progress {
       display: flex;
@@ -25,6 +24,7 @@
     }
   
     &__grade {
+      margin-left: 15px;
       font-weight: 500;
       font-size: 16px;
       line-height: 1.2;
@@ -32,7 +32,7 @@
     }
   
     &__source {
-      margin-left: auto;
+      margin-left: 30px;
       width: 32px;
       height: 32px;
       object-fit: fill;
