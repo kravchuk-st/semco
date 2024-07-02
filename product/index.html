@@ -12,6 +12,12 @@
   <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
 </head>
 <body>
+  <svg class="sprite" style="display: none;">
+    <symbol viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg" id="star">
+      <path d="M11.9381 4.35458C11.8877 4.19634 11.7908 4.05696 11.6599 3.95463C11.5291 3.8523 11.3705 3.79177 11.2048 3.78095L8.20769 3.57121L7.09591 0.771631C7.03574 0.616857 6.93022 0.483868 6.79318 0.390091C6.65614 0.296313 6.49396 0.246122 6.3279 0.246094H6.32712C6.16132 0.246389 5.99946 0.296709 5.86272 0.390472C5.72598 0.484235 5.62072 0.617078 5.56069 0.771631L4.43235 3.58737L1.45181 3.78095C1.28608 3.79177 1.12746 3.8523 0.99665 3.95463C0.865838 4.05696 0.768906 4.19634 0.718501 4.35458C0.665326 4.51508 0.661709 4.68786 0.70812 4.85044C0.75453 5.01302 0.848819 5.15786 0.978706 5.26609L3.27167 7.20423L2.58962 9.88711C2.5426 10.0678 2.55125 10.2585 2.61442 10.4342C2.67759 10.61 2.79234 10.7625 2.94365 10.8719C3.08974 10.9782 3.26444 11.0381 3.44501 11.0437C3.62558 11.0493 3.80367 11.0005 3.95609 10.9035L6.3216 9.40494C6.32475 9.40257 6.3279 9.401 6.335 9.40494L8.88029 11.0174C9.01847 11.1057 9.18008 11.1502 9.34397 11.1452C9.50787 11.1401 9.66642 11.0857 9.79889 10.989C9.936 10.8899 10.04 10.7517 10.0972 10.5925C10.1545 10.4334 10.1624 10.2606 10.1198 10.0969L9.39518 7.16599L11.6779 5.26609C11.8078 5.15786 11.9021 5.01302 11.9485 4.85044C11.9949 4.68786 11.9913 4.51508 11.9381 4.35458Z"/>
+    </symbol>
+  </svg>
+
   <header class="header">
     <div class="wrapper">
       <div class="header__top">
@@ -56,7 +62,7 @@
             <li class="nav__item"><a href="/about" class="nav__link">О КОМПАНИИ</a></li>
             <li class="nav__item"><a href="#" class="nav__link">ОПТОВЫЕ ЗАКУПКИ</a></li>
             <li class="nav__item"><a href="/promotions" class="nav__link">АКЦИИ</a></li>
-            <li class="nav__item"><a href="#" class="nav__link">ДОСТАВКА</a></li>
+            <li class="nav__item"><a href="/delivery" class="nav__link">ДОСТАВКА</a></li>
             <li class="nav__item"><a href="/pay" class="nav__link">ОПЛАТА</a></li>
             <li class="nav__item"><a href="/contacts" class="nav__link">КОНТАКТЫ</a></li>
           </ul>
@@ -113,7 +119,108 @@
       <div class="wrapper">
         <div class="product__header">
           <h1 class="product__title">Семена Томата Андромеда F1</h1>
-
+          <div class="product__actions">
+            <button class="btn btn-wish btn-reset">в избранное</button>
+            <button class="btn btn-share btn-reset">поделиться</button>
+          </div>
+        </div>
+        <div class="product__info">
+          <div class="rating">
+            <svg class="rating__icon" aria-hidden="true">
+              <use xlink:href="#star"></use>
+            </svg>
+            <p class="rating__value">5.0</p>
+          </div>
+          <div class="review">
+            <img src="/assets/img/svg/review.svg" alt="review">
+            <p class="review__value">18 отзывов</p>
+          </div>
+        </div>
+        <div class="product-about">
+          <div class="product-about__left">
+            <div class="double-slider">
+              <!-- <div>
+                <div class="splide product__slider" role="group" aria-label="Splide Basic HTML Example">
+                  <div class="splide__track">
+                    <ul class="splide__list">
+                      <li class="splide__slide">
+                        <img src="/assets/img/slider/double.png" alt="slide">
+                      </li>
+                      <li class="splide__slide">
+                        <img src="/assets/img/slider/double.png" alt="slide">
+                      </li>
+                      <li class="splide__slide">
+                        <img src="/assets/img/slider/double.png" alt="slide">
+                      </li>
+                      <li class="splide__slide">
+                        <img src="/assets/img/slider/double.png" alt="slide">
+                      </li>
+                      <li class="splide__slide">
+                        <img src="/assets/img/slider/double.png" alt="slide">
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div> -->
+              <div>
+                <div class="splide product__slider_second" role="group" aria-label="Splide Basic HTML Example">
+                  <div class="splide__track">
+                    <ul class="splide__list">
+                      <li class="splide__slide">
+                        <img src="/assets/img/slider/double.png" alt="slide">
+                      </li>
+                      <li class="splide__slide">
+                        <img src="/assets/img/slider/double.png" alt="slide">
+                      </li>
+                      <li class="splide__slide">
+                        <img src="/assets/img/slider/double.png" alt="slide">
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="product-about__right">
+            <div class="product-price">
+              <p class="product-price__new">120 ₽<span class="text-gray">/уп</span></p>
+              <p class="product-price__old">135 ₽</p>
+            </div>
+            <button class="btn-buy btn btn-fill btn-reset disabled" disabled>нет в наличии</button>
+            <button class="btn-navy btn-reset">Уведомить о поступлении</button>
+            <hr class="product-about__hr">
+            <div class="checkout">
+              <div class="checkout__address">
+                <p class="checkout__title">Город доставки</p>
+                <div class="checkout__menu">
+                  <div class="checkout__city">
+                    <svg class="checkout__icon" aria-hidden="true">
+                      <use xlink:href="/assets/img/svg/map.svg#map"></use>
+                    </svg>
+                    <p>Москва</p>
+                  </div>
+                  <button class="checkout__btn_city-toggle btn-navy btn-reset">изменить</button>
+                </div>
+              </div>
+              <div class="checkout__label">
+                <p class="checkout__title">Пункт выдачи СДЭК <img class="checkout__img" src="/assets/img/svg/checkout/sdek.svg" alt="sdek"></p>
+                <p class="checkout__data">с 25 декабря</p>
+              </div>
+              <div class="checkout__label">
+                <p class="checkout__title">Доставка к постамату <img class="checkout__img" src="/assets/img/svg/checkout/locker.svg" alt="sdek"></p>
+                <p class="checkout__data">с 23 декабря</p>
+              </div>
+              <div class="checkout__label">
+                <p class="checkout__title">Пункт выдачи Boxberry <img class="checkout__img" src="/assets/img/svg/checkout/boxberry.svg" alt="sdek"></p>
+                <p class="checkout__data">с 23 декабря</p>
+              </div>
+              <div class="checkout__label">
+                <p class="checkout__title">Почта России <img class="checkout__img" src="/assets/img/svg/checkout/parcel.svg" alt="sdek"></p>
+                <p class="checkout__data">с 23 декабря</p>
+              </div>
+              <button class="checkout__btn_all btn-navy btn-reset">Все способы доставки</button>
+            </div>
+          </div>
         </div>
 
         <div class="tabs" data-tabs="tab">
@@ -208,19 +315,19 @@
                 <div class="rating">
                   <div class="rating__progress">
                     <svg class="rating__icon active">
-                      <use xlink:href="/assets/img/svg/star.svg#star"></use>
+                      <use xlink:href="#star"></use>
                     </svg>
                     <svg class="rating__icon active">
-                      <use xlink:href="/assets/img/svg/star.svg#star"></use>
+                      <use xlink:href="#star"></use>
                     </svg>
                     <svg class="rating__icon active">
-                      <use xlink:href="/assets/img/svg/star.svg#star"></use>
+                      <use xlink:href="#star"></use>
                     </svg>
                     <svg class="rating__icon active">
-                      <use xlink:href="/assets/img/svg/star.svg#star"></use>
+                      <use xlink:href="#star"></use>
                     </svg>
                     <svg class="rating__icon active">
-                      <use xlink:href="/assets/img/svg/star.svg#star"></use>
+                      <use xlink:href="#star"></use>
                     </svg>
                   </div>
                   <p class="rating__grade">5.0</p>
@@ -239,19 +346,19 @@
                 <div class="rating">
                   <div class="rating__progress">
                     <svg class="rating__icon active">
-                      <use xlink:href="/assets/img/svg/star.svg#star"></use>
+                      <use xlink:href="#star"></use>
                     </svg>
                     <svg class="rating__icon active">
-                      <use xlink:href="/assets/img/svg/star.svg#star"></use>
+                      <use xlink:href="#star"></use>
                     </svg>
                     <svg class="rating__icon active">
-                      <use xlink:href="/assets/img/svg/star.svg#star"></use>
+                      <use xlink:href="#star"></use>
                     </svg>
                     <svg class="rating__icon active">
-                      <use xlink:href="/assets/img/svg/star.svg#star"></use>
+                      <use xlink:href="#star"></use>
                     </svg>
                     <svg class="rating__icon active">
-                      <use xlink:href="/assets/img/svg/star.svg#star"></use>
+                      <use xlink:href="#star"></use>
                     </svg>
                   </div>
                   <p class="rating__grade">5.0</p>
@@ -320,7 +427,7 @@
               <div class="card__info">
                 <div class="rating">
                   <svg class="rating__icon" aria-hidden="true">
-                      <use xlink:href="/assets/img/svg/star.svg#star"></use>
+                      <use xlink:href="#star"></use>
                     </svg>
                   <p class="rating__value">5.0</p>
                 </div>
@@ -347,7 +454,7 @@
               <div class="card__info">
                 <div class="rating">
                   <svg class="rating__icon" aria-hidden="true">
-                      <use xlink:href="/assets/img/svg/star.svg#star"></use>
+                      <use xlink:href="#star"></use>
                     </svg>
                   <p class="rating__value">5.0</p>
                 </div>
@@ -374,7 +481,7 @@
               <div class="card__info">
                 <div class="rating">
                   <svg class="rating__icon" aria-hidden="true">
-                      <use xlink:href="/assets/img/svg/star.svg#star"></use>
+                      <use xlink:href="#star"></use>
                     </svg>
                   <p class="rating__value">5.0</p>
                 </div>
@@ -401,7 +508,7 @@
               <div class="card__info">
                 <div class="rating">
                   <svg class="rating__icon" aria-hidden="true">
-                      <use xlink:href="/assets/img/svg/star.svg#star"></use>
+                      <use xlink:href="#star"></use>
                     </svg>
                   <p class="rating__value">5.0</p>
                 </div>
@@ -444,7 +551,7 @@
               <div class="card__info">
                 <div class="rating">
                   <svg class="rating__icon" aria-hidden="true">
-                      <use xlink:href="/assets/img/svg/star.svg#star"></use>
+                      <use xlink:href="#star"></use>
                     </svg>
                   <p class="rating__value">5.0</p>
                 </div>
@@ -471,7 +578,7 @@
               <div class="card__info">
                 <div class="rating">
                   <svg class="rating__icon" aria-hidden="true">
-                      <use xlink:href="/assets/img/svg/star.svg#star"></use>
+                      <use xlink:href="#star"></use>
                     </svg>
                   <p class="rating__value">5.0</p>
                 </div>
@@ -498,7 +605,7 @@
               <div class="card__info">
                 <div class="rating">
                   <svg class="rating__icon" aria-hidden="true">
-                      <use xlink:href="/assets/img/svg/star.svg#star"></use>
+                      <use xlink:href="#star"></use>
                     </svg>
                   <p class="rating__value">5.0</p>
                 </div>
@@ -525,7 +632,7 @@
               <div class="card__info">
                 <div class="rating">
                   <svg class="rating__icon" aria-hidden="true">
-                      <use xlink:href="/assets/img/svg/star.svg#star"></use>
+                      <use xlink:href="#star"></use>
                     </svg>
                   <p class="rating__value">5.0</p>
                 </div>
@@ -615,7 +722,7 @@
               <h3 class="footer-links__label">Важная информация</h3>
               <ul class="footer-links__list list-reset">
                 <li class="footer-links__item"><a href="/pay">Оплата</a></li>
-                <li class="footer-links__item"><a href="#">Доставка</a></li>
+                <li class="footer-links__item"><a href="/delivery">Доставка</a></li>
                 <li class="footer-links__item"><a href="#">Возврат</a></li>
                 <li class="footer-links__item"><a href="#">Договор оферты</a></li>
                 <li class="footer-links__item"><a href="#">Оптовые закупки</a></li>
@@ -661,6 +768,7 @@
 
   <script src="/assets/js/tabs.js"></script>
   <script src="/assets/js/splide.min.js"></script>
+  <script src="/assets/js/sliders/product.js"></script>
   <script src="/assets/js/sliders/cards.js"></script>
   <script src="/assets/js/scrollTop.js"></script>
   <script src="/assets/js/player.js"></script>

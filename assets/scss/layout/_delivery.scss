@@ -1,0 +1,59 @@
+.delivery {
+  background: transparent right 10% top 30px / auto no-repeat url("/assets/img/delivery-bg.png");
+
+  &__descr {
+    margin-top: 10px;
+    max-width: 360px;
+    font-size: 12px;
+    line-height: 1.4;
+  }
+
+  &__list {
+    margin-top: 40px;
+    max-width: 220px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px 10px;
+
+    .region {
+      padding: 5px 9px;
+      border: 1px solid $color-main;
+      font-size: 11px;
+      line-height: 1.2;
+      color: $color-main;
+      border-radius: 8px;
+    }
+
+    .days {
+      margin-top: 5px;
+      margin-left: 10px;
+      font-size: 10px;
+      line-height: 1.4;
+    }
+  }
+
+  .countries {
+    margin-top: 70px;
+    display: grid;
+    grid-template-columns: repeat(3, max-content);
+    gap: 17px 40px;
+
+    .flag {
+      width: 26px;
+      height: 13px;
+      vertical-align: middle;
+    }
+
+    &__title {
+      font-size: 18px;
+      line-height: 1.2;
+      color: #272727;
+    }
+
+    &__days {
+      margin-top: 6px;
+      font-size: 10px;
+      line-height: 1.4;
+    }
+  }
+}

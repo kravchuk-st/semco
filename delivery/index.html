@@ -4,10 +4,11 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Документация</title>
+  <title>Доставка</title>
   <link rel="shortcut icon" type="image/ico" href="/assets/img/favicon.ico">
 
   <link rel="stylesheet" href="/assets/css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="/assets/css/splide.min.css">
   <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
 </head>
 <body>
@@ -20,7 +21,7 @@
         <img class="doll" src="/assets/img/svg/figure.svg" alt="doll">
         <a href="/catalog" class="katalog-link btn-reset">КАТАЛОГ</a>
         <form class="search" action="#" method="post">
-          <input class="search__input" type="text" placeholder="Поиск..." required>
+          <input class="search__input" type="text" placeholder="Поиск...">
           <button class="search__btn btn-reset" type="submit"></button>
         </form>
         <div class="header__btns">
@@ -74,7 +75,7 @@
       </div>
     </div>
   </header>
-
+  
   <main>
     <div class="wrapper">
       <nav aria-label="breadcrumb">
@@ -83,81 +84,97 @@
             <a href="/" class="breadcrumb__link">Главная страница</a>
             <span class="breadcrumb__separator">—</span>
           </li>
-          <li class="breadcrumb__item">
-            <a href="/about" class="breadcrumb__link">О компании</a>
-            <span class="breadcrumb__separator">—</span>
-          </li>
-          <li class="breadcrumb__item active" aria-current="page">Документация</li>
+          <li class="breadcrumb__item active" aria-current="page">Доставка</li>
         </ol>
       </nav>
     </div>
 
-    <section class="documents">
+    <section class="delivery">
       <div class="wrapper">
-        <div class="documents__header">
-          <h1 class="documents__title">Документы и правовая информация</h1>
-          <a href="/catalog" class="documents__btn btn btn-reset">вернуться к каталогу</a>
+        <h1 class="delivery__title">Доставка от 2-3 дней </h1>
+        <div class="delivery__descr">
+          Мы осуществляем доставку семян и сопутствующих товаров нашего интернет-магазина во все регионы Российской Федерации, а также в Беларусь и Казахстан.
         </div>
-        <div class="documents__list">
-          <div class="document">
-            <h3 class="document__title">Продажа семян гибрида Катя F1 - права правообладателя</h3>
-            <p class="document__text">Обращаем ваше внимание: с 25.10.2006 зарегистрирован патент на гибрид томата Катя F1, который внесен в Государственный реестр...</p>
-            <button class="document__btn btn-fill btn-reset">читать</button>
-          </div>
-          <div class="document">
-            <h3 class="document__title">Закон о семеноводстве - свершилось!</h3>
-            <p class="document__text">В самый канун нового 2022 года – произошло событие, которого семеноводы, селекционеры и агробизнес дожидались более двадцати лет...</p>
-            <button class="document__btn btn-fill btn-reset">читать</button>
-          </div>
-          <div class="document">
-            <h3 class="document__title">Общие правила продажи и поставки продукции ООО "Семко"</h3>
-            <p class="document__text">Общие Правила разработаны на основании...</p>
-            <button class="document__btn btn-fill btn-reset">читать</button>
-          </div>
-          <div class="document">
-            <h3 class="document__title">Информационное письмо о товарном знаке "Семко"</h3>
-            <p class="document__text">Нами установлено, что в последнее время в интернете, ряде информационных ресурсов и в бизнес-проектах выявлены случаи незаконного...</p>
-            <button class="document__btn btn-fill btn-reset">читать</button>
-          </div>
-          <div class="document">
-            <h3 class="document__title">Оформление карантинного сертификата на семена – разъяснение</h3>
-            <p class="document__text">В связи с многочисленными запросами об...</p>
-            <button class="document__btn btn-fill btn-reset">читать</button>
-          </div>
-          <div class="document">
-            <h3 class="document__title">Об утверждении порядка реализации и транспортировки партий семян</h3>
-            <p class="document__text">Уважаемые партнеры, публикуем Приказ...</p>
-            <button class="document__btn btn-fill btn-reset">читать</button>
-          </div>
-          <div class="document">
-            <h3 class="document__title">Об отмене карантинного сертификата</h3>
-            <p class="document__text">В связи с многочисленными запросами об оформлении поставок семян карантинными сертификатами, ООО «Семко» доводит до...</p>
-            <button class="document__btn btn-fill btn-reset">читать</button>
-          </div>
-          <div class="document">
-            <h3 class="document__title">О сроке действия «Экспертного заключения о карантинном состоянии объекта»</h3>
-            <p class="document__text">В связи с многочисленными запросами наших...</p>
-            <button class="document__btn btn-fill btn-reset">читать</button>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="proposition">
-      <div class="wrapper">
-        <div class="proposition__content">
-          <div class="proposition__info">
-            <h2 class="proposition__title">Получайте выгодные предложения</h2>
-            <p class="proposition__descr">Подпишитесь и получайте промокоды, акции и подборки товаров на свою почту</p>
-          </div>
-          <form class="proposition__form" action="#" method="post">
-            <input class="form-input" type="email" name="email" placeholder="Ваш e-mail" required>
-            <button class="form-btn btn-reset" type="submit">подписаться</button>
-            <p class="form-text">
-              Нажимая Подписаться вы соглашаетесь с <a href="#" target="_blank" rel="noopener noreferrer">Политикой обработки персональных данных</a>
-            </p>
-          </form>
-        </div>
+        <ul class="delivery__list list-reset">
+          <li class="delivery__item">
+            <p class="region">Центральный</p>
+            <p class="days">3-5 дней</p>
+          </li>
+          <li class="delivery__item">
+            <p class="region">Приволжский</p>
+            <p class="days">3-5 дней</p>
+          </li>
+          <li class="delivery__item">
+            <p class="region">Южный</p>
+            <p class="days">3-9 дней</p>
+          </li>
+          <li class="delivery__item">
+            <p class="region">Северо-западный</p>
+            <p class="days">4-7 дней</p>
+          </li>
+          <li class="delivery__item">
+            <p class="region">Дальневосточный</p>
+            <p class="days">7-35 дней</p>
+          </li>
+          <li class="delivery__item">
+            <p class="region">Уральский</p>
+            <p class="days">3-12 дней</p>
+          </li>
+          <li class="delivery__item">
+            <p class="region">Северо-Кавказский</p>
+            <p class="days">5-9 дней</p>
+          </li>
+          <li class="delivery__item">
+            <p class="region">Сибирский</p>
+            <p class="days">5-9 дней</p>
+          </li>
+          <li class="delivery__item">
+            <p class="region">ЛНР, ДНР, Запорожье, Херсон, Крым</p>
+            <p class="days">10-14 дней, для Крыма 7-10 дней</p>
+          </li>
+        </ul>
+        <ul class="countries list-reset">
+          <li class="countries__item">
+            <p class="countries__title">Беларусь <img class="flag" src="/assets/img/svg/flags/belarus.svg" alt="flag"></p>
+            <p class="countries__days">3-5 дней</p>
+          </li>
+          <li class="countries__item">
+            <p class="countries__title">Казахстан <img class="flag" src="/assets/img/svg/flags/kazakhstan.svg" alt="flag"></p>
+            <p class="countries__days">3-5 дней</p>
+          </li>
+          <li class="countries__item">
+            <p class="countries__title">Узбекистан <img class="flag" src="/assets/img/svg/flags/uzbekistan.svg" alt="flag"></p>
+            <p class="countries__days">3-5 дней</p>
+          </li>
+          <li class="countries__item">
+            <p class="countries__title">Армения <img class="flag" src="/assets/img/svg/flags/armenia.svg" alt="flag"></p>
+            <p class="countries__days">3-5 дней</p>
+          </li>
+          <li class="countries__item">
+            <p class="countries__title">Киргизия <img class="flag" src="/assets/img/svg/flags/kyrgyzstan.svg" alt="flag"></p>
+            <p class="countries__days">3-5 дней</p>
+          </li>
+          <li class="countries__item">
+            <p class="countries__title">Грузия <img class="flag" src="/assets/img/svg/flags/georgia.svg" alt="flag"></p>
+            <p class="countries__days">3-5 дней</p>
+          </li>
+          <li class="countries__item">
+            <p class="countries__title">Япония <img class="flag" src="/assets/img/svg/flags/japan.svg" alt="flag"></p>
+            <p class="countries__days">3-5 дней</p>
+          </li>
+          <li class="countries__item">
+            <p class="countries__title">ОАЭ <img class="flag" src="/assets/img/svg/flags/uae.svg" alt="flag"></p>
+            <p class="countries__days">3-5 дней</p>
+          </li>
+          <li class="countries__item">
+            <p class="countries__title">Кувейт <img class="flag" src="/assets/img/svg/flags/kuwait.svg" alt="flag"></p>
+            <p class="countries__days">3-5 дней</p>
+          </li>
+          <li class="countries__item">
+            <p class="countries__title">Вьетнам <img class="flag" src="/assets/img/svg/flags/vietnam.svg" alt="flag"></p>
+            <p class="countries__days">3-5 дней</p>
+          </li>
+        </ul>
       </div>
     </section>
   </main>
@@ -260,6 +277,15 @@
 
   <div class="top-control"></div>
 
+  <script src="/assets/js/splide.min.js"></script>
+  <script src="/assets/js/sliders/banner.js"></script>
+  <script src="/assets/js/sliders/cards.js"></script>
+  <script src="/assets/js/sliders/discount.js"></script>
+  <script src="/assets/js/sliders/comments.js"></script>
+  <script src="/assets/js/showAdvantage.js"></script>
   <script src="/assets/js/scrollTop.js"></script>
+  <script>
+    drawSlider('.products_slider');
+  </script>
 </body>
 </html>

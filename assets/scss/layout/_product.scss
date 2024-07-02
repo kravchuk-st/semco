@@ -1,0 +1,151 @@
+.product {
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    .btn {
+      color: $color-text;
+      border-color: $color-text;
+      background-position: left 20px center;
+      background-repeat: no-repeat;
+    }
+  }
+
+  .btn-buy {
+    width: 100%;
+    margin-top: 30px;
+    padding: 13px 25px;
+    font-size: 18px;
+  }
+
+  .btn-navy {
+    display: block;
+    margin: 10px auto 0;
+  }
+
+  &__info {
+    margin-top: 10px;
+    display: flex;
+    column-gap: 20px;
+  }
+
+  &-about {
+    margin-top: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    column-gap: 40px;
+
+    &__right {
+      width: 345px;
+      padding: 27px 25px 15px;
+      background: $color-secondary;
+      border-radius: $br-xl;
+    }
+
+    &__hr {
+      height: 1px;
+      margin-top: 25px;
+      border: none;
+      background: #BCBCBC;
+    }
+
+    .checkout {
+      margin-top: 30px;
+
+      &__address {
+        margin-bottom: 20px;
+      }
+
+      &__label {
+        margin-top: 15px;
+      }
+
+      &__title {
+        font-size: 16px;
+        color: #000;
+      }
+
+      &__img {
+        width: 15px;
+        height: 15px;
+        vertical-align: middle;
+      }
+
+      &__data {
+        margin-top: 6px;
+        font-size: 14px;
+        color: #8B8B8B;
+      }
+
+      &__btn_all {
+        display: inline;
+        margin: 2px 0 0;
+        font-size: 14px;
+      }
+      
+      &__menu {
+        margin-top: 10px;
+        display: flex;
+        align-items: baseline;
+      }
+
+      &__city {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+
+        p {
+          font-weight: 500;
+          font-size: 25px;
+        }
+      }
+
+      &__icon {
+        width: 10px;
+        height: 14px;
+        fill: $color-main;
+      }
+
+      &__btn_city-toggle {
+        display: inline;
+        margin: 0;
+        margin-left: 10px;
+        font-size: 12px;
+        color: #8D8D8D;
+      }
+    }
+  }
+
+  &-price {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+
+    &__new {
+      font-weight: 500;
+      font-size: 40px;
+      color: $color-main;
+
+      .text-gray {
+        font-weight: 400;
+        font-size: 24px;
+        color: #99A3AE;
+      }
+    }
+
+    &__old {
+      font-weight: 500;
+      font-size: 26px;
+      color: #99A3AE;
+      text-decoration: line-through;
+    }
+  }
+}
