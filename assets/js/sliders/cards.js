@@ -1,4 +1,4 @@
-const drawSlider = (el) => {
+const drawSlider = (el = '') => {
   return new Splide( `${el}`, {
     padding: { left: 120, right: 120 },
     perMove: 1,

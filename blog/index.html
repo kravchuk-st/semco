@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Блог</title>
+  <link rel="shortcut icon" type="image/ico" href="/assets/img/favicon.ico">
+
+  <link rel="stylesheet" href="/assets/css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="/assets/css/splide.min.css">
+  <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
+</head>
+<body>
+  <svg class="sprite" style="display: none;">
+    <symbol viewBox="0 0 25 15" fill="none" xmlns="http://www.w3.org/2000/svg" id="arrow">
+      <path d="M1.5 1L11.7366 13.0978C12.1361 13.5699 12.8639 13.5699 13.2634 13.0978L23.5 1" stroke-width="2" stroke-linecap="round"/>
+    </symbol>
+  </svg>
+  
+  <header class="header">
+    <div class="wrapper">
+      <div class="header__top">
+        <a href="/" class="logo">
+          <img src="/assets/img/svg/logo.svg" alt="logo" class="logo__icon">
+        </a>
+        <img class="doll" src="/assets/img/svg/figure.svg" alt="doll">
+        <a href="/catalog" class="katalog-link btn-reset">КАТАЛОГ</a>
+        <form class="search" action="#" method="post">
+          <input class="search__input" type="text" placeholder="Поиск...">
+          <button class="search__btn btn-reset" type="submit"></button>
+        </form>
+        <div class="header__btns">
+          <a href="#" class="wishlist btn-reser">
+            <span class="wishlist__icon">
+              <img src="/assets/img/svg/heart.svg" alt="heart" class="wishlist__img">
+              <span class="wishlist__quantity">15</span>
+            </span>
+            <span class="wishlist__text">ИЗБРАННОЕ</span>
+          </a>
+          <a href="#" class="cart btn-reser">
+            <span class="cart__icon">
+              <img src="/assets/img/svg/cart.svg" alt="cart" class="cart__img">
+              <span class="cart__quantity">5</span>
+            </span>
+            <span class="cart__text">
+              <span class="cart__title">КОРЗИНА</span>
+              <span class="cart__price">3500 ₽</span>
+            </span>
+          </a>
+          <button class="account btn-reset">ВОЙТИ</button>
+        </div>
+      </div>
+      <div class="header__bottom">
+        <select class="select" name="city">
+          <option value="МОСКВА" selected>МОСКВА</option>
+          <option value="value2">ГОРОД 2</option>
+          <option value="value3">ГОРОД 3</option>
+        </select>
+        <nav class="nav">
+          <ul class="nav__list list-reset">
+            <li class="nav__item"><a href="#" class="nav__link">О КОМПАНИИ</a></li>
+            <li class="nav__item"><a href="#" class="nav__link">ОПТОВЫЕ ЗАКУПКИ</a></li>
+            <li class="nav__item"><a href="/promotions" class="nav__link">АКЦИИ</a></li>
+            <li class="nav__item"><a href="/delivery" class="nav__link">ДОСТАВКА</a></li>
+            <li class="nav__item"><a href="/pay" class="nav__link">ОПЛАТА</a></li>
+            <li class="nav__item"><a href="/contacts" class="nav__link">КОНТАКТЫ</a></li>
+          </ul>
+        </nav>
+        <div class="header__call">
+          <a href="tel:+74956860475" class="call__link">
+            <span class="call__img">
+              <svg class="call__icon">
+                <use xlink:href="/assets/img/svg/phone.svg#phone"></use>
+              </svg>
+            </span>
+            <span class="call__text">+7 (495) 686-04-75</span>
+          </a>
+          <button class="call-back__btn btn-reset">ЗАКАЗАТЬ ЗВОНОК</button>
+        </div>
+      </div>
+    </div>
+  </header>
+  
+  <main>
+    <div class="wrapper">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb list-reset">
+          <li class="breadcrumb__item">
+            <a href="/" class="breadcrumb__link">Главная страница</a>
+            <span class="breadcrumb__separator">—</span>
+          </li>
+          <li class="breadcrumb__item active" aria-current="page">Блог</li>
+        </ol>
+      </nav>
+    </div>
+
+    <section class="blog">
+      <div class="wrapper">
+        <div class="blog__header">
+          <h1>Полезные статьи и новости</h1>
+          <div class="select-tema">
+            <span class="select-tema__icon">
+              <svg width="9" height="11">
+                <use xlink:href="/assets/img/svg/blog/1.svg#blog"></use>
+              </svg>
+            </span>
+            Кулинарные фавориты
+          </div>
+          <a href="/catalog" class="btn catalog-btn btn-reset">вернуться к каталогу</a>
+        </div>
+        <div class="blog__layout">
+          <aside class="blog__sidebar">
+            <ul class="side-filters list-reset">
+              <li class="side-filters__item">
+                <button class="side-filters__btn btn-reset">
+                  <span class="side-filters__icon">
+                    <svg width="11" height="11">
+                      <use xlink:href="/assets/img/svg/blog/0.svg#blog"></use>
+                    </svg>
+                  </span>
+                  Все темы
+                </button>
+              </li>
+              <li class="side-filters__item">
+                <button class="side-filters__btn active btn-reset">
+                  <span class="side-filters__icon">
+                    <svg width="9" height="11">
+                      <use xlink:href="/assets/img/svg/blog/1.svg#blog"></use>
+                    </svg>
+                  </span>
+                  Кулинарные фавориты
+                </button>
+              </li>
+              <li class="side-filters__item">
+                <button class="side-filters__btn btn-reset">
+                  <span class="side-filters__icon">
+                    <svg width="11" height="14">
+                      <use xlink:href="/assets/img/svg/blog/2.svg#blog"></use>
+                    </svg>
+                  </span>
+                  Цветник мечты
+                </button>
+              </li>
+              <li class="side-filters__item">
+                <button class="side-filters__btn btn-reset">
+                  <span class="side-filters__icon side-filters__icon_stroke">
+                    <svg width="12" height="12">
+                      <use xlink:href="/assets/img/svg/blog/3.svg#blog"></use>
+                    </svg>
+                  </span>
+                  Истории успеха
+                </button>
+              </li>
+              <li class="side-filters__item">
+                <button class="side-filters__btn btn-reset">
+                  <span class="side-filters__icon">
+                    <svg width="12" height="12">
+                      <use xlink:href="/assets/img/svg/blog/4.svg#blog"></use>
+                    </svg>
+                  </span>
+                  Наши проекты
+                </button>
+              </li>
+              <li class="side-filters__item">
+                <button class="side-filters__btn btn-reset">
+                  <span class="side-filters__icon">
+                    <svg width="12" height="8">
+                      <use xlink:href="/assets/img/svg/blog/5.svg#blog"></use>
+                    </svg>
+                  </span>
+                  Экотренды
+                </button>
+              </li>
+              <li class="side-filters__item">
+                <button class="side-filters__btn btn-reset">
+                  <span class="side-filters__icon">
+                    <svg width="12" height="5">
+                      <use xlink:href="/assets/img/svg/blog/6.svg#blog"></use>
+                    </svg>
+                  </span>
+                  Урожай круглый год
+                </button>
+              </li>
+              <li class="side-filters__item">
+                <button class="side-filters__btn btn-reset">
+                  <span class="side-filters__icon">
+                    <svg width="12" height="10">
+                      <use xlink:href="/assets/img/svg/blog/7.svg#blog"></use>
+                    </svg>
+                  </span>
+                  Сад на балконе
+                </button>
+              </li>
+              <li class="side-filters__item">
+                <button class="side-filters__btn btn-reset">
+                  <span class="side-filters__icon side-filters__icon_stroke">
+                    <svg width="13" height="10">
+                      <use xlink:href="/assets/img/svg/blog/8.svg#blog"></use>
+                    </svg>
+                  </span>
+                  Газета
+                </button>
+              </li>
+              <li class="side-filters__item">
+                <button class="side-filters__btn btn-reset">
+                  <span class="side-filters__icon">
+                    <svg width="11" height="10">
+                      <use xlink:href="/assets/img/svg/blog/9.svg#blog"></use>
+                    </svg>
+                  </span>
+                  Выставки, проекты
+                </button>
+              </li>
+              <li class="side-filters__item">
+                <button class="side-filters__btn btn-reset">
+                  <span class="side-filters__icon">
+                    <svg width="12" height="9">
+                      <use xlink:href="/assets/img/svg/blog/10.svg#blog"></use>
+                    </svg>
+                  </span>
+                  Агротехника
+                </button>
+              </li>
+            </ul>
+            <ul class="media-links list-reset">
+              <li class="media-links__item">
+                <a href="#" class="media-link">
+                  <span class="media-link__icon">
+                    <svg width="8" height="11">
+                      <use xlink:href="/assets/img/svg/video.svg#blog"></use>
+                    </svg>
+                  </span>
+                  Видео от СЕМКО
+                </a>
+              </li>
+              <li class="media-links__item">
+                <a href="#" class="media-link">
+                  <span class="media-link__icon">
+                    <svg width="10" height="11">
+                      <use xlink:href="/assets/img/svg/audio.svg#blog"></use>
+                    </svg>
+                  </span>
+                  Музыка от СЕМКО
+                </a>
+              </li>
+            </ul>
+          </aside>
+          <div class="blog__content">
+            <div class="top-wrap">
+              <div class="article">
+                <img src="/assets/img/blog-bg.png" alt="article" class="article__img">
+                <div class="article__text">
+                  <div class="article__top">
+                    <p class="article__tema">«Кулинарные фавориты»</p>
+                    <time class="article__data" datetime="2022-08-30">30.08.22</time>
+                  </div>
+                  <p class="article__title">Перец сладкий - интересные факты, фото, рецепты</p>
+                  <p class="article__descr">
+                    Польза сладкого перца несомненна! Его плоды помимо клетчатки содержат витамины и микроэлементы А, Е, В1, В2, В5, В6 В9, РР, К, β-каротин хром, марганец, медь, молибден, кобальт, цинк, железо, калий и другие. Калорийность 100 граммов перца всего 27 килокалорий, что позволяет...
+                  </p>
+                  <a class="btn btn-fill btn-reset" href="#">читать</a>
+                </div>
+              </div>
+            </div>
+            <div class="main-articles">
+              <div class="proposition">
+                <div class="proposition__content">
+                  <div class="proposition__info">
+                    <h2 class="proposition__title">Получайте выгодные предложения</h2>
+                    <p class="proposition__descr">Подпишитесь и получайте промокоды, акции и подборки товаров на свою почту</p>
+                  </div>
+                  <form class="proposition__form" action="#" method="post">
+                    <input class="form-input" type="email" name="email" placeholder="Ваш e-mail" required>
+                    <button class="form-btn btn-reset" type="submit">подписаться</button>
+                    <p class="form-text">
+                      Нажимая Подписаться вы соглашаетесь с <a href="#" target="_blank" rel="noopener noreferrer">Политикой обработки персональных данных</a>
+                    </p>
+                  </form>
+                </div>
+              </div>
+              <article class="article-card">
+                <img src="/assets/img/article.png" alt="article" class="article-card__img">
+                <div class="article-card__text">
+                  <div class="article-card__top">
+                    <p class="article-card__tema">«Кулинарные фавориты»</p>
+                    <time class="article-card__data" datetime="2022-08-30">30.08.22</time>
+                  </div>
+                  <h3 class="article-card__title">Перец сладкий — результаты селекционной программы Семко</h3>
+                  <a href="#" class="btn btn-fill btn-reset">читать статью</a>
+                </div>
+              </article>
+              <article class="article-card">
+                <img src="/assets/img/article.png" alt="article" class="article-card__img">
+                <div class="article-card__text">
+                  <div class="article-card__top">
+                    <p class="article-card__tema">«Сад на балконе»</p>
+                    <time class="article-card__data" datetime="2022-08-30">30.08.22</time>
+                  </div>
+                  <h3 class="article-card__title">Прививка арбуза на тыкву — просто и со вкусом!</h3>
+                  <a href="#" class="btn btn-fill btn-reset">читать статью</a>
+                </div>
+              </article>
+              <article class="article-card">
+                <img src="/assets/img/article.png" alt="article" class="article-card__img">
+                <div class="article-card__text">
+                  <div class="article-card__top">
+                    <p class="article-card__tema">«Агротехника»</p>
+                    <time class="article-card__data" datetime="2022-08-30">30.08.22</time>
+                  </div>
+                  <h3 class="article-card__title">Сити-фермерство в агрокомбинате «Московский»</h3>
+                  <a href="#" class="btn btn-fill btn-reset">читать статью</a>
+                </div>
+              </article>
+              <article class="article-card">
+                <img src="/assets/img/article.png" alt="article" class="article-card__img">
+                <div class="article-card__text">
+                  <div class="article-card__top">
+                    <p class="article-card__tema">«Кулинарные фавориты»</p>
+                    <time class="article-card__data" datetime="2022-08-30">30.08.22</time>
+                  </div>
+                  <h3 class="article-card__title">Перец сладкий — результаты селекционной программы Семко</h3>
+                  <a href="#" class="btn btn-fill btn-reset">читать статью</a>
+                </div>
+              </article>
+              <article class="article-card">
+                <img src="/assets/img/article.png" alt="article" class="article-card__img">
+                <div class="article-card__text">
+                  <div class="article-card__top">
+                    <p class="article-card__tema">«Сад на балконе»</p>
+                    <time class="article-card__data" datetime="2022-08-30">30.08.22</time>
+                  </div>
+                  <h3 class="article-card__title">Прививка арбуза на тыкву — просто и со вкусом!</h3>
+                  <a href="#" class="btn btn-fill btn-reset">читать статью</a>
+                </div>
+              </article>
+              <article class="article-card">
+                <img src="/assets/img/article.png" alt="article" class="article-card__img">
+                <div class="article-card__text">
+                  <div class="article-card__top">
+                    <p class="article-card__tema">«Агротехника»</p>
+                    <time class="article-card__data" datetime="2022-08-30">30.08.22</time>
+                  </div>
+                  <h3 class="article-card__title">Сити-фермерство в агрокомбинате «Московский»</h3>
+                  <a href="#" class="btn btn-fill btn-reset">читать статью</a>
+                </div>
+              </article>
+              <article class="article-card">
+                <img src="/assets/img/article.png" alt="article" class="article-card__img">
+                <div class="article-card__text">
+                  <div class="article-card__top">
+                    <p class="article-card__tema">«Кулинарные фавориты»</p>
+                    <time class="article-card__data" datetime="2022-08-30">30.08.22</time>
+                  </div>
+                  <h3 class="article-card__title">Перец сладкий — результаты селекционной программы Семко</h3>
+                  <a href="#" class="btn btn-fill btn-reset">читать статью</a>
+                </div>
+              </article>
+              <article class="article-card">
+                <img src="/assets/img/article.png" alt="article" class="article-card__img">
+                <div class="article-card__text">
+                  <div class="article-card__top">
+                    <p class="article-card__tema">«Сад на балконе»</p>
+                    <time class="article-card__data" datetime="2022-08-30">30.08.22</time>
+                  </div>
+                  <h3 class="article-card__title">Прививка арбуза на тыкву — просто и со вкусом!</h3>
+                  <a href="#" class="btn btn-fill btn-reset">читать статью</a>
+                </div>
+              </article>
+              <article class="article-card">
+                <img src="/assets/img/article.png" alt="article" class="article-card__img">
+                <div class="article-card__text">
+                  <div class="article-card__top">
+                    <p class="article-card__tema">«Агротехника»</p>
+                    <time class="article-card__data" datetime="2022-08-30">30.08.22</time>
+                  </div>
+                  <h3 class="article-card__title">Сити-фермерство в агрокомбинате «Московский»</h3>
+                  <a href="#" class="btn btn-fill btn-reset">читать статью</a>
+                </div>
+              </article>
+            </div>
+            <div class="blog__inserted">
+              <button class="show-more btn-reset">загрузить ещё</button>
+            </div>
+            <div class="pagination">
+              <button class="pagination__btn all-pages btn-reset">показать всё</button>
+              <ul class="pagination__list list-reset">
+                <li class="pagination__item"><button class="pagination__btn pagination__btn_active btn-reset">1</button></li>
+                <li class="pagination__item"><button class="pagination__btn btn-reset">2</button></li>
+                <li class="pagination__item"><button class="pagination__btn btn-reset">3</button></li>
+                <li class="pagination__item"><button class="pagination__btn btn-reset">4</button></li>
+                <li class="pagination__item"><button class="pagination__btn btn-reset">5</button></li>
+                <li class="pagination__item"><button class="pagination__btn_more btn-reset"></button></li>
+              </ul>
+              <button class="pagination__btn forward-page btn-reset">Далее</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="discount discount_slider splide">
+      <div class="wrapper">
+        <div class="discount__header">
+          <h2 class="title">Скидки и акции</h2>
+          <a href="#" class="all-discounts btn-reset">смотреть все</a>
+          <div class="discount__btns splide__arrows">
+            <button class="slider-btn prev-btn btn-reser splide__arrow--prev"></button>
+            <button class="slider-btn btn-reser splide__arrow--next"></button>
+          </div>
+        </div>
+        <div class="splide__track">
+          <div class="splide__list">
+            <a class="splide__slide discount__item" href="#" style="background-image: url(/assets/img/discounts/0.png)">
+              <span>Скидки оптовым покупателям</span>
+            </a>
+            <a class="splide__slide discount__item" href="#" style="background-image: url(/assets/img/discounts/1.png)">
+              <span>Скидки оптовым покупателям</span>
+            </a>
+            <a class="splide__slide discount__item" href="#" style="background-image: url(/assets/img/discounts/2.png)">
+              <span>Скидки оптовым покупателям</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="products products_slider splide">
+      <div class="wrapper">
+        <div class="products__header">
+          <div class="products__text">
+            <h2 class="products__title">Новинки и популярные товары</h2>
+            <p class="products__descr">Товары, которые вас заинтересуют</p>
+          </div>
+          <div class="products__btns splide__arrows">
+            <button class="slider-btn prev-btn btn-reser splide__arrow--prev"></button>
+            <button class="slider-btn btn-reser splide__arrow--next"></button>
+          </div>
+          <a href="#" class="btn-lg btn-reset">все новинки</a>
+        </div>
+      </div>
+      <div class="splide__track">
+        <div class="splide__list">
+          <div class="splide__slide card">
+            <a href="#" class="card__link_img btn-reset">
+              <img src="/assets/img/slider/goods/0.jpg" alt="slide">
+            </a>
+            <div class="card__body">
+              <div class="card__price">
+                <p class="new-price">120 ₽<span class="text-gray">/уп</span></p>
+                <p class="old-price">135 ₽</p>
+                <p class="discount">-10%</p>
+              </div>
+              <a href="#" class="card__link_title btn-reset">Семена томатов Цитрон F1</a>
+              <div class="card__info">
+                <div class="rating">
+                  <svg class="rating__icon" aria-hidden="true">
+                      <use xlink:href="/assets/img/svg/star.svg#star"></use>
+                    </svg>
+                  <p class="rating__value">5.0</p>
+                </div>
+                <div class="review">
+                  <img src="/assets/img/svg/review.svg" alt="">
+                  <p class="review__value">18 отзывов</p>
+                </div>
+              </div>
+              <button class="card__btn btn-reset">добавить в корзину</button>
+              <a href="#" class="card__link btn-reset">Оптовым покупателям</a>
+            </div>
+          </div>
+          <div class="splide__slide card">
+            <a href="#" class="card__link_img btn-reset">
+              <img src="/assets/img/slider/goods/1.jpg" alt="slide">
+            </a>
+            <div class="card__body">
+              <div class="card__price">
+                <p class="new-price">120 ₽<span class="text-gray">/уп</span></p>
+                <p class="old-price">135 ₽</p>
+                <p class="discount">-10%</p>
+              </div>
+              <a href="#" class="card__link_title btn-reset">Семена томатов Семко-Союз F1</a>
+              <div class="card__info">
+                <div class="rating">
+                  <svg class="rating__icon" aria-hidden="true">
+                      <use xlink:href="/assets/img/svg/star.svg#star"></use>
+                    </svg>
+                  <p class="rating__value">5.0</p>
+                </div>
+                <div class="review">
+                  <img src="/assets/img/svg/review.svg" alt="">
+                  <p class="review__value">18 отзывов</p>
+                </div>
+              </div>
+              <button class="card__btn btn-reset">добавить в корзину</button>
+              <a href="#" class="card__link btn-reset">Оптовым покупателям</a>
+            </div>
+          </div>
+          <div class="splide__slide card">
+            <a href="#" class="card__link_img btn-reset">
+              <img src="/assets/img/slider/goods/2.jpg" alt="slide">
+            </a>
+            <div class="card__body">
+              <div class="card__price">
+                <p class="new-price">120 ₽<span class="text-gray">/уп</span></p>
+                <p class="old-price">135 ₽</p>
+                <p class="discount">-10%</p>
+              </div>
+              <a href="#" class="card__link_title btn-reset">Семена баклажанов Максик F1</a>
+              <div class="card__info">
+                <div class="rating">
+                  <svg class="rating__icon" aria-hidden="true">
+                      <use xlink:href="/assets/img/svg/star.svg#star"></use>
+                    </svg>
+                  <p class="rating__value">5.0</p>
+                </div>
+                <div class="review">
+                  <img src="/assets/img/svg/review.svg" alt="review">
+                  <p class="review__value">18 отзывов</p>
+                </div>
+              </div>
+              <button class="card__btn btn-reset">добавить в корзину</button>
+              <a href="#" class="card__link btn-reset">Оптовым покупателям</a>
+            </div>
+          </div>
+          <div class="splide__slide card">
+            <a href="#" class="card__link_img btn-reset">
+              <img src="/assets/img/slider/goods/3.jpg" alt="slide">
+            </a>
+            <div class="card__body">
+              <div class="card__price">
+                <p class="new-price">120 ₽<span class="text-gray">/уп</span></p>
+                <p class="old-price">135 ₽</p>
+                <p class="discount">-10%</p>
+              </div>
+              <a href="#" class="card__link_title btn-reset">Семена огурцов Семко-Союз F1</a>
+              <div class="card__info">
+                <div class="rating">
+                  <svg class="rating__icon" aria-hidden="true">
+                      <use xlink:href="/assets/img/svg/star.svg#star"></use>
+                    </svg>
+                  <p class="rating__value">5.0</p>
+                </div>
+                <div class="review">
+                  <img src="/assets/img/svg/review.svg" alt="review">
+                  <p class="review__value">18 отзывов</p>
+                </div>
+              </div>
+              <button class="card__btn btn-reset">добавить в корзину</button>
+              <a href="#" class="card__link btn-reset">Оптовым покупателям</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrapper">
+      <div class="footer__content">
+        <div class="footr__info">
+          <div class="logo">
+            <a href="/" class="logo__link">
+              <img class="logo__img" src="/assets/img/svg/logo.svg" alt="logo">
+            </a>
+            <p class="logo__text">Ваш проводник в волшебный мир семян</p>
+          </div>
+          <div class="menu-social">
+            <ul class="social__list list-reset">
+              <li class="social__item"><a href="#" class="social__link social__link_yt"></a></li>
+              <li class="social__item"><a href="#" class="social__link social__link_vk"></a></li>
+              <li class="social__item"><a href="#" class="social__link social__link_tg"></a></li>
+              <li class="social__item"><a href="#" class="social__link social__link_wa"></a></li>
+            </ul>
+            <a href="#"><img src="/assets/img/svg/social/yandex-rating.svg" alt="yandex"></a>
+            <a href="#"><img src="/assets/img/svg/social/google-rating.svg" alt="google"></a>
+          </div>
+          <ul class="contacts__list list-reset">
+            <li class="contacts__item">
+              <a href="tel:+74956860475" class="contact__link" target="_blank">
+                <svg class="contact__icon">
+                  <use xlink:href="/assets/img/svg/phone.svg#phone"></use>
+                </svg>
+                <span>+7 (495) 686-04-75</span>
+              </a>
+            </li>
+            <li class="contacts__item">
+              <a href="https://maps.app.goo.gl/LGwbhbKouWsF7Uny7" class="contact__link" target="_blank">
+                <svg class="contact__icon">
+                  <use xlink:href="/assets/img/svg/map.svg#map"></use>
+                </svg>
+                <span>г. Москва, Рижский проезд, 3</span>
+              </a>
+            </li>
+            <li class="contacts__item">
+              <a href="mailto:semcojunior@mail.ru" class="contact__link" target="_blank">
+                <svg class="contact__icon">
+                  <use xlink:href="/assets/img/svg/mail.svg#mail"></use>
+                </svg>
+                <span>semcojunior@mail.ru</span>
+              </a>
+            </li>
+          </ul>
+          <p class="copyright">©️ 1991-2024, ООО СЕМКО</p>
+        </div>
+        <div>
+          <div class="footer-links">
+            <div class="col">
+              <h3 class="footer-links__label">Важная информация</h3>
+              <ul class="footer-links__list list-reset">
+                <li class="footer-links__item"><a href="/pay">Оплата</a></li>
+                <li class="footer-links__item"><a href="/delivery">Доставка</a></li>
+                <li class="footer-links__item"><a href="#">Возврат</a></li>
+                <li class="footer-links__item"><a href="#">Договор оферты</a></li>
+                <li class="footer-links__item"><a href="#">Оптовые закупки</a></li>
+                <li class="footer-links__item"><a href="/promotions">Акции и скидки</a></li>
+                <li class="footer-links__item"><a href="/contacts">Контакты</a></li>
+                <li class="footer-links__item"><a href="/documents">Документация</a></li>
+              </ul>
+            </div>
+            <div class="col">
+              <h3 class="footer-links__label">О компании</h3>
+              <ul class="footer-links__list list-reset">
+                <li class="footer-links__item"><a href="#">О нас</a></li>
+                <li class="footer-links__item"><a href="#">Проекты</a></li>
+                <li class="footer-links__item"><a href="#">Выставки</a></li>
+                <li class="footer-links__item"><a href="#">Видеоматериалы</a></li>
+                <li class="footer-links__item"><a href="#">Агротехника</a></li>
+                <li class="footer-links__item"><a href="#">Газета</a></li>
+              </ul>
+            </div>
+          </div>
+          <form class="form" action="#" method="post">
+            <input class="form__input" type="email" name="email" placeholder="Ваш e-mail">
+            <button class="form-btn btn-reset" type="submit">подписаться на рассылку</button>
+          </form>
+          <a class="politics-link" href="#">Политика конфиденциальности</a>
+        </div>
+      </div>
+      <div class="footer__text">
+        <p>
+          Каждый из нас понимает очевидную вещь: повышение уровня гражданского сознания предоставляет широкие возможности для переосмысления внешнеэкономических политик. В своём стремлении повысить качество жизни, они забывают, что высокотехнологичная концепция общественного уклада обеспечивает широкому кругу (специалистов) участие в формировании как самодостаточных, так и внешне зависимых концептуальных решений.
+        </p>
+        <p>
+          Лишь базовые сценарии поведения пользователей представляют собой не что иное, как квинтэссенцию победы маркетинга над разумом и должны быть подвергнуты целой серии независимых исследований. Следует отметить, что граница обучения кадров прекрасно подходит для реализации как самодостаточных, так и внешне зависимых концептуальных решений. Наше дело не так однозначно, как может показаться: перспективное планирование однозначно фиксирует необходимость дальнейших направлений развития. Современные технологии достигли такого уровня, что перспективное планирование выявляет срочную потребность инновационных методов управления процессами!
+        </p>
+        <p>
+          Как уже неоднократно упомянуто, интерактивные прототипы неоднозначны и будут объективно рассмотрены соответствующими инстанциями. Не следует, однако, забывать, что постоянное информационно-пропагандистское обеспечение нашей деятельности выявляет срочную потребность распределения внутренних резервов и ресурсов. Как уже неоднократно упомянуто, действия представителей оппозиции, которые представляют собой яркий пример континентально-европейского типа политической культуры, будут заблокированы в рамках своих собственных рациональных ограничений. Являясь всего лишь частью общей картины, представители современных социальных резервов и по сей день остаются уделом либералов, которые жаждут быть объективно рассмотрены соответствующими инстанциями. Каждый из нас понимает очевидную вещь: реализация намеченных плановых заданий, в своём классическом представлении, допускает внедрение поэтапного и последовательного развития общества. И нет сомнений, что ключевые особенности структуры проекта и по сей день остаются уделом либералов, которые жаждут быть призваны к ответу.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <div class="top-control"></div>
+
+  <script src="/assets/js/splide.min.js"></script>
+  <script src="/assets/js/sliders/discount.js"></script>
+  <script src="/assets/js/sliders/cards.js"></script>
+  <script src="/assets/js/scrollTop.js"></script>
+
+  <script>
+    drawSlider('.products_slider');
+  </script>
+</body>
+</html>

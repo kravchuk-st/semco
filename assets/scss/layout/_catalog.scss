@@ -206,69 +206,58 @@
 
   &__inserted {
     margin-top: 40px;
+  }
+}
 
-    .show-more {
-      width: 100%;
-      padding: 15px 45px;
-      font-size: 16px;
-      letter-spacing: 0.16em;
-      border-radius: $br-xxl;
-      border: 1px solid $color-main;
-      text-transform: uppercase;
-      color: $color-main;
+.pagination {
+  margin-top: 15px;
+  display: flex;
+  gap: 20px;
 
+  &__list {
+    margin-left: auto;
+    display: flex;
+    gap: 6px;
+  }
+
+  &__btn {
+    min-width: 26px;
+    padding: 4px 8px;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: .16em;
+    border: 1px solid $color-main;
+    border-radius: 7px;
+    text-align: center;
+
+    &_active {
+      color: #fff;
+      background-color: $color-main;
+      cursor: default;
+      user-select: none;
+    }
+
+    &_more {
+      width: 30px;
+      height: 100%;
+      background-position: left 0 center;
+      background-size: 8px 8px;
+      background-repeat: space no-repeat;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 8 8' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='4' cy='4' r='4'/%3E%3C/svg%3E%0A");
+      filter: invert(92%) sepia(12%) saturate(175%) hue-rotate(96deg) brightness(100%) contrast(91%);
     }
   }
 
-  .pagination {
-    margin-top: 11px;
-    display: flex;
-    justify-content: end;
-    gap: 20px;
+  .forward-page {
+    padding: 4px 12px;
+  }
 
-    &__list {
-      display: flex;
-      gap: 6px;
-    }
-
-    &__btn {
-      min-width: 26px;
-      padding: 4px 8px;
-      font-size: 14px;
-      font-weight: 400;
-      letter-spacing: .16em;
-      border: 1px solid $color-main;
-      border-radius: 7px;
-      text-align: center;
-
-      &_active {
-        color: #fff;
-        background-color: $color-main;
-        cursor: default;
-        user-select: none;
-      }
-
-      &_more {
-        width: 30px;
-        height: 100%;
-        background-position: left 0 center;
-        background-size: 8px 8px;
-        background-repeat: space no-repeat;
-        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 8 8' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='4' cy='4' r='4'/%3E%3C/svg%3E%0A");
-        filter: invert(92%) sepia(12%) saturate(175%) hue-rotate(96deg) brightness(100%) contrast(91%);
-      }
-    }
-
-    .forward-page {
-      padding: 4px 12px;
-    }
-
-    .last-page {
-      padding: 4px 12px;
-      border: none;
-      color: #fff;
-      background-color: $color-main;
-    }
+  .all-pages {
+    padding: 4px 18px;
+    border: none;
+    color: #fff;
+    background-color: $color-main;
+    text-transform: uppercase;
   }
 }
 

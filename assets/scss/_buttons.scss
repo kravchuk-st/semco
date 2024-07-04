@@ -104,6 +104,17 @@ button[disabled]{
   font-size: 14px;
 }
 
+.show-more {
+  width: 100%;
+  padding: 15px 45px;
+  font-size: 16px;
+  letter-spacing: 0.16em;
+  border-radius: $br-xxl;
+  border: 1px solid $color-main;
+  text-transform: uppercase;
+  color: $color-main;
+}
+
 .btn-wish {
   padding: 10px 20px 10px 48px;
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 18 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M8.99384 2.68223C7.19442 0.50456 4.19377 -0.0812272 1.93923 1.91287C-0.31532 3.90696 -0.632729 7.24099 1.13778 9.59942C2.60984 11.5603 7.06479 15.6959 8.52489 17.0345C8.68824 17.1842 8.76992 17.2591 8.86519 17.2885C8.94834 17.3142 9.03933 17.3142 9.12248 17.2885C9.21775 17.2591 9.29943 17.1842 9.46278 17.0345C10.9229 15.6959 15.3778 11.5603 16.8499 9.59942C18.6204 7.24099 18.3417 3.88599 16.0484 1.91287C13.7551 -0.0602514 10.7933 0.50456 8.99384 2.68223Z' fill='%23FF4747'/%3E%3C/svg%3E");
@@ -122,4 +133,8 @@ button[disabled]{
   color: $color-main;
   background: transparent;
   text-decoration: underline;
+}
+
+.catalog-btn {
+  margin-left: auto;
 }
