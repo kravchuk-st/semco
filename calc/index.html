@@ -4,13 +4,20 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Доставка</title>
+  <title>Блог</title>
   <link rel="shortcut icon" type="image/ico" href="/assets/img/favicon.ico">
 
   <link rel="stylesheet" href="/assets/css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="/assets/css/splide.min.css">
   <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
 </head>
 <body>
+  <svg class="sprite" style="display: none;">
+    <symbol viewBox="0 0 25 15" fill="none" xmlns="http://www.w3.org/2000/svg" id="arrow">
+      <path d="M1.5 1L11.7366 13.0978C12.1361 13.5699 12.8639 13.5699 13.2634 13.0978L23.5 1" stroke-width="2" stroke-linecap="round"/>
+    </symbol>
+  </svg>
+  
   <header class="header">
     <div class="wrapper">
       <div class="header__top">
@@ -83,169 +90,225 @@
             <a href="/" class="breadcrumb__link">Главная страница</a>
             <span class="breadcrumb__separator">—</span>
           </li>
-          <li class="breadcrumb__item">
-            <a href="/catalog" class="breadcrumb__link">Каталог</a>
-            <span class="breadcrumb__separator">—</span>
-          </li>
-          <li class="breadcrumb__item active" aria-current="page">Доставка</li>
+          <li class="breadcrumb__item active" aria-current="page">Калькулятор посева семян</li>
         </ol>
       </nav>
     </div>
 
-    <section class="delivery">
+    <section class="calculator">
       <div class="wrapper">
-        <h1 class="delivery__title">Доставка от 1 дня </h1>
-        <p class="delivery__descr">
-          Мы осуществляем доставку семян и сопутствующих товаров нашего интернет-магазина во все регионы Российской Федерации, а также в Беларусь и Казахстан.
-        </p>
-        <ul class="delivery__list list-reset">
-          <li class="delivery__item">
-            <p class="region">Москва и Московская область</p>
-            <p class="days">1-3 дня</p>
-          </li>
-          <li class="delivery__item">
-            <p class="region">Центральный</p>
-            <p class="days">3-5 дней</p>
-          </li>
-          <li class="delivery__item">
-            <p class="region">Приволжский</p>
-            <p class="days">3-5 дней</p>
-          </li>
-          <li class="delivery__item">
-            <p class="region">Южный</p>
-            <p class="days">3-9 дней</p>
-          </li>
-          <li class="delivery__item">
-            <p class="region">Северо-западный</p>
-            <p class="days">4-7 дней</p>
-          </li>
-          <li class="delivery__item">
-            <p class="region">Дальневосточный</p>
-            <p class="days">7-35 дней</p>
-          </li>
-          <li class="delivery__item">
-            <p class="region">Уральский</p>
-            <p class="days">3-12 дней</p>
-          </li>
-          <li class="delivery__item">
-            <p class="region">Северо-Кавказский</p>
-            <p class="days">5-9 дней</p>
-          </li>
-          <li class="delivery__item">
-            <p class="region">Сибирский</p>
-            <p class="days">5-9 дней</p>
-          </li>
-          <li class="delivery__item">
-            <p class="region">ЛНР, ДНР, Запорожье, Херсон, Крым</p>
-            <p class="days">10-14 дней, для Крыма 7-10 дней</p>
-          </li>
-        </ul>
-        <ul class="countries list-reset">
-          <li class="countries__item">
-            <p class="countries__title">Беларусь <img class="flag" src="/assets/img/svg/flags/belarus.svg" alt="flag"></p>
-            <p class="countries__days">3-5 дней</p>
-          </li>
-          <li class="countries__item">
-            <p class="countries__title">Казахстан <img class="flag" src="/assets/img/svg/flags/kazakhstan.svg" alt="flag"></p>
-            <p class="countries__days">3-5 дней</p>
-          </li>
-        </ul>
+        <div class="calculator__header">
+          <h1>Калькулятор срока посева семян</h1>
+          <a href="/catalog" class="btn calculator__link btn-reset">вернуться к каталогу</a>
+        </div>
+        <div class="calculator__body">
+          <div class="calc">
+            <h3 class="calc__header">Для овощей, ягод, зелени:</h3>
+            <form class="form" action="#">
+              <div class="form__body">
+                <div class="form__blok">
+                  <label class="form__label" for="berries-plant">Выберите культуру</label>
+                  <select class="select form__select" name="plant" id="berries-plant">
+                    <option value="Томаты" selected>Томаты</option>
+                    <option value="value2">Культура 2</option>
+                    <option value="value3">Культура 3</option>
+                  </select>
+                </div>
+                <div class="form__blok">
+                  <label class="form__title" for="berries-date">Дата высадки рассады в грунт</label>
+                  <input class="input form__date" type="date" name="date" id="berries-date">
+                </div>
+                <div class="form__blok form__blok_row">
+                  <label class="form__title" for="is-phytolamp">Наличие фитолампы</label>
+                  <input class="form__radio switcher" type="checkbox" name="Phytolamp" id="is-phytolamp">
+                </div>
+                <div class="form__blok">
+                  <label class="form__title" for="berries-region">Ваш регион</label>
+                  <input class="input form__date" name="region" id="berries-region">
+                </div>
+              </div>
+              <button class="btn btn-fill btn-reset" type="submit">Получить результат</button>
+            </form>
+          </div>
+          <div class="calc">
+            <h3 class="calc__header">Для цветов:</h3>
+            <form class="form" action="#">
+              <div class="form__body">
+                <div class="form__blok">
+                  <label class="form__title" for="flowers-plant">Выберите культуру</label>
+                  <select class="select form__select" name="plant" id="flowers-plant">
+                    <option value="Маргаритки" selected>Маргаритки</option>
+                    <option value="value2">Культура 2</option>
+                    <option value="value3">Культура 3</option>
+                  </select>
+                </div>
+                <div class="form__blok">
+                  <p class="form__title">Дата высадки рассады в грунт</p>
+                  <input class="input form__date" type="date" name="date">
+                </div>
+                <div class="form__blok">
+                  <p class="form__title">Ваш регион</p>
+                  <input class="input form__date" name="region">
+                </div>
+              </div>
+              <button class="btn btn-fill btn-reset" type="submit">Получить результат</button>
+            </form>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section class="delivery-local">
+    <section class="discount discount_slider splide">
       <div class="wrapper">
-        <h2 class="text-center">Доставка по России</h2>
-        <ul class="delivery-local__list list-reset">
-          <li class="delivery-local__item">
-            <div class="delivery-local__header">
-              <h3 class="delivery-local__title">Курьерская доставка</h3>
-              <img class="delivery-local__icon" src="/assets/img/delivery/0.png" alt="delivery">
-              <button class="btn delivery-local__btn btn-reset">Подробнее</button>
-            </div>
-            <p class="delivery-local__descr">
-              Курьерской службой СДЭК только по Москве. Минимальная сумма заказа для курьерской доставки — 3 000 рублей.
-            </p>
-          </li>
-          <li class="delivery-local__item">
-            <div class="delivery-local__header">
-              <h3 class="delivery-local__title">Самовывоз</h3>
-              <img class="delivery-local__icon" src="/assets/img/delivery/1.png" alt="delivery">
-              <button class="btn delivery-local__btn btn-reset">Подробнее</button>
-            </div>
-            <p class="delivery-local__descr">
-              Самовывоз производится покупателем из офиса только после предварительной оплаты заказа на сайте нашем сайте. Минимальная сумма заказа для самовывоза – 1 000 рублей.
-            </p>
-          </li>
-          <li class="delivery-local__item">
-            <div class="delivery-local__header">
-              <h3 class="delivery-local__title">Почта России</h3>
-              <img class="delivery-local__icon" src="/assets/img/delivery/2.png" alt="delivery">
-              <button class="btn delivery-local__btn btn-reset">Подробнее</button>
-            </div>
-            <p class="delivery-local__descr">
-              Доставка «Почтой России» осуществляется только по территории Российской Федерации. Минимальная сумма заказа для выбора данного способа доставки – 1 000 рублей.
-            </p>
-          </li>
-          <li class="delivery-local__item">
-            <div class="delivery-local__header">
-              <h3 class="delivery-local__title">Boxberry</h3>
-              <img class="delivery-local__icon" src="/assets/img/delivery/3.png" alt="delivery">
-              <button class="btn delivery-local__btn btn-reset">Подробнее</button>
-            </div>
-            <p class="delivery-local__descr">
-              Доставка в в пункты выдачи «Boxberry» осуществляется по всей территории Российской Федерации. Минимальная сумма заказа для выбора данного способа доставки – 1 000 рублей.
-            </p>
-          </li>
-          <li class="delivery-local__item">
-            <div class="delivery-local__header">
-              <h3 class="delivery-local__title">Пункт выдачи СДЭК</h3>
-              <img class="delivery-local__icon" src="/assets/img/delivery/4.png" alt="delivery">
-              <button class="btn delivery-local__btn btn-reset">Подробнее</button>
-            </div>
-            <p class="delivery-local__descr">
-              Доставка в пункты выдачи СДЭК осуществляется по всей территории Российской Федерации. Минимальная сумма заказа для выбора данного способа доставки – 1 000 рублей.
-            </p>
-          </li>
-          <li class="delivery-local__item">
-            <div class="delivery-local__header">
-              <h3 class="delivery-local__title">Постаматы СДЭК</h3>
-              <img class="delivery-local__icon" src="/assets/img/delivery/5.png" alt="delivery">
-              <button class="btn delivery-local__btn btn-reset">Подробнее</button>
-            </div>
-            <p class="delivery-local__descr">
-              Доставка в постаматы СДЭК осуществляется по всей территории Российской Федерации. Минимальная сумма заказа для выбора данного способа доставки – 1 000 рублей.
-            </p>
-          </li>
-        </ul>
+        <div class="discount__header">
+          <h2 class="title">Скидки и акции</h2>
+          <a href="#" class="all-discounts btn-reset">смотреть все</a>
+          <div class="discount__btns splide__arrows">
+            <button class="slider-btn prev-btn btn-reser splide__arrow--prev"></button>
+            <button class="slider-btn btn-reser splide__arrow--next"></button>
+          </div>
+        </div>
+        <div class="splide__track">
+          <div class="splide__list">
+            <a class="splide__slide discount__item" href="#" style="background-image: url(/assets/img/discounts/0.png)">
+              <span>Скидки оптовым покупателям</span>
+            </a>
+            <a class="splide__slide discount__item" href="#" style="background-image: url(/assets/img/discounts/1.png)">
+              <span>Скидки оптовым покупателям</span>
+            </a>
+            <a class="splide__slide discount__item" href="#" style="background-image: url(/assets/img/discounts/2.png)">
+              <span>Скидки оптовым покупателям</span>
+            </a>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section class="delivery-local">
+    <section class="products products_slider splide">
       <div class="wrapper">
-        <h2 class="text-center">Международная доставка</h2>
-        <ul class="delivery-local__list list-reset">
-          <li class="delivery-local__item">
-            <div class="delivery-local__header">
-              <h3 class="delivery-local__title">Беларусь</h3>
-              <img class="delivery-local__icon" src="/assets/img/svg/flags/belarus.svg" alt="delivery">
-              <button class="btn delivery-local__btn btn-reset">Подробнее</button>
+        <div class="products__header">
+          <div class="products__text">
+            <h2 class="products__title">Новинки и популярные товары</h2>
+            <p class="products__descr">Товары, которые вас заинтересуют</p>
+          </div>
+          <div class="products__btns splide__arrows">
+            <button class="slider-btn prev-btn btn-reser splide__arrow--prev"></button>
+            <button class="slider-btn btn-reser splide__arrow--next"></button>
+          </div>
+          <a href="#" class="btn-lg btn-reset">все новинки</a>
+        </div>
+      </div>
+      <div class="splide__track">
+        <div class="splide__list">
+          <div class="splide__slide card">
+            <a href="#" class="card__link_img btn-reset">
+              <img src="/assets/img/slider/goods/0.jpg" alt="slide">
+            </a>
+            <div class="card__body">
+              <div class="card__price">
+                <p class="new-price">120 ₽<span class="text-gray">/уп</span></p>
+                <p class="old-price">135 ₽</p>
+                <p class="discount">-10%</p>
+              </div>
+              <a href="#" class="card__link_title btn-reset">Семена томатов Цитрон F1</a>
+              <div class="card__info">
+                <div class="rating">
+                  <svg class="rating__icon" aria-hidden="true">
+                      <use xlink:href="/assets/img/svg/star.svg#star"></use>
+                    </svg>
+                  <p class="rating__value">5.0</p>
+                </div>
+                <div class="review">
+                  <img src="/assets/img/svg/review.svg" alt="">
+                  <p class="review__value">18 отзывов</p>
+                </div>
+              </div>
+              <button class="card__btn btn-reset">добавить в корзину</button>
+              <a href="#" class="card__link btn-reset">Оптовым покупателям</a>
             </div>
-            <p class="delivery-local__descr">
-              Доставка в Беларусь осуществляется только компанией СДЭК в определенные пункты выдачи. Минимальная сумма заказа для выбора данного способа доставки – 1 000 рублей.
-            </p>
-          </li>
-          <li class="delivery-local__item">
-            <div class="delivery-local__header">
-              <h3 class="delivery-local__title">Казахстан</h3>
-              <img class="delivery-local__icon" src="/assets/img/svg/flags/kazakhstan.svg" alt="delivery">
-              <button class="btn delivery-local__btn btn-reset">Подробнее</button>
+          </div>
+          <div class="splide__slide card">
+            <a href="#" class="card__link_img btn-reset">
+              <img src="/assets/img/slider/goods/1.jpg" alt="slide">
+            </a>
+            <div class="card__body">
+              <div class="card__price">
+                <p class="new-price">120 ₽<span class="text-gray">/уп</span></p>
+                <p class="old-price">135 ₽</p>
+                <p class="discount">-10%</p>
+              </div>
+              <a href="#" class="card__link_title btn-reset">Семена томатов Семко-Союз F1</a>
+              <div class="card__info">
+                <div class="rating">
+                  <svg class="rating__icon" aria-hidden="true">
+                      <use xlink:href="/assets/img/svg/star.svg#star"></use>
+                    </svg>
+                  <p class="rating__value">5.0</p>
+                </div>
+                <div class="review">
+                  <img src="/assets/img/svg/review.svg" alt="">
+                  <p class="review__value">18 отзывов</p>
+                </div>
+              </div>
+              <button class="card__btn btn-reset">добавить в корзину</button>
+              <a href="#" class="card__link btn-reset">Оптовым покупателям</a>
             </div>
-            <p class="delivery-local__descr">
-              Доставка в Казахстан осуществляется только компанией СДЭК в определенные пункты выдачи. Минимальная сумма заказа для выбора данного способа доставки – 1 000 рублей.
-            </p>
-          </li>
-        </ul>
+          </div>
+          <div class="splide__slide card">
+            <a href="#" class="card__link_img btn-reset">
+              <img src="/assets/img/slider/goods/2.jpg" alt="slide">
+            </a>
+            <div class="card__body">
+              <div class="card__price">
+                <p class="new-price">120 ₽<span class="text-gray">/уп</span></p>
+                <p class="old-price">135 ₽</p>
+                <p class="discount">-10%</p>
+              </div>
+              <a href="#" class="card__link_title btn-reset">Семена баклажанов Максик F1</a>
+              <div class="card__info">
+                <div class="rating">
+                  <svg class="rating__icon" aria-hidden="true">
+                      <use xlink:href="/assets/img/svg/star.svg#star"></use>
+                    </svg>
+                  <p class="rating__value">5.0</p>
+                </div>
+                <div class="review">
+                  <img src="/assets/img/svg/review.svg" alt="review">
+                  <p class="review__value">18 отзывов</p>
+                </div>
+              </div>
+              <button class="card__btn btn-reset">добавить в корзину</button>
+              <a href="#" class="card__link btn-reset">Оптовым покупателям</a>
+            </div>
+          </div>
+          <div class="splide__slide card">
+            <a href="#" class="card__link_img btn-reset">
+              <img src="/assets/img/slider/goods/3.jpg" alt="slide">
+            </a>
+            <div class="card__body">
+              <div class="card__price">
+                <p class="new-price">120 ₽<span class="text-gray">/уп</span></p>
+                <p class="old-price">135 ₽</p>
+                <p class="discount">-10%</p>
+              </div>
+              <a href="#" class="card__link_title btn-reset">Семена огурцов Семко-Союз F1</a>
+              <div class="card__info">
+                <div class="rating">
+                  <svg class="rating__icon" aria-hidden="true">
+                      <use xlink:href="/assets/img/svg/star.svg#star"></use>
+                    </svg>
+                  <p class="rating__value">5.0</p>
+                </div>
+                <div class="review">
+                  <img src="/assets/img/svg/review.svg" alt="review">
+                  <p class="review__value">18 отзывов</p>
+                </div>
+              </div>
+              <button class="card__btn btn-reset">добавить в корзину</button>
+              <a href="#" class="card__link btn-reset">Оптовым покупателям</a>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -366,6 +429,15 @@
 
   <div class="top-control"></div>
 
+  <script src="/assets/js/splide.min.js"></script>
+  <script src="/assets/js/sliders/discount.js"></script>
+  <script src="/assets/js/sliders/cards.js"></script>
   <script src="/assets/js/scrollTop.js"></script>
+  <script src="/assets/js/rangeSlider.js"></script>
+
+  <script>
+    drawSlider('.products_slider');
+  </script>
 </body>
 </html>
+
