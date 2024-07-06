@@ -1,0 +1,42 @@
+.weight {
+
+  &-info {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #585858;
+
+    h2 {
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 1.6;
+      color: #585858;
+    }
+
+    p {
+      margin-top: 30px;
+    }
+
+    .list-inside {
+      list-style-position: inside;
+
+      li::marker {
+        color: #585858;
+      }
+    }
+
+    a {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 1.6;
+      color: #585858;
+      text-decoration: underline;
+    }
+
+    .link {
+      margin-top: 30px;
+      display: inline-block;
+      color: $color-main;
+      text-decoration: underline;
+    }
+  }
+}

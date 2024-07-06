@@ -1,0 +1,208 @@
+.weight {
+  &__content {
+    padding: 50px 35px 40px;
+    border-radius: 15px;
+    background: right bottom / contain no-repeat url("/assets/img/hands.png"),
+                $color-secondary center / cover no-repeat url("/assets/img/weight-bg.png");
+  }
+
+  &__info {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.4;
+  }
+
+  &__title {
+    max-width: 615px;
+    margin-top: 15px;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 1.25;
+  }
+
+  &__descr {
+    margin-top: 15px;
+    font-size: 12px;
+    line-height: 1.4;
+  }
+
+  .btn {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 10px 35px;
+  }
+}
+
+.strengths {
+  &__header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  &__btn {
+    margin-left: auto;
+  }
+
+  &__cards {
+    margin-top: 35px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 25px;
+  }
+
+  &__card {
+    width: 100%;
+    max-width: 370px;
+    height: 240px;
+    padding: 30px;
+    border-radius: $br-xl;
+    font-size: 27px;
+    line-height: 1.3;
+
+    .text-active {
+      display: block;
+      max-width: 245px;
+      font-weight: 500;
+    }
+
+    &:nth-child(1) {
+      background: right bottom / contain no-repeat url("/assets/img/strengths/0.png"),
+                  $color-secondary center / cover no-repeat url("/assets/img/strengths/bg0.png");
+    }
+
+    &:nth-child(2) {
+      background: right 23px bottom / auto no-repeat url("/assets/img/strengths/1.png"),
+                  $color-secondary center / cover no-repeat url("/assets/img/strengths/bg1.png");
+    }
+
+    &:nth-child(3) {
+      background: right bottom / contain no-repeat url("/assets/img/strengths/2.png"),
+                  $color-secondary center / cover no-repeat url("/assets/img/strengths/bg2.png");
+    }
+  }
+
+  &__bottom {
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 25px;
+
+    .strength {
+      width: 100%;
+      max-width: 270px;
+      padding: 25px 20px 28px;
+      border-radius: 15px;
+      background: $color-secondary;
+
+      &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        column-gap: 13px;
+      }
+
+      &__title {
+        font-weight: 400;
+        font-size: 23px;
+        line-height: 1.2;
+      }
+
+      &__icon {
+        width: 43px;
+        height: 43px;
+        border-radius: 50%;
+        background: $color-main;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-shrink: 0;
+      }
+
+      &__text {
+        margin-top: 10px;
+        max-width: 155px;
+        font-size: 15px;
+        line-height: 1.2;
+        color: #6E6E6E;
+      }
+    }
+  }
+}
+
+.choose {
+  .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+  }
+
+  &__title .text-active {
+    white-space: nowrap;
+  }
+
+  &__descr {
+    max-width: 480px;
+    margin-top: 15px;
+    font-size: 12px;
+    line-height: 1.4;
+  }
+
+  &__img {
+    flex-shrink: 0;
+  }
+}
+
+.condition {
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__cards {
+    margin-top: 35px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 25px;
+  }
+
+  &-card {
+    max-width: 270px;
+    padding: 20px;
+    border-radius: 15px;
+    background: $color-secondary;
+
+    &__header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      column-gap: 20px;
+    }
+
+    &__title {
+      font-weight: 400;
+      font-size: 23px;
+    }
+
+    &__icon {
+      flex-shrink: 0;
+      width: 43px;
+      height: 43px;
+      border-radius: 50%;
+      background: $color-main;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &__text {
+      margin-top: 10px;
+      font-size: 15px;
+    }
+  }
+}

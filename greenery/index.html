@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Акции</title>
+  <link rel="shortcut icon" type="image/ico" href="/assets/img/favicon.ico">
+
+  <link rel="stylesheet" href="/assets/css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="/assets/css/splide.min.css">
+  <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="wrapper">
+      <div class="header__top">
+        <a href="/" class="logo">
+          <img src="/assets/img/svg/logo.svg" alt="logo" class="logo__icon">
+        </a>
+        <img class="doll" src="/assets/img/svg/figure.svg" alt="doll">
+        <a href="/catalog" class="katalog-link btn-reset">КАТАЛОГ</a>
+        <form class="search" action="#" method="post">
+          <input class="search__input" type="text" placeholder="Поиск..." required>
+          <button class="search__btn btn-reset" type="submit"></button>
+        </form>
+        <div class="header__btns">
+          <a href="#" class="wishlist btn-reser">
+            <span class="wishlist__icon">
+              <img src="/assets/img/svg/heart.svg" alt="heart" class="wishlist__img">
+              <span class="wishlist__quantity">15</span>
+            </span>
+            <span class="wishlist__text">ИЗБРАННОЕ</span>
+          </a>
+          <a href="#" class="cart btn-reser">
+            <span class="cart__icon">
+              <img src="/assets/img/svg/cart.svg" alt="cart" class="cart__img">
+              <span class="cart__quantity">5</span>
+            </span>
+            <span class="cart__text">
+              <span class="cart__title">КОРЗИНА</span>
+              <span class="cart__price">3500 ₽</span>
+            </span>
+          </a>
+          <button class="account btn-reset">ВОЙТИ</button>
+        </div>
+      </div>
+      <div class="header__bottom">
+        <select class="select" name="city">
+          <option value="МОСКВА" selected>МОСКВА</option>
+          <option value="value2">ГОРОД 2</option>
+          <option value="value3">ГОРОД 3</option>
+        </select>
+        <nav class="nav">
+          <ul class="nav__list list-reset">
+            <li class="nav__item"><a href="#" class="nav__link">О КОМПАНИИ</a></li>
+            <li class="nav__item"><a href="#" class="nav__link">ОПТОВЫЕ ЗАКУПКИ</a></li>
+            <li class="nav__item"><a href="/promotions" class="nav__link">АКЦИИ</a></li>
+            <li class="nav__item"><a href="/delivery" class="nav__link">ДОСТАВКА</a></li>
+            <li class="nav__item"><a href="/pay" class="nav__link">ОПЛАТА</a></li>
+            <li class="nav__item"><a href="/contacts" class="nav__link">КОНТАКТЫ</a></li>
+          </ul>
+        </nav>
+        <div class="header__call">
+          <a href="tel:+74956860475" class="call__link">
+            <span class="call__img">
+              <svg class="call__icon">
+                <use xlink:href="/assets/img/svg/phone.svg#phone"></use>
+              </svg>
+            </span>
+            <span class="call__text">+7 (495) 686-04-75</span>
+          </a>
+          <button class="call-back__btn btn-reset">ЗАКАЗАТЬ ЗВОНОК</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="wrapper">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb list-reset">
+          <li class="breadcrumb__item">
+            <a href="/" class="breadcrumb__link">Главная страница</a>
+            <span class="breadcrumb__separator">—</span>
+          </li>
+          <li class="breadcrumb__item">
+            <a href="#" class="breadcrumb__link">Оптовые закупки</a>
+            <span class="breadcrumb__separator">—</span>
+          </li>
+          <li class="breadcrumb__item active" aria-current="page">Профессиональные и весовые</li>
+        </ol>
+      </nav>
+    </div>
+
+    <section class="weight">
+      <div class="wrapper">
+        <div class="weight__content">
+          <p class="weight__info text-active">Агрофирма Семко: качество, которому вы можете доверять</p>
+          <h1 class="weight__title">Весовые семена оптом в профессиональной упаковке</h1>
+          <p class="weight__subtitle">По выгодным оптовым ценам со скидкой</p>
+          <a href="#" class="btn btn-fill btn-reset" download>скачать каталог PDF</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="strengths">
+      <div class="wrapper">
+        <div class="strengths__header">
+          <h2>Почему выбирают нас?</h2>
+          <a href="#" class="btn btn-lg strengths__btn btn-reset" download>скачать прайс-лист</a>
+          <a href="#" class="btn btn-fill btn-lg btn-reset">о компании</a>
+        </div>
+        <div class="strengths__cards">
+          <div class="strengths__card">
+            <p>Свыше 400 <span class="text-active">постоянных КФХ и Агрокомбинатов</span></p>
+          </div>
+          <div class="strengths__card">
+            <p>На рынке <span class="text-active">с 1991 года</span></p>
+          </div>
+          <div class="strengths__card">
+            <p>Более 350 <span class="text-active">собственных позиций</span></p>
+          </div>
+        </div>
+        <div class="strengths__bottom">
+          <div class="strength">
+            <div class="strength__header">
+              <h3 class="strength__title">Контроль качества</h3>
+              <span class="strength__icon">
+                <img src="/assets/img/strengths/strength/0.svg" alt="icon">
+              </span>
+            </div>
+            <p class="strength__text">имеем собственную лабораторию</p>
+          </div>
+          <div class="strength">
+            <div class="strength__header">
+              <h3 class="strength__title">Эксклюзивные семена</h3>
+              <span class="strength__icon">
+                <img src="/assets/img/strengths/strength/1.svg" alt="icon">
+              </span>
+            </div>
+            <p class="strength__text">уникальные позиции в ассортименте</p>
+          </div>
+          <div class="strength">
+            <div class="strength__header">
+              <h3 class="strength__title">Быстрая отправка</h3>
+              <span class="strength__icon">
+                <img src="/assets/img/strengths/strength/2.svg" alt="icon">
+              </span>
+            </div>
+            <p class="strength__text">всего за 1-2 дня</p>
+          </div>
+          <div class="strength">
+            <div class="strength__header">
+              <h3 class="strength__title">Гибкая система скидок</h3>
+              <span class="strength__icon">
+                <img src="/assets/img/strengths/strength/3.svg" alt="icon">
+              </span>
+            </div>
+            <p class="strength__text">чем больше заказ, тем выше скидка</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="choose">
+      <div class="wrapper">
+        <div>
+          <h2 class="choose__title">Агрофирма Семко <span class="text-active">— ваш надёжный поставщик семян оптом</span></h2>
+          <p class="choose__descr">
+            Мы предлагаем высококачественные семена в фирменной упаковке для профессиональных сельхозпроизводителей в России и далеко за её пределами! Выбирая семена от Семко - Вы выбираете лучшее для Вас и Вашего бизнеса!
+          </p>
+        </div>
+        <img class="choose__img" src="/assets/img/bag.png" alt="weights">
+      </div>
+    </section>
+
+    <section class="condition">
+      <div class="wrapper">
+        <div class="condition__header">
+          <h2>Условия оптовой закупки</h2>
+          <a href="#" class="btn btn-lg btn-reset">условия подробнее</a>
+        </div>
+        <div class="condition__cards">
+          <div class="condition-card">
+            <div class="condition-card__header">
+              <h3 class="condition-card__title">Минимальная сумма заказа</h3>
+              <span class="condition-card__icon">
+                <img src="/assets/img/svg/condition/0.svg" alt="icon">
+              </span>
+            </div>
+            <p class="condition-card__text">20 000 рублей</p>
+          </div>
+          <div class="condition-card">
+            <div class="condition-card__header">
+              <h3 class="condition-card__title">Система скидок <button class="btn-question btn-reset"></button></h3>
+              <span class="condition-card__icon">
+                <img src="/assets/img/svg/condition/1.svg" alt="icon">
+              </span>
+            </div>
+            <p class="condition-card__text">до 10% в зависимости от объёма заказа</p>
+          </div>
+          <div class="condition-card">
+            <div class="condition-card__header">
+              <h3 class="condition-card__title">Способы оплаты <button class="btn-question btn-reset"></button></h3>
+              <span class="condition-card__icon">
+                <img src="/assets/img/svg/condition/2.svg" alt="icon">
+              </span>
+            </div>
+            <p class="condition-card__text">безналичный расчёт, наличные в офисе</p>
+          </div>
+          <div class="condition-card">
+            <div class="condition-card__header">
+              <h3 class="condition-card__title">Быстрая отправка</h3>
+              <span class="condition-card__icon">
+                <img src="/assets/img/svg/condition/3.svg" alt="icon">
+              </span>
+            </div>
+            <p class="condition-card__text">транспортной компанией или самовывоз</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="proposition">
+      <div class="wrapper">
+        <div class="proposition__content">
+          <div class="proposition__info">
+            <h2 class="proposition__title">Скачайте прайс-лист со всеми актуальными оптовыми ценами</h2>
+            <p class="proposition__descr">Нажимая Отправить вы соглашаетесь с <a href="#" target="_blank" rel="noopener noreferrer">Политикой обработки персональных данных</a></p>
+          </div>
+          <form class="proposition__form" action="#" method="post">
+            <input class="form-input text-center" type="email" name="email" placeholder="Оставьте Ваш e-mail" required>
+            <button class="form-btn btn-reset" type="submit">Отправить</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="connect">
+      <div class="wrapper">
+        <h2 class="connect__title">Всегда на связи</h2>
+        <p class="connect__descr">Если у вас есть вопросы, пожелания или предложения, вы всегда можете связаться с нами. Мы будем рады помочь вам!</p>
+        <div class="connect__body">
+          <form class="form" action="#" method="post">
+            <p class="form__title">
+              Можете просто оставить телефон и наши специалисты Вас проконсультируют
+            </p>
+            <input class="form__input" type="tel" name="tel" placeholder="Ваш телефон">
+            <button class="form__btn btn-lg btn-reset" type="submit">перезвоните мне</button>
+            <p class="form__text">Нажимая Подписаться вы соглашаетесь с <a href="#" target="_blank" rel="noopener noreferrer">Политикой обработки персональных данных</a></p>
+          </form>
+          <img src="/assets/img/map.png" alt="map" style="height: 354px;">
+        </div>
+      </div>
+    </section>
+
+    <section class="weight-info">
+      <div class="wrapper">
+        <h2>Профессиональные семена и весовые семена</h2>
+        <p>
+          Агрофирма Семко предлагает купить профессиональные семена в специальной упаковке по оптовым ценам со скидкой. Данные семена предназначены для фермерских хозяйств и тепличных комбинатов. Также предлагаем купить весовые семена различных овощных культур. Чтобы купить профессиональные и весовые семена оптом, скачайте прайс-лист с оптовыми ценами, который одновременно является бланком заказа. Проставьте в соответствующей графе необходимое количество выбранного наименования товара (килограммы или упаковки). Скидка проставляется автоматически, исходя из суммы заказа. Окончательная стоимость заказа будет просчитана автоматически.
+        </p>
+        <a href="#" class="link btn-reset">Скачать оптовые цены на профессиональные и весовые семена (бланк заказа).</a>
+        <p>Условия оптовой закупки:</p>
+        <ul class="list-inside">
+          <li>
+            Минимальный вес каждой выбранной позиции – 50 граммов или 500 семян
+          </li>
+          <li>
+            Минимальная сумма заказа - 20 000 рублей
+          </li>
+          <li>
+            100% предоплата заказа
+          </li>
+          <li>
+            Отправка заказа транспортной компанией или самовывоз из офиса ООО «Семко» в течение 1-2 дней с момента получения денежных средств на расчетный счет.
+          </li>
+        </ul>
+        <p>Система скидок (если не обговаривается персональным договором)</p>
+        <ul class="list-inside">
+          <li>
+            свыше 100 000 до 300 000 – 5%
+          </li>
+          <li>
+            свыше 300 000 – 10%
+          </li>
+        </ul>
+        <p>Правила оформления заказа.</p>
+        <ul class="list-inside">
+          <li>Скачать прайс-лист (бланк заказа) на свой компьютер, при каждой новой заявке необходимо скачивать новый прайс-лист.</li>
+          <li>Заполнить прайс-лист (бланк заказа) и отправить на почту <a href="mailto:semco_opt@mail.ru">semco_opt@mail.ru</a></li>
+          <li>Если вы новый клиент, необходимо приложить к заказу учетную карточку предприятия, ИП или паспортные данные частного лица.</li>
+        </ul>
+        <p>Способы оплаты заказа.</p>
+        <ul class="list-inside">
+          <li>Безналичная оплата на расчетный счет ООО “Семко”</li>
+          <li>Безналичная оплата (банковская карта) в офисе ООО “Семко”</li>
+          <li>Оплата наличными в кассу в офисе ООО “Семко”</li>
+        </ul>
+        <p>Способы доставки заказа</p>
+        <ul class="list-inside">
+          <li>Отправка заказа выбранной Вами ТК за ваш счет (доставка заказа до ТК - бесплатно)</li>
+          <li>Получение заказа в офисе ООО “Семко”</li>
+        </ul>
+        <p>Документация к заказу.</p>
+        <ul class="list-inside">
+          <li>Оригинал счёта</li>
+          <li>Оригинал товарно-транспортной накладной</li>
+          <li>Оригинал свидетельства на семена (год урожая, номера партий и т.д.)</li>
+        </ul>
+        <p>Рекламация</p>
+        <ul class="list-inside">
+          <li>В случае выявленных ошибок при приёмке заказа необходимо составить в течение 5 рабочих дней рекламационный акт с указанием расхождений.</li>
+          <li>Выслать данный акт на почту <a href="mailto:semco_opt@mail.ru">semco_opt@mail.ru</a></li>
+        </ul>
+        <p>Дополнительная информация</p>
+        <ul class="list-inside">
+          <li>Разъяснение касательно выдачи фитосанитарных сертификатов ООО «Семко». Подробнее вы сможете прочитать <a href="#">здесь</a>.</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrapper">
+      <div class="footer__content">
+        <div class="footr__info">
+          <div class="logo">
+            <a href="/" class="logo__link">
+              <img class="logo__img" src="/assets/img/svg/logo.svg" alt="logo">
+            </a>
+            <p class="logo__text">Ваш проводник в волшебный мир семян</p>
+          </div>
+          <div class="menu-social">
+            <ul class="social__list list-reset">
+              <li class="social__item"><a href="#" class="social__link social__link_yt"></a></li>
+              <li class="social__item"><a href="#" class="social__link social__link_vk"></a></li>
+              <li class="social__item"><a href="#" class="social__link social__link_tg"></a></li>
+              <li class="social__item"><a href="#" class="social__link social__link_wa"></a></li>
+            </ul>
+            <a href="#"><img src="/assets/img/svg/social/yandex-rating.svg" alt="yandex"></a>
+            <a href="#"><img src="/assets/img/svg/social/google-rating.svg" alt="google"></a>
+          </div>
+          <ul class="contacts__list list-reset">
+            <li class="contacts__item">
+              <a href="tel:+74956860475" class="contact__link" target="_blank">
+                <svg class="contact__icon">
+                  <use xlink:href="/assets/img/svg/phone.svg#phone"></use>
+                </svg>
+                <span>+7 (495) 686-04-75</span>
+              </a>
+            </li>
+            <li class="contacts__item">
+              <a href="https://maps.app.goo.gl/LGwbhbKouWsF7Uny7" class="contact__link" target="_blank">
+                <svg class="contact__icon">
+                  <use xlink:href="/assets/img/svg/map.svg#map"></use>
+                </svg>
+                <span>г. Москва, Рижский проезд, 3</span>
+              </a>
+            </li>
+            <li class="contacts__item">
+              <a href="mailto:semcojunior@mail.ru" class="contact__link" target="_blank">
+                <svg class="contact__icon">
+                  <use xlink:href="/assets/img/svg/mail.svg#mail"></use>
+                </svg>
+                <span>semcojunior@mail.ru</span>
+              </a>
+            </li>
+          </ul>
+          <p class="copyright">©️ 1991-2024, ООО СЕМКО</p>
+        </div>
+        <div>
+          <div class="footer-links">
+            <div class="col">
+              <h3 class="footer-links__label">Важная информация</h3>
+              <ul class="footer-links__list list-reset">
+                <li class="footer-links__item"><a href="/pay">Оплата</a></li>
+                <li class="footer-links__item"><a href="/delivery">Доставка</a></li>
+                <li class="footer-links__item"><a href="#">Возврат</a></li>
+                <li class="footer-links__item"><a href="#">Договор оферты</a></li>
+                <li class="footer-links__item"><a href="#">Оптовые закупки</a></li>
+                <li class="footer-links__item"><a href="/promotions">Акции и скидки</a></li>
+                <li class="footer-links__item"><a href="/contacts">Контакты</a></li>
+                <li class="footer-links__item"><a href="/documents">Документация</a></li>
+              </ul>
+            </div>
+            <div class="col">
+              <h3 class="footer-links__label">О компании</h3>
+              <ul class="footer-links__list list-reset">
+                <li class="footer-links__item"><a href="#">О нас</a></li>
+                <li class="footer-links__item"><a href="#">Проекты</a></li>
+                <li class="footer-links__item"><a href="#">Выставки</a></li>
+                <li class="footer-links__item"><a href="#">Видеоматериалы</a></li>
+                <li class="footer-links__item"><a href="#">Агротехника</a></li>
+                <li class="footer-links__item"><a href="#">Газета</a></li>
+              </ul>
+            </div>
+          </div>
+          <form class="form" action="#" method="post">
+            <input class="form__input" type="email" name="email" placeholder="Ваш e-mail">
+            <button class="form-btn btn-reset" type="submit">подписаться на рассылку</button>
+          </form>
+          <a class="politics-link" href="#">Политика конфиденциальности</a>
+        </div>
+      </div>
+      <div class="footer__text">
+        <p>
+          Каждый из нас понимает очевидную вещь: повышение уровня гражданского сознания предоставляет широкие возможности для переосмысления внешнеэкономических политик. В своём стремлении повысить качество жизни, они забывают, что высокотехнологичная концепция общественного уклада обеспечивает широкому кругу (специалистов) участие в формировании как самодостаточных, так и внешне зависимых концептуальных решений.
+        </p>
+        <p>
+          Лишь базовые сценарии поведения пользователей представляют собой не что иное, как квинтэссенцию победы маркетинга над разумом и должны быть подвергнуты целой серии независимых исследований. Следует отметить, что граница обучения кадров прекрасно подходит для реализации как самодостаточных, так и внешне зависимых концептуальных решений. Наше дело не так однозначно, как может показаться: перспективное планирование однозначно фиксирует необходимость дальнейших направлений развития. Современные технологии достигли такого уровня, что перспективное планирование выявляет срочную потребность инновационных методов управления процессами!
+        </p>
+        <p>
+          Как уже неоднократно упомянуто, интерактивные прототипы неоднозначны и будут объективно рассмотрены соответствующими инстанциями. Не следует, однако, забывать, что постоянное информационно-пропагандистское обеспечение нашей деятельности выявляет срочную потребность распределения внутренних резервов и ресурсов. Как уже неоднократно упомянуто, действия представителей оппозиции, которые представляют собой яркий пример континентально-европейского типа политической культуры, будут заблокированы в рамках своих собственных рациональных ограничений. Являясь всего лишь частью общей картины, представители современных социальных резервов и по сей день остаются уделом либералов, которые жаждут быть объективно рассмотрены соответствующими инстанциями. Каждый из нас понимает очевидную вещь: реализация намеченных плановых заданий, в своём классическом представлении, допускает внедрение поэтапного и последовательного развития общества. И нет сомнений, что ключевые особенности структуры проекта и по сей день остаются уделом либералов, которые жаждут быть призваны к ответу.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <div class="top-control"></div>
+
+  <script src="/assets/js/splide.min.js"></script>
+  <script src="/assets/js/sliders/banner.js"></script>
+  <script src="/assets/js/scrollTop.js"></script>
+</body>
+</html>
