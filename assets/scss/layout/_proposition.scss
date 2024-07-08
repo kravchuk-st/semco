@@ -9,6 +9,27 @@
     align-items: center;
     background: center / contain no-repeat url("/assets/img/proposition-img.png"),
                 $color-main center / cover url("/assets/img/proposition-bg.png");
+
+    &_empty {
+      background: $color-main center / cover url("/assets/img/proposition-bg.png");
+
+      .proposition__title {
+        max-width: 625px;
+        font-size: 40px;
+      }
+
+      .proposition__descr {
+        margin-top: 10px;
+        max-width: 480px;
+        font-size: 11px;
+        
+        a {
+          color: #fff;
+          font-size: 11px;
+          text-decoration: underline;
+        }
+      }
+    }
   }
 
   &__title {

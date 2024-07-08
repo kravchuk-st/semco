@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Личный кабинет</title>
+  <link rel="shortcut icon" type="image/ico" href="/assets/img/favicon.ico">
+
+  <link rel="stylesheet" href="/assets/css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="/assets/css/splide.min.css">
+  <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
+</head>
+<body>
+  <svg class="sprite" style="display: none;">
+    <symbol viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg" id="star">
+      <path d="M11.9381 4.35458C11.8877 4.19634 11.7908 4.05696 11.6599 3.95463C11.5291 3.8523 11.3705 3.79177 11.2048 3.78095L8.20769 3.57121L7.09591 0.771631C7.03574 0.616857 6.93022 0.483868 6.79318 0.390091C6.65614 0.296313 6.49396 0.246122 6.3279 0.246094H6.32712C6.16132 0.246389 5.99946 0.296709 5.86272 0.390472C5.72598 0.484235 5.62072 0.617078 5.56069 0.771631L4.43235 3.58737L1.45181 3.78095C1.28608 3.79177 1.12746 3.8523 0.99665 3.95463C0.865838 4.05696 0.768906 4.19634 0.718501 4.35458C0.665326 4.51508 0.661709 4.68786 0.70812 4.85044C0.75453 5.01302 0.848819 5.15786 0.978706 5.26609L3.27167 7.20423L2.58962 9.88711C2.5426 10.0678 2.55125 10.2585 2.61442 10.4342C2.67759 10.61 2.79234 10.7625 2.94365 10.8719C3.08974 10.9782 3.26444 11.0381 3.44501 11.0437C3.62558 11.0493 3.80367 11.0005 3.95609 10.9035L6.3216 9.40494C6.32475 9.40257 6.3279 9.401 6.335 9.40494L8.88029 11.0174C9.01847 11.1057 9.18008 11.1502 9.34397 11.1452C9.50787 11.1401 9.66642 11.0857 9.79889 10.989C9.936 10.8899 10.04 10.7517 10.0972 10.5925C10.1545 10.4334 10.1624 10.2606 10.1198 10.0969L9.39518 7.16599L11.6779 5.26609C11.8078 5.15786 11.9021 5.01302 11.9485 4.85044C11.9949 4.68786 11.9913 4.51508 11.9381 4.35458Z"/>
+    </symbol>
+  </svg>
+
+  <header class="header">
+    <div class="wrapper">
+      <div class="header__top">
+        <a href="/" class="logo">
+          <img src="/assets/img/svg/logo.svg" alt="logo" class="logo__icon">
+        </a>
+        <img class="doll" src="/assets/img/svg/figure.svg" alt="doll">
+        <a href="/catalog" class="katalog-link btn-reset">КАТАЛОГ</a>
+        <form class="search" action="#" method="post">
+          <input class="search__input" type="text" placeholder="Поиск...">
+          <button class="search__btn btn-reset" type="submit"></button>
+        </form>
+        <div class="header__btns">
+          <a href="#" class="wishlist btn-reser">
+            <span class="wishlist__icon">
+              <img src="/assets/img/svg/heart.svg" alt="heart" class="wishlist__img">
+              <span class="wishlist__quantity">15</span>
+            </span>
+            <span class="wishlist__text">ИЗБРАННОЕ</span>
+          </a>
+          <a href="#" class="cart btn-reser">
+            <span class="cart__icon">
+              <img src="/assets/img/svg/cart.svg" alt="cart" class="cart__img">
+              <span class="cart__quantity">5</span>
+            </span>
+            <span class="cart__text">
+              <span class="cart__title">КОРЗИНА</span>
+              <span class="cart__price">3500 ₽</span>
+            </span>
+          </a>
+          <button class="account btn-reset">ВОЙТИ</button>
+        </div>
+      </div>
+      <div class="header__bottom">
+        <select class="select" name="city">
+          <option value="МОСКВА" selected>МОСКВА</option>
+          <option value="value2">ГОРОД 2</option>
+          <option value="value3">ГОРОД 3</option>
+        </select>
+        <nav class="nav">
+          <ul class="nav__list list-reset">
+            <li class="nav__item"><a href="/about" class="nav__link">О КОМПАНИИ</a></li>
+            <li class="nav__item"><a href="#" class="nav__link">ОПТОВЫЕ ЗАКУПКИ</a></li>
+            <li class="nav__item"><a href="/promotions" class="nav__link">АКЦИИ</a></li>
+            <li class="nav__item"><a href="/delivery" class="nav__link">ДОСТАВКА</a></li>
+            <li class="nav__item"><a href="/pay" class="nav__link">ОПЛАТА</a></li>
+            <li class="nav__item"><a href="/contacts" class="nav__link">КОНТАКТЫ</a></li>
+          </ul>
+        </nav>
+        <div class="header__call">
+          <a href="tel:+74956860475" class="call__link">
+            <span class="call__img">
+              <svg class="call__icon">
+                <use xlink:href="/assets/img/svg/phone.svg#phone"></use>
+              </svg>
+            </span>
+            <span class="call__text">+7 (495) 686-04-75</span>
+          </a>
+          <button class="call-back__btn btn-reset">ЗАКАЗАТЬ ЗВОНОК</button>
+        </div>
+      </div>
+    </div>
+  </header>
+  
+  <main>
+    <div class="wrapper">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb list-reset">
+          <li class="breadcrumb__item">
+            <a href="/" class="breadcrumb__link">Главная страница</a>
+            <span class="breadcrumb__separator">—</span>
+          </li>
+          <li class="breadcrumb__item active" aria-current="page">Личный кабинет</li>
+        </ol>
+      </nav>
+    </div>
+
+    <section class="cabinet">
+      <div class="wrapper cabinet-wrapper">
+        <div class="tabs" data-tabs="tab">
+          <aside class="sidebar">
+            <ul class="tabs__nav list-reset">
+              <li class="tabs__nav-item"><button class="tabs__nav-btn btn-reset" type="button">
+                <svg class="tabs__nav-btn--icon">
+                  <use xlink:href="/assets/img/svg/cabinet/user.svg#user"></use>
+                </svg>
+                Личный кабинет
+              </button></li>
+              <li class="tabs__nav-item"><button class="tabs__nav-btn btn-reset" type="button">
+                <svg class="tabs__nav-btn--icon">
+                  <use xlink:href="/assets/img/svg/cabinet/map.svg#map"></use>
+                </svg>
+                Адреса доставки
+              </button></li>
+              <li class="tabs__nav-item"><button class="tabs__nav-btn btn-reset" type="button">
+                <svg class="tabs__nav-btn--icon">
+                  <use xlink:href="/assets/img/svg/cabinet/heart.svg#heart"></use>
+                </svg>
+                Избранное
+              </button></li>
+              <li class="tabs__nav-item"><button class="tabs__nav-btn btn-reset" type="button">
+                <svg class="tabs__nav-btn--icon">
+                  <use xlink:href="/assets/img/svg/cabinet/chat.svg#chat"></use>
+                </svg>
+                Чат с поддержкой
+              </button></li>
+              <li class="tabs__nav-item"><button class="tabs__nav-btn btn-reset" type="button">
+                <svg class="tabs__nav-btn--icon">
+                  <use xlink:href="/assets/img/svg/cabinet/settings.svg#settings"></use>
+                </svg>
+                Настройки профиля
+              </button></li>
+            </ul>
+            <button class="logout-btn btn-reset">
+              <svg class="logout-btn--icon" width="17" height="17">
+                <use xlink:href="/assets/img/svg/cabinet/logout.svg#logout"></use>
+              </svg>
+              Выйти
+            </button>
+          </aside>
+          <div class="tabs__content">
+            <div class="tabs__panel">
+              <h1>История заказов</h1>
+              <div class="orders">
+                <div class="orders__item">
+                  <h3 class="orders__title">Активные заказы (1)</h3>
+                  <div class="order">
+                    <div class="order__header">
+                      <p class="order__status order__status_active">принят и готов к обработке</p>
+                      <p class="order__number">Заказ № 526859</p>
+                    </div>
+                    <div class="order__slider splide">
+                      <div class="splide__track">
+                        <div class="splide__list">
+                          <div class="splide__slide">
+                            <img class="order__slider-img" src="/assets/img/slider/double.png" alt="">
+                            <div class="order__slider-descr">
+                              <p class="order__slider-title">Семена помидоров Цитрон F1</p>
+                              <p class="order__slider-sum">600 ₽</p>
+                              <p class="order__slider-details">120 ₽ х 5</p>
+                            </div>
+                          </div>
+                          <div class="splide__slide">
+                            <img class="order__slider-img" src="/assets/img/slider/double.png" alt="">
+                            <div class="order__slider-descr">
+                              <p class="order__slider-title">Семена помидоров Цитрон F1</p>
+                              <p class="order__slider-sum">435 ₽</p>
+                              <p class="order__slider-details">145 ₽ х 3</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <p class="order__sum-text">Итого</p>
+                    <p class="order__sum-price text-active">1 035 ₽</p>
+                    <div class="order__details">
+                      <div class="order__details-item">
+                        <p class="order__details-title">Способ получения</p>
+                        <p class="order__details-text">Доставка курьером</p>
+                      </div>
+                      <div class="order__details-item">
+                        <p class="order__details-title">Адрес доставки</p>
+                        <p class="order__details-text">г. Москва, ул. Рыбинска, д. 156, п. 6, 10 этаж, кв. 155.</p>
+                      </div>
+                      <div class="order__details-item">
+                        <p class="order__details-title">Способ оплаты</p>
+                        <p class="order__details-text">Картой онлайн</p>
+                        <p class="order__details-subtext text-active">оплачено</p>
+                      </div>
+                      <div class="order__details-item">
+                        <p class="order__details-title">Дата и время доставки</p>
+                        <p class="order__details-text">25 марта с 15:00 до 17:30</p>
+                      </div>
+                      <div class="order__details-item order__details-item--user">
+                        <p class="order__details-title">Получатель</p>
+                        <p class="order__details-text">Иванов Иван Иванович</p>
+                        <p class="order__details-text">+7 (900) 425-65-89</p>
+                        <p class="order__details-text">ivanov@mail.ru</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="orders__item">
+                  <h3 class="orders__title">История заказов (2)</h3>
+                  <div class="order">
+
+                  </div>
+                  <div class="order">
+
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tabs__panel">
+
+            </div>
+            <div class="tabs__panel">
+
+            </div>
+            <div class="tabs__panel">
+
+            </div>
+            <div class="tabs__panel">
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="wrapper">
+      <div class="footer__content">
+        <div class="footr__info">
+          <div class="logo">
+            <a href="/" class="logo__link">
+              <img class="logo__img" src="/assets/img/svg/logo.svg" alt="logo">
+            </a>
+            <p class="logo__text">Ваш проводник в волшебный мир семян</p>
+          </div>
+          <div class="menu-social">
+            <ul class="social__list list-reset">
+              <li class="social__item"><a href="#" class="social__link social__link_yt"></a></li>
+              <li class="social__item"><a href="#" class="social__link social__link_vk"></a></li>
+              <li class="social__item"><a href="#" class="social__link social__link_tg"></a></li>
+              <li class="social__item"><a href="#" class="social__link social__link_wa"></a></li>
+            </ul>
+            <a href="#"><img src="/assets/img/svg/social/yandex-rating.svg" alt="yandex"></a>
+            <a href="#"><img src="/assets/img/svg/social/google-rating.svg" alt="google"></a>
+          </div>
+          <ul class="contacts__list list-reset">
+            <li class="contacts__item">
+              <a href="tel:+74956860475" class="contact__link" target="_blank">
+                <svg class="contact__icon">
+                  <use xlink:href="/assets/img/svg/phone.svg#phone"></use>
+                </svg>
+                <span>+7 (495) 686-04-75</span>
+              </a>
+            </li>
+            <li class="contacts__item">
+              <a href="https://maps.app.goo.gl/LGwbhbKouWsF7Uny7" class="contact__link" target="_blank">
+                <svg class="contact__icon">
+                  <use xlink:href="/assets/img/svg/map.svg#map"></use>
+                </svg>
+                <span>г. Москва, Рижский проезд, 3</span>
+              </a>
+            </li>
+            <li class="contacts__item">
+              <a href="mailto:semcojunior@mail.ru" class="contact__link" target="_blank">
+                <svg class="contact__icon">
+                  <use xlink:href="/assets/img/svg/mail.svg#mail"></use>
+                </svg>
+                <span>semcojunior@mail.ru</span>
+              </a>
+            </li>
+          </ul>
+          <p class="copyright">©️ 1991-2024, ООО СЕМКО</p>
+        </div>
+        <div>
+          <div class="footer-links">
+            <div class="col">
+              <h3 class="footer-links__label">Важная информация</h3>
+              <ul class="footer-links__list list-reset">
+                <li class="footer-links__item"><a href="/pay">Оплата</a></li>
+                <li class="footer-links__item"><a href="/delivery">Доставка</a></li>
+                <li class="footer-links__item"><a href="#">Возврат</a></li>
+                <li class="footer-links__item"><a href="#">Договор оферты</a></li>
+                <li class="footer-links__item"><a href="#">Оптовые закупки</a></li>
+                <li class="footer-links__item"><a href="/promotions">Акции и скидки</a></li>
+                <li class="footer-links__item"><a href="/contacts">Контакты</a></li>
+                <li class="footer-links__item"><a href="/documents">Документация</a></li>
+              </ul>
+            </div>
+            <div class="col">
+              <h3 class="footer-links__label">О компании</h3>
+              <ul class="footer-links__list list-reset">
+                <li class="footer-links__item"><a href="#">О нас</a></li>
+                <li class="footer-links__item"><a href="#">Проекты</a></li>
+                <li class="footer-links__item"><a href="#">Выставки</a></li>
+                <li class="footer-links__item"><a href="#">Видеоматериалы</a></li>
+                <li class="footer-links__item"><a href="#">Агротехника</a></li>
+                <li class="footer-links__item"><a href="#">Газета</a></li>
+              </ul>
+            </div>
+          </div>
+          <form class="form" action="#" method="post">
+            <input class="form__input" type="email" name="email" placeholder="Ваш e-mail">
+            <button class="form-btn btn-reset" type="submit">подписаться на рассылку</button>
+          </form>
+          <a class="politics-link" href="#">Политика конфиденциальности</a>
+        </div>
+      </div>
+      <div class="footer__text">
+        <p>
+          Каждый из нас понимает очевидную вещь: повышение уровня гражданского сознания предоставляет широкие возможности для переосмысления внешнеэкономических политик. В своём стремлении повысить качество жизни, они забывают, что высокотехнологичная концепция общественного уклада обеспечивает широкому кругу (специалистов) участие в формировании как самодостаточных, так и внешне зависимых концептуальных решений.
+        </p>
+        <p>
+          Лишь базовые сценарии поведения пользователей представляют собой не что иное, как квинтэссенцию победы маркетинга над разумом и должны быть подвергнуты целой серии независимых исследований. Следует отметить, что граница обучения кадров прекрасно подходит для реализации как самодостаточных, так и внешне зависимых концептуальных решений. Наше дело не так однозначно, как может показаться: перспективное планирование однозначно фиксирует необходимость дальнейших направлений развития. Современные технологии достигли такого уровня, что перспективное планирование выявляет срочную потребность инновационных методов управления процессами!
+        </p>
+        <p>
+          Как уже неоднократно упомянуто, интерактивные прототипы неоднозначны и будут объективно рассмотрены соответствующими инстанциями. Не следует, однако, забывать, что постоянное информационно-пропагандистское обеспечение нашей деятельности выявляет срочную потребность распределения внутренних резервов и ресурсов. Как уже неоднократно упомянуто, действия представителей оппозиции, которые представляют собой яркий пример континентально-европейского типа политической культуры, будут заблокированы в рамках своих собственных рациональных ограничений. Являясь всего лишь частью общей картины, представители современных социальных резервов и по сей день остаются уделом либералов, которые жаждут быть объективно рассмотрены соответствующими инстанциями. Каждый из нас понимает очевидную вещь: реализация намеченных плановых заданий, в своём классическом представлении, допускает внедрение поэтапного и последовательного развития общества. И нет сомнений, что ключевые особенности структуры проекта и по сей день остаются уделом либералов, которые жаждут быть призваны к ответу.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <div class="top-control"></div>
+
+  <script src="/assets/js/tabs.js"></script>
+  <script src="/assets/js/splide.min.js"></script>
+  <script src="/assets/js/sliders/order.js"></script>
+  <script src="/assets/js/sliders/cards.js"></script>
+  <script src="/assets/js/scrollTop.js"></script>
+  <script>
+    orderSlider('.order__slider')
+  </script>
+</body>
+</html>
+
