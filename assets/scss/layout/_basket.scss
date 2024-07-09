@@ -1,0 +1,53 @@
+.basket {
+  &__title {
+    .text-top {
+      margin-left: 2px;
+      font-size: 19px;
+      color: #878787;
+    }
+  }
+
+  &__header {
+    margin-top: 35px;
+    display: flex;
+    align-items: center;
+    column-gap: 15px;
+
+    .btn {
+      display: flex;
+      align-items: center;
+      column-gap: 10px;
+      font-size: 11px;
+    }
+  }
+
+  .btn-select-all {
+    color: $color-text;
+    border-color: $color-text;
+
+    .square {
+      width: 17px;
+      height: 17px;
+      border: 1px solid $color-main;
+      border-radius: 2px;
+    }
+  }
+
+  .btn-remove-all {
+    color: #8b8b8b;
+    border-color: #8b8b8b;
+
+    .basket__icon {
+      width: 15px;
+      height: 18px;
+      fill: #8b8b8b;
+    }
+  }
+
+  &__layout {
+    margin-top: 30px;
+    display: flex;
+    align-items: flex-start;
+    column-gap: 40px;
+  }
+}
