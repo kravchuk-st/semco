@@ -33,7 +33,9 @@
         <div class="header__btns">
           <a href="#" class="wishlist btn-reser">
             <span class="wishlist__icon">
-              <img src="/assets/img/svg/heart.svg" alt="heart" class="wishlist__img">
+              <svg aria-hidden="true" width="22" height="18">
+                <use xlink:href="/assets/img/svg/heart.svg#heart"></use>
+              </svg>
               <span class="wishlist__quantity">15</span>
             </span>
             <span class="wishlist__text">ИЗБРАННОЕ</span>
@@ -112,7 +114,156 @@
           </button>
         </div>
         <div class="basket__layout">
-          
+          <ul class="basket__list list-reset">
+            <li class="basket__item">
+              <div class="basket-product">
+                <span class="basket-product__checkbox checked"></span>
+                <a href="/product" class="basket-product__link_picture link-reset">
+                  <img src="/assets/img/slider/double.png" alt="Семена помидоров Цитрон F1">
+                </a>
+                <div class="basket-product__descr">
+                  <a href="/product" class="basket-product__link_title link-reset">Семена помидоров Цитрон F1</a>
+                  <p class="basket-product__subtitle">Для открытого грунта и пленочных теплиц, 10 семян в упаковке</p>
+                  <span class="basket-product__message basket-product__message_danger">-10%</span>
+                </div>
+                <div class="basket-product__count">
+                  <div class="basket-product__counter">
+                    <button class="basket-count__btn basket-count__btn_less btn-reset" aria-label="Убрать один товар">-</button>
+                    <input class="input basket-product__input_counter" type="number" value="5" contenteditable="true" size="1">
+                    <button class="basket-count__btn basket-count__btn_more btn-reset" aria-label="Добавить один товар">+</button>
+                  </div>
+                </div>
+                <div class="basket-product__coast">
+                  <div class="basket-product__sum">
+                    <p class="basket-product__old-sum">675 ₽</p>
+                    <p class="basket-product__new-sum">600 ₽</p>
+                  </div>
+                  <div class="basket-product__price">
+                    <p class="basket-product__old-price">135 ₽</p>
+                    <p class="basket-product__new-price">120 ₽<span class="text-gray">/уп</span></p>
+                  </div>
+                  <div class="basket-product__actions">
+                    <button class="wishlist-btn active btn-reset" aria-label="Добавить в список желаний">
+                      <svg class="basket-product__icon" aria-hidden="true"  width="16" height="14">
+                        <use xlink:href="/assets/img/svg/heart.svg#heart"></use>
+                      </svg>
+                    </button>
+                    <button class="remove-btn btn-reset" aria-label="Удалить товар">
+                      <svg class="basket-product__icon" aria-hidden="true" width="13" height="14">
+                        <use xlink:href="/assets/img/svg/basket.svg#basket"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="basket__item">
+              <div class="basket-product">
+                <span class="basket-product__checkbox checked"></span>
+                <a href="/product" class="basket-product__link_picture link-reset">
+                  <img src="/assets/img/slider/double.png" alt="Семена баклажанов Максик F1">
+                </a>
+                <div class="basket-product__descr">
+                  <a href="/product" class="basket-product__link_title link-reset">Семена баклажанов Максик F1</a>
+                  <p class="basket-product__subtitle">Для открытого грунта и пленочных теплиц, 10 семян в упаковке</p>
+                </div>
+                <div class="basket-product__count">
+                  <div class="basket-product__counter">
+                    <button class="basket-count__btn basket-count__btn_less btn-reset" aria-label="Убрать один товар">-</button>
+                    <input class="input basket-product__input_counter text-danger" type="number" value="3" contenteditable="true" size="1">
+                    <button class="basket-count__btn basket-count__btn_more btn-reset" aria-label="Добавить один товар" disabled>+</button>
+                  </div>
+                  <p class="basket-product__limited text-danger">Последний</p>
+                </div>
+                <div class="basket-product__coast">
+                  <div class="basket-product__sum">
+                    <p class="basket-product__new-sum">435 ₽</p>
+                  </div>
+                  <div class="basket-product__price">
+                    <p class="basket-product__new-price">145 ₽<span class="text-gray">/уп</span></p>
+                  </div>
+                  <div class="basket-product__actions">
+                    <button class="wishlist-btn btn-reset" aria-label="Добавить в список желаний">
+                      <svg class="basket-product__icon" aria-hidden="true"  width="16" height="14">
+                        <use xlink:href="/assets/img/svg/heart.svg#heart"></use>
+                      </svg>
+                    </button>
+                    <button class="remove-btn btn-reset" aria-label="Удалить товар">
+                      <svg class="basket-product__icon" aria-hidden="true" width="13" height="14">
+                        <use xlink:href="/assets/img/svg/basket.svg#basket"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="basket__item">
+              <div class="basket-product">
+                <span class="basket-product__checkbox"></span>
+                <a href="/product" class="basket-product__link_picture link-reset">
+                  <img src="/assets/img/slider/double.png" alt="Семена огурцов Семко-Союз F1">
+                </a>
+                <div class="basket-product__descr">
+                  <a href="/product" class="basket-product__link_title link-reset">Семена огурцов Семко-Союз F1</a>
+                  <p class="basket-product__subtitle">Для открытого грунта и пленочных теплиц, 10 семян в упаковке</p>
+                  <span class="basket-product__message basket-product__message_active">НОВИНКА</span>
+                </div>
+                <div class="basket-product__count">
+                  <div class="basket-product__counter">
+                    <button class="basket-count__btn basket-count__btn_less btn-reset" aria-label="Убрать один товар">-</button>
+                    <input class="input basket-product__input_counter" type="number" value="10" contenteditable="true" size="1">
+                    <button class="basket-count__btn basket-count__btn_more btn-reset" aria-label="Добавить один товар">+</button>
+                  </div>
+                </div>
+                <div class="basket-product__coast">
+                  <div class="basket-product__sum">
+                    <p class="basket-product__new-sum">1100 ₽</p>
+                  </div>
+                  <div class="basket-product__price">
+                    <p class="basket-product__new-price">110 ₽<span class="text-gray">/уп</span></p>
+                  </div>
+                  <div class="basket-product__actions">
+                    <button class="wishlist-btn btn-reset" aria-label="Добавить в список желаний">
+                      <svg class="basket-product__icon" aria-hidden="true"  width="16" height="14">
+                        <use xlink:href="/assets/img/svg/heart.svg#heart"></use>
+                      </svg>
+                    </button>
+                    <button class="remove-btn btn-reset" aria-label="Удалить товар">
+                      <svg class="basket-product__icon" aria-hidden="true" width="13" height="14">
+                        <use xlink:href="/assets/img/svg/basket.svg#basket"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+          <aside class="basket__checkout">
+            <div class="checkout-total">
+              <div class="checkout-total__header">
+                <div class="checkout-total__row">
+                  <p class="checkout-total__title">3 товара на сумму</p>
+                  <p class="checkout-total__sum">1 110 ₽</p>
+                </div>
+                <div class="checkout-total__row">
+                  <p class="checkout-total__discount">Скидка</p>
+                  <p class="checkout-total__discount_value">-75 ₽</p>
+                </div>
+              </div>
+              <p class="checkout-total__info"><span class="attention">!</span> До бесплатной доставки осталось: 100 ₽</p>
+              <div class="checkout-total__body">
+                <p>Итого</p>
+                <p class="checkout-total__result">935 ₽</p>
+              </div>
+              <p class="checkout-total__delivery">Стоимость доставки будет рассчитана на следующем шаге</p>
+              <form class="checkout-total__form" action="#" method="post">
+                <input type="text" class="input" placeholder="ПРОМОКОД">
+                <button class="btn btn-reset" type="submit">применить</button>
+              </form>
+            </div>
+            <button class="btn-buy btn btn-lg btn-fill btn-reset">оформить заказ</button>
+            <button class="btn-buy-now btn btn-lg btn-reset">купить в один клик</button>
+          </aside>
         </div>
       </div>
     </section>
@@ -170,8 +321,8 @@
               <div class="card__info">
                 <div class="rating">
                   <svg class="rating__icon" aria-hidden="true">
-                      <use xlink:href="#star"></use>
-                    </svg>
+                    <use xlink:href="#star"></use>
+                  </svg>
                   <p class="rating__value">5.0</p>
                 </div>
                 <div class="review">
@@ -197,8 +348,8 @@
               <div class="card__info">
                 <div class="rating">
                   <svg class="rating__icon" aria-hidden="true">
-                      <use xlink:href="#star"></use>
-                    </svg>
+                    <use xlink:href="#star"></use>
+                  </svg>
                   <p class="rating__value">5.0</p>
                 </div>
                 <div class="review">
@@ -348,8 +499,8 @@
               <div class="card__info">
                 <div class="rating">
                   <svg class="rating__icon" aria-hidden="true">
-                      <use xlink:href="#star"></use>
-                    </svg>
+                    <use xlink:href="#star"></use>
+                  </svg>
                   <p class="rating__value">5.0</p>
                 </div>
                 <div class="review">
@@ -391,8 +542,8 @@
               <div class="card__info">
                 <div class="rating">
                   <svg class="rating__icon" aria-hidden="true">
-                      <use xlink:href="#star"></use>
-                    </svg>
+                    <use xlink:href="#star"></use>
+                  </svg>
                   <p class="rating__value">5.0</p>
                 </div>
                 <div class="review">
@@ -418,8 +569,8 @@
               <div class="card__info">
                 <div class="rating">
                   <svg class="rating__icon" aria-hidden="true">
-                      <use xlink:href="#star"></use>
-                    </svg>
+                    <use xlink:href="#star"></use>
+                  </svg>
                   <p class="rating__value">5.0</p>
                 </div>
                 <div class="review">
@@ -445,8 +596,8 @@
               <div class="card__info">
                 <div class="rating">
                   <svg class="rating__icon" aria-hidden="true">
-                      <use xlink:href="#star"></use>
-                    </svg>
+                    <use xlink:href="#star"></use>
+                  </svg>
                   <p class="rating__value">5.0</p>
                 </div>
                 <div class="review">
@@ -472,8 +623,8 @@
               <div class="card__info">
                 <div class="rating">
                   <svg class="rating__icon" aria-hidden="true">
-                      <use xlink:href="#star"></use>
-                    </svg>
+                    <use xlink:href="#star"></use>
+                  </svg>
                   <p class="rating__value">5.0</p>
                 </div>
                 <div class="review">
