@@ -227,6 +227,134 @@
     }
   }
 
+  .address {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+
+    &__item {
+      padding: 15px;
+      background-color: #f4f4f4;
+      border-radius: 10px;
+      color: #000;
+      transition: background-color .3s;
+
+      &:has(.radio input[type="radio"]:checked) {
+        background-color: $color-secondary;
+      }
+    }
+
+    .radio {
+      font-size: 16px;
+    }
+
+    label {
+      width: 100%;
+    }
+
+    &__label {
+      width: 100%;
+
+      &_form {
+        .input {
+          max-width: none;
+          padding: 8px 10px;
+          font-size: 12px;
+          line-height: 1.2;
+          border-radius: 8px;
+          flex: 1 1 155px;
+
+          &:first-child {
+            flex-basis: 100%;
+          }
+        }
+
+        .textarea {
+          max-height: 65px;
+          padding: 10px;
+          font-size: 12px;
+          border-radius: 8px;
+        }
+
+        .form__body {
+          margin: 20px 0 10px;
+          max-width: 660px;
+          display: flex;
+          flex-wrap: wrap;
+          gap: 13px;
+        }
+      }
+    }
+
+    &__header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &__title {
+      font-weight: 400;
+      font-size: 20px;
+    }
+
+    &__footer {
+      margin-top: 5px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+
+    &__info {
+      font-size: 12px;
+      color: #8b8b8b;
+    }
+
+    &__actions {
+      display: flex;
+      align-items: center;
+      column-gap: 10px;
+
+      .tooltip__text {
+        padding: 2px 6px;
+        font-weight: 500;
+        font-size: 8px;
+        letter-spacing: .05em;
+        border-radius: $br-xxl;
+      }
+
+      .btn-change {
+        line-height: 1;
+        stroke: #000;
+
+        & + .tooltip__text {
+          right: 0;
+          bottom: calc(100% + 6px);
+          color: #000;
+          background-color: #fff;
+        }
+      }
+
+      .btn-delete {
+        line-height: 1;
+        stroke: none;
+        fill: #f22929;
+
+        & + .tooltip__text {
+          right: 0;
+          bottom: calc(100% + 6px);
+          color: #fff;
+          background-color: #f22929;
+        }
+      }
+    }
+
+    .btn {
+      padding: 6px 15px;
+      font-size: 10px;
+    }
+  }
+
   .wishlist {
     margin-top: 20px;
     display: flex;
@@ -234,6 +362,8 @@
     gap: 20px;
 
     .card {
+      position: relative;
+      z-index: 0;
       width: 190px;
       border-radius: 15px;
 
@@ -299,6 +429,17 @@
         margin-top: 15px;
         padding: 7.5px 10px;
         font-size: 9px;
+      }
+
+      .btn-is-wishlist {
+        position: absolute;
+        z-index: 5;
+        top: 10px;
+        right: 8px;
+
+        .is-wishlist__icon {
+          fill: #f22929;
+        }
       }
     }
   }
@@ -415,18 +556,6 @@
           display: flex;
           flex-direction: row;
           column-gap: 19px;
-
-          .radio {
-            display: flex;
-            align-items: center;
-            column-gap: 6px;
-            font-size: 12px;
-            line-height: 1.2;
-            
-            label {
-              color: #000;
-            }
-          }
         }
       }
     }

@@ -67,6 +67,8 @@
 
   &__checkout {
     max-width: 420px;
+    position: sticky;
+    top: 20px;
 
     .btn-buy,
     .btn-buy-now {
@@ -79,6 +81,17 @@
 
     .btn-buy-now {
       margin-top: 15px;
+    }
+
+    .btn-order {
+      margin-top: 20px;
+      width: 100%;
+      color: $color-main;
+      opacity: .5;
+
+      &:hover {
+        opacity: 1;
+      }
     }
   }
 
@@ -304,7 +317,7 @@
 
     &__title,
     &__sum {
-      font-size: 18px;
+      font-size: 15px;
       color: #9c9ea0;
     }
 
@@ -380,5 +393,203 @@
         border-color: #24383b;
       }
     }
+
+    &__subtext {
+      margin-top: 10px;
+      font-size: 11px;
+      color: #9c9ea0;
+      text-align: center;
+    }
+  }
+
+  &__top {
+    width: calc(100% - 460px);
+    margin-top: 15px;
+    display: flex;
+    align-items: baseline;
+    column-gap: 20px;
+    font-size: 14px;
+
+    .delivery-info {
+      margin-left: auto;
+
+      button {
+        margin-left: 10px;
+        font-size: 12px;
+        font-weight: 400;
+        color: #8b8b8b;
+        text-decoration: underline;
+
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  &__item_delivery {
+    padding: 20px 20px 25px;
+    border-radius: 15px;
+    background: #f4f4f4;
+    transition: background-color .3s linear;
+
+    .title {
+      font-size: 18px;
+      font-weight: 400;
+      color: #000;
+    }
+
+    .layout {
+      margin-top: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 13px;
+    }
+
+    .radio {
+      padding: 10px;
+      border-radius: 8px;
+      background: #fff;
+      font-size: 10px;
+      color: #000;
+      flex-basis: 210px;
+      align-items: flex-start;
+
+      label {
+        width: 100%;
+        align-items: flex-start;
+      }
+
+      &__label {
+        margin-left: 5px;
+        flex-grow: 1;
+      }
+
+      &__header {
+        display: flex;
+        justify-content: space-between;
+
+        img {
+          width: 20px;
+          height: 20px;
+          object-fit: contain;
+          text-align: right;
+        }
+      }
+
+      &__title {
+        font-size: 14px;
+      }
+
+      &__info {
+        margin-top: 3px;
+        font-size: 10px;
+        color: #8b8b8b;      
+      }
+
+      &__footer {
+        margin-top: 12px;
+        display: flex;
+        align-items: last baseline;
+        justify-content: space-between;
+
+        img {
+          width: auto;
+          height: 15px;
+          flex-shrink: 0;
+        }
+      }
+
+      &__sum {
+        font-size: 12px;
+      }
+    }
+
+    .form-organization,
+    .form-recipient {
+      margin-top: 15px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 15px 13px;
+
+      .input {
+        flex: 1 0 210px;
+        max-width: none;
+        padding: 7px 10px;
+        font-size: 12px;
+        border-radius: 8px;
+        color: #000;
+
+        &::placeholder {
+          color: #8b8b8b;
+        }
+      }
+    }
+
+    .form-organization {
+      .input:nth-child(-n + 2) {
+        flex-basis: 320px;
+      }
+    }
+
+    .form-promo-code {
+      margin-top: 15px;
+      display: flex;
+      align-items: center;
+      column-gap: 20px;
+
+      .form__block {
+        position: relative;
+        z-index: 0;
+        flex-grow: 1;
+
+        .discont-text {
+          position: absolute;
+          z-index: 0;
+          top: 50%;
+          right: 15px;
+          font-size: 10px;
+          transform: translateY(-50%);
+          overflow: hidden;
+          opacity: 0;
+          transition: opacity .3s ease-in-out;
+
+          &.show {
+            overflow: visible;
+            opacity: 1;
+          }
+        }
+      }
+
+      .input {
+        max-width: 100%;
+        padding: 11px 25px;
+        font-size: 12px;
+        color: #6a6a6a;
+        text-align: center;
+        border-radius: 30px;
+        text-transform: uppercase;
+
+        &::placeholder {
+          color: #6A6A6A;
+        }
+      }
+    }
+  }
+}
+
+.basket__item_delivery:has(.form-promo-code input:not(:placeholder-shown)),
+.basket__item_delivery:has(.form-organization input:not(:placeholder-shown)),
+.basket__item_delivery:has(.form-recipient input:not(:placeholder-shown)) {
+  background: $color-secondary;
+}
+
+.basket__item_delivery:has(.radio input[type="radio"]:checked) {
+  background: $color-secondary;
+
+  .radio:has(input[type="radio"]:not(:checked)){
+    opacity: .6;
+    background: #F9FDFB;
   }
 }

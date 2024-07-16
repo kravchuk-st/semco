@@ -1,32 +1,39 @@
-// var productSlider = new Splide( '.product__slider', {
-//   autoplay   : true,
-//   type       : 'fade',
-//   heightRatio: 0.5,
-//   pagination : false,
-//   arrows     : false,
-//   cover      : true,
-//   fixedWidth : 375,
-//   fixedHeight: 550,
-// } );
+var main = new Splide( '.product__slider', {
+  type       : 'loop',
+  heightRatio: 0.5,
+  pagination : false,
+  arrows     : true,
+  cover      : true,
+  fixedWidth : 375,
+  fixedHeight: 550,
+  gap        : 2,
+} );
 
-var productSliderSecond = new Splide( '.product__slider_second', {
-  autoplay        : true,
-  perPage         : 6,
-  // rewind          : true,
+var thumbnails = new Splide( '.product__slider_second', {
+  type            : 'loop',
+  perPage         : 5,
+  rewind          : true,
   fixedWidth      : 75,
   fixedHeight     : 75,
+  isNavigation    : true,
   gap             : 10,
-  focus           : 'center',
+  focus           : 0,
   pagination      : false,
   arrows          : false,
-  direction       : 'ttb',
   cover           : true,
+  // direction       : 'ttb',
   dragMinThreshold: {
     mouse: 4,
     touch: 10,
   },
+  // breakpoints : {
+  //   640: {
+  //     fixedWidth  : 66,
+  //     fixedHeight : 38,
+  //   },
+  // },
 } );
 
-// productSlider.sync( productSliderSecond );
-// productSlider.mount();
-productSliderSecond.mount();
+main.sync( thumbnails );
+main.mount();
+thumbnails.mount();

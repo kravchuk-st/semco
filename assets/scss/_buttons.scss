@@ -7,6 +7,7 @@ button {
   text-align: center;
   letter-spacing: 0.05em;
   color: $color-text;
+  transition: all .3s ease-in-out;
 }
 
 button {
@@ -46,6 +47,11 @@ button[disabled]{
   color: $color-light;
   background-color: $color-main;
   border: none;
+}
+
+.btn-dark {
+  color: #24383b;
+  border-color: #24383b;
 }
 
 .slider-btn {

@@ -6,6 +6,7 @@ const drawSlider = (el = '') => {
     fixedWidth: '260px',
     autoplay: true,
     pauseOnHover: true,
+    pagination: false,
     gap: 40,
     flickMaxPages: 1,
   } ).mount();

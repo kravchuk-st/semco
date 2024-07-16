@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Оформление заказа</title>
+  <link rel="shortcut icon" type="image/ico" href="/assets/img/favicon.ico">
+
+  <link rel="stylesheet" href="/assets/css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="wrapper">
+      <div class="header__top">
+        <a href="/" class="logo">
+          <img src="/assets/img/svg/logo.svg" alt="logo" class="logo__icon">
+        </a>
+        <img class="doll" src="/assets/img/svg/figure.svg" alt="doll">
+        <a href="/catalog" class="katalog-link btn-reset">КАТАЛОГ</a>
+        <form class="search" action="#" method="post">
+          <input class="search__input" type="text" placeholder="Поиск...">
+          <button class="search__btn btn-reset" type="submit"></button>
+        </form>
+        <div class="header__btns">
+          <a href="#" class="wishlist btn-reser">
+            <span class="wishlist__icon">
+              <svg aria-hidden="true" width="22" height="18">
+                <use xlink:href="/assets/img/svg/heart.svg#heart"></use>
+              </svg>
+              <span class="wishlist__quantity">15</span>
+            </span>
+            <span class="wishlist__text">ИЗБРАННОЕ</span>
+          </a>
+          <a href="#" class="cart btn-reser">
+            <span class="cart__icon">
+              <img src="/assets/img/svg/cart.svg" alt="cart" class="cart__img">
+              <span class="cart__quantity">5</span>
+            </span>
+            <span class="cart__text">
+              <span class="cart__title">КОРЗИНА</span>
+              <span class="cart__price">3500 ₽</span>
+            </span>
+          </a>
+          <button class="account btn-reset">ВОЙТИ</button>
+        </div>
+      </div>
+      <div class="header__bottom">
+        <select class="select" name="city">
+          <option value="МОСКВА" selected>МОСКВА</option>
+          <option value="value2">ГОРОД 2</option>
+          <option value="value3">ГОРОД 3</option>
+        </select>
+        <nav class="nav">
+          <ul class="nav__list list-reset">
+            <li class="nav__item"><a href="/about" class="nav__link">О КОМПАНИИ</a></li>
+            <li class="nav__item"><a href="#" class="nav__link">ОПТОВЫЕ ЗАКУПКИ</a></li>
+            <li class="nav__item"><a href="/promotions" class="nav__link">АКЦИИ</a></li>
+            <li class="nav__item"><a href="/delivery" class="nav__link">ДОСТАВКА</a></li>
+            <li class="nav__item"><a href="/pay" class="nav__link">ОПЛАТА</a></li>
+            <li class="nav__item"><a href="/contacts" class="nav__link">КОНТАКТЫ</a></li>
+          </ul>
+        </nav>
+        <div class="header__call">
+          <a href="tel:+74956860475" class="call__link">
+            <span class="call__img">
+              <svg class="call__icon">
+                <use xlink:href="/assets/img/svg/phone.svg#phone"></use>
+              </svg>
+            </span>
+            <span class="call__text">+7 (495) 686-04-75</span>
+          </a>
+          <button class="call-back__btn btn-reset">ЗАКАЗАТЬ ЗВОНОК</button>
+        </div>
+      </div>
+    </div>
+  </header>
+  
+  <main>
+    <div class="wrapper">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb list-reset">
+          <li class="breadcrumb__item">
+            <a href="/" class="breadcrumb__link">Главная страница</a>
+            <span class="breadcrumb__separator">—</span>
+          </li>
+          <li class="breadcrumb__item">
+            <a href="/cabinet" class="breadcrumb__link">Личный кабинет</a>
+            <span class="breadcrumb__separator">—</span>
+          </li>
+          <li class="breadcrumb__item">
+            <a href="/cart" class="breadcrumb__link">Корзина</a>
+            <span class="breadcrumb__separator">—</span>
+          </li>
+          <li class="breadcrumb__item active" aria-current="page">Оформление заказа</li>
+        </ol>
+      </nav>
+    </div>
+
+    <section class="basket">
+      <div class="wrapper">
+        <h1 class="basket__title">Оформление заказа</h1>
+        <div class="basket__top">
+          <div class="checkbox">
+            <input type="radio" name="Entity" value="individual" id="individual">
+            <label for="individual">Физическое лицо</label>
+          </div>
+          <div class="checkbox">
+            <input type="radio" name="Entity" value="legal entity" id="legalEntity">
+            <label for="legalEntity">Юридическое лицо</label>
+          </div>
+          <p class="delivery-info">Вы находитесь: <span class="text-active">г. Москва</span> <button class="btn-reset">изменить</button></p>
+        </div>
+        <div class="basket__layout">
+          <ul class="basket__list list-reset">
+            <li class="basket__item_delivery">
+              <h3 class="title">Способ получения</h3>
+              <div class="layout">
+                <div class="radio">
+                  <input type="radio" name="Delivery" value="Почта России" id="post">
+                  <label for="post">
+                    <div class="radio__label">
+                      <div class="radio__header">
+                        <p class="radio__title">Почта России</p>
+                      </div>
+                      <p class="radio__info">с 27 января</p>
+                      <div class="radio__footer">
+                        <p class="radio__sum">от 250 ₽</p>
+                        <img src="/assets/img/delivery/2.png" alt="delivery">
+                      </div>
+                    </div>
+                  </label>
+                </div>
+                <div class="radio">
+                  <input type="radio" name="Delivery" value="Пункт выдачи СДЭК" id="sdek">
+                  <label for="sdek">
+                    <div class="radio__label">
+                      <div class="radio__header">
+                        <p class="radio__title">Пункт выдачи СДЭК</p>
+                      </div>
+                      <p class="radio__info">с 30 января</p>
+                      <div class="radio__footer">
+                        <p class="radio__sum">от 50 ₽</p>
+                        <img src="/assets/img/delivery/4.png" alt="delivery">
+                      </div>
+                    </div>
+                  </label>
+                </div>
+                <div class="radio">
+                  <input type="radio" name="Delivery" value="Постаматы СДЭК" id="terminal">
+                  <label for="terminal">
+                    <div class="radio__label">
+                      <div class="radio__header">
+                        <p class="radio__title">Постаматы СДЭК</p>
+                      </div>
+                      <p class="radio__info">с 30 января</p>
+                      <div class="radio__footer">
+                        <p class="radio__sum">от 150 ₽</p>
+                        <img src="/assets/img/delivery/5.png" alt="delivery">
+                      </div>
+                    </div>
+                  </label>
+                </div>
+                <div class="radio">
+                  <input type="radio" name="Delivery" value="Пункт выдачи Boxberry" id="boxberry">
+                  <label for="boxberry">
+                    <div class="radio__label">
+                      <div class="radio__header">
+                        <p class="radio__title">Пункт выдачи Boxberry</p>
+                      </div>
+                      <p class="radio__info">с 30 января</p>
+                      <div class="radio__footer">
+                        <p class="radio__sum">от 270 ₽</p>
+                        <img src="/assets/img/delivery/3.png" alt="delivery">
+                      </div>
+                    </div>
+                  </label>
+                </div>
+                <div class="radio">
+                  <input type="radio" name="Delivery" value="Самовывоз" id="pickup">
+                  <label for="pickup">
+                    <div class="radio__label">
+                      <div class="radio__header">
+                        <p class="radio__title">Самовывоз</p>
+                      </div>
+                      <p class="radio__info">с 21 января</p>
+                      <div class="radio__footer">
+                        <p class="radio__sum">0 ₽</p>
+                        <img src="/assets/img/delivery/1.png" alt="delivery">
+                      </div>
+                    </div>
+                  </label>
+                </div>
+                <div class="radio">
+                  <input type="radio" name="Delivery" value="Курьер" id="courier">
+                  <label for="courier">
+                    <div class="radio__label">
+                      <div class="radio__header">
+                        <p class="radio__title">Курьер</p>
+                      </div>
+                      <p class="radio__info">с 30 января, только по Москве</p>
+                      <div class="radio__footer">
+                        <p class="radio__sum">от 500 ₽</p>
+                        <img src="/assets/img/delivery/0.png" alt="delivery">
+                      </div>
+                    </div>
+                  </label>
+                </div>
+              </div>
+            </li>
+            <li class="basket__item_delivery">
+              <h3 class="title">Об организации</h3>
+              <form class="form-organization" action="#" method="post">
+                <input type="text" class="input" placeholder="Название компании">
+                <input type="number" class="input" placeholder="Индекс">
+                <input type="number" class="input" placeholder="ИНН">
+                <input type="number" class="input" placeholder="КПП">
+                <input type="number" class="input" placeholder="БИК">
+                <input type="number" class="input" placeholder="Р/С">
+                <input type="number" class="input" placeholder="К/С">
+              </form>
+            </li>
+            <li class="basket__item_delivery">
+              <h3 class="title">Получатель</h3>
+              <form class="form-recipient" action="#" method="post">
+                <input type="text" class="input" placeholder="Имя">
+                <input type="text" class="input" placeholder="Фамилия">
+                <input type="text" class="input" placeholder="Отчество">
+                <input type="tel" class="input" placeholder="+7 (999) 999-99-99">
+                <input type="email" class="input" placeholder="E-mail">
+              </form>
+            </li>
+            <li class="basket__item_delivery">
+              <h3 class="title">Промокод</h3>
+              <form class="form-promo-code" action="#" method="post">
+                <div class="form__block">
+                  <input type="text" class="input" value="семко22" placeholder="ПРОМОКОД">
+                  <p class="discont-text text-active show">Скидка по промокоду -20%</p>
+                </div>
+                <button class="btn btn-dark btn-reset" type="submit">применить</button>
+              </form>
+            </li>
+            <li class="basket__item_delivery">
+              <h3 class="title">Способ оплаты</h3>
+              <div class="layout">
+                <div class="radio">
+                  <input type="radio" name="Payment" value="Оплата картой" id="card">
+                  <label for="card">
+                    <div class="radio__label">
+                      <div class="radio__header">
+                        <p class="radio__title">Оплата картой</p>
+                        <img src="/assets/img/svg/pay/0.svg" alt="Оплата картой">
+                      </div>
+                      <p class="radio__info">МИР, Visa, Mastercard</p>
+                    </div>
+                  </label>
+                </div>
+                <div class="radio">
+                  <input type="radio" name="Payment" value="Альфа-банк" id="alpha">
+                  <label for="alpha">
+                    <div class="radio__label">
+                      <div class="radio__header">
+                        <p class="radio__title">Альфа-банк</p>
+                        <img src="/assets/img/svg/pay/2.svg" alt="Альфа-банк">
+                      </div>
+                      <p class="radio__info">Персональная ссылка</p>
+                    </div>
+                  </label>
+                </div>
+                <div class="radio">
+                  <input type="radio" name="Payment" value="СБП" id="sbp">
+                  <label for="sbp">
+                    <div class="radio__label">
+                      <div class="radio__header">
+                        <p class="radio__title">СБП</p>
+                        <img src="/assets/img/svg/pay/1.svg" alt="СБП">
+                      </div>
+                      <p class="radio__info">Оплата по QR-коду</p>
+                    </div>
+                  </label>
+                </div>
+                <div class="radio">
+                  <input type="radio" name="Payment" value="Наличный расчет" id="cash">
+                  <label for="cash">
+                    <div class="radio__label">
+                      <div class="radio__header">
+                        <p class="radio__title">Наличный расчет</p>
+                        <img src="/assets/img/svg/pay/4.svg" alt="Наличный расчет">
+                      </div>
+                      <p class="radio__info">Оплата по QR-коду</p>
+                    </div>
+                  </label>
+                </div>
+                <div class="radio">
+                  <input type="radio" name="Payment" value="Безналичный расчет" id="payments">
+                  <label for="payments">
+                    <div class="radio__label">
+                      <div class="radio__header">
+                        <p class="radio__title">Безналичный расчет</p>
+                        <img src="/assets/img/svg/pay/5.svg" alt="Безналичный расчет">
+                      </div>
+                      <p class="radio__info">Счет для юридических лиц</p>
+                    </div>
+                  </label>
+                </div>
+                <div class="radio">
+                  <input type="radio" name="Payment" value="Наложенный платеж" id="cod">
+                  <label for="cod">
+                    <div class="radio__label">
+                      <div class="radio__header">
+                        <p class="radio__title">Наложенный платеж</p>
+                        <img src="/assets/img/svg/pay/3.svg" alt="Наложенный платеж">
+                      </div>
+                      <p class="radio__info">Только при получении на почте</p>
+                    </div>
+                  </label>
+                </div>
+              </div>
+            </li>
+          </ul>
+
+          <aside class="basket__checkout">
+            <div class="checkout-total">
+              <div class="checkout-total__header">
+                <div class="checkout-total__row">
+                  <p class="checkout-total__title">3 товара на сумму</p>
+                  <p class="checkout-total__sum">1 110 ₽</p>
+                </div>
+                <div class="checkout-total__row">
+                  <p class="checkout-total__title">Доставка:</p>
+                  <p class="checkout-total__sum">0 ₽</p>
+                </div>
+                <div class="checkout-total__row">
+                  <p class="checkout-total__discount">Скидка</p>
+                  <p class="checkout-total__discount_value">-75 ₽</p>
+                </div>
+              </div>
+              <div class="checkout-total__body">
+                <p>Итого</p>
+                <p class="checkout-total__result">1 685 ₽</p>
+              </div>
+            </div>
+            <button class="btn-order btn btn-lg btn-reset">оформить заказ</button>
+            <p class="checkout-total__subtext">
+              Нажимая кнопку «Оформить заказ», я соглашаюсь с Условиями заказа и доставки , а также на обработку персональных данных в соответствии с обновленной Политикой обработки персональных данных
+            </p>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrapper">
+      <div class="footer__content">
+        <div class="footr__info">
+          <div class="logo">
+            <a href="/" class="logo__link">
+              <img class="logo__img" src="/assets/img/svg/logo.svg" alt="logo">
+            </a>
+            <p class="logo__text">Ваш проводник в волшебный мир семян</p>
+          </div>
+          <div class="menu-social">
+            <ul class="social__list list-reset">
+              <li class="social__item"><a href="#" class="social__link social__link_yt"></a></li>
+              <li class="social__item"><a href="#" class="social__link social__link_vk"></a></li>
+              <li class="social__item"><a href="#" class="social__link social__link_tg"></a></li>
+              <li class="social__item"><a href="#" class="social__link social__link_wa"></a></li>
+            </ul>
+            <a href="#"><img src="/assets/img/svg/social/yandex-rating.svg" alt="yandex"></a>
+            <a href="#"><img src="/assets/img/svg/social/google-rating.svg" alt="google"></a>
+          </div>
+          <ul class="contacts__list list-reset">
+            <li class="contacts__item">
+              <a href="tel:+74956860475" class="contact__link" target="_blank">
+                <svg class="contact__icon">
+                  <use xlink:href="/assets/img/svg/phone.svg#phone"></use>
+                </svg>
+                <span>+7 (495) 686-04-75</span>
+              </a>
+            </li>
+            <li class="contacts__item">
+              <a href="https://maps.app.goo.gl/LGwbhbKouWsF7Uny7" class="contact__link" target="_blank">
+                <svg class="contact__icon">
+                  <use xlink:href="/assets/img/svg/map.svg#map"></use>
+                </svg>
+                <span>г. Москва, Рижский проезд, 3</span>
+              </a>
+            </li>
+            <li class="contacts__item">
+              <a href="mailto:semcojunior@mail.ru" class="contact__link" target="_blank">
+                <svg class="contact__icon">
+                  <use xlink:href="/assets/img/svg/mail.svg#mail"></use>
+                </svg>
+                <span>semcojunior@mail.ru</span>
+              </a>
+            </li>
+          </ul>
+          <p class="copyright">©️ 1991-2024, ООО СЕМКО</p>
+        </div>
+        <div>
+          <div class="footer-links">
+            <div class="col">
+              <h3 class="footer-links__label">Важная информация</h3>
+              <ul class="footer-links__list list-reset">
+                <li class="footer-links__item"><a href="/pay">Оплата</a></li>
+                <li class="footer-links__item"><a href="/delivery">Доставка</a></li>
+                <li class="footer-links__item"><a href="#">Возврат</a></li>
+                <li class="footer-links__item"><a href="#">Договор оферты</a></li>
+                <li class="footer-links__item"><a href="#">Оптовые закупки</a></li>
+                <li class="footer-links__item"><a href="/promotions">Акции и скидки</a></li>
+                <li class="footer-links__item"><a href="/contacts">Контакты</a></li>
+                <li class="footer-links__item"><a href="/documents">Документация</a></li>
+              </ul>
+            </div>
+            <div class="col">
+              <h3 class="footer-links__label">О компании</h3>
+              <ul class="footer-links__list list-reset">
+                <li class="footer-links__item"><a href="#">О нас</a></li>
+                <li class="footer-links__item"><a href="#">Проекты</a></li>
+                <li class="footer-links__item"><a href="#">Выставки</a></li>
+                <li class="footer-links__item"><a href="#">Видеоматериалы</a></li>
+                <li class="footer-links__item"><a href="#">Агротехника</a></li>
+                <li class="footer-links__item"><a href="#">Газета</a></li>
+              </ul>
+            </div>
+          </div>
+          <form class="form" action="#" method="post">
+            <input class="form__input" type="email" name="email" placeholder="Ваш e-mail">
+            <button class="form-btn btn-reset" type="submit">подписаться на рассылку</button>
+          </form>
+          <a class="politics-link" href="#">Политика конфиденциальности</a>
+        </div>
+      </div>
+      <div class="footer__text">
+        <p>
+          Каждый из нас понимает очевидную вещь: повышение уровня гражданского сознания предоставляет широкие возможности для переосмысления внешнеэкономических политик. В своём стремлении повысить качество жизни, они забывают, что высокотехнологичная концепция общественного уклада обеспечивает широкому кругу (специалистов) участие в формировании как самодостаточных, так и внешне зависимых концептуальных решений.
+        </p>
+        <p>
+          Лишь базовые сценарии поведения пользователей представляют собой не что иное, как квинтэссенцию победы маркетинга над разумом и должны быть подвергнуты целой серии независимых исследований. Следует отметить, что граница обучения кадров прекрасно подходит для реализации как самодостаточных, так и внешне зависимых концептуальных решений. Наше дело не так однозначно, как может показаться: перспективное планирование однозначно фиксирует необходимость дальнейших направлений развития. Современные технологии достигли такого уровня, что перспективное планирование выявляет срочную потребность инновационных методов управления процессами!
+        </p>
+        <p>
+          Как уже неоднократно упомянуто, интерактивные прототипы неоднозначны и будут объективно рассмотрены соответствующими инстанциями. Не следует, однако, забывать, что постоянное информационно-пропагандистское обеспечение нашей деятельности выявляет срочную потребность распределения внутренних резервов и ресурсов. Как уже неоднократно упомянуто, действия представителей оппозиции, которые представляют собой яркий пример континентально-европейского типа политической культуры, будут заблокированы в рамках своих собственных рациональных ограничений. Являясь всего лишь частью общей картины, представители современных социальных резервов и по сей день остаются уделом либералов, которые жаждут быть объективно рассмотрены соответствующими инстанциями. Каждый из нас понимает очевидную вещь: реализация намеченных плановых заданий, в своём классическом представлении, допускает внедрение поэтапного и последовательного развития общества. И нет сомнений, что ключевые особенности структуры проекта и по сей день остаются уделом либералов, которые жаждут быть призваны к ответу.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <div class="top-control"></div>
+
+  <script src="/assets/js/scrollTop.js"></script>
+</body>
+</html>
+
+

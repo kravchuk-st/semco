@@ -16,6 +16,9 @@
     <symbol viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg" id="star">
       <path d="M11.9381 4.35458C11.8877 4.19634 11.7908 4.05696 11.6599 3.95463C11.5291 3.8523 11.3705 3.79177 11.2048 3.78095L8.20769 3.57121L7.09591 0.771631C7.03574 0.616857 6.93022 0.483868 6.79318 0.390091C6.65614 0.296313 6.49396 0.246122 6.3279 0.246094H6.32712C6.16132 0.246389 5.99946 0.296709 5.86272 0.390472C5.72598 0.484235 5.62072 0.617078 5.56069 0.771631L4.43235 3.58737L1.45181 3.78095C1.28608 3.79177 1.12746 3.8523 0.99665 3.95463C0.865838 4.05696 0.768906 4.19634 0.718501 4.35458C0.665326 4.51508 0.661709 4.68786 0.70812 4.85044C0.75453 5.01302 0.848819 5.15786 0.978706 5.26609L3.27167 7.20423L2.58962 9.88711C2.5426 10.0678 2.55125 10.2585 2.61442 10.4342C2.67759 10.61 2.79234 10.7625 2.94365 10.8719C3.08974 10.9782 3.26444 11.0381 3.44501 11.0437C3.62558 11.0493 3.80367 11.0005 3.95609 10.9035L6.3216 9.40494C6.32475 9.40257 6.3279 9.401 6.335 9.40494L8.88029 11.0174C9.01847 11.1057 9.18008 11.1502 9.34397 11.1452C9.50787 11.1401 9.66642 11.0857 9.79889 10.989C9.936 10.8899 10.04 10.7517 10.0972 10.5925C10.1545 10.4334 10.1624 10.2606 10.1198 10.0969L9.39518 7.16599L11.6779 5.26609C11.8078 5.15786 11.9021 5.01302 11.9485 4.85044C11.9949 4.68786 11.9913 4.51508 11.9381 4.35458Z"/>
     </symbol>
+    <symbol viewBox="0 0 22 18" xmlns="http://www.w3.org/2000/svg" id="heart">
+      <path d="M15.502 8.2786e-06C14.6288 -0.00149138 13.7674 0.200775 12.9862 0.590718C12.205 0.980661 11.5256 1.54752 11.002 2.24621C10.2928 1.30266 9.30487 0.606001 8.17799 0.254824C7.0511 -0.0963541 5.84231 -0.0842713 4.72267 0.289363C3.60303 0.662997 2.62923 1.37926 1.93907 2.3368C1.24892 3.29434 0.877352 4.44467 0.876953 5.62501C0.876953 12.3621 10.237 17.6813 10.6355 17.9044C10.7474 17.9671 10.8736 18 11.002 18C11.1303 18 11.2565 17.9671 11.3684 17.9044C13.0899 16.8961 14.7056 15.7173 16.1912 14.3856C19.4663 11.438 21.127 8.49047 21.127 5.62501C21.1253 4.13368 20.5321 2.70393 19.4776 1.6494C18.423 0.594873 16.9933 0.00169855 15.502 8.2786e-06Z"/>
+    </symbol>
   </svg>
 
   <header class="header">
@@ -322,7 +325,122 @@
                 <h2>Адреса доставки</h2>
                 <button class="btn btn-fill btn-reset">+ добавить адрес</button>
               </div>
-              
+              <ul class="address list-reset">
+                <li class="address__item">
+                  <div class="radio">
+                    <input type="radio" name="Addres" value="addres0" id="addres0" checked>
+                    <label for="addres0">
+                      <div class="address__label">
+                        <h3 class="address__title">г. Москва</h3>
+                        <div class="address__footer">
+                          <p class="address__info">Новопатрушевский р-н, улица Дагестанская, д. 3к1, подъезд 1, этаж 10, кв. 155</p>
+                          <div class="address__actions">
+                            <div class="tooltip">
+                              <button class="btn-change btn-reset" aria-labelledby="characteristics-tooltip" aria-label="Изменить адрес">
+                                <svg class="address__icon" aria-hidden="true" width="14" height="14">
+                                  <use xlink:href="/assets/img/svg/pencil.svg#pencil"></use>
+                                </svg>
+                              </button>
+                              <div class="tooltip__text" role="tooltip" id="characteristics-tooltip">изменить</div>
+                            </div>
+                            <div class="tooltip">
+                              <button class="btn-delete btn-reset" aria-labelledby="characteristics-tooltip" aria-label="Удалить адрес">
+                                <svg class="address__icon" aria-hidden="true" width="14" height="14">
+                                  <use xlink:href="/assets/img/svg/basket.svg#basket"></use>
+                                </svg>
+                              </button>
+                              <div class="tooltip__text" role="tooltip" id="characteristics-tooltip">удалить</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </label>
+                  </div>
+                </li>
+                <li class="address__item">
+                  <div class="radio">
+                    <input type="radio" name="Addres" value="addres1" id="addres1" checked>
+                    <label for="addres1">
+                      <div class="address__label">
+                        <h3 class="address__title">г. Москва</h3>
+                        <div class="address__footer">
+                          <p class="address__info">Чкаловский р-н, улица Мира, д. 3062к2, подъезд 1, этаж 10, кв. 155</p>
+                          <div class="address__actions">
+                            <div class="tooltip">
+                              <button class="btn-change btn-reset" aria-labelledby="characteristics-tooltip" aria-label="Изменить адрес">
+                                <svg class="address__icon" aria-hidden="true" width="14" height="14">
+                                  <use xlink:href="/assets/img/svg/pencil.svg#pencil"></use>
+                                </svg>
+                              </button>
+                              <div class="tooltip__text" role="tooltip" id="characteristics-tooltip">изменить</div>
+                            </div>
+                            <div class="tooltip">
+                              <button class="btn-delete btn-reset" aria-labelledby="characteristics-tooltip" aria-label="Удалить адрес">
+                                <svg class="address__icon" aria-hidden="true" width="14" height="14">
+                                  <use xlink:href="/assets/img/svg/basket.svg#basket"></use>
+                                </svg>
+                              </button>
+                              <div class="tooltip__text" role="tooltip" id="characteristics-tooltip">удалить</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </label>
+                  </div>
+                </li>
+                <li class="address__item">
+                  <div class="radio">
+                    <input type="radio" name="Addres" value="addres2" id="addres2" checked>
+                    <label for="addres2">
+                      <div class="address__label">
+                        <h3 class="address__title">г. Курган</h3>
+                        <div class="address__footer">
+                          <p class="address__info">Северный р-н, улица Новая, д. 8, подъезд 1, этаж 10, кв. 155. Комментарий: домофон не работает</p>
+                          <div class="address__actions">
+                            <div class="tooltip">
+                              <button class="btn-change btn-reset" aria-labelledby="characteristics-tooltip" aria-label="Изменить адрес">
+                                <svg class="address__icon" aria-hidden="true" width="14" height="14">
+                                  <use xlink:href="/assets/img/svg/pencil.svg#pencil"></use>
+                                </svg>
+                              </button>
+                              <div class="tooltip__text" role="tooltip" id="characteristics-tooltip">изменить</div>
+                            </div>
+                            <div class="tooltip">
+                              <button class="btn-delete btn-reset" aria-labelledby="characteristics-tooltip" aria-label="Удалить адрес">
+                                <svg class="address__icon" aria-hidden="true" width="14" height="14">
+                                  <use xlink:href="/assets/img/svg/basket.svg#basket"></use>
+                                </svg>
+                              </button>
+                              <div class="tooltip__text" role="tooltip" id="characteristics-tooltip">удалить</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </label>
+                  </div>
+                </li>
+                <li class="address__item">
+                  <div class="radio">
+                    <input type="radio" name="Addres" value="addres-new" id="addres-new">
+                    <label for="addres-new">
+                      <form class="address__label address__label_form" action="#" method="post">
+                        <div class="address__header">
+                          <h3 class="address__title">г. Курган</h3>
+                          <button class="btn btn-fill btn-reset" type="submit">Сохранить</button>
+                        </div>
+                        <div class="form__body">
+                          <input type="text" class="input address__input" value="г. Курган, Северный р-н, улица Новая, д. 8,">
+                          <input type="text" class="input">
+                          <input type="text" class="input">
+                          <input type="text" class="input">
+                          <input type="text" class="input">
+                          <textarea class="textarea" cols="30" rows="4"></textarea>
+                        </div>
+                      </form>
+                    </label>
+                  </div>
+                </li>
+              </ul>
             </div>
             <div class="tabs__panel">
               <h2>Избранное</h2>
@@ -341,8 +459,8 @@
                     <div class="card__info">
                       <div class="rating">
                         <svg class="rating__icon" aria-hidden="true">
-                            <use xlink:href="#star"></use>
-                          </svg>
+                          <use xlink:href="#star"></use>
+                        </svg>
                         <p class="rating__value">5.0</p>
                       </div>
                       <div class="review">
@@ -352,6 +470,11 @@
                     </div>
                     <button class="card__btn btn-reset">добавить в корзину</button>
                   </div>
+                  <button class="btn-is-wishlist btn-reset" aria-label="Убрать из списка желаний">
+                    <svg class="is-wishlist__icon" aria-hidden="true"  width="20" height="18">
+                      <use xlink:href="#heart"></use>
+                    </svg>
+                  </button>
                 </div>
                 <div class="card">
                   <a href="#" class="card__link_img btn-reset">
@@ -378,6 +501,11 @@
                     </div>
                     <button class="card__btn btn-reset">добавить в корзину</button>
                   </div>
+                  <button class="btn-is-wishlist btn-reset" aria-label="Убрать из списка желаний">
+                    <svg class="is-wishlist__icon" aria-hidden="true"  width="20" height="18">
+                      <use xlink:href="#heart"></use>
+                    </svg>
+                  </button>
                 </div>
                 <div class="card">
                   <a href="#" class="card__link_img btn-reset">
@@ -404,6 +532,11 @@
                     </div>
                     <button class="card__btn btn-reset">добавить в корзину</button>
                   </div>
+                  <button class="btn-is-wishlist btn-reset" aria-label="Убрать из списка желаний">
+                    <svg class="is-wishlist__icon" aria-hidden="true"  width="20" height="18">
+                      <use xlink:href="#heart"></use>
+                    </svg>
+                  </button>
                 </div>
                 <div class="card">
                   <a href="#" class="card__link_img btn-reset">
@@ -430,6 +563,11 @@
                     </div>
                     <button class="card__btn btn-reset">добавить в корзину</button>
                   </div>
+                  <button class="btn-is-wishlist btn-reset" aria-label="Убрать из списка желаний">
+                    <svg class="is-wishlist__icon" aria-hidden="true"  width="20" height="18">
+                      <use xlink:href="#heart"></use>
+                    </svg>
+                  </button>
                 </div>
                 <div class="card">
                   <a href="#" class="card__link_img btn-reset">
@@ -456,6 +594,11 @@
                     </div>
                     <button class="card__btn btn-reset">добавить в корзину</button>
                   </div>
+                  <button class="btn-is-wishlist btn-reset" aria-label="Убрать из списка желаний">
+                    <svg class="is-wishlist__icon" aria-hidden="true"  width="20" height="18">
+                      <use xlink:href="#heart"></use>
+                    </svg>
+                  </button>
                 </div>
                 <div class="card">
                   <a href="#" class="card__link_img btn-reset">
@@ -482,6 +625,11 @@
                     </div>
                     <button class="card__btn btn-reset">добавить в корзину</button>
                   </div>
+                  <button class="btn-is-wishlist btn-reset" aria-label="Убрать из списка желаний">
+                    <svg class="is-wishlist__icon" aria-hidden="true"  width="20" height="18">
+                      <use xlink:href="#heart"></use>
+                    </svg>
+                  </button>
                 </div>
                 <div class="card">
                   <a href="#" class="card__link_img btn-reset">
@@ -508,6 +656,11 @@
                     </div>
                     <button class="card__btn btn-reset">добавить в корзину</button>
                   </div>
+                  <button class="btn-is-wishlist btn-reset" aria-label="Убрать из списка желаний">
+                    <svg class="is-wishlist__icon" aria-hidden="true"  width="20" height="18">
+                      <use xlink:href="#heart"></use>
+                    </svg>
+                  </button>
                 </div>
                 <div class="card">
                   <a href="#" class="card__link_img btn-reset">
@@ -534,6 +687,11 @@
                     </div>
                     <button class="card__btn btn-reset">добавить в корзину</button>
                   </div>
+                  <button class="btn-is-wishlist btn-reset" aria-label="Убрать из списка желаний">
+                    <svg class="is-wishlist__icon" aria-hidden="true"  width="20" height="18">
+                      <use xlink:href="#heart"></use>
+                    </svg>
+                  </button>
                 </div>
               </div>
             </div>
@@ -610,8 +768,8 @@
                       <input class="input" type="password" name="Password" placeholder="*************" id="password" required>
                     </div>
                     <div class="form__block">
-                      <label for="phone">Повторите пароль*</label>
-                      <input class="input" type="password" name="Phone" placeholder="*************" id="phone" required>
+                      <label for="repeatPassword">Повторите пароль*</label>
+                      <input class="input" type="password" name="Phone" placeholder="*************" id="repeatPassword" required>
                     </div>
                     <button class="btn btn-fill btn-reset" type="submit">
                       <svg class="settings__btn-icon" aria-hidden="true" width="14" height="14">
