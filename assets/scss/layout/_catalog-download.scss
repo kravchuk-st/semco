@@ -49,18 +49,11 @@
       background-color: $color-light;
       border: none;
       text-align: center;
-      border-radius: $br-xxl;
+      border-radius: $br-btn;
     }
 
     button {
-      width: 100%;
-      padding: 23px 25px;
-      font-weight: 600;
       letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: $color-light;
-      background-color: #24383b;
-      border-radius: $br-xxl;
     }
   }
 }

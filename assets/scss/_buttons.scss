@@ -28,8 +28,14 @@ button[disabled]{
   line-height: 1.6;
   color: $color-main;
   border: 1px solid $color-main;
-  border-radius: $br-xxl;
+  border-radius: $br-btn;
   text-transform: uppercase;
+
+  &:hover {
+    color: #fff;
+    border-color: $color-main;
+    background-color: $color-main;
+  }
 }
 
 .btn-lg {
@@ -39,7 +45,7 @@ button[disabled]{
   line-height: 1.6;
   color: #000;
   border: 1px solid $color-main;
-  border-radius: $br-xxl;
+  border-radius: $br-btn;
   text-transform: uppercase;
 }
 
@@ -47,11 +53,21 @@ button[disabled]{
   color: $color-light;
   background-color: $color-main;
   border: none;
+
+  &:hover {
+    background-color: $color-btn-hover;
+  }
 }
 
 .btn-dark {
-  color: #24383b;
+  color: $color-light;
+  background-color: #24383b;
   border-color: #24383b;
+
+  &:hover {
+    background-color: #445f63;
+    border-color: #445f63;
+  }
 }
 
 .slider-btn {
@@ -87,20 +103,22 @@ button[disabled]{
   text-transform: uppercase;
   color: $color-light;
   background-color: $color-main;
-  border-radius: $br-xxl;
+  border-radius: $br-btn;
+
+  &:hover {
+    background-color: $color-btn-hover;
+  }
 }
 
 .form-btn {
   width: 100%;
   padding: 19px 30px;
-  border-radius: $br-xxl;
+  border-radius: $br-btn;
   text-transform: uppercase;
   font-weight: 600;
   font-size: 14px;
   line-height: 1.6;
   letter-spacing: 0.12em;
-  color: $color-light;
-  background-color: #24383b;
 }
 
 .sidebar-btn {
@@ -115,7 +133,7 @@ button[disabled]{
   padding: 15px 45px;
   font-size: 16px;
   letter-spacing: 0.16em;
-  border-radius: $br-xxl;
+  border-radius: $br-btn;
   border: 1px solid $color-main;
   text-transform: uppercase;
   color: $color-main;

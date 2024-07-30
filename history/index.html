@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>История компании</title>
+  <link rel="shortcut icon" type="image/ico" href="/assets/img/favicon.ico">
+
+  <link rel="stylesheet" href="/assets/css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
+</head>
+<body>
+  <svg class="sprite" style="display: none;">
+    <symbol xmlns="http://www.w3.org/2000/svg" id="line">
+    </symbol>
+  </svg>
+  <header class="header">
+    <div class="wrapper">
+      <div class="header__top">
+        <a href="/" class="logo">
+          <img src="/assets/img/svg/logo.svg" alt="logo" class="logo__icon">
+        </a>
+        <img class="doll" src="/assets/img/cipollino-sm.png" alt="doll">
+        <a href="/catalog" class="katalog-link btn-fill btn-reset">КАТАЛОГ</a>
+        <form class="search" action="#" method="post">
+          <input class="search__input" type="text" placeholder="Поиск...">
+          <button class="search__btn btn-reset" type="submit"></button>
+        </form>
+        <div class="header__btns">
+          <a href="#" class="wishlist btn-reser">
+            <span class="wishlist__icon">
+              <svg aria-hidden="true" width="22" height="18">
+                <use xlink:href="/assets/img/svg/heart.svg#heart"></use>
+              </svg>
+              <span class="wishlist__quantity">15</span>
+            </span>
+            <span class="wishlist__text">ИЗБРАННОЕ</span>
+          </a>
+          <a href="#" class="cart btn-reser">
+            <span class="cart__icon">
+              <img src="/assets/img/svg/cart.svg" alt="cart" class="cart__img">
+              <span class="cart__quantity">5</span>
+            </span>
+            <span class="cart__text">
+              <span class="cart__title">КОРЗИНА</span>
+              <span class="cart__price">3500 ₽</span>
+            </span>
+          </a>
+          <button class="account btn-reset">ВОЙТИ</button>
+        </div>
+      </div>
+      <div class="header__bottom">
+        <select class="select" name="city">
+          <option value="МОСКВА" selected>МОСКВА</option>
+          <option value="value2">ГОРОД 2</option>
+          <option value="value3">ГОРОД 3</option>
+        </select>
+        <nav class="nav">
+          <ul class="nav__list list-reset">
+            <li class="nav__item"><a href="#" class="nav__link">О КОМПАНИИ</a></li>
+            <li class="nav__item"><a href="#" class="nav__link">ОПТОВЫЕ ЗАКУПКИ</a></li>
+            <li class="nav__item"><a href="/promotions" class="nav__link">АКЦИИ</a></li>
+            <li class="nav__item"><a href="/delivery" class="nav__link">ДОСТАВКА</a></li>
+            <li class="nav__item"><a href="/pay" class="nav__link">ОПЛАТА</a></li>
+            <li class="nav__item"><a href="/contacts" class="nav__link">КОНТАКТЫ</a></li>
+          </ul>
+        </nav>
+        <div class="header__call">
+          <a href="tel:+74956860475" class="call__link">
+            <span class="call__img">
+              <svg class="call__icon">
+                <use xlink:href="/assets/img/svg/phone.svg#phone"></use>
+              </svg>
+            </span>
+            <span class="call__text">+7 (495) 686-04-75</span>
+          </a>
+          <button class="call-back__btn btn-reset">ЗАКАЗАТЬ ЗВОНОК</button>
+        </div>
+      </div>
+    </div>
+  </header>
+  
+  <main>
+    <div class="wrapper">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb list-reset">
+          <li class="breadcrumb__item">
+            <a href="/" class="breadcrumb__link">Главная страница</a>
+            <span class="breadcrumb__separator">—</span>
+          </li>
+          <li class="breadcrumb__item">
+            <a href="#" class="breadcrumb__link">О компании</a>
+            <span class="breadcrumb__separator">—</span>
+          </li>
+          <li class="breadcrumb__item active" aria-current="page">История компании</li>
+        </ol>
+      </nav>
+    </div>
+
+    <section class="history-banner">
+      <div class="wrapper">
+        <div class="section-header">
+          <h1 class="history-banner__title">География продаж <span class="question-icon">?</span></h1>
+          <a href="/catalog" class="btn btn-fill btn-reset">вернуться к каталогу</a>
+        </div>
+        <img class="history-banner__img" src="/assets/img/delivery-bg.png" alt="...">
+        <ul class="history-banner__list list-reset">
+          <li class="history-banner__item">
+            <div class="history-card">
+              <div class="history-card__header">
+                <h3 class="history-card__title">Вьетнам</h3>
+                <img src="/assets/img/svg/flags/vietnam.svg" alt="флаг Вьетнама" class="history-card__flag">
+              </div>
+              <img class="history-card__img" src="/assets/img/history/vietnam.png" alt="карта Вьетнама">
+            </div>
+          </li>
+          <li class="history-banner__item">
+            <div class="history-card">
+              <div class="history-card__header">
+                <h3 class="history-card__title">Грузия</h3>
+                <img src="/assets/img/svg/flags/georgia.svg" alt="флаг Грузии" class="history-card__flag">
+              </div>
+              <img class="history-card__img" src="/assets/img/history/georgia.png" alt="карта Грузии">
+            </div>
+          </li>
+          <li class="history-banner__item">
+            <div class="history-card">
+              <div class="history-card__header">
+                <h3 class="history-card__title">Узбекистан</h3>
+                <img src="/assets/img/svg/flags/uzbekistan.svg" alt="флаг Узбекистана" class="history-card__flag">
+              </div>
+              <img class="history-card__img" src="/assets/img/history/uzbekistan.png" alt="карта Узбекистана">
+            </div>
+          </li>
+          <li class="history-banner__item">
+            <div class="history-card">
+              <div class="history-card__header">
+                <h3 class="history-card__title">Киргизия</h3>
+                <img src="/assets/img/svg/flags/kyrgyzstan.svg" alt="флаг Киргизии" class="history-card__flag">
+              </div>
+              <img class="history-card__img" src="/assets/img/history/kyrgyzstan.png" alt="карта Киргизии">
+            </div>
+          </li>
+          <li class="history-banner__item">
+            <div class="history-card">
+              <div class="history-card__header">
+                <h3 class="history-card__title">ОАЭ</h3>
+                <img src="/assets/img/svg/flags/uae.svg" alt="флаг ОАЭ" class="history-card__flag">
+              </div>
+              <img class="history-card__img" src="/assets/img/history/uae.png" alt="карта ОАЭ">
+            </div>
+          </li>
+          <li class="history-banner__item">
+            <div class="history-card">
+              <div class="history-card__header">
+                <h3 class="history-card__title">Япония</h3>
+                <img src="/assets/img/svg/flags/japan.svg" alt="флаг Японии" class="history-card__flag">
+              </div>
+              <img class="history-card__img" src="/assets/img/history/japan.png" alt="карта Японии">
+            </div>
+          </li>
+          <li class="history-banner__item">
+            <div class="history-card">
+              <div class="history-card__header">
+                <h3 class="history-card__title">Кувейт</h3>
+                <img src="/assets/img/svg/flags/kuwait.svg" alt="флаг Кувейта" class="history-card__flag">
+              </div>
+              <img class="history-card__img" src="/assets/img/history/kuwait.png" alt="карта Кувейта">
+            </div>
+          </li>
+          <li class="history-banner__item">
+            <div class="history-card">
+              <div class="history-card__header">
+                <h3 class="history-card__title">Армения</h3>
+                <img src="/assets/img/svg/flags/armenia.svg" alt="флаг Армении" class="history-card__flag">
+              </div>
+              <img class="history-card__img" src="/assets/img/history/armenia.png" alt="карта Армении">
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="history">
+      <div class="wrapper">
+        <div class="history__layout">
+          <div class="history__text">
+            <h2 class="history__title">История агрофирмы «Семко»</h2>
+            <div class="history__info">
+              <p>
+                За последние десятилетия агрофирма «Семко» преобразилась из небольшой инициативы Юрия Борисовича Алексеева в одного из лидеров сельскохозяйственной индустрии, предлагающего широкий ассортимент инновационных и качественных семян.
+              </p>
+              <p>
+                С момента своего основания, компания стремительно расширила свои границы, представив на рынке уникальные гибриды овощей и цветов, каждый из которых стал символом качества и надежности. Успешное сочетание научного подхода в селекции и ориентации на потребности современных аграриев позволило «Семко» закрепить свое место на рынке как в России, так и за рубежом.
+              </p>
+              <p>
+                Продолжая традиции и внедряя инновации, «Семко» не только сохраняет лидерские позиции, но и активно развивает новые направления, открывая новые горизонты для агротехнологий будущего.
+              </p>
+            </div>
+          </div>
+          <div class="history__image">
+            <img class="history__icon" src="/assets/img/cipollino.png" alt="cipollino">
+          </div>
+        </div>
+        <ul class="history__list list-reset">
+          <div class="row">
+            <li class="history__item first-item">
+              <h3 class="history__year">1991 г.</h3>
+              <p class="title">19 июля 1991 года была основана агрофирма ООО «Семко»</p>
+              <div class="history__descr">
+                <p>
+                  19 июля Юрий Борисович Алексеев основал агрофирму «Семко». С этого момента компания активно занялась селекцией и семеноводством, а также реализацией семян овощных культур. На базе павильона «Семена» на ВДНХ СССР был создан выставочно-торговый комплекс «Семена от Семко».
+                </p>
+              </div>
+            </li>
+            <li class="history__item">
+              <h3 class="history__year">1992 г.</h3>
+              <div class="history__descr">
+                <p>
+                  Открылся первый в мире «Салон семенных мод», где были представлены первые в мире «супермодели» и «топ-модели» сортов и гибридов овощей. На российский рынок вышли овощные семена в красочной упаковке от австрийской фирмы «Flora Print». Российским огородникам стал доступен широкий ассортимент семян овощных и цветочных культур. Начаты селекционно-семеноводческие проекты в сотрудничестве с чешской фирмой «Moravoseed» и российской «Селекционной станцией имени Н.Н. Тимофеева».
+                </p>
+              </div>
+              <div class="history__imgs">
+                <img class="history__img" src="/assets/img/history-icon.png" alt="...">
+                <img class="history__img" src="/assets/img/partners.png" alt="...">
+                <img class="history__img" src="/assets/img/yury.png" alt="...">
+              </div>
+            </li>
+            <li class="history__item">
+              <h3 class="history__year">1993 г.</h3>
+              <div class="history__descr">
+                <p>
+                  Произошли первые поставки лука-севка от нидерландской фирмы «Broer B.V.». Был представлен проект «Волшебная грядка», целью которого был подбор оптимального сортового состава для каждого региона России. Организованы филиалы «Семко» в различных регионах: Петербурге, Саратове и Самаре.
+                </p>
+              </div>
+              <div class="history__imgs">
+                <img class="history__img" src="/assets/img/history-icon.png" alt="...">
+                <img class="history__img" src="/assets/img/partners.png" alt="...">
+                <img class="history__img" src="/assets/img/yury.png" alt="...">
+              </div>
+            </li>
+            <li class="history__item">
+              <h3 class="history__year">1994 г.</h3>
+              <div class="history__descr">
+                <p>
+                  На волне успеха и инноваций агрофирма «Семко» реализовала проект «Розовый бал» в сотрудничестве с сербской компанией «Monteagro». В этом году были осуществлены первые поставки 40 000 саженцев роз. На базе ботанического сада МГУ была организована демонстрационная площадка для контроля за качеством и сортами роз, что позволило продемонстрировать их потенциал покупателям. Проект продолжал расширяться, предлагая все больше сортов и увеличивая объемы продаж.
+                </p>
+                <p>
+                  Тем временем, агрофирма запустила проект «Лидеры волшебного мира семян», который ставил целью выделить лучшие сорта и гибриды каждой группы. В том же году «Семко» достигло новых высот — их семена отправились на орбитальную станцию «Мир», став первыми российскими семенами в космосе. Кроме того, была издана уникальная книга для детей «Волшебная грядка», которая доступным языком рассказывала о мире овощей от А до Я.
+                </p>
+              </div>
+              <div class="history__imgs">
+                <img class="history__img" src="/assets/img/history-icon.png" alt="...">
+                <img class="history__img" src="/assets/img/partners.png" alt="...">
+                <img class="history__img" src="/assets/img/yury.png" alt="...">
+              </div>
+            </li>
+          </div>
+          <div class="row">
+            <li class="history__item">
+              <h3 class="history__year">1995 г.</h3>
+              <div class="history__descr">
+                <p>
+                  В 1995 году «Семко» активно занималась расширением своих образовательных инициатив, запустив газету «Новый Земледелец» и телепередачу «Русский огород». Эти медиа-проекты были нацелены на обучение населения правильной агротехнике и популяризацию ассортимента продукции фирмы. В том же году агрофирма вступила в «Международную федерацию семеноводов (FIS)» в Аргентине, что способствовало расширению международного сотрудничества в области селекции и семеноводства.
+                </p>
+                <p>
+                  В партнерстве с датской компанией DLF Trifolium, «Семко» предложила новую программу «Газонные травы», благодаря которой на российский рынок вышли специализированные газоны для спортивных площадок, теневых и садово-парковых зон. В этот год также были созданы несколько филиалов компании: «Семко-Винница», «Семена от Семко» в Егорьевске, «Семко-Тула», «Семко-НН» в Нижнем Новгороде и «Семко-Чебоксары», которые объединились в мощную агрогруппу «Семко».
+                </p>
+              </div>
+              <div class="history__imgs">
+                <img class="history__img" src="/assets/img/history-icon.png" alt="...">
+                <img class="history__img" src="/assets/img/partners.png" alt="...">
+                <img class="history__img" src="/assets/img/yury.png" alt="...">
+              </div>
+            </li>
+            <li class="history__item">
+              <h3 class="history__year">1996 г.</h3>
+              <div class="history__descr">
+                <p>
+                  Запущено издание тематической газеты «МУХА» (Мои Уроки Христоматийной Агротехники), открыв новую страницу в образовательных инициативах. В том же году был создан первый в Российской Федерации фирменный гибрид перца сладкого F1 Юбилейный Семко, который быстро завоевал признание на рынке. За качественную работу в семеноводстве агрофирма была удостоена диплома «Золотой бизнес». Кроме того, началось сотрудничество с заслуженной артисткой России Натальей Васильевой, что ознаменовалось выпуском компакт-диска «Мы вышли в сад».
+                </p>
+              </div>
+              <div class="history__imgs">
+                <img class="history__img" src="/assets/img/history-icon.png" alt="...">
+                <img class="history__img" src="/assets/img/partners.png" alt="...">
+                <img class="history__img" src="/assets/img/yury.png" alt="...">
+              </div>
+            </li>
+            <li class="history__item">
+              <h3 class="history__year">1997 г.</h3>
+              <div class="history__descr">
+                <p>
+                  Год ознаменовался началом сотрудничества с станцией «Юных натуралистов», где было организовано сортоиспытание фирменного ассортимента на территории всей России. В том же году «Семко» представила программу «Новое лицо российского огорода — взгляд «Семко» в XXI век». Международная презентация программы прошла с большим успехом в Пекине на международной сельскохозяйственной выставке и в Стокгольме на конгрессе FIS. Программа была направлена на полное обновление старого сортового состава новыми, инновационными гибридами овощных культур. В этот год был также создан первый фирменный гибрид капусты белокочанной F1 Семко Юбилейный 217, посвященный 850-летию Москвы. Компания неоднократно получала дипломы «Золотой бизнес России» и была заслуженно названа одной из 1000 лучших фирм страны. Гибриды Семко были удостоены первых золотых медалей на всемирной ярмарке «Российский фермер».
+                </p>
+              </div>
+              <div class="history__imgs">
+                <img class="history__img" src="/assets/img/history-icon.png" alt="...">
+                <img class="history__img" src="/assets/img/partners.png" alt="...">
+                <img class="history__img" src="/assets/img/yury.png" alt="...">
+              </div>
+            </li>
+          </div>
+          <div class="row">
+            <li class="history__item">
+              <h3 class="history__year">1998 г.</h3>
+              <div class="history__descr">
+                <p>
+                  1998 год стал для агрофирмы «Семко» годом новых начинаний в селекционной программе, посвящённой созданию фирменных гибридов томатов и огурцов. В этом году были впервые представлены на российском рынке семян раннеспелые гибриды томата F1 Семко 98 и F1 Семко 100, обладающие устойчивостью к фитофторозу. Проект «Семена для Волшебной детской грядки» позволил детям легко вырастить растения благодаря собственной уникальной упаковке семян. Агрофирма также запустила телепередачу «Новости Волшебного мира семян», освещающую последние новинки ассортимента. В дополнение к этому, вышли первые три полноцветных выпуска газеты «Новый земледелец» и был реализован проект по изданию журнала «Детский сад», посвящённого садоводству для детей.
+                </p>
+              </div>
+              <div class="history__imgs">
+                <img class="history__img" src="/assets/img/history-icon.png" alt="...">
+                <img class="history__img" src="/assets/img/partners.png" alt="...">
+                <img class="history__img" src="/assets/img/yury.png" alt="...">
+              </div>
+            </li>
+            <li class="history__item">
+              <h3 class="history__year">1999 г.</h3>
+              <div class="history__descr">
+                <p>
+                  Началось плодотворное сотрудничество с Крымской опытно-селекционной станцией ВИР и селекционером А.В. Медведевым, что привело к созданию первого фирменного гибрида огурца F1 Семкросс с повышенной устойчивостью к ложной мучнистой росе, включенного в Госреестр в 2000 году. В этом же году начались селекционные работы по увеличению содержания бета-каротина в плодах томатов и перца. Также была создана группа детерминантных гибридов томата для открытого грунта, предназначенных для различных видов переработки: F1 Волжский, F1 Вундеркинд, F1 Уникум, F1 Крепыш, F1 Толстячок, F1 Фэнси, включая F1 Семко 100 с повышенной толерантностью к фитофторозу. Особенным событием стал проект «День рождения рассады», в рамках которого жителям Москвы и Московской области было предложено более 20 000 штук рассады фирменных сортов и гибридов овощных культур.
+                </p>
+              </div>
+              <div class="history__imgs">
+                <img class="history__img" src="/assets/img/history-icon.png" alt="...">
+                <img class="history__img" src="/assets/img/partners.png" alt="...">
+                <img class="history__img" src="/assets/img/yury.png" alt="...">
+              </div>
+            </li>
+            <li class="history__item">
+              <h3 class="history__year">2000 г.</h3>
+              <div class="history__descr">
+                <p>
+                  В 2000 году агрофирма «Семко» достигла нового уровня в контроле качества, создав фирменную лабораторию (регистрационный номер Rocc RUDC 1.6.1.101). Запущена селекционная работа по разработке гибридов сладкого перца с толщиной стенки 8-10 мм и высоким содержанием бета-каротина, обещающая новые стандарты в агропромышленности. В этот же период начато семеноводство и поставки семян первого фирменного гибрида капусты белокочанной F1 Старт и лука репчатого F1 Золотистый Семко. К тому же, более 20 сортов пряно-ароматических культур были включены в Государственный реестр, подчеркивая значительный вклад «Семко» в разнообразие российского агросектора.
+                </p>
+              </div>
+              <div class="history__imgs">
+                <img class="history__img" src="/assets/img/history-icon.png" alt="...">
+                <img class="history__img" src="/assets/img/partners.png" alt="...">
+                <img class="history__img" src="/assets/img/yury.png" alt="...">
+              </div>
+            </li>
+          </div>
+          <div class="row">
+            <li class="history__item">
+              <h3 class="history__year">2001 г.</h3>
+              <div class="history__descr">
+                <p>
+                  Запущен проект по созданию команды полудетерминантных гибридов томата для теплиц, реализованный в партнерстве с нидерландской фирмой «De Ruiter Seeds». Были предложены семена гибридов томатов F1 Целсус, F1 Магнус и F1 Платус, которые установили новые стандарты вкусовых качеств. Также было создано представительство по Северо-Кавказскому региону «Семко Юниор Юг» с демонстрационной площадкой в 1 гектар в Волгодонском районе Ростовской области. В рамках программы «Jazz salad» организовано семеноводство кочанного салата «Тетис», расширен ассортимент до 9 сортов салата и выпущен компакт-диск «Jazz salad», презентация которого состоялась 19 июля 2001 года. К тому же, 18 октября 2001 года в штат был принят Ярослав Юрьевич Алексеев, подчеркивая вектор развития компании как семейного предприятия.
+                </p>
+              </div>
+              <div class="history__imgs">
+                <img class="history__img" src="/assets/img/history-icon.png" alt="...">
+                <img class="history__img" src="/assets/img/partners.png" alt="...">
+                <img class="history__img" src="/assets/img/yury.png" alt="...">
+              </div>
+            </li>
+            <li class="history__item">
+              <h3 class="history__year">2002 г.</h3>
+              <div class="history__descr">
+                <p>
+                  Агрофирма «Семко» взяла курс на интенсивное улучшение своих селекционных программ, стремясь создать новые сорта и гибриды огурцов, томатов, перцев и ароматических культур. Уникальность разработок 2002 года заключалась в акценте на биохимических свойствах и устойчивости к болезням, что делало их идеальными для широкого спектра кулинарных применений: от зелени до засолки и консервации. В том же году компания активно участвовала в проекте «Сканагри» в Каховке, где гибрид белокочанной капусты «F1 Старт» был удостоен золотой медали. Кроме того, «Семко» расширила своё присутствие, открыв представительство в китайском Шоугуане.
+                </p>
+              </div>
+              <div class="history__imgs">
+                <img class="history__img" src="/assets/img/history-icon.png" alt="...">
+                <img class="history__img" src="/assets/img/partners.png" alt="...">
+                <img class="history__img" src="/assets/img/yury.png" alt="...">
+              </div>
+            </li>
+            <li class="history__item">
+              <h3 class="history__year">2003 г.</h3>
+              <div class="history__descr">
+                <p>
+                  Сотрудничество с голландской фирмой «Broer B.V.» в 2003 году привело к запуску проекта «Quality inside», направленного на производство и дистрибуцию лука-севка F1 Золотистый Семко. В этот период в Госреестр были включены новые сорта укропа, а компания начала экспорт своих семян в Японию и Сирию. Значительным шагом стал переезд офиса агрофирмы на новый адрес в Москве, что символизировало новый этап в развитии компании.
+                </p>
+              </div>
+              <div class="history__imgs">
+                <img class="history__img" src="/assets/img/history-icon.png" alt="...">
+                <img class="history__img" src="/assets/img/partners.png" alt="...">
+                <img class="history__img" src="/assets/img/yury.png" alt="...">
+              </div>
+            </li>
+          </div>
+          <div class="row">
+            <li class="history__item">
+              <h3 class="history__year">2004 г.</h3>
+              <div class="history__descr">
+                <p>
+                  Продолжение селекционных работ в 2004 году привело к созданию новаторских гибридов томатов и сортов перца с повышенным содержанием витамина С, подчеркивая тем самым стремление к продвижению здорового питания. Введение в ассортимент укропа "Отличный Семко" положило начало долгосрочному и плодотворному сотрудничеству с многими ведущими агрокомбинатами страны, тем самым подтверждая репутацию компании как лидера инноваций в агросекторе.
+                </p>
+              </div>
+              <div class="history__imgs">
+                <img class="history__img" src="/assets/img/history-icon.png" alt="...">
+                <img class="history__img" src="/assets/img/partners.png" alt="...">
+                <img class="history__img" src="/assets/img/yury.png" alt="...">
+              </div>
+            </li>
+            <li class="history__item">
+              <h3 class="history__year">2005 г.</h3>
+              <div class="history__descr">
+                <p>
+                  В портфель достижений агрофирмы «Семко» добавились новые селекционные успехи: гибрид томата F1 Анюта, отличающийся ранним сроком созревания всего в 75 дней, и гибрид перца сладкого F1 Заря, богатый бета-каротином и витамином С. К этому времени в Государственном реестре зарегистрировано уже сто сортов и гибридов, половина из которых обладает патентной защитой, подтверждая лидерские позиции «Семко» в инновациях и разработке новых сортов.
+                </p>
+              </div>
+              <div class="history__imgs">
+                <img class="history__img" src="/assets/img/history-icon.png" alt="...">
+                <img class="history__img" src="/assets/img/partners.png" alt="...">
+                <img class="history__img" src="/assets/img/yury.png" alt="...">
+              </div>
+            </li>
+            <li class="history__item">
+              <h3 class="history__year">2006 г.</h3>
+              <div class="history__descr">
+                <p>
+                  Этот год принёс расширение ассортимента «Семко» за счёт первых гибридов цветной капусты F1 Метелица и F1 Снежок, включенных в Госреестр. Также компания достигла прогресса в огуречной группе, представив запатентованные семена корнишонных огурцов F1 Темп и F1 Ритм. Партенокарпический гибрид F1 Паратунка занял лидирующие позиции в рейтингах, утвердившись как один из лучших огурцов своего класса. Важной вехой стало появление на российском рынке новой линии гибридов томата LSL-типа — F1 Лонгф, F1 Шелф и F1 Лайф, которые способны сохранять вкусовые и товарные качества на протяжении 40-50 дней. Спектр новинок дополнил гибрид F1 Партнер Семко с укороченными междоузлиями, открывающий новые горизонты в культивировании томатов.
+                </p>
+              </div>
+              <div class="history__imgs">
+                <img class="history__img" src="/assets/img/history-icon.png" alt="...">
+                <img class="history__img" src="/assets/img/partners.png" alt="...">
+                <img class="history__img" src="/assets/img/yury.png" alt="...">
+              </div>
+            </li>
+          </div>
+          <div class="row">
+            <li class="history__item">
+              <h3 class="history__year">2007 г.</h3>
+              <div class="history__descr">
+                <p>
+                  Агрофирма «Семко» обогатила научную сферу сельского хозяйства публикацией книги «Практическое семеноводство овощных культур с основами семеноведения», авторами которой стали Лудилов В.А. и Алексеев Ю.Б. В том же году компания укрепила свои позиции на рынке, включив в Госреестр гибриды огурцов F1 Артек, F1 Орлёнок, F1 Актёр, F1 Дублёр и F1 Каскадёр с повышенной устойчивостью к ложной мучнистой росе. Также представлены новаторские гибриды перца сладкого F1 Витамин и уникальные гибриды цветной капусты с фиолетовой головкой F1 Граффити и оранжево-желтой F1 Ярик. В ассортименте позднеспелых белокочанных капуст выделился гибрид F1 Престиж, замечательный своей лежкостью до 9 месяцев и отличными вкусовыми качествами. Новый раннеспелый гибрид томата F1 Катя занял лидирующие позиции на рынке.
+                </p>
+              </div>
+              <div class="history__imgs">
+                <img class="history__img" src="/assets/img/history-icon.png" alt="...">
+                <img class="history__img" src="/assets/img/partners.png" alt="...">
+                <img class="history__img" src="/assets/img/yury.png" alt="...">
+              </div>
+            </li>
+            <li class="history__item">
+              <h3 class="history__year">2008 г.</h3>
+              <div class="history__descr">
+                <p>
+                  Совместно с израильской фирмой «Nirit seeds» были начаты селекционные работы по созданию новой линии черри-томатов, что привело к представлению на рынке Российской Федерации сортов F1 Черриколло и F1 Ясик с высокими вкусовыми качествами. В приоритете селекционных программ остаются гибриды для открытого грунта, такие как F1 Кубанец, F1 Фифти и F1 Тамань, нацеленные на повышение стандартов вкуса для переработки и консервирования. В этот период появились детерминантные гибриды, устойчивые к вирусу бронзовости (TSWV) и жёлтому скручиванию листьев (TYLCV). Также был включён в Госреестр ультраскороспелый гибрид редиса F1 Молния, демонстрирующий выдающиеся скороспелые свойства.
+                </p>
+              </div>
+              <div class="history__imgs">
+                <img class="history__img" src="/assets/img/history-icon.png" alt="...">
+                <img class="history__img" src="/assets/img/partners.png" alt="...">
+                <img class="history__img" src="/assets/img/yury.png" alt="...">
+              </div>
+            </li>
+            <li class="history__item">
+              <h3 class="history__year">2009 г.</h3>
+              <div class="history__descr">
+                <p>
+                  На полях испытаний завершились работы, и в Госреестр был включен новый гибрид капусты белокочанной F1 Джульетта, выделяющийся своей пластичностью и стрессоустойчивостью. Также зарегистрированы кабачок цуккини F1 Хобби и биф-томат F1 Малика, устойчивый к вирусу бронзовости томата. Не менее важным стало создание нового поколения черри томатов для открытого и защищенного грунта, которые благодаря отобранным и испытанным линейным парам поражают своими вкусовыми и технологическими характеристиками.
+                </p>
+              </div>
+              <div class="history__imgs">
+                <img class="history__img" src="/assets/img/history-icon.png" alt="...">
+                <img class="history__img" src="/assets/img/partners.png" alt="...">
+                <img class="history__img" src="/assets/img/yury.png" alt="...">
+              </div>
+            </li>
+          </div>
+          <div class="row">
+            <li class="history__item">
+              <h3 class="history__year">2010 г.</h3>
+              <div class="history__descr">
+                <p>
+                  Овощеводам представлено новое поколение гибридов томатов, адаптированных для всех типов теплиц: F1 Паленка, F1 Драйв и F1 Гроздевой, а также сорта с укороченными междоузлиями F1 Гилгал. В этом же году завершились исследования, которые позволили включить в Госреестр розовоплодные гибриды F1 Розовый спам, F1 Бокеле, F1 Мамула и начать селекционные работы по увеличению содержания ликопина в плодах томатов. Команда черри томатов пополнилась новыми участниками: F1 Черри Ира, F1 Черри Кира, F1 Черри Роза, F1 Черри Ликопа, F1 Черри Мио и F1 Черри Кира. В общий список достижений в государственном реестре селекционных новинок вошло более 200 сортов и гибридов, из которых 56 получили патенты.
+                </p>
+              </div>
+              <div class="history__imgs">
+                <img class="history__img" src="/assets/img/history-icon.png" alt="...">
+                <img class="history__img" src="/assets/img/partners.png" alt="...">
+                <img class="history__img" src="/assets/img/yury.png" alt="...">
+              </div>
+            </li>
+            <li class="history__item">
+              <h3 class="history__year">2011 г.</h3>
+              <div class="history__descr">
+                <p>
+                  На рынке семян Российской Федерации впервые предложен гибрид моркови столовой F1 Нантик Резистафлай, отличающийся устойчивостью к повреждениям личинками морковной мухи. Также завершились работы над партенокарпическими среднеплодными гибридами огурца для защищённого грунта F1 Твенти и F1 Альянс, обладающими устойчивостью к настоящей и ложной мучнистой росе. В этом году также появились на рынке уникальные сорта щавеля Сангвиник с красными прожилками на листьях и горчица листовая Аригато, расширяя ассортимент и разнообразие предложения.
+                </p>
+              </div>
+              <div class="history__imgs">
+                <img class="history__img" src="/assets/img/history-icon.png" alt="...">
+                <img class="history__img" src="/assets/img/partners.png" alt="...">
+                <img class="history__img" src="/assets/img/yury.png" alt="...">
+              </div>
+            </li>
+            <li class="history__item">
+              <h3 class="history__year">2012 г.</h3>
+              <div class="history__descr">
+                <p>
+                  Овощеводам представлено новое поколение гибридов томатов, адаптированных для всех типов теплиц: F1 Паленка, F1 Драйв и F1 Гроздевой, а также сорта с укороченными междоузлиями F1 Гилгал. В этом же году завершились исследования, которые позволили включить в Госреестр розовоплодные гибриды F1 Розовый спам, F1 Бокеле, F1 Мамула и начать селекционные работы по увеличению содержания ликопина в плодах томатов. Команда черри томатов пополнилась новыми участниками: F1 Черри Ира, F1 Черри Кира, F1 Черри Роза, F1 Черри Ликопа, F1 Черри Мио и F1 Черри Кира. В общий список достижений в государственном реестре селекционных новинок вошло более 200 сортов и гибридов, из которых 56 получили патенты.
+                </p>
+              </div>
+              <div class="history__imgs">
+                <img class="history__img" src="/assets/img/history-icon.png" alt="...">
+                <img class="history__img" src="/assets/img/partners.png" alt="...">
+                <img class="history__img" src="/assets/img/yury.png" alt="...">
+              </div>
+            </li>
+          </div>
+          <div class="row">
+            <li class="history__item">
+              <h3 class="history__year">2013 г.</h3>
+              <div class="history__descr">
+                <p>
+                  В 2013 году был запущен проект «Секреты Японского долголетия», в рамках которого на рынок семян впервые предложены семена хризантемы овощной, скрытницы и листовой репы. Этот шаг сопровождался началом сотрудничества с японской фирмой «Marutane». Также стартовал проект «Это просто бахча», представляющий на российском рынке пять гибридов порционных арбузов, два гибрида порционной тыквы и два гибрида порционной дыни. Дополнительное разнообразие принесло пополнение команды коктейльных томатов гибридами F1 Форте Мальтезе, F1 Черри Рио, для открытого грунта F1 Вериге и F1 Каменари, а также черри баклажан F1 Ненси и перец сладкий F1 Ультафиолет с оригинальной фиолетовой окраской в технической спелости.
+                </p>
+              </div>
+              <div class="history__imgs">
+                <img class="history__img" src="/assets/img/history-icon.png" alt="...">
+                <img class="history__img" src="/assets/img/partners.png" alt="...">
+                <img class="history__img" src="/assets/img/yury.png" alt="...">
+              </div>
+            </li>
+            <li class="history__item">
+              <h3 class="history__year">2014 г.</h3>
+              <div class="history__descr">
+                <p>
+                  На следующий год, в 2014 году, ассортимент крупноплодных томатов для открытого грунта обогатился гибридами F1 Тверия и F1 Яффа, которые отличаются устойчивостью к вирусам бронзовости и желтого скручивания листьев. Завершились работы и испытания, результатом которых стало патентование и включение в Госреестр гибрида лука репчатого F1 Ред Семко. В этом же году был открыт официальный интернет-магазин на базе сайта Semco.ru, а также проведен первый международный аграрный семинар в Черногории, подчеркивающий международное признание и расширение границ деятельности.
+                </p>
+              </div>
+              <div class="history__imgs">
+                <img class="history__img" src="/assets/img/history-icon.png" alt="...">
+                <img class="history__img" src="/assets/img/partners.png" alt="...">
+                <img class="history__img" src="/assets/img/yury.png" alt="...">
+              </div>
+            </li>
+            <li class="history__item">
+              <h3 class="history__year">2015 г.</h3>
+              <div class="history__descr">
+                <p>
+                  В 2015 году были представлены новые гибриды томатов с уникальной коричневой окраской плодов, включая F1 Ашдод, F1 Форте Акко и F1 Черри Негро, выделяющиеся повышенным содержанием ликопина. Одновременно, линейка томатов с оранжевыми плодами была расширена за счёт F1 Бигоранж и F1 Оранжевый спам, которые также отмечаются высоким содержанием бета-каротина и витамина С. В этом году были подготовлены первые авторские пакеты для серии семян «В бой идут одни старики» и «Классика всегда в цене», ставшие новинкой на Российском рынке. Коллекция «Черногорская серия Семко» расширена до 70 наименований. Также была подготовлена к изданию книга «Пряно-ароматические грядки Волшебного мира семян — Травник Семко», и проведён первый международный «День поля» в Израиле.
+                </p>
+              </div>
+              <div class="history__imgs">
+                <img class="history__img" src="/assets/img/history-icon.png" alt="...">
+                <img class="history__img" src="/assets/img/partners.png" alt="...">
+                <img class="history__img" src="/assets/img/yury.png" alt="...">
+              </div>
+            </li>
+          </div>
+          <div class="row">
+            <li class="history__item">
+              <h3 class="history__year">2016 г.</h3>
+              <div class="history__descr">
+                <p>
+                  В следующем, 2016 году, на рынке появились семена томатов с уникальными вкусовыми качествами, включая F1 Ашкелон, F1 Ашраф и F1 Черри Тайгер, также отличающиеся повышенным содержанием ликопина. Был подготовлен к запуску амбициозный проект «Микрозелень в массы», предлагающий семена более 20 овощных культур для выращивания микрозелени, и проект «Smart» для сети фермерства, в рамках которого создан первый в России гибрид мини-томата F1 Маленькая Звезда — новаторский шаг в агротехнологиях. В это время также активно велась селекционная работа над созданием гибрида перца сладкого F1 Компакт 108 и кабачка цуккини F1 Смарт.
+                </p>
+              </div>
+              <div class="history__imgs">
+                <img class="history__img" src="/assets/img/history-icon.png" alt="...">
+                <img class="history__img" src="/assets/img/partners.png" alt="...">
+                <img class="history__img" src="/assets/img/yury.png" alt="...">
+              </div>
+            </li>
+            <li class="history__item">
+              <h3 class="history__year">2017 г.</h3>
+              <div class="history__descr">
+                <p>
+                  В 2017 году было заложено начало амбициозной программы «Семь проектов от Юрия», рассчитанной на реализацию в течение следующих десяти лет. В этом же году ассортимент томатов для теплиц пополнился новыми гибридами: LSL-типа F1 Хиландар и биф-томат F1 Эсфигмен, оба устойчивы к вирусам бронзовости и желтого скручивания листьев. Также было открыто официальное представительство во Вьетнаме, расширяя доступность продукции в основных городах страны. Семья Алексеевых пополнилась новым членом — Алексеевым Саввой Ярославовичем, продолжая традиции поколений.
+                </p>
+              </div>
+              <div class="history__imgs">
+                <img class="history__img" src="/assets/img/history-icon.png" alt="...">
+                <img class="history__img" src="/assets/img/partners.png" alt="...">
+                <img class="history__img" src="/assets/img/yury.png" alt="...">
+              </div>
+            </li>
+            <li class="history__item">
+              <h3 class="history__year">2018 г.</h3>
+              <div class="history__descr">
+                <p>
+                  На следующий год, в 2018, стартовал первый в мире уникальный проект для сети-фермерства «Фитопирамида», а из ассортимента были подобраны культуры: томат F1 Маленькая Звезда, огурец F1 Темп и перец Добрыня Никитич. Госреестр пополнился семенами черри томата с выдающимися вкусовыми качествами — F1 Черри от Юрия и гибрид F1 Черри Савва. Также был создан первый фирменный порционный арбуз с высоким содержанием сахаров F1 Саввин Вкус.
+                </p>
+              </div>
+              <div class="history__imgs">
+                <img class="history__img" src="/assets/img/history-icon.png" alt="...">
+                <img class="history__img" src="/assets/img/partners.png" alt="...">
+                <img class="history__img" src="/assets/img/yury.png" alt="...">
+              </div>
+            </li>
+          </div>
+          <div class="row">
+            <li class="history__item">
+              <h3 class="history__year">2019 г.</h3>
+              <div class="history__descr">
+                <p>
+                  В 2019 году на свет появились первые российские опушенные гибриды томата для открытого грунта F1 Далат и F1 Пинк Флаф, обладающие повышенной устойчивостью к погодным стрессам и вредителям. Были созданы гибриды перца сладкого для круглогодичного выращивания в горшечной культуре с небольшими плодами трех разных цветов F1 Трио. Производство семян томата и перца было организовано в Индии, что сопровождалось созданием семеноводческой базы в городе Давенгере, маркируя глобальное расширение и инновационный подход в селекции.
+                </p>
+              </div>
+              <div class="history__imgs">
+                <img class="history__img" src="/assets/img/history-icon.png" alt="...">
+                <img class="history__img" src="/assets/img/partners.png" alt="...">
+                <img class="history__img" src="/assets/img/yury.png" alt="...">
+              </div>
+            </li>
+            <li class="history__item">
+              <h3 class="history__year">2020 г.</h3>
+              <div class="history__descr">
+                <p>
+                  В 2020 году были представлены семена гибридов томата: F1 Розовый Марманде, принадлежащий к сортотипу Marmande, и F1 Грин Биф, а также черри-томат LSL-типа F1 Татьянин. В преддверии 30-летия компании подведены впечатляющие итоги: 34 патента, 259 селекционных достижений в Госреестре и 60 авторских свидетельств. В ассортимент был включён гибрид кабачка для сити-ферм F1 Смарт. Расширение на рынке Ближнего Востока было усилено за счет сотрудничества с компаниями, такими как Golden Seeds в Кувейте и Cosa Garden в ОАЭ, которые взяли на себя продвижение продукции на этих территориях.
+                </p>
+              </div>
+              <div class="history__imgs">
+                <img class="history__img" src="/assets/img/history-icon.png" alt="...">
+                <img class="history__img" src="/assets/img/partners.png" alt="...">
+                <img class="history__img" src="/assets/img/yury.png" alt="...">
+              </div>
+            </li>
+            <li class="history__item">
+              <h3 class="history__year">2021 г.</h3>
+              <div class="history__descr">
+                <p>
+                  В 2021 году агрофирма отметила свое 30-летие, к чему была подготовлена специальная серия пакетов. В этом году также вышел юбилейный, завершающий номер газеты «Новый Земледелец» после 25 лет её публикаций. В ассортимент вошли гибриды перца сладкого с уникальной окраской плодов: F1 Оранжевый Ламуйо от Юрия и F1 Данэлия, не имеющие аналогов как в России, так и за ее пределами.
+                </p>
+              </div>
+              <div class="history__imgs">
+                <img class="history__img" src="/assets/img/history-icon.png" alt="...">
+                <img class="history__img" src="/assets/img/partners.png" alt="...">
+                <img class="history__img" src="/assets/img/yury.png" alt="...">
+              </div>
+            </li>
+          </div>
+          <div class="row">
+            <li class="history__item">
+              <h3 class="history__year">2022 г.</h3>
+              <div class="history__descr">
+                <p>
+                  В 2022 году прошла проверка результатов программы «Семь проектов от Юрия» за первые пять лет ее реализации. Произошла смена руководства: генеральным директором стал Ярослав Юрьевич Алексеев, старший сын Юрия Борисовича. Вновь возобновлено издание газеты «МУХА» (Мои Уроки Христоматийной Агротехники), и в Госреестр селекционных достижений включён уникальный гибрид перца сладкого F1 Оранжевый Ламуйо от Юрия.
+                </p>
+              </div>
+              <div class="history__imgs">
+                <img class="history__img" src="/assets/img/history-icon.png" alt="...">
+                <img class="history__img" src="/assets/img/partners.png" alt="...">
+                <img class="history__img" src="/assets/img/yury.png" alt="...">
+              </div>
+            </li>
+            <li class="history__item">
+              <h3 class="history__year">2023 г.</h3>
+              <div class="history__descr">
+                <p>
+                  Начался новый этап в развитии упаковки для пакетированных семян с внедрением нового дизайна фирменной упаковки. В ассортимент был добавлен уникальный гибрид томата F1 Хинкали, а в июле представлен его разновидность — F1 Хинкали Коричневый. Запущен проект «Хиты и Новинки от Семко днем и ночью», который выделяет лучшие гибриды. Команда партенокарпических огурцов обогатилась новым гибридом F1 Премьер с пучковым плодоношением и комплексной устойчивостью к болезням, а также двумя новыми гибридами с выдающимися качествами для засолки: F1 Поп Стар и F1 Рок Стар.
+                </p>
+              </div>
+              <div class="history__imgs">
+                <img class="history__img" src="/assets/img/history-icon.png" alt="...">
+                <img class="history__img" src="/assets/img/partners.png" alt="...">
+                <img class="history__img" src="/assets/img/yury.png" alt="...">
+              </div>
+            </li>
+            <li class="history__item">
+              <h3 class="history__year">2024 г.</h3>
+              <div class="history__descr">
+                <p>
+                  С современной теплицей для селекционной и семеноводческой работы, введенной в эксплуатацию в Московской области, началась новая глава в истории развития компании. Запущен масштабный медиапроект «Проведи лето с Семко», собравший 300 участников. Ассортимент обогатился новым гибридом огурца для домашнего выращивания F1 Домашний Удалец и новым гибридом томата F1 Мисс Френи, отмеченным отличными вкусовыми качествами. Также был запущен обновленный сайт компании, что сделало доступ к продукции еще удобнее.
+                </p>
+              </div>
+              <div class="history__imgs">
+                <img class="history__img" src="/assets/img/history-icon.png" alt="...">
+                <img class="history__img" src="/assets/img/partners.png" alt="...">
+                <img class="history__img" src="/assets/img/yury.png" alt="...">
+              </div>
+            </li>
+          </div>
+          <div class="row">
+            <li class="history__item">
+              <h3 class="history__year">2025 г.</h3>
+              <div class="history__descr">
+                <p>
+                  Каждая страница нашей истории –лишь начало следующей главы
+                </p>
+              </div>
+            </li>
+            <li class="history__item">
+              <h3 class="history__year">2026 г.</h3>
+              <div class="history__descr">
+                <p>
+                  Агрофирма Семко – отмечает юбилей 35 лет.
+                </p>
+              </div>
+            </li>
+            <li class="history__item">
+              <h3 class="history__year">2027 г.</h3>
+              <div class="history__descr">
+                <p>
+                  История продолжается, уже скоро новые открытия.
+                </p>
+              </div>
+            </li>
+            <li class="history__item">
+              <h3 class="history__year">2028 г.</h3>
+              <div class="history__descr">
+                <p>
+                  История агрофирмы «Семко» ещё очень далека от завершения – продолжение следует
+                </p>
+              </div>
+            </li>
+          </div>
+
+          <svg class="history__line">
+            <use xlink:href="#line"></use>
+          </svg>
+        </ul>
+      </div>
+    </section>
+
+    <section class="proposition">
+      <div class="wrapper">
+        <div class="proposition__content">
+          <div class="proposition__info">
+            <h2 class="proposition__title">Получайте выгодные предложения</h2>
+            <p class="proposition__descr">Подпишитесь и получайте промокоды, акции и подборки товаров на свою почту</p>
+          </div>
+          <form class="proposition__form" action="#" method="post">
+            <input class="form-input" type="email" name="email" placeholder="Ваш e-mail" required>
+            <button class="form-btn btn-dark btn-reset" type="submit">подписаться</button>
+            <p class="form-text">
+              Нажимая Подписаться вы соглашаетесь с <a href="#" target="_blank" rel="noopener noreferrer">Политикой обработки персональных данных</a>
+            </p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrapper">
+      <div class="footer__content">
+        <div class="footr__info">
+          <div class="logo">
+            <a href="/" class="logo__link">
+              <img class="logo__img" src="/assets/img/svg/logo.svg" alt="logo">
+            </a>
+            <p class="logo__text">Ваш проводник в волшебный мир семян</p>
+          </div>
+          <div class="menu-social">
+            <ul class="social__list list-reset">
+              <li class="social__item"><a href="#" class="social__link social__link_yt"></a></li>
+              <li class="social__item"><a href="#" class="social__link social__link_vk"></a></li>
+              <li class="social__item"><a href="#" class="social__link social__link_tg"></a></li>
+              <li class="social__item"><a href="#" class="social__link social__link_wa"></a></li>
+            </ul>
+            <a href="#"><img src="/assets/img/svg/social/yandex-rating.svg" alt="yandex"></a>
+            <a href="#"><img src="/assets/img/svg/social/google-rating.svg" alt="google"></a>
+          </div>
+          <ul class="contacts__list list-reset">
+            <li class="contacts__item">
+              <a href="tel:+74956860475" class="contact__link" target="_blank">
+                <svg class="contact__icon">
+                  <use xlink:href="/assets/img/svg/phone.svg#phone"></use>
+                </svg>
+                <span>+7 (495) 686-04-75</span>
+              </a>
+            </li>
+            <li class="contacts__item">
+              <a href="https://maps.app.goo.gl/LGwbhbKouWsF7Uny7" class="contact__link" target="_blank">
+                <svg class="contact__icon">
+                  <use xlink:href="/assets/img/svg/map.svg#map"></use>
+                </svg>
+                <span>г. Москва, Рижский проезд, 3</span>
+              </a>
+            </li>
+            <li class="contacts__item">
+              <a href="mailto:semcojunior@mail.ru" class="contact__link" target="_blank">
+                <svg class="contact__icon">
+                  <use xlink:href="/assets/img/svg/mail.svg#mail"></use>
+                </svg>
+                <span>semcojunior@mail.ru</span>
+              </a>
+            </li>
+          </ul>
+          <p class="copyright">©️ 1991-2024, ООО СЕМКО</p>
+        </div>
+        <div>
+          <div class="footer-links">
+            <div class="col">
+              <h3 class="footer-links__label">Важная информация</h3>
+              <ul class="footer-links__list list-reset">
+                <li class="footer-links__item"><a href="/pay">Оплата</a></li>
+                <li class="footer-links__item"><a href="/delivery">Доставка</a></li>
+                <li class="footer-links__item"><a href="#">Возврат</a></li>
+                <li class="footer-links__item"><a href="#">Договор оферты</a></li>
+                <li class="footer-links__item"><a href="#">Оптовые закупки</a></li>
+                <li class="footer-links__item"><a href="/promotions">Акции и скидки</a></li>
+                <li class="footer-links__item"><a href="/contacts">Контакты</a></li>
+                <li class="footer-links__item"><a href="/documents">Документация</a></li>
+              </ul>
+            </div>
+            <div class="col">
+              <h3 class="footer-links__label">О компании</h3>
+              <ul class="footer-links__list list-reset">
+                <li class="footer-links__item"><a href="#">О нас</a></li>
+                <li class="footer-links__item"><a href="#">Проекты</a></li>
+                <li class="footer-links__item"><a href="#">Выставки</a></li>
+                <li class="footer-links__item"><a href="#">Видеоматериалы</a></li>
+                <li class="footer-links__item"><a href="#">Агротехника</a></li>
+                <li class="footer-links__item"><a href="#">Газета</a></li>
+              </ul>
+            </div>
+          </div>
+          <form class="form" action="#" method="post">
+            <input class="form__input" type="email" name="email" placeholder="Ваш e-mail">
+            <button class="form-btn btn-fill btn-reset" type="submit">подписаться на рассылку</button>
+          </form>
+          <a class="politics-link" href="#">Политика конфиденциальности</a>
+        </div>
+      </div>
+      <div class="footer__text">
+        <p>
+          Каждый из нас понимает очевидную вещь: повышение уровня гражданского сознания предоставляет широкие возможности для переосмысления внешнеэкономических политик. В своём стремлении повысить качество жизни, они забывают, что высокотехнологичная концепция общественного уклада обеспечивает широкому кругу (специалистов) участие в формировании как самодостаточных, так и внешне зависимых концептуальных решений.
+        </p>
+        <p>
+          Лишь базовые сценарии поведения пользователей представляют собой не что иное, как квинтэссенцию победы маркетинга над разумом и должны быть подвергнуты целой серии независимых исследований. Следует отметить, что граница обучения кадров прекрасно подходит для реализации как самодостаточных, так и внешне зависимых концептуальных решений. Наше дело не так однозначно, как может показаться: перспективное планирование однозначно фиксирует необходимость дальнейших направлений развития. Современные технологии достигли такого уровня, что перспективное планирование выявляет срочную потребность инновационных методов управления процессами!
+        </p>
+        <p>
+          Как уже неоднократно упомянуто, интерактивные прототипы неоднозначны и будут объективно рассмотрены соответствующими инстанциями. Не следует, однако, забывать, что постоянное информационно-пропагандистское обеспечение нашей деятельности выявляет срочную потребность распределения внутренних резервов и ресурсов. Как уже неоднократно упомянуто, действия представителей оппозиции, которые представляют собой яркий пример континентально-европейского типа политической культуры, будут заблокированы в рамках своих собственных рациональных ограничений. Являясь всего лишь частью общей картины, представители современных социальных резервов и по сей день остаются уделом либералов, которые жаждут быть объективно рассмотрены соответствующими инстанциями. Каждый из нас понимает очевидную вещь: реализация намеченных плановых заданий, в своём классическом представлении, допускает внедрение поэтапного и последовательного развития общества. И нет сомнений, что ключевые особенности структуры проекта и по сей день остаются уделом либералов, которые жаждут быть призваны к ответу.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <div class="top-control"></div>
+
+  <script src="/assets/js/scrollTop.js"></script>
+  <script>
+    window.onload = function() {
+      const BORDER_RADIUS_SVG = 20;
+      const wrapper = document.querySelector('.wrapper');
+      const width = wrapper.offsetWidth - (parseInt(window.getComputedStyle(wrapper).paddingLeft) + parseInt(window.getComputedStyle(wrapper).paddingRight));
+      const historyList = document.querySelector('.history__list');
+      const lineSvg = document.querySelector('#line')
+      const dots = [...historyList.querySelectorAll('.history__item')];
+      const {top: y0} = dots[0].getBoundingClientRect();
+      const currentYear = new Date().getFullYear();
+      const {left: leftLayout} = historyList.getBoundingClientRect();
+      let isDrawLine = true;
+      let yi = y0;
+
+      let line = `<path d="M0,0 H${width - BORDER_RADIUS_SVG} `;
+      dots.forEach((el) => {
+        const {left: leftItem, top: y, right} = el.getBoundingClientRect();
+        const x = leftItem - leftLayout;
+        let year = parseInt(el.querySelector('.history__year').innerText);
+        if (year > currentYear) {
+          isDrawLine = false;
+          el.classList.add('history__item_disabled');
+        }
+
+        if (y !== yi) {
+          let xi = x < width / 2 ? BORDER_RADIUS_SVG : width - BORDER_RADIUS_SVG;
+          let x0 = x < width / 2 ? 0 : width;
+          let xEnd = x < width / 2 ? width - BORDER_RADIUS_SVG : BORDER_RADIUS_SVG;
+
+          line += `Q${x0},${yi - y0} ${x0},${yi - y0 + BORDER_RADIUS_SVG} V${y - y0 - BORDER_RADIUS_SVG} Q${x0},${y - y0} ${xi},${y - y0} `; // вертикальния линия
+          line += `H${xEnd} `; // горизонтальная линия 
+          yi = y;
+        }
+      })
+
+      line += '" stroke-width="2" />'
+      lineSvg.innerHTML = line;
+
+      const disableDots = dots.filter((el) => parseInt(el.querySelector('.history__year').innerText) > currentYear);
+      const {x: x2} = disableDots[disableDots.length - 1].getBoundingClientRect();
+      lineSvg.innerHTML += `<path d="M${width - BORDER_RADIUS_SVG},${yi - y0} H${x2 - leftLayout}" stroke="#cdcdcd" stroke-width="2" />`;
+      lineSvg.innerHTML += `<path d="M${x2 - leftLayout},${yi - y0} H0" stroke="white" stroke-width="2" />`;
+    }
+  </script>
+</body>
+</html>

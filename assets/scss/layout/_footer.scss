@@ -89,14 +89,12 @@
       font-size: 14px;
       color: #000;
       border: none;
-      border-radius: $br-xxl;
+      border-radius: $br-btn;
     }
 
     &-btn {
       max-width: 330px;
       padding: 14px 30px;
-      color: $color-light;
-      background-color: $color-main;
     }
   }
 

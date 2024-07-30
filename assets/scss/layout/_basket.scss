@@ -28,6 +28,7 @@
     .square {
       width: 17px;
       height: 17px;
+      background-color: #fff;
       border: 1px solid $color-main;
       border-radius: 2px;
     }
@@ -165,7 +166,7 @@
       font-size: 10px;
       color: #fff;
       text-transform: uppercase;
-      border-radius: $br-xxl;
+      border-radius: $br-btn;
 
       &_active {
         background: $color-main;

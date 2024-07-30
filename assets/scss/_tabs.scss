@@ -57,6 +57,10 @@
       margin-top: 30px;
     }
 
+    .author {
+      margin-top: 25px;
+    }
+
     &__text {
       max-width: 875px;
       font-size: 14px;
@@ -70,6 +74,10 @@
     color: #707070;
     text-decoration: underline;
     text-transform: uppercase;
+
+    &:hover {
+      text-decoration: none;
+    }
   }
 
   .videos {

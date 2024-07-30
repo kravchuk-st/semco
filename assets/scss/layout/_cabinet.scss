@@ -71,7 +71,7 @@
     align-items: center;
     column-gap: 10px;
     border: 1px solid #8b8b8b;
-    border-radius: $br-xxl;
+    border-radius: $br-btn;
 
     &--icon {
       width: 17px;
@@ -117,7 +117,7 @@
       color: #fff;
       text-transform: uppercase;
       background: $color-main;
-      border-radius: $br-xxl;
+      border-radius: $br-btn;
 
       &_active {
         background: #ec9c00;
@@ -320,7 +320,7 @@
         font-weight: 500;
         font-size: 8px;
         letter-spacing: .05em;
-        border-radius: $br-xxl;
+        border-radius: $br-btn;
       }
 
       .btn-change {

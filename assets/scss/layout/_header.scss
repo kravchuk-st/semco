@@ -95,13 +95,14 @@
 
 .doll {
   margin-left: 15px;
+  width: 62px;
+  height: 68px;
+  object-fit: contain;
 }
 
 .katalog-link {
   margin-left: 20px;
   padding: 13px 12px 13px 42px;
-  color: $color-light;
-  background-color: $color-main;
   background-image: url("/assets/img/svg/book.svg");
   background-repeat: no-repeat;
   background-position: 12px center;

@@ -98,7 +98,7 @@
       padding: 12px 24px;
       color: $color-text;
       background-color: $color-light;
-      border-radius: $br-xxl;
+      border-radius: $br-btn;
     }
 
     .splide__pagination {
@@ -139,7 +139,7 @@
       font-size: 11px;
       text-transform: uppercase;
       background-color: $color-secondary;
-      border-radius: $br-xxl;
+      border-radius: $br-btn;
 
       &_plus {
         width: 46px;
@@ -147,7 +147,7 @@
         color: #fff;
         background-color: $color-main;
         border: none;
-        border-radius: $br-xxl;
+        border-radius: $br-btn;
       }
     }
 
@@ -262,8 +262,6 @@
   .all-pages {
     padding: 4px 18px;
     border: none;
-    color: #fff;
-    background-color: $color-main;
     text-transform: uppercase;
   }
 }

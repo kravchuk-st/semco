@@ -1,5 +1,5 @@
 .delivery {
-  background: transparent right 25% top 30px / 945px auto no-repeat url("/assets/img/delivery-bg.png");
+  background: transparent right calc((100vw - 1160px) / 2 - 35px) top 30px / 945px auto no-repeat url("/assets/img/delivery-bg.png");
 
   &__descr {
     margin-top: 10px;
@@ -66,7 +66,7 @@
   }
 
   &__item {
-    max-width: 570px;
+    flex: 1 1 570px;
     padding: 35px 25px 30px 35px;
     border-radius: 15px;
     background: $color-secondary;

@@ -25,7 +25,7 @@
           <img src="/assets/img/svg/logo.svg" alt="logo" class="logo__icon">
         </a>
         <img class="doll" src="/assets/img/svg/figure.svg" alt="doll">
-        <a href="/catalog" class="katalog-link btn-reset">КАТАЛОГ</a>
+        <a href="/catalog" class="katalog-link btn-fill btn-reset">КАТАЛОГ</a>
         <form class="search" action="#" method="post">
           <input class="search__input" type="text" placeholder="Поиск...">
           <button class="search__btn btn-reset" type="submit"></button>
@@ -415,6 +415,7 @@
                   </div>
                   <p class="rating__grade">5.0</p>
                   <img class="rating__source" src="/assets/img/svg/social/yandex.svg" alt="source">
+                  <span class="btn comment__popularity">самый популярный отзыв</span>
                 </div>
                 <div class="author">
                   <img src="/assets/img/svg/user-icon.svg" alt="author" class="author__img">
@@ -480,6 +481,39 @@
               </div>
             </div>
           </div>
+        </div>
+        <div class="comment comment-best">
+          <div class="rating">
+            <div class="rating__progress">
+              <svg class="rating__icon active">
+                <use xlink:href="#star"></use>
+              </svg>
+              <svg class="rating__icon active">
+                <use xlink:href="#star"></use>
+              </svg>
+              <svg class="rating__icon active">
+                <use xlink:href="#star"></use>
+              </svg>
+              <svg class="rating__icon active">
+                <use xlink:href="#star"></use>
+              </svg>
+              <svg class="rating__icon active">
+                <use xlink:href="#star"></use>
+              </svg>
+            </div>
+            <p class="rating__grade">5.0</p>
+            <img class="rating__source" src="/assets/img/svg/social/yandex.svg" alt="source">
+            <span class="btn comment__popularity">самый популярный отзыв</span>
+            <button class="btn btn-fill btn-reset all-reviews">все отзывы</button>
+          </div>
+          <div class="author">
+            <img src="/assets/img/svg/user-icon.svg" alt="author" class="author__img">
+            <p class="author__name">Евгений</p>
+          </div>
+          <p class="comment__text">
+            В рамках спецификации современных стандартов, предприниматели в сети интернет, которые представляют собой яркий пример континентально-европейского типа политической культуры, будут заблокированы в рамках своих собственных рациональных ограничений. Лишь независимые государства и по сей день остаются уделом либералов.
+          </p>
+          <button class="btn-more btn-reset">читать полностью</button>
         </div>
       </div>
     </section>
@@ -741,7 +775,7 @@
           </div>
           <form class="proposition__form" action="#" method="post">
             <input class="form-input" type="email" name="email" placeholder="Ваш e-mail" required>
-            <button class="form-btn btn-reset" type="submit">подписаться</button>
+            <button class="form-btn btn-dark btn-reset" type="submit">подписаться</button>
             <p class="form-text">
               Нажимая Подписаться вы соглашаетесь с <a href="#" target="_blank" rel="noopener noreferrer">Политикой обработки персональных данных</a>
             </p>
@@ -828,7 +862,7 @@
           </div>
           <form class="form" action="#" method="post">
             <input class="form__input" type="email" name="email" placeholder="Ваш e-mail">
-            <button class="form-btn btn-reset" type="submit">подписаться на рассылку</button>
+            <button class="form-btn btn-fill btn-reset" type="submit">подписаться на рассылку</button>
           </form>
           <a class="politics-link" href="#">Политика конфиденциальности</a>
         </div>
@@ -865,6 +899,27 @@
       const newClassName = `video_${i}`;
       el.classList.add(newClassName)
       new Player(`.${newClassName}`);
+    });
+
+    const bestComment = document.querySelector('.comment-best');
+    const bestCommentBtn = bestComment.querySelector('.all-reviews');
+    const tabsNavBtns = [...document.querySelectorAll('.tabs__nav-btn')];
+    const tabBtnComment = tabsNavBtns.find((el) => el.textContent.toLowerCase().includes('отзывы'));
+
+    bestCommentBtn.addEventListener('click', () => {
+      bestComment.style.display = 'none';
+      tabs.switchTabs(tabBtnComment);
+    });
+
+    tabsNavBtns.forEach((el) => {
+      el.addEventListener('click', (e) => {
+        const textBtn = e.currentTarget.textContent.toLowerCase();
+        if (textBtn.includes('отзывы')) {
+          bestComment.style.display = 'none';
+        } else {
+          bestComment.style.display = 'block';
+        }
+      });
     });
   </script>
 </body>
