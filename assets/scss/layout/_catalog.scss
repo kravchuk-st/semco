@@ -148,6 +148,10 @@
         background-color: $color-main;
         border: none;
         border-radius: $br-btn;
+
+        &:hover {
+          background-color: $color-btn-hover;
+        }
       }
     }
 

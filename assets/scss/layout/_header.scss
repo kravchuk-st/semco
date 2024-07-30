@@ -44,6 +44,10 @@
     letter-spacing: 0.1em;
     color: $color-main;
     text-decoration: underline;
+
+    &:hover {
+      text-decoration: none;
+    }
   }
 
   .select {

@@ -156,6 +156,10 @@ button[disabled] {
   font-weight: 400;
   font-size: 14px;
 }
+.sidebar-btn:hover {
+  color: #fff;
+  background-color: #03a753;
+}
 
 .show-more {
   width: 100%;
@@ -186,6 +190,9 @@ button[disabled] {
   color: #03a753;
   background: transparent;
   text-decoration: underline;
+}
+.btn-navy:hover {
+  text-decoration: none;
 }
 
 .catalog-btn {
@@ -1175,6 +1182,9 @@ h2 {
   letter-spacing: 0.1em;
   color: #03a753;
   text-decoration: underline;
+}
+.header .call-back__btn:hover {
+  text-decoration: none;
 }
 .header .select {
   max-width: 140px;
@@ -2425,6 +2435,9 @@ h2 {
   border: none;
   border-radius: 72px;
 }
+.catalog-selection__btn_plus:hover {
+  background-color: #07c664;
+}
 .catalog-selection__qantity {
   font-weight: 400;
 }
@@ -2782,6 +2795,11 @@ input[type=range]::-moz-range-thumb {
   padding: 5px 15px;
   font-size: 10px;
   color: #03a753;
+  transition: 0.3s linear;
+}
+.content-payment__btn:hover {
+  color: #fff;
+  background-color: #03a753;
 }
 .content-payment__descr {
   font-size: 14px;
@@ -3140,6 +3158,11 @@ input[type=range]::-moz-range-thumb {
   border-color: #1f2029;
   background-position: left 20px center;
   background-repeat: no-repeat;
+}
+.product__actions .btn:hover {
+  color: #fff;
+  border-color: #03a753;
+  background-color: #07c664;
 }
 .product .btn-buy {
   width: 100%;
@@ -4079,6 +4102,15 @@ input[type=range]::-moz-range-thumb {
 .cabinet .logout-btn--icon {
   width: 17px;
   height: 17px;
+  transition: 0.3s linear;
+}
+.cabinet .logout-btn:hover {
+  color: #fff;
+  border-color: #03a753;
+  background-color: #03a753;
+}
+.cabinet .logout-btn:hover .logout-btn--icon {
+  fill: #fff;
 }
 .cabinet .orders {
   margin-top: 20px;
@@ -4577,6 +4609,10 @@ input[type=range]::-moz-range-thumb {
   background-size: 11px 9px;
   background-repeat: no-repeat;
 }
+.basket .btn-select-all:hover {
+  color: #fff;
+  border-color: #03a753;
+}
 .basket .btn-remove-all {
   color: #8b8b8b;
   border-color: #8b8b8b;
@@ -4585,6 +4621,14 @@ input[type=range]::-moz-range-thumb {
   width: 15px;
   height: 18px;
   fill: #8b8b8b;
+  transition: 0.3s linear;
+}
+.basket .btn-remove-all:hover {
+  color: #fff;
+  border-color: #03a753;
+}
+.basket .btn-remove-all:hover .basket__icon {
+  fill: #fff;
 }
 .basket__layout {
   margin-top: 30px;
@@ -4880,6 +4924,10 @@ input[type=range]::-moz-range-thumb {
 .basket .checkout-total__form .btn {
   color: #24383b;
   border-color: #24383b;
+}
+.basket .checkout-total__form .btn:hover {
+  color: #fff;
+  border-color: #03a753;
 }
 .basket .checkout-total__subtext {
   margin-top: 10px;

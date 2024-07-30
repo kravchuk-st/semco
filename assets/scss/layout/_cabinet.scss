@@ -76,6 +76,17 @@
     &--icon {
       width: 17px;
       height: 17px;
+      transition: .3s linear;
+    }
+
+    &:hover {
+      color: #fff;
+      border-color: $color-main;
+      background-color: $color-main;
+
+      .logout-btn--icon {
+        fill: #fff;
+      }
     }
   }
 

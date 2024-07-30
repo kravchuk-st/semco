@@ -126,6 +126,11 @@ button[disabled]{
   padding: 18px 40px;
   font-weight: 400;
   font-size: 14px;
+
+  &:hover {
+    color: #fff;
+    background-color: $color-main;
+  }
 }
 
 .show-more {
@@ -157,6 +162,10 @@ button[disabled]{
   color: $color-main;
   background: transparent;
   text-decoration: underline;
+
+  &:hover {
+    text-decoration: none;
+  }
 }
 
 .catalog-btn {

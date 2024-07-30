@@ -39,6 +39,11 @@
       background-size: 11px 9px;
       background-repeat: no-repeat;
     }
+
+    &:hover {
+      color: #fff;
+      border-color: $color-main;
+    }
   }
 
   .btn-remove-all {
@@ -49,6 +54,16 @@
       width: 15px;
       height: 18px;
       fill: #8b8b8b;
+      transition: .3s linear;
+    }
+
+    &:hover {
+      color: #fff;
+      border-color: $color-main;
+
+      .basket__icon {
+        fill: #fff;
+      }
     }
   }
 
@@ -392,6 +407,11 @@
       .btn {
         color: #24383b;
         border-color: #24383b;
+
+        &:hover {
+          color: #fff;
+          border-color: $color-main;
+        }
       }
     }
 
