@@ -40,6 +40,17 @@
     column-gap: 40px;
   }
 
+  &__info {
+    margin-top: 15px;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #000;
+
+    p:not(:first-child) {
+      margin-top: 25px;
+    }
+  }
+
   &__descr {
     font-size: 14px;
     line-height: 1.5;

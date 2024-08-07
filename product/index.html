@@ -202,6 +202,7 @@
                     <p class="info__descr">100 штук</p>
                   </li>
                 </ul>
+                <button class="characteristics-btn btn-reset">Все характеристики</button>
                 <ul class="characteristics-list list-reset">
                   <li class="characteristics__item">
                     <span class="characteristics__icon">
@@ -771,7 +772,7 @@
         <div class="proposition__content">
           <div class="proposition__info">
             <h2 class="proposition__title">Получайте выгодные предложения</h2>
-            <p class="proposition__descr">Подпишитесь и получайте промокоды, акции и подборки товаров на свою почту</p>
+            <p class="proposition__descr">Подпишитесь на рассылку и получайте промокоды, акции и подборки товаров на свою почту</p>
           </div>
           <form class="proposition__form" action="#" method="post">
             <input class="form-input" type="email" name="email" placeholder="Ваш e-mail" required>
@@ -903,12 +904,18 @@
 
     const bestComment = document.querySelector('.comment-best');
     const bestCommentBtn = bestComment.querySelector('.all-reviews');
+    const allCharacteristicsBtn = document.querySelector('.characteristics-btn');
     const tabsNavBtns = [...document.querySelectorAll('.tabs__nav-btn')];
     const tabBtnComment = tabsNavBtns.find((el) => el.textContent.toLowerCase().includes('отзывы'));
+    const tabBtnCharacteristics = tabsNavBtns.find((el) => el.textContent.toLowerCase().includes('характеристики'));
 
     bestCommentBtn.addEventListener('click', () => {
       bestComment.style.display = 'none';
       tabs.switchTabs(tabBtnComment);
+    });
+
+    allCharacteristicsBtn.addEventListener('click', () => {
+      tabs.switchTabs(tabBtnCharacteristics);
     });
 
     tabsNavBtns.forEach((el) => {

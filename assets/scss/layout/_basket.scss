@@ -225,10 +225,11 @@
     }
 
     &__input_counter {
-      width: auto;
-      padding: 3px 10px;
+      width: 35px;
+      padding: 1px;
       font-size: 12px;
       text-align: center;
+      border-radius: 8px;
 
       .text-danger {
         color: #ff4747;

@@ -122,14 +122,17 @@ button[disabled]{
 }
 
 .sidebar-btn {
-  margin-top: 30px;
+  margin-top: 35px;
   padding: 18px 40px;
   font-weight: 400;
   font-size: 14px;
 
-  &:hover {
-    color: #fff;
-    background-color: $color-main;
+  &-filter {
+    width: 100%;
+    margin-top: 12px;
+    font-size: 16px;
+    font-weight: 400;
+    color: $color-text;
   }
 }
 
@@ -183,4 +186,19 @@ button[disabled]{
   background-size: contain;
   background-repeat: no-repeat;
   vertical-align: middle;
+}
+
+.characteristics-btn {
+  width: fit-content;
+  font-size: 16px;
+  line-height: 1.2;
+  text-transform: uppercase;
+  color: $color-main;
+  text-decoration: underline;
+  transition: .3s ease-in-out;
+
+  &:hover {
+    color: $color-btn-hover;
+    text-decoration: none;
+  }
 }

@@ -10,7 +10,7 @@
 
   .sidebar {
     max-width: 260px;
-    padding: 20px 15px;
+    padding: 20px 15px 25px;
     background: $color-secondary;
     border-radius: 15px;
   }
@@ -315,7 +315,11 @@
   }
 
   &-form {
-    margin: 25px 0;
+    margin-top: 25px;
+
+    & ~ .sidebar-block {
+      margin-top: 25px;
+    }
 
 
     &__title {
@@ -343,7 +347,7 @@
       position: absolute;
       z-index: 2;
       top: 50%;
-      left: 12px;
+      left: 10px;
       transform: translateY(-50%);
       font-weight: 400;
       font-size: 14px;
@@ -353,7 +357,7 @@
     &__value {
       width: 100%;
       max-width: 110px;
-      padding: 7px 20px 8px 32px;
+      padding: 7px 20px 8px 35px;
       line-height: 1;
       border: none;
       outline: none;

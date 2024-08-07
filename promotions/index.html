@@ -93,8 +93,11 @@
 
     <section class="banner">
       <div class="wrapper">
-        <h2 class="title">Выгодные предложения</h2>
-        <div class="banner__slider splide">
+        <div class="section-header">
+          <h2 class="title">Выгодные предложения</h2>
+          <a class="btn btn-reset" href="/catalog">вернуться к каталогу</a>
+        </div>
+        <div class="banner__slider banner__slider_promotions splide">
           <div class="splide__track">
             <div class="splide__list">
               <div class="splide__slide" style="background-image: url(/assets/img/slider/banner/0.jpg)">
@@ -128,114 +131,125 @@
       </div>
     </section>
 
-    <section class="goods">
+    <section class="products products_slider splide">
       <div class="wrapper">
-        <div class="card">
-          <a href="#" class="card__link_img btn-reset">
-            <img src="/assets/img/slider/goods/0.jpg" alt="slide">
-          </a>
-          <div class="card__body">
-            <div class="card__price">
-              <p class="new-price">120 ₽<span class="text-gray">/уп</span></p>
-              <p class="old-price">135 ₽</p>
-              <p class="discount">-10%</p>
-            </div>
-            <a href="#" class="card__link_title btn-reset">Семена томатов Цитрон F1</a>
-            <div class="card__info">
-              <div class="rating">
-                <svg class="rating__icon" aria-hidden="true">
-                      <use xlink:href="/assets/img/svg/star.svg#star"></use>
-                    </svg>
-                <p class="rating__value">5.0</p>
-              </div>
-              <div class="review">
-                <img src="/assets/img/svg/review.svg" alt="">
-                <p class="review__value">18 отзывов</p>
-              </div>
-            </div>
-            <button class="card__btn btn-reset">добавить в корзину</button>
-            <a href="#" class="card__link btn-reset">Оптовым покупателям</a>
+        <div class="products__header">
+          <h2 class="products__title">Скидки и акции:</h2>
+          <div class="products__btns splide__arrows">
+            <button class="slider-btn prev-btn btn-reser splide__arrow--prev"></button>
+            <button class="slider-btn btn-reser splide__arrow--next"></button>
           </div>
         </div>
-        <div class="card">
-          <a href="#" class="card__link_img btn-reset">
-            <img src="/assets/img/slider/goods/1.jpg" alt="slide">
-          </a>
-          <div class="card__body">
-            <div class="card__price">
-              <p class="new-price">120 ₽<span class="text-gray">/уп</span></p>
-              <p class="old-price">135 ₽</p>
-              <p class="discount">-10%</p>
-            </div>
-            <a href="#" class="card__link_title btn-reset">Семена томатов Семко-Союз F1</a>
-            <div class="card__info">
-              <div class="rating">
-                <svg class="rating__icon" aria-hidden="true">
-                      <use xlink:href="/assets/img/svg/star.svg#star"></use>
+      </div>
+      <div class="splide__track">
+        <div class="splide__list">
+          <div class="splide__slide card">
+            <a href="/product" class="card__link_img btn-reset">
+              <img src="/assets/img/slider/goods/0.jpg" alt="Семена томатов Цитрон F1">
+            </a>
+            <div class="card__body">
+              <div class="card__price">
+                <p class="new-price">120 ₽<span class="text-gray">/уп</span></p>
+                <p class="old-price">135 ₽</p>
+                <p class="discount">-10%</p>
+              </div>
+              <a href="/product" class="card__link_title btn-reset">Семена томатов Цитрон F1</a>
+              <div class="card__info">
+                <div class="rating">
+                  <svg class="rating__icon" aria-hidden="true">
+                      <use xlink:href="#star"></use>
                     </svg>
-                <p class="rating__value">5.0</p>
+                  <p class="rating__value">5.0</p>
+                </div>
+                <div class="review">
+                  <img src="/assets/img/svg/review.svg" alt="">
+                  <p class="review__value">18 отзывов</p>
+                </div>
               </div>
-              <div class="review">
-                <img src="/assets/img/svg/review.svg" alt="">
-                <p class="review__value">18 отзывов</p>
-              </div>
+              <button class="card__btn btn-reset">добавить в корзину</button>
+              <a href="#" class="card__link btn-reset">Оптовым покупателям</a>
             </div>
-            <button class="card__btn btn-reset">добавить в корзину</button>
-            <a href="#" class="card__link btn-reset">Оптовым покупателям</a>
           </div>
-        </div>
-        <div class="card">
-          <a href="#" class="card__link_img btn-reset">
-            <img src="/assets/img/slider/goods/2.jpg" alt="slide">
-          </a>
-          <div class="card__body">
-            <div class="card__price">
-              <p class="new-price">120 ₽<span class="text-gray">/уп</span></p>
-              <p class="old-price">135 ₽</p>
-              <p class="discount">-10%</p>
-            </div>
-            <a href="#" class="card__link_title btn-reset">Семена баклажанов Максик F1</a>
-            <div class="card__info">
-              <div class="rating">
-                <svg class="rating__icon" aria-hidden="true">
-                      <use xlink:href="/assets/img/svg/star.svg#star"></use>
+          <div class="splide__slide card">
+            <a href="/product" class="card__link_img btn-reset">
+              <img src="/assets/img/slider/goods/1.jpg" alt="Семена томатов Семко-Союз F1">
+            </a>
+            <div class="card__body">
+              <div class="card__price">
+                <p class="new-price">120 ₽<span class="text-gray">/уп</span></p>
+                <p class="old-price">135 ₽</p>
+                <p class="discount">-10%</p>
+              </div>
+              <a href="/product" class="card__link_title btn-reset">Семена томатов Семко-Союз F1</a>
+              <div class="card__info">
+                <div class="rating">
+                  <svg class="rating__icon" aria-hidden="true">
+                      <use xlink:href="#star"></use>
                     </svg>
-                <p class="rating__value">5.0</p>
+                  <p class="rating__value">5.0</p>
+                </div>
+                <div class="review">
+                  <img src="/assets/img/svg/review.svg" alt="">
+                  <p class="review__value">18 отзывов</p>
+                </div>
               </div>
-              <div class="review">
-                <img src="/assets/img/svg/review.svg" alt="review">
-                <p class="review__value">18 отзывов</p>
-              </div>
+              <button class="card__btn btn-reset">добавить в корзину</button>
+              <a href="#" class="card__link btn-reset">Оптовым покупателям</a>
             </div>
-            <button class="card__btn btn-reset">добавить в корзину</button>
-            <a href="#" class="card__link btn-reset">Оптовым покупателям</a>
           </div>
-        </div>
-        <div class="card">
-          <a href="#" class="card__link_img btn-reset">
-            <img src="/assets/img/slider/goods/3.jpg" alt="slide">
-          </a>
-          <div class="card__body">
-            <div class="card__price">
-              <p class="new-price">120 ₽<span class="text-gray">/уп</span></p>
-              <p class="old-price">135 ₽</p>
-              <p class="discount">-10%</p>
-            </div>
-            <a href="#" class="card__link_title btn-reset">Семена огурцов Семко-Союз F1</a>
-            <div class="card__info">
-              <div class="rating">
-                <svg class="rating__icon" aria-hidden="true">
-                      <use xlink:href="/assets/img/svg/star.svg#star"></use>
+          <div class="splide__slide card">
+            <a href="/product" class="card__link_img btn-reset">
+              <img src="/assets/img/slider/goods/2.jpg" alt="Семена баклажанов Максик F1">
+            </a>
+            <div class="card__body">
+              <div class="card__price">
+                <p class="new-price">120 ₽<span class="text-gray">/уп</span></p>
+                <p class="old-price">135 ₽</p>
+                <p class="discount">-10%</p>
+              </div>
+              <a href="/product" class="card__link_title btn-reset">Семена баклажанов Максик F1</a>
+              <div class="card__info">
+                <div class="rating">
+                  <svg class="rating__icon" aria-hidden="true">
+                      <use xlink:href="#star"></use>
                     </svg>
-                <p class="rating__value">5.0</p>
+                  <p class="rating__value">5.0</p>
+                </div>
+                <div class="review">
+                  <img src="/assets/img/svg/review.svg" alt="review">
+                  <p class="review__value">18 отзывов</p>
+                </div>
               </div>
-              <div class="review">
-                <img src="/assets/img/svg/review.svg" alt="review">
-                <p class="review__value">18 отзывов</p>
-              </div>
+              <button class="card__btn btn-reset">добавить в корзину</button>
+              <a href="#" class="card__link btn-reset">Оптовым покупателям</a>
             </div>
-            <button class="card__btn btn-reset">добавить в корзину</button>
-            <a href="#" class="card__link btn-reset">Оптовым покупателям</a>
+          </div>
+          <div class="splide__slide card">
+            <a href="/product" class="card__link_img btn-reset">
+              <img src="/assets/img/slider/goods/3.jpg" alt="Семена огурцов Семко-Союз F1">
+            </a>
+            <div class="card__body">
+              <div class="card__price">
+                <p class="new-price">120 ₽<span class="text-gray">/уп</span></p>
+                <p class="old-price">135 ₽</p>
+                <p class="discount">-10%</p>
+              </div>
+              <a href="/product" class="card__link_title btn-reset">Семена огурцов Семко-Союз F1</a>
+              <div class="card__info">
+                <div class="rating">
+                  <svg class="rating__icon" aria-hidden="true">
+                      <use xlink:href="#star"></use>
+                    </svg>
+                  <p class="rating__value">5.0</p>
+                </div>
+                <div class="review">
+                  <img src="/assets/img/svg/review.svg" alt="review">
+                  <p class="review__value">18 отзывов</p>
+                </div>
+              </div>
+              <button class="card__btn btn-reset">добавить в корзину</button>
+              <a href="#" class="card__link btn-reset">Оптовым покупателям</a>
+            </div>
           </div>
         </div>
       </div>
@@ -258,114 +272,125 @@
       </div>
     </section>
 
-    <section class="goods">
+    <section class="products cards_slider splide">
       <div class="wrapper">
-        <div class="card">
-          <a href="#" class="card__link_img btn-reset">
-            <img src="/assets/img/slider/goods/0.jpg" alt="slide">
-          </a>
-          <div class="card__body">
-            <div class="card__price">
-              <p class="new-price">120 ₽<span class="text-gray">/уп</span></p>
-              <p class="old-price">135 ₽</p>
-              <p class="discount">-10%</p>
-            </div>
-            <a href="#" class="card__link_title btn-reset">Семена томатов Цитрон F1</a>
-            <div class="card__info">
-              <div class="rating">
-                <svg class="rating__icon" aria-hidden="true">
-                      <use xlink:href="/assets/img/svg/star.svg#star"></use>
-                    </svg>
-                <p class="rating__value">5.0</p>
-              </div>
-              <div class="review">
-                <img src="/assets/img/svg/review.svg" alt="">
-                <p class="review__value">18 отзывов</p>
-              </div>
-            </div>
-            <button class="card__btn btn-reset">добавить в корзину</button>
-            <a href="#" class="card__link btn-reset">Оптовым покупателям</a>
+        <div class="products__header">
+          <h2 class="products__title">Самые выгодные предложения:</h2>
+          <div class="products__btns splide__arrows">
+            <button class="slider-btn prev-btn btn-reser splide__arrow--prev"></button>
+            <button class="slider-btn btn-reser splide__arrow--next"></button>
           </div>
         </div>
-        <div class="card">
-          <a href="#" class="card__link_img btn-reset">
-            <img src="/assets/img/slider/goods/1.jpg" alt="slide">
-          </a>
-          <div class="card__body">
-            <div class="card__price">
-              <p class="new-price">120 ₽<span class="text-gray">/уп</span></p>
-              <p class="old-price">135 ₽</p>
-              <p class="discount">-10%</p>
-            </div>
-            <a href="#" class="card__link_title btn-reset">Семена томатов Семко-Союз F1</a>
-            <div class="card__info">
-              <div class="rating">
-                <svg class="rating__icon" aria-hidden="true">
-                      <use xlink:href="/assets/img/svg/star.svg#star"></use>
+      </div>
+      <div class="splide__track">
+        <div class="splide__list">
+          <div class="splide__slide card">
+            <a href="/product" class="card__link_img btn-reset">
+              <img src="/assets/img/slider/goods/0.jpg" alt="Семена томатов Цитрон F1">
+            </a>
+            <div class="card__body">
+              <div class="card__price">
+                <p class="new-price">120 ₽<span class="text-gray">/уп</span></p>
+                <p class="old-price">135 ₽</p>
+                <p class="discount">-10%</p>
+              </div>
+              <a href="/product" class="card__link_title btn-reset">Семена томатов Цитрон F1</a>
+              <div class="card__info">
+                <div class="rating">
+                  <svg class="rating__icon" aria-hidden="true">
+                      <use xlink:href="#star"></use>
                     </svg>
-                <p class="rating__value">5.0</p>
+                  <p class="rating__value">5.0</p>
+                </div>
+                <div class="review">
+                  <img src="/assets/img/svg/review.svg" alt="">
+                  <p class="review__value">18 отзывов</p>
+                </div>
               </div>
-              <div class="review">
-                <img src="/assets/img/svg/review.svg" alt="">
-                <p class="review__value">18 отзывов</p>
-              </div>
+              <button class="card__btn btn-reset">добавить в корзину</button>
+              <a href="#" class="card__link btn-reset">Оптовым покупателям</a>
             </div>
-            <button class="card__btn btn-reset">добавить в корзину</button>
-            <a href="#" class="card__link btn-reset">Оптовым покупателям</a>
           </div>
-        </div>
-        <div class="card">
-          <a href="#" class="card__link_img btn-reset">
-            <img src="/assets/img/slider/goods/2.jpg" alt="slide">
-          </a>
-          <div class="card__body">
-            <div class="card__price">
-              <p class="new-price">120 ₽<span class="text-gray">/уп</span></p>
-              <p class="old-price">135 ₽</p>
-              <p class="discount">-10%</p>
-            </div>
-            <a href="#" class="card__link_title btn-reset">Семена баклажанов Максик F1</a>
-            <div class="card__info">
-              <div class="rating">
-                <svg class="rating__icon" aria-hidden="true">
-                      <use xlink:href="/assets/img/svg/star.svg#star"></use>
+          <div class="splide__slide card">
+            <a href="/product" class="card__link_img btn-reset">
+              <img src="/assets/img/slider/goods/1.jpg" alt="Семена томатов Семко-Союз F1">
+            </a>
+            <div class="card__body">
+              <div class="card__price">
+                <p class="new-price">120 ₽<span class="text-gray">/уп</span></p>
+                <p class="old-price">135 ₽</p>
+                <p class="discount">-10%</p>
+              </div>
+              <a href="/product" class="card__link_title btn-reset">Семена томатов Семко-Союз F1</a>
+              <div class="card__info">
+                <div class="rating">
+                  <svg class="rating__icon" aria-hidden="true">
+                      <use xlink:href="#star"></use>
                     </svg>
-                <p class="rating__value">5.0</p>
+                  <p class="rating__value">5.0</p>
+                </div>
+                <div class="review">
+                  <img src="/assets/img/svg/review.svg" alt="">
+                  <p class="review__value">18 отзывов</p>
+                </div>
               </div>
-              <div class="review">
-                <img src="/assets/img/svg/review.svg" alt="review">
-                <p class="review__value">18 отзывов</p>
-              </div>
+              <button class="card__btn btn-reset">добавить в корзину</button>
+              <a href="#" class="card__link btn-reset">Оптовым покупателям</a>
             </div>
-            <button class="card__btn btn-reset">добавить в корзину</button>
-            <a href="#" class="card__link btn-reset">Оптовым покупателям</a>
           </div>
-        </div>
-        <div class="card">
-          <a href="#" class="card__link_img btn-reset">
-            <img src="/assets/img/slider/goods/3.jpg" alt="slide">
-          </a>
-          <div class="card__body">
-            <div class="card__price">
-              <p class="new-price">120 ₽<span class="text-gray">/уп</span></p>
-              <p class="old-price">135 ₽</p>
-              <p class="discount">-10%</p>
-            </div>
-            <a href="#" class="card__link_title btn-reset">Семена огурцов Семко-Союз F1</a>
-            <div class="card__info">
-              <div class="rating">
-                <svg class="rating__icon" aria-hidden="true">
-                      <use xlink:href="/assets/img/svg/star.svg#star"></use>
+          <div class="splide__slide card">
+            <a href="/product" class="card__link_img btn-reset">
+              <img src="/assets/img/slider/goods/2.jpg" alt="Семена баклажанов Максик F1">
+            </a>
+            <div class="card__body">
+              <div class="card__price">
+                <p class="new-price">120 ₽<span class="text-gray">/уп</span></p>
+                <p class="old-price">135 ₽</p>
+                <p class="discount">-10%</p>
+              </div>
+              <a href="/product" class="card__link_title btn-reset">Семена баклажанов Максик F1</a>
+              <div class="card__info">
+                <div class="rating">
+                  <svg class="rating__icon" aria-hidden="true">
+                      <use xlink:href="#star"></use>
                     </svg>
-                <p class="rating__value">5.0</p>
+                  <p class="rating__value">5.0</p>
+                </div>
+                <div class="review">
+                  <img src="/assets/img/svg/review.svg" alt="review">
+                  <p class="review__value">18 отзывов</p>
+                </div>
               </div>
-              <div class="review">
-                <img src="/assets/img/svg/review.svg" alt="review">
-                <p class="review__value">18 отзывов</p>
-              </div>
+              <button class="card__btn btn-reset">добавить в корзину</button>
+              <a href="#" class="card__link btn-reset">Оптовым покупателям</a>
             </div>
-            <button class="card__btn btn-reset">добавить в корзину</button>
-            <a href="#" class="card__link btn-reset">Оптовым покупателям</a>
+          </div>
+          <div class="splide__slide card">
+            <a href="/product" class="card__link_img btn-reset">
+              <img src="/assets/img/slider/goods/3.jpg" alt="Семена огурцов Семко-Союз F1">
+            </a>
+            <div class="card__body">
+              <div class="card__price">
+                <p class="new-price">120 ₽<span class="text-gray">/уп</span></p>
+                <p class="old-price">135 ₽</p>
+                <p class="discount">-10%</p>
+              </div>
+              <a href="/product" class="card__link_title btn-reset">Семена огурцов Семко-Союз F1</a>
+              <div class="card__info">
+                <div class="rating">
+                  <svg class="rating__icon" aria-hidden="true">
+                      <use xlink:href="#star"></use>
+                    </svg>
+                  <p class="rating__value">5.0</p>
+                </div>
+                <div class="review">
+                  <img src="/assets/img/svg/review.svg" alt="review">
+                  <p class="review__value">18 отзывов</p>
+                </div>
+              </div>
+              <button class="card__btn btn-reset">добавить в корзину</button>
+              <a href="#" class="card__link btn-reset">Оптовым покупателям</a>
+            </div>
           </div>
         </div>
       </div>
@@ -374,7 +399,7 @@
     <section class="category">
       <div class="wrapper">
         <div class="category__header">
-          <h2 class="category__title">Популярные категории товаров</h2>
+          <h2 class="category__title">Подборки, которые могут Вам подойти</h2>
           <a href="#" class="btn btn-lg btn-reset">Перейти в каталог</a>
         </div>
         <div class="category__list">
@@ -390,7 +415,7 @@
         <div class="proposition__content">
           <div class="proposition__info">
             <h2 class="proposition__title">Получайте выгодные предложения</h2>
-            <p class="proposition__descr">Подпишитесь и получайте промокоды, акции и подборки товаров на свою почту</p>
+            <p class="proposition__descr">Подпишитесь на рассылку и получайте промокоды, акции и подборки товаров на свою почту</p>
           </div>
           <form class="proposition__form" action="#" method="post">
             <input class="form-input" type="email" name="email" placeholder="Ваш e-mail" required>
@@ -504,6 +529,11 @@
 
   <script src="/assets/js/splide.min.js"></script>
   <script src="/assets/js/sliders/banner.js"></script>
+  <script src="/assets/js/sliders/cards.js"></script>
   <script src="/assets/js/scrollTop.js"></script>
+  <script>
+    drawSlider('.products_slider');
+    drawSlider('.cards_slider');
+  </script>
 </body>
 </html>
