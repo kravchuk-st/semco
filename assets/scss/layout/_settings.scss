@@ -95,6 +95,10 @@ h2 {
   vertical-align: super;
 }
 
+.text-bold {
+  font-weight: 500;
+}
+
 .question-icon {
   margin-left: 10px;
   display: inline-flex;
@@ -108,4 +112,9 @@ h2 {
   border: 1px solid #6e6e6e;
   border-radius: 50%;
   vertical-align: middle;
+}
+
+.disable-scroll {
+  overflow: hidden;
+  user-select: none;
 }

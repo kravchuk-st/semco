@@ -16,6 +16,11 @@
     <symbol viewBox="0 0 25 15" fill="none" xmlns="http://www.w3.org/2000/svg" id="arrow">
       <path d="M1.5 1L11.7366 13.0978C12.1361 13.5699 12.8639 13.5699 13.2634 13.0978L23.5 1" stroke-width="2" stroke-linecap="round"/>
     </symbol>
+    <symbol viewBox="0 0 1792 1792" xmlns="http://www.w3.org/1999/xlink" id="close">
+      <path d="M1082.2,896.6l410.2-410c51.5-51.5,51.5-134.6,0-186.1s-134.6-51.5-186.1,0l-410.2,410L486,300.4
+        c-51.5-51.5-134.6-51.5-186.1,0s-51.5,134.6,0,186.1l410.2,410l-410.2,410c-51.5,51.5-51.5,134.6,0,186.1
+        c51.6,51.5,135,51.5,186.1,0l410.2-410l410.2,410c51.5,51.5,134.6,51.5,186.1,0c51.1-51.5,51.1-134.6-0.5-186.2L1082.2,896.6z"/>
+    </symbol>
   </svg>
   
   <header class="header">
@@ -129,7 +134,7 @@
                   <input class="input form__date" name="region" id="berries-region">
                 </div>
               </div>
-              <button class="btn btn-fill btn-reset" type="submit">Получить результат</button>
+              <button class="btn btn-fill btn-reset" type="button" data-path="calc">Получить результат</button>
             </form>
           </div>
           <div class="calc">
@@ -432,7 +437,155 @@
 
   <div class="top-control"></div>
 
-  <script src="/assets/js/splide.min.js"></script>
+  <div class="modal">
+    <div class="modal__layout">
+      <button class="close-btn btn-reset" aria-label="Закрыть модальное окно">
+        <svg aria-hidden="true" width="14" height="14">
+          <use xlink:href="#close"></use>
+        </svg>
+      </button>
+
+      <div class="modal__content modal__content_calc" data-target="calc">
+        <p class="modal__title">Результат<span class="text-top">*</span></p>
+        <div class="modal__header">
+          <div class="details">
+            <p class="details__title">Культура</p>
+            <p class="details__text">Томаты</p>
+          </div>
+          <div class="details">
+            <p class="details__title">Дата высадки в грунт</p>
+            <p class="details__text">22.02.2022</p>
+          </div>
+          <div class="details">
+            <p class="details__title">Наличие фитолампы</p>
+            <p class="details__text">Да</p>
+          </div>
+        </div>
+        <div class="recommendation">
+          <div class="recommendation__header">
+            <svg class="recommendation__icon" aria-hidden="true">
+              <use xlink:href="/assets/img/svg/calendar.svg#calendar"></use>
+            </svg>
+            <p class="recommendation__title">Оптимальная дата посева семян</p>
+          </div>
+          <p class="recommendation__text">
+            Лучше всего посеять семена на рассаду в период: 22.02.2022 — 05.02.2022
+          </p>
+        </div>
+        <div class="recommendation">
+          <div class="recommendation__header">
+            <svg class="recommendation__icon" aria-hidden="true">
+              <use xlink:href="/assets/img/svg/calendar.svg#calendar"></use>
+            </svg>
+            <p class="recommendation__title">Дата высадки рассады в грунт</p>
+          </div>
+          <p class="recommendation__text">
+            Лучше всего высадить растение в период: 22.02.2022 — 05.02.2022
+          </p>
+        </div>
+        <div class="recommendation">
+          <div class="recommendation__header">
+            <svg class="recommendation__icon fill" aria-hidden="true">
+              <use xlink:href="/assets/img/svg/notebook.svg#notebook"></use>
+            </svg>
+            <p class="recommendation__title">Рекомендации по уходу в период роста</p>
+          </div>
+          <p class="recommendation__text">
+            Заказ доставляется в течение 2-5 рабочих дней с момента передачи его в курьерскую службу. Время доставки - с 09.00 до 18.00 по рабочим дням. Если вас интересует другое время для получения заказа, необходимо указать это в комментарии к заказу и обговорить это с нашим сотрудником. 
+          </p>
+        </div>
+        <div class="cards">
+          <div class="card">
+            <a href="/product" class="card__link_img btn-reset">
+              <img src="/assets/img/slider/goods/3.jpg" alt="slide">
+            </a>
+            <div class="card__body">
+              <div class="card__price">
+                <p class="new-price">120 ₽<span class="text-gray">/уп</span></p>
+                <p class="old-price">135 ₽</p>
+                <p class="discount">-10%</p>
+              </div>
+              <a href="/product" class="card__link_title btn-reset">Семена огурцов Семко-Союз F1</a>
+              <div class="card__info">
+                <div class="rating">
+                  <svg class="rating__icon" aria-hidden="true">
+                    <use xlink:href="/assets/img/svg/star.svg#star"></use>
+                  </svg>
+                  <p class="rating__value">5.0</p>
+                </div>
+                <div class="review">
+                  <img src="/assets/img/svg/review.svg" alt="review">
+                  <p class="review__value">18 отзывов</p>
+                </div>
+              </div>
+              <button class="card__btn btn-reset">добавить в корзину</button>
+              <a href="#" class="card__link btn-reset">Оптовым покупателям</a>
+            </div>
+          </div>
+          <div class="card">
+            <a href="/product" class="card__link_img btn-reset">
+              <img src="/assets/img/slider/goods/3.jpg" alt="slide">
+            </a>
+            <div class="card__body">
+              <div class="card__price">
+                <p class="new-price">120 ₽<span class="text-gray">/уп</span></p>
+                <p class="old-price">135 ₽</p>
+                <p class="discount">-10%</p>
+              </div>
+              <a href="/product" class="card__link_title btn-reset">Семена огурцов Семко-Союз F1</a>
+              <div class="card__info">
+                <div class="rating">
+                  <svg class="rating__icon" aria-hidden="true">
+                    <use xlink:href="/assets/img/svg/star.svg#star"></use>
+                  </svg>
+                  <p class="rating__value">5.0</p>
+                </div>
+                <div class="review">
+                  <img src="/assets/img/svg/review.svg" alt="review">
+                  <p class="review__value">18 отзывов</p>
+                </div>
+              </div>
+              <button class="card__btn btn-reset">добавить в корзину</button>
+              <a href="#" class="card__link btn-reset">Оптовым покупателям</a>
+            </div>
+          </div>
+          <div class="card">
+            <a href="/product" class="card__link_img btn-reset">
+              <img src="/assets/img/slider/goods/3.jpg" alt="slide">
+            </a>
+            <div class="card__body">
+              <div class="card__price">
+                <p class="new-price">120 ₽<span class="text-gray">/уп</span></p>
+                <p class="old-price">135 ₽</p>
+                <p class="discount">-10%</p>
+              </div>
+              <a href="/product" class="card__link_title btn-reset">Семена огурцов Семко-Союз F1</a>
+              <div class="card__info">
+                <div class="rating">
+                  <svg class="rating__icon" aria-hidden="true">
+                    <use xlink:href="/assets/img/svg/star.svg#star"></use>
+                  </svg>
+                  <p class="rating__value">5.0</p>
+                </div>
+                <div class="review">
+                  <img src="/assets/img/svg/review.svg" alt="review">
+                  <p class="review__value">18 отзывов</p>
+                </div>
+              </div>
+              <button class="card__btn btn-reset">добавить в корзину</button>
+              <a href="#" class="card__link btn-reset">Оптовым покупателям</a>
+            </div>
+          </div>
+        </div>
+        <a href="/catalog" class="modal__link btn btn-lg btn-reset">Перейти в каталог</a>
+        <p class="modal__info">
+          *Результаты не учитывают, если год по погодным условиям форс-мажорный
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <script src="/assets/js/lib/splide.min.js"></script>
   <script src="/assets/js/sliders/discount.js"></script>
   <script src="/assets/js/sliders/cards.js"></script>
   <script src="/assets/js/scrollTop.js"></script>
@@ -441,6 +594,7 @@
   <script>
     drawSlider('.products_slider');
   </script>
+  <script src="/assets/js/modal.js"></script>
 </body>
 </html>
 

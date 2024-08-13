@@ -15,6 +15,11 @@
     <symbol viewBox="0 0 25 15" fill="none" xmlns="http://www.w3.org/2000/svg" id="arrow">
       <path d="M1.5 1L11.7366 13.0978C12.1361 13.5699 12.8639 13.5699 13.2634 13.0978L23.5 1" stroke-width="2" stroke-linecap="round"/>
     </symbol>
+    <symbol viewBox="0 0 1792 1792" xmlns="http://www.w3.org/1999/xlink" id="close">
+      <path d="M1082.2,896.6l410.2-410c51.5-51.5,51.5-134.6,0-186.1s-134.6-51.5-186.1,0l-410.2,410L486,300.4
+        c-51.5-51.5-134.6-51.5-186.1,0s-51.5,134.6,0,186.1l410.2,410l-410.2,410c-51.5,51.5-51.5,134.6,0,186.1
+        c51.6,51.5,135,51.5,186.1,0l410.2-410l410.2,410c51.5,51.5,134.6,51.5,186.1,0c51.1-51.5,51.1-134.6-0.5-186.2L1082.2,896.6z"/>
+    </symbol>
   </svg>
 
   <header class="header">
@@ -104,7 +109,7 @@
             <div class="pay-info__descr">
               <p>Предварительная оплата интернет-заказов возможна исключительно на сайте semco.ru.</p>
               <p>Для заказов с самовывозом оплата также осуществляется онлайн.</p>
-              <p>Обратите внимание, что оплата заказов непосредственно в нашем магазине по адресу Рижский проезд, дом 3 <b>невозможна</b>.</p>
+              <p>Обратите внимание, что оплата заказов непосредственно в&nbsp;нашем магазине по адресу Рижский проезд, дом 3 <b>невозможна</b>.</p>
             </div>
           </div>
         </div>
@@ -120,7 +125,7 @@
               <div class="content-payment__header">
                 <h3 class="content-payment__title">Онлайн-оплата</h3>
                 <img class="content-payment__img" src="/assets/img/svg/pay/0.svg" alt="online payment">
-                <button class="content-payment__btn btn-lg btn-reset">Подробнее</button>
+                <button class="content-payment__btn btn-lg btn-reset" data-path="pay">Подробнее</button>
               </div>
               <p class="content-payment__descr">Мы принимает к оплате банковские карты</p>
               <p class="content-payment__descr">VISA, MasterCard, МИР. Без комиссии для покупателей</p>
@@ -398,7 +403,7 @@
             </p>
             <input class="form__input" type="tel" name="tel" placeholder="Ваш телефон">
             <button class="form__btn btn-dark btn-lg btn-reset" type="submit">перезвоните мне</button>
-            <p class="form__text">Нажимая Подписаться вы соглашаетесь с <a href="#" target="_blank" rel="noopener noreferrer">Политикой обработки персональных данных</a></p>
+            <p class="form__text">Нажимая Подписаться вы соглашаетесь с&nbsp;<a href="#" target="_blank" rel="noopener noreferrer">Политикой обработки персональных данных</a></p>
           </form>
           <img src="/assets/img/map.png" alt="map" style="height: 354px;">
         </div>
@@ -522,7 +527,38 @@
 
   <div class="top-control"></div>
 
+  <div class="modal">
+    <div class="modal__layout">
+      <button class="close-btn btn-reset" aria-label="Закрыть модальное окно">
+        <svg aria-hidden="true" width="14" height="14">
+          <use xlink:href="#close"></use>
+        </svg>
+      </button>
+
+      <div class="modal__content modal__content_pay" data-target="pay">
+        <div class="modal__header">
+          <p class="modal__title">Онлайн оплата</p>
+          <div class="modal__imgs">
+            <img src="/assets/img/pay/0.png" alt="Мир">
+            <img src="/assets/img/pay/1.png" alt="Visa">
+            <img src="/assets/img/pay/2.png" alt="MasterCard">
+          </div>
+        </div>
+        <p class="modal__text">
+          К оплате принимаются банковские карты платежных систем Visa, MasterCard, МИР. Если Банк-Эмитент вашей пластиковой карты поддерживает технологию безопасного проведения интернет-платежей Verified By VISA или MasterCard SecureCode, будьте готовы указать специальный пароль, необходимый для успешной оплаты. Способы и возможность получения пароля для совершения интернет-платежа Вы можете уточнить в банке, выпустившем Вашу карту.
+        </p>
+        <p class="modal__text">
+          После получения денежных средств на наш расчетный счет, вам будет выслано письмо-подтверждение от интернет-магазина. При подтвержденной оплате статус заказа будет изменен на "Оплачен". Статус оплаты также можно посмотреть на странице "Заказы" меню " Личного кабинета". Если в течение 3-х дней оплата за заказ не поступила - заказ отменяется.
+        </p>
+        <p class="modal__text text-bold">
+          Наш интернет-магазин НЕ взимает комиссию за оплату банковскими картами.
+        </p>
+      </div>
+    </div>
+  </div>
+
   <script src="/assets/js/accordion.js"></script>
   <script src="/assets/js/scrollTop.js"></script>
+  <script src="/assets/js/modal.js"></script>
 </body>
 </html>
