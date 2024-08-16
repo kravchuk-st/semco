@@ -29,7 +29,7 @@
         <a href="/" class="logo">
           <img src="/assets/img/svg/logo.svg" alt="logo" class="logo__icon">
         </a>
-        <img class="doll" src="/assets/img/svg/figure.svg" alt="doll">
+        <img class="doll" src="/assets/img/cipollino-sm.png" alt="doll">
         <a href="/catalog" class="katalog-link btn-fill btn-reset">КАТАЛОГ</a>
         <form class="search" action="#" method="post">
           <input class="search__input" type="text" placeholder="Поиск...">
@@ -146,6 +146,23 @@
         <div class="product-about">
           <div class="product-about__left">
             <div class="double-slider">
+              <ul id="thumbnails" class="product__slider_second-md">
+                <li class="splide__slide">
+                  <img src="/assets/img/slider/double.png" alt="slide">
+                </li>
+                <li class="splide__slide">
+                  <img src="/assets/img/slider/double.png" alt="slide">
+                </li>
+                <li class="splide__slide">
+                  <img src="/assets/img/slider/double.png" alt="slide">
+                </li>
+                <li class="splide__slide">
+                  <img src="/assets/img/slider/double.png" alt="slide">
+                </li>
+                <li class="splide__slide">
+                  <img src="/assets/img/slider/double.png" alt="slide">
+                </li>
+              </ul>
               <div class="splide product__slider" role="group" aria-label="Splide Basic HTML Example">
                 <div class="splide__track">
                   <ul class="splide__list">
@@ -167,23 +184,6 @@
                   </ul>
                 </div>
               </div>
-              <!-- <ul id="thumbnails" class="product__slider_second">
-                <li class="splide__slide">
-                  <img src="/assets/img/slider/double.png" alt="slide">
-                </li>
-                <li class="splide__slide">
-                  <img src="/assets/img/slider/double.png" alt="slide">
-                </li>
-                <li class="splide__slide">
-                  <img src="/assets/img/slider/double.png" alt="slide">
-                </li>
-                <li class="splide__slide">
-                  <img src="/assets/img/slider/double.png" alt="slide">
-                </li>
-                <li class="splide__slide">
-                  <img src="/assets/img/slider/double.png" alt="slide">
-                </li>
-              </ul> -->
               <div class="product-about__info">
                 <ul class="info-list list-reset">
                   <li class="info__item">
@@ -214,7 +214,7 @@
                       <img src="/assets/img/svg/characteristics/0.svg" alt="">
                     </span>
                     <div class="characteristics__text">
-                      <h3 class="characteristics__title">Эксклюзивные</h3>
+                      <p class="characteristics__title">Эксклюзивные</p>
                       <p class="characteristics__descr">товары</p>
                     </div>
                   </li>
@@ -223,7 +223,7 @@
                       <img src="/assets/img/svg/characteristics/1.svg" alt="">
                     </span>
                     <div class="characteristics__text">
-                      <h3 class="characteristics__title">Удобная доставка</h3>
+                      <p class="characteristics__title">Удобная доставка</p>
                       <p class="characteristics__descr">по всей России</p>
                     </div>
                   </li>
@@ -232,7 +232,7 @@
                       <img src="/assets/img/svg/characteristics/2.svg" alt="">
                     </span>
                     <div class="characteristics__text">
-                      <h3 class="characteristics__title">Безопасный</h3>
+                      <p class="characteristics__title">Безопасный</p>
                       <p class="characteristics__descr">платёж</p>
                     </div>
                   </li>
@@ -241,7 +241,7 @@
                       <img src="/assets/img/svg/characteristics/3.svg" alt="">
                     </span>
                     <div class="characteristics__text">
-                      <h3 class="characteristics__title">Круглогодичный</h3>
+                      <p class="characteristics__title">Круглогодичный</p>
                       <p class="characteristics__descr">прием и отправка заказов</p>
                     </div>
                   </li>
@@ -424,7 +424,7 @@
                   <span class="btn comment__popularity">самый популярный отзыв</span>
                 </div>
                 <div class="author">
-                  <img src="/assets/img/svg/user-icon.svg" alt="author" class="author__img">
+                  <img src="/assets/img/ava.png" alt="author" class="author__img">
                   <p class="author__name">Евгений</p>
                 </div>
                 <p class="comment__text">
@@ -455,7 +455,7 @@
                   <img class="rating__source" src="/assets/img/svg/social/yandex.svg" alt="source">
                 </div>
                 <div class="author">
-                  <img src="/assets/img/svg/user-icon.svg" alt="author" class="author__img">
+                  <img src="/assets/img/ava.png" alt="author" class="author__img">
                   <p class="author__name">Евгений</p>
                 </div>
                 <p class="comment__text">
@@ -513,7 +513,7 @@
             <button class="btn btn-fill btn-reset all-reviews">все отзывы</button>
           </div>
           <div class="author">
-            <img src="/assets/img/svg/user-icon.svg" alt="author" class="author__img">
+            <img src="/assets/img/ava.png" alt="author" class="author__img">
             <p class="author__name">Евгений</p>
           </div>
           <p class="comment__text">
@@ -537,7 +537,7 @@
       <div class="splide__track">
         <div class="splide__list">
           <div class="splide__slide card">
-            <a href="#" class="card__link_img btn-reset">
+            <a href="/product" class="card__link_img btn-reset">
               <img src="/assets/img/slider/goods/0.jpg" alt="slide">
             </a>
             <div class="card__body">
@@ -546,25 +546,29 @@
                 <p class="old-price">135 ₽</p>
                 <p class="discount">-10%</p>
               </div>
-              <a href="#" class="card__link_title btn-reset">Семена томатов Цитрон F1</a>
-              <div class="card__info">
-                <div class="rating">
-                  <svg class="rating__icon" aria-hidden="true">
-                      <use xlink:href="#star"></use>
-                    </svg>
-                  <p class="rating__value">5.0</p>
+              <a href="/product" class="card__link_title btn-reset">Семена томатов Цитрон F1</a>
+              <div class="card__bottom">
+                <div class="card__info">
+                  <div class="rating">
+                    <svg class="rating__icon" aria-hidden="true">
+                        <use xlink:href="#star"></use>
+                      </svg>
+                    <p class="rating__value">5.0</p>
+                  </div>
+                  <div class="review">
+                    <img src="/assets/img/svg/review.svg" alt="">
+                    <p class="review__value">18 отзывов</p>
+                  </div>
                 </div>
-                <div class="review">
-                  <img src="/assets/img/svg/review.svg" alt="">
-                  <p class="review__value">18 отзывов</p>
+                <div class="card__btns">
+                  <button class="card__btn btn-reset">добавить в корзину</button>
+                  <a href="#" class="card__link btn-reset">Оптовым покупателям</a>
                 </div>
               </div>
-              <button class="card__btn btn-reset">добавить в корзину</button>
-              <a href="#" class="card__link btn-reset">Оптовым покупателям</a>
             </div>
           </div>
           <div class="splide__slide card">
-            <a href="#" class="card__link_img btn-reset">
+            <a href="/product" class="card__link_img btn-reset">
               <img src="/assets/img/slider/goods/1.jpg" alt="slide">
             </a>
             <div class="card__body">
@@ -573,25 +577,29 @@
                 <p class="old-price">135 ₽</p>
                 <p class="discount">-10%</p>
               </div>
-              <a href="#" class="card__link_title btn-reset">Семена томатов Семко-Союз F1</a>
-              <div class="card__info">
-                <div class="rating">
-                  <svg class="rating__icon" aria-hidden="true">
-                      <use xlink:href="#star"></use>
-                    </svg>
-                  <p class="rating__value">5.0</p>
+              <a href="/product" class="card__link_title btn-reset">Семена томатов Цитрон F1</a>
+              <div class="card__bottom">
+                <div class="card__info">
+                  <div class="rating">
+                    <svg class="rating__icon" aria-hidden="true">
+                        <use xlink:href="#star"></use>
+                      </svg>
+                    <p class="rating__value">5.0</p>
+                  </div>
+                  <div class="review">
+                    <img src="/assets/img/svg/review.svg" alt="">
+                    <p class="review__value">18 отзывов</p>
+                  </div>
                 </div>
-                <div class="review">
-                  <img src="/assets/img/svg/review.svg" alt="">
-                  <p class="review__value">18 отзывов</p>
+                <div class="card__btns">
+                  <button class="card__btn btn-reset">добавить в корзину</button>
+                  <a href="#" class="card__link btn-reset">Оптовым покупателям</a>
                 </div>
               </div>
-              <button class="card__btn btn-reset">добавить в корзину</button>
-              <a href="#" class="card__link btn-reset">Оптовым покупателям</a>
             </div>
           </div>
           <div class="splide__slide card">
-            <a href="#" class="card__link_img btn-reset">
+            <a href="/product" class="card__link_img btn-reset">
               <img src="/assets/img/slider/goods/2.jpg" alt="slide">
             </a>
             <div class="card__body">
@@ -600,25 +608,29 @@
                 <p class="old-price">135 ₽</p>
                 <p class="discount">-10%</p>
               </div>
-              <a href="#" class="card__link_title btn-reset">Семена баклажанов Максик F1</a>
-              <div class="card__info">
-                <div class="rating">
-                  <svg class="rating__icon" aria-hidden="true">
-                      <use xlink:href="#star"></use>
-                    </svg>
-                  <p class="rating__value">5.0</p>
+              <a href="/product" class="card__link_title btn-reset">Семена баклажанов Максик F1</a>
+              <div class="card__bottom">
+                <div class="card__info">
+                  <div class="rating">
+                    <svg class="rating__icon" aria-hidden="true">
+                        <use xlink:href="#star"></use>
+                      </svg>
+                    <p class="rating__value">5.0</p>
+                  </div>
+                  <div class="review">
+                    <img src="/assets/img/svg/review.svg" alt="">
+                    <p class="review__value">18 отзывов</p>
+                  </div>
                 </div>
-                <div class="review">
-                  <img src="/assets/img/svg/review.svg" alt="review">
-                  <p class="review__value">18 отзывов</p>
+                <div class="card__btns">
+                  <button class="card__btn btn-reset">добавить в корзину</button>
+                  <a href="#" class="card__link btn-reset">Оптовым покупателям</a>
                 </div>
               </div>
-              <button class="card__btn btn-reset">добавить в корзину</button>
-              <a href="#" class="card__link btn-reset">Оптовым покупателям</a>
             </div>
           </div>
           <div class="splide__slide card">
-            <a href="#" class="card__link_img btn-reset">
+            <a href="/product" class="card__link_img btn-reset">
               <img src="/assets/img/slider/goods/3.jpg" alt="slide">
             </a>
             <div class="card__body">
@@ -627,21 +639,25 @@
                 <p class="old-price">135 ₽</p>
                 <p class="discount">-10%</p>
               </div>
-              <a href="#" class="card__link_title btn-reset">Семена огурцов Семко-Союз F1</a>
-              <div class="card__info">
-                <div class="rating">
-                  <svg class="rating__icon" aria-hidden="true">
-                      <use xlink:href="#star"></use>
-                    </svg>
-                  <p class="rating__value">5.0</p>
+              <a href="/product" class="card__link_title btn-reset">Семена огурцов Семко-Союз F1</a>
+              <div class="card__bottom">
+                <div class="card__info">
+                  <div class="rating">
+                    <svg class="rating__icon" aria-hidden="true">
+                        <use xlink:href="#star"></use>
+                      </svg>
+                    <p class="rating__value">5.0</p>
+                  </div>
+                  <div class="review">
+                    <img src="/assets/img/svg/review.svg" alt="">
+                    <p class="review__value">18 отзывов</p>
+                  </div>
                 </div>
-                <div class="review">
-                  <img src="/assets/img/svg/review.svg" alt="review">
-                  <p class="review__value">18 отзывов</p>
+                <div class="card__btns">
+                  <button class="card__btn btn-reset">добавить в корзину</button>
+                  <a href="#" class="card__link btn-reset">Оптовым покупателям</a>
                 </div>
               </div>
-              <button class="card__btn btn-reset">добавить в корзину</button>
-              <a href="#" class="card__link btn-reset">Оптовым покупателям</a>
             </div>
           </div>
         </div>
@@ -661,7 +677,7 @@
       <div class="splide__track">
         <div class="splide__list">
           <div class="splide__slide card">
-            <a href="#" class="card__link_img btn-reset">
+            <a href="/product" class="card__link_img btn-reset">
               <img src="/assets/img/slider/goods/0.jpg" alt="slide">
             </a>
             <div class="card__body">
@@ -670,25 +686,29 @@
                 <p class="old-price">135 ₽</p>
                 <p class="discount">-10%</p>
               </div>
-              <a href="#" class="card__link_title btn-reset">Семена томатов Цитрон F1</a>
-              <div class="card__info">
-                <div class="rating">
-                  <svg class="rating__icon" aria-hidden="true">
-                      <use xlink:href="#star"></use>
-                    </svg>
-                  <p class="rating__value">5.0</p>
+              <a href="/product" class="card__link_title btn-reset">Семена томатов Цитрон F1</a>
+              <div class="card__bottom">
+                <div class="card__info">
+                  <div class="rating">
+                    <svg class="rating__icon" aria-hidden="true">
+                        <use xlink:href="#star"></use>
+                      </svg>
+                    <p class="rating__value">5.0</p>
+                  </div>
+                  <div class="review">
+                    <img src="/assets/img/svg/review.svg" alt="">
+                    <p class="review__value">18 отзывов</p>
+                  </div>
                 </div>
-                <div class="review">
-                  <img src="/assets/img/svg/review.svg" alt="">
-                  <p class="review__value">18 отзывов</p>
+                <div class="card__btns">
+                  <button class="card__btn btn-reset">добавить в корзину</button>
+                  <a href="#" class="card__link btn-reset">Оптовым покупателям</a>
                 </div>
               </div>
-              <button class="card__btn btn-reset">добавить в корзину</button>
-              <a href="#" class="card__link btn-reset">Оптовым покупателям</a>
             </div>
           </div>
           <div class="splide__slide card">
-            <a href="#" class="card__link_img btn-reset">
+            <a href="/product" class="card__link_img btn-reset">
               <img src="/assets/img/slider/goods/1.jpg" alt="slide">
             </a>
             <div class="card__body">
@@ -697,25 +717,29 @@
                 <p class="old-price">135 ₽</p>
                 <p class="discount">-10%</p>
               </div>
-              <a href="#" class="card__link_title btn-reset">Семена томатов Семко-Союз F1</a>
-              <div class="card__info">
-                <div class="rating">
-                  <svg class="rating__icon" aria-hidden="true">
-                      <use xlink:href="#star"></use>
-                    </svg>
-                  <p class="rating__value">5.0</p>
+              <a href="/product" class="card__link_title btn-reset">Семена томатов Цитрон F1</a>
+              <div class="card__bottom">
+                <div class="card__info">
+                  <div class="rating">
+                    <svg class="rating__icon" aria-hidden="true">
+                        <use xlink:href="#star"></use>
+                      </svg>
+                    <p class="rating__value">5.0</p>
+                  </div>
+                  <div class="review">
+                    <img src="/assets/img/svg/review.svg" alt="">
+                    <p class="review__value">18 отзывов</p>
+                  </div>
                 </div>
-                <div class="review">
-                  <img src="/assets/img/svg/review.svg" alt="">
-                  <p class="review__value">18 отзывов</p>
+                <div class="card__btns">
+                  <button class="card__btn btn-reset">добавить в корзину</button>
+                  <a href="#" class="card__link btn-reset">Оптовым покупателям</a>
                 </div>
               </div>
-              <button class="card__btn btn-reset">добавить в корзину</button>
-              <a href="#" class="card__link btn-reset">Оптовым покупателям</a>
             </div>
           </div>
           <div class="splide__slide card">
-            <a href="#" class="card__link_img btn-reset">
+            <a href="/product" class="card__link_img btn-reset">
               <img src="/assets/img/slider/goods/2.jpg" alt="slide">
             </a>
             <div class="card__body">
@@ -724,25 +748,29 @@
                 <p class="old-price">135 ₽</p>
                 <p class="discount">-10%</p>
               </div>
-              <a href="#" class="card__link_title btn-reset">Семена баклажанов Максик F1</a>
-              <div class="card__info">
-                <div class="rating">
-                  <svg class="rating__icon" aria-hidden="true">
-                      <use xlink:href="#star"></use>
-                    </svg>
-                  <p class="rating__value">5.0</p>
+              <a href="/product" class="card__link_title btn-reset">Семена баклажанов Максик F1</a>
+              <div class="card__bottom">
+                <div class="card__info">
+                  <div class="rating">
+                    <svg class="rating__icon" aria-hidden="true">
+                        <use xlink:href="#star"></use>
+                      </svg>
+                    <p class="rating__value">5.0</p>
+                  </div>
+                  <div class="review">
+                    <img src="/assets/img/svg/review.svg" alt="">
+                    <p class="review__value">18 отзывов</p>
+                  </div>
                 </div>
-                <div class="review">
-                  <img src="/assets/img/svg/review.svg" alt="review">
-                  <p class="review__value">18 отзывов</p>
+                <div class="card__btns">
+                  <button class="card__btn btn-reset">добавить в корзину</button>
+                  <a href="#" class="card__link btn-reset">Оптовым покупателям</a>
                 </div>
               </div>
-              <button class="card__btn btn-reset">добавить в корзину</button>
-              <a href="#" class="card__link btn-reset">Оптовым покупателям</a>
             </div>
           </div>
           <div class="splide__slide card">
-            <a href="#" class="card__link_img btn-reset">
+            <a href="/product" class="card__link_img btn-reset">
               <img src="/assets/img/slider/goods/3.jpg" alt="slide">
             </a>
             <div class="card__body">
@@ -751,21 +779,25 @@
                 <p class="old-price">135 ₽</p>
                 <p class="discount">-10%</p>
               </div>
-              <a href="#" class="card__link_title btn-reset">Семена огурцов Семко-Союз F1</a>
-              <div class="card__info">
-                <div class="rating">
-                  <svg class="rating__icon" aria-hidden="true">
-                      <use xlink:href="#star"></use>
-                    </svg>
-                  <p class="rating__value">5.0</p>
+              <a href="/product" class="card__link_title btn-reset">Семена огурцов Семко-Союз F1</a>
+              <div class="card__bottom">
+                <div class="card__info">
+                  <div class="rating">
+                    <svg class="rating__icon" aria-hidden="true">
+                        <use xlink:href="#star"></use>
+                      </svg>
+                    <p class="rating__value">5.0</p>
+                  </div>
+                  <div class="review">
+                    <img src="/assets/img/svg/review.svg" alt="">
+                    <p class="review__value">18 отзывов</p>
+                  </div>
                 </div>
-                <div class="review">
-                  <img src="/assets/img/svg/review.svg" alt="review">
-                  <p class="review__value">18 отзывов</p>
+                <div class="card__btns">
+                  <button class="card__btn btn-reset">добавить в корзину</button>
+                  <a href="#" class="card__link btn-reset">Оптовым покупателям</a>
                 </div>
               </div>
-              <button class="card__btn btn-reset">добавить в корзину</button>
-              <a href="#" class="card__link btn-reset">Оптовым покупателям</a>
             </div>
           </div>
         </div>

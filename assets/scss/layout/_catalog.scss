@@ -47,8 +47,12 @@
   }
 
   &-view__btn {
+    &:hover svg {
+      fill: $color-btn-hover
+    }
     svg {
       fill: #DCE8E2;
+      transition: fill .3s ease-in-out;
     }
 
     &_active svg {
@@ -170,47 +174,16 @@
     .card {
       width: 205px;
       border-radius: 15px;
+    }
 
-      &__body {
-        padding: 15px;
-        border-radius: 0 0 15px 15px;
-      }
+    &_col {
+      flex-direction: column;
+      gap: 25px;
 
-      &__link_img {
-        height: 270px;
-        border-radius: 15px 15px 0 0;
-
-        img {
-          border-radius: 15px 15px 0 0;
-        }
-      }
-
-      &__link_title {
-        font-size: 15px;
-      }
-
-      .new-price {
-        font-size: 22px;
-
-        .text-gray{
-          font-size: 11px;
-        }
-      }
-
-      .old-price,
-      .discount {
-        font-size: 15px;
-      }
-
-      .rating__value,
-      .review__value {
-        font-size: 12px;
-      }
-
-      &__btn {
-        padding: 10px 12px;
-        font-size: 12px;
-        border-radius: 60px;
+      .card {
+        width: 100%;
+        border-radius: 17px;
+        flex-direction: row;
       }
     }
   }

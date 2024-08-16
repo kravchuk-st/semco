@@ -4,6 +4,16 @@
     border-radius: 15px;
     background: right bottom / contain no-repeat url("/assets/img/hands.png"),
                 $color-secondary center / cover no-repeat url("/assets/img/weight-bg.png");
+
+    &.green {
+      background: right bottom / contain no-repeat url("/assets/img/boxgreens.png"),
+                $color-secondary center / cover no-repeat url("/assets/img/green-bg.png");
+    }
+
+    &.bundle {
+      background: right bottom / 704px auto no-repeat url("/assets/img/bundle.png"),
+                $color-secondary center / cover no-repeat url("/assets/img/green-bg.png");
+    }
   }
 
   &__info {
@@ -87,6 +97,21 @@
       background: right bottom / contain no-repeat url("/assets/img/strengths/2.png"),
                   $color-secondary center / cover no-repeat url("/assets/img/strengths/bg2.png");
     }
+
+    &.hands {
+      background: right bottom / contain no-repeat url("/assets/img/strengths/3.png"),
+                  $color-secondary center / cover no-repeat url("/assets/img/strengths/bg0.png");
+    }
+
+    &.hands-reverse {
+      background: right bottom / contain no-repeat url("/assets/img/strengths/4.png"),
+                  $color-secondary center / cover no-repeat url("/assets/img/strengths/bg0.png");
+    }
+
+    &.box {
+      background: right bottom / contain no-repeat url("/assets/img/strengths/5.png"),
+                  $color-secondary center / cover no-repeat url("/assets/img/strengths/bg2.png");
+    }
   }
 
   &__bottom {
@@ -148,6 +173,7 @@
 
   &__title .text-active {
     display: block;
+    font-weight: 500;
   }
 
   &__descr {
@@ -207,8 +233,10 @@
     }
 
     &__text {
+      max-width: 185px;
       margin-top: 10px;
       font-size: 15px;
+      color: #6E6E6E;
     }
   }
 }

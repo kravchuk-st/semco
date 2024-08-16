@@ -62,6 +62,12 @@
         &::placeholder {
           color: #929292;
         }
+
+        &[type="tel"] {
+          padding-left: 45px;
+          text-align: left;
+          background: left 17px center / 16px 12px no-repeat url("/assets/img/svg/flags/russia.svg");
+        }
       }
 
       .btn {
@@ -429,6 +435,186 @@
         &__link {
           margin-top: 6px;
           font-size: 9px;
+        }
+      }
+    }
+
+    &_katalog {
+      max-width: 1160px;
+      border-radius: 30px;
+
+      .tabs {
+        display: flex;
+
+        &__nav {
+          flex-shrink: 0;
+          padding: 45px 28px 54px 20px;
+          background-color: #F1F9F5;
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+
+          &-btn {
+            width: 100%;
+            max-width: 290px;
+            padding: 6px;
+            padding-right: 18px;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 1.2;
+            letter-spacing: 0;
+            border: 1px solid $color-main;
+            text-align: left;
+            border-radius: 20px;
+            color: $color-main;
+            display: flex;
+            align-items: center;
+            column-gap: 9px;
+            transition: .3s ease-in-out;
+
+            &:hover {
+              color: #fff;
+              background-color: $color-btn-hover;
+              border-color: $color-btn-hover;
+            }
+
+            &--active {
+              color: #FEFEFE;
+              background-color: $color-main;
+
+              .tabs__nav-icon {
+                background-color: #FEFEFE;
+              }
+            }
+          }
+
+          &-icon {
+            width: 34px;
+            height: 34px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            fill: $color-main;
+            transition: .3s ease-in-out;
+          }
+        }
+
+        &__content {
+          width: 100%;
+        }
+
+        &__panel {
+          padding: 42px 46px;
+
+          &-header {
+            margin-bottom: 27px;
+            display: flex;
+            align-items: center;
+            column-gap: 20px;
+          }
+
+          &-title {
+            font-size: 35px;
+            line-height: 1.2;
+            color: #272727;
+          }
+
+          &-icon {
+            fill: $color-main;
+          }
+
+          &-body {
+            max-height: 440px;
+            display: grid;
+            grid-template-columns: repeat(4, auto);
+            justify-content: start;
+            gap: 15px 40px;
+            overflow-y: auto;
+            scrollbar-width: thin;
+            scrollbar-color: $color-main #f9f9fd;
+
+            &::-webkit-scrollbar {
+              width: 10px;
+              background-color: #f9f9fd;
+            }
+            
+            &::-webkit-scrollbar-thumb {
+              border-radius: 10px;
+              background-color: $color-main;
+              cursor: pointer;
+            }
+            
+            &::-webkit-scrollbar-track {
+              -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.2);
+              border-radius: 10px;
+              background-color: #f9f9fd;
+            }
+          }
+
+          &-link {
+            font-size: 14px;
+            font-weight: 400;
+            letter-spacing: 0;
+            color: #272727;
+            text-align: left;
+            transition: color .3s ease-in-out;
+
+            &:hover {
+              color: $color-main;
+            }
+          }
+
+          &-links {
+            &--btn {
+              display: flex;
+              align-items: center;
+              column-gap: 7px;
+              font-size: 14px;
+              line-height: 1.2;
+              font-weight: 400;
+              letter-spacing: 0;
+              color: #272727;
+              transition: color .3s ease-in-out;
+
+              &:hover {
+                color: $color-btn-hover;
+
+                .tabs__panel-links--icon {
+                  stroke: $color-btn-hover;
+                }
+              }
+
+              &.open {
+                color: $color-main;
+
+                .tabs__panel-links--icon {
+                  stroke: $color-main;
+                  transform: rotate(-90deg);
+                }
+  
+                & ~ .tabs__panel-links--body {
+                  display: flex;
+                }
+              }
+            }
+
+            &--icon {
+              width: 10px;
+              height: 8px;
+              fill: none;
+              stroke: #272727;
+              transition: stroke .3s ease-in, transform .3s linear;
+            }
+
+            &--body {
+              display: none;
+              margin-top: 7px;
+              padding-left: 10px;
+              flex-direction: column;
+              row-gap: 5px;
+            }
+          }
         }
       }
     }

@@ -56,7 +56,7 @@ class Modal {
 			}.bind(this));
 
 			this.modal.addEventListener('click', function(e) {
-				if (!e.target.classList.contains('modal__content') && !e.target.closest('.modal__content') && this.isOpen) {
+				if (!e.target.classList.contains('modal__layout') && !e.target.closest('.modal__layout') && this.isOpen) {
 					this.close();
 				}
 			}.bind(this));
@@ -130,7 +130,7 @@ class Modal {
 	enableScroll() {
 		let pagePosition = parseInt(document.body.dataset.position, 10);
 		this.unlockPadding();
-		document.body.style.top = 'auto';
+		document.body.style.top = null;
 		document.body.classList.remove('disable-scroll');
 		window.scroll({ top: pagePosition, left: 0 });
 		document.body.removeAttribute('data-position');

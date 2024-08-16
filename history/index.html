@@ -104,7 +104,7 @@
           <h1 class="history-banner__title">География продаж <span class="question-icon">?</span></h1>
           <a href="/catalog" class="btn btn-fill btn-reset">вернуться к каталогу</a>
         </div>
-        <img class="history-banner__img" src="/assets/img/history-baner.png" alt="...">
+        <img class="history-banner__img" src="/assets/img/delivery-bg.png" alt="...">
         <ul class="history-banner__list list-reset">
           <li class="history-banner__item">
             <div class="history-card">
@@ -870,8 +870,8 @@
 
       const disableDots = dots.filter((el) => parseInt(el.querySelector('.history__year').innerText) > currentYear);
       const {x: x2} = disableDots[disableDots.length - 1].getBoundingClientRect();
-      lineSvg.innerHTML += `<path d="M${width - BORDER_RADIUS_SVG},${yi - y0} H${x2 - leftLayout}" stroke="#cdcdcd" stroke-width="2" />`;
-      lineSvg.innerHTML += `<path d="M${x2 - leftLayout},${yi - y0} H0" stroke="white" stroke-width="2" />`;
+      lineSvg.innerHTML += `<path d="M${width - BORDER_RADIUS_SVG},${yi - y0} H${x2 - leftLayout}" stroke="#cdcdcd" stroke-width="3" />`;
+      lineSvg.innerHTML += `<path d="M${x2 - leftLayout},${yi - y0} H0" stroke="white" stroke-width="4" />`;
     }
   </script>
 </body>

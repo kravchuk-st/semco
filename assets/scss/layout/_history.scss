@@ -46,8 +46,13 @@
     line-height: 1.5;
     color: #000;
 
-    p:not(:first-child) {
-      margin-top: 25px;
+    p{
+      text-indent: 1.5em;
+      text-align: justify;
+
+      &:not(:first-child) {
+        margin-top: 25px;
+      }
     }
   }
 
@@ -185,10 +190,15 @@
 
   &__descr {
     padding-left: 10px;
-    font-size: 10px;
+    font-size: 12px;
     line-height: 1.4;
     color: $color-text;
     border-left: 2px solid #afe3c8;
+
+    p {
+      text-indent: 1.55em;
+      text-align: justify;
+    }
   }
   
   &__imgs {

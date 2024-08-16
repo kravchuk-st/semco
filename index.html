@@ -21,6 +21,9 @@
         c-51.5-51.5-134.6-51.5-186.1,0s-51.5,134.6,0,186.1l410.2,410l-410.2,410c-51.5,51.5-51.5,134.6,0,186.1
         c51.6,51.5,135,51.5,186.1,0l410.2-410l410.2,410c51.5,51.5,134.6,51.5,186.1,0c51.1-51.5,51.1-134.6-0.5-186.2L1082.2,896.6z"/>
     </symbol>
+    <symbol viewBox="0 0 10 6" xmlns="http://www.w3.org/2000/svg" id="modal_arrow">
+      <path d="M1 1L5 5L9 1"/>
+    </symbol>
   </svg>
   
   <header class="header">
@@ -29,8 +32,8 @@
         <a href="/" class="logo">
           <img src="/assets/img/svg/logo.svg" alt="logo" class="logo__icon">
         </a>
-        <img class="doll" src="/assets/img/svg/figure.svg" alt="doll">
-        <a href="/catalog" class="katalog-link btn-fill btn-reset">КАТАЛОГ</a>
+        <img class="doll" src="/assets/img/cipollino-sm.png" alt="doll">
+        <button class="katalog-link btn-fill btn-reset" data-path="katalog">КАТАЛОГ</button>
         <form class="search" action="#" method="post">
           <input class="search__input" type="text" placeholder="Поиск...">
           <button class="search__btn btn-reset" type="submit"></button>
@@ -95,7 +98,7 @@
         <div class="banner__slider splide">
           <div class="splide__track">
             <div class="splide__list">
-              <div class="splide__slide" style="background-image: url(/assets/img/slider/banner/0.jpg)">
+              <div class="splide__slide" style="background-image: url(/assets/img/slider/banner/0.png)">
                 <h1 class="banner__title">
                   История агрофирмы СЕМКО <span class="banner__text">обеспечиваем Вас качественными семенами с 1991 года</span>
                 </h1>
@@ -112,12 +115,36 @@
                 <a href="#" class="banner__link">В КАТАЛОГ</a>
               </div>
               <div class="splide__slide" style="background-image: url(/assets/img/slider/banner/3.jpg)">
-                <h2 class="banner__title">Перец сладкий для теплиц</h2>
+                <h2 class="banner__title">Перец сладкий для&nbsp;теплиц</h2>
                 <a href="#" class="banner__link">ПОСМОТРЕТЬ АССОРТИМЕНТ</a>
               </div>
               <div class="splide__slide" style="background-image: url(/assets/img/slider/banner/4.jpg)">
-                <h2 class="banner__title">Перец сладкий для открытого грунта</h2>
+                <h2 class="banner__title">Перец сладкий для&nbsp;открытого грунта</h2>
                 <a href="#" class="banner__link">ПОСМОТРЕТЬ АССОРТИМЕНТ</a>
+              </div>
+              <div class="splide__slide" style="background-image: url(/assets/img/slider/banner/5.jpg)">
+                <h2 class="banner__title">Порционные арбузы</h2>
+                <a href="#" class="banner__link">ПОСМОТРЕТЬ АССОРТИМЕНТ</a>
+              </div>
+              <div class="splide__slide" style="background-image: url(/assets/img/slider/banner/6.jpg)">
+                <h2 class="banner__title">Торфяные таблетки для рассады</h2>
+                <a href="#" class="banner__link">ПОСМОТРЕТЬ АССОРТИМЕНТ</a>
+              </div>
+              <div class="splide__slide" style="background-image: url(/assets/img/slider/banner/7.jpg)">
+                <h2 class="banner__title">Томаты для&nbsp;открытого грунта</h2>
+                <a href="#" class="banner__link">ПОСМОТРЕТЬ АССОРТИМЕНТ</a>
+              </div>
+              <div class="splide__slide" style="background-image: url(/assets/img/slider/banner/8.jpg)">
+                <h2 class="banner__title">Биф томаты для&nbsp;теплиц</h2>
+                <a href="#" class="banner__link">ПОСМОТРЕТЬ АССОРТИМЕНТ</a>
+              </div>
+              <div class="splide__slide" style="background-image: url(/assets/img/slider/banner/9.jpg)">
+                <h2 class="banner__title">Баклажаны на любой вкус</h2>
+                <a href="#" class="banner__link">ПОСМОТРЕТЬ АССОРТИМЕНТ</a>
+              </div>
+              <div class="splide__slide" style="background-image: url(/assets/img/slider/banner/10.jpg)">
+                <h2 class="banner__title">Партенокарпические гибриды огурца</h2>
+                <a href="#" class="banner__link">УРОЖАЙ БЕЗ ОПЫЛЕНИЯ</a>
               </div>
             </div>
             <ul class="splide__pagination"></ul>
@@ -221,7 +248,7 @@
       <div class="splide__track">
         <div class="splide__list">
           <div class="splide__slide card">
-            <a href="#" class="card__link_img btn-reset">
+            <a href="/product" class="card__link_img btn-reset">
               <img src="/assets/img/slider/goods/0.jpg" alt="slide">
             </a>
             <div class="card__body">
@@ -230,25 +257,29 @@
                 <p class="old-price">135 ₽</p>
                 <p class="discount">-10%</p>
               </div>
-              <a href="#" class="card__link_title btn-reset">Семена томатов Цитрон F1</a>
-              <div class="card__info">
-                <div class="rating">
-                  <svg class="rating__icon" aria-hidden="true">
-                      <use xlink:href="#star"></use>
-                    </svg>
-                  <p class="rating__value">5.0</p>
+              <a href="/product" class="card__link_title btn-reset">Семена томатов Цитрон F1</a>
+              <div class="card__bottom">
+                <div class="card__info">
+                  <div class="rating">
+                    <svg class="rating__icon" aria-hidden="true">
+                        <use xlink:href="#star"></use>
+                      </svg>
+                    <p class="rating__value">5.0</p>
+                  </div>
+                  <div class="review">
+                    <img src="/assets/img/svg/review.svg" alt="">
+                    <p class="review__value">18 отзывов</p>
+                  </div>
                 </div>
-                <div class="review">
-                  <img src="/assets/img/svg/review.svg" alt="">
-                  <p class="review__value">18 отзывов</p>
+                <div class="card__btns">
+                  <button class="card__btn btn-reset">добавить в корзину</button>
+                  <a href="#" class="card__link btn-reset">Оптовым покупателям</a>
                 </div>
               </div>
-              <button class="card__btn btn-reset">добавить в корзину</button>
-              <a href="#" class="card__link btn-reset">Оптовым покупателям</a>
             </div>
           </div>
           <div class="splide__slide card">
-            <a href="#" class="card__link_img btn-reset">
+            <a href="/product" class="card__link_img btn-reset">
               <img src="/assets/img/slider/goods/1.jpg" alt="slide">
             </a>
             <div class="card__body">
@@ -257,25 +288,29 @@
                 <p class="old-price">135 ₽</p>
                 <p class="discount">-10%</p>
               </div>
-              <a href="#" class="card__link_title btn-reset">Семена томатов Семко-Союз F1</a>
-              <div class="card__info">
-                <div class="rating">
-                  <svg class="rating__icon" aria-hidden="true">
-                      <use xlink:href="#star"></use>
-                    </svg>
-                  <p class="rating__value">5.0</p>
+              <a href="/product" class="card__link_title btn-reset">Семена томатов Цитрон F1</a>
+              <div class="card__bottom">
+                <div class="card__info">
+                  <div class="rating">
+                    <svg class="rating__icon" aria-hidden="true">
+                        <use xlink:href="#star"></use>
+                      </svg>
+                    <p class="rating__value">5.0</p>
+                  </div>
+                  <div class="review">
+                    <img src="/assets/img/svg/review.svg" alt="">
+                    <p class="review__value">18 отзывов</p>
+                  </div>
                 </div>
-                <div class="review">
-                  <img src="/assets/img/svg/review.svg" alt="">
-                  <p class="review__value">18 отзывов</p>
+                <div class="card__btns">
+                  <button class="card__btn btn-reset">добавить в корзину</button>
+                  <a href="#" class="card__link btn-reset">Оптовым покупателям</a>
                 </div>
               </div>
-              <button class="card__btn btn-reset">добавить в корзину</button>
-              <a href="#" class="card__link btn-reset">Оптовым покупателям</a>
             </div>
           </div>
           <div class="splide__slide card">
-            <a href="#" class="card__link_img btn-reset">
+            <a href="/product" class="card__link_img btn-reset">
               <img src="/assets/img/slider/goods/2.jpg" alt="slide">
             </a>
             <div class="card__body">
@@ -284,25 +319,29 @@
                 <p class="old-price">135 ₽</p>
                 <p class="discount">-10%</p>
               </div>
-              <a href="#" class="card__link_title btn-reset">Семена баклажанов Максик F1</a>
-              <div class="card__info">
-                <div class="rating">
-                  <svg class="rating__icon" aria-hidden="true">
-                      <use xlink:href="#star"></use>
-                    </svg>
-                  <p class="rating__value">5.0</p>
+              <a href="/product" class="card__link_title btn-reset">Семена баклажанов Максик F1</a>
+              <div class="card__bottom">
+                <div class="card__info">
+                  <div class="rating">
+                    <svg class="rating__icon" aria-hidden="true">
+                        <use xlink:href="#star"></use>
+                      </svg>
+                    <p class="rating__value">5.0</p>
+                  </div>
+                  <div class="review">
+                    <img src="/assets/img/svg/review.svg" alt="">
+                    <p class="review__value">18 отзывов</p>
+                  </div>
                 </div>
-                <div class="review">
-                  <img src="/assets/img/svg/review.svg" alt="review">
-                  <p class="review__value">18 отзывов</p>
+                <div class="card__btns">
+                  <button class="card__btn btn-reset">добавить в корзину</button>
+                  <a href="#" class="card__link btn-reset">Оптовым покупателям</a>
                 </div>
               </div>
-              <button class="card__btn btn-reset">добавить в корзину</button>
-              <a href="#" class="card__link btn-reset">Оптовым покупателям</a>
             </div>
           </div>
           <div class="splide__slide card">
-            <a href="#" class="card__link_img btn-reset">
+            <a href="/product" class="card__link_img btn-reset">
               <img src="/assets/img/slider/goods/3.jpg" alt="slide">
             </a>
             <div class="card__body">
@@ -311,21 +350,25 @@
                 <p class="old-price">135 ₽</p>
                 <p class="discount">-10%</p>
               </div>
-              <a href="#" class="card__link_title btn-reset">Семена огурцов Семко-Союз F1</a>
-              <div class="card__info">
-                <div class="rating">
-                  <svg class="rating__icon" aria-hidden="true">
-                      <use xlink:href="#star"></use>
-                    </svg>
-                  <p class="rating__value">5.0</p>
+              <a href="/product" class="card__link_title btn-reset">Семена огурцов Семко-Союз F1</a>
+              <div class="card__bottom">
+                <div class="card__info">
+                  <div class="rating">
+                    <svg class="rating__icon" aria-hidden="true">
+                        <use xlink:href="#star"></use>
+                      </svg>
+                    <p class="rating__value">5.0</p>
+                  </div>
+                  <div class="review">
+                    <img src="/assets/img/svg/review.svg" alt="">
+                    <p class="review__value">18 отзывов</p>
+                  </div>
                 </div>
-                <div class="review">
-                  <img src="/assets/img/svg/review.svg" alt="review">
-                  <p class="review__value">18 отзывов</p>
+                <div class="card__btns">
+                  <button class="card__btn btn-reset">добавить в корзину</button>
+                  <a href="#" class="card__link btn-reset">Оптовым покупателям</a>
                 </div>
               </div>
-              <button class="card__btn btn-reset">добавить в корзину</button>
-              <a href="#" class="card__link btn-reset">Оптовым покупателям</a>
             </div>
           </div>
         </div>
@@ -406,7 +449,7 @@
                 <img class="rating__source" src="/assets/img/svg/social/yandex.svg" alt="source">
               </div>
               <div class="author">
-                <img src="/assets/img/svg/user-icon.svg" alt="author" class="author__img">
+                <img src="/assets/img/ava.png" alt="author" class="author__img">
                 <p class="author__name">Евгений</p>
               </div>
               <p class="comment__text">
@@ -436,7 +479,7 @@
                 <img class="rating__source" src="/assets/img/svg/social/yandex.svg" alt="source">
               </div>
               <div class="author">
-                <img src="/assets/img/svg/user-icon.svg" alt="author" class="author__img">
+                <img src="/assets/img/ava.png" alt="author" class="author__img">
                 <p class="author__name">Анатолий</p>
               </div>
               <p class="comment__text">
@@ -449,18 +492,42 @@
           <button class="slider-btn prev-btn btn-reser splide__arrow--prev"></button>
           <div class="social-links">
             <a href="#" class="btn btn-fill btn-lg btn-reset">больше отзывов</a>
-            <a href="#" class="social-link btn-reset">
-              <img src="/assets/img/svg/social/google.svg" alt="google">
-            </a>
-            <a href="#" class="social-link btn-reset">
-              <img src="/assets/img/svg/social/yandex.svg" alt="yandex">
-            </a>
-            <a href="#" class="social-link btn-reset">
-              <img src="/assets/img/svg/social/vk.svg" alt="vk">
-            </a>
-            <a href="#" class="social-link btn-reset">
-              <img src="/assets/img/svg/social/youtube.svg" alt="youtube">
-            </a>
+            <div class="splide comments_splide" role="group">
+              <div class="splide__track">
+                <ul class="splide__list">
+                  <li class="splide__slide">
+                    <a href="#" class="social-link btn-reset">
+                      <img src="/assets/img/svg/social/google.svg" alt="google">
+                    </a>
+                  </li>
+                  <li class="splide__slide">
+                    <a href="#" class="social-link btn-reset">
+                      <img src="/assets/img/svg/social/yandex.svg" alt="yandex">
+                    </a>
+                  </li>
+                  <li class="splide__slide">
+                    <a href="#" class="social-link btn-reset">
+                      <img src="/assets/img/svg/social/vk.svg" alt="vk">
+                    </a>
+                  </li>
+                  <li class="splide__slide">
+                    <a href="#" class="social-link btn-reset">
+                      <img src="/assets/img/svg/social/youtube.svg" alt="youtube">
+                    </a>
+                  </li>
+                  <li class="splide__slide">
+                    <a href="#" class="social-link btn-reset">
+                      <img src="/assets/img/svg/social/tg.svg" alt="youtube">
+                    </a>
+                  </li>
+                  <li class="splide__slide">
+                    <a href="#" class="social-link btn-reset">
+                      <img src="/assets/img/svg/social/wa.svg" alt="youtube">
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
           <button class="slider-btn btn-reser splide__arrow--next"></button>
         </div>
@@ -715,15 +782,177 @@
           <p class="modal__info">Уже зарегистрированы? <button class="btn btn-active btn-reset" data-path="login">Войдите тут</button></p>
         </div>
       </div>
+
+      <div class="modal__content modal__content_katalog" data-target="katalog">
+        <div class="tabs" data-tabs="tab">
+          <ul class="tabs__nav list-reset">
+            <li class="tabs__nav-item"><button class="tabs__nav-btn btn-reset" type="button">
+              <span class="tabs__nav-icon" aria-hidden="true">
+                <svg aria-hidden="true" width="19" height="19">
+                  <use xlink:href="/assets/img/svg/katalog/0.svg#icon"></use>
+                </svg>
+              </span>Семена томатов
+            </button></li>
+            <li class="tabs__nav-item"><button class="tabs__nav-btn btn-reset" type="button">
+              <span class="tabs__nav-icon" aria-hidden="true">
+                <svg aria-hidden="true" width="22" height="24">
+                  <use xlink:href="/assets/img/svg/katalog/1.svg#icon"></use>
+                </svg>
+              </span>Семена зелени
+            </button></li>
+            <li class="tabs__nav-item"><button class="tabs__nav-btn btn-reset" type="button">
+              <span class="tabs__nav-icon" aria-hidden="true">
+                <svg aria-hidden="true" width="20" height="20">
+                  <use xlink:href="/assets/img/svg/katalog/2.svg#icon"></use>
+                </svg>
+              </span>Семена микрозелени
+            </button></li>
+            <li class="tabs__nav-item"><button class="tabs__nav-btn btn-reset" type="button">
+              <span class="tabs__nav-icon" aria-hidden="true">
+                <svg aria-hidden="true" width="22" height="22">
+                  <use xlink:href="/assets/img/svg/katalog/3.svg#icon"></use>
+                </svg>
+              </span>Семена цветов и трав
+            </button></li>
+            <li class="tabs__nav-item"><button class="tabs__nav-btn btn-reset" type="button">
+              <span class="tabs__nav-icon" aria-hidden="true">
+                <svg aria-hidden="true" width="22" height="22">
+                  <use xlink:href="/assets/img/svg/katalog/4.svg#icon"></use>
+                </svg>
+              </span>Наборы семян
+            </button></li>
+            <li class="tabs__nav-item"><button class="tabs__nav-btn btn-reset" type="button">
+              <span class="tabs__nav-icon" aria-hidden="true">
+                <svg aria-hidden="true" width="22" height="25">
+                  <use xlink:href="/assets/img/svg/katalog/5.svg#icon"></use>
+                </svg>
+              </span>Удобрения и биопрепараты
+            </button></li>
+            <li class="tabs__nav-item"><button class="tabs__nav-btn btn-reset" type="button">
+              <span class="tabs__nav-icon" aria-hidden="true">
+                <svg aria-hidden="true" width="20" height="25">
+                  <use xlink:href="/assets/img/svg/katalog/6.svg#icon"></use>
+                </svg>
+              </span>Литература
+            </button></li>
+            <li class="tabs__nav-item"><button class="tabs__nav-btn btn-reset" type="button">
+              <span class="tabs__nav-icon" aria-hidden="true">
+                <svg aria-hidden="true" width="21" height="24">
+                  <use xlink:href="/assets/img/svg/katalog/7.svg#icon"></use>
+                </svg>
+              </span>Лук-севок
+            </button></li>
+          </ul>
+          <div class="tabs__content">
+            <div class="tabs__panel">
+              <div class="tabs__panel-header">
+                <p class="tabs__panel-title">Семена томатов</p>
+                <svg class="tabs__panel-icon" aria-hidden="true" width="29" height="29">
+                  <use xlink:href="/assets/img/svg/katalog/0.svg#icon"></use>
+                </svg>
+              </div>
+              <div class="tabs__panel-body">
+                <a href="/catalog" class="tabs__panel-link btn-reset">Семена зелени</a>
+                <a href="/catalog" class="tabs__panel-link btn-reset">Семена зелени</a>
+                <a href="/catalog" class="tabs__panel-link btn-reset">Семена зелени</a>
+                <a href="/catalog" class="tabs__panel-link btn-reset">Семена зелени</a>
+                <a href="/catalog" class="tabs__panel-link btn-reset">Семена зелени</a>
+                <a href="/catalog" class="tabs__panel-link btn-reset">Семена зелени</a>
+                <a href="/catalog" class="tabs__panel-link btn-reset">Семена зелени</a>
+                <a href="/catalog" class="tabs__panel-link btn-reset">Семена зелени</a>
+                <div class="tabs__panel-links">
+                  <button class="tabs__panel-links--btn btn-reset">
+                    Семена зелени
+                    <svg class="tabs__panel-links--icon" aria-hidden="true">
+                      <use xlink:href="#modal_arrow"></use>
+                    </svg>
+                  </button>
+                  <div class="tabs__panel-links--body">
+                    <a href="/catalog" class="tabs__panel-link btn-reset">Семена зелени</a>
+                    <a href="/catalog" class="tabs__panel-link btn-reset">Семена зелени</a>
+                  </div>
+                </div>
+                <div class="tabs__panel-links">
+                  <button class="tabs__panel-links--btn btn-reset">
+                    Семена зелени
+                    <svg class="tabs__panel-links--icon" aria-hidden="true">
+                      <use xlink:href="#modal_arrow"></use>
+                    </svg>
+                  </button>
+                  <div class="tabs__panel-links--body">
+                    <a href="/catalog" class="tabs__panel-link btn-reset">Семена зелени</a>
+                    <a href="/catalog" class="tabs__panel-link btn-reset">Семена зелени</a>
+                  </div>
+                </div>
+                <div class="tabs__panel-links">
+                  <button class="tabs__panel-links--btn btn-reset">
+                    Семена зелени
+                    <svg class="tabs__panel-links--icon" aria-hidden="true">
+                      <use xlink:href="#modal_arrow"></use>
+                    </svg>
+                  </button>
+                  <div class="tabs__panel-links--body">
+                    <a href="/catalog" class="tabs__panel-link btn-reset">Семена зелени</a>
+                    <a href="/catalog" class="tabs__panel-link btn-reset">Семена зелени</a>
+                  </div>
+                </div>
+                <div class="tabs__panel-links">
+                  <button class="tabs__panel-links--btn btn-reset">
+                    Семена зелени
+                    <svg class="tabs__panel-links--icon" aria-hidden="true">
+                      <use xlink:href="#modal_arrow"></use>
+                    </svg>
+                  </button>
+                  <div class="tabs__panel-links--body">
+                    <a href="/catalog" class="tabs__panel-link btn-reset">Семена зелени</a>
+                    <a href="/catalog" class="tabs__panel-link btn-reset">Семена зелени</a>
+                  </div>
+                </div>
+                <a href="/catalog" class="tabs__panel-link btn-reset">Семена зелени</a>
+                <a href="/catalog" class="tabs__panel-link btn-reset">Семена зелени</a>
+                <a href="/catalog" class="tabs__panel-link btn-reset">Семена зелени</a>
+                <a href="/catalog" class="tabs__panel-link btn-reset">Семена зелени</a>
+                <a href="/catalog" class="tabs__panel-link btn-reset">Семена зелени</a>
+                <a href="/catalog" class="tabs__panel-link btn-reset">Семена зелени</a>
+                <a href="/catalog" class="tabs__panel-link btn-reset">Семена зелени</a>
+                <a href="/catalog" class="tabs__panel-link btn-reset">Семена зелени</a>
+              </div>
+            </div>
+            <div class="tabs__panel">
+              
+            </div>
+            <div class="tabs__panel">
+              
+            </div>
+            <div class="tabs__panel">
+              
+            </div>
+            <div class="tabs__panel">
+              
+            </div>
+            <div class="tabs__panel">
+              
+            </div>
+            <div class="tabs__panel">
+              
+            </div>
+            <div class="tabs__panel">
+              
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 
+  <script src="/assets/js/tabs.js"></script>
   <script src="/assets/js/lib/splide.min.js"></script>
   <script src="/assets/js/lib/inputmask.min.js"></script>
   <script src="/assets/js/sliders/banner.js"></script>
   <script src="/assets/js/sliders/cards.js"></script>
   <script src="/assets/js/sliders/discount.js"></script>
   <script src="/assets/js/sliders/comments.js"></script>
+  <script src="/assets/js/sliders/comments-links.js"></script>
   <script src="/assets/js/showAdvantage.js"></script>
   <script src="/assets/js/scrollTop.js"></script>
   <script>
@@ -731,5 +960,11 @@
   </script>
   <script src="/assets/js/modal.js"></script>
   <script src="/assets/js/maskFone.js"></script>
+  <script>
+    const modalCatalogLinks = [...document.querySelectorAll('.tabs__panel-links--btn')];
+    modalCatalogLinks.forEach(el => {
+      el.addEventListener('click', (e) => e.target.classList.toggle('open'));
+    })
+  </script>
 </body>
 </html>

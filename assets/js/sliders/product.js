@@ -34,6 +34,32 @@ var thumbnails = new Splide( '.product__slider_second', {
   // },
 } );
 
-main.sync( thumbnails );
+var thumbnails = document.querySelectorAll( '.product__slider_second-md .splide__slide' );
+var current;
+
+for ( var i = 0; i < thumbnails.length; i++ ) {
+  initThumbnail( thumbnails[ i ], i );
+}
+
+function initThumbnail( thumbnail, index ) {
+  thumbnail.addEventListener( 'click', function () {
+    main.go( index );
+  } );
+}
+
+main.on( 'mounted move', function () {
+  var thumbnail = thumbnails[ main.index ];
+
+  if ( thumbnail ) {
+    if ( current ) {
+      current.classList.remove( 'is-active' );
+    }
+
+    thumbnail.classList.add( 'is-active' );
+    current = thumbnail;
+  }
+} );
+
+// main.sync( thumbnails );
 main.mount();
-thumbnails.mount();
+// thumbnails.mount();
