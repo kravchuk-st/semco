@@ -1,17 +1,24 @@
 .modal {
-  width: 100vw;
-  height: 100vh;
+  padding: 70px 0;
   background-color: #03030350;
   position: fixed;
-  top: 0;
   left: 0;
-  z-index: 100;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
+  text-align: center;
   opacity: 0;
   visibility: hidden;
+  overflow-y: auto;
   transition: .3s ease-in-out;
+
+  &::before {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+  }
 
   &.open {
     opacity: 1;
@@ -23,12 +30,16 @@
   }
 
   &__layout {
+    display: inline-block;
+    width: fit-content;
     position: relative;
     z-index: 0;
+    text-align: left;
     border-radius: 20px;
     overflow: hidden;
     transform: scale(0);
     transition: .3s ease-in-out;
+    vertical-align: middle;
   }
 
   &__content {
@@ -410,10 +421,13 @@
           font-size: 13px;
         }
 
-        &__info {
+        &__bottom {
           margin-top: 9px;
+          row-gap: 12px;
+        }
+
+        &__info {
           font-size: 11px;
-          column-gap: 12px;
         }
 
         .rating,
@@ -426,14 +440,16 @@
           width: 11px;
         }
 
+        &__btns {
+          row-gap: 6px;
+        }
+
         &__btn {
-          margin-top: 12px;
           padding: 8px 15px;
           font-size: 9px;
         }
 
         &__link {
-          margin-top: 6px;
           font-size: 9px;
         }
       }

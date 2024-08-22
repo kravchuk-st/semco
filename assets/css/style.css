@@ -1164,19 +1164,25 @@ input::-webkit-inner-spin-button {
 }
 
 .modal {
-  width: 100vw;
-  height: 100vh;
+  padding: 70px 0;
   background-color: rgba(3, 3, 3, 0.3137254902);
   position: fixed;
-  top: 0;
   left: 0;
-  z-index: 100;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
+  text-align: center;
   opacity: 0;
   visibility: hidden;
+  overflow-y: auto;
   transition: 0.3s ease-in-out;
+}
+.modal::before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  height: 100%;
 }
 .modal.open {
   opacity: 1;
@@ -1186,12 +1192,17 @@ input::-webkit-inner-spin-button {
   transform: scale(1);
 }
 .modal__layout {
+  display: inline-block;
+  width: -moz-fit-content;
+  width: fit-content;
   position: relative;
   z-index: 0;
+  text-align: left;
   border-radius: 20px;
   overflow: hidden;
   transform: scale(0);
   transition: 0.3s ease-in-out;
+  vertical-align: middle;
 }
 .modal__content {
   display: none;
@@ -1507,11 +1518,12 @@ input::-webkit-inner-spin-button {
   margin-top: 6px;
   font-size: 13px;
 }
-.modal__content_calc .card__info {
+.modal__content_calc .card__bottom {
   margin-top: 9px;
+  row-gap: 12px;
+}
+.modal__content_calc .card__info {
   font-size: 11px;
-  -moz-column-gap: 12px;
-       column-gap: 12px;
 }
 .modal__content_calc .card .rating,
 .modal__content_calc .card .review {
@@ -1522,13 +1534,14 @@ input::-webkit-inner-spin-button {
 .modal__content_calc .card .review img {
   width: 11px;
 }
+.modal__content_calc .card__btns {
+  row-gap: 6px;
+}
 .modal__content_calc .card__btn {
-  margin-top: 12px;
   padding: 8px 15px;
   font-size: 9px;
 }
 .modal__content_calc .card__link {
-  margin-top: 6px;
   font-size: 9px;
 }
 .modal__content_katalog {
@@ -1826,6 +1839,8 @@ h2 {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  -moz-column-gap: 12px;
+       column-gap: 12px;
 }
 .header__call {
   margin-left: auto;
@@ -3007,7 +3022,7 @@ h2 {
 .catalog .sidebar {
   max-width: 260px;
   padding: 20px 15px 25px;
-  background: #f1f9f5;
+  background-color: #f1f9f5;
   border-radius: 15px;
 }
 .catalog-settings {
@@ -3565,7 +3580,7 @@ input[type=range]::-moz-range-thumb {
 }
 .hero__text {
   margin-top: 15px;
-  font-size: 14px;
+  font-size: 18px;
   line-height: 1.5;
   text-indent: 1.5em;
   text-align: justify;
