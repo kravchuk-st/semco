@@ -90,7 +90,7 @@
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    row-gap: 15px;
+    gap: 15px;
 
     .btn-light {
       max-width: 308px;
@@ -105,5 +105,219 @@
     font-size: 13px;
     line-height: 1.6;
     letter-spacing: 0.16em;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .proposition__content_sale .proposition__form {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .proposition__content {
+    flex-direction: column;
+    row-gap: 30px;
+    background: right bottom / 330px auto no-repeat url("/assets/img/proposition-img-sm.png"), #03a753 center / cover url("/assets/img/proposition-bg.png");
+
+    &_empty {
+      background: #03a753 center / cover url("/assets/img/proposition-bg-sm.png");
+
+      .proposition__descr {
+        margin-top: 0;
+      }
+
+      .proposition__btns {
+        max-width: none;
+        flex-direction: row;
+      }
+    }
+
+    &_sale {
+
+    }
+  }
+
+  .proposition__info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 20px;
+  }
+
+  .proposition__title {
+    flex-shrink: 0;
+  }
+
+  .proposition__descr {
+    margin-top: 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .proposition__content {
+    padding: 25px;
+    padding-right: 20px;
+    border-radius: 15px;
+    background: right -50px bottom / 300px auto no-repeat url("/assets/img/proposition-img-sm.png"), #03a753 left center / cover url("/assets/img/proposition-bg-sm.png");
+
+    &_empty {
+      padding: 30px 20px 40px;
+      gap: 0;
+      background: #03a753 left center / cover url("/assets/img/proposition-bg-sm.png") !important; 
+
+      .proposition__info {
+        display: contents;
+      }
+
+      .proposition__title {
+        max-width: none;
+        font-size: 30px;
+      }
+
+      .proposition__form {
+        margin-top: 35px;
+        max-width: none;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 20px;
+
+        & > * {
+          width: calc(50% - 10px);
+        }
+      }
+
+      .proposition__descr {
+        order: 2;
+        margin-top: 15px;
+      }
+    }
+
+    &_sale .proposition__btns {
+      display: none;
+    }
+  }
+
+  .proposition__info {
+    align-items: flex-start;
+    gap: 0;
+  }
+
+  .proposition__title {
+    max-width: 310px;
+    font-size: 25px;
+  }
+
+  .proposition__form {
+    max-width: 310px;
+  }
+
+  .banner__slider_promotions {
+    margin-top: 30px;
+    margin-bottom: 0;
+  }
+
+  .slider_destroy .wrapper {
+    display: none;
+  }
+
+  .slider_destroy .splide__track {
+    margin-top: 0;
+    padding: 0 30px;
+  }
+
+  .slider_destroy .splide__list {
+    display: flex !important;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+
+    .card {
+      width: 180px;
+    }
+  }
+
+  .slider_destroy_second .splide__list .card:nth-child(n + 4) {
+    display: none;
+  }
+}
+
+
+@media screen and (max-width: 610px) {
+  .proposition__content {
+    padding-bottom: 150px;
+    background: center bottom / auto 135px no-repeat url("/assets/img/proposition-img-sm.png"), #03a753 left center / cover url("/assets/img/proposition-bg-sm.png");
+  }
+
+  .proposition__info {
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 10px;
+
+    & > * {
+      width: 100%;
+      max-width: none;
+      text-align: center;
+    }
+  }
+
+  .proposition__title {
+    font-size: 20px;
+  }
+
+  .proposition__form {
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .proposition__content {
+    padding: 20px 20px 150px;
+    row-gap: 20px;
+
+    &_empty {
+      padding: 20px 20px 25px;
+      row-gap: 0;
+
+      .proposition__title {
+        font-size: 20px;
+      }
+
+      .proposition__form {
+        margin-top: 20px;
+        flex-direction: column;
+        row-gap: 10px;
+
+        & > * {
+          width: 100%;
+        }
+      }
+
+      .proposition__descr {
+        margin-top: 10px;
+      }
+    }
+  }
+
+  .proposition__form .form-input {
+    padding: 16px 15px;
+    text-align: center;
+    font-size: 12px;
+  }
+
+  .slider_destroy .splide__track {
+    padding: 0 10px;
+  }
+
+  .slider_destroy .splide__list {
+    gap: 10px 20px;
+
+    .card {
+      width: 145px;
+    }
+  }
+
+  .slider_destroy_second .splide__list .card:nth-child(n + 5) {
+    display: flex;
   }
 }

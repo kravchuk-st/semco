@@ -16,21 +16,19 @@
     <symbol viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg" id="star">
       <path d="M11.9381 4.35458C11.8877 4.19634 11.7908 4.05696 11.6599 3.95463C11.5291 3.8523 11.3705 3.79177 11.2048 3.78095L8.20769 3.57121L7.09591 0.771631C7.03574 0.616857 6.93022 0.483868 6.79318 0.390091C6.65614 0.296313 6.49396 0.246122 6.3279 0.246094H6.32712C6.16132 0.246389 5.99946 0.296709 5.86272 0.390472C5.72598 0.484235 5.62072 0.617078 5.56069 0.771631L4.43235 3.58737L1.45181 3.78095C1.28608 3.79177 1.12746 3.8523 0.99665 3.95463C0.865838 4.05696 0.768906 4.19634 0.718501 4.35458C0.665326 4.51508 0.661709 4.68786 0.70812 4.85044C0.75453 5.01302 0.848819 5.15786 0.978706 5.26609L3.27167 7.20423L2.58962 9.88711C2.5426 10.0678 2.55125 10.2585 2.61442 10.4342C2.67759 10.61 2.79234 10.7625 2.94365 10.8719C3.08974 10.9782 3.26444 11.0381 3.44501 11.0437C3.62558 11.0493 3.80367 11.0005 3.95609 10.9035L6.3216 9.40494C6.32475 9.40257 6.3279 9.401 6.335 9.40494L8.88029 11.0174C9.01847 11.1057 9.18008 11.1502 9.34397 11.1452C9.50787 11.1401 9.66642 11.0857 9.79889 10.989C9.936 10.8899 10.04 10.7517 10.0972 10.5925C10.1545 10.4334 10.1624 10.2606 10.1198 10.0969L9.39518 7.16599L11.6779 5.26609C11.8078 5.15786 11.9021 5.01302 11.9485 4.85044C11.9949 4.68786 11.9913 4.51508 11.9381 4.35458Z"/>
     </symbol>
-    <symbol viewBox="0 0 1792 1792" xmlns="http://www.w3.org/1999/xlink" id="close">
-      <path d="M1082.2,896.6l410.2-410c51.5-51.5,51.5-134.6,0-186.1s-134.6-51.5-186.1,0l-410.2,410L486,300.4
-        c-51.5-51.5-134.6-51.5-186.1,0s-51.5,134.6,0,186.1l410.2,410l-410.2,410c-51.5,51.5-51.5,134.6,0,186.1
-        c51.6,51.5,135,51.5,186.1,0l410.2-410l410.2,410c51.5,51.5,134.6,51.5,186.1,0c51.1-51.5,51.1-134.6-0.5-186.2L1082.2,896.6z"/>
-    </symbol>
     <symbol viewBox="0 0 10 6" xmlns="http://www.w3.org/2000/svg" id="modal_arrow">
       <path d="M1 1L5 5L9 1"/>
     </symbol>
   </svg>
   
   <header class="header">
-    <div class="wrapper">
-      <div class="header__top">
+    <div class="header__top">
+      <div class="wrapper">
         <a href="/" class="logo">
-          <img src="/assets/img/svg/logo.svg" alt="logo" class="logo__icon">
+          <picture>
+            <source srcset="/assets/img/svg/logo-light.svg" media="(max-width: 1100px)" />
+            <img class="logo__icon" src="/assets/img/svg/logo.svg" alt="logo" />
+          </picture>
         </a>
         <img class="doll" src="/assets/img/cipollino-sm.png" alt="doll">
         <button class="katalog-link btn-fill btn-reset" data-path="katalog">КАТАЛОГ</button>
@@ -39,9 +37,19 @@
           <button class="search__btn btn-reset" type="submit"></button>
         </form>
         <div class="header__btns">
+          <div class="tooltip tooltip_search">
+            <button class="btn-change btn-reset" aria-labelledby="search-tooltip" aria-label="Открыть поиск">
+              <svg class="address__icon" aria-hidden="true" width="26" height="26">
+                <use xlink:href="/assets/img/svg/search-header.svg#icon"></use>
+              </svg>
+            </button>
+            <div class="tooltip__text" role="tooltip" id="search-tooltip">
+              <input class="input" placeholder="Поиск...">
+            </div>
+          </div>
           <a href="#" class="wishlist btn-reser">
             <span class="wishlist__icon">
-              <svg aria-hidden="true" width="22" height="18">
+              <svg  aria-hidden="true" width="22" height="18">
                 <use xlink:href="/assets/img/svg/heart.svg#heart"></use>
               </svg>
               <span class="wishlist__quantity">15</span>
@@ -50,7 +58,9 @@
           </a>
           <a href="#" class="cart btn-reser">
             <span class="cart__icon">
-              <img src="/assets/img/svg/cart.svg" alt="cart" class="cart__img">
+              <svg class="cart__img" aria-hidden="true" width="22" height="20">
+                <use xlink:href="/assets/img/svg/cart.svg#cart"></use>
+              </svg>
               <span class="cart__quantity">5</span>
             </span>
             <span class="cart__text">
@@ -58,10 +68,22 @@
               <span class="cart__price">3500 ₽</span>
             </span>
           </a>
-          <button class="account btn-reset" data-path="login">ВОЙТИ</button>
+          <button class="account btn-reset" data-path="login">
+            <svg class="account__icon" aria-hidden="true" width="20" height="20">
+              <use xlink:href="/assets/img/svg/user.svg#user"></use>
+            </svg>
+            <span class="account__text">ВОЙТИ</span>
+          </button>
+          <button class="burger btn-reset" aria-label="Бургер">
+            <span class="burger__line" aria-hidden="true"></span>
+            <span class="burger__line" aria-hidden="true"></span>
+            <span class="burger__line" aria-hidden="true"></span>
+          </button>
         </div>
       </div>
-      <div class="header__bottom">
+    </div>
+    <div class="header__bottom">
+      <div class="wrapper">
         <select class="select" name="city">
           <option value="МОСКВА" selected>МОСКВА</option>
           <option value="value2">ГОРОД 2</option>
@@ -219,7 +241,7 @@
 
     <section class="category">
       <div class="wrapper">
-        <div class="category__header">
+        <div class="section-header">
           <h2 class="category__title">Популярные категории товаров</h2>
           <a href="#" class="btn btn-lg btn-reset">Перейти в каталог</a>
         </div>
@@ -272,7 +294,7 @@
                   </div>
                 </div>
                 <div class="card__btns">
-                  <button class="card__btn btn-reset">добавить в корзину</button>
+                  <button class="card__btn btn-reset"><span>добавить </span>в корзину</button>
                   <a href="#" class="card__link btn-reset">Оптовым покупателям</a>
                 </div>
               </div>
@@ -303,7 +325,7 @@
                   </div>
                 </div>
                 <div class="card__btns">
-                  <button class="card__btn btn-reset">добавить в корзину</button>
+                  <button class="card__btn btn-reset"><span>добавить </span>в корзину</button>
                   <a href="#" class="card__link btn-reset">Оптовым покупателям</a>
                 </div>
               </div>
@@ -334,7 +356,7 @@
                   </div>
                 </div>
                 <div class="card__btns">
-                  <button class="card__btn btn-reset">добавить в корзину</button>
+                  <button class="card__btn btn-reset"><span>добавить </span>в корзину</button>
                   <a href="#" class="card__link btn-reset">Оптовым покупателям</a>
                 </div>
               </div>
@@ -365,7 +387,7 @@
                   </div>
                 </div>
                 <div class="card__btns">
-                  <button class="card__btn btn-reset">добавить в корзину</button>
+                  <button class="card__btn btn-reset"><span>добавить </span>в корзину</button>
                   <a href="#" class="card__link btn-reset">Оптовым покупателям</a>
                 </div>
               </div>
@@ -373,6 +395,7 @@
           </div>
         </div>
       </div>
+      <a href="#" class="btn btn-lg btn-reset">все новинки</a>
     </section>
 
     <section class="discount discount_slider splide">
@@ -387,14 +410,14 @@
         </div>
         <div class="splide__track">
           <div class="splide__list">
-            <a class="splide__slide discount__item" href="#" style="background-image: url(/assets/img/discounts/0.png)">
+            <a class="splide__slide discount__item discount__item_first" href="#">
               <span class="btn btn-fill">вам стоит взглянуть</span>
               <span>Скидки оптовым покупателям</span>
             </a>
-            <a class="splide__slide discount__item" href="#" style="background-image: url(/assets/img/discounts/1.png)">
+            <a class="splide__slide discount__item discount__item_second" href="#">
               <span>Скидки оптовым покупателям</span>
             </a>
-            <a class="splide__slide discount__item" href="#" style="background-image: url(/assets/img/discounts/2.png)">
+            <a class="splide__slide discount__item discount__item_thirds" href="#">
               <span>Скидки оптовым покупателям</span>
             </a>
           </div>
@@ -407,14 +430,13 @@
         <div class="content">
           <div class="catalog-download__descr">
             <h2 class="title">Скачайте каталог продукции в электронном виде .PDF</h2>
-            <p class="subtitle">Нажимая Отправить вы соглашаетесь с 
-              <a class="subtitle__link btn-reset" href="#">Политикой обработки персональных данных</a>
-            </p>
+            <p class="subtitle">Нажимая Отправить вы соглашаетесь с <a class="subtitle__link btn-reset" href="#">Политикой обработки персональных данных</a></p>
           </div>
           <img src="/assets/img/catalog-download-img.jpg" alt="catalog download">
           <form class="catalog-download__form" action="#" method="post">
             <input type="email" name="email" placeholder="Оставьте Ваш e-mail" required>
             <button class="form-btn btn-dark btn-reset" type="submit">Отправить</button>
+            <p class="subtitle">Нажимая Отправить вы соглашаетесь с <a class="subtitle__link btn-reset" href="#">Политикой обработки персональных данных</a></p>
           </form>
         </div>
       </div>
@@ -490,43 +512,41 @@
         </div>
         <div class="comments__btns splide__arrows">
           <button class="slider-btn prev-btn btn-reser splide__arrow--prev"></button>
-          <div class="social-links">
-            <a href="#" class="btn btn-fill btn-lg btn-reset">больше отзывов</a>
-            <div class="splide comments_splide" role="group">
-              <div class="splide__track">
-                <ul class="splide__list">
-                  <li class="splide__slide">
-                    <a href="#" class="social-link btn-reset">
-                      <img src="/assets/img/svg/social/google.svg" alt="google">
-                    </a>
-                  </li>
-                  <li class="splide__slide">
-                    <a href="#" class="social-link btn-reset">
-                      <img src="/assets/img/svg/social/yandex.svg" alt="yandex">
-                    </a>
-                  </li>
-                  <li class="splide__slide">
-                    <a href="#" class="social-link btn-reset">
-                      <img src="/assets/img/svg/social/vk.svg" alt="vk">
-                    </a>
-                  </li>
-                  <li class="splide__slide">
-                    <a href="#" class="social-link btn-reset">
-                      <img src="/assets/img/svg/social/youtube.svg" alt="youtube">
-                    </a>
-                  </li>
-                  <li class="splide__slide">
-                    <a href="#" class="social-link btn-reset">
-                      <img src="/assets/img/svg/social/tg.svg" alt="youtube">
-                    </a>
-                  </li>
-                  <li class="splide__slide">
-                    <a href="#" class="social-link btn-reset">
-                      <img src="/assets/img/svg/social/wa.svg" alt="youtube">
-                    </a>
-                  </li>
-                </ul>
-              </div>
+          <a href="#" class="btn btn-fill btn-lg btn-reset">больше отзывов</a>
+          <div class="splide comments_splide" role="group">
+            <div class="splide__track">
+              <ul class="splide__list">
+                <li class="splide__slide">
+                  <a href="#" class="social-link btn-reset">
+                    <img src="/assets/img/svg/social/google.svg" alt="google">
+                  </a>
+                </li>
+                <li class="splide__slide">
+                  <a href="#" class="social-link btn-reset">
+                    <img src="/assets/img/svg/social/yandex.svg" alt="yandex">
+                  </a>
+                </li>
+                <li class="splide__slide">
+                  <a href="#" class="social-link btn-reset">
+                    <img src="/assets/img/svg/social/vk.svg" alt="vk">
+                  </a>
+                </li>
+                <li class="splide__slide">
+                  <a href="#" class="social-link btn-reset">
+                    <img src="/assets/img/svg/social/youtube.svg" alt="youtube">
+                  </a>
+                </li>
+                <li class="splide__slide">
+                  <a href="#" class="social-link btn-reset">
+                    <img src="/assets/img/svg/social/tg.svg" alt="youtube">
+                  </a>
+                </li>
+                <li class="splide__slide">
+                  <a href="#" class="social-link btn-reset">
+                    <img src="/assets/img/svg/social/wa.svg" alt="youtube">
+                  </a>
+                </li>
+              </ul>
             </div>
           </div>
           <button class="slider-btn btn-reser splide__arrow--next"></button>
@@ -536,8 +556,8 @@
 
     <section class="articles">
       <div class="wrapper">
-        <div class="articles__header">
-          <h2>Полезные статьи и новости</h2>
+        <div class="section-header">
+          <h2>Полезные статьи и&nbsp;новости</h2>
           <a href="#" class="btn btn-lg btn-reset">перейти в блог</a>
         </div>
         <div class="articles__body">
@@ -546,7 +566,7 @@
             <div class="article__body">
               <time class="article__day" datetime="2022-08-30 19:00">30.08.2022</time>
               <h3 class="article__title">Какой-то заголовок для статьи</h3>
-              <a href="#" class="article__link btn-reset">читать подробнее</a>
+              <a href="#" class="article__link btn-reset">читать<span> подробнее</span></a>
             </div>
           </div>
           <div class="article">
@@ -554,7 +574,7 @@
             <div class="article__body">
               <time class="article__day" datetime="2022-08-30 19:00">30.08.2022</time>
               <h3 class="article__title">Какой-то заголовок для статьи</h3>
-              <a href="#" class="article__link btn-reset">читать подробнее</a>
+              <a href="#" class="article__link btn-reset">читать<span> подробнее</span></a>
             </div>
           </div>
           <div class="article">
@@ -562,7 +582,7 @@
             <div class="article__body">
               <time class="article__day" datetime="2022-08-30 19:00">30.08.2022</time>
               <h3 class="article__title">Какой-то заголовок для статьи</h3>
-              <a href="#" class="article__link btn-reset">читать подробнее</a>
+              <a href="#" class="article__link btn-reset">читать<span> подробнее</span></a>
             </div>
           </div>
         </div>
@@ -688,13 +708,8 @@
 
   <div class="modal">
     <div class="modal__layout">
-      <button class="close-btn btn-reset" aria-label="Закрыть модальное окно">
-        <svg aria-hidden="true" width="14" height="14">
-          <use xlink:href="#close"></use>
-        </svg>
-      </button>
-
       <div class="modal__content modal__content_login" data-target="login">
+        <button class="close-btn btn-reset" aria-label="Закрыть модальное окно"></button>
         <img class="modal__logo" src="/assets/img/svg/logo.svg" alt="Logo">
         <p class="modal__title">Войти</p>
         <p class="modal__subtitle">в личный кабинет</p>
@@ -712,6 +727,7 @@
       </div>
 
       <div class="modal__content modal__content_login" data-target="login-email">
+        <button class="close-btn btn-reset" aria-label="Закрыть модальное окно"></button>
         <img class="modal__logo" src="/assets/img/svg/logo.svg" alt="Logo">
         <p class="modal__title">Войти</p>
         <p class="modal__subtitle">в личный кабинет</p>
@@ -729,6 +745,7 @@
       </div>
 
       <div class="modal__content modal__content_login" data-target="auth">
+        <button class="close-btn btn-reset" aria-label="Закрыть модальное окно"></button>
         <img class="modal__logo" src="/assets/img/svg/logo.svg" alt="Logo">
         <p class="modal__title">Введите код</p>
         <p class="modal__subtitle">из СМС-сообщения</p>
@@ -746,6 +763,7 @@
       </div>
 
       <div class="modal__content modal__content_login" data-target="registration">
+        <button class="close-btn btn-reset" aria-label="Закрыть модальное окно"></button>
         <img class="modal__logo" src="/assets/img/svg/logo.svg" alt="Logo">
         <p class="modal__title">Зарегистрируйтесь</p>
         <p class="modal__subtitle">чтобы войти в личный кабинет</p>
@@ -765,6 +783,7 @@
       </div>
 
       <div class="modal__content modal__content_login" data-target="registration-email">
+        <button class="close-btn btn-reset" aria-label="Закрыть модальное окно"></button>
         <img class="modal__logo" src="/assets/img/svg/logo.svg" alt="Logo">
         <p class="modal__title">Зарегистрируйтесь</p>
         <p class="modal__subtitle">чтобы войти в личный кабинет</p>
@@ -945,6 +964,7 @@
     </div>
   </div>
 
+  <script src="/assets/js/burger.js"></script>
   <script src="/assets/js/tabs.js"></script>
   <script src="/assets/js/lib/splide.min.js"></script>
   <script src="/assets/js/lib/inputmask.min.js"></script>

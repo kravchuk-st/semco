@@ -42,6 +42,13 @@
     vertical-align: middle;
   }
 
+  .close-btn {
+    position: absolute;
+    z-index: 5;
+    top: 20px;
+    right: 20px;
+  }
+
   &__content {
     display: none;
     width: 90vw;
@@ -590,6 +597,7 @@
               line-height: 1.2;
               font-weight: 400;
               letter-spacing: 0;
+              text-align: left;
               color: #272727;
               transition: color .3s ease-in-out;
 

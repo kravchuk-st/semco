@@ -141,7 +141,7 @@
     display: flex;
     justify-content: space-between;
     align-items: start;
-    gap: 80px;
+    gap: 60px 80px;
   }
 
   .countries {
@@ -153,6 +153,7 @@
   .contry {
     &__header {
       display: flex;
+      align-items: baseline;
       gap: 6px;
     }
 
@@ -209,5 +210,148 @@
       height: auto;
       border-radius: 15px;
     }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .seligere__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px 25px;
+  }
+
+  .partners {
+    padding-bottom: 0;
+    border: none;
+  }
+
+  .partners__content {
+    flex-direction: column;
+  }
+
+  .partners .countries {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+
+  .partners .info {
+    width: 100%;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  .partners .info__content {
+    padding: 27px;
+  }
+
+  .partners .info__text {
+    max-width: 310px;
+  }
+
+  .actual-projects__title,
+  .actual-projects__content {
+    display: none;
+  }
+
+  .actual-projects__subtitle {
+    margin-top: 0;
+  }
+
+  .actual-projects__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .actual-projects__item {
+    max-width: none;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .partners {
+    margin-top: 40px;
+  }
+
+  .partners .countries {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .partners .contry__title {
+    font-size: 14px;
+
+    .text-gray {
+      margin-left: 0;
+      display: block;
+    }
+  }
+
+  .partners .contry__text {
+    margin-top: 10px;
+    font-size: 12px;
+  }
+
+  .partners__content {
+    margin-top: 20px;
+    row-gap: 50px;
+  }
+
+  .seligere__item {
+    font-size: 14px;
+  }
+
+  .seligere__title,
+  .partners__title,
+  .actual-projects__subtitle {
+    font-size: 18px;
+  }
+
+  .seligere__list {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .actual-projects__list {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .actual-projects__item {
+    padding: 40px 13px 15px;
+    border-radius: 11px;
+    background-position: 13px 13px;
+
+    &_light {
+      padding-top: 10px;
+    }
+
+    h4 {
+      margin-bottom: 7px;
+      font-size: 16px;
+    }
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .partners .info {
+    flex-direction: column;
+    background-color: transparent;
+  }
+
+  .partners .info__content {
+    width: 100%;
+    min-height: 210px;
+    background-color: $color-secondary;
+    border-radius: 15px;
+  }
+
+  .partners .info__img {
+    margin: -85px auto 0;
   }
 }

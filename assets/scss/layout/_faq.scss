@@ -18,3 +18,30 @@
     letter-spacing: 0.12em;
   }
 }
+
+@media screen and (max-width: 992px) {
+  .faq__header .faq__btn {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .faq .title {
+    max-width: 300px;
+  }
+
+  .faq__descr {
+    max-width: none;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .faq .title {
+    max-width: 200px;
+  }
+
+  .faq__descr {
+    margin-top: 10px;
+    font-size: 12px;
+  }
+}

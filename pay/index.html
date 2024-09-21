@@ -23,21 +23,24 @@
   </svg>
 
   <header class="header">
-    <div class="wrapper">
-      <div class="header__top">
+    <div class="header__top">
+      <div class="wrapper">
         <a href="/" class="logo">
-          <img src="/assets/img/svg/logo.svg" alt="logo" class="logo__icon">
+          <picture>
+            <source srcset="/assets/img/svg/logo-light.svg" media="(max-width: 1100px)" />
+            <img class="logo__icon" src="/assets/img/svg/logo.svg" alt="logo" />
+          </picture>
         </a>
         <img class="doll" src="/assets/img/cipollino-sm.png" alt="doll">
-        <a href="/catalog" class="katalog-link btn-fill btn-reset">КАТАЛОГ</a>
+        <button class="katalog-link btn-fill btn-reset" data-path="katalog">КАТАЛОГ</button>
         <form class="search" action="#" method="post">
-          <input class="search__input" type="text" placeholder="Поиск..." required>
+          <input class="search__input" type="text" placeholder="Поиск...">
           <button class="search__btn btn-reset" type="submit"></button>
         </form>
         <div class="header__btns">
           <a href="#" class="wishlist btn-reser">
             <span class="wishlist__icon">
-              <svg aria-hidden="true" width="22" height="18">
+              <svg  aria-hidden="true" width="22" height="18">
                 <use xlink:href="/assets/img/svg/heart.svg#heart"></use>
               </svg>
               <span class="wishlist__quantity">15</span>
@@ -46,7 +49,9 @@
           </a>
           <a href="#" class="cart btn-reser">
             <span class="cart__icon">
-              <img src="/assets/img/svg/cart.svg" alt="cart" class="cart__img">
+              <svg class="cart__img" aria-hidden="true" width="22" height="20">
+                <use xlink:href="/assets/img/svg/cart.svg#cart"></use>
+              </svg>
               <span class="cart__quantity">5</span>
             </span>
             <span class="cart__text">
@@ -54,10 +59,22 @@
               <span class="cart__price">3500 ₽</span>
             </span>
           </a>
-          <button class="account btn-reset">ВОЙТИ</button>
+          <button class="account btn-reset" data-path="login">
+            <svg class="account__icon" aria-hidden="true" width="20" height="20">
+              <use xlink:href="/assets/img/svg/user.svg#user"></use>
+            </svg>
+            <span class="account__text">ВОЙТИ</span>
+          </button>
+          <button class="burger btn-reset" aria-label="Бургер">
+            <span class="burger__line" aria-hidden="true"></span>
+            <span class="burger__line" aria-hidden="true"></span>
+            <span class="burger__line" aria-hidden="true"></span>
+          </button>
         </div>
       </div>
-      <div class="header__bottom">
+    </div>
+    <div class="header__bottom">
+      <div class="wrapper">
         <select class="select" name="city">
           <option value="МОСКВА" selected>МОСКВА</option>
           <option value="value2">ГОРОД 2</option>
@@ -127,8 +144,7 @@
                 <img class="content-payment__img" src="/assets/img/svg/pay/0.svg" alt="online payment">
                 <button class="content-payment__btn btn-lg btn-reset" data-path="pay">Подробнее</button>
               </div>
-              <p class="content-payment__descr">Мы принимает к оплате банковские карты</p>
-              <p class="content-payment__descr">VISA, MasterCard, МИР. Без комиссии для покупателей</p>
+              <p class="content-payment__descr"><span>Мы принимает к оплате банковские карты</span> <span>VISA, MasterCard, МИР. Без комиссии для покупателей</span></p>
             </div>
           </li>
           <li class="payment__item">
@@ -138,8 +154,7 @@
                 <img class="content-payment__img" src="/assets/img/svg/pay/1.svg" alt="online payment">
                 <button class="content-payment__btn btn-lg btn-reset">Подробнее</button>
               </div>
-              <p class="content-payment__descr">Моментальная оплата прямо с вашего смартфона.</p>
-              <p class="content-payment__descr">Используйте СБП для удобной и безопасной оплаты заказа без комиссии.</p>
+              <p class="content-payment__descr"><span>Моментальная оплата прямо с вашего смартфона.</span> <span>Используйте СБП для удобной и безопасной оплаты заказа без комиссии.</span></p>
             </div>
           </li>
           <li class="payment__item">
@@ -149,8 +164,7 @@
                 <img class="content-payment__img" src="/assets/img/svg/pay/2.svg" alt="online payment">
                 <button class="content-payment__btn btn-lg btn-reset">Подробнее</button>
               </div>
-              <p class="content-payment__descr">Персональная ссылка сразу после оформления заказа.</p>
-              <p class="content-payment__descr">Оплата через эквайринг Альфа-банка.</p>
+              <p class="content-payment__descr"><span>Персональная ссылка сразу после оформления заказа.</span> <span>Оплата через эквайринг Альфа-банка.</span></p>
             </div>
           </li>
           <li class="payment__item">
@@ -160,8 +174,7 @@
                 <img class="content-payment__img" src="/assets/img/svg/pay/3.svg" alt="online payment">
                 <button class="content-payment__btn btn-lg btn-reset">Подробнее</button>
               </div>
-              <p class="content-payment__descr">Оплата производится при получении заказа на почте.</p>
-              <p class="content-payment__descr">Без комиссии для покупателей</p>
+              <p class="content-payment__descr"><span>Оплата производится при получении заказа на почте.</span> <span>Без комиссии для покупателей</span></p>
             </div>
           </li>
           <li class="payment__item">
@@ -171,8 +184,7 @@
                 <img class="content-payment__img" src="/assets/img/svg/pay/4.svg" alt="online payment">
                 <button class="content-payment__btn btn-lg btn-reset">Подробнее</button>
               </div>
-              <p class="content-payment__descr">Данный способ оплаты возможен только</p>
-              <p class="content-payment__descr">для оплаты заказов, доставляемых курьером по Москве.</p>
+              <p class="content-payment__descr"><span>Данный способ оплаты возможен только</span> <span>для оплаты заказов, доставляемых курьером по Москве.</span></p>
             </div>
           </li>
           <li class="payment__item">
@@ -182,8 +194,7 @@
                 <img class="content-payment__img" src="/assets/img/svg/pay/5.svg" alt="online payment">
                 <button class="content-payment__btn btn-lg btn-reset">Подробнее</button>
               </div>
-              <p class="content-payment__descr">При оплате от имени юридического лица (организации или ИП)</p>
-              <p class="content-payment__descr">вы можете получить счет для оплаты.</p>
+              <p class="content-payment__descr"><span>При оплате от имени юридического лица (организации или ИП)</span> <span>вы можете получить счет для оплаты.</span></p>
             </div>
           </li>
         </ul>
@@ -580,8 +591,11 @@
             <p class="form__title">
               Можете просто оставить телефон и наши специалисты Вас проконсультируют
             </p>
-            <input class="form__input" type="tel" name="tel" placeholder="Ваш телефон">
-            <button class="form__btn btn-dark btn-lg btn-reset" type="submit">перезвоните мне</button>
+            <p class="form__subtitle">Оставить номер телефона</p>
+            <div class="form__body">
+              <input class="form__input" type="tel" name="tel" placeholder="Ваш телефон">
+              <button class="form__btn btn-dark btn-lg btn-reset" type="submit">перезвоните мне</button>
+            </div>
             <p class="form__text">Нажимая Подписаться вы соглашаетесь с&nbsp;<a href="#" target="_blank" rel="noopener noreferrer">Политикой обработки персональных данных</a></p>
           </form>
           <img src="/assets/img/map.png" alt="map" style="height: 354px;">

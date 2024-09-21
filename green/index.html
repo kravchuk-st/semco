@@ -13,21 +13,24 @@
 </head>
 <body>
   <header class="header">
-    <div class="wrapper">
-      <div class="header__top">
+    <div class="header__top">
+      <div class="wrapper">
         <a href="/" class="logo">
-          <img src="/assets/img/svg/logo.svg" alt="logo" class="logo__icon">
+          <picture>
+            <source srcset="/assets/img/svg/logo-light.svg" media="(max-width: 1100px)" />
+            <img class="logo__icon" src="/assets/img/svg/logo.svg" alt="logo" />
+          </picture>
         </a>
         <img class="doll" src="/assets/img/cipollino-sm.png" alt="doll">
-        <a href="/catalog" class="katalog-link btn-fill btn-reset">КАТАЛОГ</a>
+        <button class="katalog-link btn-fill btn-reset" data-path="katalog">КАТАЛОГ</button>
         <form class="search" action="#" method="post">
-          <input class="search__input" type="text" placeholder="Поиск..." required>
+          <input class="search__input" type="text" placeholder="Поиск...">
           <button class="search__btn btn-reset" type="submit"></button>
         </form>
         <div class="header__btns">
           <a href="#" class="wishlist btn-reser">
             <span class="wishlist__icon">
-              <svg aria-hidden="true" width="22" height="18">
+              <svg  aria-hidden="true" width="22" height="18">
                 <use xlink:href="/assets/img/svg/heart.svg#heart"></use>
               </svg>
               <span class="wishlist__quantity">15</span>
@@ -36,7 +39,9 @@
           </a>
           <a href="#" class="cart btn-reser">
             <span class="cart__icon">
-              <img src="/assets/img/svg/cart.svg" alt="cart" class="cart__img">
+              <svg class="cart__img" aria-hidden="true" width="22" height="20">
+                <use xlink:href="/assets/img/svg/cart.svg#cart"></use>
+              </svg>
               <span class="cart__quantity">5</span>
             </span>
             <span class="cart__text">
@@ -44,10 +49,22 @@
               <span class="cart__price">3500 ₽</span>
             </span>
           </a>
-          <button class="account btn-reset">ВОЙТИ</button>
+          <button class="account btn-reset" data-path="login">
+            <svg class="account__icon" aria-hidden="true" width="20" height="20">
+              <use xlink:href="/assets/img/svg/user.svg#user"></use>
+            </svg>
+            <span class="account__text">ВОЙТИ</span>
+          </button>
+          <button class="burger btn-reset" aria-label="Бургер">
+            <span class="burger__line" aria-hidden="true"></span>
+            <span class="burger__line" aria-hidden="true"></span>
+            <span class="burger__line" aria-hidden="true"></span>
+          </button>
         </div>
       </div>
-      <div class="header__bottom">
+    </div>
+    <div class="header__bottom">
+      <div class="wrapper">
         <select class="select" name="city">
           <option value="МОСКВА" selected>МОСКВА</option>
           <option value="value2">ГОРОД 2</option>
@@ -98,7 +115,7 @@
     <section class="weight">
       <div class="wrapper">
         <div class="weight__content green">
-          <p class="weight__info text-active">Агрофирма Семко: качество, которому вы можете доверять</p>
+          <p class="weight__info text-active">Агрофирма Семко: качество, которому&nbsp;вы можете доверять</p>
           <h1 class="weight__title">Семена для микрозелени и&nbsp;бебилиф</h1>
           <p class="weight__subtitle">По выгодным оптовым ценам со скидкой</p>
           <a href="#" class="btn btn-fill btn-reset" download>скачать каталог PDF</a>
@@ -117,11 +134,11 @@
           <div class="strengths__card hands">
             <p>Реализация <span class="text-active">индивидуальных запросов</span></p>
           </div>
-          <div class="strengths__card">
+          <div class="strengths__card cipollino">
             <p>На рынке <span class="text-active">с 1991 года</span></p>
           </div>
-          <div class="strengths__card">
-            <p>Свыше 50 <span class="text-active">позиций в ассортименте</span></p>
+          <div class="strengths__card strengths__card_lg packets">
+            <p>Свыше 500 <span class="text-active">своих позиций</span></p>
           </div>
         </div>
         <div class="strengths__bottom">
@@ -162,15 +179,19 @@
             <p class="strength__text">чем больше заказ, тем выше скидка</p>
           </div>
         </div>
+        <div class="strengths__btns">
+          <a href="#" class="btn btn-lg btn-reset" download>скачать прайс-лист</a>
+          <a href="#" class="btn btn-fill btn-lg btn-reset">о компании</a>
+        </div>
       </div>
     </section>
 
     <section class="choose">
       <div class="wrapper">
-        <div>
+        <div class="choose__text">
           <h2 class="choose__title">Агрофирма Семко <span class="text-active">— ваш надёжный поставщик семян оптом</span></h2>
           <p class="choose__descr">
-            Мы предлагаем высококачественные семена микрозелени и бейби-лиф, среди которых эксклюзивные и уникальные позиции, а также возможность реализации индивидуальных запросов для Вашего бизнеса!<br>Выбирая семена от Семко - Вы выбираете быть в современном тренде!
+            Мы предлагаем высококачественные семена микрозелени и бейби-лиф, среди которых эксклюзивные и уникальные позиции, а также возможность реализации индивидуальных запросов для Вашего бизнеса!<br><b>Выбирая семена от Семко - Вы выбираете быть в современном тренде!</b>
           </p>
         </div>
         <img class="choose__img" src="/assets/img/green.png" alt="weights">
@@ -221,12 +242,15 @@
             <p class="condition-card__text">транспортной компанией или самовывоз</p>
           </div>
         </div>
+        <div class="condition__btns">
+          <a href="#" class="btn btn-lg btn-reset">условия подробнее</a>
+        </div>
       </div>
     </section>
 
     <section class="proposition ">
       <div class="wrapper">
-        <div class="proposition__content proposition__content_empty">
+        <div class="proposition__content proposition__content_empty proposition__content_sale">
           <div class="proposition__info">
             <h2 class="proposition__title">Скачайте прайс-лист со всеми актуальными оптовыми ценами</h2>
             <p class="proposition__descr">Нажимая Отправить вы соглашаетесь с <a href="#" target="_blank" rel="noopener noreferrer">Политикой обработки персональных данных</a></p>
@@ -235,21 +259,28 @@
             <a href="#" class="btn btn-light btn-reset" download>скачать прайс-лист</a>
             <button class="btn btn-dark btn-reset">Дополнительная скидка -10% на первый заказ</button>
           </div>
+          <form class="proposition__form" action="#" method="post">
+            <input class="form-input text-center" type="email" name="email" placeholder="Оставьте Ваш e-mail" required>
+            <button class="form-btn btn-dark btn-reset" type="submit">Отправить</button>
+          </form>
         </div>
       </div>
     </section>
 
     <section class="connect">
       <div class="wrapper">
-        <h2 class="connect__title">Всегда на связи</h2>
+        <h2 class="connect__title text-active">Всегда на связи</h2>
         <p class="connect__descr">Если у вас есть вопросы, пожелания или предложения, вы всегда можете связаться с нами. Мы будем рады помочь вам!</p>
         <div class="connect__body">
           <form class="form" action="#" method="post">
             <p class="form__title">
               Можете просто оставить телефон и наши специалисты Вас проконсультируют
             </p>
-            <input class="form__input" type="tel" name="tel" placeholder="Ваш телефон">
-            <button class="form__btn btn-dark btn-lg btn-reset" type="submit">перезвоните мне</button>
+            <p class="form__subtitle">Оставить номер телефона</p>
+            <div class="form__body">
+              <input class="form__input" type="tel" name="tel" placeholder="Ваш телефон">
+              <button class="form__btn btn-dark btn-lg btn-reset" type="submit">перезвоните мне</button>
+            </div>
             <p class="form__text">Нажимая Подписаться вы соглашаетесь с&nbsp;<a href="#" target="_blank" rel="noopener noreferrer">Политикой обработки персональных данных</a></p>
           </form>
           <img src="/assets/img/map.png" alt="map" style="height: 354px;">

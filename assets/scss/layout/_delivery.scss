@@ -8,6 +8,11 @@
     line-height: 1.4;
   }
 
+  &__img {
+    width: 100%;
+    height: auto;
+  }
+
   &__list {
     margin-top: 40px;
     max-width: 220px;
@@ -65,13 +70,19 @@
 .delivery-local {
   &__list {
     margin-top: 30px;
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: 20px;
+
+    &_contry {
+      .delivery-local__icon {
+        width: 42px;
+        height: 22px;
+      }
+    }
   }
 
   &__item {
-    flex: 1 1 570px;
     padding: 35px 25px 30px 35px;
     border-radius: 15px;
     background: $color-secondary;
@@ -96,6 +107,7 @@
   &__btn {
     margin-left: auto;
     padding: 5px 15px;
+    letter-spacing: 0.05em;
   }
 
   &__descr {
@@ -104,5 +116,116 @@
     font-size: 14px;
     line-height: 1.4;
     color: #24383b;
+  }
+}
+
+@media screen and (min-width: 1261px) {
+  .delivery__img {
+    display: none;
+  }
+
+  .delivery__list .delivery__item:nth-child(n + 10) {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1260px) {
+  .delivery {
+    background: transparent;
+  }
+
+  .delivery__list {
+    margin-top: 35px;
+    max-width: none;
+
+    &_lg {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .delivery .countries {
+    margin-top: 25px;
+  }
+
+  .delivery-local__list {
+    margin-top: 35px;
+  }
+
+  .delivery-local__item {
+    padding: 22px 20px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .delivery-local__header {
+    display: contents;
+  }
+
+  .delivery-local__icon {
+    order: -1;
+    width: 23px;
+    height: 19px;
+    object-fit: contain;
+  }
+
+  .delivery-local__title {
+    margin-top: 18px;
+    font-size: 20px;
+  }
+
+  .delivery-local__descr {
+    flex: 1 0 auto;
+    margin-top: 10px;
+    font-size: 12px;
+  }
+
+  .delivery-local__btn {
+    order: 2;
+    margin-left: 0;
+    margin-top: 15px;
+    width: fit-content;
+    font-size: 10px;
+  }
+
+  .delivery-local__list_contry .delivery-local__icon {
+    width: 32px;
+    height: 16px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .delivery-local__list {
+    margin-top: 20px;
+  }
+
+  .delivery-local__list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .delivery-local__item {
+    position: relative;
+    z-index: 0;
+    padding: 20px;
+  }
+
+  .delivery-local__title {
+    margin-top: 0;
+    font-size: 17px;
+  }
+
+  .delivery-local__icon {
+    position: absolute;
+    z-index: 5;
+    top: 20px;
+    right: 20px;
+  }
+
+  .delivery-local__btn {
+    padding: 4px 15px;
+    font-size: 12px;
   }
 }

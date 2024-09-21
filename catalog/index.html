@@ -27,13 +27,16 @@
   </svg>
   
   <header class="header">
-    <div class="wrapper">
-      <div class="header__top">
+    <div class="header__top">
+      <div class="wrapper">
         <a href="/" class="logo">
-          <img src="/assets/img/svg/logo.svg" alt="logo" class="logo__icon">
+          <picture>
+            <source srcset="/assets/img/svg/logo-light.svg" media="(max-width: 1100px)" />
+            <img class="logo__icon" src="/assets/img/svg/logo.svg" alt="logo" />
+          </picture>
         </a>
         <img class="doll" src="/assets/img/cipollino-sm.png" alt="doll">
-        <a href="/catalog" class="katalog-link btn-fill btn-reset">КАТАЛОГ</a>
+        <button class="katalog-link btn-fill btn-reset" data-path="katalog">КАТАЛОГ</button>
         <form class="search" action="#" method="post">
           <input class="search__input" type="text" placeholder="Поиск...">
           <button class="search__btn btn-reset" type="submit"></button>
@@ -41,7 +44,7 @@
         <div class="header__btns">
           <a href="#" class="wishlist btn-reser">
             <span class="wishlist__icon">
-              <svg aria-hidden="true" width="22" height="18">
+              <svg  aria-hidden="true" width="22" height="18">
                 <use xlink:href="/assets/img/svg/heart.svg#heart"></use>
               </svg>
               <span class="wishlist__quantity">15</span>
@@ -50,7 +53,9 @@
           </a>
           <a href="#" class="cart btn-reser">
             <span class="cart__icon">
-              <img src="/assets/img/svg/cart.svg" alt="cart" class="cart__img">
+              <svg class="cart__img" aria-hidden="true" width="22" height="20">
+                <use xlink:href="/assets/img/svg/cart.svg#cart"></use>
+              </svg>
               <span class="cart__quantity">5</span>
             </span>
             <span class="cart__text">
@@ -58,10 +63,22 @@
               <span class="cart__price">3500 ₽</span>
             </span>
           </a>
-          <button class="account btn-reset">ВОЙТИ</button>
+          <button class="account btn-reset" data-path="login">
+            <svg class="account__icon" aria-hidden="true" width="20" height="20">
+              <use xlink:href="/assets/img/svg/user.svg#user"></use>
+            </svg>
+            <span class="account__text">ВОЙТИ</span>
+          </button>
+          <button class="burger btn-reset" aria-label="Бургер">
+            <span class="burger__line" aria-hidden="true"></span>
+            <span class="burger__line" aria-hidden="true"></span>
+            <span class="burger__line" aria-hidden="true"></span>
+          </button>
         </div>
       </div>
-      <div class="header__bottom">
+    </div>
+    <div class="header__bottom">
+      <div class="wrapper">
         <select class="select" name="city">
           <option value="МОСКВА" selected>МОСКВА</option>
           <option value="value2">ГОРОД 2</option>
@@ -108,212 +125,217 @@
     <section class="catalog">
       <div class="wrapper catalog-wrapper">
         <aside class="sidebar">
-          <div class="sidebar-block open">
-            <button class="sidebar-block__btn btn-reset">
-              <span class="sidebar-block__btn-title">Семена овощей</span>
-              <svg class="sidebar-block__btn-icon">
-                <use xlink:href="#arrow"></use>
-              </svg>
-            </button>
-            <div class="sidebar-block__inner">
-              <ul class="filter-list list-reset">
-                <li class="filter-list__item">
-                  <a href="#" class="filter-list__link btn-reset">Семена томатов (200)</a>
-                </li>
-                <li class="filter-list__item">
-                  <a href="#" class="filter-list__link btn-reset">Семена огурцов (55)</a>
-                </li>
-                <li class="filter-list__item">
-                  <a href="#" class="filter-list__link btn-reset">Семена перцев (305)</a>
-                </li>
-              </ul>
+          <div class="sidebar__layout">
+            <div class="sidebar__header">
+              <p class="sidebar__title text-active">Фильтры</p>
+              <button class="close-btn btn-fill btn-reset" aria-label="Закрыть боковое меню"></button>
             </div>
-          </div>
-          <div class="sidebar-block">
-            <button class="sidebar-block__btn btn-reset">
-              <span class="sidebar-block__btn-title">Семена зелени</span>
-              <svg class="sidebar-block__btn-icon">
-                <use xlink:href="#arrow"></use>
-              </svg>
-            </button>
-            <div class="sidebar-block__inner">
-            </div>
-          </div>
-          <div class="sidebar-block">
-            <button class="sidebar-block__btn btn-reset">
-              <span class="sidebar-block__btn-title">Семена микрозелени</span>
-              <svg class="sidebar-block__btn-icon">
-                <use xlink:href="#arrow"></use>
-              </svg>
-            </button>
-            <div class="sidebar-block__inner">
-            </div>
-          </div>
-          <div class="sidebar-block">
-            <button class="sidebar-block__btn btn-reset">
-              <span class="sidebar-block__btn-title">Семена цветов</span>
-              <svg class="sidebar-block__btn-icon">
-                <use xlink:href="#arrow"></use>
-              </svg>
-            </button>
-            <div class="sidebar-block__inner">
-            </div>
-          </div>
-          <div class="sidebar-block">
-            <button class="sidebar-block__btn btn-reset">
-              <span class="sidebar-block__btn-title">Наборы семян</span>
-              <svg class="sidebar-block__btn-icon">
-                <use xlink:href="#arrow"></use>
-              </svg>
-            </button>
-            <div class="sidebar-block__inner">
-            </div>
-          </div>
-          <form class="sidebar-form" action="#" method="post">
-            <p class="sidebar-form__title">Цена, руб</p>
-            <div class="rz-slider-wrapper">
-              <div class="rz-slider">
-                <div class="progress"></div>
-              </div>
-              <div class="range-input">
-                <input type="range" class="range-min" min="0" max="10000" value="0" step="100">
-                <input type="range" class="range-max" min="0" max="10000" value="10000" step="100">
+            <div class="sidebar-block open">
+              <button class="sidebar-block__btn btn-reset">
+                <span class="sidebar-block__btn-title">Семена овощей</span>
+                <svg class="sidebar-block__btn-icon">
+                  <use xlink:href="#arrow"></use>
+                </svg>
+              </button>
+              <div class="sidebar-block__inner">
+                <ul class="filter-list list-reset">
+                  <li class="filter-list__item">
+                    <a href="#" class="filter-list__link btn-reset">Семена томатов (200)</a>
+                  </li>
+                  <li class="filter-list__item">
+                    <a href="#" class="filter-list__link btn-reset">Семена огурцов (55)</a>
+                  </li>
+                  <li class="filter-list__item">
+                    <a href="#" class="filter-list__link btn-reset">Семена перцев (305)</a>
+                  </li>
+                </ul>
               </div>
             </div>
-            <div class="sidebar-form__inner">
-              <div class="sidebar-form__col">
-                <label class="sidebar-form__label" for="min-price">от</label>
-                <input class="sidebar-form__value sidebar-form__value_min" type="number" name="min-price" id="min-price" value="0">
+            <div class="sidebar-block">
+              <button class="sidebar-block__btn btn-reset">
+                <span class="sidebar-block__btn-title">Семена зелени</span>
+                <svg class="sidebar-block__btn-icon">
+                  <use xlink:href="#arrow"></use>
+                </svg>
+              </button>
+              <div class="sidebar-block__inner">
               </div>
-              <div class="sidebar-form__col">
-                <label class="sidebar-form__label" for="max-price">до</label>
-                <input class="sidebar-form__value sidebar-form__value_max" type="number" name="max-price" id="max-price" value="10000">
+            </div>
+            <div class="sidebar-block">
+              <button class="sidebar-block__btn btn-reset">
+                <span class="sidebar-block__btn-title">Семена микрозелени</span>
+                <svg class="sidebar-block__btn-icon">
+                  <use xlink:href="#arrow"></use>
+                </svg>
+              </button>
+              <div class="sidebar-block__inner">
               </div>
             </div>
-          </form>
-          <div class="sidebar-block open">
-            <button class="sidebar-block__btn btn-reset">
-              <span class="sidebar-block__btn-title">Категория</span>
-              <svg class="sidebar-block__btn-icon">
-                <use xlink:href="#arrow"></use>
-              </svg>
-            </button>
-            <div class="sidebar-block__inner">
-              <ul class="checkbox-filter list-reset">
-                <li class="checkbox-filter__item">
-                  <a href="#" class="checkbox-filter__link btn-reset">Сорт</a>
-                </li>
-                <li class="checkbox-filter__item">
-                  <a href="#" class="checkbox-filter__link btn-reset">Гибрид</a>
-                </li>
-              </ul>
+            <div class="sidebar-block">
+              <button class="sidebar-block__btn btn-reset">
+                <span class="sidebar-block__btn-title">Семена цветов</span>
+                <svg class="sidebar-block__btn-icon">
+                  <use xlink:href="#arrow"></use>
+                </svg>
+              </button>
+              <div class="sidebar-block__inner">
+              </div>
             </div>
-          </div>
-          <div class="sidebar-block open">
-            <button class="sidebar-block__btn btn-reset">
-              <span class="sidebar-block__btn-title">Условия выращивания</span>
-              <svg class="sidebar-block__btn-icon">
-                <use xlink:href="#arrow"></use>
-              </svg>
-            </button>
-            <div class="sidebar-block__inner">
-              <ul class="checkbox-filter list-reset">
-                <li class="checkbox-filter__item">
-                  <a href="#" class="checkbox-filter__link btn-reset">Защищенный грунт</a>
-                </li>
-                <li class="checkbox-filter__item">
-                  <a href="#" class="checkbox-filter__link btn-reset">Открытый грунт</a>
-                </li>
-                <li class="checkbox-filter__item">
-                  <a href="#" class="checkbox-filter__link btn-reset">Открытый и защищенный</a>
-                </li>
-                <li class="checkbox-filter__item">
-                  <a href="#" class="checkbox-filter__link btn-reset">Огород на окне, горшки</a>
-                </li>
-              </ul>
+            <div class="sidebar-block">
+              <button class="sidebar-block__btn btn-reset">
+                <span class="sidebar-block__btn-title">Наборы семян</span>
+                <svg class="sidebar-block__btn-icon">
+                  <use xlink:href="#arrow"></use>
+                </svg>
+              </button>
+              <div class="sidebar-block__inner">
+              </div>
             </div>
-          </div>
-          <div class="sidebar-block open">
-            <button class="sidebar-block__btn btn-reset">
-              <span class="sidebar-block__btn-title">Срок созревания</span>
-              <svg class="sidebar-block__btn-icon">
-                <use xlink:href="#arrow"></use>
-              </svg>
-            </button>
-            <div class="sidebar-block__inner">
-              <ul class="checkbox-filter list-reset">
-                <li class="checkbox-filter__item">
-                  <a href="#" class="checkbox-filter__link btn-reset">Ультраранний</a>
-                </li>
-                <li class="checkbox-filter__item">
-                  <a href="#" class="checkbox-filter__link btn-reset">Раннеспелый</a>
-                </li>
-                <li class="checkbox-filter__item">
-                  <a href="#" class="checkbox-filter__link btn-reset">Среднеспелый</a>
-                </li>
-              </ul>
+            <form class="sidebar-form" action="#" method="post">
+              <p class="sidebar-form__title">Цена, руб</p>
+              <div class="rz-slider-wrapper">
+                <div class="rz-slider">
+                  <div class="progress"></div>
+                </div>
+                <div class="range-input">
+                  <input type="range" class="range-min" min="0" max="10000" value="0" step="100">
+                  <input type="range" class="range-max" min="0" max="10000" value="10000" step="100">
+                </div>
+              </div>
+              <div class="sidebar-form__inner">
+                <div class="sidebar-form__col">
+                  <label class="sidebar-form__label" for="min-price">от</label>
+                  <input class="sidebar-form__value sidebar-form__value_min" type="number" name="min-price" id="min-price" value="0">
+                </div>
+                <div class="sidebar-form__col">
+                  <label class="sidebar-form__label" for="max-price">до</label>
+                  <input class="sidebar-form__value sidebar-form__value_max" type="number" name="max-price" id="max-price" value="10000">
+                </div>
+              </div>
+            </form>
+            <div class="sidebar-block open">
+              <button class="sidebar-block__btn btn-reset">
+                <span class="sidebar-block__btn-title">Категория</span>
+                <svg class="sidebar-block__btn-icon">
+                  <use xlink:href="#arrow"></use>
+                </svg>
+              </button>
+              <div class="sidebar-block__inner">
+                <ul class="checkbox-filter list-reset">
+                  <li class="checkbox-filter__item">
+                    <a href="#" class="checkbox-filter__link btn-reset">Сорт</a>
+                  </li>
+                  <li class="checkbox-filter__item">
+                    <a href="#" class="checkbox-filter__link btn-reset">Гибрид</a>
+                  </li>
+                </ul>
+              </div>
             </div>
-          </div>
-          <div class="sidebar-block open">
-            <button class="sidebar-block__btn btn-reset">
-              <span class="sidebar-block__btn-title">Высота растения</span>
-              <svg class="sidebar-block__btn-icon">
-                <use xlink:href="#arrow"></use>
-              </svg>
-            </button>
-            <div class="sidebar-block__inner">
-              <ul class="checkbox-filter list-reset">
-                <li class="checkbox-filter__item">
-                  <a href="#" class="checkbox-filter__link btn-reset">Штамбовое</a>
-                </li>
-                <li class="checkbox-filter__item">
-                  <a href="#" class="checkbox-filter__link btn-reset">Детерминантное</a>
-                </li>
-                <li class="checkbox-filter__item">
-                  <a href="#" class="checkbox-filter__link btn-reset">Полудерминантное</a>
-                </li>
-                <li class="checkbox-filter__item">
-                  <a href="#" class="checkbox-filter__link btn-reset">Индетерминантное</a>
-                </li>
-              </ul>
+            <div class="sidebar-block open">
+              <button class="sidebar-block__btn btn-reset">
+                <span class="sidebar-block__btn-title">Условия выращивания</span>
+                <svg class="sidebar-block__btn-icon">
+                  <use xlink:href="#arrow"></use>
+                </svg>
+              </button>
+              <div class="sidebar-block__inner">
+                <ul class="checkbox-filter list-reset">
+                  <li class="checkbox-filter__item">
+                    <a href="#" class="checkbox-filter__link btn-reset">Защищенный грунт</a>
+                  </li>
+                  <li class="checkbox-filter__item">
+                    <a href="#" class="checkbox-filter__link btn-reset">Открытый грунт</a>
+                  </li>
+                  <li class="checkbox-filter__item">
+                    <a href="#" class="checkbox-filter__link btn-reset">Открытый и защищенный</a>
+                  </li>
+                  <li class="checkbox-filter__item">
+                    <a href="#" class="checkbox-filter__link btn-reset">Огород на окне, горшки</a>
+                  </li>
+                </ul>
+              </div>
             </div>
-          </div>
-          <div class="sidebar-block open">
-            <button class="sidebar-block__btn btn-reset">
-              <span class="sidebar-block__btn-title">Форма плода</span>
-              <svg class="sidebar-block__btn-icon">
-                <use xlink:href="#arrow"></use>
-              </svg>
-            </button>
-            <div class="sidebar-block__inner">
-              <ul class="checkbox-filter list-reset">
-                <li class="checkbox-filter__item">
-                  <a href="#" class="checkbox-filter__link btn-reset">Округлая</a>
-                </li>
-                <li class="checkbox-filter__item">
-                  <a href="#" class="checkbox-filter__link btn-reset">Плоскоокруглая</a>
-                </li>
-                <li class="checkbox-filter__item">
-                  <a href="#" class="checkbox-filter__link btn-reset">Сердцевидный</a>
-                </li>
-                <li class="checkbox-filter__item">
-                  <a href="#" class="checkbox-filter__link btn-reset">Сливовидные</a>
-                </li>
-                <li class="checkbox-filter__item">
-                  <a href="#" class="checkbox-filter__link btn-reset">Кубовидные</a>
-                </li>
-                <li class="checkbox-filter__item">
-                  <a href="#" class="checkbox-filter__link btn-reset">С носиком</a>
-                </li>
-                <li class="checkbox-filter__item">
-                  <a href="#" class="checkbox-filter__link btn-reset">Другое</a>
-                </li>
-              </ul>
+            <div class="sidebar-block open">
+              <button class="sidebar-block__btn btn-reset">
+                <span class="sidebar-block__btn-title">Срок созревания</span>
+                <svg class="sidebar-block__btn-icon">
+                  <use xlink:href="#arrow"></use>
+                </svg>
+              </button>
+              <div class="sidebar-block__inner">
+                <ul class="checkbox-filter list-reset">
+                  <li class="checkbox-filter__item">
+                    <a href="#" class="checkbox-filter__link btn-reset">Ультраранний</a>
+                  </li>
+                  <li class="checkbox-filter__item">
+                    <a href="#" class="checkbox-filter__link btn-reset">Раннеспелый</a>
+                  </li>
+                  <li class="checkbox-filter__item">
+                    <a href="#" class="checkbox-filter__link btn-reset">Среднеспелый</a>
+                  </li>
+                </ul>
+              </div>
             </div>
+            <div class="sidebar-block open">
+              <button class="sidebar-block__btn btn-reset">
+                <span class="sidebar-block__btn-title">Высота растения</span>
+                <svg class="sidebar-block__btn-icon">
+                  <use xlink:href="#arrow"></use>
+                </svg>
+              </button>
+              <div class="sidebar-block__inner">
+                <ul class="checkbox-filter list-reset">
+                  <li class="checkbox-filter__item">
+                    <a href="#" class="checkbox-filter__link btn-reset">Штамбовое</a>
+                  </li>
+                  <li class="checkbox-filter__item">
+                    <a href="#" class="checkbox-filter__link btn-reset">Детерминантное</a>
+                  </li>
+                  <li class="checkbox-filter__item">
+                    <a href="#" class="checkbox-filter__link btn-reset">Полудерминантное</a>
+                  </li>
+                  <li class="checkbox-filter__item">
+                    <a href="#" class="checkbox-filter__link btn-reset">Индетерминантное</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="sidebar-block open">
+              <button class="sidebar-block__btn btn-reset">
+                <span class="sidebar-block__btn-title">Форма плода</span>
+                <svg class="sidebar-block__btn-icon">
+                  <use xlink:href="#arrow"></use>
+                </svg>
+              </button>
+              <div class="sidebar-block__inner">
+                <ul class="checkbox-filter list-reset">
+                  <li class="checkbox-filter__item">
+                    <a href="#" class="checkbox-filter__link btn-reset">Округлая</a>
+                  </li>
+                  <li class="checkbox-filter__item">
+                    <a href="#" class="checkbox-filter__link btn-reset">Плоскоокруглая</a>
+                  </li>
+                  <li class="checkbox-filter__item">
+                    <a href="#" class="checkbox-filter__link btn-reset">Сердцевидный</a>
+                  </li>
+                  <li class="checkbox-filter__item">
+                    <a href="#" class="checkbox-filter__link btn-reset">Сливовидные</a>
+                  </li>
+                  <li class="checkbox-filter__item">
+                    <a href="#" class="checkbox-filter__link btn-reset">Кубовидные</a>
+                  </li>
+                  <li class="checkbox-filter__item">
+                    <a href="#" class="checkbox-filter__link btn-reset">С носиком</a>
+                  </li>
+                  <li class="checkbox-filter__item">
+                    <a href="#" class="checkbox-filter__link btn-reset">Другое</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <button class="sidebar-btn btn btn-fill btn-lg btn-reset">Сбросить фильтр</button>
+            <button class="sidebar-btn-filter btn-reset">Нет нужного фильтра?</button>
           </div>
-
-          <button class="sidebar-btn btn btn-fill btn-lg btn-reset">Сбросить фильтр</button>
-          <button class="sidebar-btn-filter btn-reset">Нет нужного фильтра?</button>
         </aside>
         <div class="catalog__content">
           <div class="slider">
@@ -337,7 +359,7 @@
               </div>
             </div>
           </div>
-          <div class="catalog-settings">
+          <div class="catalog__control">
             <div class="catalog-settings__sorting">
               <select name="select" class="select select-sorting">
                 <option value="value1" selected>по популярности</option>
@@ -352,42 +374,46 @@
                   <option value="value3">36</option>
                 </select>
               </div>
+              <button class="filter-btn btn-reset">Фильтры</button>
             </div>
             <div class="catalog-settings__view">
               <button class="catalog-view__btn catalog-view__btn_active btn-reset" data-view="row">
-                <svg width="36px" height="36px" aria-hidden="true">
+                <svg aria-hidden="true">
                   <use xlink:href="/assets/img/svg/catalog-col.svg#catalog"></use>
                 </svg>
               </button>
               <button class="catalog-view__btn btn-reset" data-view="col">
-                <svg width="36px" height="36px" aria-hidden="true">
+                <svg aria-hidden="true">
                   <use xlink:href="/assets/img/svg/catalog-row.svg#catalog"></use>
                 </svg>
               </button>
             </div>
+            <div class="catalog-selection">
+              <button class="catalog-selection__btn btn-reset">Баклажаны <span class="catalog-selection__qantity">(12)</span></button>
+              <button class="catalog-selection__btn btn-reset">Томаты <span class="catalog-selection__qantity">(12)</span></button>
+              <button class="catalog-selection__btn btn-reset">огурцы <span class="catalog-selection__qantity">(12)</span></button>
+              <button class="catalog-selection__btn btn-reset">Перец <span class="catalog-selection__qantity">(12)</span></button>
+              <button class="catalog-selection__btn btn-reset">капуста <span class="catalog-selection__qantity">(12)</span></button>
+              <button class="catalog-selection__btn btn-reset">бобовые и зерновые <span class="catalog-selection__qantity">(12)</span></button>
+              <button class="catalog-selection__btn btn-reset">цуккини <span class="catalog-selection__qantity">(12)</span></button>
+              <button class="catalog-selection__btn btn-reset">паттисон <span class="catalog-selection__qantity">(35)</span></button>
+              <button class="catalog-selection__btn btn-reset">Тыква <span class="catalog-selection__qantity">(35)</span></button>
+              <button class="catalog-selection__btn btn-reset">морковь <span class="catalog-selection__qantity">(35)</span></button>
+              <button class="catalog-selection__btn btn-reset">свекла <span class="catalog-selection__qantity">(35)</span></button>
+              <button class="catalog-selection__btn btn-reset">лук <span class="catalog-selection__qantity">(35)</span></button>
+              <button class="catalog-selection__btn btn-reset">кабачки <span class="catalog-selection__qantity">(35)</span></button>
+              <button class="catalog-selection__btn btn-reset">дыня <span class="catalog-selection__qantity">(50)</span></button>
+              <button class="catalog-selection__btn btn-reset">арбуз <span class="catalog-selection__qantity">(50)</span></button>
+              <button class="catalog-selection__btn btn-reset">редька <span class="catalog-selection__qantity">(50)</span></button>
+              <button class="catalog-selection__btn btn-reset">дайкон <span class="catalog-selection__qantity">(50)</span></button>
+              <button class="catalog-selection__btn btn-reset">репа <span class="catalog-selection__qantity">(50)</span></button>
+              <button class="catalog-selection__btn btn-reset">турнепс <span class="catalog-selection__qantity">(50)</span></button>
+              <button class="catalog-selection__btn btn-reset">редис <span class="catalog-selection__qantity">(50)</span></button>
+              <button class="catalog-selection__btn_plus btn-reset">+</button>
+            </div>
           </div>
-          <div class="catalog-selection">
-            <button class="catalog-selection__btn btn-reset">Баклажаны <span class="catalog-selection__qantity">(12)</span></button>
-            <button class="catalog-selection__btn btn-reset">Томаты <span class="catalog-selection__qantity">(12)</span></button>
-            <button class="catalog-selection__btn btn-reset">огурцы <span class="catalog-selection__qantity">(12)</span></button>
-            <button class="catalog-selection__btn btn-reset">Перец <span class="catalog-selection__qantity">(12)</span></button>
-            <button class="catalog-selection__btn btn-reset">капуста <span class="catalog-selection__qantity">(12)</span></button>
-            <button class="catalog-selection__btn btn-reset">бобовые и зерновые <span class="catalog-selection__qantity">(12)</span></button>
-            <button class="catalog-selection__btn btn-reset">цуккини <span class="catalog-selection__qantity">(12)</span></button>
-            <button class="catalog-selection__btn btn-reset">паттисон <span class="catalog-selection__qantity">(35)</span></button>
-            <button class="catalog-selection__btn btn-reset">Тыква <span class="catalog-selection__qantity">(35)</span></button>
-            <button class="catalog-selection__btn btn-reset">морковь <span class="catalog-selection__qantity">(35)</span></button>
-            <button class="catalog-selection__btn btn-reset">свекла <span class="catalog-selection__qantity">(35)</span></button>
-            <button class="catalog-selection__btn btn-reset">лук <span class="catalog-selection__qantity">(35)</span></button>
-            <button class="catalog-selection__btn btn-reset">кабачки <span class="catalog-selection__qantity">(35)</span></button>
-            <button class="catalog-selection__btn btn-reset">дыня <span class="catalog-selection__qantity">(50)</span></button>
-            <button class="catalog-selection__btn btn-reset">арбуз <span class="catalog-selection__qantity">(50)</span></button>
-            <button class="catalog-selection__btn btn-reset">редька <span class="catalog-selection__qantity">(50)</span></button>
-            <button class="catalog-selection__btn btn-reset">дайкон <span class="catalog-selection__qantity">(50)</span></button>
-            <button class="catalog-selection__btn btn-reset">репа <span class="catalog-selection__qantity">(50)</span></button>
-            <button class="catalog-selection__btn btn-reset">турнепс <span class="catalog-selection__qantity">(50)</span></button>
-            <button class="catalog-selection__btn btn-reset">редис <span class="catalog-selection__qantity">(50)</span></button>
-            <button class="catalog-selection__btn_plus btn-reset">+</button>
+          <div class="catalog-settings">
+            
           </div>
           <div class="catalog-grid">
             <div class="card disabled">
@@ -444,7 +470,7 @@
                     </div>
                   </div>
                   <div class="card__btns">
-                    <button class="card__btn btn-reset">добавить в корзину</button>
+                    <button class="card__btn btn-reset"><span>добавить </span>в корзину</button>
                     <a href="#" class="card__link btn-reset">Оптовым покупателям</a>
                   </div>
                 </div>
@@ -475,7 +501,7 @@
                     </div>
                   </div>
                   <div class="card__btns">
-                    <button class="card__btn btn-reset">добавить в корзину</button>
+                    <button class="card__btn btn-reset"><span>добавить </span>в корзину</button>
                     <a href="#" class="card__link btn-reset">Оптовым покупателям</a>
                   </div>
                 </div>
@@ -506,7 +532,7 @@
                     </div>
                   </div>
                   <div class="card__btns">
-                    <button class="card__btn btn-reset">добавить в корзину</button>
+                    <button class="card__btn btn-reset"><span>добавить </span>в корзину</button>
                     <a href="#" class="card__link btn-reset">Оптовым покупателям</a>
                   </div>
                 </div>
@@ -537,7 +563,7 @@
                     </div>
                   </div>
                   <div class="card__btns">
-                    <button class="card__btn btn-reset">добавить в корзину</button>
+                    <button class="card__btn btn-reset"><span>добавить </span>в корзину</button>
                     <a href="#" class="card__link btn-reset">Оптовым покупателям</a>
                   </div>
                 </div>
@@ -568,7 +594,7 @@
                     </div>
                   </div>
                   <div class="card__btns">
-                    <button class="card__btn btn-reset">добавить в корзину</button>
+                    <button class="card__btn btn-reset"><span>добавить </span>в корзину</button>
                     <a href="#" class="card__link btn-reset">Оптовым покупателям</a>
                   </div>
                 </div>
@@ -599,7 +625,7 @@
                     </div>
                   </div>
                   <div class="card__btns">
-                    <button class="card__btn btn-reset">добавить в корзину</button>
+                    <button class="card__btn btn-reset"><span>добавить </span>в корзину</button>
                     <a href="#" class="card__link btn-reset">Оптовым покупателям</a>
                   </div>
                 </div>
@@ -630,7 +656,7 @@
                     </div>
                   </div>
                   <div class="card__btns">
-                    <button class="card__btn btn-reset">добавить в корзину</button>
+                    <button class="card__btn btn-reset"><span>добавить </span>в корзину</button>
                     <a href="#" class="card__link btn-reset">Оптовым покупателям</a>
                   </div>
                 </div>
@@ -661,7 +687,7 @@
                     </div>
                   </div>
                   <div class="card__btns">
-                    <button class="card__btn btn-reset">добавить в корзину</button>
+                    <button class="card__btn btn-reset"><span>добавить </span>в корзину</button>
                     <a href="#" class="card__link btn-reset">Оптовым покупателям</a>
                   </div>
                 </div>
@@ -692,7 +718,7 @@
                     </div>
                   </div>
                   <div class="card__btns">
-                    <button class="card__btn btn-reset">добавить в корзину</button>
+                    <button class="card__btn btn-reset"><span>добавить </span>в корзину</button>
                     <a href="#" class="card__link btn-reset">Оптовым покупателям</a>
                   </div>
                 </div>
@@ -723,7 +749,7 @@
                     </div>
                   </div>
                   <div class="card__btns">
-                    <button class="card__btn btn-reset">добавить в корзину</button>
+                    <button class="card__btn btn-reset"><span>добавить </span>в корзину</button>
                     <a href="#" class="card__link btn-reset">Оптовым покупателям</a>
                   </div>
                 </div>
@@ -754,7 +780,7 @@
                     </div>
                   </div>
                   <div class="card__btns">
-                    <button class="card__btn btn-reset">добавить в корзину</button>
+                    <button class="card__btn btn-reset"><span>добавить </span>в корзину</button>
                     <a href="#" class="card__link btn-reset">Оптовым покупателям</a>
                   </div>
                 </div>
@@ -817,7 +843,7 @@
                   </div>
                 </div>
                 <div class="card__btns">
-                  <button class="card__btn btn-reset">добавить в корзину</button>
+                  <button class="card__btn btn-reset"><span>добавить </span>в корзину</button>
                   <a href="#" class="card__link btn-reset">Оптовым покупателям</a>
                 </div>
               </div>
@@ -848,7 +874,7 @@
                   </div>
                 </div>
                 <div class="card__btns">
-                  <button class="card__btn btn-reset">добавить в корзину</button>
+                  <button class="card__btn btn-reset"><span>добавить </span>в корзину</button>
                   <a href="#" class="card__link btn-reset">Оптовым покупателям</a>
                 </div>
               </div>
@@ -879,7 +905,7 @@
                   </div>
                 </div>
                 <div class="card__btns">
-                  <button class="card__btn btn-reset">добавить в корзину</button>
+                  <button class="card__btn btn-reset"><span>добавить </span>в корзину</button>
                   <a href="#" class="card__link btn-reset">Оптовым покупателям</a>
                 </div>
               </div>
@@ -910,7 +936,7 @@
                   </div>
                 </div>
                 <div class="card__btns">
-                  <button class="card__btn btn-reset">добавить в корзину</button>
+                  <button class="card__btn btn-reset"><span>добавить </span>в корзину</button>
                   <a href="#" class="card__link btn-reset">Оптовым покупателям</a>
                 </div>
               </div>
@@ -970,7 +996,7 @@
                   </div>
                 </div>
                 <div class="card__btns">
-                  <button class="card__btn btn-reset">добавить в корзину</button>
+                  <button class="card__btn btn-reset"><span>добавить </span>в корзину</button>
                   <a href="#" class="card__link btn-reset">Оптовым покупателям</a>
                 </div>
               </div>
@@ -1001,7 +1027,7 @@
                   </div>
                 </div>
                 <div class="card__btns">
-                  <button class="card__btn btn-reset">добавить в корзину</button>
+                  <button class="card__btn btn-reset"><span>добавить </span>в корзину</button>
                   <a href="#" class="card__link btn-reset">Оптовым покупателям</a>
                 </div>
               </div>
@@ -1032,7 +1058,7 @@
                   </div>
                 </div>
                 <div class="card__btns">
-                  <button class="card__btn btn-reset">добавить в корзину</button>
+                  <button class="card__btn btn-reset"><span>добавить </span>в корзину</button>
                   <a href="#" class="card__link btn-reset">Оптовым покупателям</a>
                 </div>
               </div>
@@ -1063,7 +1089,7 @@
                   </div>
                 </div>
                 <div class="card__btns">
-                  <button class="card__btn btn-reset">добавить в корзину</button>
+                  <button class="card__btn btn-reset"><span>добавить </span>в корзину</button>
                   <a href="#" class="card__link btn-reset">Оптовым покупателям</a>
                 </div>
               </div>
@@ -1085,14 +1111,14 @@
         </div>
         <div class="splide__track">
           <div class="splide__list">
-            <a class="splide__slide discount__item" href="#" style="background-image: url(/assets/img/discounts/0.png)">
+            <a class="splide__slide discount__item discount__item_first" href="#">
               <span class="btn btn-fill">вам стоит взглянуть</span>
               <span>Скидки оптовым покупателям</span>
             </a>
-            <a class="splide__slide discount__item" href="#" style="background-image: url(/assets/img/discounts/1.png)">
+            <a class="splide__slide discount__item discount__item_second" href="#">
               <span>Скидки оптовым покупателям</span>
             </a>
-            <a class="splide__slide discount__item" href="#" style="background-image: url(/assets/img/discounts/2.png)">
+            <a class="splide__slide discount__item discount__item_thirds" href="#">
               <span>Скидки оптовым покупателям</span>
             </a>
           </div>
@@ -1105,14 +1131,13 @@
         <div class="content">
           <div class="catalog-download__descr">
             <h2 class="title">Скачайте каталог продукции в электронном виде .PDF</h2>
-            <p class="subtitle">Нажимая Отправить вы соглашаетесь с 
-              <a class="subtitle__link btn-reset" href="#">Политикой обработки персональных данных</a>
-            </p>
+            <p class="subtitle">Нажимая Отправить вы соглашаетесь с <a class="subtitle__link btn-reset" href="#">Политикой обработки персональных данных</a></p>
           </div>
           <img src="/assets/img/catalog-download-img.jpg" alt="catalog download">
           <form class="catalog-download__form" action="#" method="post">
             <input type="email" name="email" placeholder="Оставьте Ваш e-mail" required>
             <button class="form-btn btn-dark btn-reset" type="submit">Отправить</button>
+            <p class="subtitle">Нажимая Отправить вы соглашаетесь с <a class="subtitle__link btn-reset" href="#">Политикой обработки персональных данных</a></p>
           </form>
         </div>
       </div>
@@ -1279,8 +1304,11 @@
             <p class="form__title">
               Можете просто оставить телефон и наши специалисты Вас проконсультируют
             </p>
-            <input class="form__input" type="tel" name="tel" placeholder="Ваш телефон">
-            <button class="form__btn btn-dark btn-lg btn-reset" type="submit">перезвоните мне</button>
+            <p class="form__subtitle">Оставить номер телефона</p>
+            <div class="form__body">
+              <input class="form__input" type="tel" name="tel" placeholder="Ваш телефон">
+              <button class="form__btn btn-dark btn-lg btn-reset" type="submit">перезвоните мне</button>
+            </div>
             <p class="form__text">Нажимая Подписаться вы соглашаетесь с&nbsp;<a href="#" target="_blank" rel="noopener noreferrer">Политикой обработки персональных данных</a></p>
           </form>
           <img src="/assets/img/map.png" alt="map" style="height: 354px;">
@@ -1437,23 +1465,7 @@
     drawSlider('.products_slider');
     drawSlider('.cards_slider');
   </script>
-  <script>
-    const catalogBtns = [...document.querySelectorAll('.catalog-view__btn')];
-    const catalogContent = document.querySelector('.catalog-grid');
-
-    catalogBtns.forEach(el => {
-      el.addEventListener('click', (e) => {
-        catalogBtns.forEach(el => el.classList.remove('catalog-view__btn_active'));
-        e.currentTarget.classList.add('catalog-view__btn_active')
-        const dataset = e.currentTarget.dataset.view;
-        if (dataset === 'col') {
-          catalogContent.classList.add('catalog-grid_col');
-        } else {
-          catalogContent.classList.remove('catalog-grid_col');
-        }
-      })
-    })
-  </script>
+  <script src="/assets/js/pages/catalog.js"></script>
   <script src="/assets/js/modal.js"></script>
 </body>
 </html>

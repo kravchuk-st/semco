@@ -2,16 +2,16 @@
   &__content {
     padding: 50px 35px 40px;
     border-radius: 15px;
-    background: right bottom / contain no-repeat url("/assets/img/hands.png"),
+    background: right top / auto 300px no-repeat url("/assets/img/hands.png"),
                 $color-secondary center / cover no-repeat url("/assets/img/weight-bg.png");
 
     &.green {
-      background: right bottom / contain no-repeat url("/assets/img/boxgreens.png"),
+      background: right bottom / 45% auto no-repeat url("/assets/img/boxgreens.png"),
                 $color-secondary center / cover no-repeat url("/assets/img/green-bg.png");
     }
 
     &.bundle {
-      background: right bottom / 704px auto no-repeat url("/assets/img/bundle.png"),
+      background: right bottom / auto 250px no-repeat url("/assets/img/bundle.png"),
                 $color-secondary center / cover no-repeat url("/assets/img/green-bg.png");
     }
   }
@@ -64,7 +64,7 @@
     margin-top: 35px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-evenly;
     gap: 25px;
   }
 
@@ -99,12 +99,12 @@
     }
 
     &.hands {
-      background: right bottom / contain no-repeat url("/assets/img/strengths/3.png"),
+      background: center bottom / 300px auto no-repeat url("/assets/img/strengths/3.png"),
                   $color-secondary center / cover no-repeat url("/assets/img/strengths/bg0.png");
     }
 
     &.hands-reverse {
-      background: right bottom / contain no-repeat url("/assets/img/strengths/4.png"),
+      background: center top 70px / contain no-repeat url("/assets/img/strengths/4.png"),
                   $color-secondary center / cover no-repeat url("/assets/img/strengths/bg0.png");
     }
 
@@ -161,14 +161,34 @@
       }
     }
   }
+
+  &__btns {
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px 20px;
+
+    .btn {
+      width: 100%;
+      max-width: 280px;
+      padding: 16px 40px;
+      font-size: 16px;
+    }
+  }
 }
 
 .choose {
   .wrapper {
     display: flex;
     justify-content: space-between;
-    align-items: center;
     gap: 25px;
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 
   &__title .text-active {
@@ -181,10 +201,19 @@
     margin-top: 15px;
     font-size: 12px;
     line-height: 1.4;
+
+    b {
+      font-weight: 500;
+    }
   }
 
   &__img {
+    width: fit-content;
+    max-width: 43.5%;
     flex-shrink: 0;
+    object-fit: cover;
+    object-position: 30% center;
+    border-radius: 20px;
   }
 }
 
@@ -238,5 +267,386 @@
       font-size: 15px;
       color: #6E6E6E;
     }
+  }
+
+  &__btns {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+
+    .btn {
+      width: 100%;
+      max-width: 280px;
+      padding: 16px 40px;
+      font-size: 16px;
+    }
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .weight__title span {
+    display: none;
+  }
+
+  .strengths__btns,
+  .condition__btns {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .weight__content.bundle {
+    background: right -50px bottom / auto 200px no-repeat url(/assets/img/bundle.png), #f1f9f5 center / cover no-repeat url(/assets/img/green-bg.png);
+  }
+
+  .weight__title {
+    max-width: 500px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .weight__content {
+    background: right top / auto 300px no-repeat url(/assets/img/hands-sm.png), #f1f9f5 center / cover no-repeat url(/assets/img/weight-bg.png);
+  }
+
+  .weight__title {
+    max-width: 355px;
+    font-size: 28px;
+  }
+
+  .strengths__bottom {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    .strength {
+      max-width: none;
+    }
+  }
+
+  .condition__cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .condition-card {
+    max-width: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .condition__header .btn,
+  .strengths__header .btn {
+    display: none;
+  }
+
+  .weight__content {
+    padding: 25px 20px 30px;
+    background: right top / auto 250px no-repeat url(/assets/img/hands-sm.png), #f1f9f5 center / cover no-repeat url(/assets/img/weight-bg-sm.png);
+
+    &.green {
+      background: right bottom / 45% auto no-repeat url(/assets/img/boxgreens.png), #f1f9f5 center / cover no-repeat url(/assets/img/weight-bg-sm.png);
+    }
+
+    &.bundle {
+      padding-bottom: 65px;
+      background: right -120px bottom / auto 170px no-repeat url(/assets/img/bundle.png), #f1f9f5 center / cover no-repeat url(/assets/img/weight-bg-sm.png);
+
+      .weight__title {
+        max-width: none;
+      }
+    }
+  }
+
+  .weight__info {
+    font-size: 13px;
+  }
+
+  .weight__title {
+    margin-top: 20px;
+  }
+
+  .weight__subtitle {
+    margin-top: 15px;
+  }
+
+  .weight .btn {
+    margin-top: 30px;
+  }
+
+  .strengths__cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .strengths__card {
+    padding: 20px;
+    font-size: 22px;
+
+    &_lg {
+      order: 3;
+      grid-column: span 2;
+      max-width: none;
+      height: 205px;
+    }
+
+    p {
+      max-width: 200px;
+    }
+
+    &:nth-child(2) {
+      background: right 10% bottom / auto 85% no-repeat url(/assets/img/strengths/1.png), #f1f9f5 center / cover no-repeat url(/assets/img/strengths/bg1.png);
+    }
+
+    &.cipollino {
+      order: 2;
+    }
+
+    &.hands-reverse {
+      background: center bottom 10px / 270px auto no-repeat url(/assets/img/strengths/4.png), #f1f9f5 center / cover no-repeat url(/assets/img/strengths/bg0.png);
+    }
+
+    &.woman {
+      background: center bottom / 100% 50px no-repeat url("/assets/img/strengths/flowers.png"),
+                  center right 17% / auto 180px no-repeat url("/assets/img/strengths/woman.png"),
+                  $color-secondary center / cover no-repeat url("/assets/img/strengths/bg-lg.png");
+    }
+
+    &.box {
+      background: right bottom / auto 180px no-repeat url("/assets/img/strengths/boxes.png"),
+                  right 150px bottom -15px / auto 140px no-repeat url("/assets/img/strengths/packets.png"),
+                  $color-secondary center / cover no-repeat url("/assets/img/strengths/bg-lg.png");
+    }
+
+    &.packets {
+      background: right 140px bottom / auto 150px no-repeat url("/assets/img/strengths/packets2.png"),
+                  right bottom / auto 180px no-repeat url("/assets/img/strengths/boxes.png"),
+                  $color-secondary center / cover no-repeat url("/assets/img/strengths/bg-lg.png");
+    }
+  }
+
+  .strengths__bottom {
+    margin-top: 25px;
+    gap: 20px;
+
+    .strength__title {
+      font-size: 20px;
+    }
+  }
+
+  .condition__cards {
+    margin-top: 20px;
+    gap: 20px;
+  }
+
+  .condition-card {
+    padding: 25px 20px;
+
+    &__title {
+      max-width: 135px;
+      font-size: 20px;
+    }
+
+    &__text {
+      margin-top: 15px;
+    }
+  }
+
+  .condition__btns .btn {
+    max-width: none;
+  }
+
+  .weight-info {
+    font-size: 14px;
+
+    h2 {
+      font-size: 18px;
+    }
+
+    p, .link {
+      margin-top: 25px;
+    }
+
+    a {
+      font-size: 14px;
+      text-align: left;
+     }
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .weight__content {
+    background: right -45px bottom / auto 235px no-repeat url(/assets/img/hands-sm.png), #f1f9f5 center / cover no-repeat url(/assets/img/weight-bg-sm.png);
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .weight__content {
+    padding-right: 30px;
+    background: right -45px bottom 55px / auto 225px no-repeat url(/assets/img/hands-sm.png), #f1f9f5 center / cover no-repeat url(/assets/img/weight-bg-sm.png);
+
+    &.green {
+      background: right -50px bottom / auto 160px no-repeat url(/assets/img/boxgreens.png), #f1f9f5 center / cover no-repeat url(/assets/img/weight-bg-sm.png);
+    }
+
+    &.bundle {
+      padding-bottom: 20px;
+      background: right -145px bottom / auto 185px no-repeat url(/assets/img/bundle.png), #f1f9f5 center / cover no-repeat url(/assets/img/weight-bg-sm.png);
+    }
+  }
+
+  .weight__title {
+    margin-top: 15px;
+    font-size: 20px;
+  }
+
+  .weight__subtitle {
+    max-width: 140px;
+    margin-top: 10px;
+  }
+
+  .weight {
+    .btn {
+      margin-top: 165px;
+    }
+
+    .green .btn {
+      margin-top: 75px;
+    }
+
+    .bundle .btn {
+      margin-top: 100px;
+      color: $color-main;
+      background-color: #fff;
+
+      &:hover {
+        color: #fff;
+        background-color: $color-btn-hover;
+      }
+    }
+  }
+
+  .strengths__cards {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .strengths__card {
+    max-width: none;
+    height: 190px;
+    font-size: 17px;
+
+    p {
+      max-width: 155px;
+    }
+
+    &.box {
+      background: right 80px bottom -15px / auto 90px no-repeat url(/assets/img/strengths/packets.png), right bottom / auto 180px no-repeat url(/assets/img/strengths/boxes.png), #f1f9f5 center / cover no-repeat url(/assets/img/strengths/bg-lg.png);
+    }
+  }
+
+  .strengths__bottom {
+    margin-top: 30px;
+
+    .strength {
+      padding: 15px 8px 17px 13px;
+    }
+
+    .strength__header {
+      flex-direction: column-reverse;
+      align-items: flex-start;
+      row-gap: 15px;
+    }
+
+    .strength__icon {
+      width: 30px;
+      height: 30px;
+
+      img {
+        width: 16px;
+        height: 16px;
+        object-fit: contain;
+      }
+    }
+
+    .strength__title {
+      font-size: 16px;
+    }
+
+    .strength__text {
+      margin-top: 8px;
+      font-size: 12px;
+    }
+  }
+
+  .strengths__btns,
+  .condition__btns {
+    margin-top: 20px;
+  }
+
+  .strengths__btns .btn,
+  .condition__btns .btn {
+    max-width: 300px;
+    padding: 11px 40px;
+    font-size: 13px;
+  }
+
+  .condition__cards {
+    gap: 10px;
+  }
+
+  .condition-card {
+    padding: 15px 13px 17px;
+
+    &__header {
+      flex-direction: column-reverse;
+      align-items: flex-start;
+      row-gap: 15px;
+    }
+
+    &__icon {
+      width: 30px;
+      height: 30px;
+
+      img {
+        width: 16px;
+        height: 16px;
+        object-fit: contain;
+      }
+    }
+
+    &__title {
+      max-width: 108px;
+      font-size: 16px;
+    }
+
+    &__text {
+      margin-top: 8px;
+      font-size: 12px;
+    }
+  }
+
+  .weight-info {
+    font-size: 12px;
+
+    h2 {
+      font-size: 16px;
+    }
+
+    a {
+      font-size: 12px;
+    }
+  }
+
+  .choose .wrapper {
+    flex-direction: column;
+    row-gap: 15px;
+  }
+
+  .choose__img {
+    max-width: 240px;
+    height: 220px;
+    margin-left: auto;
   }
 }

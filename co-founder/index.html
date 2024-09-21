@@ -12,21 +12,24 @@
 </head>
 <body>
   <header class="header">
-    <div class="wrapper">
-      <div class="header__top">
+    <div class="header__top">
+      <div class="wrapper">
         <a href="/" class="logo">
-          <img src="/assets/img/svg/logo.svg" alt="logo" class="logo__icon">
+          <picture>
+            <source srcset="/assets/img/svg/logo-light.svg" media="(max-width: 1100px)" />
+            <img class="logo__icon" src="/assets/img/svg/logo.svg" alt="logo" />
+          </picture>
         </a>
         <img class="doll" src="/assets/img/cipollino-sm.png" alt="doll">
-        <a href="/catalog" class="katalog-link btn-fill btn-reset">КАТАЛОГ</a>
+        <button class="katalog-link btn-fill btn-reset" data-path="katalog">КАТАЛОГ</button>
         <form class="search" action="#" method="post">
-          <input class="search__input" type="text" placeholder="Поиск..." required>
+          <input class="search__input" type="text" placeholder="Поиск...">
           <button class="search__btn btn-reset" type="submit"></button>
         </form>
         <div class="header__btns">
           <a href="#" class="wishlist btn-reser">
             <span class="wishlist__icon">
-              <svg aria-hidden="true" width="22" height="18">
+              <svg  aria-hidden="true" width="22" height="18">
                 <use xlink:href="/assets/img/svg/heart.svg#heart"></use>
               </svg>
               <span class="wishlist__quantity">15</span>
@@ -35,7 +38,9 @@
           </a>
           <a href="#" class="cart btn-reser">
             <span class="cart__icon">
-              <img src="/assets/img/svg/cart.svg" alt="cart" class="cart__img">
+              <svg class="cart__img" aria-hidden="true" width="22" height="20">
+                <use xlink:href="/assets/img/svg/cart.svg#cart"></use>
+              </svg>
               <span class="cart__quantity">5</span>
             </span>
             <span class="cart__text">
@@ -43,10 +48,22 @@
               <span class="cart__price">3500 ₽</span>
             </span>
           </a>
-          <button class="account btn-reset">ВОЙТИ</button>
+          <button class="account btn-reset" data-path="login">
+            <svg class="account__icon" aria-hidden="true" width="20" height="20">
+              <use xlink:href="/assets/img/svg/user.svg#user"></use>
+            </svg>
+            <span class="account__text">ВОЙТИ</span>
+          </button>
+          <button class="burger btn-reset" aria-label="Бургер">
+            <span class="burger__line" aria-hidden="true"></span>
+            <span class="burger__line" aria-hidden="true"></span>
+            <span class="burger__line" aria-hidden="true"></span>
+          </button>
         </div>
       </div>
-      <div class="header__bottom">
+    </div>
+    <div class="header__bottom">
+      <div class="wrapper">
         <select class="select" name="city">
           <option value="МОСКВА" selected>МОСКВА</option>
           <option value="value2">ГОРОД 2</option>
@@ -96,35 +113,36 @@
 
     <section class="hero">
       <div class="wrapper">
-        <div class="hero__header">
+        <div class="section-header">
           <h1 class="hero__title">От основателя СЕМКО</h1>
-          <a href="/catalog" class="btn btn-reset">вернуться к каталогу</a>
+          <a class="catalog-link btn btn-reset" href="/catalog"><span class="text-md">вернуться к каталогу</span><span class="text-sm">в каталог</span></a>
         </div>
         <div class="hero__content">
-          <img class="hero__img" src="/assets/img/founder.png" alt="gendirector">
-          <div class="hero__descr">
-            <h2 class="hero__subtitle">Уважаемые посетители сайта, мы рады встрече с Вами!</h2>
-            <p class="hero__text">
-              «Пришли иные времена, взошли другие семена», написал мне когда-то в Амстердамском аэропорту Евгений Евтушенко, и он был прав: всему свое время, только мир семян вечен! *
-            </p>
-            <p class="hero__text">
-              Друзья, текст, который вы сейчас читаете, не спонтанный.
-            </p>
-            <p class="hero__text">
-              За более, чем 40 лет проведенные мной в семеноводстве и более 30 лет будучи генеральным директором агрофирмы Семко, за 25 лет выпуска газеты «Новый Земледелец» многие из вас уже привыкли к моему личному обращению непосредственно к каждому из вас!
-            </p>
-            <p class="hero__text">
-              Самые внимательные читатели и поклонники газеты «Новый Земледелец» обратили внимание на предисловие в данном обращении, оно взято из специального выпуска, посвященного 30-летию Малыша Семко и во многом стало пророческим! Как я и говорил ранее, мне с 1981 года в семеноводстве удалось сделать множество интересных, новаторских и уникальных проектов, создать сотни гибридов овощных культур, выпустить 100 выпусков тематической газеты, отправить семена Семко на космическую станцию «Мир», до того, как это стало мейнстримом, выступить автором и соавтором множества книг, познакомиться с огромным количеством интересных людей по всей планете, осчастливить миллионы овощеводов профессионалов и любителей по всей стране и далеко за ее пределами - и всё это благодаря уникальным семенам!
-            </p>
-            <p class="hero__text">
-              Планка качества семян от Семко, реализуемых проектов, морального компаса и человеческих качеств, поднята на самый высокий уровень, но самым главным своим достижением я считаю своих сыновей, которые в Волшебном мире семян стали настоящими профессионалами и занимаются сейчас своим любимым делом, продолжая в лучших традициях Семко работы по обеспечению качественными семенами вас, дорогие друзья и соратники!
-            </p>
-            <p class="hero__text">
-              Тем временем идет к завершению работа над «Семью проектами от Юрия», анонсированными в 2017-м году, результатами которых вы будете пользоваться на протяжении долгих лет. Каждый раз, когда я слышу вопрос: «А, что такое Семко?», «что значит Семко?», я всегда отвечаю: СЕМенная КОмпания, СЕМеноводческая КОмпания, но теперь, глядя на преемственность поколений и объявленный 2024-й годом семьи, я всегда с улыбкой буду добавлять, что Агрофирма Семко - это еще и СЕМейная КОмпания!
-            </p>
-            <div class="hero__text-important">
-              <p>Искренне Ваш, Юрий Алексеев!</p>
-            </div>
+          <picture class="hero__img">
+            <source srcset="/assets/img/founder-sm.png" media="(max-width: 768px)">
+            <img src="/assets/img/founder.png" alt="gendirector">
+          </picture>
+          <h2 class="hero__subtitle">Уважаемые посетители сайта, мы рады встрече с Вами!</h2>
+          <p class="hero__text hero__text_right">
+            «Пришли иные времена, взошли другие семена», написал мне когда-то в Амстердамском аэропорту Евгений Евтушенко, и он был прав: всему свое время, только мир семян вечен! *
+          </p>
+          <p class="hero__text hero__text_right">
+            Друзья, текст, который вы сейчас читаете, не спонтанный.
+          </p>
+          <p class="hero__text">
+            За более, чем 40 лет проведенные мной в семеноводстве и более 30 лет будучи генеральным директором агрофирмы Семко, за 25 лет выпуска газеты «Новый Земледелец» многие из вас уже привыкли к моему личному обращению непосредственно к каждому из вас!
+          </p>
+          <p class="hero__text">
+            Самые внимательные читатели и поклонники газеты «Новый Земледелец» обратили внимание на предисловие в данном обращении, оно взято из специального выпуска, посвященного 30-летию Малыша Семко и во многом стало пророческим! Как я и говорил ранее, мне с 1981 года в семеноводстве удалось сделать множество интересных, новаторских и уникальных проектов, создать сотни гибридов овощных культур, выпустить 100 выпусков тематической газеты, отправить семена Семко на космическую станцию «Мир», до того, как это стало мейнстримом, выступить автором и соавтором множества книг, познакомиться с огромным количеством интересных людей по всей планете, осчастливить миллионы овощеводов профессионалов и любителей по всей стране и далеко за ее пределами - и всё это благодаря уникальным семенам!
+          </p>
+          <p class="hero__text">
+            Планка качества семян от Семко, реализуемых проектов, морального компаса и человеческих качеств, поднята на самый высокий уровень, но самым главным своим достижением я считаю своих сыновей, которые в Волшебном мире семян стали настоящими профессионалами и занимаются сейчас своим любимым делом, продолжая в лучших традициях Семко работы по обеспечению качественными семенами вас, дорогие друзья и соратники!
+          </p>
+          <p class="hero__text">
+            Тем временем идет к завершению работа над «Семью проектами от Юрия», анонсированными в 2017-м году, результатами которых вы будете пользоваться на протяжении долгих лет. Каждый раз, когда я слышу вопрос: «А, что такое Семко?», «что значит Семко?», я всегда отвечаю: СЕМенная КОмпания, СЕМеноводческая КОмпания, но теперь, глядя на преемственность поколений и объявленный 2024-й годом семьи, я всегда с улыбкой буду добавлять, что Агрофирма Семко - это еще и СЕМейная КОмпания!
+          </p>
+          <div class="hero__text-important">
+            <p>Искренне Ваш, Юрий Алексеев!</p>
           </div>
         </div>
       </div>
@@ -149,7 +167,7 @@
             <div class="results-card__info">
               <h3 class="results-card__title">244</h3>
               <p class="results-card__text">личных авторских свидетельства</p>
-              <p class="results-card__text">на фирменные сорта и гибриды</p>
+              <p class="results-card__text">на фирменные сорта и&nbsp;гибриды</p>
             </div>
             <div class="results-card__imgs">
               <img class="results-card__img" src="/assets/img/diploms/2.png" alt="diplom">

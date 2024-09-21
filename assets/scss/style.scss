@@ -1,7 +1,9 @@
 @import 'variables';
 @import 'fonts';
+@import 'layout/settings';
 @import 'buttons';
 @import 'inputs';
+@import 'burger';
 @import 'card';
 @import 'tooltip';
 @import 'player';
@@ -10,7 +12,6 @@
 @import 'breadcrumb';
 @import 'tabs';
 @import 'modal';
-@import 'layout/settings';
 @import 'layout/header';
 @import 'layout/banner';
 @import 'layout/advantages';

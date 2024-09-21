@@ -46,6 +46,18 @@
   background-size: cover;
   background-blend-mode: multiply;
 
+  &_first {
+    background-image: url("/assets/img/discounts/0.png")
+  }
+
+  &_second {
+    background-image: url("/assets/img/discounts/1.png")
+  }
+
+  &_thirds {
+    background-image: url("/assets/img/discounts/2.png")
+  }
+
   .btn {
     margin-bottom: 12px;
     padding: 5px 15px;
@@ -68,6 +80,15 @@
   max-width: 560px;
   display: flex;
   flex-direction: column;
+  background-blend-mode: normal;
+
+  &:nth-child(1) {
+    background: right bottom / auto 220px no-repeat url("/assets/img/discounts/box.png"), #f1f9f5 center / cover url("/assets/img/discounts/bg.png");
+  }
+
+  &:nth-child(2) {
+    background: right bottom / auto 180px no-repeat url("/assets/img/discounts/vegetable.png"), #f1f9f5 center / cover url("/assets/img/discounts/bg.png");
+  }
 
   .discount__title {
     max-width: 215px;
@@ -90,5 +111,93 @@
     font-weight: 600;
     border-radius: $br-btn;
     text-transform: uppercase
+  }
+}
+
+@media screen and (min-width: 577px) and (max-width: 768px) {
+  .discount__btns {
+    display: none;
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  .discount__item:not(.discount-card) {
+    height: 207px;
+    padding: 17px;
+    font-size: 20px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: flex-end;
+    row-gap: 14px;
+  }
+
+  .discount__item .btn {
+    width: fit-content;
+  }
+
+  .discount__item .btn + * {
+    max-width: 175px;
+  }
+
+  .discount__list {
+    gap: 25px;
+  }
+
+  .discount-card {
+    padding: 20px 20px 25px;
+
+    &:nth-child(2) {
+      background: right bottom / auto 200px no-repeat url("/assets/img/discounts/car.png"), #f1f9f5 center / cover url("/assets/img/discounts/bg.png");
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .discount__header {
+    flex-wrap: wrap;
+    column-gap: 45px;
+    row-gap: 10px;
+  }
+
+  .discount__item {
+    font-size: 17px;
+
+    &_first {
+      background-image: url("/assets/img/discounts/0-sm.png")
+    }
+  
+    &_second {
+      background-image: url("/assets/img/discounts/1-sm.png")
+    }
+  
+    &_thirds {
+      background-image: url("/assets/img/discounts/2-sm.png")
+    }
+  }
+
+  .all-discounts {
+    font-size: 12px;
+  }
+
+  .discount-card {
+    height: 325px;
+    padding: 20px;
+    border-radius: 15px;
+
+    .discount__title {
+      font-size: 20px;
+    }
+
+    .discount__descr {
+      margin-top: 10px;
+      font-size: 14px;
+      flex-grow: 0;
+    }
+
+    .discount__link {
+      margin-top: 25px;
+    }
   }
 }

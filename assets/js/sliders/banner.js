@@ -5,4 +5,9 @@ new Splide( '.banner__slider', {
   autoplay: true,
   flickMaxPages: 1,
   gap: 20,
+  breakpoints: {
+    576: {
+      gap: 5,
+    },
+  }
 } ).mount();

@@ -14,7 +14,6 @@ class Modal {
 		this.focusElements = [
 			'a[href]',
 			'input',
-			'button',
 			'select',
 			'textarea',
 			'[tabindex]'

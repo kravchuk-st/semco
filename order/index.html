@@ -12,13 +12,16 @@
 </head>
 <body>
   <header class="header">
-    <div class="wrapper">
-      <div class="header__top">
+    <div class="header__top">
+      <div class="wrapper">
         <a href="/" class="logo">
-          <img src="/assets/img/svg/logo.svg" alt="logo" class="logo__icon">
+          <picture>
+            <source srcset="/assets/img/svg/logo-light.svg" media="(max-width: 1100px)" />
+            <img class="logo__icon" src="/assets/img/svg/logo.svg" alt="logo" />
+          </picture>
         </a>
         <img class="doll" src="/assets/img/cipollino-sm.png" alt="doll">
-        <a href="/catalog" class="katalog-link btn-fill btn-reset">КАТАЛОГ</a>
+        <button class="katalog-link btn-fill btn-reset" data-path="katalog">КАТАЛОГ</button>
         <form class="search" action="#" method="post">
           <input class="search__input" type="text" placeholder="Поиск...">
           <button class="search__btn btn-reset" type="submit"></button>
@@ -26,7 +29,7 @@
         <div class="header__btns">
           <a href="#" class="wishlist btn-reser">
             <span class="wishlist__icon">
-              <svg aria-hidden="true" width="22" height="18">
+              <svg  aria-hidden="true" width="22" height="18">
                 <use xlink:href="/assets/img/svg/heart.svg#heart"></use>
               </svg>
               <span class="wishlist__quantity">15</span>
@@ -35,7 +38,9 @@
           </a>
           <a href="#" class="cart btn-reser">
             <span class="cart__icon">
-              <img src="/assets/img/svg/cart.svg" alt="cart" class="cart__img">
+              <svg class="cart__img" aria-hidden="true" width="22" height="20">
+                <use xlink:href="/assets/img/svg/cart.svg#cart"></use>
+              </svg>
               <span class="cart__quantity">5</span>
             </span>
             <span class="cart__text">
@@ -43,10 +48,22 @@
               <span class="cart__price">3500 ₽</span>
             </span>
           </a>
-          <button class="account btn-reset">ВОЙТИ</button>
+          <button class="account btn-reset" data-path="login">
+            <svg class="account__icon" aria-hidden="true" width="20" height="20">
+              <use xlink:href="/assets/img/svg/user.svg#user"></use>
+            </svg>
+            <span class="account__text">ВОЙТИ</span>
+          </button>
+          <button class="burger btn-reset" aria-label="Бургер">
+            <span class="burger__line" aria-hidden="true"></span>
+            <span class="burger__line" aria-hidden="true"></span>
+            <span class="burger__line" aria-hidden="true"></span>
+          </button>
         </div>
       </div>
-      <div class="header__bottom">
+    </div>
+    <div class="header__bottom">
+      <div class="wrapper">
         <select class="select" name="city">
           <option value="МОСКВА" selected>МОСКВА</option>
           <option value="value2">ГОРОД 2</option>
@@ -54,7 +71,7 @@
         </select>
         <nav class="nav">
           <ul class="nav__list list-reset">
-            <li class="nav__item"><a href="/about" class="nav__link">О КОМПАНИИ</a></li>
+            <li class="nav__item"><a href="#" class="nav__link">О КОМПАНИИ</a></li>
             <li class="nav__item"><a href="#" class="nav__link">ОПТОВЫЕ ЗАКУПКИ</a></li>
             <li class="nav__item"><a href="/promotions" class="nav__link">АКЦИИ</a></li>
             <li class="nav__item"><a href="/delivery" class="nav__link">ДОСТАВКА</a></li>
@@ -224,8 +241,8 @@
             <li class="basket__item_delivery">
               <h3 class="title">Получатель</h3>
               <form class="form-recipient" action="#" method="post">
-                <input type="text" class="input" placeholder="Имя">
                 <input type="text" class="input" placeholder="Фамилия">
+                <input type="text" class="input" placeholder="Имя">
                 <input type="text" class="input" placeholder="Отчество">
                 <input type="tel" class="input" placeholder="+7 (999) 999-99-99">
                 <input type="email" class="input" placeholder="E-mail">
@@ -241,7 +258,7 @@
                 <button class="btn btn-dark btn-reset" type="submit">применить</button>
               </form>
             </li>
-            <li class="basket__item_delivery">
+            <li class="basket__item_delivery basket__item_pay">
               <h3 class="title">Способ оплаты</h3>
               <div class="layout">
                 <div class="radio">
@@ -293,7 +310,7 @@
                   </label>
                 </div>
                 <div class="radio">
-                  <input type="radio" name="Payment" value="Безналичный расчет" id="payments">
+                  <input type="radio" name="Payment" value="Безналичный расчет" id="payments" disabled>
                   <label for="payments">
                     <div class="radio__label">
                       <div class="radio__header">
@@ -341,7 +358,8 @@
                 <p class="checkout-total__result">1 685 ₽</p>
               </div>
             </div>
-            <button class="btn-order btn btn-lg btn-reset">оформить заказ</button>
+            <button class="btn-order btn btn-fill btn-lg btn-reset">оформить заказ</button>
+            <button class="btn-order_check btn btn-lg btn-reset">сформировать счёт</button>
             <p class="checkout-total__subtext">
               Нажимая кнопку «Оформить заказ», я соглашаюсь с Условиями заказа и доставки , а также на обработку персональных данных в соответствии с обновленной Политикой обработки персональных данных
             </p>

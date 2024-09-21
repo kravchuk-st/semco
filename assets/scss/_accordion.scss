@@ -55,7 +55,7 @@
 
   &__content {
     margin-top: 0;
-    padding: 0 20px;
+    padding: 0 35px 0 20px;
     font-size: 13px;
     line-height: 1.4;
     color: #24383b;
@@ -79,5 +79,46 @@
     ul {
       list-style-position: inside;
     }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .accordion {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .accordion {
+    margin-top: 30px;
+    row-gap: 25px;
+
+    &__content {
+      padding-right: 45px;
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .accordion {
+    margin-top: 40px;
+
+    &__btn {
+      padding: 13px 20px;
+      font-size: 16px;
+    }
+
+    &__icon {
+      width: 16px;
+      height: 10px;
+    }
+
+    &__content {
+      font-size: 12px;
+    }
+  }
+
+  .accordion__item.open .accordion__content {
+    margin-top: 10px;
   }
 }

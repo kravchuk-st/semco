@@ -19,13 +19,16 @@
   </svg>
   
   <header class="header">
-    <div class="wrapper">
-      <div class="header__top">
+    <div class="header__top">
+      <div class="wrapper">
         <a href="/" class="logo">
-          <img src="/assets/img/svg/logo.svg" alt="logo" class="logo__icon">
+          <picture>
+            <source srcset="/assets/img/svg/logo-light.svg" media="(max-width: 1100px)" />
+            <img class="logo__icon" src="/assets/img/svg/logo.svg" alt="logo" />
+          </picture>
         </a>
         <img class="doll" src="/assets/img/cipollino-sm.png" alt="doll">
-        <a href="/catalog" class="katalog-link btn-fill btn-reset">КАТАЛОГ</a>
+        <button class="katalog-link btn-fill btn-reset" data-path="katalog">КАТАЛОГ</button>
         <form class="search" action="#" method="post">
           <input class="search__input" type="text" placeholder="Поиск...">
           <button class="search__btn btn-reset" type="submit"></button>
@@ -33,7 +36,7 @@
         <div class="header__btns">
           <a href="#" class="wishlist btn-reser">
             <span class="wishlist__icon">
-              <svg aria-hidden="true" width="22" height="18">
+              <svg  aria-hidden="true" width="22" height="18">
                 <use xlink:href="/assets/img/svg/heart.svg#heart"></use>
               </svg>
               <span class="wishlist__quantity">15</span>
@@ -42,7 +45,9 @@
           </a>
           <a href="#" class="cart btn-reser">
             <span class="cart__icon">
-              <img src="/assets/img/svg/cart.svg" alt="cart" class="cart__img">
+              <svg class="cart__img" aria-hidden="true" width="22" height="20">
+                <use xlink:href="/assets/img/svg/cart.svg#cart"></use>
+              </svg>
               <span class="cart__quantity">5</span>
             </span>
             <span class="cart__text">
@@ -50,10 +55,22 @@
               <span class="cart__price">3500 ₽</span>
             </span>
           </a>
-          <button class="account btn-reset">ВОЙТИ</button>
+          <button class="account btn-reset" data-path="login">
+            <svg class="account__icon" aria-hidden="true" width="20" height="20">
+              <use xlink:href="/assets/img/svg/user.svg#user"></use>
+            </svg>
+            <span class="account__text">ВОЙТИ</span>
+          </button>
+          <button class="burger btn-reset" aria-label="Бургер">
+            <span class="burger__line" aria-hidden="true"></span>
+            <span class="burger__line" aria-hidden="true"></span>
+            <span class="burger__line" aria-hidden="true"></span>
+          </button>
         </div>
       </div>
-      <div class="header__bottom">
+    </div>
+    <div class="header__bottom">
+      <div class="wrapper">
         <select class="select" name="city">
           <option value="МОСКВА" selected>МОСКВА</option>
           <option value="value2">ГОРОД 2</option>
@@ -100,7 +117,8 @@
     <section class="blog">
       <div class="wrapper">
         <div class="blog__header">
-          <h1>Полезные статьи и новости</h1>
+          <h1>Полезные статьи и&nbsp;новости</h1>
+          <button class="filter-btn btn-reset">выбрать раздел</button>
           <div class="select-tema">
             <span class="select-tema__icon">
               <svg width="9" height="11">
@@ -411,14 +429,14 @@
         </div>
         <div class="splide__track">
           <div class="splide__list">
-            <a class="splide__slide discount__item" href="#" style="background-image: url(/assets/img/discounts/0.png)">
+            <a class="splide__slide discount__item discount__item_first" href="#">
               <span class="btn btn-fill">вам стоит взглянуть</span>
               <span>Скидки оптовым покупателям</span>
             </a>
-            <a class="splide__slide discount__item" href="#" style="background-image: url(/assets/img/discounts/1.png)">
+            <a class="splide__slide discount__item discount__item_second" href="#">
               <span>Скидки оптовым покупателям</span>
             </a>
-            <a class="splide__slide discount__item" href="#" style="background-image: url(/assets/img/discounts/2.png)">
+            <a class="splide__slide discount__item discount__item_thirds" href="#">
               <span>Скидки оптовым покупателям</span>
             </a>
           </div>
@@ -467,7 +485,7 @@
                   </div>
                 </div>
                 <div class="card__btns">
-                  <button class="card__btn btn-reset">добавить в корзину</button>
+                  <button class="card__btn btn-reset"><span>добавить </span>в корзину</button>
                   <a href="#" class="card__link btn-reset">Оптовым покупателям</a>
                 </div>
               </div>
@@ -498,7 +516,7 @@
                   </div>
                 </div>
                 <div class="card__btns">
-                  <button class="card__btn btn-reset">добавить в корзину</button>
+                  <button class="card__btn btn-reset"><span>добавить </span>в корзину</button>
                   <a href="#" class="card__link btn-reset">Оптовым покупателям</a>
                 </div>
               </div>
@@ -529,7 +547,7 @@
                   </div>
                 </div>
                 <div class="card__btns">
-                  <button class="card__btn btn-reset">добавить в корзину</button>
+                  <button class="card__btn btn-reset"><span>добавить </span>в корзину</button>
                   <a href="#" class="card__link btn-reset">Оптовым покупателям</a>
                 </div>
               </div>
@@ -560,7 +578,7 @@
                   </div>
                 </div>
                 <div class="card__btns">
-                  <button class="card__btn btn-reset">добавить в корзину</button>
+                  <button class="card__btn btn-reset"><span>добавить </span>в корзину</button>
                   <a href="#" class="card__link btn-reset">Оптовым покупателям</a>
                 </div>
               </div>
@@ -568,6 +586,7 @@
           </div>
         </div>
       </div>
+      <a href="#" class="btn btn-lg btn-reset">все новинки</a>
     </section>
   </main>
 

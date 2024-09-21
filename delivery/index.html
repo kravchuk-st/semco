@@ -12,13 +12,16 @@
 </head>
 <body>
   <header class="header">
-    <div class="wrapper">
-      <div class="header__top">
+    <div class="header__top">
+      <div class="wrapper">
         <a href="/" class="logo">
-          <img src="/assets/img/svg/logo.svg" alt="logo" class="logo__icon">
+          <picture>
+            <source srcset="/assets/img/svg/logo-light.svg" media="(max-width: 1100px)" />
+            <img class="logo__icon" src="/assets/img/svg/logo.svg" alt="logo" />
+          </picture>
         </a>
         <img class="doll" src="/assets/img/cipollino-sm.png" alt="doll">
-        <a href="/catalog" class="katalog-link btn-fill btn-reset">КАТАЛОГ</a>
+        <button class="katalog-link btn-fill btn-reset" data-path="katalog">КАТАЛОГ</button>
         <form class="search" action="#" method="post">
           <input class="search__input" type="text" placeholder="Поиск...">
           <button class="search__btn btn-reset" type="submit"></button>
@@ -26,7 +29,7 @@
         <div class="header__btns">
           <a href="#" class="wishlist btn-reser">
             <span class="wishlist__icon">
-              <svg aria-hidden="true" width="22" height="18">
+              <svg  aria-hidden="true" width="22" height="18">
                 <use xlink:href="/assets/img/svg/heart.svg#heart"></use>
               </svg>
               <span class="wishlist__quantity">15</span>
@@ -35,7 +38,9 @@
           </a>
           <a href="#" class="cart btn-reser">
             <span class="cart__icon">
-              <img src="/assets/img/svg/cart.svg" alt="cart" class="cart__img">
+              <svg class="cart__img" aria-hidden="true" width="22" height="20">
+                <use xlink:href="/assets/img/svg/cart.svg#cart"></use>
+              </svg>
               <span class="cart__quantity">5</span>
             </span>
             <span class="cart__text">
@@ -43,10 +48,22 @@
               <span class="cart__price">3500 ₽</span>
             </span>
           </a>
-          <button class="account btn-reset">ВОЙТИ</button>
+          <button class="account btn-reset" data-path="login">
+            <svg class="account__icon" aria-hidden="true" width="20" height="20">
+              <use xlink:href="/assets/img/svg/user.svg#user"></use>
+            </svg>
+            <span class="account__text">ВОЙТИ</span>
+          </button>
+          <button class="burger btn-reset" aria-label="Бургер">
+            <span class="burger__line" aria-hidden="true"></span>
+            <span class="burger__line" aria-hidden="true"></span>
+            <span class="burger__line" aria-hidden="true"></span>
+          </button>
         </div>
       </div>
-      <div class="header__bottom">
+    </div>
+    <div class="header__bottom">
+      <div class="wrapper">
         <select class="select" name="city">
           <option value="МОСКВА" selected>МОСКВА</option>
           <option value="value2">ГОРОД 2</option>
@@ -100,6 +117,7 @@
         <p class="delivery__descr">
           Мы осуществляем доставку семян и сопутствующих товаров нашего интернет-магазина во все регионы Российской Федерации, а также в Беларусь и Казахстан.
         </p>
+        <img class="delivery__img" src="/assets/img/delivery-bg.png" alt="map">
         <ul class="delivery__list list-reset">
           <li class="delivery__item">
             <p class="region">Москва и Московская область</p>
@@ -136,6 +154,14 @@
           <li class="delivery__item">
             <p class="region">Сибирский</p>
             <p class="days">5-9 дней</p>
+          </li>
+          <li class="delivery__item">
+            <p class="region">ЛНР, ДНР, Запорожье, Херсон, Крым</p>
+            <p class="days">10-14 дней, для Крыма 7-10 дней</p>
+          </li>
+          <li class="delivery__item">
+            <p class="region">Калининградская область</p>
+            <p class="days">10-14 дней</p>
           </li>
         </ul>
         <ul class="delivery__list delivery__list_lg list-reset">
@@ -232,7 +258,7 @@
     <section class="delivery-local">
       <div class="wrapper">
         <h2 class="text-center">Международная доставка</h2>
-        <ul class="delivery-local__list list-reset">
+        <ul class="delivery-local__list delivery-local__list_contry list-reset">
           <li class="delivery-local__item">
             <div class="delivery-local__header">
               <h3 class="delivery-local__title">Беларусь</h3>

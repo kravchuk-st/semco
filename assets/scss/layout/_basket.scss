@@ -8,7 +8,12 @@
   }
 
   &__header {
-    margin-top: 35px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 35px;
+  }
+
+  &__btns {
     display: flex;
     align-items: center;
     column-gap: 15px;
@@ -102,11 +107,10 @@
     .btn-order {
       margin-top: 20px;
       width: 100%;
-      color: $color-main;
-      opacity: .5;
 
-      &:hover {
-        opacity: 1;
+      &_check {
+        margin-top: 15px;
+        width: 100%;
       }
     }
   }
@@ -127,6 +131,7 @@
       height: 17px;
       border-radius: 3px;
       border: 1px solid $color-main;
+      background-color: #fafafa;
       flex-shrink: 0;
       cursor: pointer;
 
@@ -279,6 +284,7 @@
     &__old-price {
       font-size: 10px;
       color: #C1C1C1;
+      text-decoration: line-through;
     }
 
     &__new-price {
@@ -382,7 +388,7 @@
     }
 
     &__delivery {
-      max-width: 180px;
+      max-width: 200px;
       margin-top: 5px;
       font-size: 11px;
       color: #9c9ea0;
@@ -408,6 +414,7 @@
       .btn {
         color: #24383b;
         border-color: #24383b;
+        letter-spacing: 0.05em;
 
         &:hover {
           color: #fff;
@@ -425,7 +432,6 @@
   }
 
   &__top {
-    width: calc(100% - 460px);
     margin-top: 15px;
     display: flex;
     align-items: baseline;
@@ -433,7 +439,7 @@
     font-size: 14px;
 
     .delivery-info {
-      margin-left: auto;
+      margin-left: 110px;
 
       button {
         margin-left: 10px;
@@ -477,9 +483,19 @@
       flex-basis: 210px;
       align-items: flex-start;
 
+      &:has(input:not(:disabled)) {
+        cursor: pointer;
+      }
+
+      &:has(input:disabled) {
+        opacity: .5;
+      }
+
       label {
         width: 100%;
+        height: 100%;
         align-items: flex-start;
+        cursor: inherit;
       }
 
       &__label {
@@ -613,5 +629,405 @@
   .radio:has(input[type="radio"]:not(:checked)){
     opacity: .6;
     background: #F9FDFB;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .basket__layout {
+    flex-direction: column;
+    row-gap: 35px;
+  }
+
+  .basket__list,
+  .basket__checkout {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .basket__header {
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 15px 25px;
+  }
+
+  .basket__checkout .btn-buy {
+    padding: 16px 25px;
+    font-size: 18px;
+
+    &-now {
+      padding: 15px 25px;
+      font-size: 18px;
+    }
+  }
+
+  .basket__checkout .btn-order {
+    padding: 15px 30px;
+    font-size: 18px;
+
+    &_check {
+      padding: 14px 30px;
+      font-size: 18px;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .basket__title .text-top {
+    font-size: 17px;
+  }
+
+  .basket__btns .btn {
+    font-size: 9px;
+    column-gap: 8px;
+    line-height: 2;
+  }
+
+  .basket .btn-select-all .square {
+    width: 14px;
+    height: 14px;
+  }
+
+  .basket__layout {
+    margin-top: 35px;
+  }
+
+  .basket__item {
+    padding: 12px 20px 13px 12px;
+    border-radius: 11px;
+  }
+
+  .basket .basket-product__descr {
+    margin-left: 0;
+  }
+
+  .basket .basket-product__link_title {
+    max-width: 150px;
+    font-size: 14px;
+  }
+
+  .basket .basket-product__subtitle {
+    max-width: 130px;
+  }
+
+  .basket .basket-product__count {
+    margin-left: 25px;
+  }
+
+  .basket .basket-product__old-sum {
+    font-size: 14px;
+  }
+
+  .basket .basket-product__new-sum {
+    font-size: 21px;
+  }
+
+  .basket .checkout-total {
+    padding: 25px 17px 35px 25px;
+  }
+
+  .basket .checkout-total__form {
+    column-gap: 20px;
+
+    .btn {
+      flex-shrink: 0;
+      padding: 10px 20px;
+    }
+
+    .input {
+      max-width: none;
+    }
+  }
+
+  .basket__top .delivery-info {
+    margin-left: auto;
+  }
+
+  .basket__top .delivery-info button {
+    display: block;
+    margin-left: auto;
+  }
+
+  .basket__item_delivery .layout {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .basket__item_pay .layout {
+    grid-template-columns: repeat(3, 1fr);
+
+    .radio__label {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .radio__header {
+      display: contents;
+    }
+
+    .radio__title {
+      font-size: 12px;
+    }
+
+    .radio__info {
+      margin-top: 3px;
+      font-size: 9px;
+      flex: 1 0 auto;
+    }
+
+    img {
+      order: 3;
+      margin-top: 15px;
+    }
+  }
+
+  .basket__item_delivery .form-organization .input:nth-child(-n+2) {
+    flex-basis: 45%;
+  }
+
+  .basket__item_delivery .form-organization .input,
+  .basket__item_delivery .form-recipient .input {
+    flex-basis: 30%;
+  }
+}
+
+@media screen and (max-width: 610px) {
+  .basket .basket-product {
+    position: relative;
+    z-index: 0;
+  }
+
+  .basket .basket-product__checkbox {
+    position: absolute;
+    z-index: 5;
+    top: 5px;
+    left: 5px;
+  }
+}
+
+
+@media screen and (max-width: 576px) {
+  .basket__top {
+    flex-wrap: wrap;
+    gap: 15px 10px;
+
+    .delivery-info {
+      margin-left: 0;
+    }
+  }
+
+  .basket__btns {
+    column-gap: 8px;
+  }
+  
+  .basket__btns .btn {
+    padding: 2px 11px;
+    font-size: 11px;
+    line-height: 1.6;
+  }
+
+  .basket .btn-select-all .square {
+    width: 10px;
+    height: 10px;
+  }
+
+  .basket .btn-remove-all .basket__icon {
+    width: 10px;
+    height: 15px;
+  }
+
+  .basket__layout {
+    margin-top: 30px;
+    row-gap: 30px;
+  }
+
+  .basket__list {
+    row-gap: 15px;
+  }
+
+  .basket .basket-product__message {
+    position: absolute;
+    z-index: 5;
+    left: 6px;
+    top: 100px;
+  }
+
+  .basket__item {
+    padding: 7px 10px 14px 7px;
+  }
+
+  .basket .basket-product {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 86px 1fr 50px;
+    grid-template-rows: auto auto;
+  }
+
+  .basket .basket-product__actions {
+    order: -1;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+    row-gap: 4px;
+  }
+
+  .basket .basket-product__coast {
+    grid-row: span 2;
+    align-items: flex-end;
+    white-space: nowrap;
+  }
+
+  .basket .basket-product__link_title {
+    margin-top: 8px;
+    max-width: none;
+  }
+
+  .basket .basket-product__sum {
+    margin-top: auto;
+  }
+
+  .basket .basket-product__price {
+    flex-grow: 0;
+    margin-top: 3px;
+  }
+
+  .basket .basket-product__new-sum {
+    font-size: 17px;
+  }
+
+  .basket .basket-product__old-sum {
+    font-size: 12px;
+  }
+
+  .basket .basket-product__count {
+    margin-left: 0;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    display: flex;
+    align-items: center;
+    column-gap: 5px;
+  }
+
+  .basket .basket-product__actions .remove-btn svg {
+    width: 14px;
+    height: 18px;
+  }
+
+
+
+  .basket .checkout-total {
+    padding: 25px 15px 22px;
+
+    &__title {
+      font-size: 13px;
+    }
+
+    &__sum {
+      font-size: 15px;
+    }
+
+    &__body {
+      margin-top: 15px;
+      font-size: 20px;
+    }
+
+    &__info {
+      margin-top: 15px;
+      font-size: 12px;
+    }
+
+    &__result {
+      font-size: 25px;
+    }
+
+    &__delivery {
+      font-size: 12px;
+    }
+
+    &__form {
+      margin-top: 20px;
+      column-gap: 10px;
+    }
+  }
+
+  .basket__checkout .btn-buy {
+    margin-top: 20px;
+    padding: 14px 25px;
+    font-size: 14px;
+
+    &-now {
+      margin-top: 10px;
+      padding: 13px 25px;
+      font-size: 14px;
+    }
+  }
+
+  .basket__item_delivery {
+    padding: 15px 15px 20px;
+    border-radius: 10px;
+
+    &:has(.form-promo-code) {
+      padding-bottom: 35px;
+    }
+
+    .layout {
+      margin-top: 15px;
+      gap: 12px 10px;
+
+      .radio__title {
+        font-size: 14px;
+      }
+
+      .radio__info {
+        font-size: 12px;
+      }
+    }
+  }
+
+  .basket__item_delivery .form-promo-code .input {
+    padding: 6px 12px;
+  }
+
+  .basket__item_delivery .form-promo-code .form__block .discont-text {
+    top: calc(100% + 10px);
+    right: 50%;
+    transform: translateX(50%);
+    font-size: 11px;
+    white-space: nowrap;
+  }
+
+  .basket__item_pay .layout {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .basket__checkout .btn-order {
+    padding: 14px 25px;
+    font-size: 14px;
+
+    &_check {
+      padding: 13px 25px;
+      font-size: 14px;
+    }
+  }
+
+  .basket__item_delivery .form-organization,
+  .basket__item_delivery .form-recipient {
+    gap: 10px;
+  }
+
+  .basket__item_delivery .form-organization {
+    flex-direction: column;
+  }
+
+  .basket__item_delivery .form-recipient .input {
+    flex-basis: 100%;
+
+    &:nth-child(n + 2):nth-child(-n + 3) {
+      flex-basis: 40%;
+    }
   }
 }

@@ -1,12 +1,6 @@
 .hero {
   color: #000;
 
-  &__header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
   &__title {
     font-weight: 400;
   }
@@ -14,22 +8,30 @@
   &__content {
     margin-top: 30px;
     padding-bottom: 55px;
-    display: flex;
-    align-items: start;
+    display: grid;
+    grid-template-columns: [img] auto [text] 1fr;
+    grid-template-rows: auto;
     column-gap: 35px;
     border-bottom: 1px solid #00000080;
   }
 
   &__img {
+    width: 45vw;
     max-width: 445px;
     height: auto;
     border-radius: 20px;
-    flex-shrink: 0;
+    grid-column: img / text;
+    grid-row: span 5;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+    }
   }
 
   &__subtitle {
     max-width: 380px;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
     font-weight: 500;
     font-size: 25px;
     line-height: 1.35;
@@ -41,12 +43,14 @@
     line-height: 1.5;
     text-indent: 1.5em;
     text-align: justify;
+    grid-column-start: text;
 
     &-important {
       margin-top: 30px;
       font-size: 16px;
       text-align: right;
       color: $color-main;
+      grid-column: 1 / -1;
     }
   }
 
@@ -78,6 +82,99 @@
         font-size: 14px;
         letter-spacing: 0.13em;
       }
+    }
+  }
+}
+
+@media screen and (min-width: 993px) {
+
+}
+
+@media screen and (max-width: 992px) {
+
+}
+
+@media screen and (max-width: 768px) {
+  .hero__content {
+    column-gap: 20px;
+  }
+
+  .hero__subtitle {
+    font-size: 21px;
+    max-width: none;
+  }
+
+  .hero__text {
+    font-size: 12px;
+  }
+
+  .hero__text:not(.hero__text_right) {
+    grid-column: 1 / -1;
+  }
+
+  .hero__text-important {
+    margin-top: 25px;
+    font-size: 14px;
+  }
+
+  .hero-form form {
+    padding: 20px 20px 27px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .hero__content {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .hero__img {
+    width: 100%;
+  }
+
+  .hero__subtitle {
+    margin: 20px 0 0;
+    font-size: 18px;
+  }
+
+  .hero__text {
+    font-size: 13px;
+  }
+
+  .hero__text-important {
+    margin-top: 20px;
+    font-size: 12px;
+  }
+
+  .hero-form__subtitle {
+    margin-top: 10px;
+    font-size: 12px;
+  }
+
+  .hero-form form {
+    margin-top: 17px;
+    padding: 15px 15px 25px;
+    border-radius: 15px;
+
+    .input {
+      padding: 9px 25px;
+    }
+
+    .textarea {
+      height: 230px;
+      margin-top: 15px;
+      padding: 15px 25px;
+      font-size: 15px;
+      border-radius: 10px;
+    }
+
+    .btn-lg {
+      width: 100%;
+      max-width: 330px;
+      margin-top: 25px;
+      padding: 12px 15px;
+      font-size: 12px;
     }
   }
 }

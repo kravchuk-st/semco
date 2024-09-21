@@ -1,12 +1,12 @@
 .header {
   padding: 40px 0 0;
 
-  &__top {
+  &__top .wrapper {
     display: flex;
     align-items: center;
   }
 
-  &__bottom {
+  &__bottom .wrapper {
     margin-top: 10px;
     display: flex;
     align-items: center;
@@ -18,7 +18,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    column-gap: 12px;
+    column-gap: 20px;
   }
 
   &__call {
@@ -62,6 +62,24 @@
     background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9.99954 1.25C8.17684 1.25216 6.42942 1.97719 5.14057 3.26603C3.85173 4.55487 3.1267 6.3023 3.12454 8.125C3.12454 14.0076 9.37454 18.4509 9.64066 18.6371C9.7459 18.7106 9.87117 18.75 9.99954 18.75C10.1279 18.75 10.2532 18.7106 10.3584 18.6371C10.6245 18.4509 16.8745 14.0076 16.8745 8.125C16.8724 6.3023 16.1474 4.55487 14.8585 3.26603C13.5697 1.97719 11.8222 1.25216 9.99954 1.25ZM10 5.62523C10.4945 5.62523 10.9778 5.77185 11.3889 6.04655C11.8 6.32126 12.1205 6.7117 12.3097 7.16852C12.4989 7.62533 12.5484 8.128 12.452 8.61295C12.3555 9.0979 12.1174 9.54336 11.7678 9.89299C11.4181 10.2426 10.9727 10.4807 10.4877 10.5772C10.0028 10.6737 9.50011 10.6241 9.04329 10.4349C8.58648 10.2457 8.19603 9.92527 7.92133 9.51415C7.64662 9.10303 7.5 8.61968 7.5 8.12523C7.49999 7.79692 7.56465 7.47183 7.69028 7.16851C7.81592 6.86519 8.00006 6.58959 8.23221 6.35744C8.46436 6.12529 8.73996 5.94114 9.04328 5.81551C9.3466 5.68988 9.67169 5.62522 10 5.62523Z' fill='%2303A753'/%3E%3C/svg%3E");
     background-position: 15px center;
     background-size: 20px;
+  }
+
+  .tooltip_search {
+    .btn-change {
+      margin-right: -5px;
+      line-height: 1;
+    }
+
+    .tooltip__text {
+      top: calc(100% + 22px);
+    }
+
+    .input {
+      width: 240px;
+      padding: 8px 25px;
+      line-height: 1;
+      border: 1px solid $color-main;
+    }
   }
 }
 
@@ -207,6 +225,10 @@
     justify-content: center;
   }
 
+  &__img {
+    fill: $color-main;
+  }
+
   &__quantity {
     position: absolute;
     z-index: 5;
@@ -241,6 +263,160 @@
 .account {
   width: auto;
   height: 20px;
-  padding-left: 30px;
-  background: 0 center / contain no-repeat url("/assets/img/svg/user.svg");;
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+
+  &__icon {
+    fill: $color-main;
+  }
+}
+
+@media screen and (min-width: 1101px) {
+  .tooltip_search {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .header {
+    padding: 0;
+
+    &__top {
+      padding: 10px 0;
+      background-color: $color-main;
+    }
+
+    .doll {
+      margin-left: 10px;
+      width: 43px;
+      height: 46px;
+    }
+
+    &__btns {
+      justify-content: flex-end;
+      column-gap: 25px;
+    }
+
+    .wishlist__icon svg,
+    .cart__img {
+      width: 30px;
+      height: 30px;
+      fill: #fff;
+    }
+
+    .account__icon {
+      width: 26px;
+      height: 26px;
+      fill: #fff;
+    }
+  }
+
+  .wishlist__text,
+  .cart__text,
+  .account__text {
+    display: none;
+  }
+
+  .katalog-link,
+  .search,
+  .nav {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .header__top {
+    padding: 16px 0;
+  }
+  
+  .header {
+    .call__link {
+      font-size: 16px;
+    }
+
+    .call-back__btn {
+      margin-top: 6px;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .header .select {
+    padding-left: 30px;
+    background-position: left center;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .logo__icon {
+    width: 82px;
+  }
+
+  .header .doll {
+    margin-left: 5px;
+    width: 25px;
+    height: 26px;
+  }
+
+  .header__btns {
+    margin-left: 15px;
+    column-gap: 20px;
+  }
+
+  .burger {
+    margin-left: 0;
+    width: 26px;
+    height: 16px;
+  }
+  
+  .header__btns {
+    column-gap: 16px;
+  }
+
+  .header .tooltip_search .tooltip__text {
+    left: -30px;
+  }
+
+  .header .tooltip_search .input {
+    width: 200px;
+    padding: 6px 15px;
+  }
+
+  .header {
+    .wishlist__icon svg,
+    .cart__img,
+    .address__icon,
+    .account__icon {
+      width: 18px;
+      height: 18px;
+    }
+
+    .select {
+      max-width: fit-content;
+      margin: 0;
+      padding: 5px 4px 5px 25px;
+      background-position: 0 center;
+      font-size: 14px;
+    }
+
+    .call__link {
+      font-size: 15px;
+      column-gap: 6px;
+    }
+  }
+
+  .header__bottom .wrapper {
+    align-items: flex-start;
+  }
+
+  .call__img {
+    width: 16px;
+    height: 16px;
+
+    .call__icon {
+      width: 10px;
+      height: 10px;
+    }
+  }
 }

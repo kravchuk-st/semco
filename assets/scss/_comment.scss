@@ -6,6 +6,7 @@
   &-best {
     margin-top: 85px;
     padding: 20px 20px 40px 30px;
+    flex-direction: column;
 
     .author {
       margin-top: 25px;
@@ -26,6 +27,7 @@
     }
 
     .btn-more {
+      width: fit-content;
       margin-top: 15px;
       font-size: 14px;
       color: #707070;
@@ -39,12 +41,17 @@
   }
 
   &__popularity {
-    margin-left: auto;
     padding: 10px 25px;
     font-size: 14px;
     line-height: 1.2;
     letter-spacing: 0.05em;
     pointer-events: none;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 
   .rating {
@@ -82,7 +89,13 @@
       height: 32px;
       object-fit: contain;
     }
-  }  
+  }
+
+  &__btns {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
 
   .author {
     display: flex;
@@ -110,5 +123,184 @@
     font-size: 12px;
     line-height: 1.5;
     color: #24383b;
+  }
+
+  .btn-more {
+    width: fit-content;
+    margin-top: 15px;
+    font-size: 14px;
+    color: #707070;
+    text-decoration: underline;
+    text-transform: uppercase;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .comment {
+    padding: 25px 30px 20px;
+
+    &-best {
+      margin-top: 50px;
+
+      .btn {
+        padding: 10px 15px;
+        font-size: 11px;
+      }
+    }
+
+    .author {
+      margin-top: 20px;
+    }
+
+    .rating__icon {
+      width: 16px;
+      height: 16px;
+    }
+
+    .rating__source {
+      width: 34px;
+      height: 34px;
+      margin-left: 2px;
+    }
+  }
+
+  .tabs__panel .comment,
+  .comment-best {
+    padding: 20px 20px 30px;
+    border-radius: 20px;
+
+    .rating {
+      column-gap: 10px;
+    }
+
+    .rating__icon {
+      width: 11px;
+      height: 11px;
+    }
+
+    .rating__grade {
+      font-size: 12px;
+    }
+
+    .rating__source {
+      width: 24px;
+      height: 24px;
+    }
+
+    .comment__popularity,
+    .btn {
+      font-size: 12px;
+    }
+
+    .author {
+      margin-top: 12px;
+    }
+
+    .author__img {
+      width: 38px;
+      height: 38px;
+    }
+
+    .author__name {
+      font-size: 18px;
+    }
+
+    .comment__text {
+      margin-top: 10px;
+      font-size: 12px;
+    }
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .tabs__panel .comment {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .comment__header,
+  .comment__btns {
+    display: contents;
+  }
+
+  .comment__popularity {
+    width: fit-content;
+    margin-top: 30px;
+    order: 2;
+  }
+
+  .comment-best {
+    position: relative;
+    z-index: 0;
+    margin-bottom: 60px;
+    display: flex;
+
+    .all-reviews {
+      width: 300px;
+      position: absolute;
+      z-index: 5;
+      top: calc(100% + 20px);
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 14px;
+      padding: 11px 30px;
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .comment,
+  .comment-best {
+    padding: 20px 20px 23px;
+    border-radius: 15px;
+
+    .rating__icon {
+      width: 12px;
+      height: 12px;
+    }
+
+    .rating {
+      column-gap: 12px;
+    }
+
+    .rating__grade {
+      font-size: 12px;
+    }
+
+    .rating__source {
+      width: 26px;
+      height: 26px;
+    }
+
+    .author {
+      margin-top: 14px;
+    }
+
+    .author__img {
+      width: 35px;
+      height: 35px;
+    }
+
+    .author__name {
+      font-size: 18px;
+    }
+
+    .comment__text {
+      margin-top: 10px;
+    }
+
+    .comment__popularity {
+      padding: 9px 12px;
+      font-size: 11px;
+    }
+
+    .btn-more {
+      margin-top: 15px;
+      font-size: 12px;
+    }
   }
 }

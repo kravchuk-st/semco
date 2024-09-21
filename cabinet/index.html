@@ -22,13 +22,16 @@
   </svg>
 
   <header class="header">
-    <div class="wrapper">
-      <div class="header__top">
+    <div class="header__top">
+      <div class="wrapper">
         <a href="/" class="logo">
-          <img src="/assets/img/svg/logo.svg" alt="logo" class="logo__icon">
+          <picture>
+            <source srcset="/assets/img/svg/logo-light.svg" media="(max-width: 1100px)" />
+            <img class="logo__icon" src="/assets/img/svg/logo.svg" alt="logo" />
+          </picture>
         </a>
         <img class="doll" src="/assets/img/cipollino-sm.png" alt="doll">
-        <a href="/catalog" class="katalog-link btn-fill btn-reset">КАТАЛОГ</a>
+        <button class="katalog-link btn-fill btn-reset" data-path="katalog">КАТАЛОГ</button>
         <form class="search" action="#" method="post">
           <input class="search__input" type="text" placeholder="Поиск...">
           <button class="search__btn btn-reset" type="submit"></button>
@@ -36,7 +39,7 @@
         <div class="header__btns">
           <a href="#" class="wishlist btn-reser">
             <span class="wishlist__icon">
-              <svg aria-hidden="true" width="22" height="18">
+              <svg  aria-hidden="true" width="22" height="18">
                 <use xlink:href="/assets/img/svg/heart.svg#heart"></use>
               </svg>
               <span class="wishlist__quantity">15</span>
@@ -45,7 +48,9 @@
           </a>
           <a href="#" class="cart btn-reser">
             <span class="cart__icon">
-              <img src="/assets/img/svg/cart.svg" alt="cart" class="cart__img">
+              <svg class="cart__img" aria-hidden="true" width="22" height="20">
+                <use xlink:href="/assets/img/svg/cart.svg#cart"></use>
+              </svg>
               <span class="cart__quantity">5</span>
             </span>
             <span class="cart__text">
@@ -53,10 +58,22 @@
               <span class="cart__price">3500 ₽</span>
             </span>
           </a>
-          <button class="account btn-reset">ВОЙТИ</button>
+          <button class="account btn-reset" data-path="login">
+            <svg class="account__icon" aria-hidden="true" width="20" height="20">
+              <use xlink:href="/assets/img/svg/user.svg#user"></use>
+            </svg>
+            <span class="account__text">ВОЙТИ</span>
+          </button>
+          <button class="burger btn-reset" aria-label="Бургер">
+            <span class="burger__line" aria-hidden="true"></span>
+            <span class="burger__line" aria-hidden="true"></span>
+            <span class="burger__line" aria-hidden="true"></span>
+          </button>
         </div>
       </div>
-      <div class="header__bottom">
+    </div>
+    <div class="header__bottom">
+      <div class="wrapper">
         <select class="select" name="city">
           <option value="МОСКВА" selected>МОСКВА</option>
           <option value="value2">ГОРОД 2</option>
@@ -64,7 +81,7 @@
         </select>
         <nav class="nav">
           <ul class="nav__list list-reset">
-            <li class="nav__item"><a href="/about" class="nav__link">О КОМПАНИИ</a></li>
+            <li class="nav__item"><a href="#" class="nav__link">О КОМПАНИИ</a></li>
             <li class="nav__item"><a href="#" class="nav__link">ОПТОВЫЕ ЗАКУПКИ</a></li>
             <li class="nav__item"><a href="/promotions" class="nav__link">АКЦИИ</a></li>
             <li class="nav__item"><a href="/delivery" class="nav__link">ДОСТАВКА</a></li>
@@ -104,44 +121,47 @@
       <div class="wrapper cabinet-wrapper">
         <div class="tabs" data-tabs="tab">
           <aside class="sidebar">
-            <ul class="tabs__nav list-reset">
-              <li class="tabs__nav-item"><button class="tabs__nav-btn btn-reset" type="button">
-                <svg class="tabs__nav-btn--icon">
-                  <use xlink:href="/assets/img/svg/cabinet/user.svg#user"></use>
+            <div class="sidebar__layout">
+              <ul class="tabs__nav list-reset">
+                <li class="tabs__nav-item"><button class="tabs__nav-btn btn-reset" type="button">
+                  <svg class="tabs__nav-btn--icon">
+                    <use xlink:href="/assets/img/svg/cabinet/user.svg#user"></use>
+                  </svg>
+                  Личный кабинет
+                </button></li>
+                <li class="tabs__nav-item"><button class="tabs__nav-btn btn-reset" type="button">
+                  <svg class="tabs__nav-btn--icon">
+                    <use xlink:href="/assets/img/svg/cabinet/map.svg#map"></use>
+                  </svg>
+                  Адреса доставки
+                </button></li>
+                <li class="tabs__nav-item"><button class="tabs__nav-btn btn-reset" type="button">
+                  <svg class="tabs__nav-btn--icon">
+                    <use xlink:href="/assets/img/svg/cabinet/heart.svg#heart"></use>
+                  </svg>
+                  Избранное
+                </button></li>
+                <li class="tabs__nav-item"><button class="tabs__nav-btn btn-reset" type="button">
+                  <svg class="tabs__nav-btn--icon">
+                    <use xlink:href="/assets/img/svg/cabinet/chat.svg#chat"></use>
+                  </svg>
+                  Чат с поддержкой
+                </button></li>
+                <li class="tabs__nav-item"><button class="tabs__nav-btn btn-reset" type="button">
+                  <svg class="tabs__nav-btn--icon">
+                    <use xlink:href="/assets/img/svg/cabinet/settings.svg#settings"></use>
+                  </svg>
+                  Настройки профиля
+                </button></li>
+              </ul>
+              <button class="logout-btn btn-reset">
+                <svg class="logout-btn--icon" width="17" height="17">
+                  <use xlink:href="/assets/img/svg/cabinet/logout.svg#logout"></use>
                 </svg>
-                Личный кабинет
-              </button></li>
-              <li class="tabs__nav-item"><button class="tabs__nav-btn btn-reset" type="button">
-                <svg class="tabs__nav-btn--icon">
-                  <use xlink:href="/assets/img/svg/cabinet/map.svg#map"></use>
-                </svg>
-                Адреса доставки
-              </button></li>
-              <li class="tabs__nav-item"><button class="tabs__nav-btn btn-reset" type="button">
-                <svg class="tabs__nav-btn--icon">
-                  <use xlink:href="/assets/img/svg/cabinet/heart.svg#heart"></use>
-                </svg>
-                Избранное
-              </button></li>
-              <li class="tabs__nav-item"><button class="tabs__nav-btn btn-reset" type="button">
-                <svg class="tabs__nav-btn--icon">
-                  <use xlink:href="/assets/img/svg/cabinet/chat.svg#chat"></use>
-                </svg>
-                Чат с поддержкой
-              </button></li>
-              <li class="tabs__nav-item"><button class="tabs__nav-btn btn-reset" type="button">
-                <svg class="tabs__nav-btn--icon">
-                  <use xlink:href="/assets/img/svg/cabinet/settings.svg#settings"></use>
-                </svg>
-                Настройки профиля
-              </button></li>
-            </ul>
-            <button class="logout-btn btn-reset">
-              <svg class="logout-btn--icon" width="17" height="17">
-                <use xlink:href="/assets/img/svg/cabinet/logout.svg#logout"></use>
-              </svg>
-              Выйти
-            </button>
+                Выйти
+              </button>
+              <span class="sidebar__shadow"></span>
+            </div>
           </aside>
           <div class="tabs__content">
             <div class="tabs__panel">
@@ -176,8 +196,10 @@
                         </div>
                       </div>
                     </div>
-                    <p class="order__sum-text">Итого</p>
-                    <p class="order__sum-price text-active">1 035 ₽</p>
+                    <div class="order__sum">
+                      <p class="order__sum-text">Итого</p>
+                      <p class="order__sum-price text-active">1 035 ₽</p>
+                    </div>
                     <div class="order__details">
                       <div class="order__details-item">
                         <p class="order__details-title">Способ получения</p>
@@ -234,8 +256,10 @@
                         </div>
                       </div>
                     </div>
-                    <p class="order__sum-text">Итого</p>
-                    <p class="order__sum-price text-active">1 035 ₽</p>
+                    <div class="order__sum">
+                      <p class="order__sum-text">Итого</p>
+                      <p class="order__sum-price text-active">1 035 ₽</p>
+                    </div>
                     <div class="order__details">
                       <div class="order__details-item">
                         <p class="order__details-title">Способ получения</p>
@@ -289,8 +313,10 @@
                         </div>
                       </div>
                     </div>
-                    <p class="order__sum-text">Итого</p>
-                    <p class="order__sum-price text-active">1 035 ₽</p>
+                    <div class="order__sum">
+                      <p class="order__sum-text">Итого</p>
+                      <p class="order__sum-price text-active">1 035 ₽</p>
+                    </div>
                     <div class="order__details">
                       <div class="order__details-item">
                         <p class="order__details-title">Способ получения</p>
@@ -419,7 +445,7 @@
                     </label>
                   </div>
                 </li>
-                <li class="address__item">
+                <li class="address__item address__item_change">
                   <div class="radio">
                     <input type="radio" name="Addres" value="addres-new" id="addres-new">
                     <label for="addres-new">
@@ -468,7 +494,7 @@
                         <p class="review__value">18 отзывов</p>
                       </div>
                     </div>
-                    <button class="card__btn btn-reset">добавить в корзину</button>
+                    <button class="card__btn btn-reset"><span>добавить </span>в корзину</button>
                   </div>
                   <button class="btn-is-wishlist btn-reset" aria-label="Убрать из списка желаний">
                     <svg class="is-wishlist__icon" aria-hidden="true"  width="20" height="18">
@@ -499,7 +525,7 @@
                         <p class="review__value">18 отзывов</p>
                       </div>
                     </div>
-                    <button class="card__btn btn-reset">добавить в корзину</button>
+                    <button class="card__btn btn-reset"><span>добавить </span>в корзину</button>
                   </div>
                   <button class="btn-is-wishlist btn-reset" aria-label="Убрать из списка желаний">
                     <svg class="is-wishlist__icon" aria-hidden="true"  width="20" height="18">
@@ -530,7 +556,7 @@
                         <p class="review__value">18 отзывов</p>
                       </div>
                     </div>
-                    <button class="card__btn btn-reset">добавить в корзину</button>
+                    <button class="card__btn btn-reset"><span>добавить </span>в корзину</button>
                   </div>
                   <button class="btn-is-wishlist btn-reset" aria-label="Убрать из списка желаний">
                     <svg class="is-wishlist__icon" aria-hidden="true"  width="20" height="18">
@@ -561,7 +587,7 @@
                         <p class="review__value">18 отзывов</p>
                       </div>
                     </div>
-                    <button class="card__btn btn-reset">добавить в корзину</button>
+                    <button class="card__btn btn-reset"><span>добавить </span>в корзину</button>
                   </div>
                   <button class="btn-is-wishlist btn-reset" aria-label="Убрать из списка желаний">
                     <svg class="is-wishlist__icon" aria-hidden="true"  width="20" height="18">
@@ -592,7 +618,7 @@
                         <p class="review__value">18 отзывов</p>
                       </div>
                     </div>
-                    <button class="card__btn btn-reset">добавить в корзину</button>
+                    <button class="card__btn btn-reset"><span>добавить </span>в корзину</button>
                   </div>
                   <button class="btn-is-wishlist btn-reset" aria-label="Убрать из списка желаний">
                     <svg class="is-wishlist__icon" aria-hidden="true"  width="20" height="18">
@@ -623,7 +649,7 @@
                         <p class="review__value">18 отзывов</p>
                       </div>
                     </div>
-                    <button class="card__btn btn-reset">добавить в корзину</button>
+                    <button class="card__btn btn-reset"><span>добавить </span>в корзину</button>
                   </div>
                   <button class="btn-is-wishlist btn-reset" aria-label="Убрать из списка желаний">
                     <svg class="is-wishlist__icon" aria-hidden="true"  width="20" height="18">
@@ -654,7 +680,7 @@
                         <p class="review__value">18 отзывов</p>
                       </div>
                     </div>
-                    <button class="card__btn btn-reset">добавить в корзину</button>
+                    <button class="card__btn btn-reset"><span>добавить </span>в корзину</button>
                   </div>
                   <button class="btn-is-wishlist btn-reset" aria-label="Убрать из списка желаний">
                     <svg class="is-wishlist__icon" aria-hidden="true"  width="20" height="18">
@@ -685,7 +711,7 @@
                         <p class="review__value">18 отзывов</p>
                       </div>
                     </div>
-                    <button class="card__btn btn-reset">добавить в корзину</button>
+                    <button class="card__btn btn-reset"><span>добавить </span>в корзину</button>
                   </div>
                   <button class="btn-is-wishlist btn-reset" aria-label="Убрать из списка желаний">
                     <svg class="is-wishlist__icon" aria-hidden="true"  width="20" height="18">
@@ -733,11 +759,11 @@
                       <label for="middleName">Отчество*</label>
                       <input class="input" type="text" name="Middle Name" placeholder="Иванович" id="middleName" required>
                     </div>
-                    <div class="form__block">
+                    <div class="form__block form__block_data">
                       <label for="birthday">Дата рождения</label>
                       <input class="input" type="date" name="Birthday" placeholder="14.05.1995" id="birthday">
                     </div>
-                    <div class="form__block">
+                    <div class="form__block form__block_gender">
                       <label>Пол</label>
                       <div class="form__block_row">
                         <div class="radio">
@@ -760,7 +786,7 @@
                     </div>
                   </form>
                 </div>
-                <div class="settings__row">
+                <div class="settings__row settings__row_password">
                   <h3 class="settings__title">Пароль</h3>
                   <form class="settings__form form-password" action="#" method="post">
                     <div class="form__block">
@@ -861,7 +887,7 @@
                   </div>
                 </div>
                 <div class="card__btns">
-                  <button class="card__btn btn-reset">добавить в корзину</button>
+                  <button class="card__btn btn-reset"><span>добавить </span>в корзину</button>
                   <a href="#" class="card__link btn-reset">Оптовым покупателям</a>
                 </div>
               </div>
@@ -892,7 +918,7 @@
                   </div>
                 </div>
                 <div class="card__btns">
-                  <button class="card__btn btn-reset">добавить в корзину</button>
+                  <button class="card__btn btn-reset"><span>добавить </span>в корзину</button>
                   <a href="#" class="card__link btn-reset">Оптовым покупателям</a>
                 </div>
               </div>
@@ -923,7 +949,7 @@
                   </div>
                 </div>
                 <div class="card__btns">
-                  <button class="card__btn btn-reset">добавить в корзину</button>
+                  <button class="card__btn btn-reset"><span>добавить </span>в корзину</button>
                   <a href="#" class="card__link btn-reset">Оптовым покупателям</a>
                 </div>
               </div>
@@ -954,7 +980,7 @@
                   </div>
                 </div>
                 <div class="card__btns">
-                  <button class="card__btn btn-reset">добавить в корзину</button>
+                  <button class="card__btn btn-reset"><span>добавить </span>в корзину</button>
                   <a href="#" class="card__link btn-reset">Оптовым покупателям</a>
                 </div>
               </div>
@@ -1001,7 +1027,7 @@
                   </div>
                 </div>
                 <div class="card__btns">
-                  <button class="card__btn btn-reset">добавить в корзину</button>
+                  <button class="card__btn btn-reset"><span>добавить </span>в корзину</button>
                   <a href="#" class="card__link btn-reset">Оптовым покупателям</a>
                 </div>
               </div>
@@ -1032,7 +1058,7 @@
                   </div>
                 </div>
                 <div class="card__btns">
-                  <button class="card__btn btn-reset">добавить в корзину</button>
+                  <button class="card__btn btn-reset"><span>добавить </span>в корзину</button>
                   <a href="#" class="card__link btn-reset">Оптовым покупателям</a>
                 </div>
               </div>
@@ -1063,7 +1089,7 @@
                   </div>
                 </div>
                 <div class="card__btns">
-                  <button class="card__btn btn-reset">добавить в корзину</button>
+                  <button class="card__btn btn-reset"><span>добавить </span>в корзину</button>
                   <a href="#" class="card__link btn-reset">Оптовым покупателям</a>
                 </div>
               </div>
@@ -1094,7 +1120,7 @@
                   </div>
                 </div>
                 <div class="card__btns">
-                  <button class="card__btn btn-reset">добавить в корзину</button>
+                  <button class="card__btn btn-reset"><span>добавить </span>в корзину</button>
                   <a href="#" class="card__link btn-reset">Оптовым покупателям</a>
                 </div>
               </div>

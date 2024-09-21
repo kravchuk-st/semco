@@ -1,10 +1,4 @@
 .calculator {
-  &__header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
   &__link {
     font-size: 14px;
   }
@@ -121,5 +115,118 @@
 
   &:checked::before {
     left: calc(100% - (1em + 3px));
+  }
+}
+
+@media screen and (min-width: 577px) and (max-width: 768px) {
+  .calc:not(:has(.form__blok_row)) .form__blok_region {
+    grid-column: span 2;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .calculator .calculator__link {
+    display: none;
+  }
+
+  .calculator__body {
+    margin-top: 45px;
+    row-gap: 45px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .calc {
+    padding: 30px 30px 35px;
+
+    &__header {
+      font-size: 20px;
+    }
+
+    .form {
+      margin-top: 30px;
+      font-size: 15px;
+
+      &__body {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px 30px;
+      }
+
+      &__blok_row {
+        flex-direction: column;
+        align-items: flex-start;
+        order: 2;
+      }
+
+      &__select {
+        padding: 11px 15px;
+        font-size: 15px;
+      }
+
+      &__date {
+        padding: 8px 15px;
+        font-size: 15px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .calculator__body {
+    margin-top: 20px;
+    row-gap: 40px;
+  }
+
+  .calc {
+    padding: 25px 15px;
+
+    &__header {
+      font-size: 16px;
+      text-align: center;
+    }
+
+    .form {
+      margin-top: 20px;
+      font-size: 13px;
+
+      &__body {
+        gap: 20px 24px;
+      }
+
+      &__blok {
+        row-gap: 10px;
+
+        &_calendar {
+          order: 2;
+
+          .form__title span {
+            display: none;
+          }
+        }
+
+        &_culture,
+        &_region {
+          grid-column: span 2;
+        }
+      }
+
+      &__select {
+        padding: 10px;
+        font-size: 12px;
+      }
+
+      &__date {
+        max-width: 116px;
+        padding: 10px;
+        font-size: 12px;
+      }
+
+      .btn {
+        margin-top: 30px;
+        padding: 13px 25px;
+        font-size: 12px;
+      }
+    }
   }
 }

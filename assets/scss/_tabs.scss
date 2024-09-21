@@ -19,6 +19,7 @@
 
     &__item {
       .tooltip__title {
+        width: fit-content;
         text-decoration: underline;
         padding-right: 15px;
         background-image: url("data:image/svg+xml,%3Csvg width='7' height='10' viewBox='0 0 7 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L5.02391 4.21913C5.52432 4.61946 5.52432 5.38054 5.02391 5.78087L1 9' stroke='%2303A753' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E");
@@ -68,18 +69,6 @@
     }
   }
 
-  .btn-more {
-    margin-top: 15px;
-    font-size: 14px;
-    color: #707070;
-    text-decoration: underline;
-    text-transform: uppercase;
-
-    &:hover {
-      text-decoration: none;
-    }
-  }
-
   .videos {
     display: flex;
     flex-direction: column;
@@ -112,4 +101,79 @@
 
 .tabs__content {
   color: #000;
+}
+
+@media screen and (max-width: 768px) {
+  .tabs__panel .characteristics {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+
+    &__label {
+      font-size: 14px;
+    }
+
+    &__value {
+      margin-top: 7px;
+      font-size: 16px;
+    }
+  }
+
+  .tabs__panel .comment:not(:first-child) {
+    margin-top: 25px;
+  }
+
+  .tabs__panel .comment .author {
+    margin-top: 10px;
+  }
+
+  .tabs__panel .video-item {
+    flex-direction: column;
+    row-gap: 20px;
+  }
+
+  .tabs__panel .video__title {
+    font-size: 20px;
+  }
+
+  .tabs__panel .video__text {
+    margin-top: 10px;
+    font-size: 13px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .tabs__panel .comment {
+    padding: 20px 20px 20px 15px;
+    border-radius: 15px;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .tabs__panel .characteristics {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px 20px;
+  }
+
+  .tabs__panel .characteristics__item .tooltip__text {
+    width: 210px;
+    padding: 10px 5px 12px 10px;
+    font-size: 11px;
+    border-radius: 6px 6px 0 6px;
+    left: inherit;
+    right: 20px;
+  }
+
+  .tabs__panel .characteristics .col {
+    row-gap: 15px;
+  }
+
+  .tabs__panel .characteristics__label {
+    font-size: 12px;
+  }
+
+  .tabs__panel .characteristics__value {
+    margin-top: 5px;
+    font-size: 14px;
+  }
 }

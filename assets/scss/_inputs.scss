@@ -137,6 +137,7 @@ input::-webkit-inner-spin-button {
       align-items: first baseline;
       color: #8b8b8b;
       transition: color .25s ease;
+      cursor: pointer;
 
       &:before {
         content: '';
