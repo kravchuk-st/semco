@@ -12,6 +12,7 @@
     font-size: 16px;
     line-height: 1.25;
     text-align: center;
+    letter-spacing: .02em;
   }
 
   &__btns {
@@ -19,7 +20,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 10px 20px;
+    gap: 10px 8px;
 
     .splide__arrow--prev {
       margin-right: auto;
@@ -56,13 +57,17 @@
 
 @media screen and (max-width: 768px) {
   .comments__descr {
-    max-width: 275px;
-    margin: 10px auto 50px;
-    font-size: 12px;
+    max-width: 370px;
+    margin: 13px auto 50px;
+    font-size: 16px;
   }
 }
 
 @media screen and (max-width: 576px) {
+  .comments__title {
+    max-width: none;
+  }
+
   .comments__btns {
     margin-top: 20px;
     flex-wrap: wrap;
@@ -75,7 +80,9 @@
   }
 
   .comments__descr {
-    margin-bottom: 25px;
+    max-width: 290px;
+    margin: 10px auto 25px;
+    font-size: 12px;
   }
 }
 

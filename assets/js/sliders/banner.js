@@ -6,8 +6,8 @@ new Splide( '.banner__slider', {
   flickMaxPages: 1,
   gap: 20,
   breakpoints: {
-    576: {
-      gap: 5,
+    768: {
+      gap: 3,
     },
   }
 } ).mount();

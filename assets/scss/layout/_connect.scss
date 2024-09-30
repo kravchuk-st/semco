@@ -13,7 +13,7 @@
   }
 
   &__body {
-    margin-top: 35px;
+    margin-top: 40px;
     display: grid;
     grid-template-columns: 430px 1fr;
     align-items: flex-start;
@@ -66,6 +66,7 @@
       font-weight: 500;
       font-size: 14px;
       color: $color-text;
+      gap: 8px;
     }
 
     .social__list {
@@ -93,7 +94,7 @@
       border-radius: $br-btn;
 
       &.input-md {
-        padding: 12px 20px;
+        padding: 15px 20px;
         font-size: 12px;
       }
     }
@@ -102,6 +103,7 @@
       padding: 19px 45px;
       width: 100%;
       font-size: 14px;
+      letter-spacing: .12em;
       border: none;
     }
 
@@ -210,9 +212,10 @@
   }
 
   .connect .form__blok {
+    margin-top: 29px;
     display: grid;
     grid-template-columns: minmax(auto, 350px) 1fr;
-    gap: 10px;
+    gap: 5px 10px;
 
     .form__text {
       grid-column-start: 2;
@@ -243,12 +246,16 @@
   }
 
   .connect__body {
-    margin-top: 45px;
+    margin-top: 35px;
     row-gap: 30px;
   }
 
   .connect .form {
     padding: 25px 20px;
+  }
+
+  .connect .form .social__list {
+    margin-top: 15px;
   }
 
   .connect .form__text {
@@ -290,7 +297,10 @@
   }
 
   .connect .form__subtitle {
-    font-size: 25px;
+    max-width: 170px;
+    margin: 0 auto;
+    font-size: 20px;
+    line-height: 1.4;
   }
 
   .connect .form__body {
@@ -308,15 +318,28 @@
   .connect .form__text {
     margin-top: 15px;
   }
+
+  .connect__title {
+    margin: 0 auto;
+  }
+
+  .connect__descr {
+    font-size: 12px;
+    line-height: 1.4;
+  }
+
+  .connect .form__input {
+    text-align: center;
+  }
 }
 
 @media screen and (max-width: 480px) {
   .connect .form.form_md {
-    padding: 20px 15px;
+    padding: 22px 19px;
   }
 
   .connect .form .contacts__list {
-    gap: 10px;
+    gap: 14px;
 
     .contact__icon {
       width: 14px;
@@ -326,6 +349,8 @@
 
   .connect .form .contact__link {
     font-size: 12px;
+    line-height: 1;
+    gap: 10px;
   }
 
   .connect .form .social__list {
@@ -345,17 +370,19 @@
   }
 
   .connect .form__blok {
+    margin-top: 20px;
     flex-direction: column;
+    row-gap: 12px;
   }
 
   .connect .form__input.input-md {
-    padding: 13px 25px;
+    padding: 16px 25px;
     text-align: center;
   }
 
   .connect .form__blok .form__btn {
     max-width: none;
-    padding: 10px 25px;
+    padding: 13px 25px;
     font-size: 12px;
   }
 

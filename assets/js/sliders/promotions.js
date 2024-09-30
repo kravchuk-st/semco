@@ -6,7 +6,7 @@ const drawSlider = (el = '') => {
     autoplay: true,
     pauseOnHover: true,
     pagination: false,
-    padding: { left: 170, right: 170 },
+    padding: { left: 115, right: 115 },
     gap: 40,
     flickMaxPages: 1,
     breakpoints: {

@@ -19,7 +19,7 @@ body {
 }
 
 section {
-  padding: 35px 0;
+  padding: 40px 0;
 }
 
 .section-header {
@@ -40,14 +40,18 @@ section {
   max-width: 1220px;
 }
 
-h1, h2, h3, h4, h5, h6, p {
+h1, h2, h3, h4, h5, h6 {
   line-height: 1.2;
+}
+
+p {
+  line-height: 1.5;
 }
 
 h1 {
   margin: 0;
   font-weight: 400;
-  font-size: 32px;
+  font-size: 35px;
   color: #000;
 }
 
@@ -72,7 +76,6 @@ h2 {
   background-repeat: no-repeat;
   background-size: 24px 39px;
   cursor: pointer;
-  // opacity: 0;
   transition: opacity .3s linear, background-color .3s ease-in-out;
 
   &:hover {
@@ -137,7 +140,7 @@ h2 {
   }
 
   .section-header {
-    align-items: flex-start;
+    align-items: first baseline;
   }
 }
 
@@ -154,7 +157,17 @@ h2 {
     font-size: 20px;
   }
 
+  h2 {
+    max-width: 240px;
+  }
+
   .splide .splide__arrows {
     column-gap: 10px;
+  }
+
+  .question-icon {
+    margin-left: 21px;
+    width: 16px;
+    height: 16px;
   }
 }

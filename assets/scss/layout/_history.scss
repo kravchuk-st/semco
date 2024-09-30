@@ -4,6 +4,12 @@
     height: auto;
   }
 
+  &-banner__subtitle {
+    max-width: 356px;
+    margin-top: 10px;
+    font-size: 12px;
+  }
+
   &-banner__list {
     margin-top: 30px;
     display: flex;
@@ -38,6 +44,16 @@
   &__layout {
     display: flex;
     column-gap: 40px;
+  }
+
+  .section-header .catalog-link {
+    display: none;
+  }
+
+  &__subtitle {
+    margin-top: 10px;
+    font-size: 20px;
+    color: #747474;
   }
 
   &__info {
@@ -212,5 +228,106 @@
     height: 33px;
     object-fit: cover;
     border-radius: 3px;
+  }
+}
+
+@media screen and (min-width: 993px) {
+  .history-banner__subtitle,
+  .history__subtitle,
+  .history__title .text-md {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .history-banner .question-icon,
+  .history__image {
+    display: none;
+  }
+
+  .history__info {
+    margin-top: 30px;
+    font-size: 12px;
+
+    p:not(:first-child) {
+      margin-top: 15px;
+    }
+  }
+
+  .history__title {
+    max-width: 325px;
+  }
+
+  .history__list {
+    margin-top: 40px;
+
+    .row {
+      padding: 0 20px;
+    }
+  }
+
+  .history-card {
+    row-gap: 30px;
+  }
+
+  .history__year {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .history-banner__subtitle {
+    max-width: 255px;
+    font-size: 11px;
+  }
+
+  .history-card {
+    row-gap: 20px;
+  }
+
+  .history-card__title {
+    font-size: 12px;
+  }
+
+  .history__subtitle {
+    margin-top: 5px;
+    font-size: 15px;
+  }
+
+  .history__info {
+    margin-top: 15px;
+  }
+
+  .history__info p:not(:first-child) {
+    margin-top: 8px;
+  }
+
+  .history__item::before {
+    width: 10px;
+    height: 10px;
+  }
+
+  .history__item .title {
+    padding: 11px 15px 12px;
+    font-size: 14px;
+  }
+
+  .history__year {
+    font-size: 15px;
+  }
+
+  .history__list .history__year {
+    left: 10px !important;
+    bottom: calc(100% + 10px) !important;
+  }
+}
+
+@media screen and (min-width: 577px) and (max-width: 768px) {
+  .history-banner .catalog-link {
+    display: none;
+  }
+
+  .history .section-header .catalog-link {
+    display: block;
   }
 }

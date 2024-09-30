@@ -122,6 +122,12 @@
         <div class="tabs" data-tabs="tab">
           <aside class="sidebar">
             <div class="sidebar__layout">
+              <button class="select-btn btn-reset">
+                <svg class="tabs__nav-btn--icon">
+                  <use xlink:href="/assets/img/svg/cabinet/user.svg#user"></use>
+                </svg>
+                Личный кабинет
+              </button>
               <ul class="tabs__nav list-reset">
                 <li class="tabs__nav-item"><button class="tabs__nav-btn btn-reset" type="button">
                   <svg class="tabs__nav-btn--icon">
@@ -162,6 +168,7 @@
               </button>
               <span class="sidebar__shadow"></span>
             </div>
+            <div class="sidebar__backdrop"></div>
           </aside>
           <div class="tabs__content">
             <div class="tabs__panel">
@@ -205,7 +212,7 @@
                         <p class="order__details-title">Способ получения</p>
                         <p class="order__details-text">Доставка курьером</p>
                       </div>
-                      <div class="order__details-item">
+                      <div class="order__details-item order__details-item--address">
                         <p class="order__details-title">Адрес доставки</p>
                         <p class="order__details-text">г. Москва, ул. Рыбинска, д. 156, п. 6, 10 этаж, кв. 155.</p>
                       </div>
@@ -265,7 +272,7 @@
                         <p class="order__details-title">Способ получения</p>
                         <p class="order__details-text">Доставка курьером</p>
                       </div>
-                      <div class="order__details-item">
+                      <div class="order__details-item order__details-item--address">
                         <p class="order__details-title">Адрес доставки</p>
                         <p class="order__details-text">г. Москва, ул. Рыбинска, д. 156, п. 6, 10 этаж, кв. 155.</p>
                       </div>
@@ -322,7 +329,7 @@
                         <p class="order__details-title">Способ получения</p>
                         <p class="order__details-text">Доставка курьером</p>
                       </div>
-                      <div class="order__details-item">
+                      <div class="order__details-item order__details-item--address">
                         <p class="order__details-title">Адрес доставки</p>
                         <p class="order__details-text">г. Москва, ул. Рыбинска, д. 156, п. 6, 10 этаж, кв. 155.</p>
                       </div>
@@ -354,7 +361,7 @@
               <ul class="address list-reset">
                 <li class="address__item">
                   <div class="radio">
-                    <input type="radio" name="Addres" value="addres0" id="addres0" checked>
+                    <input type="checkbox" name="Addres" value="addres0" id="addres0" checked>
                     <label for="addres0">
                       <div class="address__label">
                         <h3 class="address__title">г. Москва</h3>
@@ -385,7 +392,7 @@
                 </li>
                 <li class="address__item">
                   <div class="radio">
-                    <input type="radio" name="Addres" value="addres1" id="addres1" checked>
+                    <input type="checkbox" name="Addres" value="addres1" id="addres1" checked>
                     <label for="addres1">
                       <div class="address__label">
                         <h3 class="address__title">г. Москва</h3>
@@ -416,7 +423,7 @@
                 </li>
                 <li class="address__item">
                   <div class="radio">
-                    <input type="radio" name="Addres" value="addres2" id="addres2" checked>
+                    <input type="checkbox" name="Addres" value="addres2" id="addres2">
                     <label for="addres2">
                       <div class="address__label">
                         <h3 class="address__title">г. Курган</h3>
@@ -447,7 +454,7 @@
                 </li>
                 <li class="address__item address__item_change">
                   <div class="radio">
-                    <input type="radio" name="Addres" value="addres-new" id="addres-new">
+                    <input type="checkbox" name="Addres" value="addres-new" id="addres-new">
                     <label for="addres-new">
                       <form class="address__label address__label_form" action="#" method="post">
                         <div class="address__header">
@@ -456,11 +463,11 @@
                         </div>
                         <div class="form__body">
                           <input type="text" class="input address__input" value="г. Курган, Северный р-н, улица Новая, д. 8,">
-                          <input type="text" class="input">
-                          <input type="text" class="input">
-                          <input type="text" class="input">
-                          <input type="text" class="input">
-                          <textarea class="textarea" cols="30" rows="4"></textarea>
+                          <input type="text" class="input" placeholder="1">
+                          <input type="text" class="input" placeholder="10">
+                          <input type="text" class="input" placeholder="160">
+                          <input type="text" class="input" placeholder="нет">
+                          <textarea class="textarea" cols="30" rows="6" placeholder="Звонить консьержу"></textarea>
                         </div>
                       </form>
                     </label>
@@ -481,7 +488,7 @@
                       <p class="old-price">135 ₽</p>
                       <p class="discount">-10%</p>
                     </div>
-                    <a href="/product" class="card__link_title btn-reset">Семена томатов Семко-Союз F1</a>
+                    <a href="/product" class="card__link_title btn-reset">Семена томатов Цитрон F1</a>
                     <div class="card__info">
                       <div class="rating">
                         <svg class="rating__icon" aria-hidden="true">
@@ -512,7 +519,7 @@
                       <p class="old-price">135 ₽</p>
                       <p class="discount">-10%</p>
                     </div>
-                    <a href="/product" class="card__link_title btn-reset">Семена томатов Семко-Союз F1</a>
+                    <a href="/product" class="card__link_title btn-reset">Семена томатов Цитрон F1</a>
                     <div class="card__info">
                       <div class="rating">
                         <svg class="rating__icon" aria-hidden="true">
@@ -543,7 +550,7 @@
                       <p class="old-price">135 ₽</p>
                       <p class="discount">-10%</p>
                     </div>
-                    <a href="/product" class="card__link_title btn-reset">Семена томатов Семко-Союз F1</a>
+                    <a href="/product" class="card__link_title btn-reset">Семена томатов Цитрон F1</a>
                     <div class="card__info">
                       <div class="rating">
                         <svg class="rating__icon" aria-hidden="true">
@@ -574,7 +581,7 @@
                       <p class="old-price">135 ₽</p>
                       <p class="discount">-10%</p>
                     </div>
-                    <a href="/product" class="card__link_title btn-reset">Семена томатов Семко-Союз F1</a>
+                    <a href="/product" class="card__link_title btn-reset">Семена томатов Цитрон F1</a>
                     <div class="card__info">
                       <div class="rating">
                         <svg class="rating__icon" aria-hidden="true">
@@ -605,7 +612,7 @@
                       <p class="old-price">135 ₽</p>
                       <p class="discount">-10%</p>
                     </div>
-                    <a href="/product" class="card__link_title btn-reset">Семена томатов Семко-Союз F1</a>
+                    <a href="/product" class="card__link_title btn-reset">Семена томатов Цитрон F1</a>
                     <div class="card__info">
                       <div class="rating">
                         <svg class="rating__icon" aria-hidden="true">
@@ -636,7 +643,7 @@
                       <p class="old-price">135 ₽</p>
                       <p class="discount">-10%</p>
                     </div>
-                    <a href="/product" class="card__link_title btn-reset">Семена томатов Семко-Союз F1</a>
+                    <a href="/product" class="card__link_title btn-reset">Семена томатов Цитрон F1</a>
                     <div class="card__info">
                       <div class="rating">
                         <svg class="rating__icon" aria-hidden="true">
@@ -667,7 +674,7 @@
                       <p class="old-price">135 ₽</p>
                       <p class="discount">-10%</p>
                     </div>
-                    <a href="/product" class="card__link_title btn-reset">Семена томатов Семко-Союз F1</a>
+                    <a href="/product" class="card__link_title btn-reset">Семена томатов Цитрон F1</a>
                     <div class="card__info">
                       <div class="rating">
                         <svg class="rating__icon" aria-hidden="true">
@@ -698,7 +705,7 @@
                       <p class="old-price">135 ₽</p>
                       <p class="discount">-10%</p>
                     </div>
-                    <a href="/product" class="card__link_title btn-reset">Семена томатов Семко-Союз F1</a>
+                    <a href="/product" class="card__link_title btn-reset">Семена томатов Цитрон F1</a>
                     <div class="card__info">
                       <div class="rating">
                         <svg class="rating__icon" aria-hidden="true">
@@ -739,6 +746,16 @@
                   <input type="text" class="input" placeholder="Задайте Ваш вопрос...">
                   <button class="btn btn-fill btn-reset" type="submit">Отправить запрос</button>
                 </form>
+              </div>
+              <div class="old-chat">
+                <p class="old-chat__title">История обращений (1)</p>
+                <div class="old-chat__item">
+                  <div class="old-chat__info">
+                    <p class="old-chat__status">На рассмотрении</p>
+                    <p class="old-chat__number">Обращение № 526865</p>
+                  </div>
+                  <button class="btn btn-reset">открыть обращение</button>
+                </div>
               </div>
             </div>
             <div class="tabs__panel">
@@ -852,7 +869,7 @@
 
     <section class="products products_slider splide">
       <div class="wrapper">
-        <div class="products__header">
+        <div class="section-header">
           <h2 class="products__title">Вы просматривали:</h2>
           <div class="products__btns splide__arrows">
             <button class="slider-btn prev-btn btn-reser splide__arrow--prev"></button>
@@ -992,7 +1009,7 @@
 
     <section class="products cards_slider splide">
       <div class="wrapper">
-        <div class="products__header">
+        <div class="section-header">
           <h2 class="products__title">Рекомендуем:</h2>
           <div class="products__btns splide__arrows">
             <button class="slider-btn prev-btn btn-reser splide__arrow--prev"></button>
@@ -1247,11 +1264,231 @@
 
   <div class="top-control"></div>
 
+  <div class="mobile-tap-bar">
+    <a href="/" class="mobile-tap-bar__link">
+      <svg class="mobile-tap-bar__icon" aria-hidden="true" width="13" height="15">
+        <use xlink:href="/assets/img/svg/home.svg#icon"></use>
+      </svg>
+      <span class="mobile-tap-bar__text">Главная</span>
+    </a>
+    <a href="/promotions" class="mobile-tap-bar__link">
+      <svg class="mobile-tap-bar__icon" aria-hidden="true" width="15" height="13">
+        <use xlink:href="/assets/img/svg/promotion.svg#icon"></use>
+      </svg>
+      <span class="mobile-tap-bar__text">Акции</span>
+    </a>
+    <a href="/contacts" class="mobile-tap-bar__link">
+      <svg class="mobile-tap-bar__icon" aria-hidden="true" width="11" height="15">
+        <use xlink:href="/assets/img/svg/map.svg#map"></use>
+      </svg>
+      <span class="mobile-tap-bar__text">Контакты</span>
+    </a>
+    <a href="/catalog" class="mobile-tap-bar__link">
+      <svg class="mobile-tap-bar__icon" aria-hidden="true" width="13" height="15">
+        <use xlink:href="/assets/img/svg/catalog.svg#icon"></use>
+      </svg>
+      <span class="mobile-tap-bar__text">Каталог</span>
+    </a>
+    <a href="/cart" class="mobile-tap-bar__link">
+      <svg class="mobile-tap-bar__icon" aria-hidden="true" width="17" height="15">
+        <use xlink:href="/assets/img/svg/cart.svg#cart"></use>
+      </svg>
+      <span class="mobile-tap-bar__text">Корзина</span>
+    </a>
+  </div>
+
+  <div class="overlay-menu">
+    <div class="overlay-menu__panel">
+      <div class="overlay-menu__header">
+        <a href="/" class="btn-reset">
+          <img src="/assets/img/svg/logo.svg" width="105" height="30" alt="logo" />
+        </a>
+        <img src="/assets/img/cipollino-sm.png" width="35" height="40" alt="doll">
+        <button class="close-btn btn-reset"></button>
+      </div>
+      <form class="search" action="#" method="post">
+        <input class="search__input" type="text" placeholder="Поиск...">
+        <button class="search__btn btn-reset" type="submit"></button>
+      </form>
+      <div class="katalog-layout">
+        <div class="section-header">
+          <button class="katalog-link btn-fill btn-reset">КАТАЛОГ</button>
+          <button class="katalog-hide btn-reset">← НАЗАД</button>
+        </div>
+        <div class="katalog-list">
+          <div class="katalog-item">
+            <button class="katalog-btn btn-reset" type="button">
+              <span class="katalog-btn--icon" aria-hidden="true">
+                <svg aria-hidden="true" width="13" height="13">
+                  <use xlink:href="/assets/img/svg/katalog/0.svg#icon"></use>
+                </svg>
+              </span>Семена томатов
+              <span class="katalog-btn--arrow" aria-hidden="true"></span>
+            </button>
+            <div class="katalog-links">
+              <div class="katalog-group">
+                <button class="katalog-btn--sm btn-reset">Томаты</button>
+                <div class="katalog-links--sm">
+                  <a href="/catalog" class="katalog-link--sm">Томаты</a>
+                  <a href="/catalog" class="katalog-link--sm">Томаты</a>
+                </div>
+              </div>
+              <a href="/catalog" class="katalog-link--sm">Томаты</a>
+              <div class="katalog-group">
+                <button class="katalog-btn--sm btn-reset">Томаты</button>
+                <div class="katalog-links--sm">
+                  <a href="/catalog" class="katalog-link--sm">Томаты</a>
+                  <a href="/catalog" class="katalog-link--sm">Томаты</a>
+                </div>
+              </div>
+              <a href="/catalog" class="katalog-link--sm">Томаты</a>
+            </div>
+          </div>
+          <div class="katalog-item">
+            <button class="katalog-btn btn-reset" type="button">
+              <span class="katalog-btn--icon" aria-hidden="true">
+                <svg aria-hidden="true" width="15" height="15">
+                  <use xlink:href="/assets/img/svg/katalog/1.svg#icon"></use>
+                </svg>
+              </span>Семена зелени
+              <span class="katalog-btn--arrow" aria-hidden="true"></span>
+            </button>
+            <div class="katalog-links">
+              
+            </div>
+          </div>
+          <div class="katalog-item">
+            <button class="katalog-btn btn-reset" type="button">
+              <span class="katalog-btn--icon" aria-hidden="true">
+                <svg aria-hidden="true" width="16" height="15">
+                  <use xlink:href="/assets/img/svg/katalog/2.svg#icon"></use>
+                </svg>
+              </span>Семена микрозелени
+              <span class="katalog-btn--arrow" aria-hidden="true"></span>
+            </button>
+            <div class="katalog-links">
+              
+            </div>
+          </div>
+          <div class="katalog-item">
+            <button class="katalog-btn btn-reset" type="button">
+              <span class="katalog-btn--icon" aria-hidden="true">
+                <svg aria-hidden="true" width="16" height="16">
+                  <use xlink:href="/assets/img/svg/katalog/3.svg#icon"></use>
+                </svg>
+              </span>Семена цветов и трав
+              <span class="katalog-btn--arrow" aria-hidden="true"></span>
+            </button>
+            <div class="katalog-links">
+              
+            </div>
+          </div>
+          <div class="katalog-item">
+            <button class="katalog-btn btn-reset" type="button">
+              <span class="katalog-btn--icon" aria-hidden="true">
+                <svg aria-hidden="true" width="17" height="17">
+                  <use xlink:href="/assets/img/svg/katalog/4.svg#icon"></use>
+                </svg>
+              </span>Наборы семян
+              <span class="katalog-btn--arrow" aria-hidden="true"></span>
+            </button>
+            <div class="katalog-links">
+              
+            </div>
+          </div>
+          <div class="katalog-item">
+            <button class="katalog-btn btn-reset" type="button">
+              <span class="katalog-btn--icon" aria-hidden="true">
+                <svg aria-hidden="true" width="16" height="19">
+                  <use xlink:href="/assets/img/svg/katalog/5.svg#icon"></use>
+                </svg>
+              </span>Удобрения и биопрепараты
+              <span class="katalog-btn--arrow" aria-hidden="true"></span>
+            </button>
+            <div class="katalog-links">
+              
+            </div>
+          </div>
+          <div class="katalog-item">
+            <button class="katalog-btn btn-reset" type="button">
+              <span class="katalog-btn--icon" aria-hidden="true">
+                <svg aria-hidden="true" width="12" height="14">
+                  <use xlink:href="/assets/img/svg/katalog/6.svg#icon"></use>
+                </svg>
+              </span>Литература
+              <span class="katalog-btn--arrow" aria-hidden="true"></span>
+            </button>
+            <div class="katalog-links">
+              
+            </div>
+          </div>
+          <div class="katalog-item">
+            <button class="katalog-btn btn-reset" type="button">
+              <span class="katalog-btn--icon" aria-hidden="true">
+                <svg aria-hidden="true" width="16" height="18">
+                  <use xlink:href="/assets/img/svg/katalog/7.svg#icon"></use>
+                </svg>
+              </span>Лук-севок
+              <span class="katalog-btn--arrow" aria-hidden="true"></span>
+            </button>
+            <div class="katalog-links">
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="menu">
+        <div class="menu__row">
+          <button class="menu-btn menu-btn--toggle btn-reset">О КОМПАНИИ</button>
+          <div class="menu__links">
+            <a href="#" class="menu__link">Подробнее о нас</a>
+            <a href="#" class="menu__link">Газета</a>
+            <a href="#" class="menu__link">Проекты</a>
+            <a href="#" class="menu__link">Видеоматериалы</a>
+            <a href="#" class="menu__link">Выставки</a>
+            <a href="/history" class="menu__link">История компании</a>
+            <a href="#" class="menu__link">Агротехника</a>
+            <a href="/co-founder" class="menu__link">От создателя</a>
+            <a href="/documents" class="menu__link">Документация</a>
+            <a href="/gendirector" class="menu__link">От ген. директора</a>
+          </div>
+        </div>
+        <div class="menu__row">
+          <button class="menu-btn menu-btn--toggle btn-reset">ОПТОВЫЕ ЗАКУПКИ</button>
+          <div class="menu__links menu__links_col">
+            <a href="/greenery" class="menu__link">Профессиональные и весовые</a>
+            <a href="/bundle" class="menu__link">Семена в красочных пакетиках</a>
+            <a href="/green" class="menu__link">Семена для микрозелени и бебилиф</a>
+          </div>
+        </div>
+        <div class="menu__row">
+          <a href="/promotions" class="menu-btn btn-reset">АКЦИИ</a>
+        </div>
+        <div class="menu__row">
+          <a href="/delivery" class="menu-btn btn-reset">ДОСТАВКА</a>
+        </div>
+        <div class="menu__row">
+          <a href="/pay" class="menu-btn btn-reset">ОПЛАТА</a>
+        </div>
+        <div class="menu__row">
+          <a href="/contacts" class="menu-btn btn-reset">КОНТАКТЫ</a>
+        </div>
+      </div>
+      <select class="select" name="city">
+        <option value="МОСКВА" selected>МОСКВА</option>
+        <option value="value2">ГОРОД 2</option>
+        <option value="value3">ГОРОД 3</option>
+      </select>
+    </div>
+  </div>
+
+  <script src="/assets/js/burger.js"></script>
   <script src="/assets/js/tabs.js"></script>
   <script src="/assets/js/lib/splide.min.js"></script>
   <script src="/assets/js/sliders/order.js"></script>
   <script src="/assets/js/sliders/cards.js"></script>
   <script src="/assets/js/scrollTop.js"></script>
+  <script src="/assets/js/pages/cabinet.js"></script>
   <script>
     const orderSliders = [...document.querySelectorAll('.order__slider')];
     orderSliders.forEach((el, i) => {

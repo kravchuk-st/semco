@@ -1,5 +1,5 @@
 .header {
-  padding: 40px 0 0;
+  padding: 25px 0 0;
 
   &__top .wrapper {
     display: flex;
@@ -13,7 +13,7 @@
   }
 
   &__btns {
-    margin-left: 20px;
+    margin-left: 25px;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -88,7 +88,7 @@
   
   &__list {
     display: flex;
-    column-gap: 30px;
+    column-gap: 29px;
   }
 
   &__link {
@@ -125,7 +125,8 @@
 
 .katalog-link {
   margin-left: 20px;
-  padding: 13px 12px 13px 42px;
+  padding: 10px 12px 10px 42px;
+  letter-spacing: .05em;
   background-image: url("/assets/img/svg/book.svg");
   background-repeat: no-repeat;
   background-position: 12px center;
@@ -295,7 +296,7 @@
 
     &__btns {
       justify-content: flex-end;
-      column-gap: 25px;
+      column-gap: 30px;
     }
 
     .wishlist__icon svg,
@@ -310,6 +311,10 @@
       height: 26px;
       fill: #fff;
     }
+
+    &__bottom .wrapper {
+      margin-top: 7px;
+    }
   }
 
   .wishlist__text,
@@ -318,16 +323,18 @@
     display: none;
   }
 
-  .katalog-link,
-  .search,
-  .nav {
-    display: none;
+  .header{
+    .katalog-link,
+    .search,
+    .nav {
+      display: none;
+    }
   }
 }
 
 @media screen and (max-width: 992px) {
   .header__top {
-    padding: 16px 0;
+    padding: 10px 0;
   }
   
   .header {
@@ -336,19 +343,27 @@
     }
 
     .call-back__btn {
-      margin-top: 6px;
+      margin-top: 0;
     }
   }
 }
 
 @media screen and (max-width: 768px) {
+  .header__bottom .wrapper {
+    align-items: flex-start;
+  }
+
   .header .select {
-    padding-left: 30px;
+    padding-left: 25px;
     background-position: left center;
   }
 }
 
 @media screen and (max-width: 576px) {
+  .header__top {
+    padding: 14px 0;
+  }
+
   .logo__icon {
     width: 82px;
   }
@@ -418,5 +433,11 @@
       width: 10px;
       height: 10px;
     }
+  }
+
+  .header .call-back__btn {
+    margin-top: 7px;
+    font-size: 11px;
+    letter-spacing: .1em;
   }
 }

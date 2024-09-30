@@ -1,5 +1,5 @@
 .delivery {
-  background: transparent right calc((100vw - 1160px) / 2 - 35px) top 30px / 945px auto no-repeat url("/assets/img/delivery-bg.png");
+  background: transparent right calc((100vw - 1160px) / 2 - 35px) top 55px / 945px auto no-repeat url("/assets/img/delivery-bg.png");
 
   &__descr {
     margin-top: 10px;
@@ -14,7 +14,7 @@
   }
 
   &__list {
-    margin-top: 40px;
+    margin-top: 20px;
     max-width: 220px;
     display: flex;
     flex-wrap: wrap;
@@ -50,6 +50,7 @@
     .flag {
       width: 26px;
       height: 13px;
+      margin-left: 8px;
       vertical-align: middle;
     }
 
@@ -72,7 +73,7 @@
     margin-top: 30px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+    gap: 24px 20px;
 
     &_contry {
       .delivery-local__icon {
@@ -83,7 +84,7 @@
   }
 
   &__item {
-    padding: 35px 25px 30px 35px;
+    padding: 32px 25px 30px 35px;
     border-radius: 15px;
     background: $color-secondary;
   }
@@ -107,11 +108,12 @@
   &__btn {
     margin-left: auto;
     padding: 5px 15px;
+    font-size: 10px;
     letter-spacing: 0.05em;
   }
 
   &__descr {
-    margin-top: 15px;
+    margin-top: 14px;
     max-width: 475px;
     font-size: 14px;
     line-height: 1.4;
@@ -151,6 +153,7 @@
 
   .delivery-local__list {
     margin-top: 35px;
+    gap: 16px 20px;
   }
 
   .delivery-local__item {
@@ -196,6 +199,23 @@
 }
 
 @media screen and (max-width: 576px) {
+  .delivery__list {
+    margin-top: 49px;
+    gap: 17px 8px;
+  }
+
+  .delivery__list .region {
+    font-size: 12px;
+  }
+
+  .delivery .countries__days {
+    font-size: 12px;
+  }
+
+  .delivery .countries__title {
+    font-size: 16px;
+  }
+
   .delivery-local__list {
     margin-top: 20px;
   }
@@ -227,5 +247,10 @@
   .delivery-local__btn {
     padding: 4px 15px;
     font-size: 12px;
+  }
+
+  .delivery-local h2 {
+    max-width: none;
+    margin: 0 auto;
   }
 }

@@ -2,7 +2,7 @@
   &__header {
     display: flex;
     align-items: center;
-    column-gap: 60px;
+    column-gap: 62px;
   }
 
   &__btns {
@@ -27,6 +27,7 @@
   margin-left: auto;
   font-weight: 600;
   font-size: 18px;
+  letter-spacing: .05em;
   text-transform: uppercase;
   text-decoration: underline;
   color: $color-main;
@@ -175,6 +176,16 @@
     &_thirds {
       background-image: url("/assets/img/discounts/2-sm.png")
     }
+  }
+
+  .discount__item:not(.discount-card) {
+    font-size: 17px;
+    line-height: 1.4;
+  }
+
+  .discount__item .btn {
+    padding: 5px 10px;
+    font-size: 12px;
   }
 
   .all-discounts {

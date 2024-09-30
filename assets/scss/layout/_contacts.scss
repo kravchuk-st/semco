@@ -1,4 +1,6 @@
 .contacts {
+  padding-top: 0;
+
   &__list {
     display: flex;
     align-items: start;
@@ -16,7 +18,7 @@
 .contact__link {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 14px;
   font-size: 16px;
   font-weight: 600;
   text-align: left;
@@ -67,7 +69,7 @@
 }
 
 .contact-card {
-  padding: 20px 25px 22px;
+  padding: 20px 25px 20px;
   background: $color-secondary;
   border-radius: 15px;
 
@@ -150,12 +152,12 @@
   &__body {
     margin-top: 20px;
     display: flex;
-    gap: 20px 30px;
+    gap: 20px 35px;
 
     .col {
       display: flex;
       align-items: start;
-      gap: 10px;
+      gap: 10px 15px;
     }
   }
 
@@ -221,7 +223,7 @@
   .contacts__grid {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 22px;
   }
 
   .contact-card_lg {
@@ -235,6 +237,22 @@
     flex-wrap: wrap;
     gap: 5px 10px;
   }
+
+  .contact-card__links .sub-text {
+    margin-top: 2px;
+  }
+
+  .contact-card {
+    padding: 20px 25px 18px;
+  }
+
+  .contact-card_lg .title {
+    font-size: 25px;
+  }
+
+  .contact-card_lg .sub-title {
+    margin-top: 19px;
+  }
 }
 
 @media screen and (max-width: 576px) {
@@ -243,7 +261,12 @@
     border-radius: 10px;
 
     &__body {
-      gap: 10px;
+      gap: 15px;
+      margin-top: 24px;
+
+      .col:not(:has(.contact-card__icon)) {
+        margin-left: 31px;
+      }
     }
 
     .text-sm {
@@ -283,5 +306,22 @@
   .contact-card_lg .call-center {
     flex-wrap: wrap;
     gap: 15px 20px;
+  }
+
+  .contact-card__links .sub-text {
+    margin-top: 4px;
+    font-size: 12px;
+  }
+
+  .contacts__grid {
+    gap: 16px;
+  }
+
+  .contact-card_lg {
+    margin-top: 35px;
+  }
+
+  .contact-card__hr {
+    margin: 22px 0 18px;
   }
 }

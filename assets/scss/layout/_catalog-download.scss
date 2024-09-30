@@ -1,6 +1,4 @@
 .catalog-download {
-  padding-top: 0;
-  
   .content {
     height: 190px;
     padding: 30px 35px;
@@ -60,6 +58,10 @@
 }
 
 @media screen and (min-width: 1201px) {
+  .catalog-download {
+    padding-top: 0;
+  }
+
   .catalog-download__form .subtitle {
     display: none;
   }
@@ -95,7 +97,7 @@
     flex-direction: row;
 
     input {
-      padding: 20px 80px;
+      padding: 20px 30px;
     }
 
     .form-btn {
@@ -117,10 +119,20 @@
 
 @media screen and (max-width: 768px) {
   .catalog-download .content {
+    padding: 30px 20px 20px;
     row-gap: 20px;
   }
 
+  .catalog-download .content img {
+    width: 75px;
+  }
+
+  .catalog-download__form {
+    row-gap: 4px;
+  }
+
   .catalog-download__form input {
+    width: 100%;
     max-width: 310px;
   }
 }

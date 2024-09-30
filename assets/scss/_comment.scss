@@ -1,5 +1,5 @@
 .comment {
-  padding: 25px 30px;
+  padding: 27px 30px;
   border-radius: $br-lg;
   background-color: #f5f9f1;
 
@@ -20,7 +20,7 @@
     }
 
     .btn {
-      padding: 10px 25px;
+      padding: 12px 25px;
       font-size: 14px;
       line-height: 1.2;
       letter-spacing: .05em;
@@ -66,8 +66,8 @@
     }
   
     &__icon {
-      width: 12px;
-      height: 12px;
+      width: 17px;
+      height: 17px;
       fill: #dbdbdb;
   
       &.active {
@@ -84,7 +84,7 @@
   
     &__source {
       flex-shrink: 0;
-      margin-left: 15px;
+      margin-left: 8px;
       width: 32px;
       height: 32px;
       object-fit: contain;
@@ -98,9 +98,10 @@
   }
 
   .author {
+    margin-top: 23px;
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 12px;
 
     &__img {
       width: 50px;
@@ -157,8 +158,8 @@
     }
 
     .rating__icon {
-      width: 16px;
-      height: 16px;
+      width: 18px;
+      height: 18px;
     }
 
     .rating__source {

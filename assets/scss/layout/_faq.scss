@@ -19,6 +19,12 @@
   }
 }
 
+@media screen and (min-width: 769px) {
+  .faq__question {
+    display: none;
+  }
+}
+
 @media screen and (max-width: 992px) {
   .faq__header .faq__btn {
     display: none;
@@ -33,6 +39,16 @@
   .faq__descr {
     max-width: none;
   }
+
+  .faq__question {
+    margin-top: 45px;
+
+    .btn {
+      padding: 19px 42px;
+      font-size: 14px;
+      letter-spacing: .14em;
+    }
+  }
 }
 
 @media screen and (max-width: 576px) {
@@ -43,5 +59,16 @@
   .faq__descr {
     margin-top: 10px;
     font-size: 12px;
+  }
+
+  .faq__question {
+    margin-top: 30px;
+
+    .btn {
+      width: 100%;
+      max-width: 300px;
+      padding: 13px 30px;
+      font-size: 12px;
+    }
   }
 }

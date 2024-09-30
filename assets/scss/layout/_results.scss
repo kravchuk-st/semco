@@ -22,10 +22,14 @@
     }
 
     &__title {
-      margin-bottom: 5px;
+      margin-bottom: 0;
       font-weight: 400;
       font-size: 60px;
       color: $color-main;
+    }
+    
+    &__text {
+      line-height: inherit;
     }
 
     &__imgs {
@@ -52,7 +56,7 @@
     position: relative;
     z-index: 0;
     width: 100%;
-    padding: 15px 0 20px 25px;
+    padding: 15px 0 24px 25px;
     display: flex;
     justify-content: space-between;
     background-color: $color-secondary;
@@ -66,8 +70,9 @@
     }
 
     &__title {
-      margin-bottom: 8px;
+      margin-bottom: 0;
       font-size: 60px;
+      line-height: 1.35;
     }
 
     &__text {
@@ -81,6 +86,10 @@
       right: 0;
       top: 50%;
       transform: translateY(-50%);
+    }
+
+    &__img {
+      width: 160px;
     }
   }
 }

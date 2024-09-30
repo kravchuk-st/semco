@@ -7,7 +7,7 @@
   color: $color-light;
 
   &__content {
-    padding: 30px 45px;
+    padding: 30px 45px 18px;
     display: flex;
     justify-content: space-between;
     border-radius: $br-lg;
@@ -15,6 +15,7 @@
                 $color-main center / cover url("/assets/img/proposition-bg.png");
 
     &_empty {
+      padding: 30px 35px;
       background: $color-main center / cover url("/assets/img/proposition-bg.png");
 
       .proposition__title {
@@ -62,7 +63,7 @@
 
     .form-input {
       width: 100%;
-      padding: 17px 20px;
+      padding: 20px;
       border: none;
       border-radius: $br-btn;
       font-size: 14px;
@@ -199,7 +200,6 @@
   }
 
   .proposition__info {
-    align-items: flex-start;
     gap: 0;
   }
 
@@ -210,6 +210,11 @@
 
   .proposition__form {
     max-width: 310px;
+    row-gap: 17px;
+
+    .form-input {
+      text-align: center;
+    }
   }
 
   .banner__slider_promotions {
@@ -230,7 +235,7 @@
     display: flex !important;
     flex-wrap: wrap;
     justify-content: space-around;
-    gap: 20px;
+    gap: 23px 20px;
 
     .card {
       width: 180px;
@@ -272,8 +277,9 @@
 
 @media screen and (max-width: 576px) {
   .proposition__content {
-    padding: 20px 20px 150px;
-    row-gap: 20px;
+    padding: 20px 20px 175px;
+    row-gap: 15px;
+    background: center bottom / auto 170px no-repeat url("/assets/img/proposition-img-sm.png"), #03a753 left center / cover url("/assets/img/proposition-bg-sm.png");
 
     &_empty {
       padding: 20px 20px 25px;
@@ -281,6 +287,7 @@
 
       .proposition__title {
         font-size: 20px;
+        line-height: 1.25;
       }
 
       .proposition__form {
@@ -296,6 +303,10 @@
       .proposition__descr {
         margin-top: 10px;
       }
+    }
+
+    .proposition__form {
+      row-gap: 8px;
     }
   }
 
@@ -319,5 +330,15 @@
 
   .slider_destroy_second .splide__list .card:nth-child(n + 5) {
     display: flex;
+  }
+
+  .slider_destroy .splide__list {
+    gap: 20px 10px;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .slider_destroy .splide__list {
+    gap: 10px;
   }
 }

@@ -9,7 +9,7 @@
 
   &__btn {
     display: inherit;
-    padding-right: 25px;
+    padding-right: 30px;
     margin: 25px auto 0;
     font-weight: 400;
     font-weight: 1.4;
@@ -123,6 +123,17 @@
     background: $color-secondary center top / cover no-repeat url("/assets/img/advantages/sm.png") ;
   }
 
+  .advantages__list {
+    gap: 15px 20px;
+  }
+
+  .advantages__btn {
+    margin-top: 20px;
+    padding-right: 20px;
+    font-size: 12px;
+    background-size: 10px 8px;
+  }
+
   .advantage__header {
     column-gap: 15px;
   }
@@ -140,10 +151,11 @@
 
   .advantage__title {
     font-size: 12px;
+    line-height: 1.3;
   }
 
   .advantage__descr {
-    margin-top: 12px;
+    margin-top: 10px;
   }
 
   .advantage__list {

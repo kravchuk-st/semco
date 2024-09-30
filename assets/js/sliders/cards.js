@@ -6,7 +6,7 @@ const drawSlider = (el = '') => {
     autoplay: true,
     pauseOnHover: true,
     pagination: false,
-    padding: { left: 10},
+    padding: { left: 10, right: 10 },
     gap: 10,
     flickMaxPages: 1,
     mediaQuery: 'min',
@@ -16,7 +16,7 @@ const drawSlider = (el = '') => {
       },
       992: {
         fixedWidth: 260,
-        padding: { left: 170, right: 170 },
+        padding: { left: 115, right: 115 },
         gap: 40,
       }
     },

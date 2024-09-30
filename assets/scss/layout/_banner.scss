@@ -6,16 +6,59 @@
     color: #000;
   }
 
-  .splide__slide {
-    height: 370px;
-    padding: 65px 106px 40px;
-    display: inline-block;
-    text-align: left;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    border-radius: $br-lg;
-    box-sizing: border-box;
+  &__slider {
+    .splide__slide {
+      height: 370px;
+      padding: 65px 106px 40px;
+      display: inline-block;
+      text-align: left;
+      border-radius: $br-lg;
+      box-sizing: border-box;
+
+      &_first {
+        background: right bottom / auto 90% no-repeat url("/assets/img/slider/banner/family.png"), $color-dark center / cover no-repeat url("/assets/img/slider/banner/main-bg.png");
+      }
+
+      &_second {
+        background: $color-dark right 10% center / cover url("/assets/img/slider/banner/02.png");
+      }
+
+      &_third {
+        background: right 20px center / auto 90% no-repeat url("/assets/img/slider/banner/03.png"), $color-dark center / cover no-repeat url("/assets/img/slider/banner/bg.png");
+      }
+
+      &_fourth {
+        background: right center / auto 100% no-repeat url("/assets/img/slider/banner/04.png"), $color-dark center / cover no-repeat url("/assets/img/slider/banner/bg.png");
+      }
+
+      &_fifth {
+        background: right center / auto 100% no-repeat url("/assets/img/slider/banner/05.png"), $color-dark center / cover no-repeat url("/assets/img/slider/banner/bg.png");
+      }
+
+      &_sixth {
+        background: right center / auto 100% no-repeat url("/assets/img/slider/banner/06.png"), $color-dark center / cover no-repeat url("/assets/img/slider/banner/bg.png");
+      }
+
+      &_seventh {
+        background: right center / auto 100% no-repeat url("/assets/img/slider/banner/07.png"), $color-dark center / cover no-repeat url("/assets/img/slider/banner/bg.png");
+      }
+
+      &_eighth {
+        background: right center / auto 100% no-repeat url("/assets/img/slider/banner/08.png"), $color-dark center / cover no-repeat url("/assets/img/slider/banner/bg.png");
+      }
+
+      &_ninth {
+        background: right center / auto 100% no-repeat url("/assets/img/slider/banner/09.png"), $color-dark center / cover no-repeat url("/assets/img/slider/banner/bg.png");
+      }
+
+      &_tenth {
+        background: right center / auto 100% no-repeat url("/assets/img/slider/banner/10.png"), $color-dark center / cover no-repeat url("/assets/img/slider/banner/bg.png");
+      }
+
+      &_ellevte {
+        background: right center / auto 100% no-repeat url("/assets/img/slider/banner/11.png"), $color-dark center / cover no-repeat url("/assets/img/slider/banner/bg.png");
+      }
+    }
   }
 
   .splide__pagination {
@@ -94,6 +137,7 @@
   &__text {
     display: inline-block;
     max-width: 280px;
+    margin-left: 13px;
     font-weight: 400;
     font-size: 16px;
     line-height: 1.23;
@@ -107,9 +151,10 @@
   &__link {
     display: inline-block;
     margin-top: 40px;
-    padding: 20px 40px;
+    padding: 20px 44px;
     border-radius: 600px;
     font-size: 18px;
+    letter-spacing: .05em;
     background-color: $color-light;
     text-align: center;
   }
@@ -129,11 +174,15 @@
 }
 
 @media screen and (max-width: 992px) {
-  .banner .splide__slide {
+  .banner__slider .splide__slide {
     height: 210px;
     padding: 20px 25px;
     border-radius: 6px;
-    background-position: right 90% center;
+    background-position: right bottom;
+
+    &_third {
+      background-position: right bottom 15px;
+    }
   }
 
   .banner .splide__arrow {
@@ -154,6 +203,7 @@
   .banner__text {
     max-width: 190px;
     font-size: 10px;
+    line-height: 1.24;
   }
 
   .banner__link {
@@ -176,8 +226,124 @@
   }
 }
 
+@media screen and (max-width: 768px) {
+  .splide__slide_first {
+    background: right -2px bottom / auto 92% no-repeat url(/assets/img/slider/banner/family-sm.png), #24383b center / cover url(/assets/img/slider/banner/main-bg.png);
+
+    .banner__title {
+      max-width: 340px;
+      font-size: 30px;
+    }
+
+    .banner__link {
+      margin-top: 10px;
+    }
+  }
+
+  .banner__title {
+    max-width: 250px;
+    font-size: 22px;
+  }
+
+  .banner__link {
+    margin-top: 20px;
+    padding: 11px 26px;
+  }
+
+  .banner__text {
+    margin-left: 0;
+  }
+}
+
 @media screen and (max-width: 576px) {
+  .banner__slider .splide__slide_first {
+    background: right -2px bottom / auto 92% no-repeat url(/assets/img/slider/banner/family-sm.png), #24383b center / cover url(/assets/img/slider/banner/main-bg.png);
+
+    .banner__title {
+      max-width: 230px;
+      font-size: 22px;
+    }
+  }
+
+  .banner__slider .splide__slide {
+    height: 186px;
+    padding-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+  }
+
   .banner__title {
     font-size: 22px;
+    flex: 1 0 auto;
+  }
+
+  .banner__text {
+    max-width: 210px;
+    margin-top: 7px;
+    font-size: 12px;
+    line-height: 1.24;
+  }
+
+  .banner__link {
+    width: fit-content;
+    margin-top: 0;
+    padding: 9px 21px;
+    font-size: 12px;
+    line-height: 1;
+  }
+
+  .banner .splide__pagination {
+    bottom: 25px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .banner__slider .splide__slide {
+    height: 240px;
+    padding: 14px 15px 40px;
+
+    &_first {
+      background: right bottom / auto 160px no-repeat url("/assets/img/slider/banner/family-xs.png"), $color-dark left center / cover no-repeat url("/assets/img/slider/banner/main-bg.png");
+    }
+
+    &_second {
+      background: $color-dark right 10% center / cover url("/assets/img/slider/banner/02.png");
+    }
+
+    &_third {
+      background: right 10px bottom 30px / auto 45% no-repeat url("/assets/img/slider/banner/03.png"), $color-dark center / cover no-repeat url("/assets/img/slider/banner/bg.png");
+    }
+
+    &_fourth {
+      background: right bottom / auto 50% no-repeat url("/assets/img/slider/banner/04.png"), $color-dark center / cover no-repeat url("/assets/img/slider/banner/bg.png");
+    }
+
+    &_fifth {
+      background: right bottom / auto 50% no-repeat url("/assets/img/slider/banner/05.png"), $color-dark center / cover no-repeat url("/assets/img/slider/banner/bg.png");
+    }
+
+    &_sixth {
+      background: right bottom / auto 50% no-repeat url("/assets/img/slider/banner/06.png"), $color-dark center / cover no-repeat url("/assets/img/slider/banner/bg.png");
+    }
+
+    &_seventh {
+      background: right bottom / auto 50% no-repeat url("/assets/img/slider/banner/07.png"), $color-dark center / cover no-repeat url("/assets/img/slider/banner/bg.png");
+    }
+
+    &_eighth {
+      background: right bottom / auto 50% no-repeat url("/assets/img/slider/banner/08.png"), $color-dark center / cover no-repeat url("/assets/img/slider/banner/bg.png");
+    }
+
+    &_ninth {
+      background: right bottom / auto 50% no-repeat url("/assets/img/slider/banner/09.png"), $color-dark center / cover no-repeat url("/assets/img/slider/banner/bg.png");
+    }
+
+    &_tenth {
+      background: right bottom / auto 50% no-repeat url("/assets/img/slider/banner/10.png"), $color-dark center / cover no-repeat url("/assets/img/slider/banner/bg.png");
+    }
+
+    &_ellevte {
+      background: right bottom / auto 50% no-repeat url("/assets/img/slider/banner/11.png"), $color-dark center / cover no-repeat url("/assets/img/slider/banner/bg.png");
+    }
   }
 }

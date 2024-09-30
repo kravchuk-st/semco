@@ -1,7 +1,8 @@
 .products {
   &__header {
     display: flex;
-    align-items: center;
+    justify-content: space-between;
+    align-items: flex-end;
     column-gap: 60px;
   }
 
@@ -60,6 +61,15 @@
     align-items: flex-start;
     row-gap: 20px;
   }
+
+  .products__btns {
+    gap: 11px;
+  }
+
+  .products__descr {
+    margin-top: 9px;
+  }
+
   .products__text {
     flex-shrink: 0;
   }
@@ -67,16 +77,22 @@
 
 @media screen and (max-width: 576px) {
   .products__header {
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     gap: 10px;
   }
 
+  .products__title {
+    max-width: 220px;
+  }
+
   .products__text {
-    flex-shrink: 1;
+    display: contents;
+
   }
 
   .products__descr {
-    margin-top: 10px;
+    order: 2;
+    margin-top: 0;
     font-size: 13px;
   }
 

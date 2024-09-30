@@ -1,0 +1,42 @@
+.mobile-tap-bar {
+  position: fixed;
+  z-index: 200;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 45px;
+  padding: 7px 20px 5px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 20px;
+  background-color: $color-main;
+
+  &__link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+
+    &:not(.active) {
+      opacity: .6;
+    }
+  }
+
+  &__icon {
+    fill: #fff;
+  }
+
+  &__text {
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 1.4;
+    color: #fff;
+  }
+}
+
+@media screen and (min-width: 577px) {
+  .mobile-tap-bar {
+    display: none;
+  }
+}

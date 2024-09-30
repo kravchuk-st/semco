@@ -26,14 +26,14 @@
   }
 
   .menu-social {
-    margin-top: 30px;
+    margin-top: 20px;
     display: flex;
     align-items: center;
-    column-gap: 40px;
+    column-gap: 35px;
   }
 
   .contacts__list {
-    margin-top: 30px;
+    margin-top: 27px;
   }
   
   .copyright {
@@ -59,7 +59,7 @@
       margin-top: 15px;
       max-height: 95px;
       column-count: 2;
-      column-gap: 35px;
+      column-gap: 30px;
       column-fill: auto;
     }
 
@@ -80,7 +80,7 @@
   }
 
   .form {
-    margin-top: 60px;
+    margin-top: 53px;
     display: flex;
     gap: 10px;
 
@@ -100,7 +100,7 @@
   }
 
   .politics-link {
-    margin-top: 45px;
+    margin-top: 40px;
     display: inline-block;
     font-size: 12px;
     font-weight: 400;
@@ -113,12 +113,16 @@
     margin-top: 55px;
     padding: 35px 60px 50px;
     font-size: 16px;
-    line-height: 1.5;
+    line-height: 1.46;
     background-color: $color-light;
     border-radius: $br-lg;
 
-    p:not(:first-child) {
-      margin-top: 20px;
+    p {
+      line-height: 1.46;
+      
+      &:not(:first-child) {
+        margin-top: 20px;
+      }
     }
   }
 }
@@ -177,31 +181,25 @@
     flex-wrap: wrap;
     row-gap: 30px;
   }
-
-  .footer .form {
-    flex-wrap: wrap;
-    row-gap: 15px;
-
-    & > * {
-      width: 100%;
-      max-width: 330px;
-    }
-  }
 }
 
 @media screen and (max-width: 576px) {
   .footer .form {
     margin-top: 50px;
+    flex-wrap: wrap;
+    row-gap: 15px;
+  }
+
+  .footer .form > * {
+    width: 100%;
+    max-width: 330px;
+    padding: 13px 20px;
+    font-size: 12px;
+    border-radius: 55px;
   }
 
   .footer .form .form__input {
     padding: 15.5px 20px;
-  }
-
-  .footer .form > * {
-    padding: 13px 20px;
-    font-size: 12px;
-    border-radius: 55px;
   }
 
   .footer .politics-link {
