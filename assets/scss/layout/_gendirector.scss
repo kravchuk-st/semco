@@ -19,13 +19,13 @@
     width: 45vw;
     max-width: 445px;
     height: auto;
-    border-radius: 20px;
     grid-column: img / text;
     grid-row: span 5;
     overflow: hidden;
 
     img {
       width: 100%;
+      border-radius: 20px;
     }
   }
 
@@ -155,8 +155,7 @@
 
   .hero__img {
     width: 100%;
-    height: 350px;
-    object-fit: cover;
+    height: auto;
     border-radius: 15px;
   }
 

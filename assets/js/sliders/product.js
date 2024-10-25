@@ -16,7 +16,17 @@ var main = new Splide( '.product__slider', {
       fixedWidth : 350,
       fixedHeight: 500,
     },
-  }
+  },
+  cover      : true,
+  video      : {
+    volume: 1.0,
+    playerOptions: {
+      htmlVideo: {
+        muted: true,
+        // controls: false,
+      },
+    },
+  },
 } );
 
 
@@ -47,4 +57,6 @@ main.on( 'mounted move', function () {
   }
 } );
 
-main.mount();
+main.mount( window.splide.Extensions );
+
+// new Player(`${main}`);

@@ -6,6 +6,7 @@ new Splide( '.comments_slider', {
   gap: 10,
   flickMaxPages: 1,
   pagination: false,
+  padding: { left: 0, right: 0 },
   mediaQuery: 'min',
   breakpoints: {
     577: {

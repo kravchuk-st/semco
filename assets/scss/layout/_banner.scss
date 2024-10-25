@@ -151,12 +151,18 @@
   &__link {
     display: inline-block;
     margin-top: 40px;
-    padding: 20px 44px;
+    padding: 18px 40px;
     border-radius: 600px;
     font-size: 18px;
     letter-spacing: .05em;
     background-color: $color-light;
     text-align: center;
+    transition: .3s ease-in-out;
+
+    &:hover {
+      // color: $color-light;
+      // background-color: $color-main;
+    }
   }
 }
 
@@ -311,39 +317,39 @@
     }
 
     &_third {
-      background: right 10px bottom 30px / auto 45% no-repeat url("/assets/img/slider/banner/03.png"), $color-dark center / cover no-repeat url("/assets/img/slider/banner/bg.png");
+      background: $color-dark right bottom 30px / auto 55% no-repeat url("/assets/img/slider/banner/03.png");
     }
 
     &_fourth {
-      background: right bottom / auto 50% no-repeat url("/assets/img/slider/banner/04.png"), $color-dark center / cover no-repeat url("/assets/img/slider/banner/bg.png");
+      background: $color-dark right bottom / auto 90% no-repeat url("/assets/img/slider/banner/04-sm.png");
     }
 
     &_fifth {
-      background: right bottom / auto 50% no-repeat url("/assets/img/slider/banner/05.png"), $color-dark center / cover no-repeat url("/assets/img/slider/banner/bg.png");
+      background: $color-dark right bottom / auto 70% no-repeat url("/assets/img/slider/banner/05-sm.png");
     }
 
     &_sixth {
-      background: right bottom / auto 50% no-repeat url("/assets/img/slider/banner/06.png"), $color-dark center / cover no-repeat url("/assets/img/slider/banner/bg.png");
+      background: $color-dark right bottom / auto 80% no-repeat url("/assets/img/slider/banner/06-sm.png");
     }
 
     &_seventh {
-      background: right bottom / auto 50% no-repeat url("/assets/img/slider/banner/07.png"), $color-dark center / cover no-repeat url("/assets/img/slider/banner/bg.png");
+      background: $color-dark right bottom / auto no-repeat url("/assets/img/slider/banner/07-sm.png");
     }
 
     &_eighth {
-      background: right bottom / auto 50% no-repeat url("/assets/img/slider/banner/08.png"), $color-dark center / cover no-repeat url("/assets/img/slider/banner/bg.png");
+      background: $color-dark right -50px bottom -85px / auto no-repeat url("/assets/img/slider/banner/08-sm.png");
     }
 
     &_ninth {
-      background: right bottom / auto 50% no-repeat url("/assets/img/slider/banner/09.png"), $color-dark center / cover no-repeat url("/assets/img/slider/banner/bg.png");
+      background: $color-dark right bottom / auto 100% no-repeat url("/assets/img/slider/banner/09-sm.png");
     }
 
     &_tenth {
-      background: right bottom / auto 50% no-repeat url("/assets/img/slider/banner/10.png"), $color-dark center / cover no-repeat url("/assets/img/slider/banner/bg.png");
+      background: $color-dark right bottom / auto no-repeat url("/assets/img/slider/banner/10-sm.png");
     }
 
     &_ellevte {
-      background: right bottom / auto 50% no-repeat url("/assets/img/slider/banner/11.png"), $color-dark center / cover no-repeat url("/assets/img/slider/banner/bg.png");
+      background: $color-dark right bottom / auto no-repeat url("/assets/img/slider/banner/11-sm.png");
     }
   }
 }

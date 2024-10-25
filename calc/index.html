@@ -16,11 +16,6 @@
     <symbol viewBox="0 0 25 15" fill="none" xmlns="http://www.w3.org/2000/svg" id="arrow">
       <path d="M1.5 1L11.7366 13.0978C12.1361 13.5699 12.8639 13.5699 13.2634 13.0978L23.5 1" stroke-width="2" stroke-linecap="round"/>
     </symbol>
-    <symbol viewBox="0 0 1792 1792" xmlns="http://www.w3.org/1999/xlink" id="close">
-      <path d="M1082.2,896.6l410.2-410c51.5-51.5,51.5-134.6,0-186.1s-134.6-51.5-186.1,0l-410.2,410L486,300.4
-        c-51.5-51.5-134.6-51.5-186.1,0s-51.5,134.6,0,186.1l410.2,410l-410.2,410c-51.5,51.5-51.5,134.6,0,186.1
-        c51.6,51.5,135,51.5,186.1,0l410.2-410l410.2,410c51.5,51.5,134.6,51.5,186.1,0c51.1-51.5,51.1-134.6-0.5-186.2L1082.2,896.6z"/>
-    </symbol>
     <symbol viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg" id="star">
       <path d="M11.9381 4.35458C11.8877 4.19634 11.7908 4.05696 11.6599 3.95463C11.5291 3.8523 11.3705 3.79177 11.2048 3.78095L8.20769 3.57121L7.09591 0.771631C7.03574 0.616857 6.93022 0.483868 6.79318 0.390091C6.65614 0.296313 6.49396 0.246122 6.3279 0.246094H6.32712C6.16132 0.246389 5.99946 0.296709 5.86272 0.390472C5.72598 0.484235 5.62072 0.617078 5.56069 0.771631L4.43235 3.58737L1.45181 3.78095C1.28608 3.79177 1.12746 3.8523 0.99665 3.95463C0.865838 4.05696 0.768906 4.19634 0.718501 4.35458C0.665326 4.51508 0.661709 4.68786 0.70812 4.85044C0.75453 5.01302 0.848819 5.15786 0.978706 5.26609L3.27167 7.20423L2.58962 9.88711C2.5426 10.0678 2.55125 10.2585 2.61442 10.4342C2.67759 10.61 2.79234 10.7625 2.94365 10.8719C3.08974 10.9782 3.26444 11.0381 3.44501 11.0437C3.62558 11.0493 3.80367 11.0005 3.95609 10.9035L6.3216 9.40494C6.32475 9.40257 6.3279 9.401 6.335 9.40494L8.88029 11.0174C9.01847 11.1057 9.18008 11.1502 9.34397 11.1452C9.50787 11.1401 9.66642 11.0857 9.79889 10.989C9.936 10.8899 10.04 10.7517 10.0972 10.5925C10.1545 10.4334 10.1624 10.2606 10.1198 10.0969L9.39518 7.16599L11.6779 5.26609C11.8078 5.15786 11.9021 5.01302 11.9485 4.85044C11.9949 4.68786 11.9913 4.51508 11.9381 4.35458Z"/>
     </symbol>
@@ -42,6 +37,16 @@
           <button class="search__btn btn-reset" type="submit"></button>
         </form>
         <div class="header__btns">
+          <div class="tooltip tooltip_search">
+            <button class="tooltip__btn btn-change btn-reset" aria-labelledby="search-tooltip" aria-label="Открыть поиск">
+              <svg class="address__icon" aria-hidden="true" width="26" height="26">
+                <use xlink:href="/assets/img/svg/search-header.svg#icon"></use>
+              </svg>
+            </button>
+            <div class="tooltip__text" role="tooltip" id="search-tooltip">
+              <input class="input" placeholder="Поиск...">
+            </div>
+          </div>
           <a href="#" class="wishlist btn-reser">
             <span class="wishlist__icon">
               <svg  aria-hidden="true" width="22" height="18">
@@ -153,9 +158,13 @@
                   <label class="form__title" for="berries-region">Ваш регион</label>
                   <select class="select form__select" name="region" id="berries-region">
                     <option value="Центральный" selected>Центральный</option>
-                    <option value="Северо-Кавказкий">Северо-Кавказкий</option>
-                    <option value="Дальневосточный">Дальневосточный</option>
+                    <option value="Северо-Западный">Северо-Западный</option>
+                    <option value="Южный">Южный</option>
+                    <option value="Северо-Кавказский">Северо-Кавказский</option>
                     <option value="Приволжский">Приволжский</option>
+                    <option value="Уральский">Уральский</option>
+                    <option value="Сибирский">Сибирский</option>
+                    <option value="Дальневосточный">Дальневосточный</option>
                   </select>
                 </div>
               </div>
@@ -182,9 +191,13 @@
                   <p class="form__title">Ваш регион</p>
                   <select class="select form__select" name="region" id="berries-region">
                     <option value="Центральный" selected>Центральный</option>
-                    <option value="Северо-Кавказкий">Северо-Кавказкий</option>
-                    <option value="Дальневосточный">Дальневосточный</option>
+                    <option value="Северо-Западный">Северо-Западный</option>
+                    <option value="Южный">Южный</option>
+                    <option value="Северо-Кавказский">Северо-Кавказский</option>
                     <option value="Приволжский">Приволжский</option>
+                    <option value="Уральский">Уральский</option>
+                    <option value="Сибирский">Сибирский</option>
+                    <option value="Дальневосточный">Дальневосточный</option>
                   </select>
                 </div>
               </div>
@@ -375,7 +388,7 @@
             <p class="proposition__descr">Подпишитесь на рассылку и получайте промокоды, акции и подборки товаров на свою почту</p>
           </div>
           <form class="proposition__form" action="#" method="post">
-            <input class="form-input" type="email" name="email" placeholder="Ваш e-mail" required>
+            <input class="form-input" type="email" name="email" placeholder="Оставьте Ваш e-mail" required>
             <button class="form-btn btn-dark btn-reset" type="submit">подписаться</button>
             <p class="form-text">
               Нажимая Подписаться вы соглашаетесь с <a href="#" target="_blank" rel="noopener noreferrer">Политикой обработки персональных данных</a>
@@ -704,13 +717,262 @@
 
   <div class="modal">
     <div class="modal__layout">
-      <button class="close-btn btn-reset" aria-label="Закрыть модальное окно">
-        <svg aria-hidden="true" width="14" height="14">
-          <use xlink:href="#close"></use>
-        </svg>
-      </button>
+      <div class="modal__content modal__content_login" data-target="login">
+        <button class="close-btn btn-reset" aria-label="Закрыть модальное окно"></button>
+        <img class="modal__logo" src="/assets/img/svg/logo.svg" alt="Logo">
+        <p class="modal__title">Войти</p>
+        <p class="modal__subtitle">в личный кабинет</p>
+        <form class="modal__form" action="#" method="post">
+          <input class="input" type="tel" placeholder="+7 (999) 999-99-99" data-validate-field="tel">
+          <button class="btn btn-fill btn-reset" type="button" data-path="auth">Войти</button>
+        </form>
+        <div class="modal__footer">
+          <div class="modal__links">
+            <button class="btn btn-reset">Забыли пароль?</button>
+            <button class="btn btn-active btn-reset" data-path="login-email">Войти через почту</button>
+          </div>
+          <p class="modal__info">Не зарегистрированы? <button class="btn btn-reset" data-path="registration">Зарегистрируйтесь тут</button></p>
+        </div>
+      </div>
+
+      <div class="modal__content modal__content_login" data-target="login-email">
+        <button class="close-btn btn-reset" aria-label="Закрыть модальное окно"></button>
+        <img class="modal__logo" src="/assets/img/svg/logo.svg" alt="Logo">
+        <p class="modal__title">Войти</p>
+        <p class="modal__subtitle">в личный кабинет</p>
+        <form class="modal__form" action="#" method="post">
+          <input class="input" type="email" placeholder="Введите почту" data-validate-field="email">
+          <button class="btn btn-fill btn-reset" type="submit">Войти</button>
+        </form>
+        <div class="modal__footer">
+          <div class="modal__links">
+            <button class="btn btn-reset">Забыли пароль?</button>
+            <button class="btn btn-active btn-reset" data-path="login">Войти через телефон</button>
+          </div>
+          <p class="modal__info">Не зарегистрированы? <button class="btn btn-reset" data-path="registration">Зарегистрируйтесь тут</button></p>
+        </div>
+      </div>
+
+      <div class="modal__content modal__content_login" data-target="auth">
+        <button class="close-btn btn-reset" aria-label="Закрыть модальное окно"></button>
+        <img class="modal__logo" src="/assets/img/svg/logo.svg" alt="Logo">
+        <p class="modal__title">Введите код</p>
+        <p class="modal__subtitle">из СМС-сообщения</p>
+        <form class="modal__form" action="#" method="post">
+          <input class="input input-password" type="password" placeholder="••••">
+          <button class="btn btn-reset" type="submit">Подтвердить</button>
+        </form>
+        <div class="modal__footer">
+          <div class="modal__links">
+            <button class="btn btn-reset">Забыли пароль?</button>
+            <button class="btn btn-active btn-reset" data-path="login-email">Войти через почту</button>
+          </div>
+          <p class="modal__info">Не зарегистрированы? <button class="btn btn-reset" data-path="registration">Зарегистрируйтесь тут</button></p>
+        </div>
+      </div>
+
+      <div class="modal__content modal__content_login" data-target="registration">
+        <button class="close-btn btn-reset" aria-label="Закрыть модальное окно"></button>
+        <img class="modal__logo" src="/assets/img/svg/logo.svg" alt="Logo">
+        <p class="modal__title">Зарегистрируйтесь</p>
+        <p class="modal__subtitle">чтобы войти в личный кабинет</p>
+        <form class="modal__form" action="#" method="post">
+          <input class="input" type="text" placeholder="Ваше имя" name="Name" data-validate-field="name" autocomplete="off">
+          <input class="input" type="tel" name="Phone" placeholder="+7 (999) 999-99-99" data-validate-field="tel" autocomplete="off">
+          <input class="input input-password" type="password" placeholder="Придумайте пароль" name="Password" autocomplete="off">
+          <button class="btn btn-fill btn-reset" type="submit">Зарегистрироваться</button>
+        </form>
+        <div class="modal__footer">
+          <div class="modal__links">
+            <button class="btn btn-reset">Забыли пароль?</button>
+            <button class="btn btn-reset" data-path="registration-email">Зарегистрируйтесь через почту</button>
+          </div>
+          <p class="modal__info">Уже зарегистрированы? <button class="btn btn-active btn-reset" data-path="login">Войдите тут</button></p>
+        </div>
+      </div>
+
+      <div class="modal__content modal__content_login" data-target="registration-email">
+        <button class="close-btn btn-reset" aria-label="Закрыть модальное окно"></button>
+        <img class="modal__logo" src="/assets/img/svg/logo.svg" alt="Logo">
+        <p class="modal__title">Зарегистрируйтесь</p>
+        <p class="modal__subtitle">чтобы войти в личный кабинет</p>
+        <form class="modal__form" action="#" method="post">
+          <input class="input" type="text" placeholder="Ваше имя" name="Name" data-validate-field="name" autocomplete="off">
+          <input class="input" type="email" name="Email" placeholder="Введите почту" data-validate-field="email" autocomplete="off">
+          <input class="input input-password" type="password" placeholder="Придумайте пароль" name="Password" autocomplete="off">
+          <button class="btn btn-fill btn-reset" type="submit">Зарегистрироваться</button>
+        </form>
+        <div class="modal__footer">
+          <div class="modal__links">
+            <button class="btn btn-reset">Забыли пароль?</button>
+            <button class="btn btn-reset" data-path="registration">Зарегистрируйтесь через телефон</button>
+          </div>
+          <p class="modal__info">Уже зарегистрированы? <button class="btn btn-active btn-reset" data-path="login">Войдите тут</button></p>
+        </div>
+      </div>
+
+      <div class="modal__content modal__content_katalog" data-target="katalog">
+        <div class="tabs" data-tabs="tab">
+          <ul class="tabs__nav list-reset">
+            <li class="tabs__nav-item"><button class="tabs__nav-btn btn-reset" type="button">
+              <span class="tabs__nav-icon" aria-hidden="true">
+                <svg aria-hidden="true" width="19" height="19">
+                  <use xlink:href="/assets/img/svg/katalog/0.svg#icon"></use>
+                </svg>
+              </span>Семена томатов
+            </button></li>
+            <li class="tabs__nav-item"><button class="tabs__nav-btn btn-reset" type="button">
+              <span class="tabs__nav-icon" aria-hidden="true">
+                <svg aria-hidden="true" width="22" height="24">
+                  <use xlink:href="/assets/img/svg/katalog/1.svg#icon"></use>
+                </svg>
+              </span>Семена зелени
+            </button></li>
+            <li class="tabs__nav-item"><button class="tabs__nav-btn btn-reset" type="button">
+              <span class="tabs__nav-icon" aria-hidden="true">
+                <svg aria-hidden="true" width="20" height="20">
+                  <use xlink:href="/assets/img/svg/katalog/2.svg#icon"></use>
+                </svg>
+              </span>Семена микрозелени
+            </button></li>
+            <li class="tabs__nav-item"><button class="tabs__nav-btn btn-reset" type="button">
+              <span class="tabs__nav-icon" aria-hidden="true">
+                <svg aria-hidden="true" width="22" height="22">
+                  <use xlink:href="/assets/img/svg/katalog/3.svg#icon"></use>
+                </svg>
+              </span>Семена цветов и трав
+            </button></li>
+            <li class="tabs__nav-item"><button class="tabs__nav-btn btn-reset" type="button">
+              <span class="tabs__nav-icon" aria-hidden="true">
+                <svg aria-hidden="true" width="22" height="22">
+                  <use xlink:href="/assets/img/svg/katalog/4.svg#icon"></use>
+                </svg>
+              </span>Наборы семян
+            </button></li>
+            <li class="tabs__nav-item"><button class="tabs__nav-btn btn-reset" type="button">
+              <span class="tabs__nav-icon" aria-hidden="true">
+                <svg aria-hidden="true" width="22" height="25">
+                  <use xlink:href="/assets/img/svg/katalog/5.svg#icon"></use>
+                </svg>
+              </span>Удобрения и биопрепараты
+            </button></li>
+            <li class="tabs__nav-item"><button class="tabs__nav-btn btn-reset" type="button">
+              <span class="tabs__nav-icon" aria-hidden="true">
+                <svg aria-hidden="true" width="20" height="25">
+                  <use xlink:href="/assets/img/svg/katalog/6.svg#icon"></use>
+                </svg>
+              </span>Литература
+            </button></li>
+            <li class="tabs__nav-item"><button class="tabs__nav-btn btn-reset" type="button">
+              <span class="tabs__nav-icon" aria-hidden="true">
+                <svg aria-hidden="true" width="21" height="24">
+                  <use xlink:href="/assets/img/svg/katalog/7.svg#icon"></use>
+                </svg>
+              </span>Лук-севок
+            </button></li>
+          </ul>
+          <div class="tabs__content">
+            <div class="tabs__panel">
+              <div class="tabs__panel-header">
+                <p class="tabs__panel-title">Семена томатов</p>
+                <svg class="tabs__panel-icon" aria-hidden="true" width="29" height="29">
+                  <use xlink:href="/assets/img/svg/katalog/0.svg#icon"></use>
+                </svg>
+              </div>
+              <div class="tabs__panel-body">
+                <a href="/catalog" class="tabs__panel-link btn-reset">Семена зелени</a>
+                <a href="/catalog" class="tabs__panel-link btn-reset">Семена зелени</a>
+                <a href="/catalog" class="tabs__panel-link btn-reset">Семена зелени</a>
+                <a href="/catalog" class="tabs__panel-link btn-reset">Семена зелени</a>
+                <a href="/catalog" class="tabs__panel-link btn-reset">Семена зелени</a>
+                <a href="/catalog" class="tabs__panel-link btn-reset">Семена зелени</a>
+                <a href="/catalog" class="tabs__panel-link btn-reset">Семена зелени</a>
+                <a href="/catalog" class="tabs__panel-link btn-reset">Семена зелени</a>
+                <div class="tabs__panel-links">
+                  <button class="tabs__panel-links--btn btn-reset">
+                    Семена зелени
+                    <svg class="tabs__panel-links--icon" aria-hidden="true">
+                      <use xlink:href="#modal_arrow"></use>
+                    </svg>
+                  </button>
+                  <div class="tabs__panel-links--body">
+                    <a href="/catalog" class="tabs__panel-link btn-reset">Семена зелени</a>
+                    <a href="/catalog" class="tabs__panel-link btn-reset">Семена зелени</a>
+                  </div>
+                </div>
+                <div class="tabs__panel-links">
+                  <button class="tabs__panel-links--btn btn-reset">
+                    Семена зелени
+                    <svg class="tabs__panel-links--icon" aria-hidden="true">
+                      <use xlink:href="#modal_arrow"></use>
+                    </svg>
+                  </button>
+                  <div class="tabs__panel-links--body">
+                    <a href="/catalog" class="tabs__panel-link btn-reset">Семена зелени</a>
+                    <a href="/catalog" class="tabs__panel-link btn-reset">Семена зелени</a>
+                  </div>
+                </div>
+                <div class="tabs__panel-links">
+                  <button class="tabs__panel-links--btn btn-reset">
+                    Семена зелени
+                    <svg class="tabs__panel-links--icon" aria-hidden="true">
+                      <use xlink:href="#modal_arrow"></use>
+                    </svg>
+                  </button>
+                  <div class="tabs__panel-links--body">
+                    <a href="/catalog" class="tabs__panel-link btn-reset">Семена зелени</a>
+                    <a href="/catalog" class="tabs__panel-link btn-reset">Семена зелени</a>
+                  </div>
+                </div>
+                <div class="tabs__panel-links">
+                  <button class="tabs__panel-links--btn btn-reset">
+                    Семена зелени
+                    <svg class="tabs__panel-links--icon" aria-hidden="true">
+                      <use xlink:href="#modal_arrow"></use>
+                    </svg>
+                  </button>
+                  <div class="tabs__panel-links--body">
+                    <a href="/catalog" class="tabs__panel-link btn-reset">Семена зелени</a>
+                    <a href="/catalog" class="tabs__panel-link btn-reset">Семена зелени</a>
+                  </div>
+                </div>
+                <a href="/catalog" class="tabs__panel-link btn-reset">Семена зелени</a>
+                <a href="/catalog" class="tabs__panel-link btn-reset">Семена зелени</a>
+                <a href="/catalog" class="tabs__panel-link btn-reset">Семена зелени</a>
+                <a href="/catalog" class="tabs__panel-link btn-reset">Семена зелени</a>
+                <a href="/catalog" class="tabs__panel-link btn-reset">Семена зелени</a>
+                <a href="/catalog" class="tabs__panel-link btn-reset">Семена зелени</a>
+                <a href="/catalog" class="tabs__panel-link btn-reset">Семена зелени</a>
+                <a href="/catalog" class="tabs__panel-link btn-reset">Семена зелени</a>
+              </div>
+            </div>
+            <div class="tabs__panel">
+              
+            </div>
+            <div class="tabs__panel">
+              
+            </div>
+            <div class="tabs__panel">
+              
+            </div>
+            <div class="tabs__panel">
+              
+            </div>
+            <div class="tabs__panel">
+              
+            </div>
+            <div class="tabs__panel">
+              
+            </div>
+            <div class="tabs__panel">
+              
+            </div>
+          </div>
+        </div>
+      </div>
 
       <div class="modal__content modal__content_calc" data-target="calc">
+        <button class="close-btn btn-fill btn-reset" aria-label="Закрыть модальное окно"></button>
         <p class="modal__title">Результат<span class="text-top">*</span></p>
         <div class="modal__header">
           <div class="details">
@@ -718,7 +980,7 @@
             <p class="details__text">Томаты</p>
           </div>
           <div class="details">
-            <p class="details__title">Дата высадки в грунт</p>
+            <p class="details__title">Дата высадки<span class="text-sm"> в грунт</span></p>
             <p class="details__text">22.02.2022</p>
           </div>
           <div class="details">
@@ -737,7 +999,7 @@
             Лучше всего посеять семена на рассаду в период: 22.02.2022 — 05.02.2022
           </p>
         </div>
-        <div class="recommendation">
+        <div class="recommendation recommendation__sowing">
           <div class="recommendation__header">
             <svg class="recommendation__icon" aria-hidden="true">
               <use xlink:href="/assets/img/svg/calendar.svg#calendar"></use>
@@ -755,7 +1017,7 @@
             </svg>
             <p class="recommendation__title">Рекомендации по уходу в период роста</p>
           </div>
-          <p class="recommendation__text">
+          <p class="recommendation__text text-justify">
             Заказ доставляется в течение 2-5 рабочих дней с момента передачи его в курьерскую службу. Время доставки - с 09.00 до 18.00 по рабочим дням. Если вас интересует другое время для получения заказа, необходимо указать это в комментарии к заказу и обговорить это с нашим сотрудником. 
           </p>
         </div>
@@ -862,8 +1124,12 @@
     </div>
   </div>
 
-  <script src="/assets/js/burger.js"></script>
   <script src="/assets/js/lib/splide.min.js"></script>
+  <script src="/assets/js/lib/inputmask.min.js"></script>
+  <script src="/assets/js/burger.js"></script>
+  <script src="/assets/js/modal.js"></script>
+  <script src="/assets/js/maskFone.js"></script>
+  <script src="/assets/js/tabs.js"></script>
   <script src="/assets/js/sliders/discount.js"></script>
   <script src="/assets/js/sliders/cards.js"></script>
   <script src="/assets/js/scrollTop.js"></script>
@@ -872,7 +1138,6 @@
   <script>
     drawSlider('.products_slider');
   </script>
-  <script src="/assets/js/modal.js"></script>
 </body>
 </html>
 

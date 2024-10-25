@@ -2,6 +2,7 @@
   padding: 27px 30px;
   border-radius: $br-lg;
   background-color: #f5f9f1;
+  transition: .3s ease-in-out;
 
   &-best {
     margin-top: 85px;
@@ -126,6 +127,21 @@
     color: #24383b;
   }
 
+  &__btn {
+    margin-top: 35px;
+    font-size: 14px;
+    letter-spacing: .05em;
+    text-decoration: underline;
+    text-transform: uppercase;
+    color: #707070;
+    transition: .3s ease-in-out;
+
+    &:hover {
+      color: $color-btn-hover;
+      text-decoration: none;
+    }
+  }
+
   .btn-more {
     width: fit-content;
     margin-top: 15px;
@@ -137,6 +153,24 @@
     &:hover {
       text-decoration: none;
     }
+  }
+}
+
+.comments_slider .splide__list .comment {
+  &-first {
+    background-color: #f1f9f5;
+  }
+
+  &-second {
+    background-color: #f5f9f1;
+  }
+
+  &-third {
+    background-color: #f9f8f1;
+  }
+
+  &-fourth {
+    background-color: #f9f5f1;
   }
 }
 

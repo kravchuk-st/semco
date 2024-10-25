@@ -88,12 +88,12 @@ class Tabs {
   }
 
   switchTabs(newTab, oldTab = this.tabs.querySelector('[aria-selected]')) {
+    oldTab.removeAttribute('aria-selected');
+    oldTab.setAttribute('tabindex', '-1');
+    
     newTab.focus();
     newTab.removeAttribute('tabindex');
     newTab.setAttribute('aria-selected', 'true');
-
-    oldTab.removeAttribute('aria-selected');
-    oldTab.setAttribute('tabindex', '-1');
 
     let index = Array.prototype.indexOf.call(this.tabsBtns, newTab);
     let oldIndex = Array.prototype.indexOf.call(this.tabsBtns, oldTab);

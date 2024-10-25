@@ -1,6 +1,9 @@
 const sidebarMenu = document.querySelector('.blog__sidebar');
 const sidebarBtn = document.querySelector('.filter-btn');
-const filterBtns = [...sidebarMenu.querySelectorAll('.side-filters__btn')]
+const filterBtns = [...sidebarMenu.querySelectorAll('.side-filters__btn')];
+const selectTema = document.querySelector('.select-tema');
+
+console.log(selectTema.innerText);
 
 const showSidebar = () => {
   let paddingOffset = window.innerWidth - document.body.offsetWidth + 'px';
@@ -27,6 +30,8 @@ filterBtns.forEach(el => {
   el.addEventListener('click', (e) => {
     filterBtns.forEach(el => el.classList.remove('active'));
     e.currentTarget.classList.add('active');
+    selectTema.querySelector('use').setAttribute('xlink:href', `${e.currentTarget.querySelector('use').getAttribute('xlink:href')}`);
+    selectTema.querySelector('.select-tema__text').innerText = e.currentTarget.innerText;
     hideSidebar();
   })
 })

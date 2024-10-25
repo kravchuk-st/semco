@@ -8,6 +8,7 @@
     max-width: 356px;
     margin-top: 10px;
     font-size: 12px;
+    line-height: 1.4;
   }
 
   &-banner__list {
@@ -62,7 +63,8 @@
     line-height: 1.5;
     color: #000;
 
-    p{
+    p {
+      line-height: 1.4;
       text-indent: 1.5em;
       text-align: justify;
 
@@ -96,43 +98,21 @@
     height: auto;
   }
 
+  &__inserted {
+    margin-top: 30px;
+    position: relative;
+    z-index: 0;
+  }
+
   &__list {
-    margin-top: 25px;
     display: inline-flex;
     flex-wrap: wrap;
     gap: 100px 25px;
-    position: relative;
-    z-index: 0;
 
     .row {
       padding: 0 40px 0 50px;
       display: flex;
       gap: 45px 25px;
-
-      &:nth-child(1) {
-        padding-left: 0;
-
-        .history__item {
-          flex-basis: 220px;
-        }
-
-        .history__item:first-child {
-          flex-basis: 200px;
-
-          .history__descr {
-            padding: 0;
-            border: none;
-          }
-        }
-
-        .history__item:last-child {
-          flex-basis: 400px;
-        }
-
-        .history__year {
-          margin-bottom: 10px;
-        }
-      }
 
       &:nth-child(even) {
         flex-direction: row-reverse;
@@ -145,6 +125,10 @@
           bottom: calc(100% + 20px);
         }
       }
+
+      .history__item {
+        flex: 1 1 300px;
+      }
     }
   }
 
@@ -155,14 +139,12 @@
     z-index: -5;
     top: 0;
     left: 0;
-    stroke: $color-main;
     stroke-linecap: round;
     stroke-width: 4;
     fill: none;
   }
 
   &__item {
-    flex: 1 1 300px;
     position: relative;
     z-index: 0;
     padding-top: 20px;
@@ -206,12 +188,13 @@
 
   &__descr {
     padding-left: 10px;
-    font-size: 12px;
+    font-size: 14px;
     line-height: 1.4;
     color: $color-text;
     border-left: 2px solid #afe3c8;
 
     p {
+      line-height: 1.4;
       text-indent: 1.55em;
       text-align: justify;
     }
@@ -220,7 +203,8 @@
   &__imgs {
     margin-top: 15px;
     display: flex;
-    column-gap: 5px;
+    flex-wrap: wrap;
+    gap: 10px 5px;
   }
 
   &__img {
@@ -228,6 +212,7 @@
     height: 33px;
     object-fit: cover;
     border-radius: 3px;
+    cursor: pointer;
   }
 }
 
@@ -237,6 +222,37 @@
   .history__title .text-md {
     display: none;
   }
+
+  .history__list .row:first-child {
+    padding-left: 0;
+
+    .history__item {
+      flex-basis: 220px;
+    }
+
+    .history__item:first-child {
+      flex-basis: 200px;
+
+      .history__descr {
+        padding: 0;
+        border: none;
+      }
+    }
+
+    .history__item:last-child {
+      flex-basis: 400px;
+    }
+
+    .history__year {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .history__list .row {
+    padding: 0 30px;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -245,8 +261,21 @@
     display: none;
   }
 
+  .history-banner__list {
+    margin-top: 50px;
+  }
+
+  .history__list .row {
+    padding: 0 20px;
+    column-gap: 20px;
+
+    &:nth-child(1) .history__year {
+      margin-bottom: 10px;
+    }
+  }
+
   .history__info {
-    margin-top: 30px;
+    margin-top: 25px;
     font-size: 12px;
 
     p:not(:first-child) {
@@ -254,16 +283,12 @@
     }
   }
 
-  .history__title {
-    max-width: 325px;
+  .history__year {
+    margin-bottom: 10px;
   }
 
-  .history__list {
-    margin-top: 40px;
-
-    .row {
-      padding: 0 20px;
-    }
+  .history__title {
+    max-width: 325px;
   }
 
   .history-card {
@@ -276,6 +301,15 @@
 }
 
 @media screen and (max-width: 576px) {
+  .history-banner__list {
+    justify-content: space-around;
+  }
+
+  .history__list {
+    margin-top: 0;
+    row-gap: 30px;
+  }
+
   .history-banner__subtitle {
     max-width: 255px;
     font-size: 11px;
@@ -285,6 +319,11 @@
     row-gap: 20px;
   }
 
+  .history__item {
+    padding-top: 0;
+    padding-left: 10px;
+  }
+
   .history-card__title {
     font-size: 12px;
   }
@@ -292,6 +331,12 @@
   .history__subtitle {
     margin-top: 5px;
     font-size: 15px;
+  }
+
+  .history__descr {
+    margin-top: 10px;
+    padding: 0;
+    border: none;
   }
 
   .history__info {
@@ -313,12 +358,13 @@
   }
 
   .history__year {
+    margin-top: -9px;
     font-size: 15px;
   }
 
-  .history__list .history__year {
-    left: 10px !important;
-    bottom: calc(100% + 10px) !important;
+  .history__img {
+    width: 80px;
+    height: 50px;
   }
 }
 

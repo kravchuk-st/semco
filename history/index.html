@@ -32,6 +32,16 @@
           <button class="search__btn btn-reset" type="submit"></button>
         </form>
         <div class="header__btns">
+          <div class="tooltip tooltip_search">
+            <button class="tooltip__btn btn-change btn-reset" aria-labelledby="search-tooltip" aria-label="Открыть поиск">
+              <svg class="address__icon" aria-hidden="true" width="26" height="26">
+                <use xlink:href="/assets/img/svg/search-header.svg#icon"></use>
+              </svg>
+            </button>
+            <div class="tooltip__text" role="tooltip" id="search-tooltip">
+              <input class="input" placeholder="Поиск...">
+            </div>
+          </div>
           <a href="#" class="wishlist btn-reser">
             <span class="wishlist__icon">
               <svg  aria-hidden="true" width="22" height="18">
@@ -119,7 +129,7 @@
     <section class="history-banner">
       <div class="wrapper">
         <div class="section-header">
-          <h1 class="history-banner__title">География продаж <span class="question-icon">?</span></h1>
+          <h1 class="history-banner__title">География продаж</h1>
           <a class="catalog-link btn btn-reset" href="/catalog"><span class="text-md">вернуться к каталогу</span><span class="text-sm">в каталог</span></a>
         </div>
         <p class="history-banner__subtitle">
@@ -228,9 +238,9 @@
             <img class="history__icon" src="/assets/img/cipollino.png" alt="cipollino">
           </div>
         </div>
-        <ul class="history__list list-reset">
-          <div class="row">
-            <li class="history__item first-item">
+        <div class="history__inserted">
+          <div class="history__list">
+            <div class="history__item first-item">
               <h3 class="history__year">1991 г.</h3>
               <p class="title">19 июля 1991 года была основана агрофирма ООО «Семко»</p>
               <div class="history__descr">
@@ -238,8 +248,15 @@
                   19 июля Юрий Борисович Алексеев основал агрофирму «Семко». С этого момента компания активно занялась селекцией и семеноводством, а также реализацией семян овощных культур. На базе павильона «Семена» на ВДНХ СССР был создан выставочно-торговый комплекс «Семена от Семко».
                 </p>
               </div>
-            </li>
-            <li class="history__item">
+              <div class="history__imgs">
+                <img class="history__img" src="/assets/img/history/sm/1991/1.jpg" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/1991/2.jpg" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/1991/3.jpg" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/1991/4.jpg" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/1991/5.jpg" alt="..." data-path="zoom" loading="lazy">
+              </div>
+            </div>
+            <div class="history__item">
               <h3 class="history__year">1992 г.</h3>
               <div class="history__descr">
                 <p>
@@ -247,12 +264,14 @@
                 </p>
               </div>
               <div class="history__imgs">
-                <img class="history__img" src="/assets/img/history-icon.png" alt="...">
-                <img class="history__img" src="/assets/img/partners.png" alt="...">
-                <img class="history__img" src="/assets/img/yury.png" alt="...">
+                <img class="history__img" src="/assets/img/history/sm/1992/1.jpg" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/1992/2.jpg" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/1992/3.jpg" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/1992/4.jpg" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/1992/5.jpg" alt="..." data-path="zoom" loading="lazy">
               </div>
-            </li>
-            <li class="history__item">
+            </div>
+            <div class="history__item">
               <h3 class="history__year">1993 г.</h3>
               <div class="history__descr">
                 <p>
@@ -260,12 +279,14 @@
                 </p>
               </div>
               <div class="history__imgs">
-                <img class="history__img" src="/assets/img/history-icon.png" alt="...">
-                <img class="history__img" src="/assets/img/partners.png" alt="...">
-                <img class="history__img" src="/assets/img/yury.png" alt="...">
+                <img class="history__img" src="/assets/img/history/sm/1993/1.jpg" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/1993/2.jpg" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/1993/3.jpg" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/1993/4.jpg" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/1993/5.jpg" alt="..." data-path="zoom" loading="lazy">
               </div>
-            </li>
-            <li class="history__item">
+            </div>
+            <div class="history__item">
               <h3 class="history__year">1994 г.</h3>
               <div class="history__descr">
                 <p>
@@ -276,14 +297,14 @@
                 </p>
               </div>
               <div class="history__imgs">
-                <img class="history__img" src="/assets/img/history-icon.png" alt="...">
-                <img class="history__img" src="/assets/img/partners.png" alt="...">
-                <img class="history__img" src="/assets/img/yury.png" alt="...">
+                <img class="history__img" src="/assets/img/history/sm/1994/1.jpg" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/1994/2.jpg" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/1994/3.jpg" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/1994/4.jpg" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/1994/5.jpg" alt="..." data-path="zoom" loading="lazy">
               </div>
-            </li>
-          </div>
-          <div class="row">
-            <li class="history__item">
+            </div>
+            <div class="history__item">
               <h3 class="history__year">1995 г.</h3>
               <div class="history__descr">
                 <p>
@@ -294,12 +315,14 @@
                 </p>
               </div>
               <div class="history__imgs">
-                <img class="history__img" src="/assets/img/history-icon.png" alt="...">
-                <img class="history__img" src="/assets/img/partners.png" alt="...">
-                <img class="history__img" src="/assets/img/yury.png" alt="...">
+                <img class="history__img" src="/assets/img/history/sm/1995/1.jpg" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/1995/2.jpg" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/1995/3.jpg" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/1995/4.jpg" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/1995/5.jpg" alt="..." data-path="zoom" loading="lazy">
               </div>
-            </li>
-            <li class="history__item">
+            </div>
+            <div class="history__item">
               <h3 class="history__year">1996 г.</h3>
               <div class="history__descr">
                 <p>
@@ -307,12 +330,14 @@
                 </p>
               </div>
               <div class="history__imgs">
-                <img class="history__img" src="/assets/img/history-icon.png" alt="...">
-                <img class="history__img" src="/assets/img/partners.png" alt="...">
-                <img class="history__img" src="/assets/img/yury.png" alt="...">
+                <img class="history__img" src="/assets/img/history/sm/1996/1.jpg" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/1996/2.jpg" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/1996/3.jpg" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/1996/4.jpg" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/1996/5.jpg" alt="..." data-path="zoom" loading="lazy">
               </div>
-            </li>
-            <li class="history__item">
+            </div>
+            <div class="history__item">
               <h3 class="history__year">1997 г.</h3>
               <div class="history__descr">
                 <p>
@@ -320,14 +345,14 @@
                 </p>
               </div>
               <div class="history__imgs">
-                <img class="history__img" src="/assets/img/history-icon.png" alt="...">
-                <img class="history__img" src="/assets/img/partners.png" alt="...">
-                <img class="history__img" src="/assets/img/yury.png" alt="...">
+                <img class="history__img" src="/assets/img/history/sm/1997/1.jpg" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/1997/2.jpg" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/1997/3.jpg" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/1997/4.jpg" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/1997/5.jpg" alt="..." data-path="zoom" loading="lazy">
               </div>
-            </li>
-          </div>
-          <div class="row">
-            <li class="history__item">
+            </div>
+            <div class="history__item">
               <h3 class="history__year">1998 г.</h3>
               <div class="history__descr">
                 <p>
@@ -335,12 +360,14 @@
                 </p>
               </div>
               <div class="history__imgs">
-                <img class="history__img" src="/assets/img/history-icon.png" alt="...">
-                <img class="history__img" src="/assets/img/partners.png" alt="...">
-                <img class="history__img" src="/assets/img/yury.png" alt="...">
+                <img class="history__img" src="/assets/img/history/sm/1998/1.jpg" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/1998/2.jpg" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/1998/3.jpg" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/1998/4.jpg" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/1998/5.jpg" alt="..." data-path="zoom" loading="lazy">
               </div>
-            </li>
-            <li class="history__item">
+            </div>
+            <div class="history__item">
               <h3 class="history__year">1999 г.</h3>
               <div class="history__descr">
                 <p>
@@ -348,12 +375,14 @@
                 </p>
               </div>
               <div class="history__imgs">
-                <img class="history__img" src="/assets/img/history-icon.png" alt="...">
-                <img class="history__img" src="/assets/img/partners.png" alt="...">
-                <img class="history__img" src="/assets/img/yury.png" alt="...">
+                <img class="history__img" src="/assets/img/history/sm/1999/1.jpg" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/1999/2.jpg" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/1999/3.jpg" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/1999/4.jpg" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/1999/5.jpg" alt="..." data-path="zoom" loading="lazy">
               </div>
-            </li>
-            <li class="history__item">
+            </div>
+            <div class="history__item">
               <h3 class="history__year">2000 г.</h3>
               <div class="history__descr">
                 <p>
@@ -361,14 +390,14 @@
                 </p>
               </div>
               <div class="history__imgs">
-                <img class="history__img" src="/assets/img/history-icon.png" alt="...">
-                <img class="history__img" src="/assets/img/partners.png" alt="...">
-                <img class="history__img" src="/assets/img/yury.png" alt="...">
+                <img class="history__img" src="/assets/img/history/sm/2000/1.jpg" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2000/2.jpg" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2000/3.jpg" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2000/4.jpg" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2000/5.jpg" alt="..." data-path="zoom" loading="lazy">
               </div>
-            </li>
-          </div>
-          <div class="row">
-            <li class="history__item">
+            </div>
+            <div class="history__item">
               <h3 class="history__year">2001 г.</h3>
               <div class="history__descr">
                 <p>
@@ -376,12 +405,14 @@
                 </p>
               </div>
               <div class="history__imgs">
-                <img class="history__img" src="/assets/img/history-icon.png" alt="...">
-                <img class="history__img" src="/assets/img/partners.png" alt="...">
-                <img class="history__img" src="/assets/img/yury.png" alt="...">
+                <img class="history__img" src="/assets/img/history/sm/2001/1.jpg" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2001/2.jpg" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2001/3.jpg" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2001/4.jpg" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2001/5.jpg" alt="..." data-path="zoom" loading="lazy">
               </div>
-            </li>
-            <li class="history__item">
+            </div>
+            <div class="history__item">
               <h3 class="history__year">2002 г.</h3>
               <div class="history__descr">
                 <p>
@@ -389,12 +420,14 @@
                 </p>
               </div>
               <div class="history__imgs">
-                <img class="history__img" src="/assets/img/history-icon.png" alt="...">
-                <img class="history__img" src="/assets/img/partners.png" alt="...">
-                <img class="history__img" src="/assets/img/yury.png" alt="...">
+                <img class="history__img" src="/assets/img/history/sm/2002/1.jpg" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2002/2.jpg" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2002/3.jpg" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2002/4.jpg" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2002/5.jpg" alt="..." data-path="zoom" loading="lazy">
               </div>
-            </li>
-            <li class="history__item">
+            </div>
+            <div class="history__item">
               <h3 class="history__year">2003 г.</h3>
               <div class="history__descr">
                 <p>
@@ -402,14 +435,14 @@
                 </p>
               </div>
               <div class="history__imgs">
-                <img class="history__img" src="/assets/img/history-icon.png" alt="...">
-                <img class="history__img" src="/assets/img/partners.png" alt="...">
-                <img class="history__img" src="/assets/img/yury.png" alt="...">
+                <img class="history__img" src="/assets/img/history/sm/2003/1.jpg" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2003/2.jpg" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2003/3.jpg" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2003/4.jpg" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2003/5.jpg" alt="..." data-path="zoom" loading="lazy">
               </div>
-            </li>
-          </div>
-          <div class="row">
-            <li class="history__item">
+            </div>
+            <div class="history__item">
               <h3 class="history__year">2004 г.</h3>
               <div class="history__descr">
                 <p>
@@ -417,12 +450,14 @@
                 </p>
               </div>
               <div class="history__imgs">
-                <img class="history__img" src="/assets/img/history-icon.png" alt="...">
-                <img class="history__img" src="/assets/img/partners.png" alt="...">
-                <img class="history__img" src="/assets/img/yury.png" alt="...">
+                <img class="history__img" src="/assets/img/history/sm/2004/1.jpg" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2004/2.jpg" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2004/3.jpg" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2004/4.jpg" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2004/5.jpg" alt="..." data-path="zoom" loading="lazy">
               </div>
-            </li>
-            <li class="history__item">
+            </div>
+            <div class="history__item">
               <h3 class="history__year">2005 г.</h3>
               <div class="history__descr">
                 <p>
@@ -430,12 +465,14 @@
                 </p>
               </div>
               <div class="history__imgs">
-                <img class="history__img" src="/assets/img/history-icon.png" alt="...">
-                <img class="history__img" src="/assets/img/partners.png" alt="...">
-                <img class="history__img" src="/assets/img/yury.png" alt="...">
+                <img class="history__img" src="/assets/img/history/sm/2005/1.jpg" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2005/2.jpg" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2005/3.jpg" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2005/4.jpg" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2005/5.jpg" alt="..." data-path="zoom" loading="lazy">
               </div>
-            </li>
-            <li class="history__item">
+            </div>
+            <div class="history__item">
               <h3 class="history__year">2006 г.</h3>
               <div class="history__descr">
                 <p>
@@ -443,14 +480,14 @@
                 </p>
               </div>
               <div class="history__imgs">
-                <img class="history__img" src="/assets/img/history-icon.png" alt="...">
-                <img class="history__img" src="/assets/img/partners.png" alt="...">
-                <img class="history__img" src="/assets/img/yury.png" alt="...">
+                <img class="history__img" src="/assets/img/history/sm/2006/1.jpg" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2006/2.jpg" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2006/3.jpg" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2006/4.jpg" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2006/5.jpg" alt="..." data-path="zoom" loading="lazy">
               </div>
-            </li>
-          </div>
-          <div class="row">
-            <li class="history__item">
+            </div>
+            <div class="history__item">
               <h3 class="history__year">2007 г.</h3>
               <div class="history__descr">
                 <p>
@@ -458,12 +495,14 @@
                 </p>
               </div>
               <div class="history__imgs">
-                <img class="history__img" src="/assets/img/history-icon.png" alt="...">
-                <img class="history__img" src="/assets/img/partners.png" alt="...">
-                <img class="history__img" src="/assets/img/yury.png" alt="...">
+                <img class="history__img" src="/assets/img/history/sm/2007/1.jpg" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2007/2.jpg" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2007/3.jpg" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2007/4.jpg" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2007/5.jpg" alt="..." data-path="zoom" loading="lazy">
               </div>
-            </li>
-            <li class="history__item">
+            </div>
+            <div class="history__item">
               <h3 class="history__year">2008 г.</h3>
               <div class="history__descr">
                 <p>
@@ -471,12 +510,14 @@
                 </p>
               </div>
               <div class="history__imgs">
-                <img class="history__img" src="/assets/img/history-icon.png" alt="...">
-                <img class="history__img" src="/assets/img/partners.png" alt="...">
-                <img class="history__img" src="/assets/img/yury.png" alt="...">
+                <img class="history__img" src="/assets/img/history/sm/2008/1.jpg" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2008/2.jpg" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2008/3.jpg" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2008/4.jpg" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2008/5.jpg" alt="..." data-path="zoom" loading="lazy">
               </div>
-            </li>
-            <li class="history__item">
+            </div>
+            <div class="history__item">
               <h3 class="history__year">2009 г.</h3>
               <div class="history__descr">
                 <p>
@@ -484,14 +525,14 @@
                 </p>
               </div>
               <div class="history__imgs">
-                <img class="history__img" src="/assets/img/history-icon.png" alt="...">
-                <img class="history__img" src="/assets/img/partners.png" alt="...">
-                <img class="history__img" src="/assets/img/yury.png" alt="...">
+                <img class="history__img" src="/assets/img/history/sm/2009/1.jpg" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2009/2.jpg" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2009/3.jpg" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2009/4.jpg" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2009/5.jpg" alt="..." data-path="zoom" loading="lazy">
               </div>
-            </li>
-          </div>
-          <div class="row">
-            <li class="history__item">
+            </div>
+            <div class="history__item">
               <h3 class="history__year">2010 г.</h3>
               <div class="history__descr">
                 <p>
@@ -499,12 +540,14 @@
                 </p>
               </div>
               <div class="history__imgs">
-                <img class="history__img" src="/assets/img/history-icon.png" alt="...">
-                <img class="history__img" src="/assets/img/partners.png" alt="...">
-                <img class="history__img" src="/assets/img/yury.png" alt="...">
+                <img class="history__img" src="/assets/img/history/sm/2010/1.jpg" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2010/2.jpg" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2010/3.jpg" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2010/4.jpg" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2010/5.jpg" alt="..." data-path="zoom" loading="lazy">
               </div>
-            </li>
-            <li class="history__item">
+            </div>
+            <div class="history__item">
               <h3 class="history__year">2011 г.</h3>
               <div class="history__descr">
                 <p>
@@ -512,12 +555,14 @@
                 </p>
               </div>
               <div class="history__imgs">
-                <img class="history__img" src="/assets/img/history-icon.png" alt="...">
-                <img class="history__img" src="/assets/img/partners.png" alt="...">
-                <img class="history__img" src="/assets/img/yury.png" alt="...">
+                <img class="history__img" src="/assets/img/history/sm/2011/1.jpg" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2011/2.jpg" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2011/3.jpg" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2011/4.jpg" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2011/5.jpg" alt="..." data-path="zoom" loading="lazy">
               </div>
-            </li>
-            <li class="history__item">
+            </div>
+            <div class="history__item">
               <h3 class="history__year">2012 г.</h3>
               <div class="history__descr">
                 <p>
@@ -525,14 +570,14 @@
                 </p>
               </div>
               <div class="history__imgs">
-                <img class="history__img" src="/assets/img/history-icon.png" alt="...">
-                <img class="history__img" src="/assets/img/partners.png" alt="...">
-                <img class="history__img" src="/assets/img/yury.png" alt="...">
+                <img class="history__img" src="/assets/img/history/sm/2012/1.jpg" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2012/2.jpg" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2012/3.jpg" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2012/4.jpg" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2012/5.jpg" alt="..." data-path="zoom" loading="lazy">
               </div>
-            </li>
-          </div>
-          <div class="row">
-            <li class="history__item">
+            </div>
+            <div class="history__item">
               <h3 class="history__year">2013 г.</h3>
               <div class="history__descr">
                 <p>
@@ -540,12 +585,14 @@
                 </p>
               </div>
               <div class="history__imgs">
-                <img class="history__img" src="/assets/img/history-icon.png" alt="...">
-                <img class="history__img" src="/assets/img/partners.png" alt="...">
-                <img class="history__img" src="/assets/img/yury.png" alt="...">
+                <img class="history__img" src="/assets/img/history/sm/2013/1.jpg" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2013/2.jpg" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2013/3.jpg" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2013/4.jpg" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2013/5.jpg" alt="..." data-path="zoom" loading="lazy">
               </div>
-            </li>
-            <li class="history__item">
+            </div>
+            <div class="history__item">
               <h3 class="history__year">2014 г.</h3>
               <div class="history__descr">
                 <p>
@@ -553,12 +600,14 @@
                 </p>
               </div>
               <div class="history__imgs">
-                <img class="history__img" src="/assets/img/history-icon.png" alt="...">
-                <img class="history__img" src="/assets/img/partners.png" alt="...">
-                <img class="history__img" src="/assets/img/yury.png" alt="...">
+                <img class="history__img" src="/assets/img/history/sm/2014/1.jpg" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2014/2.jpg" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2014/3.jpg" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2014/4.jpg" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2014/5.jpg" alt="..." data-path="zoom" loading="lazy">
               </div>
-            </li>
-            <li class="history__item">
+            </div>
+            <div class="history__item">
               <h3 class="history__year">2015 г.</h3>
               <div class="history__descr">
                 <p>
@@ -566,14 +615,14 @@
                 </p>
               </div>
               <div class="history__imgs">
-                <img class="history__img" src="/assets/img/history-icon.png" alt="...">
-                <img class="history__img" src="/assets/img/partners.png" alt="...">
-                <img class="history__img" src="/assets/img/yury.png" alt="...">
+                <img class="history__img" src="/assets/img/history/sm/2015/1.jpg" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2015/2.jpg" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2015/3.jpg" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2015/4.jpg" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2015/5.jpg" alt="..." data-path="zoom" loading="lazy">
               </div>
-            </li>
-          </div>
-          <div class="row">
-            <li class="history__item">
+            </div>
+            <div class="history__item">
               <h3 class="history__year">2016 г.</h3>
               <div class="history__descr">
                 <p>
@@ -581,12 +630,15 @@
                 </p>
               </div>
               <div class="history__imgs">
-                <img class="history__img" src="/assets/img/history-icon.png" alt="...">
-                <img class="history__img" src="/assets/img/partners.png" alt="...">
-                <img class="history__img" src="/assets/img/yury.png" alt="...">
+                <img class="history__img" src="/assets/img/history/sm/2016/1.jpg" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2016/2.jpg" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2016/3.jpg" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2016/4.jpg" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2016/5.jpg" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2016/6.jpg" alt="..." data-path="zoom" loading="lazy">
               </div>
-            </li>
-            <li class="history__item">
+            </div>
+            <div class="history__item">
               <h3 class="history__year">2017 г.</h3>
               <div class="history__descr">
                 <p>
@@ -594,12 +646,15 @@
                 </p>
               </div>
               <div class="history__imgs">
-                <img class="history__img" src="/assets/img/history-icon.png" alt="...">
-                <img class="history__img" src="/assets/img/partners.png" alt="...">
-                <img class="history__img" src="/assets/img/yury.png" alt="...">
+                <img class="history__img" src="/assets/img/history/sm/2017/1.jpg" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2017/2.jpg" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2017/3.jpg" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2017/4.jpg" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2017/5.jpg" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2017/6.jpg" alt="..." data-path="zoom" loading="lazy">
               </div>
-            </li>
-            <li class="history__item">
+            </div>
+            <div class="history__item">
               <h3 class="history__year">2018 г.</h3>
               <div class="history__descr">
                 <p>
@@ -607,14 +662,14 @@
                 </p>
               </div>
               <div class="history__imgs">
-                <img class="history__img" src="/assets/img/history-icon.png" alt="...">
-                <img class="history__img" src="/assets/img/partners.png" alt="...">
-                <img class="history__img" src="/assets/img/yury.png" alt="...">
+                <img class="history__img" src="/assets/img/history/sm/2018/1.jpg" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2018/2.jpg" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2018/3.jpg" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2018/4.jpg" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2018/5.jpg" alt="..." data-path="zoom" loading="lazy">
               </div>
-            </li>
-          </div>
-          <div class="row">
-            <li class="history__item">
+            </div>
+            <div class="history__item">
               <h3 class="history__year">2019 г.</h3>
               <div class="history__descr">
                 <p>
@@ -622,12 +677,15 @@
                 </p>
               </div>
               <div class="history__imgs">
-                <img class="history__img" src="/assets/img/history-icon.png" alt="...">
-                <img class="history__img" src="/assets/img/partners.png" alt="...">
-                <img class="history__img" src="/assets/img/yury.png" alt="...">
+                <img class="history__img" src="/assets/img/history/sm/2019/1.jpg" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2019/2.jpg" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2019/3.jpg" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2019/4.jpg" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2019/5.jpg" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2019/6.jpg" alt="..." data-path="zoom" loading="lazy">
               </div>
-            </li>
-            <li class="history__item">
+            </div>
+            <div class="history__item">
               <h3 class="history__year">2020 г.</h3>
               <div class="history__descr">
                 <p>
@@ -635,12 +693,14 @@
                 </p>
               </div>
               <div class="history__imgs">
-                <img class="history__img" src="/assets/img/history-icon.png" alt="...">
-                <img class="history__img" src="/assets/img/partners.png" alt="...">
-                <img class="history__img" src="/assets/img/yury.png" alt="...">
+                <img class="history__img" src="/assets/img/history/sm/2020/1.jpg" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2020/2.jpg" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2020/3.jpg" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2020/4.jpg" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2020/5.jpg" alt="..." data-path="zoom" loading="lazy">
               </div>
-            </li>
-            <li class="history__item">
+            </div>
+            <div class="history__item">
               <h3 class="history__year">2021 г.</h3>
               <div class="history__descr">
                 <p>
@@ -648,14 +708,14 @@
                 </p>
               </div>
               <div class="history__imgs">
-                <img class="history__img" src="/assets/img/history-icon.png" alt="...">
-                <img class="history__img" src="/assets/img/partners.png" alt="...">
-                <img class="history__img" src="/assets/img/yury.png" alt="...">
+                <img class="history__img" src="/assets/img/history/sm/2021/1.jpg" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2021/2.jpg" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2021/3.jpg" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2021/4.jpg" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2021/5.jpg" alt="..." data-path="zoom" loading="lazy">
               </div>
-            </li>
-          </div>
-          <div class="row">
-            <li class="history__item">
+            </div>
+            <div class="history__item">
               <h3 class="history__year">2022 г.</h3>
               <div class="history__descr">
                 <p>
@@ -663,12 +723,14 @@
                 </p>
               </div>
               <div class="history__imgs">
-                <img class="history__img" src="/assets/img/history-icon.png" alt="...">
-                <img class="history__img" src="/assets/img/partners.png" alt="...">
-                <img class="history__img" src="/assets/img/yury.png" alt="...">
+                <img class="history__img" src="/assets/img/history/sm/2022/1.jpg" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2022/2.jpg" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2022/3.jpg" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2022/4.jpg" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2022/5.jpg" alt="..." data-path="zoom" loading="lazy">
               </div>
-            </li>
-            <li class="history__item">
+            </div>
+            <div class="history__item">
               <h3 class="history__year">2023 г.</h3>
               <div class="history__descr">
                 <p>
@@ -676,12 +738,14 @@
                 </p>
               </div>
               <div class="history__imgs">
-                <img class="history__img" src="/assets/img/history-icon.png" alt="...">
-                <img class="history__img" src="/assets/img/partners.png" alt="...">
-                <img class="history__img" src="/assets/img/yury.png" alt="...">
+                <img class="history__img" src="/assets/img/history/sm/2023/1.jpg" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2023/2.jpg" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2023/3.jpg" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2023/4.jpg" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2023/5.jpg" alt="..." data-path="zoom" loading="lazy">
               </div>
-            </li>
-            <li class="history__item">
+            </div>
+            <div class="history__item">
               <h3 class="history__year">2024 г.</h3>
               <div class="history__descr">
                 <p>
@@ -689,51 +753,49 @@
                 </p>
               </div>
               <div class="history__imgs">
-                <img class="history__img" src="/assets/img/history-icon.png" alt="...">
-                <img class="history__img" src="/assets/img/partners.png" alt="...">
-                <img class="history__img" src="/assets/img/yury.png" alt="...">
+                <img class="history__img" src="/assets/img/history/sm/2024/1.jpg" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2024/2.jpg" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2024/3.jpg" alt="..." data-path="zoom" loading="lazy">
               </div>
-            </li>
-          </div>
-          <div class="row">
-            <li class="history__item">
+            </div>
+            <div class="history__item">
               <h3 class="history__year">2025 г.</h3>
               <div class="history__descr">
                 <p>
                   Каждая страница нашей истории –лишь начало следующей главы
                 </p>
               </div>
-            </li>
-            <li class="history__item">
+            </div>
+            <div class="history__item">
               <h3 class="history__year">2026 г.</h3>
               <div class="history__descr">
                 <p>
                   Агрофирма Семко – отмечает юбилей 35 лет.
                 </p>
               </div>
-            </li>
-            <li class="history__item">
+            </div>
+            <div class="history__item">
               <h3 class="history__year">2027 г.</h3>
               <div class="history__descr">
                 <p>
                   История продолжается, уже скоро новые открытия.
                 </p>
               </div>
-            </li>
-            <li class="history__item">
+            </div>
+            <div class="history__item">
               <h3 class="history__year">2028 г.</h3>
               <div class="history__descr">
                 <p>
                   История агрофирмы «Семко» ещё очень далека от завершения – продолжение следует
                 </p>
               </div>
-            </li>
+            </div>
           </div>
 
           <svg class="history__line">
             <use xlink:href="#line"></use>
           </svg>
-        </ul>
+        </div>
       </div>
     </section>
 
@@ -745,7 +807,7 @@
             <p class="proposition__descr">Подпишитесь на рассылку и получайте промокоды, акции и подборки товаров на свою почту</p>
           </div>
           <form class="proposition__form" action="#" method="post">
-            <input class="form-input" type="email" name="email" placeholder="Ваш e-mail" required>
+            <input class="form-input" type="email" name="email" placeholder="Оставьте Ваш e-mail" required>
             <button class="form-btn btn-dark btn-reset" type="submit">подписаться</button>
             <p class="form-text">
               Нажимая Подписаться вы соглашаетесь с <a href="#" target="_blank" rel="noopener noreferrer">Политикой обработки персональных данных</a>
@@ -1072,51 +1134,278 @@
     </div>
   </div>
 
+  <div class="modal">
+    <div class="modal__layout">
+      <div class="modal__content modal__content_login" data-target="login">
+        <button class="close-btn btn-reset" aria-label="Закрыть модальное окно"></button>
+        <img class="modal__logo" src="/assets/img/svg/logo.svg" alt="Logo">
+        <p class="modal__title">Войти</p>
+        <p class="modal__subtitle">в личный кабинет</p>
+        <form class="modal__form" action="#" method="post">
+          <input class="input" type="tel" placeholder="+7 (999) 999-99-99" data-validate-field="tel">
+          <button class="btn btn-fill btn-reset" type="button" data-path="auth">Войти</button>
+        </form>
+        <div class="modal__footer">
+          <div class="modal__links">
+            <button class="btn btn-reset">Забыли пароль?</button>
+            <button class="btn btn-active btn-reset" data-path="login-email">Войти через почту</button>
+          </div>
+          <p class="modal__info">Не зарегистрированы? <button class="btn btn-reset" data-path="registration">Зарегистрируйтесь тут</button></p>
+        </div>
+      </div>
+
+      <div class="modal__content modal__content_login" data-target="login-email">
+        <button class="close-btn btn-reset" aria-label="Закрыть модальное окно"></button>
+        <img class="modal__logo" src="/assets/img/svg/logo.svg" alt="Logo">
+        <p class="modal__title">Войти</p>
+        <p class="modal__subtitle">в личный кабинет</p>
+        <form class="modal__form" action="#" method="post">
+          <input class="input" type="email" placeholder="Введите почту" data-validate-field="email">
+          <button class="btn btn-fill btn-reset" type="submit">Войти</button>
+        </form>
+        <div class="modal__footer">
+          <div class="modal__links">
+            <button class="btn btn-reset">Забыли пароль?</button>
+            <button class="btn btn-active btn-reset" data-path="login">Войти через телефон</button>
+          </div>
+          <p class="modal__info">Не зарегистрированы? <button class="btn btn-reset" data-path="registration">Зарегистрируйтесь тут</button></p>
+        </div>
+      </div>
+
+      <div class="modal__content modal__content_login" data-target="auth">
+        <button class="close-btn btn-reset" aria-label="Закрыть модальное окно"></button>
+        <img class="modal__logo" src="/assets/img/svg/logo.svg" alt="Logo">
+        <p class="modal__title">Введите код</p>
+        <p class="modal__subtitle">из СМС-сообщения</p>
+        <form class="modal__form" action="#" method="post">
+          <input class="input input-password" type="password" placeholder="••••">
+          <button class="btn btn-reset" type="submit">Подтвердить</button>
+        </form>
+        <div class="modal__footer">
+          <div class="modal__links">
+            <button class="btn btn-reset">Забыли пароль?</button>
+            <button class="btn btn-active btn-reset" data-path="login-email">Войти через почту</button>
+          </div>
+          <p class="modal__info">Не зарегистрированы? <button class="btn btn-reset" data-path="registration">Зарегистрируйтесь тут</button></p>
+        </div>
+      </div>
+
+      <div class="modal__content modal__content_login" data-target="registration">
+        <button class="close-btn btn-reset" aria-label="Закрыть модальное окно"></button>
+        <img class="modal__logo" src="/assets/img/svg/logo.svg" alt="Logo">
+        <p class="modal__title">Зарегистрируйтесь</p>
+        <p class="modal__subtitle">чтобы войти в личный кабинет</p>
+        <form class="modal__form" action="#" method="post">
+          <input class="input" type="text" placeholder="Ваше имя" name="Name" data-validate-field="name" autocomplete="off">
+          <input class="input" type="tel" name="Phone" placeholder="+7 (999) 999-99-99" data-validate-field="tel" autocomplete="off">
+          <input class="input input-password" type="password" placeholder="Придумайте пароль" name="Password" autocomplete="off">
+          <button class="btn btn-fill btn-reset" type="submit">Зарегистрироваться</button>
+        </form>
+        <div class="modal__footer">
+          <div class="modal__links">
+            <button class="btn btn-reset">Забыли пароль?</button>
+            <button class="btn btn-reset" data-path="registration-email">Зарегистрируйтесь через почту</button>
+          </div>
+          <p class="modal__info">Уже зарегистрированы? <button class="btn btn-active btn-reset" data-path="login">Войдите тут</button></p>
+        </div>
+      </div>
+
+      <div class="modal__content modal__content_login" data-target="registration-email">
+        <button class="close-btn btn-reset" aria-label="Закрыть модальное окно"></button>
+        <img class="modal__logo" src="/assets/img/svg/logo.svg" alt="Logo">
+        <p class="modal__title">Зарегистрируйтесь</p>
+        <p class="modal__subtitle">чтобы войти в личный кабинет</p>
+        <form class="modal__form" action="#" method="post">
+          <input class="input" type="text" placeholder="Ваше имя" name="Name" data-validate-field="name" autocomplete="off">
+          <input class="input" type="email" name="Email" placeholder="Введите почту" data-validate-field="email" autocomplete="off">
+          <input class="input input-password" type="password" placeholder="Придумайте пароль" name="Password" autocomplete="off">
+          <button class="btn btn-fill btn-reset" type="submit">Зарегистрироваться</button>
+        </form>
+        <div class="modal__footer">
+          <div class="modal__links">
+            <button class="btn btn-reset">Забыли пароль?</button>
+            <button class="btn btn-reset" data-path="registration">Зарегистрируйтесь через телефон</button>
+          </div>
+          <p class="modal__info">Уже зарегистрированы? <button class="btn btn-active btn-reset" data-path="login">Войдите тут</button></p>
+        </div>
+      </div>
+
+      <div class="modal__content modal__content_katalog" data-target="katalog">
+        <div class="tabs" data-tabs="tab">
+          <ul class="tabs__nav list-reset">
+            <li class="tabs__nav-item"><button class="tabs__nav-btn btn-reset" type="button">
+              <span class="tabs__nav-icon" aria-hidden="true">
+                <svg aria-hidden="true" width="19" height="19">
+                  <use xlink:href="/assets/img/svg/katalog/0.svg#icon"></use>
+                </svg>
+              </span>Семена томатов
+            </button></li>
+            <li class="tabs__nav-item"><button class="tabs__nav-btn btn-reset" type="button">
+              <span class="tabs__nav-icon" aria-hidden="true">
+                <svg aria-hidden="true" width="22" height="24">
+                  <use xlink:href="/assets/img/svg/katalog/1.svg#icon"></use>
+                </svg>
+              </span>Семена зелени
+            </button></li>
+            <li class="tabs__nav-item"><button class="tabs__nav-btn btn-reset" type="button">
+              <span class="tabs__nav-icon" aria-hidden="true">
+                <svg aria-hidden="true" width="20" height="20">
+                  <use xlink:href="/assets/img/svg/katalog/2.svg#icon"></use>
+                </svg>
+              </span>Семена микрозелени
+            </button></li>
+            <li class="tabs__nav-item"><button class="tabs__nav-btn btn-reset" type="button">
+              <span class="tabs__nav-icon" aria-hidden="true">
+                <svg aria-hidden="true" width="22" height="22">
+                  <use xlink:href="/assets/img/svg/katalog/3.svg#icon"></use>
+                </svg>
+              </span>Семена цветов и трав
+            </button></li>
+            <li class="tabs__nav-item"><button class="tabs__nav-btn btn-reset" type="button">
+              <span class="tabs__nav-icon" aria-hidden="true">
+                <svg aria-hidden="true" width="22" height="22">
+                  <use xlink:href="/assets/img/svg/katalog/4.svg#icon"></use>
+                </svg>
+              </span>Наборы семян
+            </button></li>
+            <li class="tabs__nav-item"><button class="tabs__nav-btn btn-reset" type="button">
+              <span class="tabs__nav-icon" aria-hidden="true">
+                <svg aria-hidden="true" width="22" height="25">
+                  <use xlink:href="/assets/img/svg/katalog/5.svg#icon"></use>
+                </svg>
+              </span>Удобрения и биопрепараты
+            </button></li>
+            <li class="tabs__nav-item"><button class="tabs__nav-btn btn-reset" type="button">
+              <span class="tabs__nav-icon" aria-hidden="true">
+                <svg aria-hidden="true" width="20" height="25">
+                  <use xlink:href="/assets/img/svg/katalog/6.svg#icon"></use>
+                </svg>
+              </span>Литература
+            </button></li>
+            <li class="tabs__nav-item"><button class="tabs__nav-btn btn-reset" type="button">
+              <span class="tabs__nav-icon" aria-hidden="true">
+                <svg aria-hidden="true" width="21" height="24">
+                  <use xlink:href="/assets/img/svg/katalog/7.svg#icon"></use>
+                </svg>
+              </span>Лук-севок
+            </button></li>
+          </ul>
+          <div class="tabs__content">
+            <div class="tabs__panel">
+              <div class="tabs__panel-header">
+                <p class="tabs__panel-title">Семена томатов</p>
+                <svg class="tabs__panel-icon" aria-hidden="true" width="29" height="29">
+                  <use xlink:href="/assets/img/svg/katalog/0.svg#icon"></use>
+                </svg>
+              </div>
+              <div class="tabs__panel-body">
+                <a href="/catalog" class="tabs__panel-link btn-reset">Семена зелени</a>
+                <a href="/catalog" class="tabs__panel-link btn-reset">Семена зелени</a>
+                <a href="/catalog" class="tabs__panel-link btn-reset">Семена зелени</a>
+                <a href="/catalog" class="tabs__panel-link btn-reset">Семена зелени</a>
+                <a href="/catalog" class="tabs__panel-link btn-reset">Семена зелени</a>
+                <a href="/catalog" class="tabs__panel-link btn-reset">Семена зелени</a>
+                <a href="/catalog" class="tabs__panel-link btn-reset">Семена зелени</a>
+                <a href="/catalog" class="tabs__panel-link btn-reset">Семена зелени</a>
+                <div class="tabs__panel-links">
+                  <button class="tabs__panel-links--btn btn-reset">
+                    Семена зелени
+                    <svg class="tabs__panel-links--icon" aria-hidden="true">
+                      <use xlink:href="#modal_arrow"></use>
+                    </svg>
+                  </button>
+                  <div class="tabs__panel-links--body">
+                    <a href="/catalog" class="tabs__panel-link btn-reset">Семена зелени</a>
+                    <a href="/catalog" class="tabs__panel-link btn-reset">Семена зелени</a>
+                  </div>
+                </div>
+                <div class="tabs__panel-links">
+                  <button class="tabs__panel-links--btn btn-reset">
+                    Семена зелени
+                    <svg class="tabs__panel-links--icon" aria-hidden="true">
+                      <use xlink:href="#modal_arrow"></use>
+                    </svg>
+                  </button>
+                  <div class="tabs__panel-links--body">
+                    <a href="/catalog" class="tabs__panel-link btn-reset">Семена зелени</a>
+                    <a href="/catalog" class="tabs__panel-link btn-reset">Семена зелени</a>
+                  </div>
+                </div>
+                <div class="tabs__panel-links">
+                  <button class="tabs__panel-links--btn btn-reset">
+                    Семена зелени
+                    <svg class="tabs__panel-links--icon" aria-hidden="true">
+                      <use xlink:href="#modal_arrow"></use>
+                    </svg>
+                  </button>
+                  <div class="tabs__panel-links--body">
+                    <a href="/catalog" class="tabs__panel-link btn-reset">Семена зелени</a>
+                    <a href="/catalog" class="tabs__panel-link btn-reset">Семена зелени</a>
+                  </div>
+                </div>
+                <div class="tabs__panel-links">
+                  <button class="tabs__panel-links--btn btn-reset">
+                    Семена зелени
+                    <svg class="tabs__panel-links--icon" aria-hidden="true">
+                      <use xlink:href="#modal_arrow"></use>
+                    </svg>
+                  </button>
+                  <div class="tabs__panel-links--body">
+                    <a href="/catalog" class="tabs__panel-link btn-reset">Семена зелени</a>
+                    <a href="/catalog" class="tabs__panel-link btn-reset">Семена зелени</a>
+                  </div>
+                </div>
+                <a href="/catalog" class="tabs__panel-link btn-reset">Семена зелени</a>
+                <a href="/catalog" class="tabs__panel-link btn-reset">Семена зелени</a>
+                <a href="/catalog" class="tabs__panel-link btn-reset">Семена зелени</a>
+                <a href="/catalog" class="tabs__panel-link btn-reset">Семена зелени</a>
+                <a href="/catalog" class="tabs__panel-link btn-reset">Семена зелени</a>
+                <a href="/catalog" class="tabs__panel-link btn-reset">Семена зелени</a>
+                <a href="/catalog" class="tabs__panel-link btn-reset">Семена зелени</a>
+                <a href="/catalog" class="tabs__panel-link btn-reset">Семена зелени</a>
+              </div>
+            </div>
+            <div class="tabs__panel">
+              
+            </div>
+            <div class="tabs__panel">
+              
+            </div>
+            <div class="tabs__panel">
+              
+            </div>
+            <div class="tabs__panel">
+              
+            </div>
+            <div class="tabs__panel">
+              
+            </div>
+            <div class="tabs__panel">
+              
+            </div>
+            <div class="tabs__panel">
+              
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal__content modal__content_zoom" data-target="zoom">
+        <button class="close-btn btn-reset" aria-label="Закрыть модальное окно"></button>
+        <button class="modal__zoom-btn modal__zoom-btn--prev btn-reset" aria-label="Предыдущая картинка"></button>
+        <button class="modal__zoom-btn modal__zoom-btn--next btn-reset" aria-label="Следующая картинка"></button>
+        <img class="modal__zoom-img" src="/assets/img/history/md/1991/1.jpg" alt="Logo">
+        <p class="modal__zoom-text">"Рождение" Семко — первые шаги к созданию Волшебного мира семян.</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="/assets/js/lib/inputmask.min.js"></script>
   <script src="/assets/js/burger.js"></script>
+  <script src="/assets/js/modal.js"></script>
+  <script src="/assets/js/maskFone.js"></script>
+  <script src="/assets/js/tabs.js"></script>
+  <script src="/assets/js/pages/history.js"></script>
   <script src="/assets/js/scrollTop.js"></script>
-  <script>
-    window.onload = function() {
-      const BORDER_RADIUS_SVG = 20;
-      const wrapper = document.querySelector('.wrapper');
-      const width = wrapper.offsetWidth - (parseInt(window.getComputedStyle(wrapper).paddingLeft) + parseInt(window.getComputedStyle(wrapper).paddingRight));
-      const historyList = document.querySelector('.history__list');
-      const lineSvg = document.querySelector('#line')
-      const dots = [...historyList.querySelectorAll('.history__item')];
-      const {top: y0} = dots[0].getBoundingClientRect();
-      const currentYear = new Date().getFullYear();
-      const {left: leftLayout} = historyList.getBoundingClientRect();
-      let isDrawLine = true;
-      let yi = y0;
-
-      let line = `<path d="M0,0 H${width - BORDER_RADIUS_SVG} `;
-      dots.forEach((el) => {
-        const {left: leftItem, top: y, right} = el.getBoundingClientRect();
-        const x = leftItem - leftLayout;
-        let year = parseInt(el.querySelector('.history__year').innerText);
-        if (year > currentYear) {
-          isDrawLine = false;
-          el.classList.add('history__item_disabled');
-        }
-
-        if (y !== yi) {
-          let xi = x < width / 2 ? BORDER_RADIUS_SVG : width - BORDER_RADIUS_SVG;
-          let x0 = x < width / 2 ? 0 : width;
-          let xEnd = x < width / 2 ? width - BORDER_RADIUS_SVG : BORDER_RADIUS_SVG;
-
-          line += `Q${x0},${yi - y0} ${x0},${yi - y0 + BORDER_RADIUS_SVG} V${y - y0 - BORDER_RADIUS_SVG} Q${x0},${y - y0} ${xi},${y - y0} `; // вертикальния линия
-          line += `H${xEnd} `; // горизонтальная линия 
-          yi = y;
-        }
-      })
-
-      line += '" stroke-width="2" />'
-      lineSvg.innerHTML = line;
-
-      const disableDots = dots.filter((el) => parseInt(el.querySelector('.history__year').innerText) > currentYear);
-      const {x: x2} = disableDots[disableDots.length - 1].getBoundingClientRect();
-      lineSvg.innerHTML += `<path d="M${width - BORDER_RADIUS_SVG},${yi - y0} H${x2 - leftLayout}" stroke="#cdcdcd" stroke-width="3" />`;
-      lineSvg.innerHTML += `<path d="M${x2 - leftLayout},${yi - y0} H0" stroke="white" stroke-width="4" />`;
-    }
-  </script>
 </body>
 </html>

@@ -38,6 +38,16 @@
           <button class="search__btn btn-reset" type="submit"></button>
         </form>
         <div class="header__btns">
+          <div class="tooltip tooltip_search">
+            <button class="tooltip__btn btn-change btn-reset" aria-labelledby="search-tooltip" aria-label="Открыть поиск">
+              <svg class="address__icon" aria-hidden="true" width="26" height="26">
+                <use xlink:href="/assets/img/svg/search-header.svg#icon"></use>
+              </svg>
+            </button>
+            <div class="tooltip__text" role="tooltip" id="search-tooltip">
+              <input class="input" placeholder="Поиск...">
+            </div>
+          </div>
           <a href="#" class="wishlist btn-reser">
             <span class="wishlist__icon">
               <svg  aria-hidden="true" width="22" height="18">
@@ -141,8 +151,8 @@
             <div class="content-payment">
               <div class="content-payment__header">
                 <h3 class="content-payment__title">Онлайн-оплата</h3>
-                <img class="content-payment__img" src="/assets/img/svg/pay/0.svg" alt="online payment">
-                <button class="content-payment__btn btn-lg btn-reset" data-path="pay">Подробнее</button>
+                <img class="content-payment__img" src="/assets/img/svg/pay/0.svg" alt="Онлайн-оплата">
+                <button class="content-payment__btn btn-lg btn-reset" data-path="pay-online">Подробнее</button>
               </div>
               <p class="content-payment__descr"><span>Мы принимает к оплате банковские карты</span> <span>VISA, MasterCard, МИР. Без комиссии для покупателей</span></p>
             </div>
@@ -151,8 +161,8 @@
             <div class="content-payment">
               <div class="content-payment__header">
                 <h3 class="content-payment__title">Система быстрых платежей (СБП)</h3>
-                <img class="content-payment__img" src="/assets/img/svg/pay/1.svg" alt="online payment">
-                <button class="content-payment__btn btn-lg btn-reset">Подробнее</button>
+                <img class="content-payment__img" src="/assets/img/svg/pay/1.svg" alt="Система быстрых платежей">
+                <button class="content-payment__btn btn-lg btn-reset" data-path="pay-quickly">Подробнее</button>
               </div>
               <p class="content-payment__descr"><span>Моментальная оплата прямо с вашего смартфона.</span> <span>Используйте СБП для удобной и безопасной оплаты заказа без комиссии.</span></p>
             </div>
@@ -161,8 +171,8 @@
             <div class="content-payment">
               <div class="content-payment__header">
                 <h3 class="content-payment__title">Альфа-банк</h3>
-                <img class="content-payment__img" src="/assets/img/svg/pay/2.svg" alt="online payment">
-                <button class="content-payment__btn btn-lg btn-reset">Подробнее</button>
+                <img class="content-payment__img" src="/assets/img/svg/pay/2.svg" alt="Альфа-банк">
+                <button class="content-payment__btn btn-lg btn-reset" data-path="pay-bank">Подробнее</button>
               </div>
               <p class="content-payment__descr"><span>Персональная ссылка сразу после оформления заказа.</span> <span>Оплата через эквайринг Альфа-банка.</span></p>
             </div>
@@ -171,8 +181,8 @@
             <div class="content-payment">
               <div class="content-payment__header">
                 <h3 class="content-payment__title">Наложенный платеж</h3>
-                <img class="content-payment__img" src="/assets/img/svg/pay/3.svg" alt="online payment">
-                <button class="content-payment__btn btn-lg btn-reset">Подробнее</button>
+                <img class="content-payment__img" src="/assets/img/svg/pay/3.svg" alt="Наложенный платеж">
+                <button class="content-payment__btn btn-lg btn-reset" data-path="pay-cod">Подробнее</button>
               </div>
               <p class="content-payment__descr"><span>Оплата производится при получении заказа на почте.</span> <span>Без комиссии для покупателей</span></p>
             </div>
@@ -181,8 +191,8 @@
             <div class="content-payment">
               <div class="content-payment__header">
                 <h3 class="content-payment__title">Наличный расчет</h3>
-                <img class="content-payment__img" src="/assets/img/svg/pay/4.svg" alt="online payment">
-                <button class="content-payment__btn btn-lg btn-reset">Подробнее</button>
+                <img class="content-payment__img" src="/assets/img/svg/pay/4.svg" alt="Наличный расчет">
+                <button class="content-payment__btn btn-lg btn-reset" data-path="pay-cash">Подробнее</button>
               </div>
               <p class="content-payment__descr"><span>Данный способ оплаты возможен только</span> <span>для оплаты заказов, доставляемых курьером по Москве.</span></p>
             </div>
@@ -191,8 +201,8 @@
             <div class="content-payment">
               <div class="content-payment__header">
                 <h3 class="content-payment__title">Безналичный расчет</h3>
-                <img class="content-payment__img" src="/assets/img/svg/pay/5.svg" alt="online payment">
-                <button class="content-payment__btn btn-lg btn-reset">Подробнее</button>
+                <img class="content-payment__img" src="/assets/img/svg/pay/5.svg" alt="Безналичный расчет">
+                <button class="content-payment__btn btn-lg btn-reset" data-path="pay-cashless">Подробнее</button>
               </div>
               <p class="content-payment__descr"><span>При оплате от имени юридического лица (организации или ИП)</span> <span>вы можете получить счет для оплаты.</span></p>
             </div>
@@ -614,7 +624,7 @@
             <p class="proposition__descr">Подпишитесь на рассылку и получайте промокоды, акции и подборки товаров на свою почту</p>
           </div>
           <form class="proposition__form" action="#" method="post">
-            <input class="form-input" type="email" name="email" placeholder="Ваш e-mail" required>
+            <input class="form-input" type="email" name="email" placeholder="Оставьте Ваш e-mail" required>
             <button class="form-btn btn-dark btn-reset" type="submit">подписаться</button>
             <p class="form-text">
               Нажимая Подписаться вы соглашаетесь с <a href="#" target="_blank" rel="noopener noreferrer">Политикой обработки персональных данных</a>
@@ -943,13 +953,262 @@
 
   <div class="modal">
     <div class="modal__layout">
-      <button class="close-btn btn-reset" aria-label="Закрыть модальное окно">
-        <svg aria-hidden="true" width="14" height="14">
-          <use xlink:href="#close"></use>
-        </svg>
-      </button>
+      <div class="modal__content modal__content_login" data-target="login">
+        <button class="close-btn btn-reset" aria-label="Закрыть модальное окно"></button>
+        <img class="modal__logo" src="/assets/img/svg/logo.svg" alt="Logo">
+        <p class="modal__title">Войти</p>
+        <p class="modal__subtitle">в личный кабинет</p>
+        <form class="modal__form" action="#" method="post">
+          <input class="input" type="tel" placeholder="+7 (999) 999-99-99" data-validate-field="tel">
+          <button class="btn btn-fill btn-reset" type="button" data-path="auth">Войти</button>
+        </form>
+        <div class="modal__footer">
+          <div class="modal__links">
+            <button class="btn btn-reset">Забыли пароль?</button>
+            <button class="btn btn-active btn-reset" data-path="login-email">Войти через почту</button>
+          </div>
+          <p class="modal__info">Не зарегистрированы? <button class="btn btn-reset" data-path="registration">Зарегистрируйтесь тут</button></p>
+        </div>
+      </div>
 
-      <div class="modal__content modal__content_pay" data-target="pay">
+      <div class="modal__content modal__content_login" data-target="login-email">
+        <button class="close-btn btn-reset" aria-label="Закрыть модальное окно"></button>
+        <img class="modal__logo" src="/assets/img/svg/logo.svg" alt="Logo">
+        <p class="modal__title">Войти</p>
+        <p class="modal__subtitle">в личный кабинет</p>
+        <form class="modal__form" action="#" method="post">
+          <input class="input" type="email" placeholder="Введите почту" data-validate-field="email">
+          <button class="btn btn-fill btn-reset" type="submit">Войти</button>
+        </form>
+        <div class="modal__footer">
+          <div class="modal__links">
+            <button class="btn btn-reset">Забыли пароль?</button>
+            <button class="btn btn-active btn-reset" data-path="login">Войти через телефон</button>
+          </div>
+          <p class="modal__info">Не зарегистрированы? <button class="btn btn-reset" data-path="registration">Зарегистрируйтесь тут</button></p>
+        </div>
+      </div>
+
+      <div class="modal__content modal__content_login" data-target="auth">
+        <button class="close-btn btn-reset" aria-label="Закрыть модальное окно"></button>
+        <img class="modal__logo" src="/assets/img/svg/logo.svg" alt="Logo">
+        <p class="modal__title">Введите код</p>
+        <p class="modal__subtitle">из СМС-сообщения</p>
+        <form class="modal__form" action="#" method="post">
+          <input class="input input-password" type="password" placeholder="••••">
+          <button class="btn btn-reset" type="submit">Подтвердить</button>
+        </form>
+        <div class="modal__footer">
+          <div class="modal__links">
+            <button class="btn btn-reset">Забыли пароль?</button>
+            <button class="btn btn-active btn-reset" data-path="login-email">Войти через почту</button>
+          </div>
+          <p class="modal__info">Не зарегистрированы? <button class="btn btn-reset" data-path="registration">Зарегистрируйтесь тут</button></p>
+        </div>
+      </div>
+
+      <div class="modal__content modal__content_login" data-target="registration">
+        <button class="close-btn btn-reset" aria-label="Закрыть модальное окно"></button>
+        <img class="modal__logo" src="/assets/img/svg/logo.svg" alt="Logo">
+        <p class="modal__title">Зарегистрируйтесь</p>
+        <p class="modal__subtitle">чтобы войти в личный кабинет</p>
+        <form class="modal__form" action="#" method="post">
+          <input class="input" type="text" placeholder="Ваше имя" name="Name" data-validate-field="name" autocomplete="off">
+          <input class="input" type="tel" name="Phone" placeholder="+7 (999) 999-99-99" data-validate-field="tel" autocomplete="off">
+          <input class="input input-password" type="password" placeholder="Придумайте пароль" name="Password" autocomplete="off">
+          <button class="btn btn-fill btn-reset" type="submit">Зарегистрироваться</button>
+        </form>
+        <div class="modal__footer">
+          <div class="modal__links">
+            <button class="btn btn-reset">Забыли пароль?</button>
+            <button class="btn btn-reset" data-path="registration-email">Зарегистрируйтесь через почту</button>
+          </div>
+          <p class="modal__info">Уже зарегистрированы? <button class="btn btn-active btn-reset" data-path="login">Войдите тут</button></p>
+        </div>
+      </div>
+
+      <div class="modal__content modal__content_login" data-target="registration-email">
+        <button class="close-btn btn-reset" aria-label="Закрыть модальное окно"></button>
+        <img class="modal__logo" src="/assets/img/svg/logo.svg" alt="Logo">
+        <p class="modal__title">Зарегистрируйтесь</p>
+        <p class="modal__subtitle">чтобы войти в личный кабинет</p>
+        <form class="modal__form" action="#" method="post">
+          <input class="input" type="text" placeholder="Ваше имя" name="Name" data-validate-field="name" autocomplete="off">
+          <input class="input" type="email" name="Email" placeholder="Введите почту" data-validate-field="email" autocomplete="off">
+          <input class="input input-password" type="password" placeholder="Придумайте пароль" name="Password" autocomplete="off">
+          <button class="btn btn-fill btn-reset" type="submit">Зарегистрироваться</button>
+        </form>
+        <div class="modal__footer">
+          <div class="modal__links">
+            <button class="btn btn-reset">Забыли пароль?</button>
+            <button class="btn btn-reset" data-path="registration">Зарегистрируйтесь через телефон</button>
+          </div>
+          <p class="modal__info">Уже зарегистрированы? <button class="btn btn-active btn-reset" data-path="login">Войдите тут</button></p>
+        </div>
+      </div>
+
+      <div class="modal__content modal__content_katalog" data-target="katalog">
+        <div class="tabs" data-tabs="tab">
+          <ul class="tabs__nav list-reset">
+            <li class="tabs__nav-item"><button class="tabs__nav-btn btn-reset" type="button">
+              <span class="tabs__nav-icon" aria-hidden="true">
+                <svg aria-hidden="true" width="19" height="19">
+                  <use xlink:href="/assets/img/svg/katalog/0.svg#icon"></use>
+                </svg>
+              </span>Семена томатов
+            </button></li>
+            <li class="tabs__nav-item"><button class="tabs__nav-btn btn-reset" type="button">
+              <span class="tabs__nav-icon" aria-hidden="true">
+                <svg aria-hidden="true" width="22" height="24">
+                  <use xlink:href="/assets/img/svg/katalog/1.svg#icon"></use>
+                </svg>
+              </span>Семена зелени
+            </button></li>
+            <li class="tabs__nav-item"><button class="tabs__nav-btn btn-reset" type="button">
+              <span class="tabs__nav-icon" aria-hidden="true">
+                <svg aria-hidden="true" width="20" height="20">
+                  <use xlink:href="/assets/img/svg/katalog/2.svg#icon"></use>
+                </svg>
+              </span>Семена микрозелени
+            </button></li>
+            <li class="tabs__nav-item"><button class="tabs__nav-btn btn-reset" type="button">
+              <span class="tabs__nav-icon" aria-hidden="true">
+                <svg aria-hidden="true" width="22" height="22">
+                  <use xlink:href="/assets/img/svg/katalog/3.svg#icon"></use>
+                </svg>
+              </span>Семена цветов и трав
+            </button></li>
+            <li class="tabs__nav-item"><button class="tabs__nav-btn btn-reset" type="button">
+              <span class="tabs__nav-icon" aria-hidden="true">
+                <svg aria-hidden="true" width="22" height="22">
+                  <use xlink:href="/assets/img/svg/katalog/4.svg#icon"></use>
+                </svg>
+              </span>Наборы семян
+            </button></li>
+            <li class="tabs__nav-item"><button class="tabs__nav-btn btn-reset" type="button">
+              <span class="tabs__nav-icon" aria-hidden="true">
+                <svg aria-hidden="true" width="22" height="25">
+                  <use xlink:href="/assets/img/svg/katalog/5.svg#icon"></use>
+                </svg>
+              </span>Удобрения и биопрепараты
+            </button></li>
+            <li class="tabs__nav-item"><button class="tabs__nav-btn btn-reset" type="button">
+              <span class="tabs__nav-icon" aria-hidden="true">
+                <svg aria-hidden="true" width="20" height="25">
+                  <use xlink:href="/assets/img/svg/katalog/6.svg#icon"></use>
+                </svg>
+              </span>Литература
+            </button></li>
+            <li class="tabs__nav-item"><button class="tabs__nav-btn btn-reset" type="button">
+              <span class="tabs__nav-icon" aria-hidden="true">
+                <svg aria-hidden="true" width="21" height="24">
+                  <use xlink:href="/assets/img/svg/katalog/7.svg#icon"></use>
+                </svg>
+              </span>Лук-севок
+            </button></li>
+          </ul>
+          <div class="tabs__content">
+            <div class="tabs__panel">
+              <div class="tabs__panel-header">
+                <p class="tabs__panel-title">Семена томатов</p>
+                <svg class="tabs__panel-icon" aria-hidden="true" width="29" height="29">
+                  <use xlink:href="/assets/img/svg/katalog/0.svg#icon"></use>
+                </svg>
+              </div>
+              <div class="tabs__panel-body">
+                <a href="/catalog" class="tabs__panel-link btn-reset">Семена зелени</a>
+                <a href="/catalog" class="tabs__panel-link btn-reset">Семена зелени</a>
+                <a href="/catalog" class="tabs__panel-link btn-reset">Семена зелени</a>
+                <a href="/catalog" class="tabs__panel-link btn-reset">Семена зелени</a>
+                <a href="/catalog" class="tabs__panel-link btn-reset">Семена зелени</a>
+                <a href="/catalog" class="tabs__panel-link btn-reset">Семена зелени</a>
+                <a href="/catalog" class="tabs__panel-link btn-reset">Семена зелени</a>
+                <a href="/catalog" class="tabs__panel-link btn-reset">Семена зелени</a>
+                <div class="tabs__panel-links">
+                  <button class="tabs__panel-links--btn btn-reset">
+                    Семена зелени
+                    <svg class="tabs__panel-links--icon" aria-hidden="true">
+                      <use xlink:href="#modal_arrow"></use>
+                    </svg>
+                  </button>
+                  <div class="tabs__panel-links--body">
+                    <a href="/catalog" class="tabs__panel-link btn-reset">Семена зелени</a>
+                    <a href="/catalog" class="tabs__panel-link btn-reset">Семена зелени</a>
+                  </div>
+                </div>
+                <div class="tabs__panel-links">
+                  <button class="tabs__panel-links--btn btn-reset">
+                    Семена зелени
+                    <svg class="tabs__panel-links--icon" aria-hidden="true">
+                      <use xlink:href="#modal_arrow"></use>
+                    </svg>
+                  </button>
+                  <div class="tabs__panel-links--body">
+                    <a href="/catalog" class="tabs__panel-link btn-reset">Семена зелени</a>
+                    <a href="/catalog" class="tabs__panel-link btn-reset">Семена зелени</a>
+                  </div>
+                </div>
+                <div class="tabs__panel-links">
+                  <button class="tabs__panel-links--btn btn-reset">
+                    Семена зелени
+                    <svg class="tabs__panel-links--icon" aria-hidden="true">
+                      <use xlink:href="#modal_arrow"></use>
+                    </svg>
+                  </button>
+                  <div class="tabs__panel-links--body">
+                    <a href="/catalog" class="tabs__panel-link btn-reset">Семена зелени</a>
+                    <a href="/catalog" class="tabs__panel-link btn-reset">Семена зелени</a>
+                  </div>
+                </div>
+                <div class="tabs__panel-links">
+                  <button class="tabs__panel-links--btn btn-reset">
+                    Семена зелени
+                    <svg class="tabs__panel-links--icon" aria-hidden="true">
+                      <use xlink:href="#modal_arrow"></use>
+                    </svg>
+                  </button>
+                  <div class="tabs__panel-links--body">
+                    <a href="/catalog" class="tabs__panel-link btn-reset">Семена зелени</a>
+                    <a href="/catalog" class="tabs__panel-link btn-reset">Семена зелени</a>
+                  </div>
+                </div>
+                <a href="/catalog" class="tabs__panel-link btn-reset">Семена зелени</a>
+                <a href="/catalog" class="tabs__panel-link btn-reset">Семена зелени</a>
+                <a href="/catalog" class="tabs__panel-link btn-reset">Семена зелени</a>
+                <a href="/catalog" class="tabs__panel-link btn-reset">Семена зелени</a>
+                <a href="/catalog" class="tabs__panel-link btn-reset">Семена зелени</a>
+                <a href="/catalog" class="tabs__panel-link btn-reset">Семена зелени</a>
+                <a href="/catalog" class="tabs__panel-link btn-reset">Семена зелени</a>
+                <a href="/catalog" class="tabs__panel-link btn-reset">Семена зелени</a>
+              </div>
+            </div>
+            <div class="tabs__panel">
+              
+            </div>
+            <div class="tabs__panel">
+              
+            </div>
+            <div class="tabs__panel">
+              
+            </div>
+            <div class="tabs__panel">
+              
+            </div>
+            <div class="tabs__panel">
+              
+            </div>
+            <div class="tabs__panel">
+              
+            </div>
+            <div class="tabs__panel">
+              
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal__content modal__content_pay" data-target="pay-online">
+        <button class="close-btn btn-fill btn-reset" aria-label="Закрыть модальное окно"></button>
         <div class="modal__header">
           <p class="modal__title">Онлайн оплата</p>
           <div class="modal__imgs">
@@ -968,12 +1227,86 @@
           Наш интернет-магазин НЕ взимает комиссию за оплату банковскими картами.
         </p>
       </div>
+      <div class="modal__content modal__content_pay" data-target="pay-quickly">
+        <button class="close-btn btn-fill btn-reset" aria-label="Закрыть модальное окно"></button>
+        <div class="modal__header">
+          <p class="modal__title">Система быстрых платежей (СБП)</p>
+          <div class="modal__imgs">
+            <img src="/assets/img/svg/pay/1.svg" alt="Система быстрых платежей">
+          </div>
+        </div>
+        <p class="modal__text">
+          Мы принимает к оплате банковские карты VISA, MasterCard, МИР. Оплата заказа осуществляется через платежную систему АльфаБанка. Сразу после завершения оформления заказа вы получите ссылку, кликнув на которую, перейдете на платежную страницу банка. Далее действуйте по инструкции.
+        </p>
+        <p class="modal__text">
+          К оплате принимаются банковские карты платежных систем Visa, MasterCard, МИР. Если Банк-Эмитент вашей пластиковой карты поддерживает технологию безопасного проведения интернет-платежей Verified By VISA или MasterCard SecureCode, будьте готовы указать специальный пароль, необходимый для успешной оплаты. Способы и возможность получения пароля для совершения интернет-платежа Вы можете уточнить в банке, выпустившем Вашу карту.
+        </p>
+      </div>
+      <div class="modal__content modal__content_pay" data-target="pay-bank">
+        <button class="close-btn btn-fill btn-reset" aria-label="Закрыть модальное окно"></button>
+        <div class="modal__header">
+          <p class="modal__title">Альфа-банк</p>
+          <div class="modal__imgs">
+            <img src="/assets/img/svg/pay/2.svg" alt="Альфа-банк">
+          </div>
+        </div>
+        <p class="modal__text">
+          Мы принимает к оплате банковские карты VISA, MasterCard, МИР. Оплата заказа осуществляется через платежную систему АльфаБанка. Сразу после завершения оформления заказа вы получите ссылку, кликнув на которую, перейдете на платежную страницу банка. Далее действуйте по инструкции.
+        </p>
+        <p class="modal__text">
+          К оплате принимаются банковские карты платежных систем Visa, MasterCard, МИР. Если Банк-Эмитент вашей пластиковой карты поддерживает технологию безопасного проведения интернет-платежей Verified By VISA или MasterCard SecureCode, будьте готовы указать специальный пароль, необходимый для успешной оплаты. Способы и возможность получения пароля для совершения интернет-платежа Вы можете уточнить в банке, выпустившем Вашу карту.
+        </p>
+      </div>
+      <div class="modal__content modal__content_pay" data-target="pay-cod">
+        <button class="close-btn btn-fill btn-reset" aria-label="Закрыть модальное окно"></button>
+        <div class="modal__header">
+          <p class="modal__title">Наложенный платеж</p>
+          <div class="modal__imgs">
+            <img src="/assets/img/svg/pay/3.svg" alt="Наложенный платеж">
+          </div>
+        </div>
+        <p class="modal__subtitle">(без комиссии для покупателей)</p>
+        <p class="modal__text">
+          Оплата производится при получении заказа на почте. Обращаем ваше внимание! В нашем интернет-магазине комиссия Почты России не взимается!
+        </p>
+      </div>
+      <div class="modal__content modal__content_pay" data-target="pay-cashless">
+        <button class="close-btn btn-fill btn-reset" aria-label="Закрыть модальное окно"></button>
+        <div class="modal__header">
+          <p class="modal__title">Безналичный расчет по&nbsp;выставленному счету</p>
+          <div class="modal__imgs">
+            <img src="/assets/img/svg/pay/5.svg" alt="Безналичный расчет">
+          </div>
+        </div>
+        <p class="modal__subtitle">(для юридических лиц)</p>
+        <p class="modal__text">
+          При оплате от имени юридического лица (организации или индивидуального предпринимателя) вы можете получить счет от интернет-магазина для оплаты через ваш банк.
+        </p>
+        <p class="modal__text">
+          Счет для оплаты заказа можно распечатать из "Личного кабинета", зайдя в раздел "История Заказов". Выберете нужный заказ, нажмите "Подробнее", и, далее в блоке "Параметры Оплаты" нажмите "Распечатать счет
+        </p>
+      </div>
+      <div class="modal__content modal__content_pay" data-target="pay-cash">
+        <button class="close-btn btn-fill btn-reset" aria-label="Закрыть модальное окно"></button>
+        <div class="modal__header">
+          <p class="modal__title">Наличный расчет</p>
+          <div class="modal__imgs">
+            <img src="/assets/img/svg/pay/4.svg" alt="Наличный расчет">
+          </div>
+        </div>
+        <p class="modal__text">
+          Данный способ оплаты возможен только для оплаты заказов, доставляемых курьером по Москве. 
+        </p>
+      </div>
     </div>
   </div>
 
+  <script src="/assets/js/lib/inputmask.min.js"></script>
   <script src="/assets/js/burger.js"></script>
+  <script src="/assets/js/modal.js"></script>
+  <script src="/assets/js/maskFone.js"></script>
+  <script src="/assets/js/tabs.js"></script>
   <script src="/assets/js/accordion.js"></script>
   <script src="/assets/js/scrollTop.js"></script>
-  <script src="/assets/js/modal.js"></script>
 </body>
 </html>

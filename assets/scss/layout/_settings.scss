@@ -68,6 +68,7 @@ h2 {
   bottom: 70px;
   width: 68px;
   height: 68px;
+  opacity: 0;
   border: 1px solid #fff;
   border-radius: 15px;
   background-color: rgba(3, 167, 83, 0.7);
@@ -106,6 +107,15 @@ h2 {
 
 .text-bold {
   font-weight: 500;
+}
+
+.text-gray {
+  color: #8b8b8b;
+}
+
+.text-justify {
+  text-indent: 1.5em;
+  text-align: justify;
 }
 
 .question-icon {

@@ -52,6 +52,7 @@
   }
 
   .select {
+    min-width: 100px;
     max-width: 140px;
     margin-right: 15px;
     padding: 12px 15px 12px 45px;
@@ -251,12 +252,12 @@
     display: flex;
     flex-direction: column;
     align-items: start;
-    row-gap: 3px;
+    gap: 0;
   }
 
   &__price {
     font-weight: 500;
-    font-size: 9px;
+    font-size: 11px;
     color: #7a7a7a;
   }
 }

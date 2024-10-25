@@ -11,6 +11,7 @@
     font-weight: 600;
     line-height: 1.6;
     letter-spacing: .05em;
+    text-transform: uppercase;
     color: #8b8b8b;
     border: 1px solid #8b8b8b;
     border-radius: $br-btn;
@@ -31,7 +32,7 @@
   }
 
   &__sidebar {
-    width: 190px;
+    width: 215px;
     flex-shrink: 0;
   }
 
@@ -63,21 +64,24 @@
   .side-filters{
     display: flex;
     flex-direction: column;
-    gap: 6px;
+    row-gap: 1px;
 
     &__btn {
       width: 100%;
-      padding: 0 10px;
+      padding: 5px 10px;
       display: flex;
       align-items: center;
       border-radius: 10px;
-      font-size: 11px;
+      font-size: 14px;
       font-weight: 400;
       color: #000;
       transition: all .3s ease-in-out;
 
+      &:hover {
+        color: $color-btn-hover;
+      }
+
       &.active {
-        padding: 6px 10px;
         background: $color-main;
         color: #fff;
       }
@@ -110,11 +114,6 @@
   &__inserted {
     margin-top: 30px;
   }
-
-  .side__btn {
-    width: 100%;
-    margin-top: 45px;
-  }
 }
 
 .media-links {
@@ -132,6 +131,10 @@
   color: $color-main;
   display: flex;
   align-items: center;
+
+  &:hover {
+    color: $color-btn-hover;
+  }
 
   &__icon {
     margin-right: 13px;
@@ -256,7 +259,7 @@
   &__top {
     display: flex;
     justify-content: space-between;
-    font-size: 11px;
+    font-size: 13px;
   }
 
   &__tema {
@@ -539,10 +542,5 @@
 
   .media-links {
     margin-top: 25px;
-  }
-
-  .blog .side__btn {
-    margin-top: 32px;
-    font-size: 12px;
   }
 }
