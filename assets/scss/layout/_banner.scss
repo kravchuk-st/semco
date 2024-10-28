@@ -160,8 +160,8 @@
     transition: .3s ease-in-out;
 
     &:hover {
-      // color: $color-light;
-      // background-color: $color-main;
+      color: $color-light;
+      background-color: $color-btn-hover;
     }
   }
 }
