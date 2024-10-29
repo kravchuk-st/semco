@@ -1,6 +1,18 @@
 .delivery {
   background: transparent right calc((100vw - 1160px) / 2 - 35px) top 55px / 945px auto no-repeat url("/assets/img/delivery-bg.png");
 
+  &__title {
+    display: flex;
+
+    .tooltip {
+      &__text {
+        padding: 8px 12px;
+        background-color: $color-secondary;
+        border-radius: 8px;
+      }
+    }
+  }
+
   &__descr {
     margin-top: 10px;
     max-width: 360px;

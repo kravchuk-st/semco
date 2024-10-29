@@ -47,7 +47,7 @@
             </span>
             <span class="wishlist__text">ИЗБРАННОЕ</span>
           </a>
-          <a href="#" class="cart btn-reser">
+          <button class="cart btn-reset" data-path="cart">
             <span class="cart__icon">
               <svg class="cart__img" aria-hidden="true" width="22" height="20">
                 <use xlink:href="/assets/img/svg/cart.svg#cart"></use>
@@ -58,7 +58,7 @@
               <span class="cart__title">КОРЗИНА</span>
               <span class="cart__price">3500 ₽</span>
             </span>
-          </a>
+          </button>
           <button class="account btn-reset" data-path="login">
             <svg class="account__icon" aria-hidden="true" width="20" height="20">
               <use xlink:href="/assets/img/svg/user.svg#user"></use>
@@ -229,16 +229,35 @@
           </div>
           <div class="condition-card">
             <div class="condition-card__header">
-              <h3 class="condition-card__title">Система скидок <button class="btn-question btn-reset"></button></h3>
+              <h3 class="condition-card__title">Система скидок
+                <span class="tooltip tooltip_question">
+                  <button class="tooltip__btn btn-question btn-reset" aria-labelledby="sale-tooltip" aria-label="Открыть систему скидок"></button>
+                  <span class="tooltip__text" role="tooltip" id="sale-tooltip">
+                    <ul class="list-reset">
+                      <li>свыше 20 000 до 80 000 – 25%;</li>
+                      <li>свыше 80 000 до 160 000 – 30%;</li>
+                      <li>свыше 160 000 до 350 000 – 35%;</li>
+                      <li>свыше 350 000 – индивидуальные условия</li>
+                    </ul>
+                  </span>
+                </span>
+              </h3>
               <span class="condition-card__icon">
                 <img src="/assets/img/svg/condition/1.svg" alt="icon">
               </span>
             </div>
-            <p class="condition-card__text">до 30% в зависимости от&nbsp;объёма заказа</p>
+            <p class="condition-card__text">от 25% в зависимости от&nbsp;объёма заказа</p>
           </div>
           <div class="condition-card">
             <div class="condition-card__header">
-              <h3 class="condition-card__title">Способы оплаты <button class="btn-question btn-reset"></button></h3>
+              <h3 class="condition-card__title">Способы оплаты
+                <span class="tooltip tooltip_question">
+                  <button class="tooltip__btn btn-question btn-reset" aria-labelledby="pay-tooltip" aria-label="Открыть способы оплаты"></button>
+                  <span class="tooltip__text" role="tooltip" id="pay-tooltip">
+                    Для получения информации о всех возможных способах оплаты свяжитесь с нами по телефону <a href="tel:+74956860475" class="btn-reset">+7 (495) 686-04-75</a>
+                  </span>
+                </span>
+              </h3>
               <span class="condition-card__icon">
                 <img src="/assets/img/svg/condition/2.svg" alt="icon">
               </span>
@@ -270,7 +289,7 @@
           </div>
           <div class="proposition__btns">
             <a href="#" class="btn btn-light btn-reset" download>скачать прайс-лист</a>
-            <button class="btn btn-dark btn-reset">Дополнительная скидка -10% на первый заказ</button>
+            <button class="btn btn-dark btn-reset" data-path="first-order">Дополнительная скидка -10% на первый заказ</button>
           </div>
           <form class="proposition__form" action="#" method="post">
             <input class="form-input text-center" type="email" name="email" placeholder="Оставьте Ваш e-mail" required>
@@ -528,7 +547,7 @@
                 <svg aria-hidden="true" width="13" height="13">
                   <use xlink:href="/assets/img/svg/katalog/0.svg#icon"></use>
                 </svg>
-              </span>Семена томатов
+              </span>Семена овощей
               <span class="katalog-btn--arrow" aria-hidden="true"></span>
             </button>
             <div class="katalog-links">
@@ -690,6 +709,34 @@
 
   <div class="modal">
     <div class="modal__layout">
+      <div class="modal__content modal__content_cart" data-target="cart">
+        <ul class="product__list list-reset">
+          <li class="product__item">
+            <a href="/product" class="product__link_img btn-reset">
+              <img src="/assets/img/slider/goods/0.jpg" alt="Семена томатов Цитрон F1">
+            </a>
+            <a href="/product" class="product__link_title btn-reset">Семена томатов Цитрон F1</a>
+            <div class="amount">
+              <button class="btn amount__btn amount__btn_less btn-reser"></button>
+              <input type="number" class="input" value="5">
+              <button class="btn amount__btn amount__btn_more btn-reser"></button>
+            </div>
+            <div class="sum">
+              <p class="sum__value">600 ₽</p>
+              <p class="sum__details">120 ₽ х 5</p>
+            </div>
+          </li>
+        </ul>
+        <div class="modal__footer">
+          <div class="result">
+            <p class="result__title">Итого</p>
+            <p class="result__value">600 ₽</p>
+          </div>
+          <a href="/order" class="btn btn-reset">оформить заказ</a>
+          <a href="/cart" class="btn btn-fill btn-reset">в корзину</a>
+        </div>
+      </div>
+
       <div class="modal__content modal__content_login" data-target="login">
         <button class="close-btn btn-reset" aria-label="Закрыть модальное окно"></button>
         <img class="modal__logo" src="/assets/img/svg/logo.svg" alt="Logo">
@@ -792,7 +839,7 @@
                 <svg aria-hidden="true" width="19" height="19">
                   <use xlink:href="/assets/img/svg/katalog/0.svg#icon"></use>
                 </svg>
-              </span>Семена томатов
+              </span>Семена овощей
             </button></li>
             <li class="tabs__nav-item"><button class="tabs__nav-btn btn-reset" type="button">
               <span class="tabs__nav-icon" aria-hidden="true">
@@ -847,7 +894,7 @@
           <div class="tabs__content">
             <div class="tabs__panel">
               <div class="tabs__panel-header">
-                <p class="tabs__panel-title">Семена томатов</p>
+                <p class="tabs__panel-title">Семена овощей</p>
                 <svg class="tabs__panel-icon" aria-hidden="true" width="29" height="29">
                   <use xlink:href="/assets/img/svg/katalog/0.svg#icon"></use>
                 </svg>

@@ -30,7 +30,7 @@ filterBtns.forEach(el => {
   el.addEventListener('click', (e) => {
     filterBtns.forEach(el => el.classList.remove('active'));
     e.currentTarget.classList.add('active');
-    selectTema.querySelector('use').setAttribute('xlink:href', `${e.currentTarget.querySelector('use').getAttribute('xlink:href')}`);
+    selectTema.querySelector('img').setAttribute('src', `${e.currentTarget.querySelector('img').getAttribute('src')}`);
     selectTema.querySelector('.select-tema__text').innerText = e.currentTarget.innerText;
     hideSidebar();
   })

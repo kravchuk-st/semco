@@ -20,6 +20,27 @@
       opacity: 1;
       visibility: visible;
     }
+
+    a {
+      font-weight: 400;
+      font-size: inherit;
+      line-height: inherit;
+      text-decoration: underline;
+
+      &:hover {
+        color: $color-main;
+      }
+    }
+
+    ul {
+      list-style-type: "—";
+      list-style-position: inside;
+
+      li {
+        font-weight: 400;
+        line-height: 1.2;
+      }
+    }
   }
 
   &:hover .tooltip__text {

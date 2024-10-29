@@ -57,7 +57,7 @@
             </span>
             <span class="wishlist__text">ИЗБРАННОЕ</span>
           </a>
-          <a href="#" class="cart btn-reser">
+          <button class="cart btn-reset" data-path="cart">
             <span class="cart__icon">
               <svg class="cart__img" aria-hidden="true" width="22" height="20">
                 <use xlink:href="/assets/img/svg/cart.svg#cart"></use>
@@ -68,7 +68,7 @@
               <span class="cart__title">КОРЗИНА</span>
               <span class="cart__price">3500 ₽</span>
             </span>
-          </a>
+          </button>
           <button class="account btn-reset" data-path="login">
             <svg class="account__icon" aria-hidden="true" width="20" height="20">
               <use xlink:href="/assets/img/svg/user.svg#user"></use>
@@ -165,6 +165,37 @@
                 <button class="content-payment__btn btn-lg btn-reset" data-path="pay-quickly">Подробнее</button>
               </div>
               <p class="content-payment__descr"><span>Моментальная оплата прямо с вашего смартфона.</span> <span>Используйте СБП для удобной и безопасной оплаты заказа без комиссии.</span></p>
+            </div>
+          </li>
+          <li class="payment__item">
+            <div class="content-payment">
+              <div class="content-payment__header">
+                <h3 class="content-payment__title">Сервис SberPay</h3>
+                <img class="content-payment__img img" src="/assets/img/sber.webp" alt="Сервис SberPay">
+                <button class="content-payment__btn btn-lg btn-reset" data-path="pay-sber">Подробнее</button>
+              </div>
+              <p class="content-payment__descr">
+                <span>SberPay — это удобная система от «Сбербанка», созданная</span> <span>для быстрой бесконтактной оплаты покупок с помощью смартфона.</span></p>
+            </div>
+          </li>
+          <li class="payment__item">
+            <div class="content-payment">
+              <div class="content-payment__header">
+                <h3 class="content-payment__title">Сервис Яндекс Пэй</h3>
+                <img class="content-payment__img" src="/assets/img/yandex.webp" alt="Сервис Яндекс Пэй">
+                <button class="content-payment__btn btn-lg btn-reset" data-path="pay-yandex">Подробнее</button>
+              </div>
+              <p class="content-payment__descr"><span>Яндекс Пэй — способ приема онлайн-платежей,</span> <span>охватывающий широкую аудиторию пользователей Яндекса.</span></p>
+            </div>
+          </li>
+          <li class="payment__item">
+            <div class="content-payment">
+              <div class="content-payment__header">
+                <h3 class="content-payment__title">Сервис T-Pay</h3>
+                <img class="content-payment__img" src="/assets/img/tbank.webp" alt="Сервис T-Pay">
+                <button class="content-payment__btn btn-lg btn-reset" data-path="pay-tbank">Подробнее</button>
+              </div>
+              <p class="content-payment__descr"><span>T-Pay - метод оплаты, который позволяет совершать</span> <span>онлайн-покупки в несколько кликов без ввода данных банковской карты.</span></p>
             </div>
           </li>
           <li class="payment__item">
@@ -425,7 +456,7 @@
                 После корректировки адреса нажмите кнопку «далее». Теперь на экране отобразятся все доступные варианты доставки в вашем регионе.
               </p>
               <p>
-                ВНИМАНИЕ! Службы доставки СДЭК и Боксберри функционируют только в пределах до Уральского региона включительно. Заказы за пределы Уральского региона отправляются исключительно через Почту России.
+                <b>ВНИМАНИЕ!</b> Службы доставки СДЭК и Боксберри функционируют только в пределах до Уральского региона включительно. Заказы за пределы Уральского региона отправляются исключительно через Почту России.
               </p>
             </div>
           </div>
@@ -441,7 +472,7 @@
                 Ориентировочные сроки доставки зависят от региона и выбранного способа доставки и указываются при оформлении заказа. Если возникли трудности с указанием адреса, введите город и уточните адрес в комментарии к заказу. При вопросах по адресу или срокам доставки обращайтесь в службу поддержки по телефону <a class="btn-reset" href="tel:+79252911980">+7 (925) 291-19-80</a> (будни, с 08:30 до 17:00). 
               </p>
               <p>
-                ВНИМАНИЕ! Перед звонком подготовьте номер заказа, ФИО, телефон или email.
+                <b>ВНИМАНИЕ!</b> Перед звонком подготовьте номер заказа, ФИО, телефон или email.
               </p>
             </div>
           </div>
@@ -457,7 +488,7 @@
                 Заказы стоимостью от 4000 рублей доставляются бесплатно по всей территории России, а также в Казахстан и Беларусь, независимо от выбранного способа доставки. Для заказов менее 4000 рублей стоимость доставки зависит от веса, региона и выбранного способа доставки (Почта России, СДЭК, Boxberry) и рассчитывается индивидуально. Подробную информацию о тарифах и условиях доставки можно найти в соответствующем разделе на нашем сайте. Возникли вопросы? Обратитесь в службу поддержки по номеру <a class="btn-reset" href="tel:+79252911980">+7 (925) 291-19-80</a> (будни с 08:30 до 17:00). 
               </p>
               <p>
-                ВНИМАНИЕ! Перед звонком подготовьте номер заказа, ФИО, телефон или email.
+                <b>ВНИМАНИЕ!</b> Перед звонком подготовьте номер заказа, ФИО, телефон или email.
               </p>
             </div>
           </div>
@@ -473,7 +504,7 @@
                 После оформления заказа и получения номера заказа, нажмите кнопку «Оплатить заказ». Выберите метод оплаты через систему ПЭЙ ОНЛАЙН и введите необходимые данные для оплаты картой. Для оплаты при получении выберите «Наложенный платеж» или «Наличными курьеру». Детальная информация об оплате доступна в соответствующем разделе нашего сайта. Возникли сложности с оплатой? Свяжитесь с службой поддержки по телефону <a class="btn-reset" href="tel:+79252911980">+7 (925) 291-19-80</a> (будни, с 08:30 до 17:00).
               </p>
               <p>
-                ВНИМАНИЕ! Перед звонком подготовьте номер заказа, ФИО, телефон или email.
+                <b>ВНИМАНИЕ!</b> Перед звонком подготовьте номер заказа, ФИО, телефон или email.
               </p>
             </div>
           </div>
@@ -497,7 +528,7 @@
                 Если трек-номер не пришел в течение 5 дней, проверьте папку «Спам». При проблемах с отслеживанием или других вопросах, обращайтесь в службу поддержки по номеру <a class="btn-reset" href="tel:+79252911980">+7 (925) 291-19-80</a> (будни с 08:30 до 17:00).
               </p>
               <p>
-                ВНИМАНИЕ! Перед звонком подготовьте номер заказа, ФИО, телефон или email.
+                <b>ВНИМАНИЕ!</b> Перед звонком подготовьте номер заказа, ФИО, телефон или email.
               </p>
             </div>
           </div>
@@ -791,7 +822,7 @@
                 <svg aria-hidden="true" width="13" height="13">
                   <use xlink:href="/assets/img/svg/katalog/0.svg#icon"></use>
                 </svg>
-              </span>Семена томатов
+              </span>Семена овощей
               <span class="katalog-btn--arrow" aria-hidden="true"></span>
             </button>
             <div class="katalog-links">
@@ -953,6 +984,34 @@
 
   <div class="modal">
     <div class="modal__layout">
+      <div class="modal__content modal__content_cart" data-target="cart">
+        <ul class="product__list list-reset">
+          <li class="product__item">
+            <a href="/product" class="product__link_img btn-reset">
+              <img src="/assets/img/slider/goods/0.jpg" alt="Семена томатов Цитрон F1">
+            </a>
+            <a href="/product" class="product__link_title btn-reset">Семена томатов Цитрон F1</a>
+            <div class="amount">
+              <button class="btn amount__btn amount__btn_less btn-reser"></button>
+              <input type="number" class="input" value="5">
+              <button class="btn amount__btn amount__btn_more btn-reser"></button>
+            </div>
+            <div class="sum">
+              <p class="sum__value">600 ₽</p>
+              <p class="sum__details">120 ₽ х 5</p>
+            </div>
+          </li>
+        </ul>
+        <div class="modal__footer">
+          <div class="result">
+            <p class="result__title">Итого</p>
+            <p class="result__value">600 ₽</p>
+          </div>
+          <a href="/order" class="btn btn-reset">оформить заказ</a>
+          <a href="/cart" class="btn btn-fill btn-reset">в корзину</a>
+        </div>
+      </div>
+
       <div class="modal__content modal__content_login" data-target="login">
         <button class="close-btn btn-reset" aria-label="Закрыть модальное окно"></button>
         <img class="modal__logo" src="/assets/img/svg/logo.svg" alt="Logo">
@@ -1055,7 +1114,7 @@
                 <svg aria-hidden="true" width="19" height="19">
                   <use xlink:href="/assets/img/svg/katalog/0.svg#icon"></use>
                 </svg>
-              </span>Семена томатов
+              </span>Семена овощей
             </button></li>
             <li class="tabs__nav-item"><button class="tabs__nav-btn btn-reset" type="button">
               <span class="tabs__nav-icon" aria-hidden="true">
@@ -1110,7 +1169,7 @@
           <div class="tabs__content">
             <div class="tabs__panel">
               <div class="tabs__panel-header">
-                <p class="tabs__panel-title">Семена томатов</p>
+                <p class="tabs__panel-title">Семена овощей</p>
                 <svg class="tabs__panel-icon" aria-hidden="true" width="29" height="29">
                   <use xlink:href="/assets/img/svg/katalog/0.svg#icon"></use>
                 </svg>
@@ -1240,6 +1299,51 @@
         </p>
         <p class="modal__text">
           К оплате принимаются банковские карты платежных систем Visa, MasterCard, МИР. Если Банк-Эмитент вашей пластиковой карты поддерживает технологию безопасного проведения интернет-платежей Verified By VISA или MasterCard SecureCode, будьте готовы указать специальный пароль, необходимый для успешной оплаты. Способы и возможность получения пароля для совершения интернет-платежа Вы можете уточнить в банке, выпустившем Вашу карту.
+        </p>
+      </div>
+      <div class="modal__content modal__content_pay" data-target="pay-sber">
+        <button class="close-btn btn-fill btn-reset" aria-label="Закрыть модальное окно"></button>
+        <div class="modal__header">
+          <p class="modal__title">Сервис SberPay</p>
+          <div class="modal__imgs">
+            <img src="/assets/img/sber.webp" alt="Сервис SberPay">
+          </div>
+        </div>
+        <p class="modal__text">
+          SberPay — это удобная система от «Сбербанка», созданная для быстрой бесконтактной оплаты покупок с помощью смартфона.
+        </p>
+        <p class="modal__text">
+          Сервис использует технологию NFC, а также позволяет проводить платежи через QR-коды и осуществлять онлайн-оплаты на сайтах.
+        </p>
+      </div>
+      <div class="modal__content modal__content_pay" data-target="pay-yandex">
+        <button class="close-btn btn-fill btn-reset" aria-label="Закрыть модальное окно"></button>
+        <div class="modal__header">
+          <p class="modal__title">Сервис Яндекс Пэй</p>
+          <div class="modal__imgs">
+            <img src="/assets/img/yandex.webp" alt="Сервис Яндекс Пэй">
+          </div>
+        </div>
+        <p class="modal__text">
+          Яндекс Пэй — способ приема онлайн-платежей, охватывающий широкую аудиторию пользователей Яндекса.
+        </p>
+        <p class="modal__text">
+          Чтобы его использовать для оплаты, пользователь должен иметь аккаунт в сервисе Яндекса или войти в него и привязать одну или несколько банковских карт.
+        </p>
+      </div>
+      <div class="modal__content modal__content_pay" data-target="pay-tbank">
+        <button class="close-btn btn-fill btn-reset" aria-label="Закрыть модальное окно"></button>
+        <div class="modal__header">
+          <p class="modal__title">Сервис T-Pay</p>
+          <div class="modal__imgs">
+            <img src="/assets/img/tbank.webp" alt="Сервис T-Pay">
+          </div>
+        </div>
+        <p class="modal__text">
+          T-Pay - метод оплаты, который позволяет совершать онлайн-покупки в несколько кликов без ввода данных банковской карты.
+        </p>
+        <p class="modal__text">
+          Покупатель может выбрать любой счет для списания в приложении Т‑Банка, а также копить кэшбэк Т‑Банка для последующих покупок.
         </p>
       </div>
       <div class="modal__content modal__content_pay" data-target="pay-bank">

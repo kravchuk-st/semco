@@ -56,7 +56,7 @@
             </span>
             <span class="wishlist__text">ИЗБРАННОЕ</span>
           </a>
-          <a href="#" class="cart btn-reser">
+          <button class="cart btn-reset" data-path="cart">
             <span class="cart__icon">
               <svg class="cart__img" aria-hidden="true" width="22" height="20">
                 <use xlink:href="/assets/img/svg/cart.svg#cart"></use>
@@ -67,7 +67,7 @@
               <span class="cart__title">КОРЗИНА</span>
               <span class="cart__price">3500 ₽</span>
             </span>
-          </a>
+          </button>
           <button class="account btn-reset" data-path="login">
             <svg class="account__icon" aria-hidden="true" width="20" height="20">
               <use xlink:href="/assets/img/svg/user.svg#user"></use>
@@ -555,7 +555,7 @@
                 <svg aria-hidden="true" width="13" height="13">
                   <use xlink:href="/assets/img/svg/katalog/0.svg#icon"></use>
                 </svg>
-              </span>Семена томатов
+              </span>Семена овощей
               <span class="katalog-btn--arrow" aria-hidden="true"></span>
             </button>
             <div class="katalog-links">
@@ -717,6 +717,34 @@
 
   <div class="modal">
     <div class="modal__layout">
+      <div class="modal__content modal__content_cart" data-target="cart">
+        <ul class="product__list list-reset">
+          <li class="product__item">
+            <a href="/product" class="product__link_img btn-reset">
+              <img src="/assets/img/slider/goods/0.jpg" alt="Семена томатов Цитрон F1">
+            </a>
+            <a href="/product" class="product__link_title btn-reset">Семена томатов Цитрон F1</a>
+            <div class="amount">
+              <button class="btn amount__btn amount__btn_less btn-reser"></button>
+              <input type="number" class="input" value="5">
+              <button class="btn amount__btn amount__btn_more btn-reser"></button>
+            </div>
+            <div class="sum">
+              <p class="sum__value">600 ₽</p>
+              <p class="sum__details">120 ₽ х 5</p>
+            </div>
+          </li>
+        </ul>
+        <div class="modal__footer">
+          <div class="result">
+            <p class="result__title">Итого</p>
+            <p class="result__value">600 ₽</p>
+          </div>
+          <a href="/order" class="btn btn-reset">оформить заказ</a>
+          <a href="/cart" class="btn btn-fill btn-reset">в корзину</a>
+        </div>
+      </div>
+
       <div class="modal__content modal__content_login" data-target="login">
         <button class="close-btn btn-reset" aria-label="Закрыть модальное окно"></button>
         <img class="modal__logo" src="/assets/img/svg/logo.svg" alt="Logo">
@@ -819,7 +847,7 @@
                 <svg aria-hidden="true" width="19" height="19">
                   <use xlink:href="/assets/img/svg/katalog/0.svg#icon"></use>
                 </svg>
-              </span>Семена томатов
+              </span>Семена овощей
             </button></li>
             <li class="tabs__nav-item"><button class="tabs__nav-btn btn-reset" type="button">
               <span class="tabs__nav-icon" aria-hidden="true">
@@ -874,7 +902,7 @@
           <div class="tabs__content">
             <div class="tabs__panel">
               <div class="tabs__panel-header">
-                <p class="tabs__panel-title">Семена томатов</p>
+                <p class="tabs__panel-title">Семена овощей</p>
                 <svg class="tabs__panel-icon" aria-hidden="true" width="29" height="29">
                   <use xlink:href="/assets/img/svg/katalog/0.svg#icon"></use>
                 </svg>

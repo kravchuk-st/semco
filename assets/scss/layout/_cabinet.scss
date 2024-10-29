@@ -183,6 +183,24 @@
         display: none;
       }
 
+      .splide__arrow--next {
+        right: 0;
+        opacity: 1;
+        background-color: $color-main;
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 15 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10.3921 6.69508L6.08155 2.38454C6.02127 2.32426 5.94446 2.28321 5.86084 2.26658C5.77723 2.24995 5.69056 2.25849 5.61179 2.29112C5.53303 2.32375 5.46571 2.379 5.41835 2.44988C5.37098 2.52077 5.3457 2.60411 5.3457 2.68936V11.3104C5.3457 11.3957 5.37099 11.479 5.41835 11.5499C5.46571 11.6208 5.53303 11.6761 5.6118 11.7087C5.69056 11.7413 5.77723 11.7499 5.86084 11.7332C5.94446 11.7166 6.02127 11.6755 6.08155 11.6153L10.3921 7.30473C10.4321 7.2647 10.4639 7.21718 10.4855 7.16487C10.5072 7.11257 10.5184 7.05652 10.5184 6.99991C10.5184 6.94329 10.5072 6.88724 10.4855 6.83494C10.4639 6.78263 10.4321 6.73511 10.3921 6.69508V6.69508Z' fill='white'/%3E%3C/svg%3E");
+        background-size: 15px 14px;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        &:hover {
+          background-color: $color-btn-hover;
+        }
+
+        svg {
+          display: none;
+        }
+      }
+
       .splide__slide {
         display: flex;
         column-gap: 10px;
@@ -503,7 +521,7 @@
       padding: 30px 20px;
       background: #fff;
       border-radius: 8px;
-      font-size: 12px;
+      font-size: 14px;
       line-height: 1.4;
       display: flex;
       flex-direction: column;
@@ -634,14 +652,14 @@
         }
 
         label {
-          font-size: 12px;
+          font-size: 14px;
           color: #767676;
         }
 
         .input {
-          padding: 9px 10px;
+          padding: 9px 12px;
           border-radius: 8px;
-          font-size: 12px;
+          font-size: 13px;
           line-height: 1.2;
           max-width: none;
         }

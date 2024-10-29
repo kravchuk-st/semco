@@ -46,7 +46,7 @@
             </span>
             <span class="wishlist__text">ИЗБРАННОЕ</span>
           </a>
-          <a href="#" class="cart btn-reser">
+          <button class="cart btn-reset" data-path="cart">
             <span class="cart__icon">
               <svg class="cart__img" aria-hidden="true" width="22" height="20">
                 <use xlink:href="/assets/img/svg/cart.svg#cart"></use>
@@ -57,7 +57,7 @@
               <span class="cart__title">КОРЗИНА</span>
               <span class="cart__price">3500 ₽</span>
             </span>
-          </a>
+          </button>
           <button class="account btn-reset" data-path="login">
             <svg class="account__icon" aria-hidden="true" width="20" height="20">
               <use xlink:href="/assets/img/svg/user.svg#user"></use>
@@ -123,7 +123,14 @@
 
     <section class="delivery">
       <div class="wrapper">
-        <h1 class="delivery__title">Доставка от 1 дня <span class="question-icon">?</span></h1>
+        <h1 class="delivery__title">Доставка от 1 дня
+          <div class="tooltip">
+            <button class="tooltip__btn question-icon tooltip__title btn-reset" aria-labelledby="delivery-tooltip">?</button>
+            <div class="tooltip__text" role="tooltip" id="delivery-tooltip">
+              морозоустойчивость, холодоустойчивость, зимостойкость, жаростойкость, засухоустойчивость, устойчивость к недостатку кислорода
+            </div>
+          </div>
+        </h1>
         <p class="delivery__descr">
           Мы осуществляем доставку семян и сопутствующих товаров нашего интернет-магазина во все регионы Российской Федерации, а также в Беларусь и Казахстан.
         </p>
@@ -205,7 +212,7 @@
             <div class="delivery-local__header">
               <h3 class="delivery-local__title">Курьерская доставка</h3>
               <img class="delivery-local__icon" src="/assets/img/delivery/0.png" alt="delivery">
-              <button class="btn delivery-local__btn btn-reset">Подробнее</button>
+              <button class="btn delivery-local__btn btn-reset" data-path="delivery-courier">Подробнее</button>
             </div>
             <p class="delivery-local__descr">
               Курьерской службой СДЭК только по Москве. Минимальная сумма заказа для курьерской доставки — 3 000 рублей.
@@ -215,7 +222,7 @@
             <div class="delivery-local__header">
               <h3 class="delivery-local__title">Самовывоз</h3>
               <img class="delivery-local__icon" src="/assets/img/delivery/1.png" alt="delivery">
-              <button class="btn delivery-local__btn btn-reset">Подробнее</button>
+              <button class="btn delivery-local__btn btn-reset" data-path="delivery-pickup">Подробнее</button>
             </div>
             <p class="delivery-local__descr">
               Самовывоз производится покупателем из офиса только после предварительной оплаты заказа на сайте нашем сайте. Минимальная сумма заказа для самовывоза – 1 000 рублей.
@@ -225,7 +232,7 @@
             <div class="delivery-local__header">
               <h3 class="delivery-local__title">Почта России</h3>
               <img class="delivery-local__icon" src="/assets/img/delivery/2.png" alt="delivery">
-              <button class="btn delivery-local__btn btn-reset">Подробнее</button>
+              <button class="btn delivery-local__btn btn-reset" data-path="delivery-post">Подробнее</button>
             </div>
             <p class="delivery-local__descr">
               Доставка «Почтой России» осуществляется только по территории Российской Федерации. Минимальная сумма заказа для выбора данного способа доставки – 1 000 рублей.
@@ -235,7 +242,7 @@
             <div class="delivery-local__header">
               <h3 class="delivery-local__title">Boxberry</h3>
               <img class="delivery-local__icon" src="/assets/img/delivery/3.png" alt="delivery">
-              <button class="btn delivery-local__btn btn-reset">Подробнее</button>
+              <button class="btn delivery-local__btn btn-reset" data-path="delivery-boxberry">Подробнее</button>
             </div>
             <p class="delivery-local__descr">
               Доставка в в пункты выдачи «Boxberry» осуществляется по всей территории Российской Федерации. Минимальная сумма заказа для&nbsp;выбора данного способа доставки – 1 000 рублей.
@@ -245,7 +252,7 @@
             <div class="delivery-local__header">
               <h3 class="delivery-local__title">Пункт выдачи СДЭК</h3>
               <img class="delivery-local__icon" src="/assets/img/delivery/4.png" alt="delivery">
-              <button class="btn delivery-local__btn btn-reset">Подробнее</button>
+              <button class="btn delivery-local__btn btn-reset" data-path="delivery-cdek">Подробнее</button>
             </div>
             <p class="delivery-local__descr">
               Доставка в пункты выдачи СДЭК осуществляется по всей территории Российской Федерации. Минимальная сумма заказа для выбора данного способа доставки – 1 000 рублей.
@@ -255,7 +262,7 @@
             <div class="delivery-local__header">
               <h3 class="delivery-local__title">Постаматы СДЭК</h3>
               <img class="delivery-local__icon" src="/assets/img/delivery/5.png" alt="delivery">
-              <button class="btn delivery-local__btn btn-reset">Подробнее</button>
+              <button class="btn delivery-local__btn btn-reset" data-path="delivery-postamat">Подробнее</button>
             </div>
             <p class="delivery-local__descr">
               Доставка в постаматы СДЭК осуществляется по всей территории Российской Федерации. Минимальная сумма заказа для выбора данного способа доставки – 1 000 рублей.
@@ -265,7 +272,7 @@
             <div class="delivery-local__header">
               <h3 class="delivery-local__title">Постаматы 5POST</h3>
               <img class="delivery-local__icon" src="/assets/img/delivery/5.png" alt="delivery">
-              <button class="btn delivery-local__btn btn-reset">Подробнее</button>
+              <button class="btn delivery-local__btn btn-reset" data-path="delivery-5post">Подробнее</button>
             </div>
             <p class="delivery-local__descr">
               Доставка в постаматы 5POST осуществляется по всей территории Российской Федерации. Минимальная сумма заказа для выбора данного способа доставки – 1 000 рублей.
@@ -283,20 +290,20 @@
             <div class="delivery-local__header">
               <h3 class="delivery-local__title">Беларусь</h3>
               <img class="delivery-local__icon" src="/assets/img/svg/flags/belarus.svg" alt="delivery">
-              <button class="btn delivery-local__btn btn-reset">Подробнее</button>
+              <button class="btn delivery-local__btn btn-reset" data-path="delivery-belarus">Подробнее</button>
             </div>
             <p class="delivery-local__descr">
-              Доставка в Беларусь осуществляется только компанией СДЭК в&nbsp;определенные пункты выдачи. Минимальная сумма заказа для&nbsp;выбора данного способа доставки – 1 000 рублей.
+              Доставка в Беларусь осуществляется только компанией СДЭК в&nbsp;определенные пункты выдачи. Минимальная сумма заказа для&nbsp;выбора данного способа доставки – 1 000 рублей.
             </p>
           </li>
           <li class="delivery-local__item">
             <div class="delivery-local__header">
               <h3 class="delivery-local__title">Казахстан</h3>
               <img class="delivery-local__icon" src="/assets/img/svg/flags/kazakhstan.svg" alt="delivery">
-              <button class="btn delivery-local__btn btn-reset">Подробнее</button>
+              <button class="btn delivery-local__btn btn-reset" data-path="delivery-kazakhstan">Подробнее</button>
             </div>
             <p class="delivery-local__descr">
-              Доставка в Казахстан осуществляется только компанией СДЭК в&nbsp;определенные пункты выдачи. Минимальная сумма заказа для&nbsp;выбора данного способа доставки – 1 000 рублей.
+              Доставка в Казахстан осуществляется только компанией СДЭК в&nbsp;определенные пункты выдачи. Минимальная сумма заказа для&nbsp;выбора данного способа доставки – 1 000 рублей.
             </p>
           </li>
         </ul>
@@ -478,7 +485,7 @@
                 <svg aria-hidden="true" width="13" height="13">
                   <use xlink:href="/assets/img/svg/katalog/0.svg#icon"></use>
                 </svg>
-              </span>Семена томатов
+              </span>Семена овощей
               <span class="katalog-btn--arrow" aria-hidden="true"></span>
             </button>
             <div class="katalog-links">
@@ -640,6 +647,34 @@
 
   <div class="modal">
     <div class="modal__layout">
+      <div class="modal__content modal__content_cart" data-target="cart">
+        <ul class="product__list list-reset">
+          <li class="product__item">
+            <a href="/product" class="product__link_img btn-reset">
+              <img src="/assets/img/slider/goods/0.jpg" alt="Семена томатов Цитрон F1">
+            </a>
+            <a href="/product" class="product__link_title btn-reset">Семена томатов Цитрон F1</a>
+            <div class="amount">
+              <button class="btn amount__btn amount__btn_less btn-reser"></button>
+              <input type="number" class="input" value="5">
+              <button class="btn amount__btn amount__btn_more btn-reser"></button>
+            </div>
+            <div class="sum">
+              <p class="sum__value">600 ₽</p>
+              <p class="sum__details">120 ₽ х 5</p>
+            </div>
+          </li>
+        </ul>
+        <div class="modal__footer">
+          <div class="result">
+            <p class="result__title">Итого</p>
+            <p class="result__value">600 ₽</p>
+          </div>
+          <a href="/order" class="btn btn-reset">оформить заказ</a>
+          <a href="/cart" class="btn btn-fill btn-reset">в корзину</a>
+        </div>
+      </div>
+
       <div class="modal__content modal__content_login" data-target="login">
         <button class="close-btn btn-reset" aria-label="Закрыть модальное окно"></button>
         <img class="modal__logo" src="/assets/img/svg/logo.svg" alt="Logo">
@@ -742,7 +777,7 @@
                 <svg aria-hidden="true" width="19" height="19">
                   <use xlink:href="/assets/img/svg/katalog/0.svg#icon"></use>
                 </svg>
-              </span>Семена томатов
+              </span>Семена овощей
             </button></li>
             <li class="tabs__nav-item"><button class="tabs__nav-btn btn-reset" type="button">
               <span class="tabs__nav-icon" aria-hidden="true">
@@ -797,7 +832,7 @@
           <div class="tabs__content">
             <div class="tabs__panel">
               <div class="tabs__panel-header">
-                <p class="tabs__panel-title">Семена томатов</p>
+                <p class="tabs__panel-title">Семена овощей</p>
                 <svg class="tabs__panel-icon" aria-hidden="true" width="29" height="29">
                   <use xlink:href="/assets/img/svg/katalog/0.svg#icon"></use>
                 </svg>
@@ -892,6 +927,239 @@
             </div>
           </div>
         </div>
+      </div>
+
+      <div class="modal__content modal__content_delivery" data-target="delivery-courier">
+        <button class="close-btn btn-fill btn-reset" aria-label="Закрыть модальное окно"></button>
+        <div class="modal__header">
+          <p class="modal__title">Курьерская доставка</p>
+          <img src="/assets/img/delivery/0.png" alt="Курьерская доставка">
+        </div>
+        <p class="modal__text">
+          <b>Курьерская доставка</b> семян и сопутствующих товаров, заказанных в интернет-магазине Семко, осуществляется курьерской службой СДЭК только по Москве. Минимальная сумма заказа для курьерской доставки – 3000 рублей.
+        </p>
+        <p class="modal__text">
+          <b>Стоимость</b> курьерской доставки рассчитывается автоматически в момент оформления заказа по тарифам СДЭК.
+        </p>
+        <p class="modal__text">
+          <b>Срок обработки заказа</b> при выборе данного способа доставки – 1-5 рабочих дней. Срок обработки заказа может быть увеличен, если попадает на выходные и праздничные дни. Заказ доставляется в течение 2-5 рабочих дней с момента передачи его в курьерскую службу. Время доставки - с 09.00 до 18.00 по рабочим дням. Если вас интересует другое время для получения заказа, необходимо указать это в комментарии к заказу и обговорить это с нашим сотрудником.
+        </p>
+      </div>
+
+      <div class="modal__content modal__content_delivery" data-target="delivery-pickup">
+        <button class="close-btn btn-fill btn-reset" aria-label="Закрыть модальное окно"></button>
+        <div class="modal__header">
+          <p class="modal__title">Самовывоз</p>
+          <img src="/assets/img/delivery/1.png" alt="Самовывоз">
+        </div>
+        <p class="modal__text">
+          <b>Самовывоз</b> семян и сопутствующих товаров, заказанных в интернет-магазине Семко производится покупателем из офиса агрофирмы Семко только ПОСЛЕ ПРЕДВАРИТЕЛЬНОЙ ОПЛАТЫ ЗАКАЗА на сайте semco.ru. Оплатить заказы, оформленные в интернет-магазине, во время посещения нашего офиса и розничного магазина невозможно. Минимальная сумма заказа для самовывоза – 500 рублей.
+        </p>
+        <p class="modal__text">
+          <b>Срок обработки заказа</b> при выборе данного способа доставки – 1-5 рабочих дней. Срок обработки заказа может быть увеличен, если попадает на выходные и праздничные дни. <b>Стоимость самовывоза - бесплатно.</b>
+        </p>
+        <p class="modal__text">
+          <b>Оплату заказа, оформленного со способом доставки "самовывоз", необходимо сделать на сайте в течение 3-х суток.</b> Если оплата не поступит в течение 3-х суток, заказ будет удален.
+        </p>
+      </div>
+
+      <div class="modal__content modal__content_delivery" data-target="delivery-post">
+        <button class="close-btn btn-fill btn-reset" aria-label="Закрыть модальное окно"></button>
+        <div class="modal__header">
+          <p class="modal__title">Почта России</p>
+          <img src="/assets/img/delivery/2.png" alt="Почта России">
+        </div>
+        <p class="modal__text">
+          <b>Доставка семян и сопутствующих товаров «Почтой России»</b> осуществляется только по территории Российской Федерации. Минимальная сумма заказа для выбора данного способа доставки – 500 рублей.
+        </p>
+        <p class="modal__text">
+          <b>Стоимость доставки заказа «Почтой России»</b> рассчитывается автоматически при оформлении заказа по тарифам «Почты России». В общую сумму доставки входит тариф «Посылка» за доставку до вашего региона и страховой сбор. Если Вам необходима доставка «1 классом», укажите это в комментарии к заказу при оформлении, и наш специалист свяжется с вами для расчёта стоимости нестандартной доставки.
+        </p>
+        <p class="modal__text">
+          <b>Срок доставки заказа «Почтой России»</b> складывается из времени обработки заказа (1-5 рабочих дней) и срока доставки почтового отправления, который составляет от 5 до 40 дней, в зависимости от дальности региона.
+        </p>
+        <p class="modal__text">
+          Если покупатель оформил заказ и не оплатил его в течение 3-х дней, заказ будет удален. Обработка заказа осуществляется только после оплаты заказа покупателем на сайте в течение 1-5 рабочих дней.
+        </p>
+        <p class="modal__text">
+          Свой заказ Вы всегда можете отследить на сайте «Почты России» (<a href="https://www.pochta.ru/tracking" class="btn-reset" target="_blank">https://www.pochta.ru/tracking</a>) по уникальному идентификатору (трек-номеру), который мы высылаем на вашу электронную почту сразу же после отправки заказа. Если в течение 5 рабочих дней после оформления заказа вы не получили e-mail с трек-номером доставки – необходимо проверить папку СПАМ вашей электронной почте. Если письма, всё же, нет – напишите нам сообщение в форму обратной связи с указанием номера заказа.
+        </p>
+        <p class="modal__text">
+          <b>Срок хранения заказа</b> в вашем отделении «Почты России» 14 дней! Получите посылку в течение этого срока.
+        </p>
+      </div>
+
+      <div class="modal__content modal__content_delivery" data-target="delivery-boxberry">
+        <button class="close-btn btn-fill btn-reset" aria-label="Закрыть модальное окно"></button>
+        <div class="modal__header">
+          <p class="modal__title">Boxberry</p>
+          <img src="/assets/img/delivery/3.png" alt="Boxberry">
+        </div>
+        <p class="modal__text">
+          <b>Доставка семян и сопутствующих товаров в пункты выдачи «Boxberry»</b> осуществляется только по территории Российской Федерации. Минимальная сумма заказа для выбора данного способа доставки – 500 рублей.
+        </p>
+        <p class="modal__text">
+          <b>Стоимость доставки заказа</b> службой Boxberry рассчитывается автоматически в момент оформления заказа при выборе пункта выдачи из списка по тарифам компании Boxberry.
+        </p>
+        <p class="modal__text">
+          <b>Срок доставки заказа</b> при выборе данного способа доставки состоит из времени обработки заказа (1-5 рабочих дней, исключая выходные и праздничные дни) и срока доставки посылки до пункта выдачи заказов в вашем населенном пункте, который составляет от 5 до 40 дней, в зависимости от удаленности региона. О том, что посылка готова к выдаче в вашем населенном пункте, вы узнаете, получив SMS от службы Boxberry на номер мобильного телефона, указанный при оформлении заказа.
+        </p>
+        <p class="modal__text">
+          Если покупатель оформил заказ и не оплатил его в течение 3-х дней, заказ будет удален. Обработка заказа осуществляется только после оплаты заказа покупателем на сайте в течение 1-5 рабочих дней.
+        </p>
+        <p class="modal__text">
+          <b>Свой заказ вы всегда можете отследить</b> на сайте Boxberry (<a href="https://boxberry.ru/tracking-page" class="btn-reset" target="_blank">https://boxberry.ru/tracking-page</a>) по уникальному идентификатору (трек-номеру), который мы высылаем на вашу электронную почту сразу же после передачи заказа в курьерскую службу. Если в течение 3 рабочих дней после оформления заказа вы не получили e-mail с трек-номером доставки – необходимо проверить папку СПАМ вашей электронной почте. Если письма, всё же, нет – напишите нам сообщение в форму обратной связи с указанием номера заказа.
+        </p>
+        <p class="modal__text">
+          <b>Срок хранения</b> посылки в пункте выдачи заказов Boxberry 7 дней! Получите посылку в течение этого срока.
+        </p>
+      </div>
+
+      <div class="modal__content modal__content_delivery" data-target="delivery-cdek">
+        <button class="close-btn btn-fill btn-reset" aria-label="Закрыть модальное окно"></button>
+        <div class="modal__header">
+          <p class="modal__title">Пункт выдачи СДЭК</p>
+          <img src="/assets/img/delivery/4.png" alt="Boxberry">
+        </div>
+        <p class="modal__text">
+          <b>Доставка семян и сопутствующих товаров в пункты выдачи СДЭК</b> осуществляется по всей территории Российской Федерации. Минимальная сумма заказа для выбора данного способа доставки – 500 рублей.
+        </p>
+        <p class="modal__text">
+          <b>Стоимость доставки</b> заказа службой СДЭК рассчитывается автоматически в момент оформления заказа при выборе пункта выдачи из списка по тарифам компании СДЭК.
+        </p>
+        <p class="modal__text">
+          <b>Срок доставки заказа</b> при выборе данного способа доставки состоит из времени обработки заказа (1-5 рабочих дней, исключая выходные и праздничные дни) и срока доставки посылки до пункта выдачи заказов в вашем населенном пункте, который составляет от 5 до 40 дней, в зависимости от удаленности региона. О том, что посылка готова к выдаче в вашем населенном пункте, вы узнаете, получив SMS от службы СДЭК на номер мобильного телефона, указанный при оформлении заказа.
+        </p>
+        <p class="modal__text">
+          Если покупатель оформил заказ и не оплатил его в течение 3-х дней, заказ будет удален. Обработка заказа осуществляется только после оплаты заказа покупателем на сайте в течение 1-5 рабочих дней.
+        </p>
+        <p class="modal__text">
+          <b>Свой заказ вы всегда можете отследить</b> на сайте  СДЭК (<a href="https://www.cdek.ru/ru/tracking" class="btn-reset" target="_blank">https://www.cdek.ru/ru/tracking</a>) по уникальному идентификатору (трек-номеру), который мы высылаем на вашу электронную почту сразу же после передачи заказа в курьерскую службу. Если в течение 5 рабочих дней после оформления заказа вы не получили e-mail с трек-номером доставки – необходимо проверить папку СПАМ вашей электронной почте. Если письма, всё же, нет – напишите нам сообщение в форму обратной связи с указанием номера заказа.
+        </p>
+        <p class="modal__text">
+          <b>Срок хранения</b> посылки в пункте выдачи заказов СДЭК - 10 дней! Получите посылку в течение этого срока.
+        </p>
+        <p class="modal__text">
+          <b>Обращаем ваше внимание, что для выбора доставки СДЭК необходимо указывать адрес до ближайшего крупного населенного пункта, где есть ПВЗ (Страна-Область-Район-Город). Если далее после наименования крупного населенного пункта вы укажете своё более точное местоположение (район, поселок, деревню) - программа не покажет пункты ПВЗ.</b>
+        </p>
+      </div>
+
+      <div class="modal__content modal__content_delivery" data-target="delivery-postamat">
+        <button class="close-btn btn-fill btn-reset" aria-label="Закрыть модальное окно"></button>
+        <div class="modal__header">
+          <p class="modal__title">Постаматы СДЭК</p>
+          <img src="/assets/img/delivery/5.png" alt="Boxberry">
+        </div>
+        <p class="modal__text">
+          <b>Доставка семян и сопутствующих товаров в Беларусь</b> осуществляется только компанией СДЭК в пункты выдачи, указанные ниже. Минимальная сумма заказа для выбора данного способа доставки – 500 рублей.
+        </p>
+        <p class="modal__text">
+          <b>Стоимость доставки</b> заказа службой СДЭК рассчитывается автоматически в момент оформления заказа при выборе пункта выдачи из списка по тарифам компании СДЭК.
+        </p>
+        <p class="modal__text">
+          <b>Срок доставки</b> заказа при выборе данного способа доставки состоит из времени обработки заказа (1-5 рабочих дней) и срока доставки посылки до пункта выдачи заказов в вашем населенном пункте, который составляет от 5 до 40 дней, в зависимости от удаленности региона. О том, что посылка готова к выдаче в вашем населенном пункте, вы узнаете, получив SMS от службы СДЭК на номер мобильного телефона, указанный при оформлении заказа.
+        </p>
+        <p class="modal__text">
+          Если покупатель оформил заказ и не оплатил его в течение 3-х дней, заказ будет удален. Обработка заказа осуществляется только после оплаты заказа покупателем на сайте в течение 1-5 рабочих дней.
+        </p>
+        <p class="modal__text">
+          <b>Свой заказ вы всегда можете отследить</b> на сайте СДЭК (<a href="https://www.cdek.ru/ru/tracking" class="btn-reset" target="_blank">https://www.cdek.ru/ru/tracking</a>) по уникальному идентификатору (трек-номеру), который мы высылаем на вашу электронную почту сразу же после передачи заказа в курьерскую службу. Если в течение 5 рабочих дней после оформления заказа вы не получили e-mail с трек-номером доставки – необходимо проверить папку СПАМ вашей электронной почте. Если письма, всё же, нет – напишите нам сообщение в форму обратной связи с указанием номера заказа.
+        </p>
+        <p class="modal__text">
+          <b>Срок хранения</b> посылки в постаматах СДЭК - 3 дня! Получите посылку в течение этого срока.
+        </p>
+      </div>
+
+      <div class="modal__content modal__content_delivery" data-target="delivery-5post">
+        <button class="close-btn btn-fill btn-reset" aria-label="Закрыть модальное окно"></button>
+        <div class="modal__header">
+          <p class="modal__title">Постаматы 5POST</p>
+          <img src="/assets/img/delivery/5.png" alt="5POST">
+        </div>
+        <p class="modal__text">
+          <b>Доставка семян и сопутствующих товаров</b> осуществляется по всей территории Российской Федерации. Минимальная сумма заказа для выбора данного способа доставки – 1000 рублей.
+        </p>
+        <p class="modal__text">
+          <b>Стоимость доставки</b> заказа службой 5POST рассчитывается автоматически в момент оформления заказа при выборе пункта выдачи из списка по тарифам компании 5POST.
+        </p>
+        <p class="modal__text">
+          <b>Срок доставки</b> заказа при выборе данного способа доставки состоит из времени обработки заказа (1-5 рабочих дней) и срока доставки посылки до пункта выдачи заказов в вашем населенном пункте, который составляет от 5 до 40 дней, в зависимости от удаленности региона. О том, что посылка готова к выдаче в вашем населенном пункте, вы узнаете, отследив свою посылку на сайте службы 5POST.
+        </p>
+        <p class="modal__text">
+          Если покупатель оформил заказ и не оплатил его в течение 3-х дней, заказ будет удален. Обработка заказа осуществляется только после оплаты заказа покупателем на сайте в течение 1-5 рабочих дней.
+        </p>
+        <p class="modal__text">
+          <b>Свой заказ вы всегда можете отследить</b> на сайте 5POST (<a href="https://fivepost.ru/" class="btn-reset" target="_blank">https://fivepost.ru/</a>) по уникальному идентификатору (трек-номеру), который мы высылаем на вашу электронную почту сразу же после передачи заказа в курьерскую службу. Если в течение 5 рабочих дней после оформления заказа вы не получили e-mail с трек-номером доставки – необходимо проверить папку СПАМ вашей электронной почте. Если письма, всё же, нет – напишите нам сообщение в форму обратной связи с указанием номера заказа.
+        </p>
+        <p class="modal__text">
+          <b>Срок хранения</b> посылки в постаматах 5POST - 7 дней! Получите посылку в течение этого срока.
+        </p>
+      </div>
+
+      <div class="modal__content modal__content_delivery" data-target="delivery-belarus">
+        <button class="close-btn btn-fill btn-reset" aria-label="Закрыть модальное окно"></button>
+        <div class="modal__header">
+          <p class="modal__title">Доставка в Беларусь</p>
+          <img src="/assets/img/svg/flags/belarus.svg" alt="Доставка в Беларусь">
+        </div>
+        <p class="modal__text">
+          <b>Доставка семян и сопутствующих товаров в Беларусь</b> осуществляется только компанией СДЭК в пункты выдачи, указанные ниже. Минимальная сумма заказа для выбора данного способа доставки – 1000 рублей.
+        </p>
+        <p class="modal__text">
+          <b>Список городов доступных для доставки семян и выдачи заказа в РЕСПУБЛИКЕ БЕЛАРУСЬ (финальный пункт адреса должен быть один из этих городов):</b>
+        </p>
+        <ul class="modal__list list-reset">
+          <li>Барановичи, Бобруйск, Борисов, Брест, Витебск, Гомель, Гродно, Минск, Могилев, Пинск, Солигорск.</li>
+          <li class="text-active">При оформлении заказа выбирайте ближайший к вам пункт выдачи.</li>
+        </ul>
+        <p class="modal__text">
+          <b>Стоимость доставки</b> заказа службой СДЭК рассчитывается автоматически в момент оформления заказа при выборе пункта выдачи из списка по тарифам компании СДЭК.
+        </p>
+        <p class="modal__text">
+          <b>Срок доставки</b> заказа при выборе данного способа доставки состоит из времени обработки заказа (1-5 рабочих дней) и срока доставки посылки до пункта выдачи заказов в вашем населенном пункте, который составляет от 5 до 40 дней, в зависимости от удаленности региона. О том, что посылка готова к выдаче в вашем населенном пункте, вы узнаете, получив SMS от службы СДЭК на номер мобильного телефона, указанный при оформлении заказа.
+        </p>
+        <p class="modal__text">
+          Если покупатель оформил заказ и не оплатил его в течение 3-х дней, заказ будет удален. Обработка заказа осуществляется только после оплаты заказа покупателем на сайте в течение 1-5 рабочих дней.
+        </p>
+        <p class="modal__text">
+          <b>Свой заказ вы всегда можете отследить</b> на сайте СДЭК (<a href="https://www.cdek.ru/ru/tracking" class="btn-reset" target="_blank">https://www.cdek.ru/ru/tracking</a>) по уникальному идентификатору (трек-номеру), который мы высылаем на вашу электронную почту сразу же после передачи заказа в курьерскую службу. Если в течение 5 рабочих дней после оформления заказа вы не получили e-mail с трек-номером доставки – необходимо проверить папку СПАМ вашей электронной почте. Если письма, всё же, нет – напишите нам сообщение в форму обратной связи с указанием номера заказа.
+        </p>
+        <p class="modal__text">
+          <b>Срок хранения посылки</b> в пункте выдачи заказов СДЭК 7 дней! Получите посылку в течение этого срока.
+        </p>
+      </div>
+
+      <div class="modal__content modal__content_delivery" data-target="delivery-kazakhstan">
+        <button class="close-btn btn-fill btn-reset" aria-label="Закрыть модальное окно"></button>
+        <div class="modal__header">
+          <p class="modal__title">Доставка в Казахстан</p>
+          <img src="/assets/img/svg/flags/kazakhstan.svg" alt="Доставка в Казахстан">
+        </div>
+        <p class="modal__text">
+          <b>Доставка семян и сопутствующих товаров в Казахстан</b> осуществляется только компанией СДЭК в пункты выдачи, указанные ниже. Минимальная сумма заказа для выбора данного способа доставки – 1000 рублей.
+        </p>
+        <p class="modal__text">
+          <b>Список городов доступных для доставки семян и выдачи заказа в РЕСПУБЛИКЕ КАЗАХСТАН (финальный пункт адреса должен быть один из этих городов):</b>
+        </p>
+        <ul class="modal__list list-reset">
+          <li>Актау, Актобе, Алматы, Атырау, Караганда, Кокшетау, Костанай, Нур-Султан, Павлодар, Петропавловск, Семей, Талдыкорган, Тараз, Темиртау, Уральск, Усть-Каменогорск, Шымкент.</li>
+          <li class="text-active">При оформлении заказа выбирайте ближайший к вам пункт выдачи.</li>
+        </ul>
+        <p class="modal__text">
+          <b>Стоимость доставки</b> заказа службой СДЭК рассчитывается автоматически в момент оформления заказа при выборе пункта выдачи из списка по тарифам компании СДЭК.
+        </p>
+        <p class="modal__text">
+          <b>Срок доставки</b> заказа при выборе данного способа доставки состоит из времени обработки заказа (1-5 рабочих дней) и срока доставки посылки до пункта выдачи заказов в вашем населенном пункте, который составляет от 5 до 40 дней, в зависимости от удаленности региона. О том, что посылка готова к выдаче в вашем населенном пункте, вы узнаете, получив SMS от службы СДЭК на номер мобильного телефона, указанный при оформлении заказа.
+        </p>
+        <p class="modal__text">
+          Если покупатель оформил заказ и не оплатил его в течение 3-х дней, заказ будет удален. Обработка заказа осуществляется только после оплаты заказа покупателем на сайте в течение 1-5 рабочих дней.
+        </p>
+        <p class="modal__text">
+          <b>Свой заказ вы всегда можете отследить</b> на сайте СДЭК (<a href="https://www.cdek.ru/ru/tracking" class="btn-reset" target="_blank">https://www.cdek.ru/ru/tracking</a>) по уникальному идентификатору (трек-номеру), который мы высылаем на вашу электронную почту сразу же после передачи заказа в курьерскую службу. Если в течение 5 рабочих дней после оформления заказа вы не получили e-mail с трек-номером доставки – необходимо проверить папку СПАМ вашей электронной почте. Если письма, всё же, нет – напишите нам сообщение в форму обратной связи с указанием номера заказа.
+        </p>
+        <p class="modal__text">
+          <b>Срок хранения посылки</b> в пункте выдачи заказов СДЭК 7 дней! Получите посылку в течение этого срока.
+        </p>
       </div>
     </div>
   </div>
