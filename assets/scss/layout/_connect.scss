@@ -31,9 +31,10 @@
   .form {
     width: 430px;
     padding: 30px 45px 35px;
-    background: #e6f5ee center top / cover no-repeat url("/assets/img/contact-form-bg.png");
+    background: $color-secondary center top / cover no-repeat url("/assets/img/contact-form-bg.avif");
     border-radius: 24px;
     flex-shrink: 0;
+    background-blend-mode: multiply;
 
     &.form_md {
       padding: 35px 25px;
@@ -354,17 +355,17 @@
   }
 
   .connect .form .social__list {
-    margin-top: 20px;
-    gap: 5px;
+    margin-top: 15px;
+    gap: 8px;
   }
 
   .connect .form .social__link {
-    width: 20px;
-    height: 20px;
+    width: 24px;
+    height: 24px;
   }
 
   .connect .form__descr {
-    margin-top: 25px;
+    margin-top: 20px;
     font-size: 12px;
     text-align: center;
   }
@@ -390,5 +391,19 @@
     margin-top: 5px;
     max-width: 250px;
     font-size: 10px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .connect .form .contacts__list {
+    align-items: flex-start;
+    
+    .contact__link {
+      font-size: 13px;
+    }
+  }
+
+  .connect .form__descr {
+    text-align: left;
   }
 }

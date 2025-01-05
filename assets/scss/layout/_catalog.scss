@@ -96,7 +96,16 @@
       width: 24px;
       height: 24px;
       background: #fff;
+      border: 1px solid #fff;
       opacity: 1;
+
+      &:hover {
+        background-color: $color-main;
+
+        svg {
+          fill: $color-light;
+        }
+      }
 
       svg {
         fill: $color-main;
@@ -128,6 +137,11 @@
       color: $color-text;
       background-color: $color-light;
       border-radius: $br-btn;
+
+      &:hover {
+        color: #fff;
+        background-color: transparent;
+      }
     }
 
     .splide__pagination {
@@ -746,7 +760,7 @@ input[type="range"]::-moz-range-thumb{
       border-radius: 6px;
 
       &_first {
-        background: right 10px bottom / auto 68% no-repeat url(/assets/img/slider/banner/family.png), #24383b center / cover no-repeat url(/assets/img/slider/banner/main-bg.png);
+        background: right 10px bottom / auto 68% no-repeat url(/assets/img/slider/banner/family.avif), #24383b center / cover no-repeat url(/assets/img/slider/banner/main-bg.avif);
       }
     }
 

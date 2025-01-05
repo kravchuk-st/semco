@@ -4,7 +4,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  height: 45px;
+  height: 55px;
   padding: 7px 20px 5px;
   display: flex;
   justify-content: space-around;
@@ -24,12 +24,14 @@
   }
 
   &__icon {
+    width: 18px;
+    height: 18px;
     fill: #fff;
   }
 
   &__text {
     font-weight: 400;
-    font-size: 10px;
+    font-size: 11px;
     line-height: 1.4;
     color: #fff;
   }

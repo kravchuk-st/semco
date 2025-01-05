@@ -14,13 +14,8 @@
   <header class="header">
     <div class="header__top">
       <div class="wrapper">
-        <a href="/" class="logo">
-          <picture>
-            <source srcset="/assets/img/svg/logo-light.svg" media="(max-width: 1100px)" />
-            <img class="logo__icon" src="/assets/img/svg/logo.svg" alt="logo" />
-          </picture>
-        </a>
-        <img class="doll" src="/assets/img/cipollino-sm.png" alt="doll">
+        <a href="/" class="logo" aria-label="Перейти на главную страницу"></a>
+        <img class="doll" src="/assets/img/cipollino-sm.avif" alt="doll">
         <button class="katalog-link btn-fill btn-reset" data-path="katalog">КАТАЛОГ</button>
         <form class="search" action="#" method="post">
           <input class="search__input" type="text" placeholder="Поиск...">
@@ -82,7 +77,22 @@
         <nav class="nav">
           <ul class="nav__list list-reset">
             <li class="nav__item"><a href="#" class="nav__link">О КОМПАНИИ</a></li>
-            <li class="nav__item"><a href="#" class="nav__link">ОПТОВЫЕ ЗАКУПКИ</a></li>
+            <li class="nav__item tooltip">
+              <button class="nav__link btn-reset" aria-labelledby="nav__link-tooltip">ОПТОВЫЕ ЗАКУПКИ</button>
+              <div class="dropdown-menu" id="nav__link-tooltip" role="tooltip">
+                <ul class="dropdown-menu__list list-reset">
+                  <li class="dropdown-menu__item">
+                    <a href="/greenery" class="nav__link">Профессиональные и весовые</a>
+                  </li>
+                  <li class="dropdown-menu__item">
+                    <a href="/bundle" class="nav__link">Семена в красочных пакетиках</a>
+                  </li>
+                  <li class="dropdown-menu__item">
+                    <a href="/green" class="nav__link">Семена для микрозелени и бебилиф</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
             <li class="nav__item"><a href="/promotions" class="nav__link">АКЦИИ</a></li>
             <li class="nav__item"><a href="/delivery" class="nav__link">ДОСТАВКА</a></li>
             <li class="nav__item"><a href="/pay" class="nav__link">ОПЛАТА</a></li>
@@ -98,7 +108,7 @@
             </span>
             <span class="call__text">+7 (495) 686-04-75</span>
           </a>
-          <button class="call-back__btn btn-reset">ЗАКАЗАТЬ ЗВОНОК</button>
+          <button class="call-back__btn btn-reset" data-path="call-back">ЗАКАЗАТЬ ЗВОНОК</button>
         </div>
       </div>
     </div>
@@ -127,14 +137,14 @@
           <div class="tooltip">
             <button class="tooltip__btn question-icon tooltip__title btn-reset" aria-labelledby="delivery-tooltip">?</button>
             <div class="tooltip__text" role="tooltip" id="delivery-tooltip">
-              морозоустойчивость, холодоустойчивость, зимостойкость, жаростойкость, засухоустойчивость, устойчивость к недостатку кислорода
+              Срок доставки может быть увеличен в период пиковых нагрузок транспортных компаний или сбоев в их работе ввиду форс-мажорных обстоятельств.
             </div>
           </div>
         </h1>
         <p class="delivery__descr">
           Мы осуществляем доставку семян и сопутствующих товаров нашего интернет-магазина во все регионы Российской Федерации, а также в Беларусь и Казахстан.
         </p>
-        <img class="delivery__img" src="/assets/img/delivery-bg.png" alt="map">
+        <img class="delivery__img" src="/assets/img/delivery-bg.avif" alt="map">
         <ul class="delivery__list list-reset">
           <li class="delivery__item">
             <p class="region">Москва и Московская область</p>
@@ -261,7 +271,7 @@
           <li class="delivery-local__item">
             <div class="delivery-local__header">
               <h3 class="delivery-local__title">Постаматы СДЭК</h3>
-              <img class="delivery-local__icon" src="/assets/img/delivery/5.png" alt="delivery">
+              <img class="delivery-local__icon" src="/assets/img/delivery/4.png" alt="delivery">
               <button class="btn delivery-local__btn btn-reset" data-path="delivery-postamat">Подробнее</button>
             </div>
             <p class="delivery-local__descr">
@@ -271,7 +281,7 @@
           <li class="delivery-local__item">
             <div class="delivery-local__header">
               <h3 class="delivery-local__title">Постаматы 5POST</h3>
-              <img class="delivery-local__icon" src="/assets/img/delivery/5.png" alt="delivery">
+              <img class="delivery-local__icon" src="/assets/img/svg/delivery/5post.svg" height="20" alt="Постаматы 5POST">
               <button class="btn delivery-local__btn btn-reset" data-path="delivery-5post">Подробнее</button>
             </div>
             <p class="delivery-local__descr">
@@ -321,7 +331,7 @@
             <input class="form-input" type="email" name="email" placeholder="Оставьте Ваш e-mail" required>
             <button class="form-btn btn-dark btn-reset" type="submit">подписаться</button>
             <p class="form-text">
-              Нажимая Подписаться вы соглашаетесь с <a href="#" target="_blank" rel="noopener noreferrer">Политикой обработки персональных данных</a>
+              Нажимая Подписаться вы соглашаетесь с <a href="/soglasie" target="_blank" rel="noopener noreferrer">Политикой обработки персональных данных</a>
             </p>
           </form>
         </div>
@@ -334,10 +344,7 @@
       <div class="footer__content">
         <div class="footr__info">
           <div class="logo">
-            <a href="/" class="logo__link">
-              <img class="logo__img" src="/assets/img/svg/logo.svg" alt="logo">
-            </a>
-            <p class="logo__text">Ваш проводник в волшебный мир семян</p>
+            <a href="/" class="logo__link" aria-label="Перейти на главную страницу">Ваш проводник в волшебный мир семян</a>
           </div>
           <div class="menu-social">
             <ul class="social__list list-reset">
@@ -351,11 +358,11 @@
           </div>
           <ul class="contacts__list list-reset">
             <li class="contacts__item">
-              <a href="tel:+74956860475" class="contact__link" target="_blank">
+              <a href="tel:+74954921993" class="contact__link" target="_blank">
                 <svg class="contact__icon">
                   <use xlink:href="/assets/img/svg/phone.svg#phone"></use>
                 </svg>
-                <span>+7 (495) 686-04-75</span>
+                <span>+7 (495) 492-19-93</span>
               </a>
             </li>
             <li class="contacts__item">
@@ -382,14 +389,16 @@
             <div class="col">
               <h3 class="footer-links__label">Важная информация</h3>
               <ul class="footer-links__list list-reset">
+                <li class="footer-links__item"><a href="/buy">Как купить семена</a></li>
                 <li class="footer-links__item"><a href="/pay">Оплата</a></li>
                 <li class="footer-links__item"><a href="/delivery">Доставка</a></li>
-                <li class="footer-links__item"><a href="#">Возврат</a></li>
-                <li class="footer-links__item"><a href="#">Договор оферты</a></li>
+                <li class="footer-links__item"><a href="/exchange">Возврат</a></li>
+                <li class="footer-links__item"><a href="/soglasie/">Согласие на обработку персональных данных</a></li>
+                <li class="footer-links__item"><a href="/oferta">Договор оферты</a></li>
                 <li class="footer-links__item"><a href="#">Оптовые закупки</a></li>
                 <li class="footer-links__item"><a href="/promotions">Акции и скидки</a></li>
-                <li class="footer-links__item"><a href="/contacts">Контакты</a></li>
                 <li class="footer-links__item"><a href="/documents">Документация</a></li>
+                <li class="footer-links__item"><a href="/oferta/">Пользовательское соглашение</a></li>
               </ul>
             </div>
             <div class="col">
@@ -397,10 +406,13 @@
               <ul class="footer-links__list list-reset">
                 <li class="footer-links__item"><a href="#">О нас</a></li>
                 <li class="footer-links__item"><a href="#">Проекты</a></li>
-                <li class="footer-links__item"><a href="#">Выставки</a></li>
+                <li class="footer-links__item"><a href="/trade">Где можно купить семена Семко?</a></li>
+                <li class="footer-links__item"><a href="/sale">Правила продаж ООО Семко</a></li>
                 <li class="footer-links__item"><a href="#">Видеоматериалы</a></li>
                 <li class="footer-links__item"><a href="#">Агротехника</a></li>
+                <li class="footer-links__item"><a href="#">Выставки</a></li>
                 <li class="footer-links__item"><a href="#">Газета</a></li>
+                <li class="footer-links__item"><a href="/contacts">Контакты</a></li>
               </ul>
             </div>
           </div>
@@ -466,7 +478,7 @@
         <a href="/" class="btn-reset">
           <img src="/assets/img/svg/logo.svg" width="105" height="30" alt="logo" />
         </a>
-        <img src="/assets/img/cipollino-sm.png" width="35" height="40" alt="doll">
+        <img src="/assets/img/cipollino-sm.avif" width="35" height="40" alt="doll">
         <button class="close-btn btn-reset"></button>
       </div>
       <form class="search" action="#" method="post">
@@ -651,7 +663,7 @@
         <ul class="product__list list-reset">
           <li class="product__item">
             <a href="/product" class="product__link_img btn-reset">
-              <img src="/assets/img/slider/goods/0.jpg" alt="Семена томатов Цитрон F1">
+              <img src="/assets/img/slider/goods/0.webp" alt="Семена томатов Цитрон F1">
             </a>
             <a href="/product" class="product__link_title btn-reset">Семена томатов Цитрон F1</a>
             <div class="amount">
@@ -686,7 +698,7 @@
         </form>
         <div class="modal__footer">
           <div class="modal__links">
-            <button class="btn btn-reset">Забыли пароль?</button>
+            <button class="btn btn-reset" data-path="password">Забыли пароль?</button>
             <button class="btn btn-active btn-reset" data-path="login-email">Войти через почту</button>
           </div>
           <p class="modal__info">Не зарегистрированы? <button class="btn btn-reset" data-path="registration">Зарегистрируйтесь тут</button></p>
@@ -704,7 +716,7 @@
         </form>
         <div class="modal__footer">
           <div class="modal__links">
-            <button class="btn btn-reset">Забыли пароль?</button>
+            <button class="btn btn-reset" data-path="password">Забыли пароль?</button>
             <button class="btn btn-active btn-reset" data-path="login">Войти через телефон</button>
           </div>
           <p class="modal__info">Не зарегистрированы? <button class="btn btn-reset" data-path="registration">Зарегистрируйтесь тут</button></p>
@@ -722,7 +734,7 @@
         </form>
         <div class="modal__footer">
           <div class="modal__links">
-            <button class="btn btn-reset">Забыли пароль?</button>
+            <button class="btn btn-reset" data-path="password">Забыли пароль?</button>
             <button class="btn btn-active btn-reset" data-path="login-email">Войти через почту</button>
           </div>
           <p class="modal__info">Не зарегистрированы? <button class="btn btn-reset" data-path="registration">Зарегистрируйтесь тут</button></p>
@@ -742,8 +754,8 @@
         </form>
         <div class="modal__footer">
           <div class="modal__links">
-            <button class="btn btn-reset">Забыли пароль?</button>
-            <button class="btn btn-reset" data-path="registration-email">Зарегистрируйтесь через почту</button>
+            <button class="btn btn-reset" data-path="password">Забыли пароль?</button>
+            <button class="btn btn-reset" data-path="registration-email">Регистрация по почте</button>
           </div>
           <p class="modal__info">Уже зарегистрированы? <button class="btn btn-active btn-reset" data-path="login">Войдите тут</button></p>
         </div>
@@ -762,11 +774,38 @@
         </form>
         <div class="modal__footer">
           <div class="modal__links">
-            <button class="btn btn-reset">Забыли пароль?</button>
-            <button class="btn btn-reset" data-path="registration">Зарегистрируйтесь через телефон</button>
+            <button class="btn btn-reset" data-path="password">Забыли пароль?</button>
+            <button class="btn btn-reset" data-path="registration">Регистрация по телефону</button>
           </div>
           <p class="modal__info">Уже зарегистрированы? <button class="btn btn-active btn-reset" data-path="login">Войдите тут</button></p>
         </div>
+      </div>
+
+      <div class="modal__content modal__content_login" data-target="password">
+        <button class="close-btn btn-reset" aria-label="Закрыть модальное окно"></button>
+        <img class="modal__logo" src="/assets/img/svg/logo.svg" alt="Logo">
+        <p class="modal__title">Забыли пароль?</p>
+        <p class="modal__subtitle">Введите email или телефон, который вы использовали при регистрации.</p>
+        <form class="modal__form" action="#" method="post">
+          <input class="input" type="text" placeholder="Введите почту / телефон" name="Name" autocomplete="off">
+          <button class="btn btn-fill btn-reset" type="submit">Восстановить пароль</button>
+        </form>
+        <div class="modal__footer">
+          <p class="modal__info modal__info_registration">Зарегистрируйтесь через <button class="btn btn-active btn-reset" data-path="registration">телефон</button></p>
+          <p class="modal__info">Уже зарегистрированы? <button class="btn btn-active btn-reset" data-path="login">Войдите тут</button></p>
+        </div>
+      </div>
+
+      <div class="modal__content modal__content_login modal__content_order" data-target="call-back">
+        <button class="close-btn btn-reset" aria-label="Закрыть модальное окно"></button>
+        <img class="modal__logo" src="/assets/img/svg/logo.svg" alt="Logo">
+        <p class="modal__title">Заказать обратный&nbsp;звонок</p>
+        <form class="modal__form" action="#" method="post">
+          <input class="input" type="text" placeholder="Ваше имя" name="Name" data-validate-field="name" autocomplete="off">
+          <input class="input" type="tel" name="Phone" placeholder="+7 (999) 999-99-99" data-validate-field="tel" autocomplete="off">
+          <button class="btn btn-fill btn-reset" type="submit">Отправить</button>
+        </form>
+        <p class="modal__info">Нажимая кнопку «Отправить» Вы соглашаетесь с <a href="/policy" class="info-link btn-reset" target="_blank">политикой конфиденциальности</a> сайта</p>
       </div>
 
       <div class="modal__content modal__content_katalog" data-target="katalog">
@@ -953,7 +992,7 @@
           <img src="/assets/img/delivery/1.png" alt="Самовывоз">
         </div>
         <p class="modal__text">
-          <b>Самовывоз</b> семян и сопутствующих товаров, заказанных в интернет-магазине Семко производится покупателем из офиса агрофирмы Семко только ПОСЛЕ ПРЕДВАРИТЕЛЬНОЙ ОПЛАТЫ ЗАКАЗА на сайте semco.ru. Оплатить заказы, оформленные в интернет-магазине, во время посещения нашего офиса и розничного магазина невозможно. Минимальная сумма заказа для самовывоза – 500 рублей.
+          <b>Самовывоз</b> семян и сопутствующих товаров, заказанных в интернет-магазине Семко производится покупателем из офиса агрофирмы Семко только ПОСЛЕ ПРЕДВАРИТЕЛЬНОЙ ОПЛАТЫ ЗАКАЗА на сайте semco.ru. Оплатить заказы, оформленные в интернет-магазине, во время посещения нашего офиса и розничного магазина невозможно. Минимальная сумма заказа для самовывоза – 1000 рублей.
         </p>
         <p class="modal__text">
           <b>Срок обработки заказа</b> при выборе данного способа доставки – 1-5 рабочих дней. Срок обработки заказа может быть увеличен, если попадает на выходные и праздничные дни. <b>Стоимость самовывоза - бесплатно.</b>
@@ -970,7 +1009,7 @@
           <img src="/assets/img/delivery/2.png" alt="Почта России">
         </div>
         <p class="modal__text">
-          <b>Доставка семян и сопутствующих товаров «Почтой России»</b> осуществляется только по территории Российской Федерации. Минимальная сумма заказа для выбора данного способа доставки – 500 рублей.
+          <b>Доставка семян и сопутствующих товаров «Почтой России»</b> осуществляется только по территории Российской Федерации. Минимальная сумма заказа для выбора данного способа доставки – 1000 рублей.
         </p>
         <p class="modal__text">
           <b>Стоимость доставки заказа «Почтой России»</b> рассчитывается автоматически при оформлении заказа по тарифам «Почты России». В общую сумму доставки входит тариф «Посылка» за доставку до вашего региона и страховой сбор. Если Вам необходима доставка «1 классом», укажите это в комментарии к заказу при оформлении, и наш специалист свяжется с вами для расчёта стоимости нестандартной доставки.
@@ -996,7 +1035,7 @@
           <img src="/assets/img/delivery/3.png" alt="Boxberry">
         </div>
         <p class="modal__text">
-          <b>Доставка семян и сопутствующих товаров в пункты выдачи «Boxberry»</b> осуществляется только по территории Российской Федерации. Минимальная сумма заказа для выбора данного способа доставки – 500 рублей.
+          <b>Доставка семян и сопутствующих товаров в пункты выдачи «Boxberry»</b> осуществляется только по территории Российской Федерации. Минимальная сумма заказа для выбора данного способа доставки – 1000 рублей.
         </p>
         <p class="modal__text">
           <b>Стоимость доставки заказа</b> службой Boxberry рассчитывается автоматически в момент оформления заказа при выборе пункта выдачи из списка по тарифам компании Boxberry.
@@ -1019,10 +1058,10 @@
         <button class="close-btn btn-fill btn-reset" aria-label="Закрыть модальное окно"></button>
         <div class="modal__header">
           <p class="modal__title">Пункт выдачи СДЭК</p>
-          <img src="/assets/img/delivery/4.png" alt="Boxberry">
+          <img src="/assets/img/delivery/4.png" alt="СДЭК">
         </div>
         <p class="modal__text">
-          <b>Доставка семян и сопутствующих товаров в пункты выдачи СДЭК</b> осуществляется по всей территории Российской Федерации. Минимальная сумма заказа для выбора данного способа доставки – 500 рублей.
+          <b>Доставка семян и сопутствующих товаров в пункты выдачи СДЭК</b> осуществляется по всей территории Российской Федерации. Минимальная сумма заказа для выбора данного способа доставки – 1000 рублей.
         </p>
         <p class="modal__text">
           <b>Стоимость доставки</b> заказа службой СДЭК рассчитывается автоматически в момент оформления заказа при выборе пункта выдачи из списка по тарифам компании СДЭК.
@@ -1048,10 +1087,10 @@
         <button class="close-btn btn-fill btn-reset" aria-label="Закрыть модальное окно"></button>
         <div class="modal__header">
           <p class="modal__title">Постаматы СДЭК</p>
-          <img src="/assets/img/delivery/5.png" alt="Boxberry">
+          <img src="/assets/img/delivery/4.png" alt="СДЭК">
         </div>
         <p class="modal__text">
-          <b>Доставка семян и сопутствующих товаров в Беларусь</b> осуществляется только компанией СДЭК в пункты выдачи, указанные ниже. Минимальная сумма заказа для выбора данного способа доставки – 500 рублей.
+          <b>Доставка семян и сопутствующих товаров в Беларусь</b> осуществляется только компанией СДЭК в пункты выдачи, указанные ниже. Минимальная сумма заказа для выбора данного способа доставки – 1000 рублей.
         </p>
         <p class="modal__text">
           <b>Стоимость доставки</b> заказа службой СДЭК рассчитывается автоматически в момент оформления заказа при выборе пункта выдачи из списка по тарифам компании СДЭК.
@@ -1074,7 +1113,7 @@
         <button class="close-btn btn-fill btn-reset" aria-label="Закрыть модальное окно"></button>
         <div class="modal__header">
           <p class="modal__title">Постаматы 5POST</p>
-          <img src="/assets/img/delivery/5.png" alt="5POST">
+          <img src="/assets/img/svg/delivery/5post.svg" height="24" alt="Постаматы 5POST">
         </div>
         <p class="modal__text">
           <b>Доставка семян и сопутствующих товаров</b> осуществляется по всей территории Российской Федерации. Минимальная сумма заказа для выбора данного способа доставки – 1000 рублей.

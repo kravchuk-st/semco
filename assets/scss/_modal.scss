@@ -66,7 +66,7 @@
   &__content {
     display: none;
     width: 90vw;
-    max-width: 306px;
+    max-width: 316px;
     background-color: #fff;
 
     &.show {
@@ -203,12 +203,26 @@
             font-weight: 400;
             text-decoration: underline;
           }
+
+          .info-link {
+            font-weight: 400;
+            font-size: inherit;
+            color: inherit;
+            text-decoration: underline;
+          }
+
+          &_registration {
+            .btn {
+              font-size: inherit;
+              color: inherit;
+            }
+          }
         }
       }
     }
 
     &_notify {
-      max-width: 674px;
+      max-width: 578px;
       padding: 45px 40px 43px 50px;
 
       .modal {
@@ -761,6 +775,7 @@
           .product__input_counter {
             width: fit-content;
             min-width: 42px;
+            max-width: 56px;
             padding: 3px 5px;
             font-size: 14px;
             line-height: 1;
@@ -867,24 +882,71 @@
       line-height: 0;
       text-align: center;
 
+      .close-btn {
+        width: 28px;
+        height: 28px;
+        border: 1px solid white;
+
+        &::after {
+          content: '';
+          position: absolute;
+          inset: -10px;
+          background: transparent; 
+        }
+      }
+
+      .modal-img-product {
+        width: 100%;
+        max-width: 450px;
+      }
+
       .modal__zoom-btn {
         position: absolute;
         top: 0;
         bottom: 0;
         z-index: 5;
-        width: 50px;
+        width: 70px;
+        background-color: transparent;
         background-size: 22px 36px;
         background-position: center;
         background-repeat: no-repeat;
+        border: none;
+        transition: .25s linear;
+
+        &:hover {
+          background: linear-gradient(to left, transparent, #00000040 80%);
+        }
+
+        &::before {
+          content: "";
+          position: absolute;
+          left: 0;
+          right: 0;
+          top: 0;
+          bottom: 0;
+          margin: auto;
+          width: 28px;
+          height: 28px;
+          background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 11 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9.98711 0.75L1.84961 8.8875L9.98711 17.025' stroke='%2303A75370' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E");
+          background-size: 16px 16px;
+          background-position: 35% center;
+          background-repeat: no-repeat;
+          background-color: white;
+          border-radius: 50%;
+          transition: background-image 0.3s ease-in-out;
+        }
+
+        &:hover.modal__zoom-btn::before {
+          background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 11 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9.98711 0.75L1.84961 8.8875L9.98711 17.025' stroke='%2303A753' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E");
+        }
 
         &--prev {
           left: 0;
-          background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 11 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9.98711 0.75L1.84961 8.8875L9.98711 17.025' stroke='%2303A753' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E");
         }
 
         &--next {
           right: 0;
-          background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 11 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.01289 0.75L9.15039 8.8875L1.01289 17.025' stroke='%2303A753' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E%0A");
+          transform: scaleX(-1);
         }
       }
 
@@ -961,11 +1023,15 @@
         line-height: 1.4;
         color: #788287;
         text-align: center;
+
+        .info-link {
+          font-size: inherit;
+        }
       }
     }
 
     &_question {
-      max-width: 580px;
+      max-width: 578px;
       padding: 35px;
 
       .modal__form {
@@ -1007,6 +1073,17 @@
         line-height: 1.4;
         color: #788287;
         text-align: center;
+
+        a {
+          font-weight: 400;
+          font-size: inherit;
+          color: inherit;
+          text-decoration: underline;
+
+          &:hover {
+            color: $color-btn-hover;
+          }
+        }
       }
     }
 
@@ -1145,13 +1222,31 @@
 
     &_comment {
       max-width: 810px;
-      padding: 25px 58px 35px 30px;
+      padding: 25px 30px 35px;
       background-color: #f1f9f5;
+
+      .comment__text {
+        font-size: 14px;
+        letter-spacing: .02em;
+      }
     }
 
     &_delivery {
       max-width: 675px;
       padding: 35px 35px 40px;
+
+      &-info {
+        .modal__title {
+          text-align: left !important;
+        }
+
+        .info-img {
+          flex-shrink: 0;
+          width: 25px;
+          height: 28px;
+          fill: $color-main;
+        }
+      }
 
       .modal {
         &__header {
@@ -1221,6 +1316,105 @@
         }
       }
     }
+
+    &_chat {
+      width: 90vw;
+      max-width: 650px;
+      padding: 25px 20px;
+      background-color: #f4f4f4;
+
+      .chat {    
+        &__body {
+          width: 100%;
+          height: 350px;
+          padding: 25px 20px;
+          background-color: #fff;
+          border-radius: 8px;
+          font-size: 14px;
+          line-height: 1.4;
+          display: flex;
+          flex-direction: column;
+          row-gap: 15px;
+          overflow-y: auto;
+
+          &::-webkit-scrollbar {
+            width: 6px;               /* ширина всей полосы прокрутки */
+          }
+          
+          &::-webkit-scrollbar-track {
+            background: rgba($color-main, .1);        /* цвет зоны отслеживания */
+          }
+          
+          &::-webkit-scrollbar-thumb {
+            background-color: $color-main;    /* цвет бегунка */
+            border-radius: 20px;       /* округлось бегунка */
+            border: 1px solid $color-main;  /* отступ вокруг бегунка */
+          }
+        }
+    
+        &__number {
+          text-align: center;
+        }
+    
+        &__row {
+          display: flex;
+          align-items: last baseline;
+          gap: 10px;
+    
+          &_user {
+            flex-direction: row-reverse;
+          }
+    
+          p {
+            max-width: 355px;
+            padding: 10px 15px;
+            background: $color-secondary;
+            border-radius: 10px;
+            line-height: 1.4;
+          }
+    
+          time {
+            font-size: 12px;
+            color: #acacac;
+          }
+        }
+      }
+    }
+
+    &_thanks {
+      max-width: 674px;
+      padding: 45px 55px 60px;
+
+      .text-top {
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+        column-gap: 24px;
+
+        img {
+          width: 50px;
+        }
+
+        p {
+          font-size: 35px;
+          line-height: 1.2;
+          color: #272727;
+        }
+      }
+
+      .text-bottom {
+        max-width: 490px;
+        font-size: 23px;
+        line-height: 1.4;
+      }
+    }
+  }
+}
+
+@-moz-document url-prefix() {
+  .modal__content_chat .chat__body {
+    scrollbar-width: -moz-thin;          /* "auto" или "thin" */
+    scrollbar-color: $color-main rgba($color-main, .1);   /* цвет бегунка и зоны отслеживания */
   }
 }
 
@@ -1384,6 +1578,39 @@
     .modal__list li {
       margin-left: 15px;
     }
+  }
+
+  .modal__content_thanks {
+    max-width: 475px;
+    padding: 30px;
+
+    .text-top {
+      margin-bottom: 10px;
+      justify-content: center;
+      flex-direction: column;
+      row-gap: 15px;
+
+      img {
+        width: 32px;
+      }
+
+      p {
+        font-size: 30px;
+      }
+    }
+
+    .text-bottom {
+      max-width: 360px;
+      margin: 0 auto;
+      font-size: 17px;
+      text-align: center;
+    }
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .modal:has(.modal__content_cart.show) {
+    padding-top: 75px;
   }
 }
 
@@ -1549,6 +1776,28 @@
     .modal__title {
       margin-top: 30px;
       font-size: 22px;
+    }
+  }
+
+  .modal__content_cart {
+    max-width: 400px;
+
+    .product__item {
+      display: grid;
+      grid-template-columns: 66px 1fr 55px;
+      grid-template-rows: auto auto;
+      row-gap: 8px;
+    }
+
+    .product__link_img {
+      grid-row: span 2;
+    }
+
+    .amount {
+      grid-column-start: 2;
+      grid-row-start: 2;
+      margin: 0;
+      margin-top: auto;
     }
   }
 }
@@ -1759,7 +2008,7 @@
       gap: 3px;
 
       img {
-        height: 9px;
+        height: 12px;
       }
     }
 
@@ -1981,6 +2230,19 @@
       max-width: none;
       font-size: 10px;
       line-height: 1.35;
+    }
+  }
+
+  .modal__content_thanks {
+    max-width: 260px;
+    padding: 30px 25px 25px;
+
+    .text-top p {
+      font-size: 19px;
+    }
+
+    .text-bottom {
+      font-size: 12px;
     }
   }
 }

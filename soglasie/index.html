@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Согласие на обработку персональных данных</title>
+  <link rel="shortcut icon" type="image/ico" href="/assets/img/favicon.ico">
+
+  <link rel="stylesheet" href="/assets/css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="header__top">
+      <div class="wrapper">
+        <a href="/" class="logo" aria-label="Перейти на главную страницу"></a>
+        <img class="doll" src="/assets/img/cipollino-sm.avif" alt="doll">
+        <button class="katalog-link btn-fill btn-reset" data-path="katalog">КАТАЛОГ</button>
+        <form class="search" action="#" method="post">
+          <input class="search__input" type="text" placeholder="Поиск...">
+          <button class="search__btn btn-reset" type="submit"></button>
+        </form>
+        <div class="header__btns">
+          <div class="tooltip tooltip_search">
+            <button class="tooltip__btn btn-change btn-reset" aria-labelledby="search-tooltip" aria-label="Открыть поиск">
+              <svg class="address__icon" aria-hidden="true" width="26" height="26">
+                <use xlink:href="/assets/img/svg/search-header.svg#icon"></use>
+              </svg>
+            </button>
+            <div class="tooltip__text" role="tooltip" id="search-tooltip">
+              <input class="input" placeholder="Поиск...">
+            </div>
+          </div>
+          <a href="#" class="wishlist btn-reser">
+            <span class="wishlist__icon">
+              <svg  aria-hidden="true" width="22" height="18">
+                <use xlink:href="/assets/img/svg/heart.svg#heart"></use>
+              </svg>
+              <span class="wishlist__quantity">15</span>
+            </span>
+            <span class="wishlist__text">ИЗБРАННОЕ</span>
+          </a>
+          <button class="cart btn-reset" data-path="cart">
+            <span class="cart__icon">
+              <svg class="cart__img" aria-hidden="true" width="22" height="20">
+                <use xlink:href="/assets/img/svg/cart.svg#cart"></use>
+              </svg>
+              <span class="cart__quantity">5</span>
+            </span>
+            <span class="cart__text">
+              <span class="cart__title">КОРЗИНА</span>
+              <span class="cart__price">3500 ₽</span>
+            </span>
+          </button>
+          <button class="account btn-reset" data-path="login">
+            <svg class="account__icon" aria-hidden="true" width="20" height="20">
+              <use xlink:href="/assets/img/svg/user.svg#user"></use>
+            </svg>
+            <span class="account__text">ВОЙТИ</span>
+          </button>
+          <button class="burger btn-reset" aria-label="Бургер">
+            <span class="burger__line" aria-hidden="true"></span>
+            <span class="burger__line" aria-hidden="true"></span>
+            <span class="burger__line" aria-hidden="true"></span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="header__bottom">
+      <div class="wrapper">
+        <select class="select" name="city">
+          <option value="МОСКВА" selected>МОСКВА</option>
+          <option value="value2">ГОРОД 2</option>
+          <option value="value3">ГОРОД 3</option>
+        </select>
+        <nav class="nav">
+          <ul class="nav__list list-reset">
+            <li class="nav__item"><a href="#" class="nav__link">О КОМПАНИИ</a></li>
+            <li class="nav__item tooltip">
+              <button class="nav__link btn-reset" aria-labelledby="nav__link-tooltip">ОПТОВЫЕ ЗАКУПКИ</button>
+              <div class="dropdown-menu" id="nav__link-tooltip" role="tooltip">
+                <ul class="dropdown-menu__list list-reset">
+                  <li class="dropdown-menu__item">
+                    <a href="/greenery" class="nav__link">Профессиональные и весовые</a>
+                  </li>
+                  <li class="dropdown-menu__item">
+                    <a href="/bundle" class="nav__link">Семена в красочных пакетиках</a>
+                  </li>
+                  <li class="dropdown-menu__item">
+                    <a href="/green" class="nav__link">Семена для микрозелени и бебилиф</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav__item"><a href="/promotions" class="nav__link">АКЦИИ</a></li>
+            <li class="nav__item"><a href="/delivery" class="nav__link">ДОСТАВКА</a></li>
+            <li class="nav__item"><a href="/pay" class="nav__link">ОПЛАТА</a></li>
+            <li class="nav__item"><a href="/contacts" class="nav__link">КОНТАКТЫ</a></li>
+          </ul>
+        </nav>
+        <div class="header__call">
+          <a href="tel:+74956860475" class="call__link">
+            <span class="call__img">
+              <svg class="call__icon">
+                <use xlink:href="/assets/img/svg/phone.svg#phone"></use>
+              </svg>
+            </span>
+            <span class="call__text">+7 (495) 686-04-75</span>
+          </a>
+          <button class="call-back__btn btn-reset" data-path="call-back">ЗАКАЗАТЬ ЗВОНОК</button>
+        </div>
+      </div>
+    </div>
+  </header>
+  
+  <main>
+    <div class="wrapper">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb list-reset">
+          <li class="breadcrumb__item">
+            <a href="/" class="breadcrumb__link">Главная страница</a>
+            <span class="breadcrumb__separator">—</span>
+          </li>
+          <li class="breadcrumb__item active" aria-current="page">Согласие на обработку персональных данных</li>
+        </ol>
+      </nav>
+    </div>
+
+    <section class="privacy">
+      <div class="wrapper">
+        <h1>Согласие на обработку персональных данных</h1>
+        <p class="mt-15">
+          Присоединяясь к настоящему Соглашению и оставляя свои данные на Сайтах <a href="https://semco.ru" class="link btn-reset">https://semco.ru</a> (далее – Сайт) путем заполнения полей Регистрации, Пользователь выражает Согласие на обработку персональных данных и их передачу Операторам обработки персональных данных – ООО «СЕМКО» (юридический адрес: 109029 г. Москва, ВН.ТЕР.Г. МУНИИЦИПАЛЬНЫЙ ОКРУГ ТАГАНСКИЙ, ул. Нижегородская д. 11, кв. 72, физический адрес: 129626 г. Москва, Рижский проезд, д. 3) и  ООО «Мир семян» (юридический адрес: 107061 Москва, 2-я Пугачевская улица, д. 4, корп. 2, физический адрес: 129626 Москва, Рижский проезд, д. 3, далее называемые Операторы, которым принадлежит Сайт <a href="https://semco.ru" class="link btn-reset">https://semco.ru</a> и интернет-магазин семян, на следующих условиях.
+        </p>
+        <p class="mt-15">Пользователь:</p>
+        <ul class="list-dot list-reset">
+          <li>подтверждает, что все указанные им данные принадлежат лично ему;</li>
+          <li>подтверждает и признает, что им внимательно в полном объеме прочитано Соглашение и условия обработки его персональных данных, указываемых им в полях оформляемой он-лайн заявки и регистрации, текст Соглашения и условия обработки персональных данных ему понятны;</li>
+          <li>дает согласие на обработку Администрацией Сайта предоставляемых в составе информации персональных данных в целях заключения между ним и Администрацией Сайта настоящего Соглашения, а также его последующего исполнения;</li>
+          <li>выражает свое согласие на обработку персональных данных без оговорок и ограничений (далее – Согласие). Моментом принятия Согласия является маркировка соответствующего поля в Форме и нажатие на кнопку отправки Формы на любой странице Сайта;</li>
+          <li>подтверждает, что, давая Согласие, он действует свободно, своей волей и в своем интересе.</li>
+        </ul>
+
+        <p class="mt-15">
+          Данное Согласие дается на обработку персональных данных как без использования средств автоматизации, так и с их использованием.
+        </p>
+        <p class="mt-15">
+          Согласие дается на обработку следующих персональных данных Пользователя, указанных Пользователем в формах или в файлах, прикрепленных к формам:
+        </p>
+        <ul class="list-dot list-reset">
+          <li>Фамилия, имя, отчество;</li>
+          <li>Должность, организация;</li>
+          <li>Телефон;</li>
+          <li>Город;</li>
+          <li>Адрес (домашний или рабочий, или любой другой, указанный Пользователем);</li>
+          <li>Адрес электронной почты;</li>
+          <li>Иных персональных данных, указанных Пользователем в формах или файлах, прикрепленных к формам или являющимися бланками заказов.</li>
+        </ul>
+
+        <p class="mt-15">Целью обработки персональных данных является их хранение и использование, в том числе:</p>
+        <ul class="list-dot list-reset">
+          <li>Обеспечение работы Пользователя с Сайтом Оператора;</li>
+          <li>Ответы на запросы Пользователей;</li>
+          <li>Направление Пользователям аналитических материалов и информирование Пользователей о предстоящих мероприятиях, организуемых Оператором;</li>
+          <li>Заключение с Пользователем договора и его исполнения.</li>
+        </ul>
+
+        <p class="mt-15">
+          Пользователь, принимая условия настоящего Соглашения, выражает свою заинтересованность и дает полное согласие, что обработка его персональных данных включает в себя следующие действия: сбор, запись, систематизацию, накопление, хранение, уточнение (обновление, изменение), извлечение, использование, передачу (предоставление доступа), обезличивание, блокирование, удаление, уничтожение персональных данных.
+        </p>
+        <p class="mt-15">
+          Согласие Пользователя на обработку персональных данных является конкретным, информированным и сознательным.
+        </p>
+        <p class="mt-15">
+          Настоящее Согласие Пользователя признается исполненным в простой письменной форме.
+        </p>
+        <p class="mt-15">
+          Согласие действует бессрочно с момента предоставления данных и может быть отозвано Пользователем путем подачи письменного заявления Оператору с указанием данных, определенных статьей 14 Федерального закона №152-ФЗ «О персональных данных» по адресу: Российская Федерация, 109428 г. Москва, Институтская 3-я улица, д. 4, кв. 24 или в простой письменной форме на адрес электронной почты <a href="mailto:semcojunior@mail.ru" class="link btn-reset">semcojunior@mail.ru</a>
+        </p>
+        <p class="mt-15">
+          В случае отзыва Пользователем согласия на обработку персональных данных Оператор вправе продолжить обработку персональных данных без согласия Пользователя при наличии оснований, указанных в пунктах 2-11 части 1 статьи 6, части 2 статьи 10 и части 2 статьи 11 Федерального закона №152-ФЗ «О персональных данных».
+        </p>
+        <p class="mt-15">
+          В ходе обработки персональных данных Оператор вправе осуществлять: сбор, запись, систематизацию, накопление, хранение, уточнение (обновление, изменение), извлечение, использование, передачу (распространение, предоставление, доступ), обезличивание, блокирование, удаление, уничтожение персональных данных Пользователя.
+        </p>
+        <p class="mt-15">
+          Передача персональных данных Пользователя третьим лицам не осуществляется, за исключением лиц, осуществляющих обработку персональных данных по поручению Оператора и от его имени, а также случаев, установленных законодательством. Не считается нарушением предоставление персональных данных третьим лицам, действующим на основании договора с Компанией и для исполнения обязательств перед Пользователем и в рамках настоящего Соглашения.
+        </p>
+        <p class="mt-15">
+          Оператор имеет право вносить изменения в настоящее Соглашение в любое время. При внесении изменений в актуальной редакции указывается дата последнего обновления. Новая редакция Соглашения вступает в силу с момента ее размещения, если иное не предусмотрено новой редакцией Соглашения.
+        </p>
+        <p class="mt-15">
+          10.10.2017
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrapper">
+      <div class="footer__content">
+        <div class="footr__info">
+          <div class="logo">
+            <a href="/" class="logo__link" aria-label="Перейти на главную страницу">Ваш проводник в волшебный мир семян</a>
+          </div>
+          <div class="menu-social">
+            <ul class="social__list list-reset">
+              <li class="social__item"><a href="#" class="social__link social__link_yt"></a></li>
+              <li class="social__item"><a href="#" class="social__link social__link_vk"></a></li>
+              <li class="social__item"><a href="#" class="social__link social__link_tg"></a></li>
+              <li class="social__item"><a href="#" class="social__link social__link_wa"></a></li>
+            </ul>
+            <a href="#"><img src="/assets/img/svg/social/yandex-rating.svg" alt="yandex"></a>
+            <a href="#"><img src="/assets/img/svg/social/google-rating.svg" alt="google"></a>
+          </div>
+          <ul class="contacts__list list-reset">
+            <li class="contacts__item">
+              <a href="tel:+74954921993" class="contact__link" target="_blank">
+                <svg class="contact__icon">
+                  <use xlink:href="/assets/img/svg/phone.svg#phone"></use>
+                </svg>
+                <span>+7 (495) 492-19-93</span>
+              </a>
+            </li>
+            <li class="contacts__item">
+              <a href="https://maps.app.goo.gl/LGwbhbKouWsF7Uny7" class="contact__link" target="_blank">
+                <svg class="contact__icon">
+                  <use xlink:href="/assets/img/svg/map.svg#map"></use>
+                </svg>
+                <span>г. Москва, Рижский проезд, 3</span>
+              </a>
+            </li>
+            <li class="contacts__item">
+              <a href="mailto:semcojunior@mail.ru" class="contact__link" target="_blank">
+                <svg class="contact__icon">
+                  <use xlink:href="/assets/img/svg/mail.svg#mail"></use>
+                </svg>
+                <span>semcojunior@mail.ru</span>
+              </a>
+            </li>
+          </ul>
+          <p class="copyright">©️ 1991-2024, ООО СЕМКО</p>
+        </div>
+        <div>
+          <div class="footer-links">
+            <div class="col">
+              <h3 class="footer-links__label">Важная информация</h3>
+              <ul class="footer-links__list list-reset">
+                <li class="footer-links__item"><a href="/buy">Как купить семена</a></li>
+                <li class="footer-links__item"><a href="/pay">Оплата</a></li>
+                <li class="footer-links__item"><a href="/delivery">Доставка</a></li>
+                <li class="footer-links__item"><a href="/exchange">Возврат</a></li>
+                <li class="footer-links__item"><a href="/soglasie/">Согласие на обработку персональных данных</a></li>
+                <li class="footer-links__item"><a href="/oferta">Договор оферты</a></li>
+                <li class="footer-links__item"><a href="#">Оптовые закупки</a></li>
+                <li class="footer-links__item"><a href="/promotions">Акции и скидки</a></li>
+                <li class="footer-links__item"><a href="/documents">Документация</a></li>
+                <li class="footer-links__item"><a href="/oferta/">Пользовательское соглашение</a></li>
+              </ul>
+            </div>
+            <div class="col">
+              <h3 class="footer-links__label">О компании</h3>
+              <ul class="footer-links__list list-reset">
+                <li class="footer-links__item"><a href="#">О нас</a></li>
+                <li class="footer-links__item"><a href="#">Проекты</a></li>
+                <li class="footer-links__item"><a href="/trade">Где можно купить семена Семко?</a></li>
+                <li class="footer-links__item"><a href="/sale">Правила продаж ООО Семко</a></li>
+                <li class="footer-links__item"><a href="#">Видеоматериалы</a></li>
+                <li class="footer-links__item"><a href="#">Агротехника</a></li>
+                <li class="footer-links__item"><a href="#">Выставки</a></li>
+                <li class="footer-links__item"><a href="#">Газета</a></li>
+                <li class="footer-links__item"><a href="/contacts">Контакты</a></li>
+              </ul>
+            </div>
+          </div>
+          <form class="form" action="#" method="post">
+            <input class="form__input" type="email" name="email" placeholder="Ваш e-mail">
+            <button class="form-btn btn-fill btn-reset" type="submit">подписаться на рассылку</button>
+          </form>
+          <a class="politics-link" href="#">Политика конфиденциальности</a>
+        </div>
+      </div>
+      <div class="footer__text">
+        <p>
+          Каждый из нас понимает очевидную вещь: повышение уровня гражданского сознания предоставляет широкие возможности для переосмысления внешнеэкономических политик. В своём стремлении повысить качество жизни, они забывают, что высокотехнологичная концепция общественного уклада обеспечивает широкому кругу (специалистов) участие в формировании как самодостаточных, так и внешне зависимых концептуальных решений.
+        </p>
+        <p>
+          Лишь базовые сценарии поведения пользователей представляют собой не что иное, как квинтэссенцию победы маркетинга над разумом и должны быть подвергнуты целой серии независимых исследований. Следует отметить, что граница обучения кадров прекрасно подходит для реализации как самодостаточных, так и внешне зависимых концептуальных решений. Наше дело не так однозначно, как может показаться: перспективное планирование однозначно фиксирует необходимость дальнейших направлений развития. Современные технологии достигли такого уровня, что перспективное планирование выявляет срочную потребность инновационных методов управления процессами!
+        </p>
+        <p>
+          Как уже неоднократно упомянуто, интерактивные прототипы неоднозначны и будут объективно рассмотрены соответствующими инстанциями. Не следует, однако, забывать, что постоянное информационно-пропагандистское обеспечение нашей деятельности выявляет срочную потребность распределения внутренних резервов и ресурсов. Как уже неоднократно упомянуто, действия представителей оппозиции, которые представляют собой яркий пример континентально-европейского типа политической культуры, будут заблокированы в рамках своих собственных рациональных ограничений. Являясь всего лишь частью общей картины, представители современных социальных резервов и по сей день остаются уделом либералов, которые жаждут быть объективно рассмотрены соответствующими инстанциями. Каждый из нас понимает очевидную вещь: реализация намеченных плановых заданий, в своём классическом представлении, допускает внедрение поэтапного и последовательного развития общества. И нет сомнений, что ключевые особенности структуры проекта и по сей день остаются уделом либералов, которые жаждут быть призваны к ответу.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <div class="mobile-tap-bar">
+    <a href="/" class="mobile-tap-bar__link active">
+      <svg class="mobile-tap-bar__icon" aria-hidden="true" width="13" height="15">
+        <use xlink:href="/assets/img/svg/home.svg#icon"></use>
+      </svg>
+      <span class="mobile-tap-bar__text">Главная</span>
+    </a>
+    <a href="/promotions" class="mobile-tap-bar__link">
+      <svg class="mobile-tap-bar__icon" aria-hidden="true" width="15" height="13">
+        <use xlink:href="/assets/img/svg/promotion.svg#icon"></use>
+      </svg>
+      <span class="mobile-tap-bar__text">Акции</span>
+    </a>
+    <a href="/contacts" class="mobile-tap-bar__link">
+      <svg class="mobile-tap-bar__icon" aria-hidden="true" width="11" height="15">
+        <use xlink:href="/assets/img/svg/map.svg#map"></use>
+      </svg>
+      <span class="mobile-tap-bar__text">Контакты</span>
+    </a>
+    <a href="/catalog" class="mobile-tap-bar__link">
+      <svg class="mobile-tap-bar__icon" aria-hidden="true" width="13" height="15">
+        <use xlink:href="/assets/img/svg/catalog.svg#icon"></use>
+      </svg>
+      <span class="mobile-tap-bar__text">Каталог</span>
+    </a>
+    <a href="/cart" class="mobile-tap-bar__link">
+      <svg class="mobile-tap-bar__icon" aria-hidden="true" width="17" height="15">
+        <use xlink:href="/assets/img/svg/cart.svg#cart"></use>
+      </svg>
+      <span class="mobile-tap-bar__text">Корзина</span>
+    </a>
+  </div>
+
+  <div class="top-control"></div>
+
+  <div class="overlay-menu">
+    <div class="overlay-menu__panel">
+      <div class="overlay-menu__header">
+        <a href="/" class="btn-reset">
+          <img src="/assets/img/svg/logo.svg" width="105" height="30" alt="logo" />
+        </a>
+        <img src="/assets/img/cipollino-sm.avif" width="35" height="40" alt="doll">
+        <button class="close-btn btn-reset"></button>
+      </div>
+      <form class="search" action="#" method="post">
+        <input class="search__input" type="text" placeholder="Поиск...">
+        <button class="search__btn btn-reset" type="submit"></button>
+      </form>
+      <div class="katalog-layout">
+        <div class="section-header">
+          <button class="katalog-link btn-fill btn-reset">КАТАЛОГ</button>
+          <button class="katalog-hide btn-reset">← НАЗАД</button>
+        </div>
+        <div class="katalog-list">
+          <div class="katalog-item">
+            <button class="katalog-btn btn-reset" type="button">
+              <span class="katalog-btn--icon" aria-hidden="true">
+                <svg aria-hidden="true" width="13" height="13">
+                  <use xlink:href="/assets/img/svg/katalog/0.svg#icon"></use>
+                </svg>
+              </span>Семена овощей
+              <span class="katalog-btn--arrow" aria-hidden="true"></span>
+            </button>
+            <div class="katalog-links">
+              <div class="katalog-group">
+                <button class="katalog-btn--sm btn-reset">Томаты</button>
+                <div class="katalog-links--sm">
+                  <a href="/catalog" class="katalog-link--sm">Томаты</a>
+                  <a href="/catalog" class="katalog-link--sm">Томаты</a>
+                </div>
+              </div>
+              <a href="/catalog" class="katalog-link--sm">Томаты</a>
+              <div class="katalog-group">
+                <button class="katalog-btn--sm btn-reset">Томаты</button>
+                <div class="katalog-links--sm">
+                  <a href="/catalog" class="katalog-link--sm">Томаты</a>
+                  <a href="/catalog" class="katalog-link--sm">Томаты</a>
+                </div>
+              </div>
+              <a href="/catalog" class="katalog-link--sm">Томаты</a>
+            </div>
+          </div>
+          <div class="katalog-item">
+            <button class="katalog-btn btn-reset" type="button">
+              <span class="katalog-btn--icon" aria-hidden="true">
+                <svg aria-hidden="true" width="15" height="15">
+                  <use xlink:href="/assets/img/svg/katalog/1.svg#icon"></use>
+                </svg>
+              </span>Семена зелени
+              <span class="katalog-btn--arrow" aria-hidden="true"></span>
+            </button>
+            <div class="katalog-links">
+              
+            </div>
+          </div>
+          <div class="katalog-item">
+            <button class="katalog-btn btn-reset" type="button">
+              <span class="katalog-btn--icon" aria-hidden="true">
+                <svg aria-hidden="true" width="16" height="15">
+                  <use xlink:href="/assets/img/svg/katalog/2.svg#icon"></use>
+                </svg>
+              </span>Семена микрозелени
+              <span class="katalog-btn--arrow" aria-hidden="true"></span>
+            </button>
+            <div class="katalog-links">
+              
+            </div>
+          </div>
+          <div class="katalog-item">
+            <button class="katalog-btn btn-reset" type="button">
+              <span class="katalog-btn--icon" aria-hidden="true">
+                <svg aria-hidden="true" width="16" height="16">
+                  <use xlink:href="/assets/img/svg/katalog/3.svg#icon"></use>
+                </svg>
+              </span>Семена цветов и трав
+              <span class="katalog-btn--arrow" aria-hidden="true"></span>
+            </button>
+            <div class="katalog-links">
+              
+            </div>
+          </div>
+          <div class="katalog-item">
+            <button class="katalog-btn btn-reset" type="button">
+              <span class="katalog-btn--icon" aria-hidden="true">
+                <svg aria-hidden="true" width="17" height="17">
+                  <use xlink:href="/assets/img/svg/katalog/4.svg#icon"></use>
+                </svg>
+              </span>Наборы семян
+              <span class="katalog-btn--arrow" aria-hidden="true"></span>
+            </button>
+            <div class="katalog-links">
+              
+            </div>
+          </div>
+          <div class="katalog-item">
+            <button class="katalog-btn btn-reset" type="button">
+              <span class="katalog-btn--icon" aria-hidden="true">
+                <svg aria-hidden="true" width="16" height="19">
+                  <use xlink:href="/assets/img/svg/katalog/5.svg#icon"></use>
+                </svg>
+              </span>Удобрения и биопрепараты
+              <span class="katalog-btn--arrow" aria-hidden="true"></span>
+            </button>
+            <div class="katalog-links">
+              
+            </div>
+          </div>
+          <div class="katalog-item">
+            <button class="katalog-btn btn-reset" type="button">
+              <span class="katalog-btn--icon" aria-hidden="true">
+                <svg aria-hidden="true" width="12" height="14">
+                  <use xlink:href="/assets/img/svg/katalog/6.svg#icon"></use>
+                </svg>
+              </span>Литература
+              <span class="katalog-btn--arrow" aria-hidden="true"></span>
+            </button>
+            <div class="katalog-links">
+              
+            </div>
+          </div>
+          <div class="katalog-item">
+            <button class="katalog-btn btn-reset" type="button">
+              <span class="katalog-btn--icon" aria-hidden="true">
+                <svg aria-hidden="true" width="16" height="18">
+                  <use xlink:href="/assets/img/svg/katalog/7.svg#icon"></use>
+                </svg>
+              </span>Лук-севок
+              <span class="katalog-btn--arrow" aria-hidden="true"></span>
+            </button>
+            <div class="katalog-links">
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="menu">
+        <div class="menu__row">
+          <button class="menu-btn menu-btn--toggle btn-reset">О КОМПАНИИ</button>
+          <div class="menu__links">
+            <a href="#" class="menu__link">Подробнее о нас</a>
+            <a href="#" class="menu__link">Газета</a>
+            <a href="#" class="menu__link">Проекты</a>
+            <a href="#" class="menu__link">Видеоматериалы</a>
+            <a href="#" class="menu__link">Выставки</a>
+            <a href="/history" class="menu__link">История компании</a>
+            <a href="#" class="menu__link">Агротехника</a>
+            <a href="/co-founder" class="menu__link">От создателя</a>
+            <a href="/documents" class="menu__link">Документация</a>
+            <a href="/gendirector" class="menu__link">От ген. директора</a>
+          </div>
+        </div>
+        <div class="menu__row">
+          <button class="menu-btn menu-btn--toggle btn-reset">ОПТОВЫЕ ЗАКУПКИ</button>
+          <div class="menu__links menu__links_col">
+            <a href="/greenery" class="menu__link">Профессиональные и весовые</a>
+            <a href="/bundle" class="menu__link">Семена в красочных пакетиках</a>
+            <a href="/green" class="menu__link">Семена для микрозелени и бебилиф</a>
+          </div>
+        </div>
+        <div class="menu__row">
+          <a href="/promotions" class="menu-btn btn-reset">АКЦИИ</a>
+        </div>
+        <div class="menu__row">
+          <a href="/delivery" class="menu-btn btn-reset">ДОСТАВКА</a>
+        </div>
+        <div class="menu__row">
+          <a href="/pay" class="menu-btn btn-reset">ОПЛАТА</a>
+        </div>
+        <div class="menu__row">
+          <a href="/contacts" class="menu-btn btn-reset">КОНТАКТЫ</a>
+        </div>
+      </div>
+      <select class="select" name="city">
+        <option value="МОСКВА" selected>МОСКВА</option>
+        <option value="value2">ГОРОД 2</option>
+        <option value="value3">ГОРОД 3</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="modal">
+    <div class="modal__layout">
+      <div class="modal__content modal__content_cart" data-target="cart">
+        <ul class="product__list list-reset">
+          <li class="product__item">
+            <a href="/product" class="product__link_img btn-reset">
+              <img src="/assets/img/slider/goods/0.webp" alt="Семена томатов Цитрон F1">
+            </a>
+            <a href="/product" class="product__link_title btn-reset">Семена томатов Цитрон F1</a>
+            <div class="amount">
+              <button class="btn amount__btn amount__btn_less btn-reser"></button>
+              <input type="number" class="input" value="5">
+              <button class="btn amount__btn amount__btn_more btn-reser"></button>
+            </div>
+            <div class="sum">
+              <p class="sum__value">600 ₽</p>
+              <p class="sum__details">120 ₽ х 5</p>
+            </div>
+          </li>
+        </ul>
+        <div class="modal__footer">
+          <div class="result">
+            <p class="result__title">Итого</p>
+            <p class="result__value">600 ₽</p>
+          </div>
+          <a href="/order" class="btn btn-reset">оформить заказ</a>
+          <a href="/cart" class="btn btn-fill btn-reset">в корзину</a>
+        </div>
+      </div>
+
+      <div class="modal__content modal__content_login" data-target="login">
+        <button class="close-btn btn-reset" aria-label="Закрыть модальное окно"></button>
+        <img class="modal__logo" src="/assets/img/svg/logo.svg" alt="Logo">
+        <p class="modal__title">Войти</p>
+        <p class="modal__subtitle">в личный кабинет</p>
+        <form class="modal__form" action="#" method="post">
+          <input class="input" type="tel" placeholder="+7 (999) 999-99-99" data-validate-field="tel">
+          <button class="btn btn-fill btn-reset" type="button" data-path="auth">Войти</button>
+        </form>
+        <div class="modal__footer">
+          <div class="modal__links">
+            <button class="btn btn-reset" data-path="password">Забыли пароль?</button>
+            <button class="btn btn-active btn-reset" data-path="login-email">Войти через почту</button>
+          </div>
+          <p class="modal__info">Не зарегистрированы? <button class="btn btn-reset" data-path="registration">Зарегистрируйтесь тут</button></p>
+        </div>
+      </div>
+
+      <div class="modal__content modal__content_login" data-target="login-email">
+        <button class="close-btn btn-reset" aria-label="Закрыть модальное окно"></button>
+        <img class="modal__logo" src="/assets/img/svg/logo.svg" alt="Logo">
+        <p class="modal__title">Войти</p>
+        <p class="modal__subtitle">в личный кабинет</p>
+        <form class="modal__form" action="#" method="post">
+          <input class="input" type="email" placeholder="Введите почту" data-validate-field="email">
+          <button class="btn btn-fill btn-reset" type="submit">Войти</button>
+        </form>
+        <div class="modal__footer">
+          <div class="modal__links">
+            <button class="btn btn-reset" data-path="password">Забыли пароль?</button>
+            <button class="btn btn-active btn-reset" data-path="login">Войти через телефон</button>
+          </div>
+          <p class="modal__info">Не зарегистрированы? <button class="btn btn-reset" data-path="registration">Зарегистрируйтесь тут</button></p>
+        </div>
+      </div>
+
+      <div class="modal__content modal__content_login" data-target="auth">
+        <button class="close-btn btn-reset" aria-label="Закрыть модальное окно"></button>
+        <img class="modal__logo" src="/assets/img/svg/logo.svg" alt="Logo">
+        <p class="modal__title">Введите код</p>
+        <p class="modal__subtitle">из СМС-сообщения</p>
+        <form class="modal__form" action="#" method="post">
+          <input class="input input-password" type="password" placeholder="••••">
+          <button class="btn btn-reset" type="submit">Подтвердить</button>
+        </form>
+        <div class="modal__footer">
+          <div class="modal__links">
+            <button class="btn btn-reset" data-path="password">Забыли пароль?</button>
+            <button class="btn btn-active btn-reset" data-path="login-email">Войти через почту</button>
+          </div>
+          <p class="modal__info">Не зарегистрированы? <button class="btn btn-reset" data-path="registration">Зарегистрируйтесь тут</button></p>
+        </div>
+      </div>
+
+      <div class="modal__content modal__content_login" data-target="registration">
+        <button class="close-btn btn-reset" aria-label="Закрыть модальное окно"></button>
+        <img class="modal__logo" src="/assets/img/svg/logo.svg" alt="Logo">
+        <p class="modal__title">Зарегистрируйтесь</p>
+        <p class="modal__subtitle">чтобы войти в личный кабинет</p>
+        <form class="modal__form" action="#" method="post">
+          <input class="input" type="text" placeholder="Ваше имя" name="Name" data-validate-field="name" autocomplete="off">
+          <input class="input" type="tel" name="Phone" placeholder="+7 (999) 999-99-99" data-validate-field="tel" autocomplete="off">
+          <input class="input input-password" type="password" placeholder="Придумайте пароль" name="Password" autocomplete="off">
+          <button class="btn btn-fill btn-reset" type="submit">Зарегистрироваться</button>
+        </form>
+        <div class="modal__footer">
+          <div class="modal__links">
+            <button class="btn btn-reset" data-path="password">Забыли пароль?</button>
+            <button class="btn btn-reset" data-path="registration-email">Регистрация по почте</button>
+          </div>
+          <p class="modal__info">Уже зарегистрированы? <button class="btn btn-active btn-reset" data-path="login">Войдите тут</button></p>
+        </div>
+      </div>
+
+      <div class="modal__content modal__content_login" data-target="registration-email">
+        <button class="close-btn btn-reset" aria-label="Закрыть модальное окно"></button>
+        <img class="modal__logo" src="/assets/img/svg/logo.svg" alt="Logo">
+        <p class="modal__title">Зарегистрируйтесь</p>
+        <p class="modal__subtitle">чтобы войти в личный кабинет</p>
+        <form class="modal__form" action="#" method="post">
+          <input class="input" type="text" placeholder="Ваше имя" name="Name" data-validate-field="name" autocomplete="off">
+          <input class="input" type="email" name="Email" placeholder="Введите почту" data-validate-field="email" autocomplete="off">
+          <input class="input input-password" type="password" placeholder="Придумайте пароль" name="Password" autocomplete="off">
+          <button class="btn btn-fill btn-reset" type="submit">Зарегистрироваться</button>
+        </form>
+        <div class="modal__footer">
+          <div class="modal__links">
+            <button class="btn btn-reset" data-path="password">Забыли пароль?</button>
+            <button class="btn btn-reset" data-path="registration">Регистрация по телефону</button>
+          </div>
+          <p class="modal__info">Уже зарегистрированы? <button class="btn btn-active btn-reset" data-path="login">Войдите тут</button></p>
+        </div>
+      </div>
+
+      <div class="modal__content modal__content_login" data-target="password">
+        <button class="close-btn btn-reset" aria-label="Закрыть модальное окно"></button>
+        <img class="modal__logo" src="/assets/img/svg/logo.svg" alt="Logo">
+        <p class="modal__title">Забыли пароль?</p>
+        <p class="modal__subtitle">Введите email или телефон, который вы использовали при регистрации.</p>
+        <form class="modal__form" action="#" method="post">
+          <input class="input" type="text" placeholder="Введите почту / телефон" name="Name" autocomplete="off">
+          <button class="btn btn-fill btn-reset" type="submit">Восстановить пароль</button>
+        </form>
+        <div class="modal__footer">
+          <p class="modal__info modal__info_registration">Зарегистрируйтесь через <button class="btn btn-active btn-reset" data-path="registration">телефон</button></p>
+          <p class="modal__info">Уже зарегистрированы? <button class="btn btn-active btn-reset" data-path="login">Войдите тут</button></p>
+        </div>
+      </div>
+
+      <div class="modal__content modal__content_katalog" data-target="katalog">
+        <div class="tabs" data-tabs="tab">
+          <ul class="tabs__nav list-reset">
+            <li class="tabs__nav-item"><button class="tabs__nav-btn btn-reset" type="button">
+              <span class="tabs__nav-icon" aria-hidden="true">
+                <svg aria-hidden="true" width="19" height="19">
+                  <use xlink:href="/assets/img/svg/katalog/0.svg#icon"></use>
+                </svg>
+              </span>Семена овощей
+            </button></li>
+            <li class="tabs__nav-item"><button class="tabs__nav-btn btn-reset" type="button">
+              <span class="tabs__nav-icon" aria-hidden="true">
+                <svg aria-hidden="true" width="22" height="24">
+                  <use xlink:href="/assets/img/svg/katalog/1.svg#icon"></use>
+                </svg>
+              </span>Семена зелени
+            </button></li>
+            <li class="tabs__nav-item"><button class="tabs__nav-btn btn-reset" type="button">
+              <span class="tabs__nav-icon" aria-hidden="true">
+                <svg aria-hidden="true" width="20" height="20">
+                  <use xlink:href="/assets/img/svg/katalog/2.svg#icon"></use>
+                </svg>
+              </span>Семена микрозелени
+            </button></li>
+            <li class="tabs__nav-item"><button class="tabs__nav-btn btn-reset" type="button">
+              <span class="tabs__nav-icon" aria-hidden="true">
+                <svg aria-hidden="true" width="22" height="22">
+                  <use xlink:href="/assets/img/svg/katalog/3.svg#icon"></use>
+                </svg>
+              </span>Семена цветов и трав
+            </button></li>
+            <li class="tabs__nav-item"><button class="tabs__nav-btn btn-reset" type="button">
+              <span class="tabs__nav-icon" aria-hidden="true">
+                <svg aria-hidden="true" width="22" height="22">
+                  <use xlink:href="/assets/img/svg/katalog/4.svg#icon"></use>
+                </svg>
+              </span>Наборы семян
+            </button></li>
+            <li class="tabs__nav-item"><button class="tabs__nav-btn btn-reset" type="button">
+              <span class="tabs__nav-icon" aria-hidden="true">
+                <svg aria-hidden="true" width="22" height="25">
+                  <use xlink:href="/assets/img/svg/katalog/5.svg#icon"></use>
+                </svg>
+              </span>Удобрения и биопрепараты
+            </button></li>
+            <li class="tabs__nav-item"><button class="tabs__nav-btn btn-reset" type="button">
+              <span class="tabs__nav-icon" aria-hidden="true">
+                <svg aria-hidden="true" width="20" height="25">
+                  <use xlink:href="/assets/img/svg/katalog/6.svg#icon"></use>
+                </svg>
+              </span>Литература
+            </button></li>
+            <li class="tabs__nav-item"><button class="tabs__nav-btn btn-reset" type="button">
+              <span class="tabs__nav-icon" aria-hidden="true">
+                <svg aria-hidden="true" width="21" height="24">
+                  <use xlink:href="/assets/img/svg/katalog/7.svg#icon"></use>
+                </svg>
+              </span>Лук-севок
+            </button></li>
+          </ul>
+          <div class="tabs__content">
+            <div class="tabs__panel">
+              <div class="tabs__panel-header">
+                <p class="tabs__panel-title">Семена овощей</p>
+                <svg class="tabs__panel-icon" aria-hidden="true" width="29" height="29">
+                  <use xlink:href="/assets/img/svg/katalog/0.svg#icon"></use>
+                </svg>
+              </div>
+              <div class="tabs__panel-body">
+                <a href="/catalog" class="tabs__panel-link btn-reset">Семена зелени</a>
+                <a href="/catalog" class="tabs__panel-link btn-reset">Семена зелени</a>
+                <a href="/catalog" class="tabs__panel-link btn-reset">Семена зелени</a>
+                <a href="/catalog" class="tabs__panel-link btn-reset">Семена зелени</a>
+                <a href="/catalog" class="tabs__panel-link btn-reset">Семена зелени</a>
+                <a href="/catalog" class="tabs__panel-link btn-reset">Семена зелени</a>
+                <a href="/catalog" class="tabs__panel-link btn-reset">Семена зелени</a>
+                <a href="/catalog" class="tabs__panel-link btn-reset">Семена зелени</a>
+                <div class="tabs__panel-links">
+                  <button class="tabs__panel-links--btn btn-reset">
+                    Семена зелени
+                    <svg class="tabs__panel-links--icon" aria-hidden="true">
+                      <use xlink:href="#modal_arrow"></use>
+                    </svg>
+                  </button>
+                  <div class="tabs__panel-links--body">
+                    <a href="/catalog" class="tabs__panel-link btn-reset">Семена зелени</a>
+                    <a href="/catalog" class="tabs__panel-link btn-reset">Семена зелени</a>
+                  </div>
+                </div>
+                <div class="tabs__panel-links">
+                  <button class="tabs__panel-links--btn btn-reset">
+                    Семена зелени
+                    <svg class="tabs__panel-links--icon" aria-hidden="true">
+                      <use xlink:href="#modal_arrow"></use>
+                    </svg>
+                  </button>
+                  <div class="tabs__panel-links--body">
+                    <a href="/catalog" class="tabs__panel-link btn-reset">Семена зелени</a>
+                    <a href="/catalog" class="tabs__panel-link btn-reset">Семена зелени</a>
+                  </div>
+                </div>
+                <div class="tabs__panel-links">
+                  <button class="tabs__panel-links--btn btn-reset">
+                    Семена зелени
+                    <svg class="tabs__panel-links--icon" aria-hidden="true">
+                      <use xlink:href="#modal_arrow"></use>
+                    </svg>
+                  </button>
+                  <div class="tabs__panel-links--body">
+                    <a href="/catalog" class="tabs__panel-link btn-reset">Семена зелени</a>
+                    <a href="/catalog" class="tabs__panel-link btn-reset">Семена зелени</a>
+                  </div>
+                </div>
+                <div class="tabs__panel-links">
+                  <button class="tabs__panel-links--btn btn-reset">
+                    Семена зелени
+                    <svg class="tabs__panel-links--icon" aria-hidden="true">
+                      <use xlink:href="#modal_arrow"></use>
+                    </svg>
+                  </button>
+                  <div class="tabs__panel-links--body">
+                    <a href="/catalog" class="tabs__panel-link btn-reset">Семена зелени</a>
+                    <a href="/catalog" class="tabs__panel-link btn-reset">Семена зелени</a>
+                  </div>
+                </div>
+                <a href="/catalog" class="tabs__panel-link btn-reset">Семена зелени</a>
+                <a href="/catalog" class="tabs__panel-link btn-reset">Семена зелени</a>
+                <a href="/catalog" class="tabs__panel-link btn-reset">Семена зелени</a>
+                <a href="/catalog" class="tabs__panel-link btn-reset">Семена зелени</a>
+                <a href="/catalog" class="tabs__panel-link btn-reset">Семена зелени</a>
+                <a href="/catalog" class="tabs__panel-link btn-reset">Семена зелени</a>
+                <a href="/catalog" class="tabs__panel-link btn-reset">Семена зелени</a>
+                <a href="/catalog" class="tabs__panel-link btn-reset">Семена зелени</a>
+              </div>
+            </div>
+            <div class="tabs__panel">
+              
+            </div>
+            <div class="tabs__panel">
+              
+            </div>
+            <div class="tabs__panel">
+              
+            </div>
+            <div class="tabs__panel">
+              
+            </div>
+            <div class="tabs__panel">
+              
+            </div>
+            <div class="tabs__panel">
+              
+            </div>
+            <div class="tabs__panel">
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="/assets/js/lib/inputmask.min.js"></script>
+  <script src="/assets/js/burger.js"></script>
+  <script src="/assets/js/modal.js"></script>
+  <script src="/assets/js/tabs.js"></script>
+  <script src="/assets/js/maskFone.js"></script>
+  <script src="/assets/js/scrollTop.js"></script>
+
+</body>
+</html>

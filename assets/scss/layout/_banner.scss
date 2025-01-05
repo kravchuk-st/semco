@@ -16,47 +16,47 @@
       box-sizing: border-box;
 
       &_first {
-        background: right bottom / auto 90% no-repeat url("/assets/img/slider/banner/family.png"), $color-dark center / cover no-repeat url("/assets/img/slider/banner/main-bg.png");
+        background: right bottom / auto 90% no-repeat url("/assets/img/slider/banner/family.avif"), $color-dark center / cover no-repeat url("/assets/img/slider/banner/main-bg.avif");
       }
 
       &_second {
-        background: $color-dark right 10% center / cover url("/assets/img/slider/banner/02.png");
+        background: $color-dark right 10% center / cover url("/assets/img/slider/banner/02.avif");
       }
 
       &_third {
-        background: right 20px center / auto 90% no-repeat url("/assets/img/slider/banner/03.png"), $color-dark center / cover no-repeat url("/assets/img/slider/banner/bg.png");
+        background: right 20px center / auto 90% no-repeat url("/assets/img/slider/banner/03.avif"), $color-dark center / cover no-repeat url("/assets/img/slider/banner/bg.avif");
       }
 
       &_fourth {
-        background: right center / auto 100% no-repeat url("/assets/img/slider/banner/04.png"), $color-dark center / cover no-repeat url("/assets/img/slider/banner/bg.png");
+        background: right center / auto 100% no-repeat url("/assets/img/slider/banner/04.avif"), $color-dark center / cover no-repeat url("/assets/img/slider/banner/bg.avif");
       }
 
       &_fifth {
-        background: right center / auto 100% no-repeat url("/assets/img/slider/banner/05.png"), $color-dark center / cover no-repeat url("/assets/img/slider/banner/bg.png");
+        background: right center / auto 100% no-repeat url("/assets/img/slider/banner/05.avif"), $color-dark center / cover no-repeat url("/assets/img/slider/banner/bg.avif");
       }
 
       &_sixth {
-        background: right center / auto 100% no-repeat url("/assets/img/slider/banner/06.png"), $color-dark center / cover no-repeat url("/assets/img/slider/banner/bg.png");
+        background: right center / auto 100% no-repeat url("/assets/img/slider/banner/06.avif"), $color-dark center / cover no-repeat url("/assets/img/slider/banner/bg.avif");
       }
 
       &_seventh {
-        background: right center / auto 100% no-repeat url("/assets/img/slider/banner/07.png"), $color-dark center / cover no-repeat url("/assets/img/slider/banner/bg.png");
+        background: right center / auto 100% no-repeat url("/assets/img/slider/banner/07.avif"), $color-dark center / cover no-repeat url("/assets/img/slider/banner/bg.avif");
       }
 
       &_eighth {
-        background: right center / auto 100% no-repeat url("/assets/img/slider/banner/08.png"), $color-dark center / cover no-repeat url("/assets/img/slider/banner/bg.png");
+        background: right center / auto 100% no-repeat url("/assets/img/slider/banner/08.avif"), $color-dark center / cover no-repeat url("/assets/img/slider/banner/bg.avif");
       }
 
       &_ninth {
-        background: right center / auto 100% no-repeat url("/assets/img/slider/banner/09.png"), $color-dark center / cover no-repeat url("/assets/img/slider/banner/bg.png");
+        background: right center / auto 100% no-repeat url("/assets/img/slider/banner/09.avif"), $color-dark center / cover no-repeat url("/assets/img/slider/banner/bg.avif");
       }
 
       &_tenth {
-        background: right center / auto 100% no-repeat url("/assets/img/slider/banner/10.png"), $color-dark center / cover no-repeat url("/assets/img/slider/banner/bg.png");
+        background: right center / auto 100% no-repeat url("/assets/img/slider/banner/10.avif"), $color-dark center / cover no-repeat url("/assets/img/slider/banner/bg.avif");
       }
 
       &_ellevte {
-        background: right center / auto 100% no-repeat url("/assets/img/slider/banner/11.png"), $color-dark center / cover no-repeat url("/assets/img/slider/banner/bg.png");
+        background: right center / auto 100% no-repeat url("/assets/img/slider/banner/11.avif"), $color-dark center / cover no-repeat url("/assets/img/slider/banner/bg.avif");
       }
     }
   }
@@ -92,15 +92,23 @@
     height: 30px;
     opacity: 1;
     background: $color-light;
+    border: 1px solid transparent;
 
     &:hover {
       opacity: 1;
+      background-color: $color-main;
+      border: 1px solid #fff;
+
+      svg {
+        fill: #fff;
+      }
     }
 
     svg {
       width: auto;
       height: 16px;
       fill: $color-main;
+      transition: .25s linear;
     }
   }
 
@@ -161,7 +169,8 @@
 
     &:hover {
       color: $color-light;
-      background-color: $color-btn-hover;
+      background-color: transparent;
+      box-shadow: inset 0 0 0 2px #fff;
     }
   }
 }
@@ -233,8 +242,8 @@
 }
 
 @media screen and (max-width: 768px) {
-  .splide__slide_first {
-    background: right -2px bottom / auto 92% no-repeat url(/assets/img/slider/banner/family-sm.png), #24383b center / cover url(/assets/img/slider/banner/main-bg.png);
+  .banner__slider .splide__slide_first {
+    background: right -2px bottom / auto 92% no-repeat url("/assets/img/slider/banner/family-sm.avif"), #24383b center / cover url("/assets/img/slider/banner/main-bg.avif");
 
     .banner__title {
       max-width: 340px;
@@ -263,7 +272,7 @@
 
 @media screen and (max-width: 576px) {
   .banner__slider .splide__slide_first {
-    background: right -2px bottom / auto 92% no-repeat url(/assets/img/slider/banner/family-sm.png), #24383b center / cover url(/assets/img/slider/banner/main-bg.png);
+    background: right -2px bottom / auto 92% no-repeat url("/assets/img/slider/banner/family-sm.avif"), #24383b center / cover url("/assets/img/slider/banner/main-bg.avif");
 
     .banner__title {
       max-width: 230px;
@@ -309,47 +318,47 @@
     padding: 14px 15px 40px;
 
     &_first {
-      background: right bottom / auto 160px no-repeat url("/assets/img/slider/banner/family-xs.png"), $color-dark left center / cover no-repeat url("/assets/img/slider/banner/main-bg.png");
+      background: right 10px bottom / auto 160px no-repeat url("/assets/img/slider/banner/family-xs.avif"), $color-dark right 10% top / cover no-repeat url("/assets/img/slider/banner/map.avif");
     }
 
     &_second {
-      background: $color-dark right 10% center / cover url("/assets/img/slider/banner/02.png");
+      background: $color-dark right 10% center / cover url("/assets/img/slider/banner/02.avif");
     }
 
     &_third {
-      background: $color-dark right bottom 30px / auto 55% no-repeat url("/assets/img/slider/banner/03.png");
+      background: $color-dark right bottom 30px / auto 55% no-repeat url("/assets/img/slider/banner/03.avif");
     }
 
     &_fourth {
-      background: $color-dark right bottom / auto 90% no-repeat url("/assets/img/slider/banner/04-sm.png");
+      background: $color-dark right bottom / auto 90% no-repeat url("/assets/img/slider/banner/04-sm.avif");
     }
 
     &_fifth {
-      background: $color-dark right bottom / auto 70% no-repeat url("/assets/img/slider/banner/05-sm.png");
+      background: $color-dark right bottom / auto 70% no-repeat url("/assets/img/slider/banner/05-sm.avif");
     }
 
     &_sixth {
-      background: $color-dark right bottom / auto 80% no-repeat url("/assets/img/slider/banner/06-sm.png");
+      background: $color-dark right bottom / auto 80% no-repeat url("/assets/img/slider/banner/06-sm.avif");
     }
 
     &_seventh {
-      background: $color-dark right bottom / auto no-repeat url("/assets/img/slider/banner/07-sm.png");
+      background: $color-dark right bottom / auto no-repeat url("/assets/img/slider/banner/07-sm.avif");
     }
 
     &_eighth {
-      background: $color-dark right -50px bottom -85px / auto no-repeat url("/assets/img/slider/banner/08-sm.png");
+      background: $color-dark right -50px bottom -85px / auto no-repeat url("/assets/img/slider/banner/08-sm.avif");
     }
 
     &_ninth {
-      background: $color-dark right bottom / auto 100% no-repeat url("/assets/img/slider/banner/09-sm.png");
+      background: $color-dark right bottom / auto 100% no-repeat url("/assets/img/slider/banner/09-sm.avif");
     }
 
     &_tenth {
-      background: $color-dark right bottom / auto no-repeat url("/assets/img/slider/banner/10-sm.png");
+      background: $color-dark right bottom / auto no-repeat url("/assets/img/slider/banner/10-sm.avif");
     }
 
     &_ellevte {
-      background: $color-dark right bottom / auto no-repeat url("/assets/img/slider/banner/11-sm.png");
+      background: $color-dark right bottom / auto no-repeat url("/assets/img/slider/banner/11-sm.avif");
     }
   }
 }

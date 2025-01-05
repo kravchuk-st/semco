@@ -19,13 +19,8 @@
   <header class="header">
     <div class="header__top">
       <div class="wrapper">
-        <a href="/" class="logo">
-          <picture>
-            <source srcset="/assets/img/svg/logo-light.svg" media="(max-width: 1100px)" />
-            <img class="logo__icon" src="/assets/img/svg/logo.svg" alt="logo" />
-          </picture>
-        </a>
-        <img class="doll" src="/assets/img/cipollino-sm.png" alt="doll">
+        <a href="/" class="logo" aria-label="Перейти на главную страницу"></a>
+        <img class="doll" src="/assets/img/cipollino-sm.avif" alt="doll">
         <button class="katalog-link btn-fill btn-reset" data-path="katalog">КАТАЛОГ</button>
         <form class="search" action="#" method="post">
           <input class="search__input" type="text" placeholder="Поиск...">
@@ -87,7 +82,22 @@
         <nav class="nav">
           <ul class="nav__list list-reset">
             <li class="nav__item"><a href="#" class="nav__link">О КОМПАНИИ</a></li>
-            <li class="nav__item"><a href="#" class="nav__link">ОПТОВЫЕ ЗАКУПКИ</a></li>
+            <li class="nav__item tooltip">
+              <button class="nav__link btn-reset" aria-labelledby="nav__link-tooltip">ОПТОВЫЕ ЗАКУПКИ</button>
+              <div class="dropdown-menu" id="nav__link-tooltip" role="tooltip">
+                <ul class="dropdown-menu__list list-reset">
+                  <li class="dropdown-menu__item">
+                    <a href="/greenery" class="nav__link">Профессиональные и весовые</a>
+                  </li>
+                  <li class="dropdown-menu__item">
+                    <a href="/bundle" class="nav__link">Семена в красочных пакетиках</a>
+                  </li>
+                  <li class="dropdown-menu__item">
+                    <a href="/green" class="nav__link">Семена для микрозелени и бебилиф</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
             <li class="nav__item"><a href="/promotions" class="nav__link">АКЦИИ</a></li>
             <li class="nav__item"><a href="/delivery" class="nav__link">ДОСТАВКА</a></li>
             <li class="nav__item"><a href="/pay" class="nav__link">ОПЛАТА</a></li>
@@ -103,7 +113,7 @@
             </span>
             <span class="call__text">+7 (495) 686-04-75</span>
           </a>
-          <button class="call-back__btn btn-reset">ЗАКАЗАТЬ ЗВОНОК</button>
+          <button class="call-back__btn btn-reset" data-path="call-back">ЗАКАЗАТЬ ЗВОНОК</button>
         </div>
       </div>
     </div>
@@ -135,7 +145,7 @@
         <p class="history-banner__subtitle">
           Мы осуществляем доставку семян и сопутствующих товаров нашего интернет-магазина во все регионы Российской Федерации, а также в Беларусь и Казахстан.
         </p>
-        <img class="history-banner__img" src="/assets/img/delivery-bg.png" alt="...">
+        <img class="history-banner__img" src="/assets/img/delivery-bg.avif" alt="...">
         <ul class="history-banner__list list-reset">
           <li class="history-banner__item">
             <div class="history-card">
@@ -235,7 +245,7 @@
             </div>
           </div>
           <div class="history__image">
-            <img class="history__icon" src="/assets/img/cipollino.png" alt="cipollino">
+            <img class="history__icon" src="/assets/img/cipollino.avif" alt="cipollino">
           </div>
         </div>
         <div class="history__inserted">
@@ -249,11 +259,11 @@
                 </p>
               </div>
               <div class="history__imgs">
-                <img class="history__img" src="/assets/img/history/sm/1991/1.jpg" alt="..." data-path="zoom" loading="lazy">
-                <img class="history__img" src="/assets/img/history/sm/1991/2.jpg" alt="..." data-path="zoom" loading="lazy">
-                <img class="history__img" src="/assets/img/history/sm/1991/3.jpg" alt="..." data-path="zoom" loading="lazy">
-                <img class="history__img" src="/assets/img/history/sm/1991/4.jpg" alt="..." data-path="zoom" loading="lazy">
-                <img class="history__img" src="/assets/img/history/sm/1991/5.jpg" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/1991/1.webp" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/1991/2.webp" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/1991/3.webp" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/1991/4.webp" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/1991/5.webp" alt="..." data-path="zoom" loading="lazy">
               </div>
             </div>
             <div class="history__item">
@@ -264,11 +274,11 @@
                 </p>
               </div>
               <div class="history__imgs">
-                <img class="history__img" src="/assets/img/history/sm/1992/1.jpg" alt="..." data-path="zoom" loading="lazy">
-                <img class="history__img" src="/assets/img/history/sm/1992/2.jpg" alt="..." data-path="zoom" loading="lazy">
-                <img class="history__img" src="/assets/img/history/sm/1992/3.jpg" alt="..." data-path="zoom" loading="lazy">
-                <img class="history__img" src="/assets/img/history/sm/1992/4.jpg" alt="..." data-path="zoom" loading="lazy">
-                <img class="history__img" src="/assets/img/history/sm/1992/5.jpg" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/1992/1.webp" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/1992/2.webp" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/1992/3.webp" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/1992/4.webp" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/1992/5.webp" alt="..." data-path="zoom" loading="lazy">
               </div>
             </div>
             <div class="history__item">
@@ -279,11 +289,11 @@
                 </p>
               </div>
               <div class="history__imgs">
-                <img class="history__img" src="/assets/img/history/sm/1993/1.jpg" alt="..." data-path="zoom" loading="lazy">
-                <img class="history__img" src="/assets/img/history/sm/1993/2.jpg" alt="..." data-path="zoom" loading="lazy">
-                <img class="history__img" src="/assets/img/history/sm/1993/3.jpg" alt="..." data-path="zoom" loading="lazy">
-                <img class="history__img" src="/assets/img/history/sm/1993/4.jpg" alt="..." data-path="zoom" loading="lazy">
-                <img class="history__img" src="/assets/img/history/sm/1993/5.jpg" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/1993/1.webp" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/1993/2.webp" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/1993/3.webp" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/1993/4.webp" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/1993/5.webp" alt="..." data-path="zoom" loading="lazy">
               </div>
             </div>
             <div class="history__item">
@@ -297,11 +307,11 @@
                 </p>
               </div>
               <div class="history__imgs">
-                <img class="history__img" src="/assets/img/history/sm/1994/1.jpg" alt="..." data-path="zoom" loading="lazy">
-                <img class="history__img" src="/assets/img/history/sm/1994/2.jpg" alt="..." data-path="zoom" loading="lazy">
-                <img class="history__img" src="/assets/img/history/sm/1994/3.jpg" alt="..." data-path="zoom" loading="lazy">
-                <img class="history__img" src="/assets/img/history/sm/1994/4.jpg" alt="..." data-path="zoom" loading="lazy">
-                <img class="history__img" src="/assets/img/history/sm/1994/5.jpg" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/1994/1.webp" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/1994/2.webp" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/1994/3.webp" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/1994/4.webp" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/1994/5.webp" alt="..." data-path="zoom" loading="lazy">
               </div>
             </div>
             <div class="history__item">
@@ -315,11 +325,11 @@
                 </p>
               </div>
               <div class="history__imgs">
-                <img class="history__img" src="/assets/img/history/sm/1995/1.jpg" alt="..." data-path="zoom" loading="lazy">
-                <img class="history__img" src="/assets/img/history/sm/1995/2.jpg" alt="..." data-path="zoom" loading="lazy">
-                <img class="history__img" src="/assets/img/history/sm/1995/3.jpg" alt="..." data-path="zoom" loading="lazy">
-                <img class="history__img" src="/assets/img/history/sm/1995/4.jpg" alt="..." data-path="zoom" loading="lazy">
-                <img class="history__img" src="/assets/img/history/sm/1995/5.jpg" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/1995/1.webp" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/1995/2.webp" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/1995/3.webp" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/1995/4.webp" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/1995/5.webp" alt="..." data-path="zoom" loading="lazy">
               </div>
             </div>
             <div class="history__item">
@@ -330,11 +340,11 @@
                 </p>
               </div>
               <div class="history__imgs">
-                <img class="history__img" src="/assets/img/history/sm/1996/1.jpg" alt="..." data-path="zoom" loading="lazy">
-                <img class="history__img" src="/assets/img/history/sm/1996/2.jpg" alt="..." data-path="zoom" loading="lazy">
-                <img class="history__img" src="/assets/img/history/sm/1996/3.jpg" alt="..." data-path="zoom" loading="lazy">
-                <img class="history__img" src="/assets/img/history/sm/1996/4.jpg" alt="..." data-path="zoom" loading="lazy">
-                <img class="history__img" src="/assets/img/history/sm/1996/5.jpg" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/1996/1.webp" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/1996/2.webp" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/1996/3.webp" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/1996/4.webp" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/1996/5.webp" alt="..." data-path="zoom" loading="lazy">
               </div>
             </div>
             <div class="history__item">
@@ -345,11 +355,11 @@
                 </p>
               </div>
               <div class="history__imgs">
-                <img class="history__img" src="/assets/img/history/sm/1997/1.jpg" alt="..." data-path="zoom" loading="lazy">
-                <img class="history__img" src="/assets/img/history/sm/1997/2.jpg" alt="..." data-path="zoom" loading="lazy">
-                <img class="history__img" src="/assets/img/history/sm/1997/3.jpg" alt="..." data-path="zoom" loading="lazy">
-                <img class="history__img" src="/assets/img/history/sm/1997/4.jpg" alt="..." data-path="zoom" loading="lazy">
-                <img class="history__img" src="/assets/img/history/sm/1997/5.jpg" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/1997/1.webp" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/1997/2.webp" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/1997/3.webp" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/1997/4.webp" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/1997/5.webp" alt="..." data-path="zoom" loading="lazy">
               </div>
             </div>
             <div class="history__item">
@@ -360,11 +370,11 @@
                 </p>
               </div>
               <div class="history__imgs">
-                <img class="history__img" src="/assets/img/history/sm/1998/1.jpg" alt="..." data-path="zoom" loading="lazy">
-                <img class="history__img" src="/assets/img/history/sm/1998/2.jpg" alt="..." data-path="zoom" loading="lazy">
-                <img class="history__img" src="/assets/img/history/sm/1998/3.jpg" alt="..." data-path="zoom" loading="lazy">
-                <img class="history__img" src="/assets/img/history/sm/1998/4.jpg" alt="..." data-path="zoom" loading="lazy">
-                <img class="history__img" src="/assets/img/history/sm/1998/5.jpg" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/1998/1.webp" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/1998/2.webp" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/1998/3.webp" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/1998/4.webp" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/1998/5.webp" alt="..." data-path="zoom" loading="lazy">
               </div>
             </div>
             <div class="history__item">
@@ -375,11 +385,11 @@
                 </p>
               </div>
               <div class="history__imgs">
-                <img class="history__img" src="/assets/img/history/sm/1999/1.jpg" alt="..." data-path="zoom" loading="lazy">
-                <img class="history__img" src="/assets/img/history/sm/1999/2.jpg" alt="..." data-path="zoom" loading="lazy">
-                <img class="history__img" src="/assets/img/history/sm/1999/3.jpg" alt="..." data-path="zoom" loading="lazy">
-                <img class="history__img" src="/assets/img/history/sm/1999/4.jpg" alt="..." data-path="zoom" loading="lazy">
-                <img class="history__img" src="/assets/img/history/sm/1999/5.jpg" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/1999/1.webp" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/1999/2.webp" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/1999/3.webp" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/1999/4.webp" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/1999/5.webp" alt="..." data-path="zoom" loading="lazy">
               </div>
             </div>
             <div class="history__item">
@@ -390,11 +400,11 @@
                 </p>
               </div>
               <div class="history__imgs">
-                <img class="history__img" src="/assets/img/history/sm/2000/1.jpg" alt="..." data-path="zoom" loading="lazy">
-                <img class="history__img" src="/assets/img/history/sm/2000/2.jpg" alt="..." data-path="zoom" loading="lazy">
-                <img class="history__img" src="/assets/img/history/sm/2000/3.jpg" alt="..." data-path="zoom" loading="lazy">
-                <img class="history__img" src="/assets/img/history/sm/2000/4.jpg" alt="..." data-path="zoom" loading="lazy">
-                <img class="history__img" src="/assets/img/history/sm/2000/5.jpg" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2000/1.webp" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2000/2.webp" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2000/3.webp" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2000/4.webp" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2000/5.webp" alt="..." data-path="zoom" loading="lazy">
               </div>
             </div>
             <div class="history__item">
@@ -405,11 +415,11 @@
                 </p>
               </div>
               <div class="history__imgs">
-                <img class="history__img" src="/assets/img/history/sm/2001/1.jpg" alt="..." data-path="zoom" loading="lazy">
-                <img class="history__img" src="/assets/img/history/sm/2001/2.jpg" alt="..." data-path="zoom" loading="lazy">
-                <img class="history__img" src="/assets/img/history/sm/2001/3.jpg" alt="..." data-path="zoom" loading="lazy">
-                <img class="history__img" src="/assets/img/history/sm/2001/4.jpg" alt="..." data-path="zoom" loading="lazy">
-                <img class="history__img" src="/assets/img/history/sm/2001/5.jpg" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2001/1.webp" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2001/2.webp" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2001/3.webp" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2001/4.webp" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2001/5.webp" alt="..." data-path="zoom" loading="lazy">
               </div>
             </div>
             <div class="history__item">
@@ -420,11 +430,11 @@
                 </p>
               </div>
               <div class="history__imgs">
-                <img class="history__img" src="/assets/img/history/sm/2002/1.jpg" alt="..." data-path="zoom" loading="lazy">
-                <img class="history__img" src="/assets/img/history/sm/2002/2.jpg" alt="..." data-path="zoom" loading="lazy">
-                <img class="history__img" src="/assets/img/history/sm/2002/3.jpg" alt="..." data-path="zoom" loading="lazy">
-                <img class="history__img" src="/assets/img/history/sm/2002/4.jpg" alt="..." data-path="zoom" loading="lazy">
-                <img class="history__img" src="/assets/img/history/sm/2002/5.jpg" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2002/1.webp" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2002/2.webp" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2002/3.webp" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2002/4.webp" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2002/5.webp" alt="..." data-path="zoom" loading="lazy">
               </div>
             </div>
             <div class="history__item">
@@ -435,11 +445,11 @@
                 </p>
               </div>
               <div class="history__imgs">
-                <img class="history__img" src="/assets/img/history/sm/2003/1.jpg" alt="..." data-path="zoom" loading="lazy">
-                <img class="history__img" src="/assets/img/history/sm/2003/2.jpg" alt="..." data-path="zoom" loading="lazy">
-                <img class="history__img" src="/assets/img/history/sm/2003/3.jpg" alt="..." data-path="zoom" loading="lazy">
-                <img class="history__img" src="/assets/img/history/sm/2003/4.jpg" alt="..." data-path="zoom" loading="lazy">
-                <img class="history__img" src="/assets/img/history/sm/2003/5.jpg" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2003/1.webp" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2003/2.webp" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2003/3.webp" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2003/4.webp" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2003/5.webp" alt="..." data-path="zoom" loading="lazy">
               </div>
             </div>
             <div class="history__item">
@@ -450,11 +460,11 @@
                 </p>
               </div>
               <div class="history__imgs">
-                <img class="history__img" src="/assets/img/history/sm/2004/1.jpg" alt="..." data-path="zoom" loading="lazy">
-                <img class="history__img" src="/assets/img/history/sm/2004/2.jpg" alt="..." data-path="zoom" loading="lazy">
-                <img class="history__img" src="/assets/img/history/sm/2004/3.jpg" alt="..." data-path="zoom" loading="lazy">
-                <img class="history__img" src="/assets/img/history/sm/2004/4.jpg" alt="..." data-path="zoom" loading="lazy">
-                <img class="history__img" src="/assets/img/history/sm/2004/5.jpg" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2004/1.webp" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2004/2.webp" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2004/3.webp" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2004/4.webp" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2004/5.webp" alt="..." data-path="zoom" loading="lazy">
               </div>
             </div>
             <div class="history__item">
@@ -465,11 +475,11 @@
                 </p>
               </div>
               <div class="history__imgs">
-                <img class="history__img" src="/assets/img/history/sm/2005/1.jpg" alt="..." data-path="zoom" loading="lazy">
-                <img class="history__img" src="/assets/img/history/sm/2005/2.jpg" alt="..." data-path="zoom" loading="lazy">
-                <img class="history__img" src="/assets/img/history/sm/2005/3.jpg" alt="..." data-path="zoom" loading="lazy">
-                <img class="history__img" src="/assets/img/history/sm/2005/4.jpg" alt="..." data-path="zoom" loading="lazy">
-                <img class="history__img" src="/assets/img/history/sm/2005/5.jpg" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2005/1.webp" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2005/2.webp" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2005/3.webp" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2005/4.webp" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2005/5.webp" alt="..." data-path="zoom" loading="lazy">
               </div>
             </div>
             <div class="history__item">
@@ -480,11 +490,11 @@
                 </p>
               </div>
               <div class="history__imgs">
-                <img class="history__img" src="/assets/img/history/sm/2006/1.jpg" alt="..." data-path="zoom" loading="lazy">
-                <img class="history__img" src="/assets/img/history/sm/2006/2.jpg" alt="..." data-path="zoom" loading="lazy">
-                <img class="history__img" src="/assets/img/history/sm/2006/3.jpg" alt="..." data-path="zoom" loading="lazy">
-                <img class="history__img" src="/assets/img/history/sm/2006/4.jpg" alt="..." data-path="zoom" loading="lazy">
-                <img class="history__img" src="/assets/img/history/sm/2006/5.jpg" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2006/1.webp" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2006/2.webp" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2006/3.webp" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2006/4.webp" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2006/5.webp" alt="..." data-path="zoom" loading="lazy">
               </div>
             </div>
             <div class="history__item">
@@ -495,11 +505,11 @@
                 </p>
               </div>
               <div class="history__imgs">
-                <img class="history__img" src="/assets/img/history/sm/2007/1.jpg" alt="..." data-path="zoom" loading="lazy">
-                <img class="history__img" src="/assets/img/history/sm/2007/2.jpg" alt="..." data-path="zoom" loading="lazy">
-                <img class="history__img" src="/assets/img/history/sm/2007/3.jpg" alt="..." data-path="zoom" loading="lazy">
-                <img class="history__img" src="/assets/img/history/sm/2007/4.jpg" alt="..." data-path="zoom" loading="lazy">
-                <img class="history__img" src="/assets/img/history/sm/2007/5.jpg" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2007/1.webp" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2007/2.webp" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2007/3.webp" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2007/4.webp" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2007/5.webp" alt="..." data-path="zoom" loading="lazy">
               </div>
             </div>
             <div class="history__item">
@@ -510,11 +520,11 @@
                 </p>
               </div>
               <div class="history__imgs">
-                <img class="history__img" src="/assets/img/history/sm/2008/1.jpg" alt="..." data-path="zoom" loading="lazy">
-                <img class="history__img" src="/assets/img/history/sm/2008/2.jpg" alt="..." data-path="zoom" loading="lazy">
-                <img class="history__img" src="/assets/img/history/sm/2008/3.jpg" alt="..." data-path="zoom" loading="lazy">
-                <img class="history__img" src="/assets/img/history/sm/2008/4.jpg" alt="..." data-path="zoom" loading="lazy">
-                <img class="history__img" src="/assets/img/history/sm/2008/5.jpg" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2008/1.webp" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2008/2.webp" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2008/3.webp" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2008/4.webp" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2008/5.webp" alt="..." data-path="zoom" loading="lazy">
               </div>
             </div>
             <div class="history__item">
@@ -525,11 +535,11 @@
                 </p>
               </div>
               <div class="history__imgs">
-                <img class="history__img" src="/assets/img/history/sm/2009/1.jpg" alt="..." data-path="zoom" loading="lazy">
-                <img class="history__img" src="/assets/img/history/sm/2009/2.jpg" alt="..." data-path="zoom" loading="lazy">
-                <img class="history__img" src="/assets/img/history/sm/2009/3.jpg" alt="..." data-path="zoom" loading="lazy">
-                <img class="history__img" src="/assets/img/history/sm/2009/4.jpg" alt="..." data-path="zoom" loading="lazy">
-                <img class="history__img" src="/assets/img/history/sm/2009/5.jpg" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2009/1.webp" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2009/2.webp" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2009/3.webp" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2009/4.webp" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2009/5.webp" alt="..." data-path="zoom" loading="lazy">
               </div>
             </div>
             <div class="history__item">
@@ -540,11 +550,11 @@
                 </p>
               </div>
               <div class="history__imgs">
-                <img class="history__img" src="/assets/img/history/sm/2010/1.jpg" alt="..." data-path="zoom" loading="lazy">
-                <img class="history__img" src="/assets/img/history/sm/2010/2.jpg" alt="..." data-path="zoom" loading="lazy">
-                <img class="history__img" src="/assets/img/history/sm/2010/3.jpg" alt="..." data-path="zoom" loading="lazy">
-                <img class="history__img" src="/assets/img/history/sm/2010/4.jpg" alt="..." data-path="zoom" loading="lazy">
-                <img class="history__img" src="/assets/img/history/sm/2010/5.jpg" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2010/1.webp" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2010/2.webp" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2010/3.webp" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2010/4.webp" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2010/5.webp" alt="..." data-path="zoom" loading="lazy">
               </div>
             </div>
             <div class="history__item">
@@ -555,11 +565,11 @@
                 </p>
               </div>
               <div class="history__imgs">
-                <img class="history__img" src="/assets/img/history/sm/2011/1.jpg" alt="..." data-path="zoom" loading="lazy">
-                <img class="history__img" src="/assets/img/history/sm/2011/2.jpg" alt="..." data-path="zoom" loading="lazy">
-                <img class="history__img" src="/assets/img/history/sm/2011/3.jpg" alt="..." data-path="zoom" loading="lazy">
-                <img class="history__img" src="/assets/img/history/sm/2011/4.jpg" alt="..." data-path="zoom" loading="lazy">
-                <img class="history__img" src="/assets/img/history/sm/2011/5.jpg" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2011/1.webp" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2011/2.webp" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2011/3.webp" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2011/4.webp" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2011/5.webp" alt="..." data-path="zoom" loading="lazy">
               </div>
             </div>
             <div class="history__item">
@@ -570,11 +580,11 @@
                 </p>
               </div>
               <div class="history__imgs">
-                <img class="history__img" src="/assets/img/history/sm/2012/1.jpg" alt="..." data-path="zoom" loading="lazy">
-                <img class="history__img" src="/assets/img/history/sm/2012/2.jpg" alt="..." data-path="zoom" loading="lazy">
-                <img class="history__img" src="/assets/img/history/sm/2012/3.jpg" alt="..." data-path="zoom" loading="lazy">
-                <img class="history__img" src="/assets/img/history/sm/2012/4.jpg" alt="..." data-path="zoom" loading="lazy">
-                <img class="history__img" src="/assets/img/history/sm/2012/5.jpg" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2012/1.webp" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2012/2.webp" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2012/3.webp" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2012/4.webp" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2012/5.webp" alt="..." data-path="zoom" loading="lazy">
               </div>
             </div>
             <div class="history__item">
@@ -585,11 +595,11 @@
                 </p>
               </div>
               <div class="history__imgs">
-                <img class="history__img" src="/assets/img/history/sm/2013/1.jpg" alt="..." data-path="zoom" loading="lazy">
-                <img class="history__img" src="/assets/img/history/sm/2013/2.jpg" alt="..." data-path="zoom" loading="lazy">
-                <img class="history__img" src="/assets/img/history/sm/2013/3.jpg" alt="..." data-path="zoom" loading="lazy">
-                <img class="history__img" src="/assets/img/history/sm/2013/4.jpg" alt="..." data-path="zoom" loading="lazy">
-                <img class="history__img" src="/assets/img/history/sm/2013/5.jpg" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2013/1.webp" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2013/2.webp" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2013/3.webp" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2013/4.webp" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2013/5.webp" alt="..." data-path="zoom" loading="lazy">
               </div>
             </div>
             <div class="history__item">
@@ -600,11 +610,11 @@
                 </p>
               </div>
               <div class="history__imgs">
-                <img class="history__img" src="/assets/img/history/sm/2014/1.jpg" alt="..." data-path="zoom" loading="lazy">
-                <img class="history__img" src="/assets/img/history/sm/2014/2.jpg" alt="..." data-path="zoom" loading="lazy">
-                <img class="history__img" src="/assets/img/history/sm/2014/3.jpg" alt="..." data-path="zoom" loading="lazy">
-                <img class="history__img" src="/assets/img/history/sm/2014/4.jpg" alt="..." data-path="zoom" loading="lazy">
-                <img class="history__img" src="/assets/img/history/sm/2014/5.jpg" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2014/1.webp" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2014/2.webp" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2014/3.webp" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2014/4.webp" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2014/5.webp" alt="..." data-path="zoom" loading="lazy">
               </div>
             </div>
             <div class="history__item">
@@ -615,11 +625,11 @@
                 </p>
               </div>
               <div class="history__imgs">
-                <img class="history__img" src="/assets/img/history/sm/2015/1.jpg" alt="..." data-path="zoom" loading="lazy">
-                <img class="history__img" src="/assets/img/history/sm/2015/2.jpg" alt="..." data-path="zoom" loading="lazy">
-                <img class="history__img" src="/assets/img/history/sm/2015/3.jpg" alt="..." data-path="zoom" loading="lazy">
-                <img class="history__img" src="/assets/img/history/sm/2015/4.jpg" alt="..." data-path="zoom" loading="lazy">
-                <img class="history__img" src="/assets/img/history/sm/2015/5.jpg" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2015/1.webp" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2015/2.webp" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2015/3.webp" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2015/4.webp" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2015/5.webp" alt="..." data-path="zoom" loading="lazy">
               </div>
             </div>
             <div class="history__item">
@@ -630,12 +640,12 @@
                 </p>
               </div>
               <div class="history__imgs">
-                <img class="history__img" src="/assets/img/history/sm/2016/1.jpg" alt="..." data-path="zoom" loading="lazy">
-                <img class="history__img" src="/assets/img/history/sm/2016/2.jpg" alt="..." data-path="zoom" loading="lazy">
-                <img class="history__img" src="/assets/img/history/sm/2016/3.jpg" alt="..." data-path="zoom" loading="lazy">
-                <img class="history__img" src="/assets/img/history/sm/2016/4.jpg" alt="..." data-path="zoom" loading="lazy">
-                <img class="history__img" src="/assets/img/history/sm/2016/5.jpg" alt="..." data-path="zoom" loading="lazy">
-                <img class="history__img" src="/assets/img/history/sm/2016/6.jpg" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2016/1.webp" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2016/2.webp" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2016/3.webp" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2016/4.webp" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2016/5.webp" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2016/6.webp" alt="..." data-path="zoom" loading="lazy">
               </div>
             </div>
             <div class="history__item">
@@ -646,12 +656,12 @@
                 </p>
               </div>
               <div class="history__imgs">
-                <img class="history__img" src="/assets/img/history/sm/2017/1.jpg" alt="..." data-path="zoom" loading="lazy">
-                <img class="history__img" src="/assets/img/history/sm/2017/2.jpg" alt="..." data-path="zoom" loading="lazy">
-                <img class="history__img" src="/assets/img/history/sm/2017/3.jpg" alt="..." data-path="zoom" loading="lazy">
-                <img class="history__img" src="/assets/img/history/sm/2017/4.jpg" alt="..." data-path="zoom" loading="lazy">
-                <img class="history__img" src="/assets/img/history/sm/2017/5.jpg" alt="..." data-path="zoom" loading="lazy">
-                <img class="history__img" src="/assets/img/history/sm/2017/6.jpg" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2017/1.webp" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2017/2.webp" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2017/3.webp" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2017/4.webp" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2017/5.webp" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2017/6.webp" alt="..." data-path="zoom" loading="lazy">
               </div>
             </div>
             <div class="history__item">
@@ -662,11 +672,11 @@
                 </p>
               </div>
               <div class="history__imgs">
-                <img class="history__img" src="/assets/img/history/sm/2018/1.jpg" alt="..." data-path="zoom" loading="lazy">
-                <img class="history__img" src="/assets/img/history/sm/2018/2.jpg" alt="..." data-path="zoom" loading="lazy">
-                <img class="history__img" src="/assets/img/history/sm/2018/3.jpg" alt="..." data-path="zoom" loading="lazy">
-                <img class="history__img" src="/assets/img/history/sm/2018/4.jpg" alt="..." data-path="zoom" loading="lazy">
-                <img class="history__img" src="/assets/img/history/sm/2018/5.jpg" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2018/1.webp" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2018/2.webp" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2018/3.webp" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2018/4.webp" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2018/5.webp" alt="..." data-path="zoom" loading="lazy">
               </div>
             </div>
             <div class="history__item">
@@ -677,12 +687,12 @@
                 </p>
               </div>
               <div class="history__imgs">
-                <img class="history__img" src="/assets/img/history/sm/2019/1.jpg" alt="..." data-path="zoom" loading="lazy">
-                <img class="history__img" src="/assets/img/history/sm/2019/2.jpg" alt="..." data-path="zoom" loading="lazy">
-                <img class="history__img" src="/assets/img/history/sm/2019/3.jpg" alt="..." data-path="zoom" loading="lazy">
-                <img class="history__img" src="/assets/img/history/sm/2019/4.jpg" alt="..." data-path="zoom" loading="lazy">
-                <img class="history__img" src="/assets/img/history/sm/2019/5.jpg" alt="..." data-path="zoom" loading="lazy">
-                <img class="history__img" src="/assets/img/history/sm/2019/6.jpg" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2019/1.webp" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2019/2.webp" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2019/3.webp" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2019/4.webp" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2019/5.webp" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2019/6.webp" alt="..." data-path="zoom" loading="lazy">
               </div>
             </div>
             <div class="history__item">
@@ -693,11 +703,11 @@
                 </p>
               </div>
               <div class="history__imgs">
-                <img class="history__img" src="/assets/img/history/sm/2020/1.jpg" alt="..." data-path="zoom" loading="lazy">
-                <img class="history__img" src="/assets/img/history/sm/2020/2.jpg" alt="..." data-path="zoom" loading="lazy">
-                <img class="history__img" src="/assets/img/history/sm/2020/3.jpg" alt="..." data-path="zoom" loading="lazy">
-                <img class="history__img" src="/assets/img/history/sm/2020/4.jpg" alt="..." data-path="zoom" loading="lazy">
-                <img class="history__img" src="/assets/img/history/sm/2020/5.jpg" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2020/1.webp" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2020/2.webp" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2020/3.webp" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2020/4.webp" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2020/5.webp" alt="..." data-path="zoom" loading="lazy">
               </div>
             </div>
             <div class="history__item">
@@ -708,11 +718,11 @@
                 </p>
               </div>
               <div class="history__imgs">
-                <img class="history__img" src="/assets/img/history/sm/2021/1.jpg" alt="..." data-path="zoom" loading="lazy">
-                <img class="history__img" src="/assets/img/history/sm/2021/2.jpg" alt="..." data-path="zoom" loading="lazy">
-                <img class="history__img" src="/assets/img/history/sm/2021/3.jpg" alt="..." data-path="zoom" loading="lazy">
-                <img class="history__img" src="/assets/img/history/sm/2021/4.jpg" alt="..." data-path="zoom" loading="lazy">
-                <img class="history__img" src="/assets/img/history/sm/2021/5.jpg" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2021/1.webp" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2021/2.webp" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2021/3.webp" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2021/4.webp" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2021/5.webp" alt="..." data-path="zoom" loading="lazy">
               </div>
             </div>
             <div class="history__item">
@@ -723,11 +733,11 @@
                 </p>
               </div>
               <div class="history__imgs">
-                <img class="history__img" src="/assets/img/history/sm/2022/1.jpg" alt="..." data-path="zoom" loading="lazy">
-                <img class="history__img" src="/assets/img/history/sm/2022/2.jpg" alt="..." data-path="zoom" loading="lazy">
-                <img class="history__img" src="/assets/img/history/sm/2022/3.jpg" alt="..." data-path="zoom" loading="lazy">
-                <img class="history__img" src="/assets/img/history/sm/2022/4.jpg" alt="..." data-path="zoom" loading="lazy">
-                <img class="history__img" src="/assets/img/history/sm/2022/5.jpg" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2022/1.webp" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2022/2.webp" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2022/3.webp" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2022/4.webp" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2022/5.webp" alt="..." data-path="zoom" loading="lazy">
               </div>
             </div>
             <div class="history__item">
@@ -738,11 +748,11 @@
                 </p>
               </div>
               <div class="history__imgs">
-                <img class="history__img" src="/assets/img/history/sm/2023/1.jpg" alt="..." data-path="zoom" loading="lazy">
-                <img class="history__img" src="/assets/img/history/sm/2023/2.jpg" alt="..." data-path="zoom" loading="lazy">
-                <img class="history__img" src="/assets/img/history/sm/2023/3.jpg" alt="..." data-path="zoom" loading="lazy">
-                <img class="history__img" src="/assets/img/history/sm/2023/4.jpg" alt="..." data-path="zoom" loading="lazy">
-                <img class="history__img" src="/assets/img/history/sm/2023/5.jpg" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2023/1.webp" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2023/2.webp" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2023/3.webp" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2023/4.webp" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2023/5.webp" alt="..." data-path="zoom" loading="lazy">
               </div>
             </div>
             <div class="history__item">
@@ -753,9 +763,9 @@
                 </p>
               </div>
               <div class="history__imgs">
-                <img class="history__img" src="/assets/img/history/sm/2024/1.jpg" alt="..." data-path="zoom" loading="lazy">
-                <img class="history__img" src="/assets/img/history/sm/2024/2.jpg" alt="..." data-path="zoom" loading="lazy">
-                <img class="history__img" src="/assets/img/history/sm/2024/3.jpg" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2024/1.webp" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2024/2.webp" alt="..." data-path="zoom" loading="lazy">
+                <img class="history__img" src="/assets/img/history/sm/2024/3.webp" alt="..." data-path="zoom" loading="lazy">
               </div>
             </div>
             <div class="history__item">
@@ -810,7 +820,7 @@
             <input class="form-input" type="email" name="email" placeholder="Оставьте Ваш e-mail" required>
             <button class="form-btn btn-dark btn-reset" type="submit">подписаться</button>
             <p class="form-text">
-              Нажимая Подписаться вы соглашаетесь с <a href="#" target="_blank" rel="noopener noreferrer">Политикой обработки персональных данных</a>
+              Нажимая Подписаться вы соглашаетесь с <a href="/soglasie" target="_blank" rel="noopener noreferrer">Политикой обработки персональных данных</a>
             </p>
           </form>
         </div>
@@ -823,10 +833,7 @@
       <div class="footer__content">
         <div class="footr__info">
           <div class="logo">
-            <a href="/" class="logo__link">
-              <img class="logo__img" src="/assets/img/svg/logo.svg" alt="logo">
-            </a>
-            <p class="logo__text">Ваш проводник в волшебный мир семян</p>
+            <a href="/" class="logo__link" aria-label="Перейти на главную страницу">Ваш проводник в волшебный мир семян</a>
           </div>
           <div class="menu-social">
             <ul class="social__list list-reset">
@@ -840,11 +847,11 @@
           </div>
           <ul class="contacts__list list-reset">
             <li class="contacts__item">
-              <a href="tel:+74956860475" class="contact__link" target="_blank">
+              <a href="tel:+74954921993" class="contact__link" target="_blank">
                 <svg class="contact__icon">
                   <use xlink:href="/assets/img/svg/phone.svg#phone"></use>
                 </svg>
-                <span>+7 (495) 686-04-75</span>
+                <span>+7 (495) 492-19-93</span>
               </a>
             </li>
             <li class="contacts__item">
@@ -871,14 +878,16 @@
             <div class="col">
               <h3 class="footer-links__label">Важная информация</h3>
               <ul class="footer-links__list list-reset">
+                <li class="footer-links__item"><a href="/buy">Как купить семена</a></li>
                 <li class="footer-links__item"><a href="/pay">Оплата</a></li>
                 <li class="footer-links__item"><a href="/delivery">Доставка</a></li>
-                <li class="footer-links__item"><a href="#">Возврат</a></li>
-                <li class="footer-links__item"><a href="#">Договор оферты</a></li>
+                <li class="footer-links__item"><a href="/exchange">Возврат</a></li>
+                <li class="footer-links__item"><a href="/soglasie/">Согласие на обработку персональных данных</a></li>
+                <li class="footer-links__item"><a href="/oferta">Договор оферты</a></li>
                 <li class="footer-links__item"><a href="#">Оптовые закупки</a></li>
                 <li class="footer-links__item"><a href="/promotions">Акции и скидки</a></li>
-                <li class="footer-links__item"><a href="/contacts">Контакты</a></li>
                 <li class="footer-links__item"><a href="/documents">Документация</a></li>
+                <li class="footer-links__item"><a href="/oferta/">Пользовательское соглашение</a></li>
               </ul>
             </div>
             <div class="col">
@@ -886,10 +895,13 @@
               <ul class="footer-links__list list-reset">
                 <li class="footer-links__item"><a href="#">О нас</a></li>
                 <li class="footer-links__item"><a href="#">Проекты</a></li>
-                <li class="footer-links__item"><a href="#">Выставки</a></li>
+                <li class="footer-links__item"><a href="/trade">Где можно купить семена Семко?</a></li>
+                <li class="footer-links__item"><a href="/sale">Правила продаж ООО Семко</a></li>
                 <li class="footer-links__item"><a href="#">Видеоматериалы</a></li>
                 <li class="footer-links__item"><a href="#">Агротехника</a></li>
+                <li class="footer-links__item"><a href="#">Выставки</a></li>
                 <li class="footer-links__item"><a href="#">Газета</a></li>
+                <li class="footer-links__item"><a href="/contacts">Контакты</a></li>
               </ul>
             </div>
           </div>
@@ -955,7 +967,7 @@
         <a href="/" class="btn-reset">
           <img src="/assets/img/svg/logo.svg" width="105" height="30" alt="logo" />
         </a>
-        <img src="/assets/img/cipollino-sm.png" width="35" height="40" alt="doll">
+        <img src="/assets/img/cipollino-sm.avif" width="35" height="40" alt="doll">
         <button class="close-btn btn-reset"></button>
       </div>
       <form class="search" action="#" method="post">
@@ -1140,7 +1152,7 @@
         <ul class="product__list list-reset">
           <li class="product__item">
             <a href="/product" class="product__link_img btn-reset">
-              <img src="/assets/img/slider/goods/0.jpg" alt="Семена томатов Цитрон F1">
+              <img src="/assets/img/slider/goods/0.webp" alt="Семена томатов Цитрон F1">
             </a>
             <a href="/product" class="product__link_title btn-reset">Семена томатов Цитрон F1</a>
             <div class="amount">
@@ -1175,7 +1187,7 @@
         </form>
         <div class="modal__footer">
           <div class="modal__links">
-            <button class="btn btn-reset">Забыли пароль?</button>
+            <button class="btn btn-reset" data-path="password">Забыли пароль?</button>
             <button class="btn btn-active btn-reset" data-path="login-email">Войти через почту</button>
           </div>
           <p class="modal__info">Не зарегистрированы? <button class="btn btn-reset" data-path="registration">Зарегистрируйтесь тут</button></p>
@@ -1193,7 +1205,7 @@
         </form>
         <div class="modal__footer">
           <div class="modal__links">
-            <button class="btn btn-reset">Забыли пароль?</button>
+            <button class="btn btn-reset" data-path="password">Забыли пароль?</button>
             <button class="btn btn-active btn-reset" data-path="login">Войти через телефон</button>
           </div>
           <p class="modal__info">Не зарегистрированы? <button class="btn btn-reset" data-path="registration">Зарегистрируйтесь тут</button></p>
@@ -1211,7 +1223,7 @@
         </form>
         <div class="modal__footer">
           <div class="modal__links">
-            <button class="btn btn-reset">Забыли пароль?</button>
+            <button class="btn btn-reset" data-path="password">Забыли пароль?</button>
             <button class="btn btn-active btn-reset" data-path="login-email">Войти через почту</button>
           </div>
           <p class="modal__info">Не зарегистрированы? <button class="btn btn-reset" data-path="registration">Зарегистрируйтесь тут</button></p>
@@ -1231,8 +1243,8 @@
         </form>
         <div class="modal__footer">
           <div class="modal__links">
-            <button class="btn btn-reset">Забыли пароль?</button>
-            <button class="btn btn-reset" data-path="registration-email">Зарегистрируйтесь через почту</button>
+            <button class="btn btn-reset" data-path="password">Забыли пароль?</button>
+            <button class="btn btn-reset" data-path="registration-email">Регистрация по почте</button>
           </div>
           <p class="modal__info">Уже зарегистрированы? <button class="btn btn-active btn-reset" data-path="login">Войдите тут</button></p>
         </div>
@@ -1251,11 +1263,38 @@
         </form>
         <div class="modal__footer">
           <div class="modal__links">
-            <button class="btn btn-reset">Забыли пароль?</button>
-            <button class="btn btn-reset" data-path="registration">Зарегистрируйтесь через телефон</button>
+            <button class="btn btn-reset" data-path="password">Забыли пароль?</button>
+            <button class="btn btn-reset" data-path="registration">Регистрация по телефону</button>
           </div>
           <p class="modal__info">Уже зарегистрированы? <button class="btn btn-active btn-reset" data-path="login">Войдите тут</button></p>
         </div>
+      </div>
+
+      <div class="modal__content modal__content_login" data-target="password">
+        <button class="close-btn btn-reset" aria-label="Закрыть модальное окно"></button>
+        <img class="modal__logo" src="/assets/img/svg/logo.svg" alt="Logo">
+        <p class="modal__title">Забыли пароль?</p>
+        <p class="modal__subtitle">Введите email или телефон, который вы использовали при регистрации.</p>
+        <form class="modal__form" action="#" method="post">
+          <input class="input" type="text" placeholder="Введите почту / телефон" name="Name" autocomplete="off">
+          <button class="btn btn-fill btn-reset" type="submit">Восстановить пароль</button>
+        </form>
+        <div class="modal__footer">
+          <p class="modal__info modal__info_registration">Зарегистрируйтесь через <button class="btn btn-active btn-reset" data-path="registration">телефон</button></p>
+          <p class="modal__info">Уже зарегистрированы? <button class="btn btn-active btn-reset" data-path="login">Войдите тут</button></p>
+        </div>
+      </div>
+
+      <div class="modal__content modal__content_login modal__content_order" data-target="call-back">
+        <button class="close-btn btn-reset" aria-label="Закрыть модальное окно"></button>
+        <img class="modal__logo" src="/assets/img/svg/logo.svg" alt="Logo">
+        <p class="modal__title">Заказать обратный&nbsp;звонок</p>
+        <form class="modal__form" action="#" method="post">
+          <input class="input" type="text" placeholder="Ваше имя" name="Name" data-validate-field="name" autocomplete="off">
+          <input class="input" type="tel" name="Phone" placeholder="+7 (999) 999-99-99" data-validate-field="tel" autocomplete="off">
+          <button class="btn btn-fill btn-reset" type="submit">Отправить</button>
+        </form>
+        <p class="modal__info">Нажимая кнопку «Отправить» Вы соглашаетесь с <a href="/policy" class="info-link btn-reset" target="_blank">политикой конфиденциальности</a> сайта</p>
       </div>
 
       <div class="modal__content modal__content_katalog" data-target="katalog">
@@ -1419,10 +1458,10 @@
       </div>
 
       <div class="modal__content modal__content_zoom" data-target="zoom">
-        <button class="close-btn btn-reset" aria-label="Закрыть модальное окно"></button>
+        <button class="close-btn btn-fill btn-reset" aria-label="Закрыть модальное окно"></button>
         <button class="modal__zoom-btn modal__zoom-btn--prev btn-reset" aria-label="Предыдущая картинка"></button>
         <button class="modal__zoom-btn modal__zoom-btn--next btn-reset" aria-label="Следующая картинка"></button>
-        <img class="modal__zoom-img" src="/assets/img/history/md/1991/1.jpg" alt="Logo">
+        <img class="modal__zoom-img" src="/assets/img/history/md/1991/1.webp" alt="...">
         <p class="modal__zoom-text">"Рождение" Семко — первые шаги к созданию Волшебного мира семян.</p>
       </div>
     </div>

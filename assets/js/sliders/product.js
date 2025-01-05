@@ -9,8 +9,9 @@ var main = new Splide( '.product__slider', {
   gap        : 2,
   breakpoints: {
     520: {
-      fixedWidth : 250,
-      fixedHeight: 260,
+      fixedWidth : '100%',
+      fixedHeight: 'auto',
+      autoHeight: true,
     },
     768: {
       fixedWidth : 350,
@@ -23,7 +24,6 @@ var main = new Splide( '.product__slider', {
     playerOptions: {
       htmlVideo: {
         muted: true,
-        // controls: false,
       },
     },
   },
@@ -58,5 +58,3 @@ main.on( 'mounted move', function () {
 } );
 
 main.mount( window.splide.Extensions );
-
-// new Player(`${main}`);

@@ -11,12 +11,12 @@
     display: flex;
     justify-content: space-between;
     border-radius: $br-lg;
-    background: center / contain no-repeat url("/assets/img/proposition-img.png"),
-                $color-main center / cover url("/assets/img/proposition-bg.png");
+    background: center / contain no-repeat url("/assets/img/proposition-img.avif"),
+                $color-main center / cover url("/assets/img/proposition-bg.avif");
 
     &_empty {
       padding: 30px 35px;
-      background: $color-main center / cover url("/assets/img/proposition-bg.png");
+      background: $color-main center / cover url("/assets/img/proposition-bg.avif");
 
       .proposition__title {
         max-width: 500px;
@@ -30,10 +30,10 @@
         color: #fff;
         
         a {
-          color: #fff;
           font-size: 11px;
           font-weight: 400;
           text-decoration: underline;
+          color: inherit;
         }
       }
     }
@@ -121,7 +121,7 @@
   .proposition__content {
     flex-direction: column;
     row-gap: 30px;
-    background: right bottom / 330px auto no-repeat url("/assets/img/proposition-img-sm.png"), #03a753 center / cover url("/assets/img/proposition-bg.png");
+    background: right bottom / 330px auto no-repeat url("/assets/img/proposition-img-sm.avif"), #03a753 center / cover url("/assets/img/proposition-bg.avif");
 
     &_empty {
       background: #03a753 center / cover url("/assets/img/proposition-bg-sm.png");
@@ -162,9 +162,9 @@
     padding: 25px;
     padding-right: 20px;
     border-radius: 15px;
-    background: right -50px bottom / 300px auto no-repeat url("/assets/img/proposition-img-sm.png"), #03a753 left center / cover url("/assets/img/proposition-bg-sm.png");
+    background: right -50px bottom / 300px auto no-repeat url("/assets/img/proposition-img-sm.avif"), #03a753 left center / cover url("/assets/img/proposition-bg-sm.png");
 
-    &_empty {
+    &.proposition__content_empty {
       padding: 30px 20px 40px;
       gap: 0;
       background: #03a753 left center / cover url("/assets/img/proposition-bg-sm.png") !important; 
@@ -253,7 +253,7 @@
 @media screen and (max-width: 610px) {
   .proposition__content {
     padding-bottom: 150px;
-    background: center bottom / auto 135px no-repeat url("/assets/img/proposition-img-sm.png"), #03a753 left center / cover url("/assets/img/proposition-bg-sm.png");
+    background: center bottom / auto 135px no-repeat url("/assets/img/proposition-img-sm.avif"), #03a753 left center / cover url("/assets/img/proposition-bg-sm.png");
   }
 
   .proposition__info {
@@ -281,7 +281,7 @@
   .proposition__content {
     padding: 20px 20px 175px;
     row-gap: 15px;
-    background: center bottom / auto 170px no-repeat url("/assets/img/proposition-img-sm.png"), #03a753 left center / cover url("/assets/img/proposition-bg-sm.png");
+    background: center bottom / auto 170px no-repeat url("/assets/img/proposition-img-sm.avif"), #03a753 left center / cover url("/assets/img/proposition-bg-sm.png");
 
     &_empty {
       padding: 20px 20px 25px;

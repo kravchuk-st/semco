@@ -8,19 +8,16 @@
   &__content {
     margin-top: 33px;
     padding-bottom: 55px;
-    display: grid;
-    grid-template-columns: [img] auto [text] 1fr;
-    grid-template-rows: auto;
-    column-gap: 35px;
     border-bottom: 1px solid #00000080;
   }
 
   &__img {
+    float: left;
     width: 45vw;
     max-width: 445px;
     height: auto;
-    grid-column: img / text;
-    grid-row: span 5;
+    margin-right: 35px;
+    margin-bottom: 20px;
     overflow: hidden;
 
     img {
@@ -30,11 +27,15 @@
   }
 
   &__subtitle {
-    max-width: 380px;
     margin-bottom: 5px;
     font-weight: 500;
     font-size: 25px;
     line-height: 1.35;
+
+    span {
+      display: inline-block;
+      max-width: 385px;
+    }
   }
 
   &__text {
@@ -43,14 +44,12 @@
     line-height: 1.5;
     text-indent: 1.5em;
     text-align: justify;
-    grid-column-start: text;
 
     &-important {
       margin-top: 45px;
       font-size: 16px;
       text-align: right;
       color: $color-main;
-      grid-column: 1 / -1;
 
       p {
         line-height: 1.5;
@@ -90,12 +89,10 @@
   }
 }
 
-@media screen and (min-width: 993px) {
-
-}
-
 @media screen and (max-width: 992px) {
-
+  .hero__subtitle span {
+    display: inline;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -114,13 +111,14 @@
     max-width: none;
   }
 
+  .hero__img {
+    margin-right: 25px;
+    margin-bottom: 10px;
+  }
+
   .hero__text {
     margin-top: 15px;
     font-size: 12px;
-  }
-
-  .hero__text:not(.hero__text_right) {
-    grid-column: 1 / -1;
   }
 
   .hero__text-important {
@@ -156,6 +154,7 @@
   .hero__img {
     width: 100%;
     height: auto;
+    margin-bottom: 0;
     border-radius: 15px;
   }
 

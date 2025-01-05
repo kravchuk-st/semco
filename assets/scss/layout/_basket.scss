@@ -140,6 +140,7 @@
       background-color: #fafafa;
       flex-shrink: 0;
       cursor: pointer;
+      transition: .3s ease-in-out;
 
       &.checked {
         background-color: $color-main;
@@ -147,6 +148,10 @@
         background-position: center;
         background-size: 11px 9px;
         background-repeat: no-repeat;
+
+        &:hover {
+          background-color: $color-btn-hover;
+        }
       }
     }
 
@@ -226,6 +231,12 @@
       font-weight: 400;
       font-size: 15px;
       line-height: 1;
+      transition: .3s ease-in-out;
+
+      &:hover {
+        color: #fff;
+        background-color: $color-main;
+      }
 
       &:disabled,
       &[disabled] {
@@ -315,8 +326,16 @@
         stroke: $color-main;
         fill: none;
 
+        &:hover .basket-product__icon{
+          fill: $color-btn-hover;
+        }
+
         &.active {
           fill: $color-main;
+        }
+
+        .basket-product__icon {
+          transition: .3s ease-in-out;
         }
       }
 
@@ -408,8 +427,8 @@
       align-items: center;
 
       .input {
-        padding: 11px 15px;
-        font-size: 11px;
+        padding: 10px 15px;
+        font-size: 12px;
         text-align: center;
         border: 1px solid $color-main;
 
@@ -429,6 +448,14 @@
           border-color: $color-main;
         }
       }
+    }
+
+    &__alert {
+      margin-top: 10px;
+      font-size: 11px;
+      line-height: 1.3;
+      color: #9C9EA0;
+      text-align: center;
     }
 
     &__subtext {

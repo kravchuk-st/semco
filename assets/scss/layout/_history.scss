@@ -114,6 +114,12 @@
       display: flex;
       gap: 45px 25px;
 
+      &:first-child {
+        .history__item::before {
+          transform: translate(-50%, calc(-50% + 1px));
+        }
+      }
+
       &:nth-child(even) {
         flex-direction: row-reverse;
       }
@@ -159,7 +165,7 @@
       height: 19px;
       border-radius: 50%;
       background-color: $color-main;
-      transform: translate(-50%, -50%);
+      transform: translate(-50%, calc(-50% - 1px));
     }
 
     .title {
@@ -322,6 +328,10 @@
   .history__item {
     padding-top: 0;
     padding-left: 10px;
+
+    &::before {
+      transform: translate(calc(-50% + 1px), -50%);
+    }
   }
 
   .history-card__title {

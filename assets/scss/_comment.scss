@@ -6,7 +6,7 @@
 
   &-best {
     margin-top: 85px;
-    padding: 20px 20px 40px 30px;
+    padding: 20px 20px 30px 30px;
     flex-direction: column;
 
     .author {
@@ -46,7 +46,6 @@
     font-size: 14px;
     line-height: 1.2;
     letter-spacing: 0.05em;
-    pointer-events: none;
   }
 
   &__header {
@@ -154,6 +153,35 @@
       text-decoration: none;
     }
   }
+
+  &__votes {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    column-gap: 6px;
+
+    .vote {
+      &-btn {
+        display: flex;
+        align-items: center;
+        column-gap: 4px;
+        font-size: 17px;
+        font-weight: 400;
+        line-height: 1.6;
+        color: #000;
+        letter-spacing: .02em;
+
+        svg {
+          width: 20px;
+          height: 20px;
+        }
+      }
+
+      &-text {
+        font-size: 17px;
+      }
+    }
+  }
 }
 
 .comments_slider .splide__list .comment {
@@ -171,6 +199,12 @@
 
   &-fourth {
     background-color: #f9f5f1;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .comment__votes {
+    display: none;
   }
 }
 

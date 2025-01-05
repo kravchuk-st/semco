@@ -108,8 +108,13 @@
 
     a {
       display: block;
+      width: fit-content;
       text-align: left;
       text-decoration: underline;
+
+      &:hover {
+        color: $color-btn-hover;
+      }
 
       &.tel {
         text-decoration: none;
@@ -183,6 +188,10 @@
     font-weight: 400;
     font-size: 14px;
     color: $color-text;
+
+    &:hover {
+      color: $color-btn-hover;
+    }
 
     &:not(:first-child) {
       margin-top: 10px;
@@ -323,5 +332,11 @@
 
   .contact-card__hr {
     margin: 22px 0 18px;
+  }
+}
+
+@media screen and (max-width: 476px) {
+  .contact-card__header {
+    flex-direction: column;
   }
 }

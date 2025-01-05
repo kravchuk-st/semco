@@ -1,17 +1,11 @@
 .actual-projects {
   color: #000;
 
-  &__content {
-    margin-top: 30px;
-    display: flex;
-    justify-content: space-between;
-    align-items: start;
-    column-gap: 70px;
-  }
-
   &__descr {
+    margin-top: 30px;
     font-size: 16px;
     line-height: 1.5;
+
     p {
       text-indent: 1.5em;
       text-align: justify;
@@ -23,8 +17,11 @@
   }
 
   &__img {
+    float: right;
     width: 450px;
-    flex-shrink: 0;
+    max-width: 40vw;
+    margin-left: 70px;
+    margin-bottom: 20px;
     border-radius: 15px;
   }
 
@@ -39,13 +36,12 @@
 
   &__list {
     margin-top: 35px;
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     gap: 20px;
   }
 
   &__item {
-    max-width: 275px;
     padding: 17px 13px 14px 36px;
     font-size: 12px;
     line-height: 1.4;
@@ -149,8 +145,8 @@
   }
 
   .countries {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: 20px 30px;
   }
 
@@ -199,6 +195,7 @@
       width: 28px;
       height: 28px;
       fill: $color-main;
+      object-fit: contain;
     }
 
     &__text {
@@ -214,6 +211,33 @@
       height: auto;
       border-radius: 15px;
     }
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  .seligere__list {
+    display: grid;
+    grid-template-columns: 40vw 1fr;
+  }
+
+  .actual-projects__list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .actual-projects__img {
+    margin-left: 40px;
+  }
+  
+  .partners .countries {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 840px) {
+  .actual-projects__list {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -234,7 +258,6 @@
   }
 
   .partners .countries {
-    display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 30px;
   }
@@ -270,7 +293,7 @@
   }
 
   .actual-projects__title,
-  .actual-projects__content {
+  .actual-projects__descr {
     display: none;
   }
 
@@ -281,10 +304,6 @@
   .actual-projects__list {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-  }
-
-  .actual-projects__item {
-    max-width: none;
   }
 
   .contry-last {
@@ -411,6 +430,12 @@
     min-height: 210px;
     background-color: $color-secondary;
     border-radius: 15px;
+    text-align: center;
+  }
+
+  .partners .info__text {
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .partners .info__img {

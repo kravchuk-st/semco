@@ -4,7 +4,7 @@ new Splide( '.banner__slider', {
   perPage: 1,
   autoplay: true,
   flickMaxPages: 1,
-  gap: 20,
+  gap: 10,
   breakpoints: {
     768: {
       gap: 3,

@@ -8,20 +8,20 @@
   <link rel="shortcut icon" type="image/ico" href="/assets/img/favicon.ico">
 
   <link rel="stylesheet" href="/assets/css/normalize.css">
-  <link rel="stylesheet" type="text/css" href="/assets/css/splide.min.css">
   <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
 </head>
 <body>
+  <svg class="sprite" style="display: none;">
+    <symbol viewBox="0 0 25 15" fill="none" xmlns="http://www.w3.org/2000/svg" id="arrow">
+      <path d="M1.5 1L11.7366 13.0978C12.1361 13.5699 12.8639 13.5699 13.2634 13.0978L23.5 1" stroke-width="2" stroke-linecap="round"/>
+    </symbol>
+  </svg>
+
   <header class="header">
     <div class="header__top">
       <div class="wrapper">
-        <a href="/" class="logo">
-          <picture>
-            <source srcset="/assets/img/svg/logo-light.svg" media="(max-width: 1100px)" />
-            <img class="logo__icon" src="/assets/img/svg/logo.svg" alt="logo" />
-          </picture>
-        </a>
-        <img class="doll" src="/assets/img/cipollino-sm.png" alt="doll">
+        <a href="/" class="logo" aria-label="Перейти на главную страницу"></a>
+        <img class="doll" src="/assets/img/cipollino-sm.avif" alt="doll">
         <button class="katalog-link btn-fill btn-reset" data-path="katalog">КАТАЛОГ</button>
         <form class="search" action="#" method="post">
           <input class="search__input" type="text" placeholder="Поиск...">
@@ -83,7 +83,22 @@
         <nav class="nav">
           <ul class="nav__list list-reset">
             <li class="nav__item"><a href="#" class="nav__link">О КОМПАНИИ</a></li>
-            <li class="nav__item"><a href="#" class="nav__link">ОПТОВЫЕ ЗАКУПКИ</a></li>
+            <li class="nav__item tooltip">
+              <button class="nav__link btn-reset" aria-labelledby="nav__link-tooltip">ОПТОВЫЕ ЗАКУПКИ</button>
+              <div class="dropdown-menu" id="nav__link-tooltip" role="tooltip">
+                <ul class="dropdown-menu__list list-reset">
+                  <li class="dropdown-menu__item">
+                    <a href="/greenery" class="nav__link">Профессиональные и весовые</a>
+                  </li>
+                  <li class="dropdown-menu__item">
+                    <a href="/bundle" class="nav__link">Семена в красочных пакетиках</a>
+                  </li>
+                  <li class="dropdown-menu__item">
+                    <a href="/green" class="nav__link">Семена для микрозелени и бебилиф</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
             <li class="nav__item"><a href="/promotions" class="nav__link">АКЦИИ</a></li>
             <li class="nav__item"><a href="/delivery" class="nav__link">ДОСТАВКА</a></li>
             <li class="nav__item"><a href="/pay" class="nav__link">ОПЛАТА</a></li>
@@ -99,7 +114,7 @@
             </span>
             <span class="call__text">+7 (495) 686-04-75</span>
           </a>
-          <button class="call-back__btn btn-reset">ЗАКАЗАТЬ ЗВОНОК</button>
+          <button class="call-back__btn btn-reset" data-path="call-back">ЗАКАЗАТЬ ЗВОНОК</button>
         </div>
       </div>
     </div>
@@ -201,11 +216,12 @@
         <div class="choose__text">
           <h2 class="choose__title">Агрофирма Семко <span class="text-active">— ваш надёжный поставщик семян оптом</span></h2>
           <p class="choose__descr">
-            Мы предлагаем высококачественные семена в фирменной упаковке для профессиональных сельхозпроизводителей в России и далеко за её пределами! Выбирая семена от Семко - Вы выбираете лучшее для Вас и Вашего бизнеса!
+            Мы предлагаем высококачественные семена в фирменной упаковке для профессиональных сельхозпроизводителей в России и далеко за её пределами! Выбирая семена от Семко - Вы&nbsp;выбираете лучшее для Вас и Вашего бизнеса!
           </p>
         </div>
         <picture class="choose__img">
           <source srcset="/assets/img/bag-lg.png" media="(min-width: 993px)" />
+          <source srcset="/assets/img/bag-sm.avif" media="(max-width: 450px)" />
           <img src="/assets/img/bag.png" alt="weights">
         </picture>
       </div>
@@ -279,17 +295,178 @@
       </div>
     </section>
 
-    <section class="proposition ">
+    <section class="proposition">
       <div class="wrapper">
-        <div class="proposition__content proposition__content_empty">
+        <div class="proposition__content proposition__content_empty proposition__content_sale">
           <div class="proposition__info">
             <h2 class="proposition__title">Скачайте прайс-лист со&nbsp;всеми актуальными оптовыми ценами</h2>
-            <p class="proposition__descr">Нажимая Отправить вы соглашаетесь с <a href="#" target="_blank" rel="noopener noreferrer">Политикой обработки персональных данных</a></p>
+            <p class="proposition__descr">Нажимая Отправить вы соглашаетесь с <a href="/soglasie" target="_blank" rel="noopener noreferrer">Политикой обработки персональных данных</a></p>
+          </div>
+          <div class="proposition__btns">
+            <a href="#" class="btn btn-light btn-reset" download>скачать прайс-лист</a>
+            <button class="btn btn-dark btn-reset" data-path="first-order">Дополнительная скидка -10% на первый заказ</button>
           </div>
           <form class="proposition__form" action="#" method="post">
             <input class="form-input text-center" type="email" name="email" placeholder="Оставьте Ваш e-mail" required>
             <button class="form-btn btn-dark btn-reset" type="submit">Отправить</button>
           </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq">
+      <div class="wrapper">
+        <div class="faq__header">
+          <div class="faq__text">
+            <h2 class="title">У вас есть вопросы? Мы на них ответили</h2>
+            <p class="faq__descr">Мы собрали самые популярные вопросы и ответы на них. Если вы не нашли ответа на свой вопрос - свяжитесь с нами, и мы обязательно поможем вам</p>
+          </div>
+          <button class="faq__btn btn-lg btn-fill btn-reset" data-path="question">Задать свой вопрос</button>
+        </div>
+        <div class="accordion">
+          <div class="accordion__item">
+            <button class="accordion__btn btn-reset" aria-expanded="false">
+              <span class="accordion__title">Как сделать оптовый заказ?</span>
+              <svg class="accordion__icon">
+                <use xlink:href="#arrow"></use>
+              </svg>
+            </button>
+            <div class="accordion__content" aria-hidden="true">
+              <p>
+                Чтобы оформить оптовый заказ, перейдите в раздел «Оптовым покупателям», заполните специальную форму и скачайте прайс-лист нажав на кнопку «Скачать прайс-лист». Укажите необходимое количество товаров в таблице: пакетики — кратно 20, весовые семена — кратно 50 граммам, семена в упаковках — соответствующее количество упаковок/штук. Отправьте заполненный файл на <a class="btn-reset" href="mailto:semco_opt@mail.ru">semco_opt@mail.ru</a>. Вам будет выставлен счет для оплаты.
+              </p>
+              <p>
+                По вопросам оформления заказа обращайтесь в оптовый отдел по телефону <a class="btn-reset" href="tel:+74956860475">+7 (495) 686-04-75</a>, доступный в будние дни с 08:30 до 17:00.
+              </p>
+            </div>
+          </div>
+          <div class="accordion__item">
+            <button class="accordion__btn btn-reset" aria-expanded="false">
+              <span class="accordion__title">Минимальная сумма для оптового заказа семян в красочных пакетиках?</span>
+              <svg class="accordion__icon">
+                <use xlink:href="#arrow"></use>
+              </svg>
+            </button>
+            <div class="accordion__content" aria-hidden="true">
+              <p>
+                Минимальная сумма оптового заказа составляет 20 000 рублей. Количество пакетиков в заказе должно быть кратно 20.
+              </p>
+              <p>
+                По вопросам оформления заказа звоните в службу поддержки по номеру <a class="btn-reset" href="tel:+74956860475">+7 (495) 686-04-75</a> в будние дни с 08:30 до 17:00 по московскому времени.
+              </p>
+            </div>
+          </div>
+          <div class="accordion__item">
+            <button class="accordion__btn btn-reset" aria-expanded="false">
+              <span class="accordion__title">Минимальная сумма заказа на весовые семена?</span>
+              <svg class="accordion__icon">
+                <use xlink:href="#arrow"></use>
+              </svg>
+            </button>
+            <div class="accordion__content" aria-hidden="true">
+              <p>
+                Минимальная сумма заказа на весовые семена — 20 000 рублей без учета скидок. По вопросам оформления заказа звоните в службу поддержки по телефону <a class="btn-reset" href="tel:+74956860475">+7 (495) 686-04-75</a> в будние дни с 08:30 до 17:00.
+              </p>
+            </div>
+          </div>
+          <div class="accordion__item">
+            <button class="accordion__btn btn-reset" aria-expanded="false">
+              <span class="accordion__title">Как получить электронный каталог семян Семко?</span>
+              <svg class="accordion__icon">
+                <use xlink:href="#arrow"></use>
+              </svg>
+            </button>
+            <div class="accordion__content" aria-hidden="true">
+              <p>
+                Электронный каталог семян доступен для скачивания по ссылке: <a class="btn-reset" href="http://…" target="_blank">http://….</a>.
+              </p>
+            </div>
+          </div>
+          <div class="accordion__item">
+            <button class="accordion__btn btn-reset" aria-expanded="false">
+              <span class="accordion__title">Как осуществляется доставка оптового заказа?</span>
+              <svg class="accordion__icon">
+                <use xlink:href="#arrow"></use>
+              </svg>
+            </button>
+            <div class="accordion__content" aria-hidden="true">
+              <p>
+                Доставка заказа до транспортной компании осуществляется бесплатно. Вы можете выбрать любую транспортную компанию при совершении заказа. По вопросам доставки обращайтесь в службу поддержки по номеру <a class="btn-reset" href="tel:+74956860475">+7 (495) 686-04-75</a> в будние дни с 08:30 до 17:00.
+              </p>
+            </div>
+          </div>
+          <div class="accordion__item">
+            <button class="accordion__btn btn-reset" aria-expanded="false">
+              <span class="accordion__title">Какие документы предоставляются с заказом?</span>
+              <svg class="accordion__icon">
+                <use xlink:href="#arrow"></use>
+              </svg>
+            </button>
+            <div class="accordion__content" aria-hidden="true">
+              <p>
+                К каждому заказу прилагаются следующие документы: оригинал счета, товарно-транспортная накладная, свидетельство о всхожести семян и, при наличии договора поставки, сам договор.
+              </p>
+            </div>
+          </div>
+          <div class="accordion__item">
+            <button class="accordion__btn btn-reset" aria-expanded="false">
+              <span class="accordion__title">Выставляете ли вы счета-фактуры?</span>
+              <svg class="accordion__icon">
+                <use xlink:href="#arrow"></use>
+              </svg>
+            </button>
+            <div class="accordion__content" aria-hidden="true">
+              <p>
+                ООО «Семко» не является плательщиком НДС, поэтому счета-фактуры не выставляются. Мы можем оформить Универсальный передаточный документ (УПД) по Вашему запросу. По вопросам оформления документов звоните в бухгалтерию по телефону <a class="btn-reset" href="tel:+74956838373">+7 (495) 683-83-73</a> в будние дни с 08:30 до 17:00 по московскому времени.
+              </p>
+            </div>
+          </div>
+          <div class="accordion__item">
+            <button class="accordion__btn btn-reset" aria-expanded="false">
+              <span class="accordion__title">Система скидок для оптовых покупателей на семена в красочных пакетиках</span>
+              <svg class="accordion__icon">
+                <use xlink:href="#arrow"></use>
+              </svg>
+            </button>
+            <div class="accordion__content" aria-hidden="true">
+              <ul>
+                <li>При заказе на сумму от 20 000 до 60 000 рублей — скидка 15%.</li>
+                <li>При заказе на сумму от 60 000 до 100 000 рублей — скидка 20%.</li>
+                <li>При заказе на сумму от 100 000 до 300 000 рублей — скидка 25%.</li>
+                <li>При заказе свыше 300 000 рублей — скидка 30%.</li>
+              </ul>
+              <p>
+                Скидка может быть закреплена на уровне договора, что гарантирует ее неизменность независимо от суммы последующих заказов. Подробности о гибкой системе скидок можно узнать в соответствующем разделе нашего сайта: <a class="btn-reset" href="http://…." target="_blank">http://…</a>.
+              </p>
+              <p>
+                Если у Вас возникли вопросы по скидкам, звоните в службу поддержки по номеру <a class="btn-reset" href="tel:+74956860475">+7 (495) 686-04-75</a> в будние дни с 08:30 до 17:00 по московскому времени. Наши специалисты всегда готовы помочь.
+              </p>
+            </div>
+          </div>
+          <div class="accordion__item">
+            <button class="accordion__btn btn-reset" aria-expanded="false">
+              <span class="accordion__title">Система скидок на весовые семена</span>
+              <svg class="accordion__icon">
+                <use xlink:href="#arrow"></use>
+              </svg>
+            </button>
+            <div class="accordion__content" aria-hidden="true">
+              <ul>
+                <li>При заказе весовых семян на сумму от 100 000 до 200 000 рублей — скидка 5%.</li>
+                <li>При заказе весовых семян на сумму от 200 000 до 300 000 рублей — скидка 10%.</li>
+                <li>При заказе на сумму свыше 300 000 рублей — индивидуальные условия.</li>
+              </ul>
+              <p>
+                Скидка может быть зафиксирована по условиям договора и останется неизменной для всех последующих заказов в рамках этого договора. Детали гибкой системы скидок для оптовых покупателей доступны на нашем сайте: <a class="btn-reset" href="http://…." target="_blank">http://…</a>.
+              </p>
+              <p>
+                Если у Вас возникли вопросы по оформлению заказа на весовые семена, пожалуйста, свяжитесь с нашей службой поддержки по номеру <a class="btn-reset" href="tel:+74956860475">+7 (495) 686-04-75</a>. Мы доступны в будние дни с 08:30 до 17:00 по московскому времени.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="faq__question">
+          <button class="btn btn-lg btn-fill btn-reset" data-path="question">Задать свой вопрос</button>
         </div>
       </div>
     </section>
@@ -308,7 +485,7 @@
               <input class="form__input" type="tel" name="tel" placeholder="Ваш телефон">
               <button class="form__btn btn-dark btn-lg btn-reset" type="submit">перезвоните мне</button>
             </div>
-            <p class="form__text">Нажимая Подписаться вы соглашаетесь с&nbsp;<a href="#" target="_blank" rel="noopener noreferrer">Политикой обработки персональных данных</a></p>
+            <p class="form__text">Нажимая “Перезвоните мне” вы соглашаетесь с&nbsp;<a href="/soglasie" target="_blank" rel="noopener noreferrer">Политикой обработки персональных данных</a></p>
           </form>
           <img src="/assets/img/map.png" alt="map" style="height: 354px;">
         </div>
@@ -387,10 +564,7 @@
       <div class="footer__content">
         <div class="footr__info">
           <div class="logo">
-            <a href="/" class="logo__link">
-              <img class="logo__img" src="/assets/img/svg/logo.svg" alt="logo">
-            </a>
-            <p class="logo__text">Ваш проводник в волшебный мир семян</p>
+            <a href="/" class="logo__link" aria-label="Перейти на главную страницу">Ваш проводник в волшебный мир семян</a>
           </div>
           <div class="menu-social">
             <ul class="social__list list-reset">
@@ -404,11 +578,11 @@
           </div>
           <ul class="contacts__list list-reset">
             <li class="contacts__item">
-              <a href="tel:+74956860475" class="contact__link" target="_blank">
+              <a href="tel:+74954921993" class="contact__link" target="_blank">
                 <svg class="contact__icon">
                   <use xlink:href="/assets/img/svg/phone.svg#phone"></use>
                 </svg>
-                <span>+7 (495) 686-04-75</span>
+                <span>+7 (495) 492-19-93</span>
               </a>
             </li>
             <li class="contacts__item">
@@ -435,14 +609,16 @@
             <div class="col">
               <h3 class="footer-links__label">Важная информация</h3>
               <ul class="footer-links__list list-reset">
+                <li class="footer-links__item"><a href="/buy">Как купить семена</a></li>
                 <li class="footer-links__item"><a href="/pay">Оплата</a></li>
                 <li class="footer-links__item"><a href="/delivery">Доставка</a></li>
-                <li class="footer-links__item"><a href="#">Возврат</a></li>
-                <li class="footer-links__item"><a href="#">Договор оферты</a></li>
+                <li class="footer-links__item"><a href="/exchange">Возврат</a></li>
+                <li class="footer-links__item"><a href="/soglasie/">Согласие на обработку персональных данных</a></li>
+                <li class="footer-links__item"><a href="/oferta">Договор оферты</a></li>
                 <li class="footer-links__item"><a href="#">Оптовые закупки</a></li>
                 <li class="footer-links__item"><a href="/promotions">Акции и скидки</a></li>
-                <li class="footer-links__item"><a href="/contacts">Контакты</a></li>
                 <li class="footer-links__item"><a href="/documents">Документация</a></li>
+                <li class="footer-links__item"><a href="/oferta/">Пользовательское соглашение</a></li>
               </ul>
             </div>
             <div class="col">
@@ -450,10 +626,13 @@
               <ul class="footer-links__list list-reset">
                 <li class="footer-links__item"><a href="#">О нас</a></li>
                 <li class="footer-links__item"><a href="#">Проекты</a></li>
-                <li class="footer-links__item"><a href="#">Выставки</a></li>
+                <li class="footer-links__item"><a href="/trade">Где можно купить семена Семко?</a></li>
+                <li class="footer-links__item"><a href="/sale">Правила продаж ООО Семко</a></li>
                 <li class="footer-links__item"><a href="#">Видеоматериалы</a></li>
                 <li class="footer-links__item"><a href="#">Агротехника</a></li>
+                <li class="footer-links__item"><a href="#">Выставки</a></li>
                 <li class="footer-links__item"><a href="#">Газета</a></li>
+                <li class="footer-links__item"><a href="/contacts">Контакты</a></li>
               </ul>
             </div>
           </div>
@@ -519,7 +698,7 @@
         <a href="/" class="btn-reset">
           <img src="/assets/img/svg/logo.svg" width="105" height="30" alt="logo" />
         </a>
-        <img src="/assets/img/cipollino-sm.png" width="35" height="40" alt="doll">
+        <img src="/assets/img/cipollino-sm.avif" width="35" height="40" alt="doll">
         <button class="close-btn btn-reset"></button>
       </div>
       <form class="search" action="#" method="post">
@@ -704,7 +883,7 @@
         <ul class="product__list list-reset">
           <li class="product__item">
             <a href="/product" class="product__link_img btn-reset">
-              <img src="/assets/img/slider/goods/0.jpg" alt="Семена томатов Цитрон F1">
+              <img src="/assets/img/slider/goods/0.webp" alt="Семена томатов Цитрон F1">
             </a>
             <a href="/product" class="product__link_title btn-reset">Семена томатов Цитрон F1</a>
             <div class="amount">
@@ -739,7 +918,7 @@
         </form>
         <div class="modal__footer">
           <div class="modal__links">
-            <button class="btn btn-reset">Забыли пароль?</button>
+            <button class="btn btn-reset" data-path="password">Забыли пароль?</button>
             <button class="btn btn-active btn-reset" data-path="login-email">Войти через почту</button>
           </div>
           <p class="modal__info">Не зарегистрированы? <button class="btn btn-reset" data-path="registration">Зарегистрируйтесь тут</button></p>
@@ -757,7 +936,7 @@
         </form>
         <div class="modal__footer">
           <div class="modal__links">
-            <button class="btn btn-reset">Забыли пароль?</button>
+            <button class="btn btn-reset" data-path="password">Забыли пароль?</button>
             <button class="btn btn-active btn-reset" data-path="login">Войти через телефон</button>
           </div>
           <p class="modal__info">Не зарегистрированы? <button class="btn btn-reset" data-path="registration">Зарегистрируйтесь тут</button></p>
@@ -775,7 +954,7 @@
         </form>
         <div class="modal__footer">
           <div class="modal__links">
-            <button class="btn btn-reset">Забыли пароль?</button>
+            <button class="btn btn-reset" data-path="password">Забыли пароль?</button>
             <button class="btn btn-active btn-reset" data-path="login-email">Войти через почту</button>
           </div>
           <p class="modal__info">Не зарегистрированы? <button class="btn btn-reset" data-path="registration">Зарегистрируйтесь тут</button></p>
@@ -795,8 +974,8 @@
         </form>
         <div class="modal__footer">
           <div class="modal__links">
-            <button class="btn btn-reset">Забыли пароль?</button>
-            <button class="btn btn-reset" data-path="registration-email">Зарегистрируйтесь через почту</button>
+            <button class="btn btn-reset" data-path="password">Забыли пароль?</button>
+            <button class="btn btn-reset" data-path="registration-email">Регистрация по почте</button>
           </div>
           <p class="modal__info">Уже зарегистрированы? <button class="btn btn-active btn-reset" data-path="login">Войдите тут</button></p>
         </div>
@@ -815,11 +994,38 @@
         </form>
         <div class="modal__footer">
           <div class="modal__links">
-            <button class="btn btn-reset">Забыли пароль?</button>
-            <button class="btn btn-reset" data-path="registration">Зарегистрируйтесь через телефон</button>
+            <button class="btn btn-reset" data-path="password">Забыли пароль?</button>
+            <button class="btn btn-reset" data-path="registration">Регистрация по телефону</button>
           </div>
           <p class="modal__info">Уже зарегистрированы? <button class="btn btn-active btn-reset" data-path="login">Войдите тут</button></p>
         </div>
+      </div>
+
+      <div class="modal__content modal__content_login" data-target="password">
+        <button class="close-btn btn-reset" aria-label="Закрыть модальное окно"></button>
+        <img class="modal__logo" src="/assets/img/svg/logo.svg" alt="Logo">
+        <p class="modal__title">Забыли пароль?</p>
+        <p class="modal__subtitle">Введите email или телефон, который вы использовали при регистрации.</p>
+        <form class="modal__form" action="#" method="post">
+          <input class="input" type="text" placeholder="Введите почту / телефон" name="Name" autocomplete="off">
+          <button class="btn btn-fill btn-reset" type="submit">Восстановить пароль</button>
+        </form>
+        <div class="modal__footer">
+          <p class="modal__info modal__info_registration">Зарегистрируйтесь через <button class="btn btn-active btn-reset" data-path="registration">телефон</button></p>
+          <p class="modal__info">Уже зарегистрированы? <button class="btn btn-active btn-reset" data-path="login">Войдите тут</button></p>
+        </div>
+      </div>
+
+      <div class="modal__content modal__content_login modal__content_order" data-target="call-back">
+        <button class="close-btn btn-reset" aria-label="Закрыть модальное окно"></button>
+        <img class="modal__logo" src="/assets/img/svg/logo.svg" alt="Logo">
+        <p class="modal__title">Заказать обратный&nbsp;звонок</p>
+        <form class="modal__form" action="#" method="post">
+          <input class="input" type="text" placeholder="Ваше имя" name="Name" data-validate-field="name" autocomplete="off">
+          <input class="input" type="tel" name="Phone" placeholder="+7 (999) 999-99-99" data-validate-field="tel" autocomplete="off">
+          <button class="btn btn-fill btn-reset" type="submit">Отправить</button>
+        </form>
+        <p class="modal__info">Нажимая кнопку «Отправить» Вы соглашаетесь с <a href="/policy" class="info-link btn-reset" target="_blank">политикой конфиденциальности</a> сайта</p>
       </div>
 
       <div class="modal__content modal__content_katalog" data-target="katalog">
@@ -981,16 +1187,30 @@
           </div>
         </div>
       </div>
+
+      <div class="modal__content modal__content_question" data-target="question">
+        <button class="close-btn btn-fill btn-reset" aria-label="Закрыть модальное окно"></button>
+        <p class="modal__title">Задайте Ваш вопрос</p>
+        <form class="modal__form" action="#" method="post">
+          <div class="form__body">
+            <label class="label" for="question">Напишите Ваш вопрос, служба поддержки ответит Вам в ближайшее время</label>
+            <textarea class="textarea" name="Вопрос" id="question" cols="30" rows="10" placeholder="..."></textarea>
+          </div>
+          <button class="btn btn-lg btn-reset" type="submit">Задать вопрос</button>
+        </form>
+        <p class="modal__info">
+          Нажимая кнопку «Задать вопрос», я соглашаюсь с Условиями заказа и доставки, а также на обработку персональных данных в соответствии с обновленной <a href="/soglasie" class="info-link btn-reset" target="_blank">Политикой&nbsp;обработки персональных данных</a>
+        </p>
+      </div>
     </div>
   </div>
 
-  <script src="/assets/js/lib/splide.min.js"></script>
   <script src="/assets/js/lib/inputmask.min.js"></script>
   <script src="/assets/js/burger.js"></script>
   <script src="/assets/js/modal.js"></script>
   <script src="/assets/js/maskFone.js"></script>
   <script src="/assets/js/tabs.js"></script>
-  <script src="/assets/js/sliders/banner.js"></script>
+  <script src="/assets/js/accordion.js"></script>
   <script src="/assets/js/scrollTop.js"></script>
 </body>
 </html>

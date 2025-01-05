@@ -1,7 +1,7 @@
 const rangeInput = document.querySelectorAll(".range-input input");
 const priceInput = document.querySelectorAll(".sidebar-form__inner input");
 const range = document.querySelector(".rz-slider .progress");
-let priceGap = 100;
+let priceGap = 25;
 
 priceInput.forEach(input =>{
   input.addEventListener("input", e =>{

@@ -3,8 +3,8 @@
     padding: 20px 25px;
     display: flex;
     border-radius: 15px;
-    background: right 6% bottom no-repeat url("/assets/img/pay-man.png"),
-                $color-secondary center / cover no-repeat url("/assets/img/pay-bg.png");
+    background: right 6% bottom no-repeat url("/assets/img/pay-man.avif"),
+                $color-secondary center / cover no-repeat url("/assets/img/pay-bg.avif");
   }
 
   &__text {
@@ -93,7 +93,7 @@
     object-fit: contain;
 
     &.img {
-      width: 60px;
+      width: 52px;
     }
   }
 
@@ -117,8 +117,8 @@
 
 @media screen and (max-width: 1200px) {
   .pay-info__layout {
-    background: right 10% bottom / 140px auto no-repeat url(/assets/img/pay-man-sm.png),
-              #f1f9f5 center / cover no-repeat url(/assets/img/pay-bg.png);
+    background: right 10% bottom / 140px auto no-repeat url(/assets/img/pay-man-sm.avif),
+              #f1f9f5 center / cover no-repeat url(/assets/img/pay-bg.avif);
   }
 }
 
@@ -162,7 +162,7 @@
   }
 
   .pay-info__layout {
-    background: right 5% bottom / 170px auto no-repeat url(/assets/img/pay-man-sm.png), #f1f9f5 center / cover no-repeat url(/assets/img/pay-bg.png);
+    background: right 5% bottom / 170px auto no-repeat url(/assets/img/pay-man-sm.avif), #f1f9f5 center / cover no-repeat url(/assets/img/pay-bg.avif);
   }
 
   .content-payment__header {
@@ -196,7 +196,7 @@
 @media screen and (max-width: 630px) {
   .pay-info__layout {
     padding-bottom: 120px;
-    background: right 10px bottom / 120px auto no-repeat url(/assets/img/pay-man-sm.png), #f1f9f5 left 40% center / cover no-repeat url(/assets/img/pay-bg.png);
+    background: right 10px bottom / 120px auto no-repeat url(/assets/img/pay-man-sm.avif), #f1f9f5 left 40% center / cover no-repeat url(/assets/img/pay-bg.avif);
   }
 }
 
@@ -235,8 +235,14 @@
     font-size: 17px;
   }
 
-  .pay-info__descr p:nth-child(3) {
-    max-width: 210px;
+  .pay-info__descr p {
+    &:nth-child(-n+2) {
+      max-width: 92%;
+    }
+
+    &:nth-child(3) {
+      max-width: calc(100% - 95px);
+    }
   }
 
   .content-payment__btn {

@@ -6,6 +6,7 @@ const orderSlider = (el = '') => {
     perPage: 4,
     autoplay: true,
     pauseOnHover: true,
+    pagination: false,
     gap: 20,
     flickMaxPages: 1,
     breakpoints: {

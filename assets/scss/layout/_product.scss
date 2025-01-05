@@ -136,13 +136,20 @@
     margin-right: 30px;
 
     .splide__arrow {
-      border: none;
+      width: 36px;
+      height: 36px;
+      border: 1px solid transparent;
       background-color: transparent;
       background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 19 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2 2L16 16L2 30' stroke='white' stroke-width='3'/%3E%3C/svg%3E");
       background-position: center;
       background-size: 14px 28px;
       background-repeat: no-repeat;
       opacity: 1;
+
+      &:hover {
+        border-color: #fff;
+        background-color: #03a75360;
+      }
 
       &.splide__arrow--prev {
         transform: scaleX(-1) translateY(-50%);
@@ -242,6 +249,7 @@
         line-height: 1.2;
         color: #8b8b8b;
         transition: color .3s ease-in-out, box-shadow .3s linear;
+        outline: none;
 
         &:hover {
           color: $color-btn-hover;
@@ -682,7 +690,7 @@
 
   .product-about__info .info-list {
     grid-template-columns: auto 1fr;
-    gap: 9px 25px;
+    gap: 9px 45px;
   }
 
   .product-about__info .info__title {
@@ -777,7 +785,7 @@
   }
 
   .product-about__left {
-    column-gap: 7px;
+    column-gap: 8px;
   }
 
   .product-about__info .characteristics-list {
@@ -858,6 +866,13 @@
 }
 
 @media screen and (max-width: 520px) {
+  .product-about__left .double-slider {
+    width: fit-content;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 15px 10px;
+  }
+
   .product__header {
     .product__title, .product__actions, & + .product__info {
       display: none;
@@ -867,21 +882,27 @@
   .product-about__left {
     width: 100%;
     padding-top: 0;
-    grid-template-columns: 35px 1fr;
+    // grid-template-columns: 35px 1fr;
   }
 
   .product__slider {
-    width: 250px;
+    width: 78vw;
+  }
+
+  .product__slider .splide__slide {
+    aspect-ratio: 1/1;
+  }
+
+  .product__slider_second-md {
+    width: fit-content;
   }
 
   .product__slider_second-md .splide__slide {
-    width: 35px;
-    height: 35px;
+    width: 12vw;
+    height: auto;
+    aspect-ratio: 1/1;
     border-radius: 5px;
-
-    img {
-      border-radius: 5px;
-    }
+    overflow: hidden;
   }
 
   .product__slider .splide__arrow {
@@ -922,6 +943,10 @@
 @media screen and (max-width: 450px) {
   .checkout__label {
     flex-basis: 100%;
+  }
+
+  .product__actions {
+    margin-right: 10px;
   }
 }
 

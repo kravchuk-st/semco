@@ -4,7 +4,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    gap: 40px;
+    gap: 30px 25px;
   }
 
   &__item {
@@ -20,18 +20,35 @@
     background-position: bottom right;
     background-repeat: no-repeat;
     background-size: cover;
+    background-blend-mode: multiply;
 
-    &:nth-child(1) {
-      background-image: url("/assets/img/category/0.png");
+    &_chery {
+      background-image: url("/assets/img/category/0.avif");
     }
 
-    &:nth-child(2) {
-      background-image: url("/assets/img/category/1.png");
+    &_pepper {
+      background-image: url("/assets/img/category/1.avif");
     }
 
-    &:nth-child(3) {
-      background-image: url("/assets/img/category/2.png");
+    &_cucumber {
+      background-image: url("/assets/img/category/2.avif");
     }
+  }
+}
+
+@media screen and (min-width: 800px) and (max-width: 1200px) {
+  .category__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .category__item {
+    width: 100%;
+  }
+
+  .category__item_chery {
+    grid-column: span 2;
+    background-image: url("/assets/img/category/sm0.avif");
   }
 }
 
@@ -53,16 +70,16 @@
     padding: 35px 40px;
     font-size: 20px;
 
-    &:nth-child(1) {
-      background-image: url("/assets/img/category/sm0.png");
+    &_chery {
+      background-image: url("/assets/img/category/sm0.avif");
     }
 
-    &:nth-child(2) {
-      background-image: url("/assets/img/category/sm1.png");
+    &_pepper {
+      background-image: url("/assets/img/category/sm1.avif");
     }
 
-    &:nth-child(3) {
-      background-image: url("/assets/img/category/sm2.png");
+    &_cucumber {
+      background-image: url("/assets/img/category/sm2.avif");
     }
   }
 }
@@ -89,16 +106,16 @@
 
 @media screen and (max-width: 450px) {
   .category__item {
-    &:nth-child(1) {
-      background-image: url("/assets/img/category/es0.png");
+    &_chery {
+      background-image: url("/assets/img/category/es0.avif");
     }
 
-    &:nth-child(2) {
-      background-image: url("/assets/img/category/es1.png");
+    &_pepper {
+      background-image: url("/assets/img/category/es1.avif");
     }
 
-    &:nth-child(3) {
-      background-image: url("/assets/img/category/es2.png");
+    &_cucumber {
+      background-image: url("/assets/img/category/es2.avif");
     }
   }
 
